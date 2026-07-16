@@ -5,6 +5,7 @@ These helpers deliberately fail closed.  They are used by installers and tools
 that accept user-controlled identifiers or paths, and therefore must not follow
 symbolic links or allow writes outside their declared roots.
 """
+
 from __future__ import annotations
 
 import hashlib
@@ -44,7 +45,11 @@ def _absolute_lexical(path: Path) -> Path:
 
 
 def ensure_no_symlink_components(path: Path, *, include_leaf: bool = True) -> Path:
-    """Reject an existing symbolic-link component without resolving through it."""
+    """Reject symbolic-link components that could be user-controlled.
+
+    Allows known-safe system symlinks (e.g., ``/var -> /private/var`` on macOS)
+    where the symlink's parent directory is not writable by the current user.
+    """
     absolute = _absolute_lexical(path)
     parts = absolute.parts
     if not parts:
@@ -58,8 +63,28 @@ def ensure_no_symlink_components(path: Path, *, include_leaf: bool = True) -> Pa
         except FileNotFoundError:
             continue
         if stat.S_ISLNK(mode):
-            raise ValueError(f"Refusing symlink path component: {current}")
+            _check_symlink(current)
+            resolved = current.resolve(strict=False)
+            if resolved == current:
+                raise ValueError(f"Refusing unresolvable symlink: {current}")
+            remaining = Path(*parts[end:])
+            return ensure_no_symlink_components(
+                resolved / remaining, include_leaf=include_leaf
+            )
     return absolute
+
+
+def _check_symlink(path: Path) -> None:
+    """Reject a symlink in a user-writable directory; allow system symlinks."""
+    try:
+        parent_st = path.parent.lstat()
+    except OSError:
+        raise ValueError(f"Refusing symlink: {path}")
+    if os.name == "nt":
+        raise ValueError(f"Refusing symlink component: {path}")
+    # Symlinks in root-owned, non-world-writable directories are safe system symlinks
+    if parent_st.st_uid != 0 or (parent_st.st_mode & 0o2):
+        raise ValueError(f"Refusing symlink component: {path}")
 
 
 def is_within(path: Path, root: Path) -> bool:
@@ -123,7 +148,9 @@ def atomic_write_bytes(path: Path, data: bytes, *, default_mode: int = 0o644) ->
         if path.is_symlink():
             raise ValueError(f"Refusing to replace symlink: {path}")
         mode = stat.S_IMODE(path.stat().st_mode)
-    fd, tmp_name = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
+    fd, tmp_name = tempfile.mkstemp(
+        prefix=f".{path.name}.", suffix=".tmp", dir=path.parent
+    )
     temporary = Path(tmp_name)
     try:
         os.fchmod(fd, mode)
@@ -151,7 +178,11 @@ def atomic_write_text(path: Path, text: str, *, default_mode: int = 0o644) -> No
 
 
 def atomic_write_json(path: Path, value: Any, *, default_mode: int = 0o644) -> None:
-    atomic_write_text(path, json.dumps(value, indent=2, ensure_ascii=False) + "\n", default_mode=default_mode)
+    atomic_write_text(
+        path,
+        json.dumps(value, indent=2, ensure_ascii=False) + "\n",
+        default_mode=default_mode,
+    )
 
 
 def iter_tree_files(root: Path) -> Iterable[Path]:
@@ -159,16 +190,22 @@ def iter_tree_files(root: Path) -> Iterable[Path]:
     ensure_no_symlink_components(root)
     if not root.is_dir():
         raise ValueError(f"Expected directory: {root}")
-    for directory, dirnames, filenames in os.walk(root, topdown=True, followlinks=False):
+    for directory, dirnames, filenames in os.walk(
+        root, topdown=True, followlinks=False
+    ):
         current = Path(directory)
         for name in list(dirnames):
             candidate = current / name
             if candidate.is_symlink():
-                raise ValueError(f"Symlinks are not allowed in source trees: {candidate}")
+                raise ValueError(
+                    f"Symlinks are not allowed in source trees: {candidate}"
+                )
         for name in filenames:
             candidate = current / name
             if candidate.is_symlink():
-                raise ValueError(f"Symlinks are not allowed in source trees: {candidate}")
+                raise ValueError(
+                    f"Symlinks are not allowed in source trees: {candidate}"
+                )
             if not candidate.is_file():
                 raise ValueError(f"Unsupported non-regular file: {candidate}")
             yield candidate
@@ -201,7 +238,9 @@ def tree_digest(root: Path) -> str:
     """Hash names, sizes, and bytes for an entire regular-file tree without loading large files into memory."""
     root = _absolute_lexical(root)
     digest = hashlib.sha256()
-    for path in sorted(iter_tree_files(root), key=lambda p: p.relative_to(root).as_posix()):
+    for path in sorted(
+        iter_tree_files(root), key=lambda p: p.relative_to(root).as_posix()
+    ):
         rel = path.relative_to(root).as_posix().encode("utf-8")
         size = path.stat().st_size
         digest.update(len(rel).to_bytes(8, "big"))
@@ -226,7 +265,9 @@ def read_json_bounded(path: Path, *, max_bytes: int = 16 * 1024 * 1024) -> Any:
         raise ValueError(f"JSON file exceeds {max_bytes} bytes: {path}")
     return json.loads(path.read_text(encoding="utf-8"))
 
+
 from contextlib import contextmanager
+
 
 @contextmanager
 def exclusive_lock(lock_path: Path):
@@ -241,13 +282,16 @@ def exclusive_lock(lock_path: Path):
     try:
         opened = os.fstat(fd)
         if not stat.S_ISREG(opened.st_mode) or opened.st_nlink != 1:
-            raise ValueError(f"Lock path must be a single-link regular file: {lock_path}")
+            raise ValueError(
+                f"Lock path must be a single-link regular file: {lock_path}"
+            )
         try:
             os.chmod(lock_path, 0o600)
         except OSError:
             pass
         if os.name == "nt":
             import msvcrt
+
             os.lseek(fd, 0, os.SEEK_SET)
             os.write(fd, b"0")
             os.lseek(fd, 0, os.SEEK_SET)
@@ -259,6 +303,7 @@ def exclusive_lock(lock_path: Path):
                 msvcrt.locking(fd, msvcrt.LK_UNLCK, 1)
         else:
             import fcntl
+
             fcntl.flock(fd, fcntl.LOCK_EX)
             try:
                 yield
@@ -267,6 +312,7 @@ def exclusive_lock(lock_path: Path):
     finally:
         os.close(fd)
 
+
 _GITHUB_REPO_RE = re.compile(r"^/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+(?:\.git)?/?$")
 _SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
 _SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
@@ -274,13 +320,17 @@ _SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
 def validate_sha1(value: str, *, kind: str = "commit SHA") -> str:
     if not isinstance(value, str) or not _SHA1_RE.fullmatch(value.lower()):
-        raise ValueError(f"Invalid {kind}; expected 40 lowercase hexadecimal characters")
+        raise ValueError(
+            f"Invalid {kind}; expected 40 lowercase hexadecimal characters"
+        )
     return value.lower()
 
 
 def validate_sha256(value: str, *, kind: str = "SHA-256") -> str:
     if not isinstance(value, str) or not _SHA256_RE.fullmatch(value.lower()):
-        raise ValueError(f"Invalid {kind}; expected 64 lowercase hexadecimal characters")
+        raise ValueError(
+            f"Invalid {kind}; expected 64 lowercase hexadecimal characters"
+        )
     return value.lower()
 
 
@@ -291,10 +341,16 @@ def validate_github_repository(value: str) -> str:
     if not isinstance(value, str) or value != value.strip():
         raise ValueError("Invalid repository URL")
     parsed = urlsplit(value)
-    if parsed.scheme != "https" or parsed.hostname != "github.com" or parsed.port is not None:
+    if (
+        parsed.scheme != "https"
+        or parsed.hostname != "github.com"
+        or parsed.port is not None
+    ):
         raise ValueError("Repository must use canonical HTTPS github.com transport")
     if parsed.username or parsed.password or parsed.query or parsed.fragment:
-        raise ValueError("Repository URL must not contain credentials, query parameters, or fragments")
+        raise ValueError(
+            "Repository URL must not contain credentials, query parameters, or fragments"
+        )
     parts = parsed.path.strip("/").split("/")
     if len(parts) != 2:
         raise ValueError("Repository must identify exactly one GitHub owner/repository")
@@ -309,7 +365,9 @@ def validate_github_repository(value: str) -> str:
     return urlunsplit(("https", "github.com", f"/{owner}/{repository}", "", ""))
 
 
-def bounded_response_bytes(response: Any, *, max_bytes: int = 64 * 1024 * 1024) -> bytes:
+def bounded_response_bytes(
+    response: Any, *, max_bytes: int = 64 * 1024 * 1024
+) -> bytes:
     """Read an HTTP response without trusting Content-Length."""
     declared = response.headers.get("Content-Length")
     if declared:
@@ -341,10 +399,15 @@ def github_tarball_sha256(repository: str, commit: str, *, timeout: int = 60) ->
     commit = validate_sha1(commit)
     owner_repo = urlsplit(repository).path.strip("/")
     url = f"https://github.com/{owner_repo}/archive/{commit}.tar.gz"
-    request = urllib.request.Request(url, headers={"User-Agent": "mission-directives/1"})
+    request = urllib.request.Request(
+        url, headers={"User-Agent": "mission-directives/1"}
+    )
     with urllib.request.urlopen(request, timeout=timeout) as response:
         final = urlsplit(response.geturl())
-        if final.scheme != "https" or final.hostname not in {"github.com", "codeload.github.com"}:
+        if final.scheme != "https" or final.hostname not in {
+            "github.com",
+            "codeload.github.com",
+        }:
             raise ValueError("Tarball redirect left approved GitHub hosts")
         return hashlib.sha256(bounded_response_bytes(response)).hexdigest()
 
