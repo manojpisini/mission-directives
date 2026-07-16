@@ -1,0 +1,25 @@
+{
+  "run_id": "example",
+  "project_root": "example",
+  "outcome": "example",
+  "mode": "AUDIT_ONLY",
+  "scope": {
+    "include": [
+      "example"
+    ],
+    "exclude": [
+      "example"
+    ]
+  },
+  "authorization": {
+    "actor": "example",
+    "allowed_actions": [
+      "example"
+    ]
+  },
+  "protected_surfaces": [
+    "example"
+  ],
+  "environment": {},
+  "evidence_policy": {}
+}

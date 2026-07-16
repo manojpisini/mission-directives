@@ -1,0 +1,102 @@
+{
+  "policy_id": "conditional_auto_prompt_policy",
+  "default": "disabled_unless_trigger_true",
+  "principle": "Automatic prompts are injected only when they materially change routing, safety, quality, or verification. Availability alone is never a trigger.",
+  "order": [
+    "MD-191",
+    "MD-192",
+    "MD-193",
+    "MD-194",
+    "MD-195",
+    "MD-196",
+    "MD-197",
+    "MD-198"
+  ],
+  "rules": [
+    {
+      "id": "INTENT_ROUTE_AMBIGUITY",
+      "when": [
+        "observable outcome, audience, scope, authority, evidence lane, medium, or acceptance criteria is route-changing and unresolved"
+      ],
+      "inject": [
+        "MD-191"
+      ],
+      "reject_when": [
+        "request is already route-ready"
+      ]
+    },
+    {
+      "id": "SKILL_FIT_REQUIRED",
+      "when": [
+        "user explicitly requests a skill",
+        "target prompt has a preferred skill whose value is unresolved",
+        "native execution may miss a material acceptance criterion"
+      ],
+      "inject": [
+        "MD-192"
+      ]
+    },
+    {
+      "id": "REQUIRED_SKILL_MISSING",
+      "when": [
+        "MD-192 classifies the capability as required or materially beneficial",
+        "no installed conformant skill satisfies it"
+      ],
+      "inject": [
+        "MD-193"
+      ]
+    },
+    {
+      "id": "QUALIFIED_SKILL_INSTALL",
+      "when": [
+        "MD-193 qualifies one exact candidate",
+        "automatic acquisition policy or explicit approval permits installation"
+      ],
+      "inject": [
+        "MD-194"
+      ]
+    },
+    {
+      "id": "SKILL_CREATION_LAST_RESORT",
+      "when": [
+        "MD-193 finds no suitable candidate",
+        "native execution remains insufficient",
+        "repeated demand justifies maintenance"
+      ],
+      "inject": [
+        "MD-195"
+      ]
+    },
+    {
+      "id": "SKILL_EXECUTION_JUSTIFIED",
+      "when": [
+        "exact installed skill is task-fit and available",
+        "skill use materially improves an acceptance criterion"
+      ],
+      "inject": [
+        "MD-196"
+      ]
+    },
+    {
+      "id": "BOUNDED_LOOP_BENEFICIAL",
+      "when": [
+        "finite queue has multiple items or measurable iterative refinement is required",
+        "each pass can produce new evidence or state",
+        "budget and verification are defined"
+      ],
+      "inject": [
+        "MD-197",
+        "MD-198"
+      ],
+      "reject_when": [
+        "one-shot task",
+        "no measurable progress",
+        "unchanged retry",
+        "cost or side effects exceed expected gain"
+      ]
+    }
+  ],
+  "genericity_rule": "Loop and skill-execution prompts accept any prompt, scenario, or exact skill. Domain examples never narrow eligibility.",
+  "questioning_rule": "All routes may invoke MD-191, but only when a question can change routing, authority, evidence, medium, budget, skill fit, loop eligibility, or acceptance.",
+  "suite_version": "1.8.3"
+}

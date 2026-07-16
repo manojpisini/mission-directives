@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mission Directives Project Installation Receipt",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "project_root",
+    "suite_destination",
+    "suite_version",
+    "gitignore_entries",
+    "docs_ignored",
+    "installed_at",
+    "created_directories",
+    "preexisting_project_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "const": "installed"
+    },
+    "project_root": {
+      "type": "string"
+    },
+    "suite_destination": {
+      "const": "prompts"
+    },
+    "suite_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "backup": {
+      "type": "string"
+    },
+    "gitignore_entries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "docs_ignored": {
+      "const": false
+    },
+    "guidance": {
+      "type": "object"
+    },
+    "installed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "receipt_path": {
+      "type": "string"
+    },
+    "log_file": {
+      "type": "string"
+    },
+    "telemetry_warning": {
+      "type": "string"
+    },
+    "created_directories": {
+      "type": "array",
+      "items": {
+        "enum": [
+          ".prompt_suite",
+          "results",
+          "reports",
+          "logs",
+          "artifacts",
+          "outputs",
+          "docs"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "preexisting_project_files": {
+      "type": "array",
+      "items": {
+        "enum": [
+          ".gitignore",
+          "AGENTS.md",
+          "CLAUDE.md"
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

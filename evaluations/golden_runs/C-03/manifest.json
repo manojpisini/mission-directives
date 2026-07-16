@@ -1,0 +1,111 @@
+{
+  "golden_run_id": "C-03-reference",
+  "target": "C-03",
+  "title": "Bug investigation and fix",
+  "review_status": "machine_reference_pending_human_promotion",
+  "state": "closed",
+  "phase_contracts": [
+    {
+      "phase_id": "control-md-00",
+      "prompt_ids": [
+        "MD-00"
+      ],
+      "mode": "AUDIT_ONLY"
+    },
+    {
+      "phase_id": "control-md-01",
+      "prompt_ids": [
+        "MD-01"
+      ],
+      "mode": "AUDIT_ONLY"
+    },
+    {
+      "phase_id": "control-md-02",
+      "prompt_ids": [
+        "MD-02"
+      ],
+      "mode": "AUDIT_ONLY"
+    },
+    {
+      "phase_id": "control-md-03",
+      "prompt_ids": [
+        "MD-03"
+      ],
+      "mode": "AUDIT_ONLY"
+    },
+    {
+      "phase_id": "control-md-04",
+      "prompt_ids": [
+        "MD-04"
+      ],
+      "mode": "AUDIT_ONLY"
+    },
+    {
+      "phase_id": "investigation-md-29",
+      "prompt_ids": [
+        "MD-29"
+      ],
+      "mode": "AUDIT_ONLY"
+    },
+    {
+      "phase_id": "execution-md-30",
+      "prompt_ids": [
+        "MD-30"
+      ],
+      "mode": "APPLY_SAFE"
+    },
+    {
+      "phase_id": "investigation-md-35",
+      "prompt_ids": [
+        "MD-35"
+      ],
+      "mode": "AUDIT_ONLY"
+    },
+    {
+      "phase_id": "execution-md-36",
+      "prompt_ids": [
+        "MD-36"
+      ],
+      "mode": "APPLY_SAFE"
+    }
+  ],
+  "evidence_snapshots": [
+    {
+      "snapshot_id": "synthetic-reference",
+      "status": "fixture_only"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".prompt_suite/control/project_context_and_run_configuration.md",
+      "status": "expected_contract_only"
+    },
+    {
+      "path": ".prompt_suite/control/universal_safety_authorization_and_evidence_contract.md",
+      "status": "expected_contract_only"
+    },
+    {
+      "path": ".prompt_suite/control/capability_router_and_execution_graph.md",
+      "status": "expected_contract_only"
+    },
+    {
+      "path": ".prompt_suite/control/artifact_handoff_and_verification_contract.md",
+      "status": "expected_contract_only"
+    },
+    {
+      "path": ".prompt_suite/control/prompt_structure_and_input_trust_contract.md",
+      "status": "expected_contract_only"
+    }
+  ],
+  "verification": {
+    "status": "reference_contract_pass",
+    "limitations": [
+      "No live model execution",
+      "No human review",
+      "No external action"
+    ]
+  },
+  "residuals": [
+    "Promote to human-reviewed golden only after real execution."
+  ]
+}

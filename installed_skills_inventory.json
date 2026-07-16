@@ -1,0 +1,1952 @@
+{
+  "snapshot_type": "user_supplied_directory_listing",
+  "observed_path": "${MD_OPENCODE_SKILLS_DIR}",
+  "observed_date": "2026-07-15",
+  "skill_count": 193,
+  "skills": [
+    {
+      "skill_id": "ad-creative",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ad-creative",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ads",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ads",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ai-research-explore",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ai-research-explore",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ai-seo",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ai-seo",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "algorithmic-art",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/algorithmic-art",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "analytics",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/analytics",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "architecture-blueprint-generator",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/architecture-blueprint-generator",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "banner-design",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/banner-design",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "baoyu-infographic",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/baoyu-infographic",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "blueprinter",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/blueprinter",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "boost-prompt",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/boost-prompt",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "brainstorming",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/brainstorming",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "brand",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/brand",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "brand-guidelines",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/brand-guidelines",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "brandkit",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/brandkit",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "build-dashboard",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/build-dashboard",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "canvas-design",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/canvas-design",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "code-review",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/code-review",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "codebase-design",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/codebase-design",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "competitor-profiling",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/competitor-profiling",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "competitors",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/competitors",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "content-strategy",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/content-strategy",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "copywriting",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/copywriting",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "cro",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/cro",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "customer-research",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/customer-research",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "dashboard-builder",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/dashboard-builder",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "design",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/design",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "design-system",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/design-system",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "design-taste-frontend",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/design-taste-frontend",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "design-taste-frontend-v1",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/design-taste-frontend-v1",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "dispatching-parallel-agents",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/dispatching-parallel-agents",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "doc-coauthoring",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/doc-coauthoring",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "docx",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/docx",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "edit-article",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/edit-article",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "emails",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/emails",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "embedded-captions",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/embedded-captions",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "enhance-prompt",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/enhance-prompt",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "excalidraw-diagram-generator",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/excalidraw-diagram-generator",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "executing-plans",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/executing-plans",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "extract-design-system",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/extract-design-system",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "faceless-explainer",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/faceless-explainer",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "find-skills",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/find-skills",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "finishing-a-development-branch",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/finishing-a-development-branch",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "free-tools",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/free-tools",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "frontend-design",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/frontend-design",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "frontend-slides",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/frontend-slides",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "full-output-enforcement",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/full-output-enforcement",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "general-video",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/general-video",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-benchmark",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-benchmark",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-cli",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-cli",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-code-style",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-code-style",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-concurrency",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-concurrency",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-context",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-context",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-continuous-integration",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-continuous-integration",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-data-structures",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-data-structures",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-database",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-database",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-dependency-injection",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-dependency-injection",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-dependency-management",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-dependency-management",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-design-patterns",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-design-patterns",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-documentation",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-documentation",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-error-handling",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-error-handling",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-google-wire",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-google-wire",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-gopls",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-gopls",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-graphql",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-graphql",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-grpc",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-grpc",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-how-to",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-how-to",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-lint",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-lint",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-modernize",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-modernize",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-naming",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-naming",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-observability",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-observability",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-performance",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-performance",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-pkg-go-dev",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-pkg-go-dev",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-popular-libraries",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-popular-libraries",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-project-layout",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-project-layout",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-refactoring",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-refactoring",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-safety",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-safety",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-samber-do",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-samber-do",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-samber-hot",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-samber-hot",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-samber-lo",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-samber-lo",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-samber-mo",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-samber-mo",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-samber-oops",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-samber-oops",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-samber-ro",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-samber-ro",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-samber-slog",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-samber-slog",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-security",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-security",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-spf13-cobra",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-spf13-cobra",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-spf13-viper",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-spf13-viper",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-stay-updated",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-stay-updated",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-stretchr-testify",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-stretchr-testify",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-structs-interfaces",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-structs-interfaces",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-swagger",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-swagger",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-testing",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-testing",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-troubleshooting",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-troubleshooting",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-uber-dig",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-uber-dig",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "golang-uber-fx",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/golang-uber-fx",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "gpt-taste",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/gpt-taste",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "grill-me",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/grill-me",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "grill-with-docs",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/grill-with-docs",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "gstack",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/gstack",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "high-end-visual-design",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/high-end-visual-design",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "html-ppt",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/html-ppt",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "html-svg-diagrams",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/html-svg-diagrams",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "htmx",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/htmx",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "hyperframes",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/hyperframes",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "hyperframes-animation",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/hyperframes-animation",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "hyperframes-cli",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/hyperframes-cli",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "hyperframes-core",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/hyperframes-core",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "hyperframes-creative",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/hyperframes-creative",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "hyperframes-keyframes",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/hyperframes-keyframes",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "hyperframes-media",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/hyperframes-media",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "hyperframes-registry",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/hyperframes-registry",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "image-to-code",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/image-to-code",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "imagegen-frontend-mobile",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/imagegen-frontend-mobile",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "excluded_image_generation",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "imagegen-frontend-web",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/imagegen-frontend-web",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "excluded_image_generation",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "impeccable",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/impeccable",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "implement",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/implement",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "improve",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/improve",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "improve-codebase-architecture",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/improve-codebase-architecture",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "industrial-brutalist-ui",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/industrial-brutalist-ui",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "infographic-creator",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/infographic-creator",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "internal-comms",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/internal-comms",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "launch",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/launch",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "loop-me",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/loop-me",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "marketing-council",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/marketing-council",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "marketing-ideas",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/marketing-ideas",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "marketing-loops",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/marketing-loops",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "marketing-plan",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/marketing-plan",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "marketing-psychology",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/marketing-psychology",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "mcp-builder",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/mcp-builder",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "media-use",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/media-use",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "minecraft-modding",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/minecraft-modding",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "minimalist-ui",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/minimalist-ui",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "motion-graphics",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/motion-graphics",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "music-to-video",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/music-to-video",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "obsidian-vault",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/obsidian-vault",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "onboarding",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/onboarding",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "paper-context-resolver",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/paper-context-resolver",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "pdf",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/pdf",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "playwright-best-practices",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/playwright-best-practices",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "playwright-cli",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/playwright-cli",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ponytail",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ponytail",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ponytail-audit",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ponytail-audit",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ponytail-debt",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ponytail-debt",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ponytail-gain",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ponytail-gain",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ponytail-help",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ponytail-help",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ponytail-review",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ponytail-review",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "pptx",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/pptx",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "pr-to-video",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/pr-to-video",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "pricing",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/pricing",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "product-launch-video",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/product-launch-video",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "programmatic-seo",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/programmatic-seo",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "prompt-engineering-patterns",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/prompt-engineering-patterns",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "prompt-optimizer",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/prompt-optimizer",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "public-relations",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/public-relations",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "receiving-code-review",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/receiving-code-review",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "redesign-existing-projects",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/redesign-existing-projects",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "remotion-to-hyperframes",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/remotion-to-hyperframes",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "requesting-code-review",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/requesting-code-review",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "research",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/research",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "rust-best-practices",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/rust-best-practices",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "schema",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/schema",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "security-review",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/security-review",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "seo-audit",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/seo-audit",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "site-architecture",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/site-architecture",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "skill-creator",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/skill-creator",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "slack-gif-creator",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/slack-gif-creator",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "slides",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/slides",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "slideshow",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/slideshow",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "social",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/social",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "stitch-design-taste",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/stitch-design-taste",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "stop-slop",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/stop-slop",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "strudel",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/strudel",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": true,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "subagent-driven-development",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/subagent-driven-development",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "systematic-debugging",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/systematic-debugging",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "talking-head-recut",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/talking-head-recut",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "tdd",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/tdd",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "template-skill",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/template-skill",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "test-driven-development",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/test-driven-development",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "theme-factory",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/theme-factory",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "triage",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/triage",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ui-styling",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ui-styling",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "ui-ux-pro-max",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/ui-ux-pro-max",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "using-git-worktrees",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/using-git-worktrees",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "using-superpowers",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/using-superpowers",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "vercel-composition-patterns",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/vercel-composition-patterns",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "verification-before-completion",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/verification-before-completion",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "visual-assets",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/visual-assets",
+      "registered_in_suite": true,
+      "auto_select_allowed": true,
+      "routing_status": "registered",
+      "personal_skill": true,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "web-artifacts-builder",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/web-artifacts-builder",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "web-design-guidelines",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/web-design-guidelines",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "webapp-testing",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/webapp-testing",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "website-to-video",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/website-to-video",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "writing-plans",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/writing-plans",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "writing-skills",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/writing-skills",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    },
+    {
+      "skill_id": "xlsx",
+      "path": "${MD_OPENCODE_SKILLS_DIR}/xlsx",
+      "registered_in_suite": true,
+      "auto_select_allowed": false,
+      "routing_status": "registered",
+      "personal_skill": false,
+      "path_kind": "logical",
+      "application": "opencode"
+    }
+  ],
+  "canonical_aliases": {
+    "strudle": "strudel"
+  },
+  "notes": [
+    "Inventory is a user-provided filesystem snapshot; registration does not imply trust or conformance.",
+    "All observed skills are represented in skill_registry.json; experimental local skills require runtime probing.",
+    "visual-assets and strudel are approved personal skills but their outputs remain quarantined until task verification.",
+    "model image-generation skills are explicitly excluded from automatic routing."
+  ],
+  "registered_skill_count": 193,
+  "unmapped_skill_count": 0,
+  "suite_version": "1.8.3",
+  "path_policy": "compatibility/agent_skill_paths.json",
+  "observation_scope": "logical_snapshot_from_opencode"
+}

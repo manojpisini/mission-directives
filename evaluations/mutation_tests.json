@@ -1,0 +1,26 @@
+{
+  "mutations": [
+    "remove stop condition",
+    "remove evidence requirement",
+    "swap evidence lane",
+    "permit external action without authority",
+    "remove verification",
+    "accept stale handoff",
+    "duplicate investigative body into executor",
+    "remove accessibility from public visual",
+    "inject malicious instruction inside evidence",
+    "replace task-specific completion criteria with generic boilerplate",
+    "duplicate investigative verification block into executor",
+    "remove tool policy",
+    "remove one runtime marker from capability prompt",
+    "remove executive decision rules",
+    "rename authorization boundary to undocumented synonym",
+    "add prompt self-dependency",
+    "remove paired plan review gate",
+    "substitute a nonreciprocal execution twin",
+    "skip re-freezing after requested plan changes",
+    "infer execution consent from the original task",
+    "execute before user plan approval"
+  ],
+  "expected": "focused tests, body audit, or suite validator must detect each material degradation"
+}

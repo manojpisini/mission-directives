@@ -1,0 +1,12 @@
+{
+  "decision_questions": "example",
+  "metric_definitions": "example",
+  "data_sources": "example",
+  "roles": "example",
+  "views": "example",
+  "states": "example",
+  "interactions": "example",
+  "freshness": "example",
+  "accessibility": "example",
+  "verification": "example"
+}

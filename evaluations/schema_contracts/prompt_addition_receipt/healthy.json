@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "prompt_id": {},
+  "sequence": 0,
+  "title": "example",
+  "slug": {},
+  "canonical_path": {},
+  "capability_id": {},
+  "changed_files": [
+    "example"
+  ],
+  "full_tests_run": true,
+  "receipt_path": {},
+  "suite_version": "1.8.3",
+  "category": "example",
+  "prompt_role": "operational",
+  "prompt_type": "example",
+  "risk_level": "low",
+  "allowed_modes": [
+    "AUDIT_ONLY"
+  ],
+  "dry_run_required": true,
+  "requires": [
+    "MD-00"
+  ],
+  "preferred_skills": [
+    "example"
+  ],
+  "template_routes": [
+    "example"
+  ],
+  "conditional_template_routes": [
+    "example"
+  ],
+  "related_prompts": [
+    {}
+  ],
+  "department_packs": [
+    "example"
+  ],
+  "source_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "source_bytes": 1,
+  "approved_preview_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "validation_status": "pass",
+  "recorded_at": "2026-07-15T00:00:00Z"
+}

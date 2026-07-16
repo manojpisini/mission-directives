@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-17",
+  "capability_id": "md.enablement.stakeholder-status-roadmap-and-release-communication",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "results/stakeholder_status_roadmap_and_release_communication/stakeholder_status_roadmap_and_release_communication_result.md",
+  "fixture_id": "MD-17-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

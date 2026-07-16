@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "scenario_fixture.schema.json",
+  "type": "object",
+  "required": [
+    "fixture_id",
+    "target_id",
+    "tier",
+    "input_conditions",
+    "expected",
+    "prohibited"
+  ],
+  "properties": {
+    "fixture_id": {
+      "type": "string"
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "tier": {
+      "enum": [
+        "healthy",
+        "problematic",
+        "adversarial"
+      ]
+    },
+    "input_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prohibited": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-171",
+  "capability_id": "md.change_management.change-management-adoption-and-enablement",
+  "evidence_lane": "hybrid",
+  "risk_level": "high",
+  "expected_output": "results/change_management_adoption_and_enablement/change_management_adoption_and_enablement_result.md",
+  "fixture_id": "MD-171-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

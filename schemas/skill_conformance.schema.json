@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill_conformance.schema.json",
+  "type": "object",
+  "required": [
+    "skill_id",
+    "lock_required",
+    "expected_contract",
+    "verification"
+  ],
+  "properties": {
+    "skill_id": {
+      "type": "string"
+    },
+    "lock_required": {
+      "type": "boolean"
+    },
+    "expected_contract": {
+      "type": "object"
+    },
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "live_status": {
+      "enum": [
+        "not_run",
+        "pass",
+        "fail",
+        "quarantined"
+      ]
+    }
+  }
+}

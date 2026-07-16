@@ -1,0 +1,20 @@
+{
+  "fixture_type": "template_conformance",
+  "template_id": "decks/training-workshop",
+  "tier": "problematic",
+  "input": {
+    "artifact": "example.md",
+    "declared_template": "decks/training-workshop"
+  },
+  "expected": {
+    "status": "fail",
+    "must_detect": [
+      "missing_required_section",
+      "unverified_claim"
+    ]
+  },
+  "prohibited": [
+    "silent_template_substitution",
+    "false_completion"
+  ]
+}

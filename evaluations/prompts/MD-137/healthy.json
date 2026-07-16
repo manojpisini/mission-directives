@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-137",
+  "capability_id": "md.strategy.negotiation-and-decision-preparation",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "results/negotiation_and_decision_preparation/negotiation_and_decision_preparation_result.md",
+  "fixture_id": "MD-137-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

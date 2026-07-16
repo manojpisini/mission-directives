@@ -1,0 +1,7842 @@
+{
+  "suite_version": "1.8.3",
+  "nodes": [
+    {
+      "id": "MD-00",
+      "capability_id": "md.core.project-context-and-run-configuration",
+      "role": "control",
+      "category": "core",
+      "surface": "project_runtime_context",
+      "evidence_lane": null,
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-01",
+      "capability_id": "md.core.universal-safety-authorization-and-evidence-contract",
+      "role": "control",
+      "category": "core",
+      "surface": "all_project_actions",
+      "evidence_lane": null,
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-02",
+      "capability_id": "md.core.capability-router-and-execution-graph",
+      "role": "control",
+      "category": "core",
+      "surface": "prompt_selection_and_scheduling",
+      "evidence_lane": null,
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-03",
+      "capability_id": "md.core.artifact-handoff-and-verification-contract",
+      "role": "control",
+      "category": "core",
+      "surface": "runtime_artifacts_and_handoffs",
+      "evidence_lane": null,
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-04",
+      "capability_id": "md.core.prompt-structure-and-input-trust-contract",
+      "role": "control",
+      "category": "core",
+      "surface": "prompt_interpretation_and_untrusted_content",
+      "evidence_lane": null,
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-05",
+      "capability_id": "md.strategy.problem-opportunity-and-strategy-framing",
+      "role": "investigative",
+      "category": "strategy",
+      "surface": "strategy_and_outcome_definition",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-06",
+      "capability_id": "md.strategy.market-user-and-competitive-research",
+      "role": "investigative",
+      "category": "strategy",
+      "surface": "external_research_and_user_evidence",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-07",
+      "capability_id": "md.strategy.requirements-scope-and-success-criteria",
+      "role": "investigative",
+      "category": "strategy",
+      "surface": "requirements_and_acceptance",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-08",
+      "capability_id": "md.strategy.feasibility-prototype-risk-and-roadmap",
+      "role": "investigative",
+      "category": "strategy",
+      "surface": "feasibility_and_delivery_plan",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-09",
+      "capability_id": "md.engineering.architecture-and-technology-decision-analysis",
+      "role": "investigative",
+      "category": "engineering",
+      "surface": "architecture_and_technology_choices",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-100",
+      "capability_id": "md.business.pitch-proposal-and-business-case-development",
+      "role": "operational",
+      "category": "business",
+      "surface": "pitches_proposals_and_business_cases",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "stop-slop",
+        "brand-guidelines",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-101",
+      "capability_id": "md.visual_communication.presentation-narrative-story-architecture-and-deck-blueprint",
+      "role": "investigative",
+      "category": "visual_communication",
+      "surface": "presentation_story_and_slide_architecture",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "blueprinter",
+        "brand-guidelines",
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-102",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-102",
+      "capability_id": "md.visual_communication.html-css-and-javascript-slides-and-presentation-production",
+      "role": "executive",
+      "category": "visual_communication",
+      "surface": "browser_native_slides_and_presentations",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "frontend-slides",
+        "brand-guidelines",
+        "html-ppt",
+        "impeccable",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-101",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-103",
+      "capability_id": "md.data_visualization.dashboard-and-analytical-interface-production",
+      "role": "operational",
+      "category": "data_visualization",
+      "surface": "dashboards_metrics_and_decision_interfaces",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "dashboard-builder",
+        "design-taste-frontend-v1",
+        "impeccable",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-104",
+      "capability_id": "md.data_visualization.infographic-and-data-storytelling-production",
+      "role": "operational",
+      "category": "data_visualization",
+      "surface": "infographics_and_explanatory_data_stories",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "canvas-design",
+        "html-svg-diagrams",
+        "brand-guidelines",
+        "impeccable",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-105",
+      "capability_id": "md.visual_communication.blueprint-diagram-architecture-and-process-visualization-production",
+      "role": "operational",
+      "category": "visual_communication",
+      "surface": "blueprints_architecture_and_process_diagrams",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "blueprinter",
+        "html-svg-diagrams",
+        "impeccable",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-106",
+      "capability_id": "md.visual_communication.excalidraw-and-collaborative-whiteboard-diagram-production",
+      "role": "operational",
+      "category": "visual_communication",
+      "surface": "editable_whiteboards_and_workshop_diagrams",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "excalidraw-diagram-generator",
+        "blueprinter",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-107",
+      "capability_id": "md.web_design.interactive-web-artifact-microsite-and-prototype-production",
+      "role": "operational",
+      "category": "web_design",
+      "surface": "interactive_web_artifacts_and_prototypes",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "web-artifacts-builder",
+        "design-taste-frontend-v1",
+        "impeccable",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-108",
+      "capability_id": "md.web_design.frontend-visual-design-interaction-and-experience-polish",
+      "role": "operational",
+      "category": "web_design",
+      "surface": "frontend_visual_and_interaction_quality",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "design-taste-frontend-v1",
+        "impeccable",
+        "brand-guidelines",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-109",
+      "capability_id": "md.visual_quality.visual-quality-accessibility-brand-and-responsive-review",
+      "role": "investigative",
+      "category": "visual_quality",
+      "surface": "visual_artifacts_and_frontend_quality",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "impeccable",
+        "brand-guidelines",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-10",
+      "capability_id": "md.engineering.project-discovery-inventory-and-baseline",
+      "role": "investigative",
+      "category": "engineering",
+      "surface": "whole_project_inventory",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-110",
+      "capability_id": "md.events.event-strategy-agenda-run-of-show-and-facilitation-design",
+      "role": "operational",
+      "category": "events",
+      "surface": "events_agendas_logistics_and_facilitation",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "blueprinter",
+        "canvas-design",
+        "brand-guidelines",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-111",
+      "capability_id": "md.planning.program-project-and-operations-planning",
+      "role": "investigative",
+      "category": "planning",
+      "surface": "program_projects_workstreams_and_operations",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-112",
+      "capability_id": "md.facilitation.workshop-meeting-and-collaborative-session-design",
+      "role": "operational",
+      "category": "facilitation",
+      "surface": "meetings_workshops_and_collaboration",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "blueprinter",
+        "excalidraw-diagram-generator",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-113",
+      "capability_id": "md.professional_writing.document-memo-report-sop-and-policy-production",
+      "role": "operational",
+      "category": "professional_writing",
+      "surface": "professional_documents_and_operating_guidance",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-114",
+      "capability_id": "md.marketing.marketing-audience-and-go-to-market-strategy",
+      "role": "investigative",
+      "category": "marketing",
+      "surface": "market_entry_audience_messaging_and_growth",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-115",
+      "capability_id": "md.sales_enablement.sales-enablement-customer-communication-and-lifecycle-content",
+      "role": "operational",
+      "category": "sales_enablement",
+      "surface": "sales_customer_and_lifecycle_materials",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "brand-guidelines",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-116",
+      "capability_id": "md.analytics.spreadsheet-financial-forecast-and-scenario-model-specification",
+      "role": "operational",
+      "category": "analytics",
+      "surface": "spreadsheets_financial_models_and_scenarios",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-117",
+      "capability_id": "md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief",
+      "role": "investigative",
+      "category": "learning_design",
+      "surface": "curriculum_learning_experience_assessment_and_materials",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "canvas-design",
+        "frontend-slides",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-118",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-118",
+      "capability_id": "md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-material-production-and-validation",
+      "role": "executive",
+      "category": "learning_design",
+      "surface": "curriculum_learning_experience_assessment_and_materials",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "canvas-design",
+        "frontend-slides",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-117",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-119",
+      "capability_id": "md.research.survey-interview-questionnaire-and-research-instrument-design",
+      "role": "investigative",
+      "category": "research",
+      "surface": "surveys_interviews_questionnaires_and_measurement_instruments",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-11",
+      "capability_id": "md.security.threat-modeling-and-attack-surface-analysis",
+      "role": "investigative",
+      "category": "security",
+      "surface": "assets_trust_boundaries_and_attack_surface",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-120",
+      "capability_id": "md.business.grant-funding-sponsorship-and-award-proposal-production",
+      "role": "operational",
+      "category": "business",
+      "surface": "grants_funding_sponsorships_and_award_submissions",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-121",
+      "capability_id": "md.professional_communication.professional-profile-resume-portfolio-bio-and-application-package",
+      "role": "operational",
+      "category": "professional_communication",
+      "surface": "professional_profiles_resumes_portfolios_and_applications",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "brand-guidelines",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-122",
+      "capability_id": "md.professional_communication.email-letter-message-speech-announcement-and-general-communication-production",
+      "role": "operational",
+      "category": "professional_communication",
+      "surface": "emails_letters_messages_speeches_and_announcements",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-123",
+      "capability_id": "md.content_operations.social-media-short-form-and-community-content-production",
+      "role": "operational",
+      "category": "content_operations",
+      "surface": "social_short_form_and_community_content",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "brand-guidelines",
+        "canvas-design",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-124",
+      "capability_id": "md.engineering.feature-change-and-integration-implementation",
+      "role": "operational",
+      "category": "engineering",
+      "surface": "feature_change_and_integration_implementation",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "spec",
+        "plan-eng-review",
+        "review",
+        "test-driven-development",
+        "verification-before-completion"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-125",
+      "capability_id": "md.analytics.experiment-a-b-test-and-causal-measurement-design",
+      "role": "investigative",
+      "category": "analytics",
+      "surface": "experiment_a_b_test_and_causal_measurement_design",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "benchmark",
+        "benchmark-models",
+        "xlsx",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-126",
+      "capability_id": "md.localization.translation-localization-and-transcreation",
+      "role": "operational",
+      "category": "localization",
+      "surface": "translation_localization_and_transcreation",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "docx"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-127",
+      "capability_id": "md.media_production.media-production-editing-and-distribution-blueprint",
+      "role": "operational",
+      "category": "media_production",
+      "surface": "media_production_editing_and_distribution_blueprint",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop",
+        "visual-assets",
+        "strudel"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-128",
+      "capability_id": "md.content_operations.content-performance-and-editorial-optimization",
+      "role": "investigative",
+      "category": "content_operations",
+      "surface": "content_performance_and_editorial_optimization",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-129",
+      "capability_id": "md.academic.academic-peer-review-methodological-critique-and-rebuttal",
+      "role": "investigative",
+      "category": "academic",
+      "surface": "academic_peer_review_methodological_critique_and_rebuttal",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "research",
+        "paper-context-resolver",
+        "edit-article",
+        "docx"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-12",
+      "capability_id": "md.security.authorized-attack-simulation-and-adversarial-validation",
+      "role": "operational",
+      "category": "security",
+      "surface": "authorized_security_test_environment",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-130",
+      "capability_id": "md.marketing.search-discoverability-seo-aeo-and-information-architecture",
+      "role": "investigative",
+      "category": "marketing",
+      "surface": "search_discoverability_seo_aeo_and_information_architecture",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "seo-audit",
+        "content-strategy",
+        "site-architecture",
+        "schema-markup",
+        "web-design-guidelines"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-131",
+      "capability_id": "md.procurement.procurement-vendor-evaluation-rfp-and-due-diligence",
+      "role": "investigative",
+      "category": "procurement",
+      "surface": "procurement_vendor_evaluation_rfp_and_due_diligence",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-132",
+      "capability_id": "md.people.workforce-strategy-and-capacity-planning",
+      "role": "investigative",
+      "category": "people",
+      "surface": "workforce_strategy_and_capacity_planning",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-133",
+      "capability_id": "md.people.hiring-interview-selection-and-onboarding-design",
+      "role": "operational",
+      "category": "people",
+      "surface": "hiring_interview_selection_and_onboarding_design",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-134",
+      "capability_id": "md.people.performance-competency-career-and-learning-frameworks",
+      "role": "operational",
+      "category": "people",
+      "surface": "performance_competency_career_and_learning_frameworks",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-135",
+      "capability_id": "md.customer_operations.customer-support-and-service-operations",
+      "role": "operational",
+      "category": "customer_operations",
+      "surface": "customer_support_and_service_operations",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-136",
+      "capability_id": "md.customer_operations.customer-success-retention-and-voice-of-customer",
+      "role": "investigative",
+      "category": "customer_operations",
+      "surface": "customer_success_retention_and_voice_of_customer",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-137",
+      "capability_id": "md.strategy.negotiation-and-decision-preparation",
+      "role": "investigative",
+      "category": "strategy",
+      "surface": "negotiation_and_decision_preparation",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "office-hours",
+        "plan-ceo-review",
+        "autoplan"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-138",
+      "capability_id": "md.personal_productivity.personal-knowledge-productivity-and-work-system",
+      "role": "operational",
+      "category": "personal_productivity",
+      "surface": "personal_knowledge_productivity_and_work_system",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-139",
+      "capability_id": "md.osint.osint-research-planning-authorization-and-collection-governance",
+      "role": "investigative",
+      "category": "osint",
+      "surface": "osint_research_planning_authorization_and_collection_governance",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "research",
+        "investigate",
+        "scrape",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-13",
+      "capability_id": "md.security.safe-exploit-reproduction-and-patch-validation",
+      "role": "operational",
+      "category": "security",
+      "surface": "isolated_vulnerability_reproduction",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-140",
+      "capability_id": "md.osint.osint-collection-source-validation-and-preservation",
+      "role": "operational",
+      "category": "osint",
+      "surface": "osint_collection_source_validation_and_preservation",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "research",
+        "investigate",
+        "scrape",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-141",
+      "capability_id": "md.osint.osint-entity-timeline-geospatial-and-network-analysis",
+      "role": "investigative",
+      "category": "osint",
+      "surface": "osint_entity_timeline_geospatial_and_network_analysis",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "research",
+        "investigate",
+        "scrape",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-142",
+      "capability_id": "md.intelligence.intelligence-estimate-warning-and-executive-brief",
+      "role": "operational",
+      "category": "intelligence",
+      "surface": "intelligence_estimate_warning_and_executive_brief",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "research",
+        "investigate",
+        "scrape",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-143",
+      "capability_id": "md.legal.legal-research-and-issue-analysis",
+      "role": "investigative",
+      "category": "legal",
+      "surface": "legal_research_and_issue_analysis",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-144",
+      "capability_id": "md.legal.contract-policy-and-clause-review",
+      "role": "investigative",
+      "category": "legal",
+      "surface": "contract_policy_and_clause_review",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-145",
+      "capability_id": "md.finance.finance-fp-a-budget-and-management-analysis",
+      "role": "investigative",
+      "category": "finance",
+      "surface": "finance_fp_a_budget_and_management_analysis",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "xlsx",
+        "document-generate",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-146",
+      "capability_id": "md.finance.accounting-close-reconciliation-and-control-review",
+      "role": "operational",
+      "category": "finance",
+      "surface": "accounting_close_reconciliation_and_control_review",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "xlsx",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-147",
+      "capability_id": "md.finance.treasury-cash-flow-liquidity-and-runway-planning",
+      "role": "investigative",
+      "category": "finance",
+      "surface": "treasury_cash_flow_liquidity_and_runway_planning",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "xlsx",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-148",
+      "capability_id": "md.audit.internal-audit-control-testing-and-assurance",
+      "role": "investigative",
+      "category": "audit",
+      "surface": "internal_audit_control_testing_and_assurance",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-149",
+      "capability_id": "md.operations.operations-process-design-and-continuous-improvement",
+      "role": "operational",
+      "category": "operations",
+      "surface": "operations_process_design_and_continuous_improvement",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-14",
+      "capability_id": "md.model_security.model-and-ai-system-red-team-evaluation",
+      "role": "operational",
+      "category": "model_security",
+      "surface": "model_and_ai_adversarial_testing",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-150",
+      "capability_id": "md.supply_chain.supply-chain-inventory-logistics-and-resilience-planning",
+      "role": "investigative",
+      "category": "supply_chain",
+      "surface": "supply_chain_inventory_logistics_and_resilience_planning",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-151",
+      "capability_id": "md.product.product-discovery-strategy-roadmap-and-lifecycle",
+      "role": "investigative",
+      "category": "product",
+      "surface": "product_discovery_strategy_roadmap_and_lifecycle",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "spec",
+        "plan-eng-review",
+        "review",
+        "test-driven-development",
+        "verification-before-completion",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-152",
+      "capability_id": "md.product.product-requirements-acceptance-and-release-package",
+      "role": "operational",
+      "category": "product",
+      "surface": "product_requirements_acceptance_and_release_package",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "spec",
+        "plan-eng-review",
+        "review",
+        "test-driven-development",
+        "verification-before-completion"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-153",
+      "capability_id": "md.automation.business-process-automation-and-workflow-design",
+      "role": "operational",
+      "category": "automation",
+      "surface": "business_process_automation_and_workflow_design",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "spec",
+        "plan-eng-review",
+        "review",
+        "test-driven-development",
+        "verification-before-completion"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-154",
+      "capability_id": "md.data_governance.data-governance-quality-lineage-and-master-data",
+      "role": "investigative",
+      "category": "data_governance",
+      "surface": "data_governance_quality_lineage_and_master_data",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "benchmark",
+        "benchmark-models",
+        "xlsx",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-155",
+      "capability_id": "md.intelligence.competitive-intelligence-and-strategic-scenario-planning",
+      "role": "investigative",
+      "category": "intelligence",
+      "surface": "competitive_intelligence_and_strategic_scenario_planning",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "research",
+        "investigate",
+        "scrape",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-156",
+      "capability_id": "md.communications.crisis-communication-and-issues-management",
+      "role": "operational",
+      "category": "communications",
+      "surface": "crisis_communication_and_issues_management",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "docx",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-157",
+      "capability_id": "md.communications.public-relations-media-briefing-and-thought-leadership",
+      "role": "operational",
+      "category": "communications",
+      "surface": "public_relations_media_briefing_and_thought_leadership",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "docx",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-158",
+      "capability_id": "md.partnerships.partnership-alliance-and-ecosystem-strategy",
+      "role": "investigative",
+      "category": "partnerships",
+      "surface": "partnership_alliance_and_ecosystem_strategy",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "office-hours",
+        "plan-ceo-review",
+        "autoplan"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-159",
+      "capability_id": "md.reporting.board-executive-investor-and-management-reporting",
+      "role": "operational",
+      "category": "reporting",
+      "surface": "board_executive_investor_and_management_reporting",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf",
+        "docx",
+        "pptx",
+        "xlsx",
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-15",
+      "capability_id": "md.operations.incident-triage-containment-eradication-and-recovery",
+      "role": "operational",
+      "category": "operations",
+      "surface": "active_incident_and_affected_systems",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-160",
+      "capability_id": "md.reporting.meeting-intelligence-decision-capture-and-follow-through",
+      "role": "operational",
+      "category": "reporting",
+      "surface": "meeting_intelligence_decision_capture_and_follow_through",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf",
+        "docx",
+        "pptx",
+        "xlsx",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-161",
+      "capability_id": "md.public_affairs.policy-analysis-public-affairs-and-regulatory-monitoring",
+      "role": "investigative",
+      "category": "public_affairs",
+      "surface": "policy_analysis_public_affairs_and_regulatory_monitoring",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "stop-slop",
+        "docx"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-162",
+      "capability_id": "md.sustainability.sustainability-esg-and-impact-reporting",
+      "role": "operational",
+      "category": "sustainability",
+      "surface": "sustainability_esg_and_impact_reporting",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-163",
+      "capability_id": "md.governance.ethics-responsible-ai-human-rights-and-societal-impact",
+      "role": "investigative",
+      "category": "governance",
+      "surface": "ethics_responsible_ai_human_rights_and_societal_impact",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-164",
+      "capability_id": "md.accessibility.accessibility-plain-language-and-inclusive-content-transformation",
+      "role": "operational",
+      "category": "accessibility",
+      "surface": "accessibility_plain_language_and_inclusive_content_transformation",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "docx",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-165",
+      "capability_id": "md.prompt_engineering.prompt-creation-and-specification",
+      "role": "operational",
+      "category": "prompt_engineering",
+      "surface": "prompt_creation_and_specification",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "prompt-builder",
+        "enhance-prompt"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-166",
+      "capability_id": "md.prompt_engineering.prompt-optimization-and-enhancement",
+      "role": "operational",
+      "category": "prompt_engineering",
+      "surface": "prompt_optimization_and_enhancement",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "prompt-optimizer",
+        "boost-prompt",
+        "enhance-prompt"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-167",
+      "capability_id": "md.prompt_engineering.prompt-review-evaluation-and-adversarial-testing",
+      "role": "investigative",
+      "category": "prompt_engineering",
+      "surface": "prompt_review_evaluation_and_adversarial_testing",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "prompt-engineering-patterns",
+        "prompt-builder"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-168",
+      "capability_id": "md.prompt_engineering.prompt-repair-refactoring-and-failure-resolution",
+      "role": "operational",
+      "category": "prompt_engineering",
+      "surface": "prompt_repair_refactoring_and_failure_resolution",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "prompt-optimizer",
+        "prompt-engineering-patterns"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-169",
+      "capability_id": "md.reporting.report-architecture-and-decision-narrative",
+      "role": "investigative",
+      "category": "reporting",
+      "surface": "report_architecture_and_decision_narrative",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf",
+        "docx",
+        "pptx",
+        "xlsx",
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-16",
+      "capability_id": "md.engineering.project-scaffolding-and-repository-bootstrap",
+      "role": "operational",
+      "category": "engineering",
+      "surface": "new_project_files_and_tooling",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-170",
+      "capability_id": "md.reporting.report-production-visualization-brief-and-quality-assurance",
+      "role": "operational",
+      "category": "reporting",
+      "surface": "report_production_visualization_brief_and_quality_assurance",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf",
+        "docx",
+        "pptx",
+        "xlsx",
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-171",
+      "capability_id": "md.change_management.change-management-adoption-and-enablement",
+      "role": "operational",
+      "category": "change_management",
+      "surface": "change_management_adoption_and_enablement",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-172",
+      "capability_id": "md.change_management.stakeholder-mapping-engagement-and-coalition-planning",
+      "role": "investigative",
+      "category": "change_management",
+      "surface": "stakeholder_mapping_engagement_and_coalition_planning",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-173",
+      "capability_id": "md.organization.organizational-design-operating-model-and-governance",
+      "role": "investigative",
+      "category": "organization",
+      "surface": "organizational_design_operating_model_and_governance",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "office-hours",
+        "plan-ceo-review",
+        "autoplan"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-174",
+      "capability_id": "md.quality.quality-management-sop-audit-and-continuous-improvement",
+      "role": "investigative",
+      "category": "quality",
+      "surface": "quality_management_sop_audit_and_continuous_improvement",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-175",
+      "capability_id": "md.resilience.business-continuity-disaster-recovery-and-tabletop-exercise",
+      "role": "operational",
+      "category": "resilience",
+      "surface": "business_continuity_disaster_recovery_and_tabletop_exercise",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-176",
+      "capability_id": "md.strategy.corporate-strategy-portfolio-and-capital-allocation",
+      "role": "investigative",
+      "category": "strategy",
+      "surface": "corporate_strategy_portfolio_and_capital_allocation",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "office-hours",
+        "plan-ceo-review",
+        "autoplan",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-177",
+      "capability_id": "md.innovation.innovation-pipeline-idea-portfolio-and-experiment-governance",
+      "role": "operational",
+      "category": "innovation",
+      "surface": "innovation_pipeline_idea_portfolio_and_experiment_governance",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "office-hours",
+        "plan-ceo-review",
+        "autoplan"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-178",
+      "capability_id": "md.llm_operations.language-model-task-intake-context-engineering-and-prompt-pack",
+      "role": "operational",
+      "category": "llm_operations",
+      "surface": "language_model_task_intake_context_engineering_and_prompt_pack",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "benchmark",
+        "benchmark-models",
+        "xlsx",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-179",
+      "capability_id": "md.organization.department-operating-plan-and-cross-functional-coordination",
+      "role": "operational",
+      "category": "organization",
+      "surface": "department_operating_plan_and_cross_functional_coordination",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "office-hours",
+        "plan-ceo-review",
+        "autoplan"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-17",
+      "capability_id": "md.enablement.stakeholder-status-roadmap-and-release-communication",
+      "role": "operational",
+      "category": "enablement",
+      "surface": "authorized_project_communication",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-180",
+      "capability_id": "md.knowledge_management.records-management-retention-and-institutional-memory",
+      "role": "operational",
+      "category": "knowledge_management",
+      "surface": "records_management_retention_and_institutional_memory",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-181",
+      "capability_id": "md.people.employee-communication-culture-and-engagement",
+      "role": "operational",
+      "category": "people",
+      "surface": "employee_communication_culture_and_engagement",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-182",
+      "capability_id": "md.cyber_intelligence.cyber-threat-intelligence-and-security-research",
+      "role": "investigative",
+      "category": "cyber_intelligence",
+      "surface": "cyber_threat_intelligence_and_security_research",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "research",
+        "investigate",
+        "scrape",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-183",
+      "capability_id": "md.risk.fraud-abuse-and-integrity-risk-analysis",
+      "role": "investigative",
+      "category": "risk",
+      "surface": "fraud_abuse_and_integrity_risk_analysis",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-184",
+      "capability_id": "md.sales_operations.sales-operations-pipeline-forecast-and-revenue-planning",
+      "role": "investigative",
+      "category": "sales_operations",
+      "surface": "sales_operations_pipeline_forecast_and_revenue_planning",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "xlsx",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-185",
+      "capability_id": "md.revenue_operations.revenue-operations-and-lifecycle-measurement",
+      "role": "operational",
+      "category": "revenue_operations",
+      "surface": "revenue_operations_and_lifecycle_measurement",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "xlsx",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-186",
+      "capability_id": "md.administration.administrative-operations-travel-scheduling-and-executive-support",
+      "role": "operational",
+      "category": "administration",
+      "surface": "administrative_operations_travel_scheduling_and_executive_support",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "document-generate",
+        "make-pdf"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-187",
+      "capability_id": "md.model_evaluation.model-evaluation-benchmarking-and-selection",
+      "role": "investigative",
+      "category": "model_evaluation",
+      "surface": "model_evaluation_benchmarking_and_selection",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "benchmark",
+        "benchmark-models",
+        "xlsx",
+        "document-generate"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-188",
+      "capability_id": "md.llm_engineering.llm-application-rag-memory-and-tool-architecture",
+      "role": "investigative",
+      "category": "llm_engineering",
+      "surface": "llm_application_rag_memory_and_tool_architecture",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "spec",
+        "plan-eng-review",
+        "review",
+        "test-driven-development",
+        "verification-before-completion"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-189",
+      "capability_id": "md.llm_engineering.knowledge-retrieval-search-and-rag-quality-evaluation",
+      "role": "investigative",
+      "category": "llm_engineering",
+      "surface": "knowledge_retrieval_search_and_rag_quality_evaluation",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "spec",
+        "plan-eng-review",
+        "review",
+        "test-driven-development",
+        "verification-before-completion"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-18",
+      "capability_id": "md.governance.project-health-completeness-and-release-readiness-gate",
+      "role": "gate",
+      "category": "governance",
+      "surface": "whole_project_release_decision",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-190",
+      "capability_id": "md.ai_governance.ai-governance-model-risk-and-deployment-approval",
+      "role": "gate",
+      "category": "ai_governance",
+      "surface": "ai_governance_model_risk_and_deployment_approval",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-191",
+      "capability_id": "md.auto_orchestration.intent-interrogation-and-route-clarification",
+      "role": "investigative",
+      "category": "auto_orchestration",
+      "surface": "ambiguous_or_incomplete_user_intent",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "brainstorming",
+        "grill-me",
+        "grill-with-docs"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-192",
+      "capability_id": "md.auto_orchestration.skill-requirement-and-capability-fit-resolution",
+      "role": "investigative",
+      "category": "auto_orchestration",
+      "surface": "skill_requirement_and_fit",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-193",
+      "capability_id": "md.auto_orchestration.missing-skill-discovery-and-candidate-qualification",
+      "role": "investigative",
+      "category": "auto_orchestration",
+      "surface": "missing_skill_discovery_and_qualification",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "find-skills"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-194",
+      "capability_id": "md.auto_orchestration.governed-skill-installation-and-dual-location-registration",
+      "role": "operational",
+      "category": "auto_orchestration",
+      "surface": "skill_installation_global_and_opencode",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-195",
+      "capability_id": "md.auto_orchestration.skill-creation-evaluation-and-dual-location-registration",
+      "role": "operational",
+      "category": "auto_orchestration",
+      "surface": "new_skill_creation_and_registration",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "skill-creator",
+        "writing-skills",
+        "prompt-engineering-patterns"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-196",
+      "capability_id": "md.auto_orchestration.generic-conditional-skill-execution-adapter",
+      "role": "operational",
+      "category": "auto_orchestration",
+      "surface": "generic_skill_execution",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-197",
+      "capability_id": "md.auto_orchestration.bounded-prompt-and-skill-loop-orchestrator",
+      "role": "operational",
+      "category": "auto_orchestration",
+      "surface": "generic_bounded_loop_orchestration",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-198",
+      "capability_id": "md.auto_orchestration.loop-exit-plateau-and-completion-adjudication-gate",
+      "role": "gate",
+      "category": "auto_orchestration",
+      "surface": "loop_exit_and_completion_decision",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-199",
+      "capability_id": "md.prompt_system.prompt-addition-registration-and-ecosystem-integration",
+      "role": "operational",
+      "category": "prompt_system",
+      "surface": "prompt_addition_registration_and_ecosystem_integration",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "prompt-engineering-patterns",
+        "writing-skills",
+        "systematic-debugging",
+        "test-driven-development"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-19",
+      "capability_id": "md.governance.retrospective-continuous-improvement-and-learning",
+      "role": "investigative",
+      "category": "governance",
+      "surface": "completed_run_and_systemic_learning",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-20",
+      "capability_id": "md.governance.license-compliance-and-governance-review",
+      "role": "investigative",
+      "category": "governance",
+      "surface": "legal_policy_and_governance_obligations",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-21",
+      "capability_id": "md.enablement.contributor-and-support-experience-improvement",
+      "role": "operational",
+      "category": "enablement",
+      "surface": "contributor_and_support_workflows",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-22",
+      "capability_id": "md.governance.risk-and-technical-debt-portfolio",
+      "role": "investigative",
+      "category": "governance",
+      "surface": "cross_project_risk_and_debt",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-23",
+      "capability_id": "md.operations.infrastructure-cost-and-sustainability-review",
+      "role": "investigative",
+      "category": "operations",
+      "surface": "infrastructure_cost_capacity_and_efficiency",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-24",
+      "capability_id": "md.agentic.agent-evaluation-drift-cost-and-rate-governance",
+      "role": "investigative",
+      "category": "agentic",
+      "surface": "agents_models_tools_and_runtime_behavior",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-25",
+      "capability_id": "md.coherence.project-consistency-uniformity-and-coherence-investigation-and-plan",
+      "role": "investigative",
+      "category": "coherence",
+      "surface": "project_structure_interfaces_and_conventions",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-26",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-26",
+      "capability_id": "md.coherence.project-consistency-uniformity-and-coherence-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "coherence",
+      "surface": "project_structure_interfaces_and_conventions",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-25",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-27",
+      "capability_id": "md.engineering.code-quality-and-maintainability-investigation-and-plan",
+      "role": "investigative",
+      "category": "engineering",
+      "surface": "source_code_and_maintainability",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-28",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-28",
+      "capability_id": "md.engineering.code-quality-and-maintainability-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "engineering",
+      "surface": "source_code_and_maintainability",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-27",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-29",
+      "capability_id": "md.debugging.debugging-root-cause-and-bug-resolution-investigation-and-plan",
+      "role": "investigative",
+      "category": "debugging",
+      "surface": "faulty_behavior_and_causal_chain",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-30",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-30",
+      "capability_id": "md.debugging.debugging-root-cause-and-bug-resolution-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "debugging",
+      "surface": "faulty_behavior_and_causal_chain",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-29",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-31",
+      "capability_id": "md.cleanup.safe-cleanup-dead-code-and-repository-hygiene-investigation-and-plan",
+      "role": "investigative",
+      "category": "cleanup",
+      "surface": "unused_obsolete_duplicate_and_generated_artifacts",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-32",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-32",
+      "capability_id": "md.cleanup.safe-cleanup-dead-code-and-repository-hygiene-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "cleanup",
+      "surface": "unused_obsolete_duplicate_and_generated_artifacts",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-31",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-33",
+      "capability_id": "md.engineering.refactoring-and-modernization-investigation-and-plan",
+      "role": "investigative",
+      "category": "engineering",
+      "surface": "internal_structure_and_technology_refresh",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-34",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-34",
+      "capability_id": "md.engineering.refactoring-and-modernization-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "engineering",
+      "surface": "internal_structure_and_technology_refresh",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-33",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-35",
+      "capability_id": "md.testing.testing-and-verification-investigation-and-plan",
+      "role": "investigative",
+      "category": "testing",
+      "surface": "test_strategy_fixtures_and_quality_gates",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-36",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-36",
+      "capability_id": "md.testing.testing-and-verification-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "testing",
+      "surface": "test_strategy_fixtures_and_quality_gates",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-35",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-37",
+      "capability_id": "md.security.security-posture-vulnerability-and-fixes-investigation-and-plan",
+      "role": "investigative",
+      "category": "security",
+      "surface": "application_security_findings_and_controls",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-38",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-38",
+      "capability_id": "md.security.security-posture-vulnerability-and-fixes-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "security",
+      "surface": "application_security_findings_and_controls",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-37",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-39",
+      "capability_id": "md.security.dependency-and-software-supply-chain-security-investigation-and-plan",
+      "role": "investigative",
+      "category": "security",
+      "surface": "dependencies_build_inputs_and_artifacts",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-40",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-40",
+      "capability_id": "md.security.dependency-and-software-supply-chain-security-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "security",
+      "surface": "dependencies_build_inputs_and_artifacts",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-39",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-41",
+      "capability_id": "md.security.configuration-environment-and-secrets-security-investigation-and-plan",
+      "role": "investigative",
+      "category": "security",
+      "surface": "configuration_environment_and_credentials",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-42",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-42",
+      "capability_id": "md.security.configuration-environment-and-secrets-security-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "security",
+      "surface": "configuration_environment_and_credentials",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-41",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-43",
+      "capability_id": "md.security.identity-authentication-authorization-and-session-security-investigation-and-plan",
+      "role": "investigative",
+      "category": "security",
+      "surface": "identity_access_and_session_controls",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-44",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-44",
+      "capability_id": "md.security.identity-authentication-authorization-and-session-security-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "security",
+      "surface": "identity_access_and_session_controls",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-43",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-45",
+      "capability_id": "md.engineering.api-cli-and-public-contract-integrity-investigation-and-plan",
+      "role": "investigative",
+      "category": "engineering",
+      "surface": "public_interfaces_and_consumers",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-46",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-46",
+      "capability_id": "md.engineering.api-cli-and-public-contract-integrity-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "engineering",
+      "surface": "public_interfaces_and_consumers",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-45",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-47",
+      "capability_id": "md.data.data-storage-schema-and-migration-investigation-and-plan",
+      "role": "investigative",
+      "category": "data",
+      "surface": "data_models_storage_and_migrations",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-48",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-48",
+      "capability_id": "md.data.data-storage-schema-and-migration-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "data",
+      "surface": "data_models_storage_and_migrations",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-47",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-49",
+      "capability_id": "md.engineering.performance-and-efficiency-investigation-and-plan",
+      "role": "investigative",
+      "category": "engineering",
+      "surface": "latency_throughput_resource_and_cost",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-50",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-50",
+      "capability_id": "md.engineering.performance-and-efficiency-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "engineering",
+      "surface": "latency_throughput_resource_and_cost",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-49",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-51",
+      "capability_id": "md.operations.reliability-resilience-and-recovery-investigation-and-plan",
+      "role": "investigative",
+      "category": "operations",
+      "surface": "failure_modes_resilience_and_recovery",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-52",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-52",
+      "capability_id": "md.operations.reliability-resilience-and-recovery-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "operations",
+      "surface": "failure_modes_resilience_and_recovery",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-51",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-53",
+      "capability_id": "md.delivery.ci-build-delivery-and-release-pipeline-investigation-and-plan",
+      "role": "investigative",
+      "category": "delivery",
+      "surface": "build_ci_cd_and_release_automation",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-54",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-54",
+      "capability_id": "md.delivery.ci-build-delivery-and-release-pipeline-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "delivery",
+      "surface": "build_ci_cd_and_release_automation",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-53",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-55",
+      "capability_id": "md.operations.observability-detection-and-operations-investigation-and-plan",
+      "role": "investigative",
+      "category": "operations",
+      "surface": "telemetry_alerting_detection_and_runbooks",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-56",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-56",
+      "capability_id": "md.operations.observability-detection-and-operations-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "operations",
+      "surface": "telemetry_alerting_detection_and_runbooks",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-55",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-57",
+      "capability_id": "md.security.cloud-container-and-infrastructure-security-investigation-and-plan",
+      "role": "investigative",
+      "category": "security",
+      "surface": "cloud_container_network_and_platform_controls",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-58",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-58",
+      "capability_id": "md.security.cloud-container-and-infrastructure-security-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "security",
+      "surface": "cloud_container_network_and_platform_controls",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-57",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-59",
+      "capability_id": "md.governance.privacy-and-data-protection-investigation-and-plan",
+      "role": "investigative",
+      "category": "governance",
+      "surface": "personal_sensitive_and_regulated_data",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-60",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-60",
+      "capability_id": "md.governance.privacy-and-data-protection-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "governance",
+      "surface": "personal_sensitive_and_regulated_data",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-59",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-61",
+      "capability_id": "md.agentic.agent-skill-tool-and-mcp-capability-lifecycle-investigation-and-plan",
+      "role": "investigative",
+      "category": "agentic",
+      "surface": "agent_tools_skills_and_mcp_lifecycle",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-62",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-62",
+      "capability_id": "md.agentic.agent-skill-tool-and-mcp-capability-lifecycle-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "agentic",
+      "surface": "agent_tools_skills_and_mcp_lifecycle",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-61",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-63",
+      "capability_id": "md.agentic.agentic-security-permissions-and-trust-boundaries-investigation-and-plan",
+      "role": "investigative",
+      "category": "agentic",
+      "surface": "agents_tools_memory_and_external_actions",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-64",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-64",
+      "capability_id": "md.agentic.agentic-security-permissions-and-trust-boundaries-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "agentic",
+      "surface": "agents_tools_memory_and_external_actions",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-63",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-65",
+      "capability_id": "md.agentic.multi-agent-architecture-and-agent-definitions-investigation-and-plan",
+      "role": "investigative",
+      "category": "agentic",
+      "surface": "multi_agent_roles_handoffs_and_coordination",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-66",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-66",
+      "capability_id": "md.agentic.multi-agent-architecture-and-agent-definitions-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "agentic",
+      "surface": "multi_agent_roles_handoffs_and_coordination",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-65",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-67",
+      "capability_id": "md.model_security.model-and-ai-system-security-investigation-and-plan",
+      "role": "investigative",
+      "category": "model_security",
+      "surface": "models_data_artifacts_serving_and_controls",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-68",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-68",
+      "capability_id": "md.model_security.model-and-ai-system-security-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "model_security",
+      "surface": "models_data_artifacts_serving_and_controls",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-67",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-69",
+      "capability_id": "md.model_security.prompt-injection-untrusted-input-and-tool-output-security-investigation-and-plan",
+      "role": "investigative",
+      "category": "model_security",
+      "surface": "instructions_context_retrieval_and_tool_outputs",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-70",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-70",
+      "capability_id": "md.model_security.prompt-injection-untrusted-input-and-tool-output-security-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "model_security",
+      "surface": "instructions_context_retrieval_and_tool_outputs",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-69",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-71",
+      "capability_id": "md.design.user-experience-accessibility-and-localization-investigation-and-plan",
+      "role": "investigative",
+      "category": "design",
+      "surface": "user_journeys_interfaces_and_content",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-72",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-72",
+      "capability_id": "md.design.user-experience-accessibility-and-localization-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "design",
+      "surface": "user_journeys_interfaces_and_content",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-71",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-73",
+      "capability_id": "md.design.brand-design-system-and-content-coherence-investigation-and-plan",
+      "role": "investigative",
+      "category": "design",
+      "surface": "brand_identity_tokens_components_and_voice",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-74",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-74",
+      "capability_id": "md.design.brand-design-system-and-content-coherence-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "design",
+      "surface": "brand_identity_tokens_components_and_voice",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-73",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-75",
+      "capability_id": "md.enablement.documentation-knowledge-taxonomy-and-troubleshooting-investigation-and-plan",
+      "role": "investigative",
+      "category": "enablement",
+      "surface": "documentation_knowledge_and_information_architecture",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "research",
+        "docx",
+        "edit-article",
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-76",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-76",
+      "capability_id": "md.enablement.documentation-knowledge-taxonomy-and-troubleshooting-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "enablement",
+      "surface": "documentation_knowledge_and_information_architecture",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "docx",
+        "document-generate",
+        "make-pdf",
+        "edit-article",
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-75",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-77",
+      "capability_id": "md.prompt_system.prompt-suite-consistency-security-and-coherence-investigation-and-plan",
+      "role": "investigative",
+      "category": "prompt_system",
+      "surface": "prompt_files_catalogs_contracts_and_scenarios",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-78",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-78",
+      "capability_id": "md.prompt_system.prompt-suite-consistency-security-and-coherence-authorized-execution-and-verification",
+      "role": "executive",
+      "category": "prompt_system",
+      "surface": "prompt_files_catalogs_contracts_and_scenarios",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": "MD-77",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-79",
+      "capability_id": "md.research.deep-research-and-evidence-synthesis",
+      "role": "investigative",
+      "category": "research",
+      "surface": "research_questions_sources_and_evidence",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-80",
+      "capability_id": "md.research.research-protocol-literature-search-and-source-strategy",
+      "role": "investigative",
+      "category": "research",
+      "surface": "research_protocol_and_search_design",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-81",
+      "capability_id": "md.analytics.data-analysis-statistical-reasoning-and-decision-support",
+      "role": "investigative",
+      "category": "analytics",
+      "surface": "datasets_metrics_models_and_decisions",
+      "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-82",
+      "capability_id": "md.research.research-integrity-citation-and-fact-verification",
+      "role": "investigative",
+      "category": "research",
+      "surface": "claims_citations_quotes_and_research_integrity",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-83",
+      "capability_id": "md.editorial.research-backed-blog-article-and-newsletter-investigation-and-editorial-brief",
+      "role": "investigative",
+      "category": "editorial",
+      "surface": "long_form_editorial_content",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-84",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-84",
+      "capability_id": "md.editorial.research-backed-blog-article-and-newsletter-drafting-editing-and-publication-package",
+      "role": "executive",
+      "category": "editorial",
+      "surface": "long_form_editorial_content",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-83",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-85",
+      "capability_id": "md.creative_production.script-video-podcast-and-storyboard-research-and-production-brief",
+      "role": "investigative",
+      "category": "creative_production",
+      "surface": "scripts_storyboards_and_audio_visual_narratives",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "canvas-design",
+        "visual-assets",
+        "strudel"
+      ],
+      "paired_prompt_id": "MD-86",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-86",
+      "capability_id": "md.creative_production.script-video-podcast-and-storyboard-writing-and-production-package",
+      "role": "executive",
+      "category": "creative_production",
+      "surface": "scripts_storyboards_and_audio_visual_narratives",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop",
+        "canvas-design",
+        "visual-assets",
+        "strudel"
+      ],
+      "paired_prompt_id": "MD-85",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-87",
+      "capability_id": "md.academic.academic-paper-and-scholarly-manuscript-research-design-and-evidence-plan",
+      "role": "investigative",
+      "category": "academic",
+      "surface": "scholarly_research_and_manuscript",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-88",
+      "plan_review_required": true,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-88",
+      "capability_id": "md.academic.academic-paper-and-scholarly-manuscript-drafting-citation-and-revision-package",
+      "role": "executive",
+      "category": "academic",
+      "surface": "scholarly_research_and_manuscript",
+      "evidence_lane": "factual",
+      "preferred_skills": [
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": "MD-87",
+      "plan_review_required": false,
+      "reviewed_handoff_required": true,
+      "execution_consent_required": true,
+      "exact_twin_only": true
+    },
+    {
+      "id": "MD-89",
+      "capability_id": "md.creative_writing.fiction-world-character-and-narrative-design",
+      "role": "investigative",
+      "category": "creative_writing",
+      "surface": "fiction_world_character_plot_and_theme",
+      "evidence_lane": "imaginative",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-90",
+      "capability_id": "md.creative_writing.story-fiction-and-narrative-drafting",
+      "role": "operational",
+      "category": "creative_writing",
+      "surface": "fiction_and_narrative_drafts",
+      "evidence_lane": "imaginative",
+      "preferred_skills": [
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-91",
+      "capability_id": "md.creative_writing.poetry-prose-and-literary-composition",
+      "role": "operational",
+      "category": "creative_writing",
+      "surface": "poetry_prose_and_literary_forms",
+      "evidence_lane": "imaginative",
+      "preferred_skills": [
+        "stop-slop",
+        "strudel"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-92",
+      "capability_id": "md.editorial.creative-critique-editing-and-anti-slop-refinement",
+      "role": "operational",
+      "category": "editorial",
+      "surface": "creative_and_professional_text_quality",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-93",
+      "capability_id": "md.content_strategy.content-strategy-portfolio-and-editorial-architecture",
+      "role": "investigative",
+      "category": "content_strategy",
+      "surface": "content_portfolio_audience_and_channels",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-94",
+      "capability_id": "md.knowledge_design.content-graph-knowledge-architecture-and-repurposing-system",
+      "role": "operational",
+      "category": "knowledge_design",
+      "surface": "content_entities_relationships_and_derivatives",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-95",
+      "capability_id": "md.content_operations.content-calendar-scheduling-and-distribution-planning",
+      "role": "operational",
+      "category": "content_operations",
+      "surface": "content_calendar_capacity_and_distribution",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-96",
+      "capability_id": "md.creative_strategy.idea-exploration-concept-development-and-moodboard-brief",
+      "role": "investigative",
+      "category": "creative_strategy",
+      "surface": "ideas_concepts_and_visual_directions",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "canvas-design",
+        "brand-guidelines",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-97",
+      "capability_id": "md.brand.brand-strategy-positioning-naming-and-architecture",
+      "role": "investigative",
+      "category": "brand",
+      "surface": "brand_positioning_naming_and_architecture",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "brand-guidelines",
+        "stop-slop"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-98",
+      "capability_id": "md.brand.brand-identity-guidelines-and-asset-system-production",
+      "role": "operational",
+      "category": "brand",
+      "surface": "brand_identity_guidelines_and_assets",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "brand-guidelines",
+        "canvas-design",
+        "impeccable",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-99",
+      "capability_id": "md.marketing_creative.campaign-creative-concept-and-activation-planning",
+      "role": "operational",
+      "category": "marketing_creative",
+      "surface": "campaign_idea_assets_channels_and_activation",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [
+        "canvas-design",
+        "brand-guidelines",
+        "stop-slop",
+        "visual-assets"
+      ],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "MD-01",
+      "to": "MD-00",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-00",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-00",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-01",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-02",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-02",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-03",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-03",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-04",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-04",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-05",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-05",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-05",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-05",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-06",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-06",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-06",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-06",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-07",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-07",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-07",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-07",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-08",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-08",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-08",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-08",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-09",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-09",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-09",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-09",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-100",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-100",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-100",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-100",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-101",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-101",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-101",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-101",
+      "type": "requires"
+    },
+    {
+      "from": "MD-101",
+      "to": "MD-102",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-101",
+      "to": "MD-102",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-101",
+      "to": "MD-102",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-102",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-102",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-102",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-102",
+      "type": "requires"
+    },
+    {
+      "from": "MD-101",
+      "to": "MD-102",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-103",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-103",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-103",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-103",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-104",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-104",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-104",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-104",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-105",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-105",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-105",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-105",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-106",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-106",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-106",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-106",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-107",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-107",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-107",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-107",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-108",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-108",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-108",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-108",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-109",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-109",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-109",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-109",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-10",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-10",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-10",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-10",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-110",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-110",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-110",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-110",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-111",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-111",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-111",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-111",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-112",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-112",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-112",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-112",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-113",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-113",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-113",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-113",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-114",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-114",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-114",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-114",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-115",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-115",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-115",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-115",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-116",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-116",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-116",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-116",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-117",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-117",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-117",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-117",
+      "type": "requires"
+    },
+    {
+      "from": "MD-117",
+      "to": "MD-118",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-117",
+      "to": "MD-118",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-117",
+      "to": "MD-118",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-118",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-118",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-118",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-118",
+      "type": "requires"
+    },
+    {
+      "from": "MD-117",
+      "to": "MD-118",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-119",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-119",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-119",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-119",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-11",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-11",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-11",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-11",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-120",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-120",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-120",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-120",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-121",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-121",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-121",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-121",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-122",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-122",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-122",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-122",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-123",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-123",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-123",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-123",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-124",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-124",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-124",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-124",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-125",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-125",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-125",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-125",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-126",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-126",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-126",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-126",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-127",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-127",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-127",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-127",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-128",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-128",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-128",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-128",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-129",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-129",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-129",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-129",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-12",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-12",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-12",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-12",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-130",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-130",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-130",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-130",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-131",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-131",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-131",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-131",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-132",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-132",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-132",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-132",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-133",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-133",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-133",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-133",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-134",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-134",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-134",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-134",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-135",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-135",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-135",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-135",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-136",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-136",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-136",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-136",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-137",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-137",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-137",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-137",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-138",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-138",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-138",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-138",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-139",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-139",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-139",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-139",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-13",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-13",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-13",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-13",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-140",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-140",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-140",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-140",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-141",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-141",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-141",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-141",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-142",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-142",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-142",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-142",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-143",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-143",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-143",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-143",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-144",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-144",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-144",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-144",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-145",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-145",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-145",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-145",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-146",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-146",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-146",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-146",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-147",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-147",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-147",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-147",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-148",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-148",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-148",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-148",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-149",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-149",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-149",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-149",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-14",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-14",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-14",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-14",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-150",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-150",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-150",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-150",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-151",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-151",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-151",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-151",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-152",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-152",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-152",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-152",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-153",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-153",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-153",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-153",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-154",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-154",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-154",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-154",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-155",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-155",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-155",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-155",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-156",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-156",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-156",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-156",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-157",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-157",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-157",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-157",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-158",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-158",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-158",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-158",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-159",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-159",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-159",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-159",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-15",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-15",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-15",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-15",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-160",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-160",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-160",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-160",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-161",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-161",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-161",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-161",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-162",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-162",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-162",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-162",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-163",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-163",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-163",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-163",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-164",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-164",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-164",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-164",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-165",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-165",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-165",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-165",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-166",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-166",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-166",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-166",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-167",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-167",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-167",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-167",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-168",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-168",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-168",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-168",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-169",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-169",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-169",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-169",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-16",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-16",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-16",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-16",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-170",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-170",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-170",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-170",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-171",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-171",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-171",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-171",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-172",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-172",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-172",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-172",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-173",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-173",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-173",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-173",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-174",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-174",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-174",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-174",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-175",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-175",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-175",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-175",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-176",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-176",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-176",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-176",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-177",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-177",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-177",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-177",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-178",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-178",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-178",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-178",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-179",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-179",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-179",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-179",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-17",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-17",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-17",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-17",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-180",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-180",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-180",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-180",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-181",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-181",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-181",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-181",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-182",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-182",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-182",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-182",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-183",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-183",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-183",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-183",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-184",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-184",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-184",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-184",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-185",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-185",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-185",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-185",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-186",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-186",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-186",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-186",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-187",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-187",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-187",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-187",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-188",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-188",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-188",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-188",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-189",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-189",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-189",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-189",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-18",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-18",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-18",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-18",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-190",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-190",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-190",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-190",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-191",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-191",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-191",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-191",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-192",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-192",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-192",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-192",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-193",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-193",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-193",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-193",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-194",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-194",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-194",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-194",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-195",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-195",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-195",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-195",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-196",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-196",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-196",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-196",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-197",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-197",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-197",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-197",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-198",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-198",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-198",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-198",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-199",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-199",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-199",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-199",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-199",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-19",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-19",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-19",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-19",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-20",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-20",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-20",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-20",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-21",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-21",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-21",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-21",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-22",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-22",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-22",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-22",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-23",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-23",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-23",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-23",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-24",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-24",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-24",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-24",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-25",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-25",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-25",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-25",
+      "type": "requires"
+    },
+    {
+      "from": "MD-25",
+      "to": "MD-26",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-25",
+      "to": "MD-26",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-25",
+      "to": "MD-26",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-26",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-26",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-26",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-26",
+      "type": "requires"
+    },
+    {
+      "from": "MD-25",
+      "to": "MD-26",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-27",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-27",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-27",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-27",
+      "type": "requires"
+    },
+    {
+      "from": "MD-27",
+      "to": "MD-28",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-27",
+      "to": "MD-28",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-27",
+      "to": "MD-28",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-28",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-28",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-28",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-28",
+      "type": "requires"
+    },
+    {
+      "from": "MD-27",
+      "to": "MD-28",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-29",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-29",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-29",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-29",
+      "type": "requires"
+    },
+    {
+      "from": "MD-29",
+      "to": "MD-30",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-29",
+      "to": "MD-30",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-29",
+      "to": "MD-30",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-30",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-30",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-30",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-30",
+      "type": "requires"
+    },
+    {
+      "from": "MD-29",
+      "to": "MD-30",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-31",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-31",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-31",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-31",
+      "type": "requires"
+    },
+    {
+      "from": "MD-31",
+      "to": "MD-32",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-31",
+      "to": "MD-32",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-31",
+      "to": "MD-32",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-32",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-32",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-32",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-32",
+      "type": "requires"
+    },
+    {
+      "from": "MD-31",
+      "to": "MD-32",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-33",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-33",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-33",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-33",
+      "type": "requires"
+    },
+    {
+      "from": "MD-33",
+      "to": "MD-34",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-33",
+      "to": "MD-34",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-33",
+      "to": "MD-34",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-34",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-34",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-34",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-34",
+      "type": "requires"
+    },
+    {
+      "from": "MD-33",
+      "to": "MD-34",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-35",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-35",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-35",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-35",
+      "type": "requires"
+    },
+    {
+      "from": "MD-35",
+      "to": "MD-36",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-35",
+      "to": "MD-36",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-35",
+      "to": "MD-36",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-36",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-36",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-36",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-36",
+      "type": "requires"
+    },
+    {
+      "from": "MD-35",
+      "to": "MD-36",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-37",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-37",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-37",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-37",
+      "type": "requires"
+    },
+    {
+      "from": "MD-37",
+      "to": "MD-38",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-37",
+      "to": "MD-38",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-37",
+      "to": "MD-38",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-38",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-38",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-38",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-38",
+      "type": "requires"
+    },
+    {
+      "from": "MD-37",
+      "to": "MD-38",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-39",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-39",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-39",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-39",
+      "type": "requires"
+    },
+    {
+      "from": "MD-39",
+      "to": "MD-40",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-39",
+      "to": "MD-40",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-39",
+      "to": "MD-40",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-40",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-40",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-40",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-40",
+      "type": "requires"
+    },
+    {
+      "from": "MD-39",
+      "to": "MD-40",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-41",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-41",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-41",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-41",
+      "type": "requires"
+    },
+    {
+      "from": "MD-41",
+      "to": "MD-42",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-41",
+      "to": "MD-42",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-41",
+      "to": "MD-42",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-42",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-42",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-42",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-42",
+      "type": "requires"
+    },
+    {
+      "from": "MD-41",
+      "to": "MD-42",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-43",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-43",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-43",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-43",
+      "type": "requires"
+    },
+    {
+      "from": "MD-43",
+      "to": "MD-44",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-43",
+      "to": "MD-44",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-43",
+      "to": "MD-44",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-44",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-44",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-44",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-44",
+      "type": "requires"
+    },
+    {
+      "from": "MD-43",
+      "to": "MD-44",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-45",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-45",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-45",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-45",
+      "type": "requires"
+    },
+    {
+      "from": "MD-45",
+      "to": "MD-46",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-45",
+      "to": "MD-46",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-45",
+      "to": "MD-46",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-46",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-46",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-46",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-46",
+      "type": "requires"
+    },
+    {
+      "from": "MD-45",
+      "to": "MD-46",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-47",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-47",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-47",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-47",
+      "type": "requires"
+    },
+    {
+      "from": "MD-47",
+      "to": "MD-48",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-47",
+      "to": "MD-48",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-47",
+      "to": "MD-48",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-48",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-48",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-48",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-48",
+      "type": "requires"
+    },
+    {
+      "from": "MD-47",
+      "to": "MD-48",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-49",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-49",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-49",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-49",
+      "type": "requires"
+    },
+    {
+      "from": "MD-49",
+      "to": "MD-50",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-49",
+      "to": "MD-50",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-49",
+      "to": "MD-50",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-50",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-50",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-50",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-50",
+      "type": "requires"
+    },
+    {
+      "from": "MD-49",
+      "to": "MD-50",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-51",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-51",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-51",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-51",
+      "type": "requires"
+    },
+    {
+      "from": "MD-51",
+      "to": "MD-52",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-51",
+      "to": "MD-52",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-51",
+      "to": "MD-52",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-52",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-52",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-52",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-52",
+      "type": "requires"
+    },
+    {
+      "from": "MD-51",
+      "to": "MD-52",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-53",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-53",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-53",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-53",
+      "type": "requires"
+    },
+    {
+      "from": "MD-53",
+      "to": "MD-54",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-53",
+      "to": "MD-54",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-53",
+      "to": "MD-54",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-54",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-54",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-54",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-54",
+      "type": "requires"
+    },
+    {
+      "from": "MD-53",
+      "to": "MD-54",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-55",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-55",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-55",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-55",
+      "type": "requires"
+    },
+    {
+      "from": "MD-55",
+      "to": "MD-56",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-55",
+      "to": "MD-56",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-55",
+      "to": "MD-56",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-56",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-56",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-56",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-56",
+      "type": "requires"
+    },
+    {
+      "from": "MD-55",
+      "to": "MD-56",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-57",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-57",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-57",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-57",
+      "type": "requires"
+    },
+    {
+      "from": "MD-57",
+      "to": "MD-58",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-57",
+      "to": "MD-58",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-57",
+      "to": "MD-58",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-58",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-58",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-58",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-58",
+      "type": "requires"
+    },
+    {
+      "from": "MD-57",
+      "to": "MD-58",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-59",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-59",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-59",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-59",
+      "type": "requires"
+    },
+    {
+      "from": "MD-59",
+      "to": "MD-60",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-59",
+      "to": "MD-60",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-59",
+      "to": "MD-60",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-60",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-60",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-60",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-60",
+      "type": "requires"
+    },
+    {
+      "from": "MD-59",
+      "to": "MD-60",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-61",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-61",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-61",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-61",
+      "type": "requires"
+    },
+    {
+      "from": "MD-61",
+      "to": "MD-62",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-61",
+      "to": "MD-62",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-61",
+      "to": "MD-62",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-62",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-62",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-62",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-62",
+      "type": "requires"
+    },
+    {
+      "from": "MD-61",
+      "to": "MD-62",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-63",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-63",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-63",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-63",
+      "type": "requires"
+    },
+    {
+      "from": "MD-63",
+      "to": "MD-64",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-63",
+      "to": "MD-64",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-63",
+      "to": "MD-64",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-64",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-64",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-64",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-64",
+      "type": "requires"
+    },
+    {
+      "from": "MD-63",
+      "to": "MD-64",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-65",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-65",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-65",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-65",
+      "type": "requires"
+    },
+    {
+      "from": "MD-65",
+      "to": "MD-66",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-65",
+      "to": "MD-66",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-65",
+      "to": "MD-66",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-66",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-66",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-66",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-66",
+      "type": "requires"
+    },
+    {
+      "from": "MD-65",
+      "to": "MD-66",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-67",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-67",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-67",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-67",
+      "type": "requires"
+    },
+    {
+      "from": "MD-67",
+      "to": "MD-68",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-67",
+      "to": "MD-68",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-67",
+      "to": "MD-68",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-68",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-68",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-68",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-68",
+      "type": "requires"
+    },
+    {
+      "from": "MD-67",
+      "to": "MD-68",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-69",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-69",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-69",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-69",
+      "type": "requires"
+    },
+    {
+      "from": "MD-69",
+      "to": "MD-70",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-69",
+      "to": "MD-70",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-69",
+      "to": "MD-70",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-70",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-70",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-70",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-70",
+      "type": "requires"
+    },
+    {
+      "from": "MD-69",
+      "to": "MD-70",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-71",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-71",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-71",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-71",
+      "type": "requires"
+    },
+    {
+      "from": "MD-71",
+      "to": "MD-72",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-71",
+      "to": "MD-72",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-71",
+      "to": "MD-72",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-72",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-72",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-72",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-72",
+      "type": "requires"
+    },
+    {
+      "from": "MD-71",
+      "to": "MD-72",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-73",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-73",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-73",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-73",
+      "type": "requires"
+    },
+    {
+      "from": "MD-73",
+      "to": "MD-74",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-73",
+      "to": "MD-74",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-73",
+      "to": "MD-74",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-74",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-74",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-74",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-74",
+      "type": "requires"
+    },
+    {
+      "from": "MD-73",
+      "to": "MD-74",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-75",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-75",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-75",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-75",
+      "type": "requires"
+    },
+    {
+      "from": "MD-75",
+      "to": "MD-76",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-75",
+      "to": "MD-76",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-75",
+      "to": "MD-76",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-76",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-76",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-76",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-76",
+      "type": "requires"
+    },
+    {
+      "from": "MD-75",
+      "to": "MD-76",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-77",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-77",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-77",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-77",
+      "type": "requires"
+    },
+    {
+      "from": "MD-77",
+      "to": "MD-78",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-77",
+      "to": "MD-78",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-77",
+      "to": "MD-78",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-78",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-78",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-78",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-78",
+      "type": "requires"
+    },
+    {
+      "from": "MD-77",
+      "to": "MD-78",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-79",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-79",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-79",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-79",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-80",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-80",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-80",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-80",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-81",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-81",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-81",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-81",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-82",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-82",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-82",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-82",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-83",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-83",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-83",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-83",
+      "type": "requires"
+    },
+    {
+      "from": "MD-83",
+      "to": "MD-84",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-83",
+      "to": "MD-84",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-83",
+      "to": "MD-84",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-84",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-84",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-84",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-84",
+      "type": "requires"
+    },
+    {
+      "from": "MD-83",
+      "to": "MD-84",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-85",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-85",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-85",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-85",
+      "type": "requires"
+    },
+    {
+      "from": "MD-85",
+      "to": "MD-86",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-85",
+      "to": "MD-86",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-85",
+      "to": "MD-86",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-86",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-86",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-86",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-86",
+      "type": "requires"
+    },
+    {
+      "from": "MD-85",
+      "to": "MD-86",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-87",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-87",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-87",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-87",
+      "type": "requires"
+    },
+    {
+      "from": "MD-87",
+      "to": "MD-88",
+      "type": "handoff"
+    },
+    {
+      "from": "MD-87",
+      "to": "MD-88",
+      "type": "plan_review_gate"
+    },
+    {
+      "from": "MD-87",
+      "to": "MD-88",
+      "type": "exact_twin_execution"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-88",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-88",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-88",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-88",
+      "type": "requires"
+    },
+    {
+      "from": "MD-87",
+      "to": "MD-88",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-89",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-89",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-89",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-89",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-90",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-90",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-90",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-90",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-91",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-91",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-91",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-91",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-92",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-92",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-92",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-92",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-93",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-93",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-93",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-93",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-94",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-94",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-94",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-94",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-95",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-95",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-95",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-95",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-96",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-96",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-96",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-96",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-97",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-97",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-97",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-97",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-98",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-98",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-98",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-98",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-99",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-99",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-99",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-99",
+      "type": "requires"
+    }
+  ]
+}

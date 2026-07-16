@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-91",
+  "capability_id": "md.creative_writing.poetry-prose-and-literary-composition",
+  "evidence_lane": "imaginative",
+  "risk_level": "low",
+  "expected_output": "results/poetry_prose_and_literary_composition/poetry_prose_and_literary_composition_result.md",
+  "fixture_id": "MD-91-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

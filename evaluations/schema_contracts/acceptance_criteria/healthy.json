@@ -1,0 +1,10 @@
+{
+  "criteria": [
+    {
+      "verification_id": "VERIFY-001",
+      "statement": "example",
+      "method": "example",
+      "required": true
+    }
+  ]
+}

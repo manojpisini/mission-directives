@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/execution_log.schema.json",
+  "title": "Execution Log",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "action_id",
+    "status",
+    "evidence"
+  ],
+  "properties": {
+    "timestamp": {
+      "type": "string"
+    },
+    "action_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "started",
+        "completed",
+        "failed",
+        "skipped",
+        "rolled_back",
+        "stopped"
+      ]
+    },
+    "operation": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "side_effects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

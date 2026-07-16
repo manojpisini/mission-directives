@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/deck_blueprint.schema.json",
+  "title": "Deck Blueprint",
+  "type": "object",
+  "required": [
+    "audience_decision",
+    "narrative_arc",
+    "slides",
+    "source_claims",
+    "brand_tokens",
+    "accessibility",
+    "export_targets"
+  ],
+  "properties": {
+    "audience_decision": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "narrative_arc": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "slides": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "source_claims": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "brand_tokens": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "accessibility": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "export_targets": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

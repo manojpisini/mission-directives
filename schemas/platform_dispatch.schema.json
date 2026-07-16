@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Platform Dispatch Configuration",
+  "type": "object",
+  "required": [
+    "tool_id",
+    "python_entry",
+    "bash_entry",
+    "powershell_entry",
+    "platform_selection"
+  ],
+  "properties": {
+    "tool_id": {
+      "type": "string"
+    },
+    "python_entry": {
+      "type": "string"
+    },
+    "bash_entry": {
+      "type": "string"
+    },
+    "powershell_entry": {
+      "type": "string"
+    },
+    "platform_selection": {
+      "enum": [
+        "automatic"
+      ]
+    },
+    "arguments": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

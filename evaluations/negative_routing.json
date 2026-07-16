@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "case_id": "blog-no-infra",
+      "target": "C-27",
+      "must_not_select": [
+        "MD-47",
+        "MD-48",
+        "MD-57",
+        "MD-58"
+      ],
+      "reason": "No infrastructure or data migration change surface."
+    },
+    {
+      "case_id": "poem-no-citation",
+      "target": "C-34",
+      "must_not_select": [
+        "MD-82"
+      ],
+      "unless": "factual claims intentionally included"
+    },
+    {
+      "case_id": "local-review-no-publication",
+      "target": "MD-27",
+      "must_not_select": [
+        "MD-17",
+        "MD-157"
+      ],
+      "reason": "Local code review does not imply publication."
+    }
+  ]
+}

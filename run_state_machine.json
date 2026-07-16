@@ -1,0 +1,103 @@
+{
+  "initial": "configured",
+  "states": [
+    "configured",
+    "investigating",
+    "evidence_ready",
+    "fan_in_pending",
+    "handoff_frozen",
+    "plan_review_pending",
+    "plan_revision_pending",
+    "execution_consent_pending",
+    "approval_pending",
+    "dry_run_ready",
+    "executing",
+    "verification_pending",
+    "verified",
+    "failed",
+    "rolled_back",
+    "residual_open",
+    "closed"
+  ],
+  "terminal": [
+    "closed"
+  ],
+  "transitions": {
+    "configured": [
+      "investigating",
+      "failed"
+    ],
+    "investigating": [
+      "evidence_ready",
+      "failed"
+    ],
+    "evidence_ready": [
+      "fan_in_pending",
+      "handoff_frozen",
+      "verification_pending",
+      "failed"
+    ],
+    "fan_in_pending": [
+      "handoff_frozen",
+      "failed"
+    ],
+    "handoff_frozen": [
+      "plan_review_pending",
+      "approval_pending",
+      "dry_run_ready",
+      "verification_pending",
+      "failed"
+    ],
+    "approval_pending": [
+      "dry_run_ready",
+      "failed"
+    ],
+    "dry_run_ready": [
+      "executing",
+      "failed"
+    ],
+    "executing": [
+      "verification_pending",
+      "failed",
+      "rolled_back"
+    ],
+    "verification_pending": [
+      "verified",
+      "failed",
+      "residual_open"
+    ],
+    "verified": [
+      "closed",
+      "residual_open"
+    ],
+    "residual_open": [
+      "investigating",
+      "closed"
+    ],
+    "failed": [
+      "investigating",
+      "rolled_back",
+      "closed"
+    ],
+    "rolled_back": [
+      "investigating",
+      "closed"
+    ],
+    "plan_review_pending": [
+      "plan_revision_pending",
+      "execution_consent_pending",
+      "closed",
+      "failed"
+    ],
+    "plan_revision_pending": [
+      "handoff_frozen",
+      "failed"
+    ],
+    "execution_consent_pending": [
+      "approval_pending",
+      "dry_run_ready",
+      "closed",
+      "failed"
+    ]
+  }
+}

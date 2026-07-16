@@ -1,0 +1,50 @@
+{
+  "suite_version": "1.8.3",
+  "policy_id": "MD-LOG-1",
+  "format": "TOML",
+  "directory": ".prompt_suite/logs",
+  "rotation": "one append-only file per local calendar day",
+  "filename": "YYYY-MM-DD.toml",
+  "append_only": true,
+  "required_event_categories": [
+    "prompt_invocation",
+    "scenario_invocation",
+    "planning",
+    "execution",
+    "review",
+    "consent",
+    "audit",
+    "verification",
+    "tool",
+    "test",
+    "template",
+    "skill",
+    "error",
+    "metric",
+    "state_transition"
+  ],
+  "required_fields": [
+    "event_id",
+    "timestamp_utc",
+    "timestamp_local",
+    "date_local",
+    "category",
+    "action",
+    "status",
+    "duration_ms",
+    "tool",
+    "run_id"
+  ],
+  "privacy": [
+    "do not log secrets",
+    "redact personal data unless explicitly authorized",
+    "store hashes or references instead of sensitive content"
+  ],
+  "integrity": [
+    "append at end",
+    "fsync after write",
+    "process lock",
+    "event ids unique",
+    "log failures must not silently erase primary result"
+  ]
+}

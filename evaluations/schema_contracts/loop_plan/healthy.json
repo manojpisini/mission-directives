@@ -1,0 +1,10 @@
+{
+  "target": "example",
+  "mode": "batch",
+  "desired_result": "example",
+  "progress_metric": {},
+  "exit_conditions": [
+    {}
+  ],
+  "budgets": {}
+}

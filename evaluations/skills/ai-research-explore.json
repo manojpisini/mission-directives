@@ -1,0 +1,66 @@
+{
+  "skill_id": "ai-research-explore",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-79",
+      "MD-129"
+    ],
+    "expected_media": [
+      "json",
+      "markdown"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-79",
+        "primary": {
+          "path": "reports/deep_research_and_evidence_synthesis/deep_research_and_evidence_synthesis_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/deep_research_and_evidence_synthesis/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/deep_research_and_evidence_synthesis/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/deep_research_and_evidence_synthesis/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-129",
+        "primary": {
+          "path": "results/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

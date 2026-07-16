@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "routing_policy": "Only measured, production_eligible profiles may be automatically selected. Unmeasured profiles are visible but ineligible.",
+  "profiles": [
+    {
+      "model_id": "operator-reasoning-primary",
+      "provider": "operator_defined",
+      "measurement_status": "unmeasured",
+      "production_eligible": false,
+      "supported_modalities": [
+        "text"
+      ],
+      "structured_output_reliability": null,
+      "tool_use_reliability": null,
+      "citation_integrity": null,
+      "refusal_correctness": null,
+      "fabrication_rate": null,
+      "latency_ms_p50": null,
+      "cost_per_million_input_tokens": null,
+      "cost_per_million_output_tokens": null,
+      "known_failure_modes": [],
+      "benchmark_runs": 0,
+      "notes": "Populate from tools/run_model_benchmarks.py using the actual reasoning model available to the operator."
+    },
+    {
+      "model_id": "operator-fast-primary",
+      "provider": "operator_defined",
+      "measurement_status": "unmeasured",
+      "production_eligible": false,
+      "supported_modalities": [
+        "text"
+      ],
+      "structured_output_reliability": null,
+      "tool_use_reliability": null,
+      "citation_integrity": null,
+      "refusal_correctness": null,
+      "fabrication_rate": null,
+      "latency_ms_p50": null,
+      "cost_per_million_input_tokens": null,
+      "cost_per_million_output_tokens": null,
+      "known_failure_modes": [],
+      "benchmark_runs": 0,
+      "notes": "Populate from actual low-latency model runs."
+    },
+    {
+      "model_id": "operator-local-primary",
+      "provider": "operator_defined",
+      "measurement_status": "unmeasured",
+      "production_eligible": false,
+      "supported_modalities": [
+        "text"
+      ],
+      "structured_output_reliability": null,
+      "tool_use_reliability": null,
+      "citation_integrity": null,
+      "refusal_correctness": null,
+      "fabrication_rate": null,
+      "latency_ms_p50": null,
+      "cost_per_million_input_tokens": 0,
+      "cost_per_million_output_tokens": 0,
+      "known_failure_modes": [],
+      "benchmark_runs": 0,
+      "notes": "Populate from actual local-model fixture runs."
+    },
+    {
+      "model_id": "mock-deterministic-test",
+      "provider": "internal_test",
+      "measurement_status": "synthetic_test_only",
+      "production_eligible": false,
+      "supported_modalities": [
+        "text"
+      ],
+      "structured_output_reliability": 1.0,
+      "tool_use_reliability": 1.0,
+      "citation_integrity": 1.0,
+      "refusal_correctness": 1.0,
+      "fabrication_rate": 0.0,
+      "latency_ms_p50": 1,
+      "cost_per_million_input_tokens": 0,
+      "cost_per_million_output_tokens": 0,
+      "known_failure_modes": [
+        "Not a language model; used only to test routing and metrics pipelines."
+      ],
+      "benchmark_runs": 16,
+      "notes": "Never select for production work."
+    }
+  ],
+  "required_metrics": [
+    "structured_output_reliability",
+    "refusal_correctness",
+    "fabrication_rate",
+    "latency_ms_p50"
+  ],
+  "suite_version": "1.8.3"
+}

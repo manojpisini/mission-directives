@@ -1,0 +1,236 @@
+{
+  "skill_id": "quieter",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-71",
+      "MD-73",
+      "MD-98",
+      "MD-101",
+      "MD-102",
+      "MD-103",
+      "MD-107",
+      "MD-108",
+      "MD-109"
+    ],
+    "expected_media": [
+      "asset_spec",
+      "css",
+      "dashboard_spec",
+      "design_spec",
+      "html",
+      "javascript",
+      "json",
+      "markdown",
+      "presentation_export",
+      "slide_blueprint",
+      "svg"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-71",
+        "primary": {
+          "path": "reports/user_experience_accessibility_and_localization_investigation_and_plan/user_experience_accessibility_and_localization_investigation_and_plan_investigation.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/user_experience_accessibility_and_localization_investigation_and_plan/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/user_experience_accessibility_and_localization_investigation_and_plan/finding_register.json",
+            "format": "json"
+          },
+          {
+            "path": "plans/user_experience_accessibility_and_localization_investigation_and_plan/action_plan.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/user_experience_accessibility_and_localization_investigation_and_plan/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-73",
+        "primary": {
+          "path": "reports/brand_design_system_and_content_coherence_investigation_and_plan/brand_design_system_and_content_coherence_investigation_and_plan_investigation.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/brand_design_system_and_content_coherence_investigation_and_plan/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/brand_design_system_and_content_coherence_investigation_and_plan/finding_register.json",
+            "format": "json"
+          },
+          {
+            "path": "plans/brand_design_system_and_content_coherence_investigation_and_plan/action_plan.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/brand_design_system_and_content_coherence_investigation_and_plan/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-98",
+        "primary": {
+          "path": "results/brand_identity_guidelines_and_asset_system_production/brand_identity_guidelines_and_asset_system_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/brand_identity_guidelines_and_asset_system_production/brand_identity_guidelines_and_asset_system_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/brand_identity_guidelines_and_asset_system_production/brand_identity_guidelines_and_asset_system_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-101",
+        "primary": {
+          "path": "reports/presentation_narrative_story_architecture_and_deck_blueprint/presentation_narrative_story_architecture_and_deck_blueprint_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/presentation_narrative_story_architecture_and_deck_blueprint/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/presentation_narrative_story_architecture_and_deck_blueprint/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/presentation_narrative_story_architecture_and_deck_blueprint/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-102",
+        "primary": {
+          "path": "results/html_css_and_javascript_slides_and_presentation_production/html_css_and_javascript_slides_and_presentation_production_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/html_css_and_javascript_slides_and_presentation_production_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/html_css_and_javascript_slides_and_presentation_production/html_css_and_javascript_slides_and_presentation_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/html_css_and_javascript_slides_and_presentation_production/html_css_and_javascript_slides_and_presentation_production_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/html_css_and_javascript_slides_and_presentation_production/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-103",
+        "primary": {
+          "path": "results/dashboard_and_analytical_interface_production/dashboard_and_analytical_interface_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/dashboard_and_analytical_interface_production/dashboard_and_analytical_interface_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/dashboard_and_analytical_interface_production/dashboard_and_analytical_interface_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-107",
+        "primary": {
+          "path": "results/interactive_web_artifact_microsite_and_prototype_production/interactive_web_artifact_microsite_and_prototype_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/interactive_web_artifact_microsite_and_prototype_production/interactive_web_artifact_microsite_and_prototype_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/interactive_web_artifact_microsite_and_prototype_production/interactive_web_artifact_microsite_and_prototype_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-108",
+        "primary": {
+          "path": "results/frontend_visual_design_interaction_and_experience_polish/frontend_visual_design_interaction_and_experience_polish_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/frontend_visual_design_interaction_and_experience_polish/frontend_visual_design_interaction_and_experience_polish_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/frontend_visual_design_interaction_and_experience_polish/frontend_visual_design_interaction_and_experience_polish_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-109",
+        "primary": {
+          "path": "reports/visual_quality_accessibility_brand_and_responsive_review/visual_quality_accessibility_brand_and_responsive_review_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/visual_quality_accessibility_brand_and_responsive_review/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/visual_quality_accessibility_brand_and_responsive_review/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/visual_quality_accessibility_brand_and_responsive_review/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

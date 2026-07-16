@@ -1,0 +1,91 @@
+{
+  "skill_id": "skill-creator",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-61",
+      "MD-165",
+      "MD-167"
+    ],
+    "expected_media": [
+      "evaluation_fixture",
+      "json",
+      "markdown",
+      "prompt_spec"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-61",
+        "primary": {
+          "path": "reports/agent_skill_tool_and_mcp_capability_lifecycle_investigation_and_plan/agent_skill_tool_and_mcp_capability_lifecycle_investigation_and_plan_investigation.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/agent_skill_tool_and_mcp_capability_lifecycle_investigation_and_plan/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/agent_skill_tool_and_mcp_capability_lifecycle_investigation_and_plan/finding_register.json",
+            "format": "json"
+          },
+          {
+            "path": "plans/agent_skill_tool_and_mcp_capability_lifecycle_investigation_and_plan/action_plan.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/agent_skill_tool_and_mcp_capability_lifecycle_investigation_and_plan/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-165",
+        "primary": {
+          "path": "results/prompt_creation_and_specification/prompt_creation_and_specification_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/prompt_creation_and_specification/prompt_creation_and_specification_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/prompt_creation_and_specification/prompt_creation_and_specification_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-167",
+        "primary": {
+          "path": "results/prompt_review_evaluation_and_adversarial_testing/prompt_review_evaluation_and_adversarial_testing_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/prompt_review_evaluation_and_adversarial_testing/prompt_review_evaluation_and_adversarial_testing_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/prompt_review_evaluation_and_adversarial_testing/prompt_review_evaluation_and_adversarial_testing_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

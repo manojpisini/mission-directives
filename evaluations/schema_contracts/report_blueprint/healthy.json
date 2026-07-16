@@ -1,0 +1,12 @@
+{
+  "audience": "example",
+  "decisions": "example",
+  "questions": "example",
+  "evidence": "example",
+  "sections": "example",
+  "exhibits": "example",
+  "uncertainty": "example",
+  "recommendations": "example",
+  "actions": "example",
+  "export_checks": "example"
+}

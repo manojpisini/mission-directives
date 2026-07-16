@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-179",
+  "capability_id": "md.organization.department-operating-plan-and-cross-functional-coordination",
+  "evidence_lane": "factual",
+  "risk_level": "high",
+  "expected_output": "results/department_operating_plan_and_cross_functional_coordination/department_operating_plan_and_cross_functional_coordination_result.md",
+  "fixture_id": "MD-179-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

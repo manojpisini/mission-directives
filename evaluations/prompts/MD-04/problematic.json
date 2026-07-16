@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-04",
+  "capability_id": "md.core.prompt-structure-and-input-trust-contract",
+  "evidence_lane": null,
+  "risk_level": "high",
+  "expected_output": ".prompt_suite/control/prompt_structure_and_input_trust_contract.md",
+  "fixture_id": "MD-04-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

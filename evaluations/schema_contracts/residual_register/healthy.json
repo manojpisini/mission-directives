@@ -1,0 +1,12 @@
+{
+  "run_id": "example",
+  "residuals": [
+    {
+      "residual_id": "example",
+      "source_id": "example",
+      "status": "deferred",
+      "owner": "example",
+      "review_trigger": "example"
+    }
+  ]
+}

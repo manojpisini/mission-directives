@@ -1,0 +1,14 @@
+{
+  "fixture_id": "example",
+  "target_id": "example",
+  "tier": "healthy",
+  "input_conditions": [
+    "example"
+  ],
+  "expected": [
+    "example"
+  ],
+  "prohibited": [
+    "example"
+  ]
+}

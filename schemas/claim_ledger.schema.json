@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/claim_ledger.schema.json",
+  "title": "Claim Ledger",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "claim_text",
+    "claim_type",
+    "source_ids",
+    "support_level",
+    "uncertainty",
+    "last_verified_at"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "claim_text": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "claim_type": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "source_ids": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "support_level": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "uncertainty": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "last_verified_at": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

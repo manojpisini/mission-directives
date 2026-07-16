@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-118",
+  "capability_id": "md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-material-production-and-validation",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "results/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation_package.md",
+  "fixture_id": "MD-118-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

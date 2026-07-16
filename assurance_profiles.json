@@ -1,0 +1,40 @@
+{
+  "profiles": {
+    "FAST": {
+      "use": "low-risk local work",
+      "requirements": [
+        "minimum authoritative context",
+        "one production pass",
+        "basic deterministic validation"
+      ],
+      "prohibited": [
+        "external effects",
+        "high-risk mutation",
+        "unreviewed public claims"
+      ]
+    },
+    "STANDARD": {
+      "use": "normal organizational work",
+      "requirements": [
+        "current evidence",
+        "typed artifacts",
+        "independent review where material",
+        "verification and residuals"
+      ]
+    },
+    "HIGH_ASSURANCE": {
+      "use": "high-risk, regulated, security, legal, financial, employment, intelligence, public, or production work",
+      "requirements": [
+        "formal protocol",
+        "evidence snapshot",
+        "counterevidence",
+        "approval receipt",
+        "dry run",
+        "independent verification",
+        "rollback or recovery",
+        "artifact lineage"
+      ]
+    }
+  },
+  "suite_version": "1.8.3"
+}

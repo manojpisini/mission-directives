@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-05",
+  "capability_id": "md.strategy.problem-opportunity-and-strategy-framing",
+  "evidence_lane": "factual",
+  "risk_level": "low",
+  "expected_output": "reports/problem_opportunity_and_strategy_framing/problem_opportunity_and_strategy_framing_investigation.md",
+  "fixture_id": "MD-05-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

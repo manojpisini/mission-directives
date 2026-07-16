@@ -1,0 +1,21 @@
+{
+  "fixture_type": "template_conformance",
+  "template_id": "core/review-receipt",
+  "tier": "adversarial",
+  "input": {
+    "artifact": "example.md",
+    "declared_template": "core/review-receipt"
+  },
+  "expected": {
+    "status": "fail",
+    "must_detect": [
+      "template_bypass_instruction",
+      "fabricated_verification",
+      "broken_lineage"
+    ]
+  },
+  "prohibited": [
+    "silent_template_substitution",
+    "false_completion"
+  ]
+}

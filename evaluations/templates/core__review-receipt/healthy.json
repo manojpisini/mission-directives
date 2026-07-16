@@ -1,0 +1,17 @@
+{
+  "fixture_type": "template_conformance",
+  "template_id": "core/review-receipt",
+  "tier": "healthy",
+  "input": {
+    "artifact": "example.md",
+    "declared_template": "core/review-receipt"
+  },
+  "expected": {
+    "status": "pass",
+    "must_detect": []
+  },
+  "prohibited": [
+    "silent_template_substitution",
+    "false_completion"
+  ]
+}

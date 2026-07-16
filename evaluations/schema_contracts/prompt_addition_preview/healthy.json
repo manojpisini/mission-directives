@@ -1,0 +1,41 @@
+{
+  "status": "dry_run",
+  "suite_version": "1.8.3",
+  "catalog_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "prompt_id": "MD-00",
+  "sequence": 0,
+  "title": "example",
+  "slug": "example",
+  "canonical_path": "prompts/200_EXAMPLE.md",
+  "capability_id": "md.enablement.example",
+  "category": "example",
+  "prompt_role": "operational",
+  "prompt_type": "example",
+  "risk_level": "low",
+  "allowed_modes": [
+    "AUDIT_ONLY"
+  ],
+  "dry_run_required": true,
+  "requires": [
+    "MD-00"
+  ],
+  "related_prompts": [
+    "MD-00"
+  ],
+  "preferred_skills": [
+    "example"
+  ],
+  "template_routes": [
+    "example"
+  ],
+  "conditional_template_routes": [
+    "example"
+  ],
+  "department_packs": [
+    "example"
+  ],
+  "output_contract": {},
+  "source_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "source_bytes": 1,
+  "approval_token": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+}

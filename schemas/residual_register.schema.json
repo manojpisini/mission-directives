@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/residual_register.schema.json",
+  "title": "Residual Register",
+  "type": "object",
+  "required": [
+    "run_id",
+    "residuals"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "residuals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "residual_id",
+          "source_id",
+          "status",
+          "owner",
+          "review_trigger"
+        ],
+        "properties": {
+          "residual_id": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "deferred",
+              "accepted",
+              "transferred",
+              "reopened",
+              "blocked"
+            ]
+          },
+          "owner": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "review_trigger": {
+            "type": "string"
+          },
+          "due_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,123 @@
+{
+  "skill_id": "edit-article",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-84",
+      "MD-88",
+      "MD-129",
+      "MD-170"
+    ],
+    "expected_media": [
+      "bibliography",
+      "docx_spec",
+      "html",
+      "json",
+      "latex",
+      "markdown",
+      "pdf_spec",
+      "publication_metadata",
+      "table_figure_spec"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-84",
+        "primary": {
+          "path": "results/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-88",
+        "primary": {
+          "path": "results/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-129",
+        "primary": {
+          "path": "results/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-170",
+        "primary": {
+          "path": "results/report_production_visualization_brief_and_quality_assurance/report_production_visualization_brief_and_quality_assurance_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/report_production_visualization_brief_and_quality_assurance/report_production_visualization_brief_and_quality_assurance_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/report_production_visualization_brief_and_quality_assurance/report_production_visualization_brief_and_quality_assurance_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

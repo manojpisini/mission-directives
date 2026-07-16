@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/report_blueprint.schema.json",
+  "title": "Report Blueprint",
+  "type": "object",
+  "required": [
+    "audience",
+    "decisions",
+    "questions",
+    "evidence",
+    "sections",
+    "exhibits",
+    "uncertainty",
+    "recommendations",
+    "actions",
+    "export_checks"
+  ],
+  "properties": {
+    "audience": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "decisions": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "questions": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "evidence": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "sections": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "exhibits": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "uncertainty": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "recommendations": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "actions": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "export_checks": {
+      "type": [
+        "string",
+        "array",
+        "object",
+        "number",
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,57 @@
+{
+  "policy_id": "md.prompt_addition",
+  "suite_version": "1.8.3",
+  "status": "active",
+  "source_requirements": {
+    "regular_utf8_markdown": true,
+    "symlinks_allowed": false,
+    "maximum_bytes": 2097152,
+    "nul_allowed": false
+  },
+  "identity": {
+    "allocation": "next integer after the highest canonical prompt sequence",
+    "prefix": "MD-",
+    "identity_status": "permanent",
+    "reuse_allowed": false
+  },
+  "routing": {
+    "unknown_prompt_references": "reject",
+    "unknown_skills": "reject",
+    "unknown_templates": "reject",
+    "skill_installation": "not_performed_by_prompt_addition",
+    "crosswalk_status": "unmapped_requires_human_review"
+  },
+  "transaction": {
+    "stage_complete_suite": true,
+    "full_tests_default": true,
+    "validate_before_promotion": true,
+    "concurrent_change_detection": true,
+    "rollback_on_write_failure": true,
+    "approval_token_required": true,
+    "approval_checked_before_staging": true,
+    "staged_contract_must_equal_approved_contract": true,
+    "staged_contract_mismatch": "reject_and_require_new_preview"
+  },
+  "approval": {
+    "dry_run_required": true,
+    "preview_schema": "schemas/prompt_addition_preview.schema.json",
+    "token_binding": [
+      "suite_version",
+      "catalog_sha256",
+      "source_sha256",
+      "assigned_identity",
+      "routing",
+      "templates",
+      "skills",
+      "department_packs",
+      "output_contract"
+    ],
+    "noninteractive_mutation": "requires_exact_current_approval_token",
+    "interactive_mutation": "show_preview_then_require_explicit_yes",
+    "stale_or_mismatched_token": "reject",
+    "approval_binding": "sha256_of_complete_preview_including_catalog_and_source_digest",
+    "approval_checked_before_staging": true,
+    "staged_prepared_equality_required": true,
+    "receipt_identity_source": "approved_and_staged_equal_prepared_contract"
+  }
+}

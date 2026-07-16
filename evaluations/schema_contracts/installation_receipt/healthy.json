@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "status": "installed",
+  "project_root": "example",
+  "suite_destination": "prompts",
+  "suite_version": "1.8.3",
+  "gitignore_entries": [
+    "example"
+  ],
+  "docs_ignored": false,
+  "installed_at": "2026-07-15T00:00:00Z",
+  "created_directories": [
+    ".prompt_suite"
+  ],
+  "preexisting_project_files": [
+    ".gitignore"
+  ]
+}

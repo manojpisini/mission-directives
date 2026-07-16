@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Loop Exit Decision",
+  "type": "object",
+  "required": [
+    "decision",
+    "reason",
+    "evidence",
+    "next_action"
+  ],
+  "properties": {
+    "decision": {
+      "enum": [
+        "continue",
+        "complete",
+        "plateau_stop",
+        "budget_stop",
+        "safety_stop",
+        "rollback",
+        "human_escalation"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array"
+    },
+    "next_action": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "human_approval_required": {
+      "type": "boolean"
+    }
+  }
+}

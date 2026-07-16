@@ -1,0 +1,20 @@
+{
+  "suite_version": "1.8.3",
+  "policy_id": "MD-TUI-1",
+  "requirements": [
+    "tool title",
+    "current phase",
+    "bounded progress bar when total is known",
+    "spinner or activity indicator when total is unknown",
+    "pass/fail/blocked status",
+    "duration",
+    "log path",
+    "--no-tui or CI-safe behavior"
+  ],
+  "accessibility": [
+    "honor NO_COLOR",
+    "do not rely on color alone",
+    "avoid rapid animation",
+    "plain-text fallback"
+  ]
+}

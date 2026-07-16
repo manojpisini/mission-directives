@@ -1,0 +1,95 @@
+{
+  "gates": [
+    {
+      "gate_id": "evidence_claims_gate",
+      "checks": [
+        "claim support",
+        "exact quotes",
+        "number reconciliation",
+        "current dates",
+        "uncertainty",
+        "contradictions"
+      ],
+      "independence_required": true
+    },
+    {
+      "gate_id": "external_publication_gate",
+      "checks": [
+        "authority",
+        "privacy",
+        "legal triggers",
+        "brand",
+        "accessibility",
+        "claims",
+        "disclaimers",
+        "exact export",
+        "destination"
+      ],
+      "independence_required": true
+    },
+    {
+      "gate_id": "human_decision_gate",
+      "checks": [
+        "evidence quality",
+        "decision authority",
+        "uncertainty",
+        "alternatives",
+        "prohibited automation",
+        "human review receipt"
+      ],
+      "independence_required": true
+    },
+    {
+      "gate_id": "production_change_gate",
+      "checks": [
+        "dry run",
+        "rollback",
+        "monitoring",
+        "blast radius",
+        "approval",
+        "maintenance window",
+        "post-change verification"
+      ],
+      "independence_required": true
+    },
+    {
+      "gate_id": "multi_artifact_coherence_gate",
+      "checks": [
+        "coherence fingerprint",
+        "claims",
+        "terminology",
+        "brand tokens",
+        "source lineage",
+        "audience promise"
+      ],
+      "independence_required": true
+    },
+    {
+      "gate_id": "skill_acquisition_gate",
+      "checks": [
+        "validated gap",
+        "exact candidate",
+        "source and permissions",
+        "dual locations",
+        "quarantine",
+        "rollback",
+        "conformance"
+      ],
+      "independence_required": true
+    },
+    {
+      "gate_id": "loop_exit_gate",
+      "checks": [
+        "eligibility",
+        "desired result",
+        "verification",
+        "progress delta",
+        "remaining queue",
+        "budget",
+        "plateau",
+        "safety and authority"
+      ],
+      "independence_required": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bounded Loop Plan",
+  "type": "object",
+  "required": [
+    "target",
+    "mode",
+    "desired_result",
+    "progress_metric",
+    "exit_conditions",
+    "budgets"
+  ],
+  "properties": {
+    "target": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "batch",
+        "refinement",
+        "audit_fix_verify"
+      ]
+    },
+    "work_queue": {
+      "type": "array"
+    },
+    "desired_result": {
+      "type": "string"
+    },
+    "progress_metric": {
+      "type": "object"
+    },
+    "exit_conditions": {
+      "type": "array"
+    },
+    "budgets": {
+      "type": "object"
+    },
+    "outer_loop": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "inner_loop": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  }
+}

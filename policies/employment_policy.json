@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "authorized human decision-maker",
+    "fairness and legal review triggers",
+    "evidence and uncertainty"
+  ],
+  "prohibits": [
+    "autonomous hire fire promotion compensation decisions"
+  ]
+}

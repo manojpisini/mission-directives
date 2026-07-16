@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-173",
+  "capability_id": "md.organization.organizational-design-operating-model-and-governance",
+  "evidence_lane": "factual",
+  "risk_level": "high",
+  "expected_output": "results/organizational_design_operating_model_and_governance/organizational_design_operating_model_and_governance_result.md",
+  "fixture_id": "MD-173-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

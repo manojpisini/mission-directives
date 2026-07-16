@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-182",
+  "capability_id": "md.cyber_intelligence.cyber-threat-intelligence-and-security-research",
+  "evidence_lane": "factual",
+  "risk_level": "critical",
+  "expected_output": "results/cyber_threat_intelligence_and_security_research/cyber_threat_intelligence_and_security_research_result.md",
+  "fixture_id": "MD-182-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

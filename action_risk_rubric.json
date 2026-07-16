@@ -1,0 +1,113 @@
+{
+  "dimensions": [
+    {
+      "id": "environment",
+      "levels": {
+        "0": "local disposable",
+        "1": "development",
+        "2": "staging or shared non-production",
+        "3": "production or safety-critical"
+      }
+    },
+    {
+      "id": "privilege",
+      "levels": {
+        "0": "read-only",
+        "1": "ordinary repository write",
+        "2": "service or deployment authority",
+        "3": "administrator, root, security, identity, or secret authority"
+      }
+    },
+    {
+      "id": "blast_radius",
+      "levels": {
+        "0": "single isolated artifact",
+        "1": "single component",
+        "2": "multiple components or users",
+        "3": "organization-wide, public, or cross-tenant"
+      }
+    },
+    {
+      "id": "data_sensitivity",
+      "levels": {
+        "0": "synthetic or public",
+        "1": "internal non-sensitive",
+        "2": "confidential or personal",
+        "3": "regulated, credential, cryptographic, or highly sensitive"
+      }
+    },
+    {
+      "id": "reversibility",
+      "levels": {
+        "0": "trivial rollback",
+        "1": "tested rollback",
+        "2": "complex or partial rollback",
+        "3": "irreversible or rollback unproven"
+      }
+    },
+    {
+      "id": "external_effects",
+      "levels": {
+        "0": "none",
+        "1": "internal automation",
+        "2": "third-party API, publication, email, or deployment",
+        "3": "financial, legal, identity, destructive, or broad external effect"
+      }
+    },
+    {
+      "id": "operational_criticality",
+      "levels": {
+        "0": "non-critical",
+        "1": "low business impact",
+        "2": "important service",
+        "3": "critical service, incident, or safety function"
+      }
+    },
+    {
+      "id": "evidence_confidence",
+      "levels": {
+        "0": "high confidence",
+        "1": "minor uncertainty",
+        "2": "material uncertainty",
+        "3": "critical evidence missing or contradictory"
+      }
+    }
+  ],
+  "decision_rules": [
+    {
+      "when": "any dimension is 3",
+      "minimum_mode": "APPLY_APPROVED",
+      "requirements": [
+        "approval receipt",
+        "dry-run manifest",
+        "rollback or explicit irreversibility acceptance",
+        "independent verification"
+      ]
+    },
+    {
+      "when": "maximum dimension is 2",
+      "minimum_mode": "APPLY_APPROVED for destructive, privileged, public, identity, secret, data, infrastructure, or external actions; otherwise APPLY_SAFE",
+      "requirements": [
+        "dry-run manifest",
+        "bounded batch",
+        "verification"
+      ]
+    },
+    {
+      "when": "maximum dimension is 1",
+      "minimum_mode": "APPLY_SAFE",
+      "requirements": [
+        "preview",
+        "reversible batch",
+        "verification"
+      ]
+    },
+    {
+      "when": "critical evidence is missing",
+      "minimum_mode": "STOP",
+      "requirements": [
+        "return to investigation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "reconciled source data",
+    "approved assumptions",
+    "authorized decision owner"
+  ],
+  "prohibits": [
+    "financial transfer or filing without explicit authority"
+  ]
+}

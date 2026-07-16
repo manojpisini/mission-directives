@@ -1,0 +1,13 @@
+{
+  "requires": [
+    "explicit destination",
+    "authorized publisher",
+    "claims gate",
+    "privacy review",
+    "accessibility review",
+    "exact export verification"
+  ],
+  "prohibits": [
+    "publication from DRAFT_ONLY"
+  ]
+}

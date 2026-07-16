@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-94",
+  "capability_id": "md.knowledge_design.content-graph-knowledge-architecture-and-repurposing-system",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "results/content_graph_knowledge_architecture_and_repurposing_system/content_graph_knowledge_architecture_and_repurposing_system_result.md",
+  "fixture_id": "MD-94-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/acceptance_criteria.schema.json",
+  "title": "Acceptance Criteria",
+  "type": "object",
+  "required": [
+    "criteria"
+  ],
+  "properties": {
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "verification_id",
+          "statement",
+          "method",
+          "required"
+        ],
+        "properties": {
+          "verification_id": {
+            "type": "string",
+            "pattern": "^VERIFY-"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "evidence_expected": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

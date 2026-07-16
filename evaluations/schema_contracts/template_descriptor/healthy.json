@@ -1,0 +1,11 @@
+{
+  "template_id": "core/example",
+  "title": "example",
+  "family": "core",
+  "purpose": "example",
+  "path": "example",
+  "status": "stable",
+  "required_by_prompt_ids": [
+    "MD-00"
+  ]
+}

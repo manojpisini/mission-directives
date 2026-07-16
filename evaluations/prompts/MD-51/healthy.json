@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-51",
+  "capability_id": "md.operations.reliability-resilience-and-recovery-investigation-and-plan",
+  "evidence_lane": "factual",
+  "risk_level": "medium",
+  "expected_output": "reports/reliability_resilience_and_recovery_investigation_and_plan/reliability_resilience_and_recovery_investigation_and_plan_investigation.md",
+  "fixture_id": "MD-51-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

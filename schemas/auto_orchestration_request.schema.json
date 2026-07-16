@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "auto_orchestration_request.schema.json",
+  "type": "object",
+  "required": [
+    "target"
+  ],
+  "properties": {
+    "target": {
+      "type": "string"
+    },
+    "intent_complete": {
+      "type": "boolean",
+      "default": true
+    },
+    "skill_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "skill_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "allow_install": {
+      "type": "boolean",
+      "default": false
+    },
+    "allow_create": {
+      "type": "boolean",
+      "default": false
+    },
+    "loop": {
+      "type": "boolean",
+      "default": false
+    },
+    "work_items": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "iterative_quality": {
+      "type": "boolean",
+      "default": false
+    },
+    "measurable": {
+      "type": "boolean",
+      "default": false
+    },
+    "maximum_inner_iterations": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 3
+    },
+    "maximum_no_improvement": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "external_effect": {
+      "type": "boolean",
+      "default": false
+    },
+    "quality_threshold": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

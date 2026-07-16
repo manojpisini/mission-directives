@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/paired_workflow.schema.json",
+  "title": "Paired Planning and Exact Execution Workflow",
+  "type": "object",
+  "required": [
+    "planning_prompt_id",
+    "execution_prompt_id",
+    "exact_twin_only",
+    "review_required",
+    "execution_consent_required",
+    "handoff_status",
+    "review_status",
+    "execution_consent_status",
+    "revision_number"
+  ],
+  "properties": {
+    "planning_prompt_id": {
+      "type": "string"
+    },
+    "planning_title": {
+      "type": "string"
+    },
+    "execution_prompt_id": {
+      "type": "string"
+    },
+    "execution_title": {
+      "type": "string"
+    },
+    "mapping_source": {
+      "const": "paired_prompt_id"
+    },
+    "reciprocal": {
+      "const": true
+    },
+    "exact_twin_only": {
+      "const": true
+    },
+    "review_required": {
+      "const": true
+    },
+    "execution_consent_required": {
+      "const": true
+    },
+    "handoff_status": {
+      "enum": [
+        "not_ready",
+        "ready"
+      ]
+    },
+    "handoff_hash": {
+      "type": "string"
+    },
+    "review_status": {
+      "enum": [
+        "pending",
+        "changes_requested",
+        "approved",
+        "declined"
+      ]
+    },
+    "revision_number": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "execution_consent_status": {
+      "enum": [
+        "not_requested",
+        "approved",
+        "declined"
+      ]
+    },
+    "approved_review_id": {
+      "type": "string"
+    },
+    "review_receipts": {
+      "type": "array",
+      "items": {
+        "$ref": "plan_review_receipt.schema.json"
+      }
+    },
+    "execution_consent_receipts": {
+      "type": "array",
+      "items": {
+        "$ref": "execution_consent_receipt.schema.json"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": true
+}

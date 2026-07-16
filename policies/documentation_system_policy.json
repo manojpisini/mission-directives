@@ -1,0 +1,11 @@
+{
+  "suite_version": "1.8.3",
+  "policy_id": "MD-DOCS-1",
+  "rules": [
+    "Documentation is a linked system, not disconnected files.",
+    "Every page declares audience, owner, canonical path, evidence snapshot, prerequisites, parent backlink, next steps, related references, freshness trigger, and verification.",
+    "Commands, defaults, binaries, APIs, schemas, and configuration claims must be verified or marked unknown.",
+    "Multipage packages require orphan-page and broken-link checks.",
+    "Built binary documentation covers provenance, platform, installation, runtime files, commands, diagnostics, security, update, rollback, and removal."
+  ]
+}

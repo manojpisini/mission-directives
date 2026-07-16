@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-97",
+  "capability_id": "md.brand.brand-strategy-positioning-naming-and-architecture",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "reports/brand_strategy_positioning_naming_and_architecture/brand_strategy_positioning_naming_and_architecture_brief.md",
+  "fixture_id": "MD-97-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

@@ -1,0 +1,11 @@
+{
+  "audience": "example",
+  "positioning": "example",
+  "approved_claims": "example",
+  "prohibited_claims": "example",
+  "terminology": "example",
+  "voice": "example",
+  "design_tokens": "example",
+  "source_ids": "example",
+  "accessibility_rules": "example"
+}

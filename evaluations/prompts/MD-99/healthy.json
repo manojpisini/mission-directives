@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-99",
+  "capability_id": "md.marketing_creative.campaign-creative-concept-and-activation-planning",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "results/campaign_creative_concept_and_activation_planning/campaign_creative_concept_and_activation_planning_result.md",
+  "fixture_id": "MD-99-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

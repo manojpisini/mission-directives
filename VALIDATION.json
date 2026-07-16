@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "claim_scope": "prompt-body semantic contracts, structural integrity, deterministic runtime tests, fixture coverage, compatibility, CI configuration, lock safety, and manifest integrity",
+  "suite_version": "1.8.3",
+  "prompt_count": 200,
+  "true_pairs": 32,
+  "composite_scenarios": 110,
+  "prompt_fixture_files": 600,
+  "scenario_fixture_files": 330,
+  "registered_skills": 277,
+  "installable_skills": 128,
+  "resolved_skill_locks": 0,
+  "production_eligible_measured_models": 0,
+  "prompt_body_audit_status": "pass",
+  "completion_criteria_unique": 200,
+  "tool_policy_coverage": 200,
+  "runtime_marker_coverage": 200,
+  "external_behavioral_status": "pass_with_external_measurements_pending",
+  "limitations": [
+    "Structural pass does not certify live model quality.",
+    "Unresolved skill locks intentionally block automatic use.",
+    "Human-reviewed golden runs remain pending until real runs are promoted."
+  ],
+  "errors": [],
+  "warnings": []
+}

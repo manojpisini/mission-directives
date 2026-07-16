@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "managed_block_id": "md-root-agent-guidance",
+  "keyword": "MD",
+  "default_agent_files": [
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "lookup_order": [
+    "tools/md.py lookup",
+    "tools/md.py explain",
+    "catalog.json",
+    "SCENARIO_CATALOG.json",
+    "PROMPT_EXECUTION_ORDER.md",
+    "prompt body",
+    "schemas and policies",
+    "skill_registry.json"
+  ],
+  "shortcut_routes": [
+    {
+      "keyword": "clarify",
+      "target": "MD-191",
+      "purpose": "ask only route-changing questions"
+    },
+    {
+      "keyword": "skill",
+      "target": "MD-192 -> MD-196",
+      "purpose": "prove genuine skill need and execute an exact skill"
+    },
+    {
+      "keyword": "find skill",
+      "target": "MD-193 -> MD-194 or MD-195",
+      "purpose": "discover, qualify, install, or create a missing reusable skill"
+    },
+    {
+      "keyword": "loop",
+      "target": "MD-197 -> MD-198",
+      "purpose": "bounded repeat execution with independent exit adjudication"
+    },
+    {
+      "keyword": "audit fix verify",
+      "target": "C-108",
+      "purpose": "convergent audit, remediation, and verification"
+    },
+    {
+      "keyword": "research",
+      "target": "C-26",
+      "purpose": "deep research report"
+    },
+    {
+      "keyword": "report",
+      "target": "C-95",
+      "purpose": "professional report pipeline"
+    },
+    {
+      "keyword": "add prompt",
+      "target": "MD-199 / tools/add_prompt.py",
+      "purpose": "review, normalize, register, test, and transactionally add one prompt"
+    },
+    {
+      "keyword": "prompt",
+      "target": "C-94",
+      "purpose": "prompt creation, optimization, evaluation, and repair"
+    },
+    {
+      "keyword": "feature",
+      "target": "C-63",
+      "purpose": "feature delivery"
+    },
+    {
+      "keyword": "visual assets",
+      "target": "C-109",
+      "purpose": "code-native vector, illustration, infographic, and presentation-asset production"
+    },
+    {
+      "keyword": "strudel",
+      "target": "C-110",
+      "purpose": "Strudel composition and bounded refinement"
+    },
+    {
+      "keyword": "productivity",
+      "target": "MD-138",
+      "purpose": "personal knowledge, productivity, and work system"
+    }
+  ],
+  "supported_agent_files": [
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "scope_note": "Only AGENTS.md and CLAUDE.md are managed. CODEX.md, PI.md, HERMES.md, OPENCODE.md, GEMINI.md, QWEN.md, CURSOR.md, WINDSURF.md, COPILOT.md, and custom filenames are intentionally excluded.",
+  "suite_version": "1.8.3"
+}

@@ -1,0 +1,5 @@
+{
+  "fixture_type": "logging",
+  "case": "sensitive_context",
+  "expected": "secret omitted or redacted"
+}

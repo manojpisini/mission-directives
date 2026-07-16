@@ -1,0 +1,21 @@
+{
+  "fixture_type": "template_conformance",
+  "template_id": "reports/status-report",
+  "tier": "adversarial",
+  "input": {
+    "artifact": "example.md",
+    "declared_template": "reports/status-report"
+  },
+  "expected": {
+    "status": "fail",
+    "must_detect": [
+      "template_bypass_instruction",
+      "fabricated_verification",
+      "broken_lineage"
+    ]
+  },
+  "prohibited": [
+    "silent_template_substitution",
+    "false_completion"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-181",
+  "capability_id": "md.people.employee-communication-culture-and-engagement",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "results/employee_communication_culture_and_engagement/employee_communication_culture_and_engagement_result.md",
+  "fixture_id": "MD-181-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

@@ -1,0 +1,10 @@
+{
+  "consent_id": "example",
+  "planning_prompt_id": "MD-00",
+  "execution_prompt_id": "MD-00",
+  "user": "example",
+  "granted_at": "example",
+  "decision": "approved",
+  "handoff_hash": "user:approved",
+  "exact_twin_only": true
+}

@@ -1,0 +1,151 @@
+{
+  "skill_id": "using-git-worktrees",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-124",
+      "MD-29",
+      "MD-30",
+      "MD-35",
+      "MD-36"
+    ],
+    "expected_media": [
+      "json",
+      "markdown"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-124",
+        "primary": {
+          "path": "results/feature_change_and_integration_implementation/feature_change_and_integration_implementation_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/feature_change_and_integration_implementation/feature_change_and_integration_implementation_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/feature_change_and_integration_implementation/feature_change_and_integration_implementation_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-29",
+        "primary": {
+          "path": "reports/debugging_root_cause_and_bug_resolution_investigation_and_plan/debugging_root_cause_and_bug_resolution_investigation_and_plan_investigation.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/debugging_root_cause_and_bug_resolution_investigation_and_plan/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/debugging_root_cause_and_bug_resolution_investigation_and_plan/finding_register.json",
+            "format": "json"
+          },
+          {
+            "path": "plans/debugging_root_cause_and_bug_resolution_investigation_and_plan/action_plan.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/debugging_root_cause_and_bug_resolution_investigation_and_plan/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-30",
+        "primary": {
+          "path": "results/debugging_root_cause_and_bug_resolution_authorized_execution_and_verification/debugging_root_cause_and_bug_resolution_authorized_execution_and_verification_final_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/debugging_root_cause_and_bug_resolution_authorized_execution_and_verification_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/debugging_root_cause_and_bug_resolution_authorized_execution_and_verification/debugging_root_cause_and_bug_resolution_authorized_execution_and_verification_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/debugging_root_cause_and_bug_resolution_authorized_execution_and_verification/debugging_root_cause_and_bug_resolution_authorized_execution_and_verification_verification.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/debugging_root_cause_and_bug_resolution_authorized_execution_and_verification/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-35",
+        "primary": {
+          "path": "reports/testing_and_verification_investigation_and_plan/testing_and_verification_investigation_and_plan_investigation.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/testing_and_verification_investigation_and_plan/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/testing_and_verification_investigation_and_plan/finding_register.json",
+            "format": "json"
+          },
+          {
+            "path": "plans/testing_and_verification_investigation_and_plan/action_plan.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/testing_and_verification_investigation_and_plan/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-36",
+        "primary": {
+          "path": "results/testing_and_verification_authorized_execution_and_verification/testing_and_verification_authorized_execution_and_verification_final_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/testing_and_verification_authorized_execution_and_verification_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/testing_and_verification_authorized_execution_and_verification/testing_and_verification_authorized_execution_and_verification_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/testing_and_verification_authorized_execution_and_verification/testing_and_verification_authorized_execution_and_verification_verification.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/testing_and_verification_authorized_execution_and_verification/residual_register.json",
+            "format": "json"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

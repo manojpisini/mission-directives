@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-26",
+  "capability_id": "md.coherence.project-consistency-uniformity-and-coherence-authorized-execution-and-verification",
+  "evidence_lane": "factual",
+  "risk_level": "high",
+  "expected_output": "results/project_consistency_uniformity_and_coherence_authorized_execution_and_verification/project_consistency_uniformity_and_coherence_authorized_execution_and_verification_final_result.md",
+  "fixture_id": "MD-26-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

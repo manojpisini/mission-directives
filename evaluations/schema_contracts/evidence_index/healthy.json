@@ -1,0 +1,15 @@
+{
+  "snapshot_id": "example",
+  "captured_at": "example",
+  "project_revision": "example",
+  "environment": {},
+  "sources": [
+    {
+      "evidence_id": "EVIDENCE-001",
+      "kind": "example",
+      "location": "example",
+      "trust": "trusted",
+      "captured_at": "example"
+    }
+  ]
+}

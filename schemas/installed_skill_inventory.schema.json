@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Installed Skill Inventory",
+  "type": "object",
+  "required": [
+    "observed_path",
+    "skill_count",
+    "skills"
+  ],
+  "properties": {
+    "observed_path": {
+      "type": "string"
+    },
+    "skill_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "skill_id",
+          "path",
+          "registered_in_suite"
+        ],
+        "properties": {
+          "skill_id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "registered_in_suite": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

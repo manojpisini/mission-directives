@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cross-platform Tool Execution Receipt",
+  "type": "object",
+  "required": [
+    "tool_id",
+    "platform",
+    "command",
+    "started_at",
+    "finished_at",
+    "duration_ms",
+    "exit_code",
+    "status",
+    "log_file"
+  ],
+  "properties": {
+    "tool_id": {
+      "type": "string"
+    },
+    "platform": {
+      "enum": [
+        "windows",
+        "linux",
+        "macos",
+        "unknown"
+      ]
+    },
+    "command": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "finished_at": {
+      "type": "string"
+    },
+    "duration_ms": {
+      "type": "integer"
+    },
+    "exit_code": {
+      "type": "integer"
+    },
+    "status": {
+      "enum": [
+        "pass",
+        "fail"
+      ]
+    },
+    "log_file": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

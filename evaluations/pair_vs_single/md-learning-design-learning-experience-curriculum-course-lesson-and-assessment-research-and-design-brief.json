@@ -1,0 +1,19 @@
+{
+  "pair_id": "md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief",
+  "pair_prompts": [
+    "MD-117",
+    "MD-118"
+  ],
+  "single_candidate_status": "to_be_generated_by_harness",
+  "metrics": [
+    "tokens",
+    "wall_time",
+    "missed_findings",
+    "execution_precision",
+    "reviewer_clarity",
+    "safety",
+    "ceremony_cost"
+  ],
+  "decision_rule": "retain pair only when measured safety, reviewability, parallelism, or quality improves",
+  "measurement_status": "not_run"
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Intent Clarification",
+  "type": "object",
+  "required": [
+    "outcome",
+    "audience",
+    "scope",
+    "authority",
+    "acceptance_criteria",
+    "route_confidence"
+  ],
+  "properties": {
+    "outcome": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scope": {
+      "type": "object"
+    },
+    "authority": {
+      "type": "object"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "questions_asked": {
+      "type": "array"
+    },
+    "assumptions": {
+      "type": "array"
+    },
+    "route_confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

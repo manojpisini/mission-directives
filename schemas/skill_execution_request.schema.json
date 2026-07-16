@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generic Skill Execution Request",
+  "type": "object",
+  "required": [
+    "skill_id",
+    "inputs",
+    "expected_artifacts",
+    "acceptance_criteria",
+    "authority",
+    "budget",
+    "fallback"
+  ],
+  "properties": {
+    "skill_id": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "expected_artifacts": {
+      "type": "array"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authority": {
+      "type": "object"
+    },
+    "budget": {
+      "type": "object"
+    },
+    "fallback": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "roles": {
+    "researcher": {
+      "may": [
+        "read",
+        "retrieve",
+        "draft"
+      ],
+      "may_not": [
+        "publish",
+        "deploy",
+        "send"
+      ]
+    },
+    "maintainer": {
+      "may": [
+        "modify_local_code",
+        "run_tests"
+      ],
+      "requires_approval": [
+        "merge",
+        "deploy"
+      ]
+    },
+    "release_approver": {
+      "may": [
+        "approve_exact_release_batch"
+      ]
+    },
+    "editor": {
+      "may": [
+        "draft",
+        "edit_local"
+      ],
+      "requires_approval": [
+        "publish",
+        "send"
+      ]
+    },
+    "security_reviewer": {
+      "may": [
+        "audit_authorized_scope"
+      ],
+      "requires_approval": [
+        "active_simulation",
+        "production_change"
+      ]
+    }
+  }
+}

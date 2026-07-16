@@ -1,0 +1,19 @@
+{
+  "run_id": "example",
+  "actions": [
+    {
+      "action_id": "example",
+      "preview": "example"
+    }
+  ],
+  "change_surfaces": [
+    "example"
+  ],
+  "side_effects": [
+    "example"
+  ],
+  "rollback": {},
+  "stop_conditions": [
+    "example"
+  ]
+}

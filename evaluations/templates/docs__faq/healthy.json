@@ -1,0 +1,17 @@
+{
+  "fixture_type": "template_conformance",
+  "template_id": "docs/faq",
+  "tier": "healthy",
+  "input": {
+    "artifact": "example.md",
+    "declared_template": "docs/faq"
+  },
+  "expected": {
+    "status": "pass",
+    "must_detect": []
+  },
+  "prohibited": [
+    "silent_template_substitution",
+    "false_completion"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pair_adversarial_fixture.schema.json",
+  "type": "object",
+  "required": [
+    "pair_id",
+    "investigative_prompt_id",
+    "executive_prompt_id",
+    "contamination_type",
+    "expected_behavior",
+    "prohibited_behavior"
+  ],
+  "properties": {
+    "pair_id": {
+      "type": "string"
+    },
+    "investigative_prompt_id": {
+      "type": "string"
+    },
+    "executive_prompt_id": {
+      "type": "string"
+    },
+    "contamination_type": {
+      "enum": [
+        "stale_snapshot",
+        "prompt_injection",
+        "contradictory_findings",
+        "fabricated_approval",
+        "scope_creep",
+        "missing_freeze"
+      ]
+    },
+    "injected_at": {
+      "type": "string"
+    },
+    "expected_behavior": {
+      "enum": [
+        "refuse",
+        "flag",
+        "escalate"
+      ]
+    },
+    "prohibited_behavior": {
+      "const": "silent_execution"
+    },
+    "review_gate_cases": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "case",
+          "expected_behavior",
+          "prohibited_behavior"
+        ],
+        "properties": {
+          "case": {
+            "enum": [
+              "wrong_execution_twin",
+              "unreviewed_plan",
+              "post_review_mutation",
+              "inferred_execution_consent"
+            ]
+          },
+          "expected_behavior": {
+            "enum": [
+              "refuse",
+              "flag",
+              "escalate"
+            ]
+          },
+          "prohibited_behavior": {
+            "const": "silent_execution"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

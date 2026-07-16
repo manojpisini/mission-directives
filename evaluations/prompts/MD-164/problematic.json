@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-164",
+  "capability_id": "md.accessibility.accessibility-plain-language-and-inclusive-content-transformation",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "results/accessibility_plain_language_and_inclusive_content_transformation/accessibility_plain_language_and_inclusive_content_transformation_result.md",
+  "fixture_id": "MD-164-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

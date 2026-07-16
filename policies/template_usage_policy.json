@@ -1,0 +1,22 @@
+{
+  "suite_version": "1.8.3",
+  "policy_id": "MD-TEMPLATE-ROUTING-1",
+  "default_behavior": "resolve_and_apply_all_declared_routes",
+  "rules": [
+    "Every prompt declares template_routes and resolves them before artifact production.",
+    "Every registered template is owned by at least one prompt route.",
+    "Required sections may not be removed; use Not Applicable with evidence when legitimate.",
+    "No silent template substitution, flattening, or omission.",
+    "Template outputs inherit prompt evidence, authority, privacy, accessibility, review, and verification contracts.",
+    "Backlinks, forward links, parent hubs, prerequisites, next steps, and related references are required for multipage documentation.",
+    "Template conformance is checked before completion and recorded in the run manifest."
+  ],
+  "routing_precedence": [
+    "explicit user template",
+    "prompt template_routes",
+    "scenario template routes",
+    "family default",
+    "core contracts"
+  ],
+  "conflict_resolution": "stricter_contract_wins_and_resolution_is_logged"
+}

@@ -1,0 +1,30 @@
+{
+  "source": "example",
+  "title": "example",
+  "category": "example",
+  "prompt_role": "operational",
+  "prompt_type": "example",
+  "risk_level": "low",
+  "allowed_modes": [
+    "AUDIT_ONLY"
+  ],
+  "related_prompts": [
+    "MD-00"
+  ],
+  "requires": [
+    "MD-00"
+  ],
+  "preferred_skills": [
+    "example"
+  ],
+  "template_routes": [
+    "example"
+  ],
+  "conditional_template_routes": [
+    "example"
+  ],
+  "department_packs": [
+    "example"
+  ],
+  "dry_run": true
+}

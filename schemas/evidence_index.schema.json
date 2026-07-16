@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/evidence_index.schema.json",
+  "title": "Evidence Index",
+  "type": "object",
+  "required": [
+    "snapshot_id",
+    "captured_at",
+    "project_revision",
+    "environment",
+    "sources"
+  ],
+  "properties": {
+    "snapshot_id": {
+      "type": "string"
+    },
+    "captured_at": {
+      "type": "string"
+    },
+    "project_revision": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "object"
+    },
+    "fresh_until": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "invalidation_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "kind",
+          "location",
+          "trust",
+          "captured_at"
+        ],
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "pattern": "^EVIDENCE-"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "trust": {
+            "enum": [
+              "trusted",
+              "untrusted",
+              "mixed"
+            ]
+          },
+          "captured_at": {
+            "type": "string"
+          },
+          "content_hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

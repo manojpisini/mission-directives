@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill_creation_spec.schema.json",
+  "type": "object",
+  "required": [
+    "skill_id",
+    "capability_gap",
+    "triggers",
+    "non_triggers",
+    "inputs",
+    "outputs",
+    "permissions",
+    "quality_flags",
+    "fixtures",
+    "fallback",
+    "maintenance_owner"
+  ],
+  "properties": {
+    "skill_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "capability_gap": {
+      "type": "string"
+    },
+    "triggers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "non_triggers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "permissions": {
+      "type": "object"
+    },
+    "quality_flags": {
+      "type": "object"
+    },
+    "fixtures": {
+      "type": "object",
+      "required": [
+        "healthy",
+        "problematic",
+        "adversarial"
+      ]
+    },
+    "fallback": {
+      "type": "string"
+    },
+    "maintenance_owner": {
+      "type": "string"
+    },
+    "target_locations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

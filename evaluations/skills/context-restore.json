@@ -1,0 +1,33 @@
+{
+  "skill_id": "context-restore",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-02"
+    ],
+    "expected_media": [
+      "markdown"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-02",
+        "primary": {
+          "path": ".prompt_suite/control/capability_router_and_execution_graph.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": []
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

@@ -1,0 +1,5 @@
+{
+  "fixture_type": "logging",
+  "case": "multiple_events",
+  "expected": "events appended in invocation order"
+}

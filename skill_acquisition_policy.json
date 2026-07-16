@@ -1,0 +1,71 @@
+{
+  "policy_id": "skill_acquisition_and_execution_policy",
+  "installed_paths": {
+    "global_agents": "~/.agents/skills",
+    "opencode_global": "~/.config/opencode/skills"
+  },
+  "discovery_skill": "find-skills",
+  "creation_skill": "skill-creator",
+  "installation_command": "npx skills add {source} --skill {skill_id} -g -a cline -a opencode --copy -y",
+  "auto_install_requires": [
+    "validated capability gap",
+    "qualified exact candidate",
+    "pre-authorized source or approval",
+    "acceptable permissions",
+    "provenance record",
+    "rollback",
+    "conformance after installation"
+  ],
+  "creation_requires": [
+    "discovery produced no suitable candidate",
+    "native route insufficient",
+    "reusable demand",
+    "maintenance owner",
+    "healthy, problematic, and adversarial fixtures"
+  ],
+  "execution_requires": [
+    "genuine material benefit",
+    "exact installed skill",
+    "typed inputs and outputs",
+    "quarantine",
+    "independent verification"
+  ],
+  "quality_flag_translation": {
+    "advanced": [
+      "robust failure handling",
+      "efficient context use",
+      "typed contracts",
+      "tests",
+      "portability"
+    ],
+    "cutting_edge": [
+      "current evidence-backed techniques",
+      "explicit experimental status when unproven",
+      "comparative fixtures",
+      "safe fallback"
+    ],
+    "production_grade": [
+      "least privilege",
+      "observability",
+      "recovery",
+      "conformance",
+      "maintainer documentation"
+    ]
+  },
+  "acquisition_modes": {
+    "locked_auto": "May auto-install only a qualified candidate with a resolved approved lock and policy preauthorization.",
+    "approved_unpinned": "May install an exact qualified candidate only with explicit run-level approval acknowledging unpinned source risk.",
+    "manual_only": "Produce commands and receipts but do not install."
+  },
+  "default_acquisition_mode": "locked_auto",
+  "branch_semantics": {
+    "candidate_found": "MD-194",
+    "no_candidate_and_reusable_gap": "MD-195",
+    "native_sufficient": "native_fallback",
+    "mutually_exclusive": [
+      "MD-194",
+      "MD-195"
+    ]
+  },
+  "created_skill_registration": "Created skills are staged, tested, and copied with tools/register_local_skill_dual.ps1 only after approval."
+}

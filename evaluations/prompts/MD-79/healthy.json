@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-79",
+  "capability_id": "md.research.deep-research-and-evidence-synthesis",
+  "evidence_lane": "factual",
+  "risk_level": "medium",
+  "expected_output": "reports/deep_research_and_evidence_synthesis/deep_research_and_evidence_synthesis_brief.md",
+  "fixture_id": "MD-79-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

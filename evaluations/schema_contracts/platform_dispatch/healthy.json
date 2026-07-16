@@ -1,0 +1,7 @@
+{
+  "tool_id": "example",
+  "python_entry": "example",
+  "bash_entry": "example",
+  "powershell_entry": "example",
+  "platform_selection": "automatic"
+}

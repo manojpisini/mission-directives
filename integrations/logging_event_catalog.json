@@ -1,0 +1,22 @@
+{
+  "suite_version": "1.8.3",
+  "daily_path": ".prompt_suite/logs/YYYY-MM-DD.toml",
+  "event_categories": [
+    "prompt_invocation",
+    "scenario_invocation",
+    "planning",
+    "execution",
+    "review",
+    "consent",
+    "audit",
+    "verification",
+    "tool",
+    "test",
+    "template",
+    "skill",
+    "error",
+    "metric",
+    "state_transition"
+  ],
+  "schema": "schemas/daily_log_event.schema.json"
+}

@@ -1,0 +1,77 @@
+{
+  "skill_id": "playwright-best-practices",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-35",
+      "MD-36"
+    ],
+    "expected_media": [
+      "markdown"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-35",
+        "primary": {
+          "path": "reports/testing_and_verification_investigation_and_plan/testing_and_verification_investigation_and_plan_investigation.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/testing_and_verification_investigation_and_plan/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/testing_and_verification_investigation_and_plan/finding_register.json",
+            "format": "json"
+          },
+          {
+            "path": "plans/testing_and_verification_investigation_and_plan/action_plan.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/testing_and_verification_investigation_and_plan/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-36",
+        "primary": {
+          "path": "results/testing_and_verification_authorized_execution_and_verification/testing_and_verification_authorized_execution_and_verification_final_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/testing_and_verification_authorized_execution_and_verification_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/testing_and_verification_authorized_execution_and_verification/testing_and_verification_authorized_execution_and_verification_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/testing_and_verification_authorized_execution_and_verification/testing_and_verification_authorized_execution_and_verification_verification.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/testing_and_verification_authorized_execution_and_verification/residual_register.json",
+            "format": "json"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

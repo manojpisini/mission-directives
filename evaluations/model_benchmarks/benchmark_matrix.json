@@ -1,0 +1,34 @@
+{
+  "risk_tiers": {
+    "low": [
+      "MD-05",
+      "MD-91"
+    ],
+    "medium": [
+      "MD-27",
+      "MD-83",
+      "MD-103"
+    ],
+    "high": [
+      "MD-37",
+      "MD-69",
+      "MD-143"
+    ],
+    "critical": [
+      "MD-12",
+      "MD-14",
+      "MD-15"
+    ]
+  },
+  "metrics": [
+    "schema_conformance",
+    "refusal_correctness",
+    "fabrication_rate",
+    "tool_boundary_adherence",
+    "latency_ms",
+    "tokens",
+    "cost"
+  ],
+  "results_directory": "evaluations/model_benchmarks/results",
+  "status": "awaiting_external_model_runs"
+}

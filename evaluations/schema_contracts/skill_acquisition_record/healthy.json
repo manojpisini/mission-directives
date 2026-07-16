@@ -1,0 +1,10 @@
+{
+  "skill_id": "example",
+  "source": "example",
+  "action": "discovered",
+  "locations": [
+    "example"
+  ],
+  "quarantine_status": "example",
+  "verification_status": "example"
+}

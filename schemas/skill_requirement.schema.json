@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill Requirement",
+  "type": "object",
+  "required": [
+    "classification",
+    "capability",
+    "inputs",
+    "outputs",
+    "permissions",
+    "verification",
+    "fallback"
+  ],
+  "properties": {
+    "classification": {
+      "enum": [
+        "required",
+        "beneficial",
+        "optional",
+        "redundant",
+        "prohibited"
+      ]
+    },
+    "skill_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "capability": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "outputs": {
+      "type": "array"
+    },
+    "permissions": {
+      "type": "array"
+    },
+    "verification": {
+      "type": "array"
+    },
+    "fallback": {
+      "type": "string"
+    }
+  }
+}

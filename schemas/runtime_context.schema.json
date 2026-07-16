@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/runtime_context.schema.json",
+  "title": "Runtime Context",
+  "type": "object",
+  "required": [
+    "run_id",
+    "project_root",
+    "outcome",
+    "mode",
+    "scope",
+    "authorization",
+    "protected_surfaces",
+    "environment",
+    "evidence_policy"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "outcome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "AUDIT_ONLY",
+        "PLAN_ONLY",
+        "APPLY_SAFE",
+        "APPLY_APPROVED",
+        "VERIFY_ONLY"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "include",
+        "exclude"
+      ],
+      "properties": {
+        "include": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exclude": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "authorization": {
+      "type": "object",
+      "required": [
+        "actor",
+        "allowed_actions"
+      ],
+      "properties": {
+        "actor": {
+          "type": "string"
+        },
+        "allowed_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "approval_receipt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "protected_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "environment": {
+      "type": "object"
+    },
+    "evidence_policy": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

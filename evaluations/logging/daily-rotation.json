@@ -1,0 +1,5 @@
+{
+  "fixture_type": "logging",
+  "case": "day_boundary",
+  "expected": "new local-date file"
+}

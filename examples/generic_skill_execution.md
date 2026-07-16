@@ -1,0 +1,16 @@
+# Generic Conditional Skill Execution
+
+```text
+RUN MD-196
+MODE DRAFT_ONLY
+SKILL_ID {EXACT_INSTALLED_SKILL}
+SKILL_REQUIREMENT {MATERIAL_ACCEPTANCE_CRITERION_THE_SKILL_IMPROVES}
+SKILL_INPUTS {TYPED_INPUTS_AND_TRUST_BOUNDARIES}
+EXPECTED_ARTIFACTS {PATHS_SCHEMAS_AND_MEDIA}
+AUTHORITY {LOCAL_REVERSIBLE_SCOPE}
+BUDGET {TIME_TOKENS_COST_TOOLS}
+ACCEPTANCE_CRITERIA {MEASURABLE_TESTS}
+FALLBACK {NATIVE_PROMPT_ROUTE}
+```
+
+The adapter probes the exact skill, executes once, quarantines raw output, and releases artifacts only after independent verification. A merely relevant installed skill is rejected.

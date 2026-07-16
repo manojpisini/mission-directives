@@ -1,0 +1,17 @@
+{
+  "asset_id": "example",
+  "communication_job": "example",
+  "audience": "example",
+  "placement": "example",
+  "visual_form": "example",
+  "dimensions": {},
+  "acceptance_rubric": [
+    {
+      "criterion": "example",
+      "verification": "example"
+    }
+  ],
+  "export_formats": [
+    "example"
+  ]
+}

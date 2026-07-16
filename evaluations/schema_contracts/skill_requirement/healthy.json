@@ -1,0 +1,17 @@
+{
+  "classification": "required",
+  "capability": "example",
+  "inputs": [
+    {}
+  ],
+  "outputs": [
+    {}
+  ],
+  "permissions": [
+    {}
+  ],
+  "verification": [
+    {}
+  ],
+  "fallback": "example"
+}

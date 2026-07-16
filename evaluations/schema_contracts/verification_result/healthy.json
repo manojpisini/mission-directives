@@ -1,0 +1,16 @@
+{
+  "run_id": "example",
+  "criteria_results": [
+    {
+      "verification_id": "example",
+      "status": "pass",
+      "evidence": [
+        "example"
+      ]
+    }
+  ],
+  "overall_status": "pass",
+  "evidence": [
+    "example"
+  ]
+}

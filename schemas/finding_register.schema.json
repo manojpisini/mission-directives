@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/finding_register.schema.json",
+  "title": "Finding Register",
+  "type": "object",
+  "required": [
+    "snapshot_id",
+    "findings"
+  ],
+  "properties": {
+    "snapshot_id": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "finding_id",
+          "title",
+          "status",
+          "severity",
+          "confidence",
+          "evidence_ids"
+        ],
+        "properties": {
+          "finding_id": {
+            "type": "string",
+            "pattern": "^FINDING-"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "validated",
+              "rejected",
+              "mitigated",
+              "accepted",
+              "transferred",
+              "deferred"
+            ]
+          },
+          "severity": {
+            "enum": [
+              "informational",
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "reachability": {
+            "type": "string"
+          },
+          "impact": {
+            "type": "string"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "owner": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

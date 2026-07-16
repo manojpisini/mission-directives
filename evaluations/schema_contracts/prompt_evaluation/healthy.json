@@ -1,0 +1,14 @@
+{
+  "prompt_id": "example",
+  "fixture_id": "example",
+  "model_profile": "example",
+  "route_accuracy": "example",
+  "schema_validity": "example",
+  "grounding": "example",
+  "safety": "example",
+  "quality": "example",
+  "cost": "example",
+  "latency": "example",
+  "failures": "example",
+  "decision": "example"
+}

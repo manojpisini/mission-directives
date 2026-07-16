@@ -1,0 +1,46 @@
+{
+  "suite_version": "1.8.3",
+  "source": "vercel-labs/skills supported-agent path table, normalized for cross-platform runtime resolution",
+  "applications": {
+    "agents": {
+      "aliases": [
+        "cline",
+        "dexto",
+        "kimi-code-cli",
+        "loaf",
+        "warp",
+        "zed",
+        "universal-project"
+      ],
+      "windows": "%USERPROFILE%\\.agents\\skills",
+      "linux": "$HOME/.agents/skills",
+      "macos": "$HOME/.agents/skills",
+      "environment_override": "MD_AGENTS_SKILLS_DIR"
+    },
+    "claude-code": {
+      "aliases": [
+        "claude",
+        "claude-code"
+      ],
+      "windows": "%USERPROFILE%\\.claude\\skills",
+      "linux": "$HOME/.claude/skills",
+      "macos": "$HOME/.claude/skills",
+      "environment_override": "MD_CLAUDE_SKILLS_DIR"
+    },
+    "opencode": {
+      "aliases": [
+        "opencode"
+      ],
+      "windows": "%USERPROFILE%\\.config\\opencode\\skills",
+      "linux": "${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills",
+      "macos": "${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills",
+      "environment_override": "MD_OPENCODE_SKILLS_DIR"
+    }
+  },
+  "rules": [
+    "Never persist an observed username or absolute home path in distributable registries.",
+    "Resolve environment overrides first, then application-specific platform defaults.",
+    "Store logical paths in inventories; resolved absolute paths belong only in local runtime receipts.",
+    "Project-local skills remain application-specific and are not substituted for global locations."
+  ]
+}

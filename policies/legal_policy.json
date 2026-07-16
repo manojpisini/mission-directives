@@ -1,0 +1,11 @@
+{
+  "requires": [
+    "jurisdiction",
+    "current authority",
+    "uncertainty",
+    "counsel escalation triggers"
+  ],
+  "prohibits": [
+    "representation as legal counsel unless authorized"
+  ]
+}

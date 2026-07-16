@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-138",
+  "capability_id": "md.personal_productivity.personal-knowledge-productivity-and-work-system",
+  "evidence_lane": "hybrid",
+  "risk_level": "low",
+  "expected_output": "results/personal_knowledge_productivity_and_work_system/personal_knowledge_productivity_and_work_system_result.md",
+  "fixture_id": "MD-138-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

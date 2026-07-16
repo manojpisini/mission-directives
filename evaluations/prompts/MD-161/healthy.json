@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-161",
+  "capability_id": "md.public_affairs.policy-analysis-public-affairs-and-regulatory-monitoring",
+  "evidence_lane": "factual",
+  "risk_level": "high",
+  "expected_output": "results/policy_analysis_public_affairs_and_regulatory_monitoring/policy_analysis_public_affairs_and_regulatory_monitoring_result.md",
+  "fixture_id": "MD-161-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

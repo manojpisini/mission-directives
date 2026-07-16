@@ -1,0 +1,925 @@
+{
+  "skill_id": "visual-assets",
+  "lock_required": false,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-83",
+      "MD-84",
+      "MD-85",
+      "MD-86",
+      "MD-87",
+      "MD-88",
+      "MD-96",
+      "MD-98",
+      "MD-99",
+      "MD-101",
+      "MD-102",
+      "MD-104",
+      "MD-105",
+      "MD-107",
+      "MD-109",
+      "MD-110",
+      "MD-113",
+      "MD-117",
+      "MD-118",
+      "MD-121",
+      "MD-123",
+      "MD-127",
+      "MD-159",
+      "MD-169",
+      "MD-170",
+      "MD-196",
+      "MD-197",
+      "MD-100",
+      "MD-103",
+      "MD-106",
+      "MD-108",
+      "MD-112",
+      "MD-115",
+      "MD-120",
+      "MD-122",
+      "MD-128",
+      "MD-145",
+      "MD-151",
+      "MD-156",
+      "MD-157",
+      "MD-162",
+      "MD-164",
+      "MD-176"
+    ],
+    "expected_media": [
+      "svg",
+      "html",
+      "css",
+      "javascript",
+      "vector_asset",
+      "illustration_spec",
+      "infographic_spec",
+      "animation_spec",
+      "presentation_asset"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-83",
+        "primary": {
+          "path": "reports/research_backed_blog_article_and_newsletter_investigation_and_editorial_brief/research_backed_blog_article_and_newsletter_investigation_and_editorial_brief_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/research_backed_blog_article_and_newsletter_investigation_and_editorial_brief/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/research_backed_blog_article_and_newsletter_investigation_and_editorial_brief/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/research_backed_blog_article_and_newsletter_investigation_and_editorial_brief/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-84",
+        "primary": {
+          "path": "results/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-85",
+        "primary": {
+          "path": "reports/script_video_podcast_and_storyboard_research_and_production_brief/script_video_podcast_and_storyboard_research_and_production_brief_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/script_video_podcast_and_storyboard_research_and_production_brief/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/script_video_podcast_and_storyboard_research_and_production_brief/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/script_video_podcast_and_storyboard_research_and_production_brief/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-86",
+        "primary": {
+          "path": "results/script_video_podcast_and_storyboard_writing_and_production_package/script_video_podcast_and_storyboard_writing_and_production_package_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/script_video_podcast_and_storyboard_writing_and_production_package_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/script_video_podcast_and_storyboard_writing_and_production_package/script_video_podcast_and_storyboard_writing_and_production_package_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/script_video_podcast_and_storyboard_writing_and_production_package/script_video_podcast_and_storyboard_writing_and_production_package_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/script_video_podcast_and_storyboard_writing_and_production_package/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-87",
+        "primary": {
+          "path": "reports/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-88",
+        "primary": {
+          "path": "results/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-96",
+        "primary": {
+          "path": "reports/idea_exploration_concept_development_and_moodboard_brief/idea_exploration_concept_development_and_moodboard_brief_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/idea_exploration_concept_development_and_moodboard_brief/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/idea_exploration_concept_development_and_moodboard_brief/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/idea_exploration_concept_development_and_moodboard_brief/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-98",
+        "primary": {
+          "path": "results/brand_identity_guidelines_and_asset_system_production/brand_identity_guidelines_and_asset_system_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/brand_identity_guidelines_and_asset_system_production/brand_identity_guidelines_and_asset_system_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/brand_identity_guidelines_and_asset_system_production/brand_identity_guidelines_and_asset_system_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-99",
+        "primary": {
+          "path": "results/campaign_creative_concept_and_activation_planning/campaign_creative_concept_and_activation_planning_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/campaign_creative_concept_and_activation_planning/campaign_creative_concept_and_activation_planning_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/campaign_creative_concept_and_activation_planning/campaign_creative_concept_and_activation_planning_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-101",
+        "primary": {
+          "path": "reports/presentation_narrative_story_architecture_and_deck_blueprint/presentation_narrative_story_architecture_and_deck_blueprint_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/presentation_narrative_story_architecture_and_deck_blueprint/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/presentation_narrative_story_architecture_and_deck_blueprint/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/presentation_narrative_story_architecture_and_deck_blueprint/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-102",
+        "primary": {
+          "path": "results/html_css_and_javascript_slides_and_presentation_production/html_css_and_javascript_slides_and_presentation_production_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/html_css_and_javascript_slides_and_presentation_production_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/html_css_and_javascript_slides_and_presentation_production/html_css_and_javascript_slides_and_presentation_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/html_css_and_javascript_slides_and_presentation_production/html_css_and_javascript_slides_and_presentation_production_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/html_css_and_javascript_slides_and_presentation_production/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-104",
+        "primary": {
+          "path": "results/infographic_and_data_storytelling_production/infographic_and_data_storytelling_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/infographic_and_data_storytelling_production/infographic_and_data_storytelling_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/infographic_and_data_storytelling_production/infographic_and_data_storytelling_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-105",
+        "primary": {
+          "path": "results/blueprint_diagram_architecture_and_process_visualization_production/blueprint_diagram_architecture_and_process_visualization_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/blueprint_diagram_architecture_and_process_visualization_production/blueprint_diagram_architecture_and_process_visualization_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/blueprint_diagram_architecture_and_process_visualization_production/blueprint_diagram_architecture_and_process_visualization_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-107",
+        "primary": {
+          "path": "results/interactive_web_artifact_microsite_and_prototype_production/interactive_web_artifact_microsite_and_prototype_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/interactive_web_artifact_microsite_and_prototype_production/interactive_web_artifact_microsite_and_prototype_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/interactive_web_artifact_microsite_and_prototype_production/interactive_web_artifact_microsite_and_prototype_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-109",
+        "primary": {
+          "path": "reports/visual_quality_accessibility_brand_and_responsive_review/visual_quality_accessibility_brand_and_responsive_review_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/visual_quality_accessibility_brand_and_responsive_review/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/visual_quality_accessibility_brand_and_responsive_review/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/visual_quality_accessibility_brand_and_responsive_review/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-110",
+        "primary": {
+          "path": "results/event_strategy_agenda_run_of_show_and_facilitation_design/event_strategy_agenda_run_of_show_and_facilitation_design_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/event_strategy_agenda_run_of_show_and_facilitation_design/event_strategy_agenda_run_of_show_and_facilitation_design_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/event_strategy_agenda_run_of_show_and_facilitation_design/event_strategy_agenda_run_of_show_and_facilitation_design_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-113",
+        "primary": {
+          "path": "results/document_memo_report_sop_and_policy_production/document_memo_report_sop_and_policy_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/document_memo_report_sop_and_policy_production/document_memo_report_sop_and_policy_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/document_memo_report_sop_and_policy_production/document_memo_report_sop_and_policy_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-117",
+        "primary": {
+          "path": "reports/learning_experience_curriculum_course_lesson_and_assessment_research_and_design_brief/learning_experience_curriculum_course_lesson_and_assessment_research_and_design_brief_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/learning_experience_curriculum_course_lesson_and_assessment_research_and_design_brief/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/learning_experience_curriculum_course_lesson_and_assessment_research_and_design_brief/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/learning_experience_curriculum_course_lesson_and_assessment_research_and_design_brief/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-118",
+        "primary": {
+          "path": "results/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-121",
+        "primary": {
+          "path": "results/professional_profile_resume_portfolio_bio_and_application_package/professional_profile_resume_portfolio_bio_and_application_package_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/professional_profile_resume_portfolio_bio_and_application_package/professional_profile_resume_portfolio_bio_and_application_package_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/professional_profile_resume_portfolio_bio_and_application_package/professional_profile_resume_portfolio_bio_and_application_package_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-123",
+        "primary": {
+          "path": "results/social_media_short_form_and_community_content_production/social_media_short_form_and_community_content_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/social_media_short_form_and_community_content_production/social_media_short_form_and_community_content_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/social_media_short_form_and_community_content_production/social_media_short_form_and_community_content_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-127",
+        "primary": {
+          "path": "results/media_production_editing_and_distribution_blueprint/media_production_editing_and_distribution_blueprint_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/media_production_editing_and_distribution_blueprint/media_production_editing_and_distribution_blueprint_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/media_production_editing_and_distribution_blueprint/media_production_editing_and_distribution_blueprint_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-159",
+        "primary": {
+          "path": "results/board_executive_investor_and_management_reporting/board_executive_investor_and_management_reporting_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/board_executive_investor_and_management_reporting/board_executive_investor_and_management_reporting_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/board_executive_investor_and_management_reporting/board_executive_investor_and_management_reporting_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-169",
+        "primary": {
+          "path": "results/report_architecture_and_decision_narrative/report_architecture_and_decision_narrative_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/report_architecture_and_decision_narrative/report_architecture_and_decision_narrative_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/report_architecture_and_decision_narrative/report_architecture_and_decision_narrative_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-170",
+        "primary": {
+          "path": "results/report_production_visualization_brief_and_quality_assurance/report_production_visualization_brief_and_quality_assurance_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/report_production_visualization_brief_and_quality_assurance/report_production_visualization_brief_and_quality_assurance_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/report_production_visualization_brief_and_quality_assurance/report_production_visualization_brief_and_quality_assurance_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-196",
+        "primary": {
+          "path": "results/generic_conditional_skill_execution_adapter/generic_conditional_skill_execution_adapter_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/generic_conditional_skill_execution_adapter_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/generic_conditional_skill_execution_adapter/generic_conditional_skill_execution_adapter_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/generic_conditional_skill_execution_adapter/generic_conditional_skill_execution_adapter_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-197",
+        "primary": {
+          "path": "results/bounded_prompt_and_skill_loop_orchestrator/bounded_prompt_and_skill_loop_orchestrator_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/bounded_prompt_and_skill_loop_orchestrator_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/bounded_prompt_and_skill_loop_orchestrator/bounded_prompt_and_skill_loop_orchestrator_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/bounded_prompt_and_skill_loop_orchestrator/bounded_prompt_and_skill_loop_orchestrator_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-100",
+        "primary": {
+          "path": "results/pitch_proposal_and_business_case_development/pitch_proposal_and_business_case_development_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/pitch_proposal_and_business_case_development/pitch_proposal_and_business_case_development_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/pitch_proposal_and_business_case_development/pitch_proposal_and_business_case_development_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-103",
+        "primary": {
+          "path": "results/dashboard_and_analytical_interface_production/dashboard_and_analytical_interface_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/dashboard_and_analytical_interface_production/dashboard_and_analytical_interface_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/dashboard_and_analytical_interface_production/dashboard_and_analytical_interface_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-106",
+        "primary": {
+          "path": "results/excalidraw_and_collaborative_whiteboard_diagram_production/excalidraw_and_collaborative_whiteboard_diagram_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/excalidraw_and_collaborative_whiteboard_diagram_production/excalidraw_and_collaborative_whiteboard_diagram_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/excalidraw_and_collaborative_whiteboard_diagram_production/excalidraw_and_collaborative_whiteboard_diagram_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-108",
+        "primary": {
+          "path": "results/frontend_visual_design_interaction_and_experience_polish/frontend_visual_design_interaction_and_experience_polish_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/frontend_visual_design_interaction_and_experience_polish/frontend_visual_design_interaction_and_experience_polish_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/frontend_visual_design_interaction_and_experience_polish/frontend_visual_design_interaction_and_experience_polish_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-112",
+        "primary": {
+          "path": "results/workshop_meeting_and_collaborative_session_design/workshop_meeting_and_collaborative_session_design_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/workshop_meeting_and_collaborative_session_design/workshop_meeting_and_collaborative_session_design_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/workshop_meeting_and_collaborative_session_design/workshop_meeting_and_collaborative_session_design_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-115",
+        "primary": {
+          "path": "results/sales_enablement_customer_communication_and_lifecycle_content/sales_enablement_customer_communication_and_lifecycle_content_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/sales_enablement_customer_communication_and_lifecycle_content/sales_enablement_customer_communication_and_lifecycle_content_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/sales_enablement_customer_communication_and_lifecycle_content/sales_enablement_customer_communication_and_lifecycle_content_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-120",
+        "primary": {
+          "path": "results/grant_funding_sponsorship_and_award_proposal_production/grant_funding_sponsorship_and_award_proposal_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/grant_funding_sponsorship_and_award_proposal_production/grant_funding_sponsorship_and_award_proposal_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/grant_funding_sponsorship_and_award_proposal_production/grant_funding_sponsorship_and_award_proposal_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-122",
+        "primary": {
+          "path": "results/email_letter_message_speech_announcement_and_general_communication_production/email_letter_message_speech_announcement_and_general_communication_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/email_letter_message_speech_announcement_and_general_communication_production/email_letter_message_speech_announcement_and_general_communication_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/email_letter_message_speech_announcement_and_general_communication_production/email_letter_message_speech_announcement_and_general_communication_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-128",
+        "primary": {
+          "path": "results/content_performance_and_editorial_optimization/content_performance_and_editorial_optimization_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/content_performance_and_editorial_optimization/content_performance_and_editorial_optimization_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/content_performance_and_editorial_optimization/content_performance_and_editorial_optimization_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-145",
+        "primary": {
+          "path": "results/finance_fp_a_budget_and_management_analysis/finance_fp_a_budget_and_management_analysis_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/finance_fp_a_budget_and_management_analysis/finance_fp_a_budget_and_management_analysis_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/finance_fp_a_budget_and_management_analysis/finance_fp_a_budget_and_management_analysis_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-151",
+        "primary": {
+          "path": "results/product_discovery_strategy_roadmap_and_lifecycle/product_discovery_strategy_roadmap_and_lifecycle_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/product_discovery_strategy_roadmap_and_lifecycle/product_discovery_strategy_roadmap_and_lifecycle_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/product_discovery_strategy_roadmap_and_lifecycle/product_discovery_strategy_roadmap_and_lifecycle_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-156",
+        "primary": {
+          "path": "results/crisis_communication_and_issues_management/crisis_communication_and_issues_management_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/crisis_communication_and_issues_management/crisis_communication_and_issues_management_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/crisis_communication_and_issues_management/crisis_communication_and_issues_management_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-157",
+        "primary": {
+          "path": "results/public_relations_media_briefing_and_thought_leadership/public_relations_media_briefing_and_thought_leadership_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/public_relations_media_briefing_and_thought_leadership/public_relations_media_briefing_and_thought_leadership_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/public_relations_media_briefing_and_thought_leadership/public_relations_media_briefing_and_thought_leadership_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-162",
+        "primary": {
+          "path": "results/sustainability_esg_and_impact_reporting/sustainability_esg_and_impact_reporting_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/sustainability_esg_and_impact_reporting/sustainability_esg_and_impact_reporting_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/sustainability_esg_and_impact_reporting/sustainability_esg_and_impact_reporting_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-164",
+        "primary": {
+          "path": "results/accessibility_plain_language_and_inclusive_content_transformation/accessibility_plain_language_and_inclusive_content_transformation_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/accessibility_plain_language_and_inclusive_content_transformation/accessibility_plain_language_and_inclusive_content_transformation_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/accessibility_plain_language_and_inclusive_content_transformation/accessibility_plain_language_and_inclusive_content_transformation_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-176",
+        "primary": {
+          "path": "results/corporate_strategy_portfolio_and_capital_allocation/corporate_strategy_portfolio_and_capital_allocation_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/corporate_strategy_portfolio_and_capital_allocation/corporate_strategy_portfolio_and_capital_allocation_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/corporate_strategy_portfolio_and_capital_allocation/corporate_strategy_portfolio_and_capital_allocation_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      }
+    ],
+    "must_quarantine_raw_output": true
+  },
+  "verification": [
+    "installed SKILL.md inspection",
+    "runtime schema and permission probe",
+    "artifact-shape validation",
+    "untrusted-output quarantine",
+    "task-specific independent verification"
+  ],
+  "live_status": "not_run"
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Template Conformance Report",
+  "type": "object",
+  "required": [
+    "artifact",
+    "template_id",
+    "status",
+    "required_sections",
+    "missing_sections",
+    "verification"
+  ],
+  "properties": {
+    "artifact": {
+      "type": "string"
+    },
+    "template_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pass",
+        "fail",
+        "not_applicable"
+      ]
+    },
+    "required_sections": {
+      "type": "array"
+    },
+    "missing_sections": {
+      "type": "array"
+    },
+    "verification": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

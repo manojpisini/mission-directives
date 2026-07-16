@@ -1,0 +1,14 @@
+{
+  "artifact": "example",
+  "template_id": "example",
+  "status": "pass",
+  "required_sections": [
+    {}
+  ],
+  "missing_sections": [
+    {}
+  ],
+  "verification": [
+    {}
+  ]
+}

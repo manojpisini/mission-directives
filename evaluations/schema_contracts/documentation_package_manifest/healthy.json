@@ -1,0 +1,23 @@
+{
+  "package_id": "example",
+  "audiences": [
+    {}
+  ],
+  "documents": [
+    {
+      "path": {},
+      "template_id": {},
+      "owner": {},
+      "status": {},
+      "backlinks": {},
+      "forward_links": {}
+    }
+  ],
+  "link_graph": {},
+  "template_conformance": [
+    {}
+  ],
+  "verification": [
+    {}
+  ]
+}

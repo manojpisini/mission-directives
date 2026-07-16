@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-03",
+  "capability_id": "md.core.artifact-handoff-and-verification-contract",
+  "evidence_lane": null,
+  "risk_level": "medium",
+  "expected_output": ".prompt_suite/control/artifact_handoff_and_verification_contract.md",
+  "fixture_id": "MD-03-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/verification_result.schema.json",
+  "title": "Verification Result",
+  "type": "object",
+  "required": [
+    "run_id",
+    "criteria_results",
+    "overall_status",
+    "evidence"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "overall_status": {
+      "enum": [
+        "pass",
+        "fail",
+        "partial",
+        "blocked"
+      ]
+    },
+    "criteria_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "verification_id",
+          "status",
+          "evidence"
+        ],
+        "properties": {
+          "verification_id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "pass",
+              "fail",
+              "blocked",
+              "not_applicable"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "verified_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

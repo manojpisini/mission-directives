@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-96",
+  "capability_id": "md.creative_strategy.idea-exploration-concept-development-and-moodboard-brief",
+  "evidence_lane": "hybrid",
+  "risk_level": "low",
+  "expected_output": "reports/idea_exploration_concept_development_and_moodboard_brief/idea_exploration_concept_development_and_moodboard_brief_brief.md",
+  "fixture_id": "MD-96-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

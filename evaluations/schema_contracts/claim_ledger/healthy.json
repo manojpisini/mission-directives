@@ -1,0 +1,9 @@
+{
+  "claim_id": "example",
+  "claim_text": "example",
+  "claim_type": "example",
+  "source_ids": "example",
+  "support_level": "example",
+  "uncertainty": "example",
+  "last_verified_at": "example"
+}

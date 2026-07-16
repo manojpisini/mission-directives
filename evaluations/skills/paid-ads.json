@@ -1,0 +1,176 @@
+{
+  "skill_id": "paid-ads",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-93",
+      "MD-95",
+      "MD-99",
+      "MD-114",
+      "MD-115",
+      "MD-123",
+      "MD-130"
+    ],
+    "expected_media": [
+      "asset_matrix",
+      "calendar_spec",
+      "campaign_spec",
+      "carousel_spec",
+      "community_plan",
+      "csv",
+      "deck_spec",
+      "email_spec",
+      "json",
+      "markdown",
+      "playbook",
+      "short_video_spec",
+      "social_package"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-93",
+        "primary": {
+          "path": "reports/content_strategy_portfolio_and_editorial_architecture/content_strategy_portfolio_and_editorial_architecture_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/content_strategy_portfolio_and_editorial_architecture/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/content_strategy_portfolio_and_editorial_architecture/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/content_strategy_portfolio_and_editorial_architecture/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-95",
+        "primary": {
+          "path": "results/content_calendar_scheduling_and_distribution_planning/content_calendar_scheduling_and_distribution_planning_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/content_calendar_scheduling_and_distribution_planning/content_calendar_scheduling_and_distribution_planning_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/content_calendar_scheduling_and_distribution_planning/content_calendar_scheduling_and_distribution_planning_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-99",
+        "primary": {
+          "path": "results/campaign_creative_concept_and_activation_planning/campaign_creative_concept_and_activation_planning_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/campaign_creative_concept_and_activation_planning/campaign_creative_concept_and_activation_planning_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/campaign_creative_concept_and_activation_planning/campaign_creative_concept_and_activation_planning_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-114",
+        "primary": {
+          "path": "reports/marketing_audience_and_go_to_market_strategy/marketing_audience_and_go_to_market_strategy_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/marketing_audience_and_go_to_market_strategy/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/marketing_audience_and_go_to_market_strategy/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/marketing_audience_and_go_to_market_strategy/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-115",
+        "primary": {
+          "path": "results/sales_enablement_customer_communication_and_lifecycle_content/sales_enablement_customer_communication_and_lifecycle_content_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/sales_enablement_customer_communication_and_lifecycle_content/sales_enablement_customer_communication_and_lifecycle_content_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/sales_enablement_customer_communication_and_lifecycle_content/sales_enablement_customer_communication_and_lifecycle_content_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-123",
+        "primary": {
+          "path": "results/social_media_short_form_and_community_content_production/social_media_short_form_and_community_content_production_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/social_media_short_form_and_community_content_production/social_media_short_form_and_community_content_production_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/social_media_short_form_and_community_content_production/social_media_short_form_and_community_content_production_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-130",
+        "primary": {
+          "path": "results/search_discoverability_seo_aeo_and_information_architecture/search_discoverability_seo_aeo_and_information_architecture_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/search_discoverability_seo_aeo_and_information_architecture/search_discoverability_seo_aeo_and_information_architecture_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/search_discoverability_seo_aeo_and_information_architecture/search_discoverability_seo_aeo_and_information_architecture_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

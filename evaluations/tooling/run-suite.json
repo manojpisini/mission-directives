@@ -1,0 +1,13 @@
+{
+  "fixture_type": "cross_platform_script_parity",
+  "tool_id": "run-suite",
+  "bash": "tools/run-suite.sh",
+  "powershell": "tools/run-suite.ps1",
+  "expected": [
+    "argument_parity",
+    "exit_code_parity",
+    "receipt_parity",
+    "logging_parity",
+    "verification_parity"
+  ]
+}

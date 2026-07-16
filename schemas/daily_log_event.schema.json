@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MD Daily TOML Log Event",
+  "type": "object",
+  "required": [
+    "event_id",
+    "timestamp_utc",
+    "timestamp_local",
+    "date_local",
+    "category",
+    "action",
+    "status",
+    "duration_ms",
+    "tool",
+    "run_id",
+    "span_id",
+    "parent_span_id",
+    "platform",
+    "process_id"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "timestamp_local": {
+      "type": "string"
+    },
+    "date_local": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "started",
+        "progress",
+        "pass",
+        "fail",
+        "blocked",
+        "cancelled",
+        "info"
+      ]
+    },
+    "duration_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tool": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "prompt_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scenario_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "context": {
+      "type": "object"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "span_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent_span_id": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string",
+      "minLength": 1
+    },
+    "process_id": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "additionalProperties": true
+}

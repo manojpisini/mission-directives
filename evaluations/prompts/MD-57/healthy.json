@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-57",
+  "capability_id": "md.security.cloud-container-and-infrastructure-security-investigation-and-plan",
+  "evidence_lane": "factual",
+  "risk_level": "high",
+  "expected_output": "reports/cloud_container_and_infrastructure_security_investigation_and_plan/cloud_container_and_infrastructure_security_investigation_and_plan_investigation.md",
+  "fixture_id": "MD-57-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

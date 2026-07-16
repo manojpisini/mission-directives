@@ -1,0 +1,25 @@
+{
+  "skill_id": "example-skill",
+  "capability_gap": "example",
+  "triggers": [
+    "example"
+  ],
+  "non_triggers": [
+    "example"
+  ],
+  "inputs": [
+    "example"
+  ],
+  "outputs": [
+    "example"
+  ],
+  "permissions": {},
+  "quality_flags": {},
+  "fixtures": {
+    "healthy": {},
+    "problematic": {},
+    "adversarial": {}
+  },
+  "fallback": "example",
+  "maintenance_owner": "example"
+}

@@ -1,0 +1,14 @@
+{
+  "rule": "Action risk is calculated separately from prompt risk.",
+  "factors": [
+    "environment",
+    "privilege",
+    "blast_radius",
+    "data_sensitivity",
+    "external_effects",
+    "reversibility",
+    "operational_criticality",
+    "evidence_confidence",
+    "approval_strength"
+  ]
+}

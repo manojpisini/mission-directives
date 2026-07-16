@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/run_manifest.schema.json",
+  "title": "MD Run Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "suite_version",
+    "run_id",
+    "created_at",
+    "target",
+    "mode",
+    "state",
+    "selected_prompts",
+    "paired_workflows",
+    "artifacts",
+    "residuals"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "suite_version": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "AUDIT_ONLY",
+        "PLAN_ONLY",
+        "DRAFT_ONLY",
+        "APPLY_SAFE",
+        "APPLY_APPROVED",
+        "VERIFY_ONLY"
+      ]
+    },
+    "project_root": {
+      "type": "string"
+    },
+    "assurance_profile": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "selected_prompts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "paired_workflows": {
+      "type": "array",
+      "items": {
+        "$ref": "paired_workflow.schema.json"
+      }
+    },
+    "authorized_execution_prompt_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "route_explanation": {
+      "type": "object"
+    },
+    "scenario_phases": {
+      "type": "array"
+    },
+    "action_risk": {
+      "type": "object"
+    },
+    "budgets": {
+      "type": "object"
+    },
+    "approvals": {
+      "type": "array"
+    },
+    "evidence_snapshots": {
+      "type": "array"
+    },
+    "artifacts": {
+      "type": "array"
+    },
+    "residuals": {
+      "type": "array"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "dry_run": {
+      "type": "boolean"
+    },
+    "simulated_transitions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "state_events": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": true
+}

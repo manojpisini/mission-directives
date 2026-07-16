@@ -1,0 +1,161 @@
+{
+  "skill_id": "strudel",
+  "lock_required": false,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-85",
+      "MD-86",
+      "MD-91",
+      "MD-127",
+      "MD-196",
+      "MD-197"
+    ],
+    "expected_media": [
+      "strudel_code",
+      "markdown",
+      "audio_plan",
+      "arrangement_spec"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-85",
+        "primary": {
+          "path": "reports/script_video_podcast_and_storyboard_research_and_production_brief/script_video_podcast_and_storyboard_research_and_production_brief_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/script_video_podcast_and_storyboard_research_and_production_brief/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/script_video_podcast_and_storyboard_research_and_production_brief/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/script_video_podcast_and_storyboard_research_and_production_brief/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-86",
+        "primary": {
+          "path": "results/script_video_podcast_and_storyboard_writing_and_production_package/script_video_podcast_and_storyboard_writing_and_production_package_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/script_video_podcast_and_storyboard_writing_and_production_package_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/script_video_podcast_and_storyboard_writing_and_production_package/script_video_podcast_and_storyboard_writing_and_production_package_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/script_video_podcast_and_storyboard_writing_and_production_package/script_video_podcast_and_storyboard_writing_and_production_package_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/script_video_podcast_and_storyboard_writing_and_production_package/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-91",
+        "primary": {
+          "path": "results/poetry_prose_and_literary_composition/poetry_prose_and_literary_composition_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/poetry_prose_and_literary_composition/poetry_prose_and_literary_composition_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/poetry_prose_and_literary_composition/poetry_prose_and_literary_composition_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-127",
+        "primary": {
+          "path": "results/media_production_editing_and_distribution_blueprint/media_production_editing_and_distribution_blueprint_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/media_production_editing_and_distribution_blueprint/media_production_editing_and_distribution_blueprint_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/media_production_editing_and_distribution_blueprint/media_production_editing_and_distribution_blueprint_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-196",
+        "primary": {
+          "path": "results/generic_conditional_skill_execution_adapter/generic_conditional_skill_execution_adapter_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/generic_conditional_skill_execution_adapter_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/generic_conditional_skill_execution_adapter/generic_conditional_skill_execution_adapter_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/generic_conditional_skill_execution_adapter/generic_conditional_skill_execution_adapter_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-197",
+        "primary": {
+          "path": "results/bounded_prompt_and_skill_loop_orchestrator/bounded_prompt_and_skill_loop_orchestrator_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/bounded_prompt_and_skill_loop_orchestrator_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/bounded_prompt_and_skill_loop_orchestrator/bounded_prompt_and_skill_loop_orchestrator_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/bounded_prompt_and_skill_loop_orchestrator/bounded_prompt_and_skill_loop_orchestrator_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      }
+    ],
+    "must_quarantine_raw_output": true
+  },
+  "verification": [
+    "installed SKILL.md inspection",
+    "runtime schema and permission probe",
+    "artifact-shape validation",
+    "untrusted-output quarantine",
+    "task-specific independent verification"
+  ],
+  "live_status": "not_run"
+}

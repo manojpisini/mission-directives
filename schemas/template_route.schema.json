@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MD Template Route",
+  "type": "object",
+  "required": [
+    "prompt_id",
+    "template_routes",
+    "resolution_status"
+  ],
+  "properties": {
+    "prompt_id": {
+      "type": "string"
+    },
+    "template_routes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "resolution_status": {
+      "enum": [
+        "resolved",
+        "blocked",
+        "not_applicable"
+      ]
+    },
+    "not_applicable_reasons": {
+      "type": "object"
+    },
+    "resolved_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

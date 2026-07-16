@@ -1,0 +1,1492 @@
+{
+  "categories": {
+    "core": {
+      "prompt_ids": [
+        "MD-00",
+        "MD-01",
+        "MD-02",
+        "MD-03",
+        "MD-04"
+      ],
+      "roles": [
+        "control"
+      ],
+      "evidence_lanes": [],
+      "media": [
+        "markdown"
+      ]
+    },
+    "strategy": {
+      "prompt_ids": [
+        "MD-05",
+        "MD-06",
+        "MD-07",
+        "MD-08",
+        "MD-137",
+        "MD-176"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "engineering": {
+      "prompt_ids": [
+        "MD-09",
+        "MD-10",
+        "MD-16",
+        "MD-27",
+        "MD-28",
+        "MD-33",
+        "MD-34",
+        "MD-45",
+        "MD-46",
+        "MD-49",
+        "MD-50",
+        "MD-124"
+      ],
+      "roles": [
+        "executive",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "security": {
+      "prompt_ids": [
+        "MD-11",
+        "MD-12",
+        "MD-13",
+        "MD-37",
+        "MD-38",
+        "MD-39",
+        "MD-40",
+        "MD-41",
+        "MD-42",
+        "MD-43",
+        "MD-44",
+        "MD-57",
+        "MD-58"
+      ],
+      "roles": [
+        "executive",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "model_security": {
+      "prompt_ids": [
+        "MD-14",
+        "MD-67",
+        "MD-68",
+        "MD-69",
+        "MD-70"
+      ],
+      "roles": [
+        "executive",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "operations": {
+      "prompt_ids": [
+        "MD-15",
+        "MD-23",
+        "MD-51",
+        "MD-52",
+        "MD-55",
+        "MD-56",
+        "MD-149"
+      ],
+      "roles": [
+        "executive",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "enablement": {
+      "prompt_ids": [
+        "MD-17",
+        "MD-21",
+        "MD-75",
+        "MD-76"
+      ],
+      "roles": [
+        "executive",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "docx",
+        "html",
+        "json",
+        "manpage",
+        "markdown",
+        "pdf"
+      ]
+    },
+    "governance": {
+      "prompt_ids": [
+        "MD-18",
+        "MD-19",
+        "MD-20",
+        "MD-22",
+        "MD-59",
+        "MD-60",
+        "MD-163"
+      ],
+      "roles": [
+        "executive",
+        "gate",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "agentic": {
+      "prompt_ids": [
+        "MD-24",
+        "MD-61",
+        "MD-62",
+        "MD-63",
+        "MD-64",
+        "MD-65",
+        "MD-66"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "coherence": {
+      "prompt_ids": [
+        "MD-25",
+        "MD-26"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "debugging": {
+      "prompt_ids": [
+        "MD-29",
+        "MD-30"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "cleanup": {
+      "prompt_ids": [
+        "MD-31",
+        "MD-32"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "testing": {
+      "prompt_ids": [
+        "MD-35",
+        "MD-36"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "data": {
+      "prompt_ids": [
+        "MD-47",
+        "MD-48"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "delivery": {
+      "prompt_ids": [
+        "MD-53",
+        "MD-54"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "design": {
+      "prompt_ids": [
+        "MD-71",
+        "MD-72",
+        "MD-73",
+        "MD-74"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "markdown"
+      ]
+    },
+    "prompt_system": {
+      "prompt_ids": [
+        "MD-77",
+        "MD-78",
+        "MD-199"
+      ],
+      "roles": [
+        "executive",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "research": {
+      "prompt_ids": [
+        "MD-79",
+        "MD-80",
+        "MD-82",
+        "MD-119"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "codebook",
+        "interview_guide",
+        "json",
+        "markdown",
+        "survey_spec"
+      ]
+    },
+    "analytics": {
+      "prompt_ids": [
+        "MD-81",
+        "MD-116",
+        "MD-125"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "chart_spec",
+        "csv",
+        "json",
+        "markdown",
+        "xlsx_spec"
+      ]
+    },
+    "editorial": {
+      "prompt_ids": [
+        "MD-83",
+        "MD-84",
+        "MD-92"
+      ],
+      "roles": [
+        "executive",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "html",
+        "markdown",
+        "publication_metadata",
+        "redline_spec"
+      ]
+    },
+    "creative_production": {
+      "prompt_ids": [
+        "MD-85",
+        "MD-86"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "markdown",
+        "production_metadata",
+        "shot_list",
+        "storyboard_spec"
+      ]
+    },
+    "academic": {
+      "prompt_ids": [
+        "MD-87",
+        "MD-88",
+        "MD-129"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "bibliography",
+        "docx_spec",
+        "json",
+        "latex",
+        "markdown",
+        "table_figure_spec"
+      ]
+    },
+    "creative_writing": {
+      "prompt_ids": [
+        "MD-89",
+        "MD-90",
+        "MD-91"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "imaginative"
+      ],
+      "media": [
+        "manuscript",
+        "markdown",
+        "story_bible"
+      ]
+    },
+    "content_strategy": {
+      "prompt_ids": [
+        "MD-93"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "knowledge_design": {
+      "prompt_ids": [
+        "MD-94"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "graph_spec",
+        "json",
+        "markdown"
+      ]
+    },
+    "content_operations": {
+      "prompt_ids": [
+        "MD-95",
+        "MD-123",
+        "MD-128"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "calendar_spec",
+        "carousel_spec",
+        "community_plan",
+        "csv",
+        "json",
+        "markdown",
+        "short_video_spec",
+        "social_package"
+      ]
+    },
+    "creative_strategy": {
+      "prompt_ids": [
+        "MD-96"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "markdown",
+        "moodboard_spec"
+      ]
+    },
+    "brand": {
+      "prompt_ids": [
+        "MD-97",
+        "MD-98"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "asset_spec",
+        "html",
+        "json",
+        "markdown",
+        "svg"
+      ]
+    },
+    "marketing_creative": {
+      "prompt_ids": [
+        "MD-99"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "asset_matrix",
+        "campaign_spec",
+        "markdown"
+      ]
+    },
+    "business": {
+      "prompt_ids": [
+        "MD-100",
+        "MD-120"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "budget_spec",
+        "deck_spec",
+        "financial_summary",
+        "markdown",
+        "proposal_package",
+        "submission_checklist"
+      ]
+    },
+    "visual_communication": {
+      "prompt_ids": [
+        "MD-101",
+        "MD-102",
+        "MD-105",
+        "MD-106"
+      ],
+      "roles": [
+        "executive",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "css",
+        "diagram_spec",
+        "excalidraw_spec",
+        "html",
+        "javascript",
+        "markdown",
+        "png_spec",
+        "presentation_export",
+        "slide_blueprint",
+        "svg"
+      ]
+    },
+    "data_visualization": {
+      "prompt_ids": [
+        "MD-103",
+        "MD-104"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "css",
+        "dashboard_spec",
+        "html",
+        "javascript",
+        "png_spec",
+        "print_spec",
+        "svg"
+      ]
+    },
+    "web_design": {
+      "prompt_ids": [
+        "MD-107",
+        "MD-108"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "css",
+        "design_spec",
+        "html",
+        "javascript",
+        "svg"
+      ]
+    },
+    "visual_quality": {
+      "prompt_ids": [
+        "MD-109"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "events": {
+      "prompt_ids": [
+        "MD-110"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "calendar_spec",
+        "csv",
+        "markdown",
+        "run_of_show"
+      ]
+    },
+    "planning": {
+      "prompt_ids": [
+        "MD-111"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "gantt_spec",
+        "json",
+        "markdown"
+      ]
+    },
+    "facilitation": {
+      "prompt_ids": [
+        "MD-112"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "agenda",
+        "markdown",
+        "whiteboard_spec"
+      ]
+    },
+    "professional_writing": {
+      "prompt_ids": [
+        "MD-113"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "docx_spec",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "marketing": {
+      "prompt_ids": [
+        "MD-114",
+        "MD-130"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "sales_enablement": {
+      "prompt_ids": [
+        "MD-115"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "deck_spec",
+        "email_spec",
+        "markdown",
+        "playbook"
+      ]
+    },
+    "learning_design": {
+      "prompt_ids": [
+        "MD-117",
+        "MD-118"
+      ],
+      "roles": [
+        "executive",
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "assessment_spec",
+        "curriculum_spec",
+        "learning_asset_spec",
+        "lesson_plan",
+        "markdown",
+        "slides_spec"
+      ]
+    },
+    "professional_communication": {
+      "prompt_ids": [
+        "MD-121",
+        "MD-122"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "application_package",
+        "email_spec",
+        "markdown",
+        "message_package",
+        "portfolio_spec",
+        "resume_spec",
+        "speech_spec"
+      ]
+    },
+    "localization": {
+      "prompt_ids": [
+        "MD-126"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "locale_package",
+        "markdown",
+        "terminology_glossary",
+        "translation_memory"
+      ]
+    },
+    "media_production": {
+      "prompt_ids": [
+        "MD-127"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "caption_spec",
+        "distribution_package",
+        "edit_decision_list",
+        "json",
+        "markdown"
+      ]
+    },
+    "procurement": {
+      "prompt_ids": [
+        "MD-131"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "people": {
+      "prompt_ids": [
+        "MD-132",
+        "MD-133",
+        "MD-134",
+        "MD-181"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "customer_operations": {
+      "prompt_ids": [
+        "MD-135",
+        "MD-136"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "personal_productivity": {
+      "prompt_ids": [
+        "MD-138"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "osint": {
+      "prompt_ids": [
+        "MD-139",
+        "MD-140",
+        "MD-141"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown",
+        "network_spec",
+        "source_ledger",
+        "timeline_spec"
+      ]
+    },
+    "intelligence": {
+      "prompt_ids": [
+        "MD-142",
+        "MD-155"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown",
+        "network_spec",
+        "source_ledger",
+        "timeline_spec"
+      ]
+    },
+    "legal": {
+      "prompt_ids": [
+        "MD-143",
+        "MD-144"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "finance": {
+      "prompt_ids": [
+        "MD-145",
+        "MD-146",
+        "MD-147"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "chart_spec",
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec",
+        "xlsx_spec"
+      ]
+    },
+    "audit": {
+      "prompt_ids": [
+        "MD-148"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "supply_chain": {
+      "prompt_ids": [
+        "MD-150"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "product": {
+      "prompt_ids": [
+        "MD-151",
+        "MD-152"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "automation": {
+      "prompt_ids": [
+        "MD-153"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "data_governance": {
+      "prompt_ids": [
+        "MD-154"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "communications": {
+      "prompt_ids": [
+        "MD-156",
+        "MD-157"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "partnerships": {
+      "prompt_ids": [
+        "MD-158"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "reporting": {
+      "prompt_ids": [
+        "MD-159",
+        "MD-160",
+        "MD-169",
+        "MD-170"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "public_affairs": {
+      "prompt_ids": [
+        "MD-161"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "sustainability": {
+      "prompt_ids": [
+        "MD-162"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "accessibility": {
+      "prompt_ids": [
+        "MD-164"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "prompt_engineering": {
+      "prompt_ids": [
+        "MD-165",
+        "MD-166",
+        "MD-167",
+        "MD-168"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "evaluation_fixture",
+        "json",
+        "markdown",
+        "prompt_spec"
+      ]
+    },
+    "change_management": {
+      "prompt_ids": [
+        "MD-171",
+        "MD-172"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "organization": {
+      "prompt_ids": [
+        "MD-173",
+        "MD-179"
+      ],
+      "roles": [
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "docx_spec",
+        "json",
+        "markdown",
+        "pdf_spec"
+      ]
+    },
+    "quality": {
+      "prompt_ids": [
+        "MD-174"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "resilience": {
+      "prompt_ids": [
+        "MD-175"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "innovation": {
+      "prompt_ids": [
+        "MD-177"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "llm_operations": {
+      "prompt_ids": [
+        "MD-178"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "fixture_pack",
+        "json",
+        "markdown",
+        "prompt_pack"
+      ]
+    },
+    "knowledge_management": {
+      "prompt_ids": [
+        "MD-180"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "cyber_intelligence": {
+      "prompt_ids": [
+        "MD-182"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown",
+        "network_spec",
+        "source_ledger",
+        "timeline_spec"
+      ]
+    },
+    "risk": {
+      "prompt_ids": [
+        "MD-183"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "sales_operations": {
+      "prompt_ids": [
+        "MD-184"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "chart_spec",
+        "json",
+        "markdown",
+        "xlsx_spec"
+      ]
+    },
+    "revenue_operations": {
+      "prompt_ids": [
+        "MD-185"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "chart_spec",
+        "json",
+        "markdown",
+        "xlsx_spec"
+      ]
+    },
+    "administration": {
+      "prompt_ids": [
+        "MD-186"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "model_evaluation": {
+      "prompt_ids": [
+        "MD-187"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "chart_spec",
+        "json",
+        "markdown",
+        "xlsx_spec"
+      ]
+    },
+    "llm_engineering": {
+      "prompt_ids": [
+        "MD-188",
+        "MD-189"
+      ],
+      "roles": [
+        "investigative"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "architecture_spec",
+        "evaluation_plan",
+        "json",
+        "markdown"
+      ]
+    },
+    "ai_governance": {
+      "prompt_ids": [
+        "MD-190"
+      ],
+      "roles": [
+        "gate"
+      ],
+      "evidence_lanes": [
+        "factual"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "auto_orchestration": {
+      "prompt_ids": [
+        "MD-191",
+        "MD-192",
+        "MD-193",
+        "MD-194",
+        "MD-195",
+        "MD-196",
+        "MD-197",
+        "MD-198"
+      ],
+      "roles": [
+        "gate",
+        "investigative",
+        "operational"
+      ],
+      "evidence_lanes": [
+        "factual",
+        "hybrid"
+      ],
+      "media": [
+        "conformance_fixture",
+        "installation_receipt",
+        "intent_brief",
+        "iteration_log",
+        "json",
+        "loop_exit_decision",
+        "loop_plan",
+        "markdown",
+        "skill_candidate_matrix",
+        "skill_execution_receipt",
+        "skill_package",
+        "skill_requirement_spec"
+      ]
+    }
+  }
+}

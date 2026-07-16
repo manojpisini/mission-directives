@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-68",
+  "capability_id": "md.model_security.model-and-ai-system-security-authorized-execution-and-verification",
+  "evidence_lane": "factual",
+  "risk_level": "critical",
+  "expected_output": "results/model_and_ai_system_security_authorized_execution_and_verification/model_and_ai_system_security_authorized_execution_and_verification_final_result.md",
+  "fixture_id": "MD-68-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

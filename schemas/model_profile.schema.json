@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "model_profile.schema.json",
+  "type": "object",
+  "required": [
+    "model_id",
+    "measurement_status",
+    "production_eligible"
+  ],
+  "properties": {
+    "model_id": {
+      "type": "string"
+    },
+    "measurement_status": {
+      "type": "string"
+    },
+    "production_eligible": {
+      "type": "boolean"
+    },
+    "structured_output_reliability": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "refusal_correctness": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "fabrication_rate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "latency_ms_p50": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    }
+  }
+}

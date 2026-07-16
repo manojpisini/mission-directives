@@ -1,0 +1,15 @@
+{
+  "snapshot_id": "example",
+  "findings": [
+    {
+      "finding_id": "FINDING-001",
+      "title": "example",
+      "status": "open",
+      "severity": "informational",
+      "confidence": "low",
+      "evidence_ids": [
+        "example"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-139",
+  "capability_id": "md.osint.osint-research-planning-authorization-and-collection-governance",
+  "evidence_lane": "factual",
+  "risk_level": "high",
+  "expected_output": "results/osint_research_planning_authorization_and_collection_governance/osint_research_planning_authorization_and_collection_governance_result.md",
+  "fixture_id": "MD-139-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

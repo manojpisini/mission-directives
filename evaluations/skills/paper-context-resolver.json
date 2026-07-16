@@ -1,0 +1,97 @@
+{
+  "skill_id": "paper-context-resolver",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-87",
+      "MD-88",
+      "MD-129"
+    ],
+    "expected_media": [
+      "bibliography",
+      "docx_spec",
+      "json",
+      "latex",
+      "markdown",
+      "table_figure_spec"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-87",
+        "primary": {
+          "path": "reports/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan_brief.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/evidence_index.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/decision_or_creative_brief.json",
+            "format": "json"
+          },
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/acceptance_criteria.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-88",
+        "primary": {
+          "path": "results/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_package.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": ".prompt_suite/runs/{run_id}/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_dry_run.json",
+            "format": "json"
+          },
+          {
+            "path": "logs/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package_quality_review.md",
+            "format": "markdown"
+          },
+          {
+            "path": "artifacts/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/residual_register.json",
+            "format": "json"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-129",
+        "primary": {
+          "path": "results/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

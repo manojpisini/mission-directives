@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/not_applicable_record.schema.json",
+  "title": "Not Applicable Record",
+  "type": "object",
+  "required": [
+    "area",
+    "evidence",
+    "rationale",
+    "owner",
+    "review_trigger"
+  ],
+  "properties": {
+    "area": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "review_trigger": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

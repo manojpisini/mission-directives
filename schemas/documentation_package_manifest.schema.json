@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Documentation Package Manifest",
+  "type": "object",
+  "required": [
+    "package_id",
+    "audiences",
+    "documents",
+    "link_graph",
+    "template_conformance",
+    "verification"
+  ],
+  "properties": {
+    "package_id": {
+      "type": "string"
+    },
+    "audiences": {
+      "type": "array"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "template_id",
+          "owner",
+          "status",
+          "backlinks",
+          "forward_links"
+        ]
+      }
+    },
+    "link_graph": {
+      "type": "object"
+    },
+    "template_conformance": {
+      "type": "array"
+    },
+    "verification": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

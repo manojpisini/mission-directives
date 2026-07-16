@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Presentation Deck Manifest",
+  "type": "object",
+  "required": [
+    "deck_id",
+    "audience",
+    "decision",
+    "template_ids",
+    "slides",
+    "assets",
+    "evidence",
+    "exports"
+  ],
+  "properties": {
+    "deck_id": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string"
+    },
+    "template_ids": {
+      "type": "array"
+    },
+    "slides": {
+      "type": "array"
+    },
+    "assets": {
+      "type": "array"
+    },
+    "evidence": {
+      "type": "array"
+    },
+    "exports": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

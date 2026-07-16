@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-71",
+  "capability_id": "md.design.user-experience-accessibility-and-localization-investigation-and-plan",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "reports/user_experience_accessibility_and_localization_investigation_and_plan/user_experience_accessibility_and_localization_investigation_and_plan_investigation.md",
+  "fixture_id": "MD-71-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

@@ -1,0 +1,16 @@
+{
+  "suite_version": "1.8.3",
+  "installation_root": "<project>/prompts",
+  "managed_agent_files": ["AGENTS.md", "CLAUDE.md"],
+  "tracked_project_directories": ["docs"],
+  "ignored_project_directories": ["prompts", ".prompt_suite", "results", "reports", "logs", "artifacts", "outputs", ".md-prompts-staging-*", ".md-prompts-backup-*"],
+  "requirements": [
+    "Stage the complete distribution before promotion.",
+    "Fail closed when prompts already exists unless replacement is explicit.",
+    "Back up the prior prompts directory before replacement.",
+    "Preserve all unmanaged AGENTS.md and CLAUDE.md content.",
+    "Restore the prior suite and project files if post-promotion synchronization fails.",
+    "Keep docs tracked.",
+    "Write runtime receipts and logs only under ignored project paths."
+  ]
+}

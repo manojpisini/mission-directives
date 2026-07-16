@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Loop Iteration",
+  "type": "object",
+  "required": [
+    "iteration_id",
+    "target",
+    "inputs",
+    "actions",
+    "outputs",
+    "verification",
+    "decision"
+  ],
+  "properties": {
+    "iteration_id": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "actions": {
+      "type": "array"
+    },
+    "outputs": {
+      "type": "array"
+    },
+    "score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "delta": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "verification": {
+      "type": "array"
+    },
+    "decision": {
+      "type": "string"
+    }
+  }
+}

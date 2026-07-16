@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/action_plan.schema.json",
+  "title": "Action Plan",
+  "type": "object",
+  "required": [
+    "snapshot_id",
+    "actions"
+  ],
+  "properties": {
+    "snapshot_id": {
+      "type": "string"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "action_id",
+          "finding_ids",
+          "description",
+          "dependencies",
+          "change_surface",
+          "risk",
+          "verification_ids"
+        ],
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "pattern": "^ACTION-"
+          },
+          "finding_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "change_surface": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "risk": {
+            "type": "object"
+          },
+          "authorization_required": {
+            "type": "boolean"
+          },
+          "rollback": {
+            "type": "object"
+          },
+          "verification_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "owner": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

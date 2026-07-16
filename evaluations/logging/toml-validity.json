@@ -1,0 +1,5 @@
+{
+  "fixture_type": "logging",
+  "case": "quotes_newlines_unicode",
+  "expected": "parseable TOML"
+}

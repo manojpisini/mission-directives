@@ -1,0 +1,14 @@
+{
+  "requires": [
+    "lawful public-source scope",
+    "privacy minimization",
+    "source provenance",
+    "identity confidence"
+  ],
+  "prohibits": [
+    "deception",
+    "credential theft",
+    "private access",
+    "doxxing"
+  ]
+}

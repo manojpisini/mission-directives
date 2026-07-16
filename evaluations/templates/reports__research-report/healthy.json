@@ -1,0 +1,17 @@
+{
+  "fixture_type": "template_conformance",
+  "template_id": "reports/research-report",
+  "tier": "healthy",
+  "input": {
+    "artifact": "example.md",
+    "declared_template": "reports/research-report"
+  },
+  "expected": {
+    "status": "pass",
+    "must_detect": []
+  },
+  "prohibited": [
+    "silent_template_substitution",
+    "false_completion"
+  ]
+}

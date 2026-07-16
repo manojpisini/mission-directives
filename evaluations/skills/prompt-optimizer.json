@@ -1,0 +1,64 @@
+{
+  "skill_id": "prompt-optimizer",
+  "lock_required": true,
+  "expected_contract": {
+    "must_preserve_prompt_contract": true,
+    "accepted_routes": [
+      "MD-166",
+      "MD-168"
+    ],
+    "expected_media": [
+      "evaluation_fixture",
+      "json",
+      "markdown",
+      "prompt_spec"
+    ],
+    "must_not_publish_or_mutate_without_authority": true,
+    "expected_artifacts": [
+      {
+        "prompt_id": "MD-166",
+        "primary": {
+          "path": "results/prompt_optimization_and_enhancement/prompt_optimization_and_enhancement_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/prompt_optimization_and_enhancement/prompt_optimization_and_enhancement_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/prompt_optimization_and_enhancement/prompt_optimization_and_enhancement_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      },
+      {
+        "prompt_id": "MD-168",
+        "primary": {
+          "path": "results/prompt_repair_refactoring_and_failure_resolution/prompt_repair_refactoring_and_failure_resolution_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting": [
+          {
+            "path": "logs/prompt_repair_refactoring_and_failure_resolution/prompt_repair_refactoring_and_failure_resolution_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/prompt_repair_refactoring_and_failure_resolution/prompt_repair_refactoring_and_failure_resolution_quality_review.md",
+            "format": "markdown"
+          }
+        ]
+      }
+    ]
+  },
+  "verification": [
+    "resolved lock entry",
+    "schema or artifact-shape validation",
+    "untrusted-output quarantine",
+    "security and permission review",
+    "human or routed verification for consequential output"
+  ],
+  "live_status": "not_run"
+}

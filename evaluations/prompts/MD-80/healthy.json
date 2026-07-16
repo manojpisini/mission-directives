@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-80",
+  "capability_id": "md.research.research-protocol-literature-search-and-source-strategy",
+  "evidence_lane": "factual",
+  "risk_level": "low",
+  "expected_output": "reports/research_protocol_literature_search_and_source_strategy/research_protocol_literature_search_and_source_strategy_brief.md",
+  "fixture_id": "MD-80-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

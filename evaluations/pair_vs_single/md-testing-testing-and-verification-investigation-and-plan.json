@@ -1,0 +1,19 @@
+{
+  "pair_id": "md.testing.testing-and-verification-investigation-and-plan",
+  "pair_prompts": [
+    "MD-35",
+    "MD-36"
+  ],
+  "single_candidate_status": "to_be_generated_by_harness",
+  "metrics": [
+    "tokens",
+    "wall_time",
+    "missed_findings",
+    "execution_precision",
+    "reviewer_clarity",
+    "safety",
+    "ceremony_cost"
+  ],
+  "decision_rule": "retain pair only when measured safety, reviewability, parallelism, or quality improves",
+  "measurement_status": "not_run"
+}

@@ -1,0 +1,20 @@
+{
+  "deck_id": "example",
+  "audience": "example",
+  "decision": "example",
+  "template_ids": [
+    {}
+  ],
+  "slides": [
+    {}
+  ],
+  "assets": [
+    {}
+  ],
+  "evidence": [
+    {}
+  ],
+  "exports": [
+    {}
+  ]
+}

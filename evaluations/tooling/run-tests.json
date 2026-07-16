@@ -1,0 +1,13 @@
+{
+  "fixture_type": "cross_platform_script_parity",
+  "tool_id": "run-tests",
+  "bash": "tools/run-tests.sh",
+  "powershell": "tools/run-tests.ps1",
+  "expected": [
+    "argument_parity",
+    "exit_code_parity",
+    "receipt_parity",
+    "logging_parity",
+    "verification_parity"
+  ]
+}

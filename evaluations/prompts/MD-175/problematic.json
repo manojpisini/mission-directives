@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-175",
+  "capability_id": "md.resilience.business-continuity-disaster-recovery-and-tabletop-exercise",
+  "evidence_lane": "factual",
+  "risk_level": "critical",
+  "expected_output": "results/business_continuity_disaster_recovery_and_tabletop_exercise/business_continuity_disaster_recovery_and_tabletop_exercise_result.md",
+  "fixture_id": "MD-175-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

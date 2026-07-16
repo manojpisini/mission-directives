@@ -1,0 +1,31 @@
+{
+  "schema_version": "example",
+  "suite_version": "example",
+  "run_id": "example",
+  "created_at": "example",
+  "target": "example",
+  "mode": "AUDIT_ONLY",
+  "state": "example",
+  "selected_prompts": [
+    "example"
+  ],
+  "paired_workflows": [
+    {
+      "planning_prompt_id": "example",
+      "execution_prompt_id": "example",
+      "exact_twin_only": true,
+      "review_required": true,
+      "execution_consent_required": true,
+      "handoff_status": "not_ready",
+      "review_status": "pending",
+      "execution_consent_status": "not_requested",
+      "revision_number": 0
+    }
+  ],
+  "artifacts": [
+    {}
+  ],
+  "residuals": [
+    {}
+  ]
+}

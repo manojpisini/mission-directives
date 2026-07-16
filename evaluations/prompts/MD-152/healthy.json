@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-152",
+  "capability_id": "md.product.product-requirements-acceptance-and-release-package",
+  "evidence_lane": "factual",
+  "risk_level": "high",
+  "expected_output": "results/product_requirements_acceptance_and_release_package/product_requirements_acceptance_and_release_package_result.md",
+  "fixture_id": "MD-152-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

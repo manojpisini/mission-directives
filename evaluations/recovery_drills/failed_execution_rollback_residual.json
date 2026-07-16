@@ -1,0 +1,27 @@
+{
+  "drill_id": "rollback-residual-001",
+  "scenario": "C-13",
+  "initial_state": "configured",
+  "transitions": [
+    "investigating",
+    "evidence_ready",
+    "handoff_frozen",
+    "approval_pending",
+    "dry_run_ready",
+    "executing",
+    "failed",
+    "rolled_back",
+    "investigating",
+    "evidence_ready",
+    "verification_pending",
+    "residual_open",
+    "closed"
+  ],
+  "required_evidence": [
+    "failure record",
+    "rollback record",
+    "post-rollback verification",
+    "residual-risk acceptance"
+  ],
+  "expected": "legal transition sequence and no silent completion"
+}

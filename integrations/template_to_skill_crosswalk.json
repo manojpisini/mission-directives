@@ -1,0 +1,50 @@
+{
+  "suite_version": "1.8.3",
+  "mappings": [
+    {
+      "template_family": "documentation",
+      "preferred_skills": [
+        "research",
+        "edit-article",
+        "docx",
+        "pdf",
+        "visual-assets",
+        "stop-slop"
+      ]
+    },
+    {
+      "template_family": "presentation",
+      "preferred_skills": [
+        "frontend-slides",
+        "pptx",
+        "visual-assets",
+        "html-ppt",
+        "impeccable"
+      ]
+    },
+    {
+      "template_family": "report",
+      "preferred_skills": [
+        "research",
+        "edit-article",
+        "docx",
+        "pdf",
+        "xlsx",
+        "visual-assets"
+      ]
+    },
+    {
+      "template_family": "visual",
+      "preferred_skills": [
+        "visual-assets",
+        "canvas-design",
+        "html-svg-diagrams",
+        "excalidraw-diagram-generator"
+      ]
+    },
+    {
+      "template_family": "core",
+      "preferred_skills": []
+    }
+  ]
+}

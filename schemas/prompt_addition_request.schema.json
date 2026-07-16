@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "prompt_addition_request.schema.json",
+  "type": "object",
+  "required": [
+    "source",
+    "title",
+    "category",
+    "prompt_role",
+    "prompt_type",
+    "risk_level",
+    "allowed_modes",
+    "related_prompts",
+    "requires",
+    "preferred_skills",
+    "template_routes",
+    "conditional_template_routes",
+    "department_packs",
+    "dry_run"
+  ],
+  "properties": {
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 180
+    },
+    "category": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$",
+      "maxLength": 128
+    },
+    "prompt_role": {
+      "enum": [
+        "operational",
+        "investigative",
+        "executive",
+        "gate",
+        "control"
+      ]
+    },
+    "prompt_type": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$",
+      "maxLength": 128
+    },
+    "risk_level": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "allowed_modes": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "AUDIT_ONLY",
+          "PLAN_ONLY",
+          "DRAFT_ONLY",
+          "APPLY_SAFE",
+          "APPLY_APPROVED",
+          "VERIFY_ONLY"
+        ]
+      }
+    },
+    "related_prompts": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^MD-[0-9]+$"
+      },
+      "maxItems": 128
+    },
+    "requires": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^MD-[0-9]+$"
+      },
+      "maxItems": 128
+    },
+    "preferred_skills": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+      },
+      "maxItems": 128
+    },
+    "template_routes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._/-]{0,255}$"
+      },
+      "maxItems": 128
+    },
+    "conditional_template_routes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._/-]{0,255}$"
+      },
+      "maxItems": 128
+    },
+    "department_packs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+      },
+      "maxItems": 128
+    },
+    "dry_run": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

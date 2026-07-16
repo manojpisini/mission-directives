@@ -1,0 +1,13 @@
+{
+  "tool_id": "example",
+  "platform": "windows",
+  "command": [
+    "example"
+  ],
+  "started_at": "example",
+  "finished_at": "example",
+  "duration_ms": 0,
+  "exit_code": 0,
+  "status": "pass",
+  "log_file": "example"
+}

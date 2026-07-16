@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-89",
+  "capability_id": "md.creative_writing.fiction-world-character-and-narrative-design",
+  "evidence_lane": "imaginative",
+  "risk_level": "low",
+  "expected_output": "reports/fiction_world_character_and_narrative_design/fiction_world_character_and_narrative_design_brief.md",
+  "fixture_id": "MD-89-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

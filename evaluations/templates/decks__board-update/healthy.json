@@ -1,0 +1,17 @@
+{
+  "fixture_type": "template_conformance",
+  "template_id": "decks/board-update",
+  "tier": "healthy",
+  "input": {
+    "artifact": "example.md",
+    "declared_template": "decks/board-update"
+  },
+  "expected": {
+    "status": "pass",
+    "must_detect": []
+  },
+  "prohibited": [
+    "silent_template_substitution",
+    "false_completion"
+  ]
+}

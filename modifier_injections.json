@@ -1,0 +1,216 @@
+{
+  "modifiers": [
+    {
+      "id": "SENSITIVE_DATA",
+      "inject": [
+        "MD-20",
+        "MD-59"
+      ],
+      "reason": "governance and privacy"
+    },
+    {
+      "id": "PUBLIC_INTERFACE",
+      "inject": [
+        "MD-45",
+        "MD-17"
+      ],
+      "reason": "contract and communication integrity"
+    },
+    {
+      "id": "MODEL_OR_AGENT",
+      "inject": [
+        "MD-24",
+        "MD-63",
+        "MD-67",
+        "MD-69"
+      ],
+      "reason": "evaluation and AI security"
+    },
+    {
+      "id": "INTERNET_OR_UNTRUSTED_CONTENT",
+      "inject": [
+        "MD-69"
+      ],
+      "reason": "prompt injection and tool-output trust"
+    },
+    {
+      "id": "PRODUCTION_CHANGE",
+      "inject": [
+        "MD-51",
+        "MD-55",
+        "MD-18"
+      ],
+      "reason": "reliability, observability, and release gate"
+    },
+    {
+      "id": "SECURITY_FINDING",
+      "inject": [
+        "MD-11",
+        "MD-37"
+      ],
+      "reason": "threat context and validated remediation route"
+    },
+    {
+      "id": "LARGE_CLEANUP",
+      "inject": [
+        "MD-25",
+        "MD-31"
+      ],
+      "reason": "coherence and safe cleanup"
+    },
+    {
+      "id": "PUBLICATION_OR_PUBLIC_CLAIM",
+      "inject": [
+        "MD-82",
+        "MD-92"
+      ],
+      "reason": "fact, citation, and anti-slop review"
+    },
+    {
+      "id": "ACADEMIC_OR_SCHOLARLY",
+      "inject": [
+        "MD-80",
+        "MD-82",
+        "MD-87"
+      ],
+      "reason": "research protocol, integrity, and scholarly design"
+    },
+    {
+      "id": "DATA_VISUAL",
+      "inject": [
+        "MD-81",
+        "MD-109"
+      ],
+      "reason": "data integrity and visual quality"
+    },
+    {
+      "id": "BRANDED_VISUAL",
+      "inject": [
+        "MD-73",
+        "MD-109"
+      ],
+      "reason": "brand-system and visual QA"
+    },
+    {
+      "id": "INTERACTIVE_WEB_OUTPUT",
+      "inject": [
+        "MD-71",
+        "MD-109"
+      ],
+      "reason": "accessibility, responsiveness, and visual QA"
+    },
+    {
+      "id": "EXTERNAL_PUBLISH_OR_SEND",
+      "inject": [
+        "MD-17",
+        "MD-82"
+      ],
+      "reason": "communication authorization and claim verification"
+    },
+    {
+      "id": "EMPLOYMENT_DECISION",
+      "inject": [
+        "MD-133",
+        "MD-163"
+      ],
+      "reason": "human authority, fairness, privacy, and explainability"
+    },
+    {
+      "id": "OSINT_OR_INTELLIGENCE",
+      "inject": [
+        "MD-139",
+        "MD-142"
+      ],
+      "reason": "lawful collection, provenance, calibrated judgment, and harm minimization"
+    },
+    {
+      "id": "LEGAL_OR_REGULATORY",
+      "inject": [
+        "MD-143",
+        "MD-161"
+      ],
+      "reason": "jurisdiction, effective date, authority, and uncertainty"
+    },
+    {
+      "id": "FINANCIAL_COMMITMENT",
+      "inject": [
+        "MD-145",
+        "MD-148"
+      ],
+      "reason": "reconciliation, authorization, materiality, and control evidence"
+    },
+    {
+      "id": "PROMPT_PRODUCTION",
+      "inject": [
+        "MD-167"
+      ],
+      "reason": "fixture-based prompt quality and security evaluation"
+    },
+    {
+      "id": "LLM_DEPLOYMENT",
+      "inject": [
+        "MD-187",
+        "MD-190"
+      ],
+      "reason": "representative evaluation, governance, monitoring, and rollback"
+    },
+    {
+      "id": "EXECUTIVE_REPORT",
+      "inject": [
+        "MD-169",
+        "MD-82"
+      ],
+      "reason": "decision focus and reconciled evidence"
+    },
+    {
+      "id": "ROUTE_CHANGING_AMBIGUITY",
+      "inject": [
+        "MD-191"
+      ],
+      "reason": "clarify only intent that changes routing or acceptance"
+    },
+    {
+      "id": "SKILL_REQUEST_OR_CAPABILITY_GAP",
+      "inject": [
+        "MD-192"
+      ],
+      "reason": "prove genuine skill need before discovery or execution"
+    },
+    {
+      "id": "REQUIRED_SKILL_UNAVAILABLE",
+      "inject": [
+        "MD-193"
+      ],
+      "reason": "discover and qualify exact candidates before acquisition"
+    },
+    {
+      "id": "APPROVED_SKILL_ACQUISITION",
+      "inject": [
+        "MD-194"
+      ],
+      "reason": "install and verify one exact skill in global .agents and OpenCode locations"
+    },
+    {
+      "id": "NO_SUITABLE_SKILL_AND_REUSABLE_GAP",
+      "inject": [
+        "MD-195"
+      ],
+      "reason": "create a narrow tested skill only as a last resort"
+    },
+    {
+      "id": "TASK_FIT_INSTALLED_SKILL",
+      "inject": [
+        "MD-196"
+      ],
+      "reason": "execute any exact skill through a typed conditional adapter"
+    },
+    {
+      "id": "MEASURABLY_USEFUL_REPETITION",
+      "inject": [
+        "MD-197",
+        "MD-198"
+      ],
+      "reason": "bounded loop plus independent exit adjudication"
+    }
+  ]
+}

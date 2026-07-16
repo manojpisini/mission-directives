@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-125",
+  "capability_id": "md.analytics.experiment-a-b-test-and-causal-measurement-design",
+  "evidence_lane": "factual",
+  "risk_level": "medium",
+  "expected_output": "results/experiment_a_b_test_and_causal_measurement_design/experiment_a_b_test_and_causal_measurement_design_result.md",
+  "fixture_id": "MD-125-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

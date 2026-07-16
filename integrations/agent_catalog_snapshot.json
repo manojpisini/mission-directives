@@ -1,0 +1,3336 @@
+{
+  "source": "universal_agent_type_catalog(2).md",
+  "entry_count": 666,
+  "entries": [
+    {
+      "catalog_id": "AGENT-00-orchestrator-agent",
+      "domain": "00",
+      "name": "Orchestrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-planner-agent",
+      "domain": "00",
+      "name": "Planner Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-critic-evaluator-agent",
+      "domain": "00",
+      "name": "Critic / Evaluator Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-router-agent",
+      "domain": "00",
+      "name": "Router Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-memory-manager-agent",
+      "domain": "00",
+      "name": "Memory Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-tool-use-agent",
+      "domain": "00",
+      "name": "Tool-Use Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-guardrail-safety-agent",
+      "domain": "00",
+      "name": "Guardrail / Safety Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-meta-prompt-agent",
+      "domain": "00",
+      "name": "Meta-Prompt Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-supervisor-agent",
+      "domain": "00",
+      "name": "Supervisor Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-cost-latency-optimizer-agent",
+      "domain": "00",
+      "name": "Cost / Latency Optimizer Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-agent-organizer-agent",
+      "domain": "00",
+      "name": "Agent Organizer Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-agent-installer-agent",
+      "domain": "00",
+      "name": "Agent Installer Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-multi-agent-coordinator-agent",
+      "domain": "00",
+      "name": "Multi-Agent Coordinator Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-task-distributor-agent",
+      "domain": "00",
+      "name": "Task Distributor Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-team-task-executor-agent",
+      "domain": "00",
+      "name": "Team / Task Executor Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-context-manager-agent",
+      "domain": "00",
+      "name": "Context Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-error-coordinator-agent",
+      "domain": "00",
+      "name": "Error Coordinator Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-knowledge-synthesizer-agent",
+      "domain": "00",
+      "name": "Knowledge Synthesizer Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-verifier-agent",
+      "domain": "00",
+      "name": "Verifier Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-reviewer-agent-general",
+      "domain": "00",
+      "name": "Reviewer Agent (General)"
+    },
+    {
+      "catalog_id": "AGENT-00-first-principles-reasoning-agent",
+      "domain": "00",
+      "name": "First-Principles Reasoning Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-assumption-mapping-agent",
+      "domain": "00",
+      "name": "Assumption-Mapping Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-vision-multimodal-analysis-agent",
+      "domain": "00",
+      "name": "Vision / Multimodal Analysis Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-exploration-scout-agent",
+      "domain": "00",
+      "name": "Exploration / Scout Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-named-critic-ensemble-pattern",
+      "domain": "00",
+      "name": "Named Critic Ensemble Pattern"
+    },
+    {
+      "catalog_id": "AGENT-00-agent-creator-agent",
+      "domain": "00",
+      "name": "Agent Creator Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-agent-retirement-deprecation-agent",
+      "domain": "00",
+      "name": "Agent Retirement / Deprecation Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-prompt-creator-agent",
+      "domain": "00",
+      "name": "Prompt Creator Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-philosophy-creator-agent",
+      "domain": "00",
+      "name": "Philosophy Creator Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-domain-scaffolder-agent",
+      "domain": "00",
+      "name": "Domain Scaffolder Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-catalog-auditor-agent",
+      "domain": "00",
+      "name": "Catalog Auditor Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-agent-merger-splitter-agent",
+      "domain": "00",
+      "name": "Agent Merger/Splitter Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-cross-catalog-linker-agent",
+      "domain": "00",
+      "name": "Cross-Catalog Linker Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-naming-agent",
+      "domain": "00",
+      "name": "Naming Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-second-opinion-agent",
+      "domain": "00",
+      "name": "Second Opinion Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-time-capsule-agent",
+      "domain": "00",
+      "name": "Time Capsule Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-eulogy-writer-agent",
+      "domain": "00",
+      "name": "Eulogy Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-roast-agent",
+      "domain": "00",
+      "name": "Roast Agent"
+    },
+    {
+      "catalog_id": "AGENT-00-zen-monk-agent",
+      "domain": "00",
+      "name": "Zen Monk Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-backend-engineer-agent",
+      "domain": "01",
+      "name": "Backend Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-frontend-engineer-agent",
+      "domain": "01",
+      "name": "Frontend Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-full-stack-engineer-agent",
+      "domain": "01",
+      "name": "Full-Stack Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-code-reviewer-agent",
+      "domain": "01",
+      "name": "Code Reviewer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-refactoring-agent",
+      "domain": "01",
+      "name": "Refactoring Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-debugging-agent",
+      "domain": "01",
+      "name": "Debugging Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-test-engineer-agent",
+      "domain": "01",
+      "name": "Test Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-devops-sre-agent",
+      "domain": "01",
+      "name": "DevOps / SRE Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-software-architect-agent",
+      "domain": "01",
+      "name": "Software Architect Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-api-design-agent",
+      "domain": "01",
+      "name": "API Design Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-performance-engineer-agent",
+      "domain": "01",
+      "name": "Performance Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-migration-agent",
+      "domain": "01",
+      "name": "Migration Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-senior-code-reviewer-agent",
+      "domain": "01",
+      "name": "Senior Code Reviewer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-junior-code-reviewer-agent",
+      "domain": "01",
+      "name": "Junior Code Reviewer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-architecture-reviewer-agent",
+      "domain": "01",
+      "name": "Architecture Reviewer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-microservices-architect-agent",
+      "domain": "01",
+      "name": "Microservices Architect Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-graphql-architect-agent",
+      "domain": "01",
+      "name": "GraphQL Architect Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-cli-developer-agent",
+      "domain": "01",
+      "name": "CLI Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-websocket-real-time-engineer-agent",
+      "domain": "01",
+      "name": "WebSocket / Real-Time Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-license-compliance-engineer-agent",
+      "domain": "01",
+      "name": "License Compliance Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-dependency-management-agent",
+      "domain": "01",
+      "name": "Dependency Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-codebase-orchestrator-agent",
+      "domain": "01",
+      "name": "Codebase Orchestrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-legacy-modernization-agent",
+      "domain": "01",
+      "name": "Legacy Modernization Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-code-simplification-agent",
+      "domain": "01",
+      "name": "Code Simplification Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-codebase-mapping-agent",
+      "domain": "01",
+      "name": "Codebase Mapping Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-git-expert-agent",
+      "domain": "01",
+      "name": "Git Expert Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-git-workflow-manager-agent",
+      "domain": "01",
+      "name": "Git Workflow Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-qa-expert-agent",
+      "domain": "01",
+      "name": "QA Expert Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-test-automation-engineer-agent",
+      "domain": "01",
+      "name": "Test Automation Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-ui-ux-tester-agent",
+      "domain": "01",
+      "name": "UI/UX Tester Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-accessibility-tester-agent",
+      "domain": "01",
+      "name": "Accessibility Tester Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-ui-bug-fixer-agent",
+      "domain": "01",
+      "name": "UI Bug Fixer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-internal-tooling-engineer-agent",
+      "domain": "01",
+      "name": "Internal Tooling Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-general-incident-responder-agent",
+      "domain": "01",
+      "name": "General Incident Responder Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-gremlin-agent",
+      "domain": "01",
+      "name": "Gremlin Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-chesterton-s-fence-agent",
+      "domain": "01",
+      "name": "Chesterton's Fence Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-bus-factor-agent",
+      "domain": "01",
+      "name": "Bus Factor Agent"
+    },
+    {
+      "catalog_id": "AGENT-01-ship-of-theseus-agent",
+      "domain": "01",
+      "name": "Ship of Theseus Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-penetration-tester-agent",
+      "domain": "02",
+      "name": "Penetration Tester Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-red-team-agent",
+      "domain": "02",
+      "name": "Red Team Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-blue-team-defender-agent",
+      "domain": "02",
+      "name": "Blue Team / Defender Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-vulnerability-researcher-agent",
+      "domain": "02",
+      "name": "Vulnerability Researcher Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-malware-analyst-agent",
+      "domain": "02",
+      "name": "Malware Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-threat-intelligence-agent",
+      "domain": "02",
+      "name": "Threat Intelligence Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-security-auditor-agent",
+      "domain": "02",
+      "name": "Security Auditor Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-bug-bounty-agent",
+      "domain": "02",
+      "name": "Bug Bounty Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-incident-responder-agent",
+      "domain": "02",
+      "name": "Incident Responder Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-compliance-grc-agent",
+      "domain": "02",
+      "name": "Compliance / GRC Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-cryptography-review-agent",
+      "domain": "02",
+      "name": "Cryptography Review Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-security-awareness-assessment-agent",
+      "domain": "02",
+      "name": "Security Awareness Assessment Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-active-directory-security-reviewer-agent",
+      "domain": "02",
+      "name": "Active Directory Security Reviewer Agent"
+    },
+    {
+      "catalog_id": "AGENT-02-security-engineer-agent",
+      "domain": "02",
+      "name": "Security Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-data-engineer-agent",
+      "domain": "03",
+      "name": "Data Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-data-scientist-agent",
+      "domain": "03",
+      "name": "Data Scientist Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-ml-engineer-agent",
+      "domain": "03",
+      "name": "ML Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-mlops-agent",
+      "domain": "03",
+      "name": "MLOps Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-data-analyst-agent",
+      "domain": "03",
+      "name": "Data Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-bi-business-intelligence-agent",
+      "domain": "03",
+      "name": "BI (Business Intelligence) Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-prompt-engineer-agent",
+      "domain": "03",
+      "name": "Prompt Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-llm-evaluation-agent",
+      "domain": "03",
+      "name": "LLM Evaluation Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-ai-research-agent",
+      "domain": "03",
+      "name": "AI Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-data-annotation-labeling-agent",
+      "domain": "03",
+      "name": "Data Annotation / Labeling Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-ai-engineer-agent",
+      "domain": "03",
+      "name": "AI Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-llm-architect-agent",
+      "domain": "03",
+      "name": "LLM Architect Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-mcp-model-context-protocol-developer-agent",
+      "domain": "03",
+      "name": "MCP (Model Context Protocol) Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-reinforcement-learning-engineer-agent",
+      "domain": "03",
+      "name": "Reinforcement Learning Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-nlp-engineer-agent",
+      "domain": "03",
+      "name": "NLP Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-a-b-test-analysis-agent",
+      "domain": "03",
+      "name": "A/B Test Analysis Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-cohort-analysis-agent",
+      "domain": "03",
+      "name": "Cohort Analysis Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-data-cleaning-agent",
+      "domain": "03",
+      "name": "Data Cleaning Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-data-interpretation-agent",
+      "domain": "03",
+      "name": "Data Interpretation Agent"
+    },
+    {
+      "catalog_id": "AGENT-03-data-conversion-etl-agent",
+      "domain": "03",
+      "name": "Data Conversion / ETL Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-copywriter-agent",
+      "domain": "04",
+      "name": "Copywriter Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-technical-writer-agent",
+      "domain": "04",
+      "name": "Technical Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-editor-proofreader-agent",
+      "domain": "04",
+      "name": "Editor / Proofreader Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-ghostwriter-agent",
+      "domain": "04",
+      "name": "Ghostwriter Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-journalist-agent",
+      "domain": "04",
+      "name": "Journalist Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-scriptwriter-agent",
+      "domain": "04",
+      "name": "Scriptwriter Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-grant-writer-agent",
+      "domain": "04",
+      "name": "Grant Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-seo-writer-agent",
+      "domain": "04",
+      "name": "SEO Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-translator-localization-agent",
+      "domain": "04",
+      "name": "Translator / Localization Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-speechwriter-agent",
+      "domain": "04",
+      "name": "Speechwriter Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-api-documentation-agent",
+      "domain": "04",
+      "name": "API Documentation Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-readme-generator-agent",
+      "domain": "04",
+      "name": "README Generator Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-documentation-engineer-agent",
+      "domain": "04",
+      "name": "Documentation Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-docs-researcher-agent",
+      "domain": "04",
+      "name": "Docs Researcher Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-content-quality-editor-agent",
+      "domain": "04",
+      "name": "Content Quality Editor Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-general-purpose-writer-agent",
+      "domain": "04",
+      "name": "General-Purpose Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-newsletter-writer-agent",
+      "domain": "04",
+      "name": "Newsletter Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-04-rosetta-stone-agent",
+      "domain": "04",
+      "name": "Rosetta Stone Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-novelist-agent",
+      "domain": "05",
+      "name": "Novelist Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-poet-agent",
+      "domain": "05",
+      "name": "Poet Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-worldbuilder-agent",
+      "domain": "05",
+      "name": "Worldbuilder Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-screenwriter-agent",
+      "domain": "05",
+      "name": "Screenwriter Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-game-narrative-designer-agent",
+      "domain": "05",
+      "name": "Game Narrative Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-comic-graphic-novel-writer-agent",
+      "domain": "05",
+      "name": "Comic / Graphic Novel Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-lyricist-agent",
+      "domain": "05",
+      "name": "Lyricist Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-film-video-director-agent",
+      "domain": "05",
+      "name": "Film / Video Director Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-short-story-agent",
+      "domain": "05",
+      "name": "Short Story Agent"
+    },
+    {
+      "catalog_id": "AGENT-05-bard-agent",
+      "domain": "05",
+      "name": "Bard Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-philosopher-agent",
+      "domain": "06",
+      "name": "Philosopher Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-ethicist-agent",
+      "domain": "06",
+      "name": "Ethicist Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-socratic-questioner-agent",
+      "domain": "06",
+      "name": "Socratic Questioner Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-devil-s-advocate-agent",
+      "domain": "06",
+      "name": "Devil's Advocate Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-devil-s-advocate-s-devil-s-advocate-agent",
+      "domain": "06",
+      "name": "Devil's Advocate's Devil's Advocate Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-logic-argument-analyst-agent",
+      "domain": "06",
+      "name": "Logic / Argument Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-epistemics-agent",
+      "domain": "06",
+      "name": "Epistemics Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-comparative-worldview-agent",
+      "domain": "06",
+      "name": "Comparative Worldview Agent"
+    },
+    {
+      "catalog_id": "AGENT-06-mirror-agent",
+      "domain": "06",
+      "name": "Mirror Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-financial-analyst-agent",
+      "domain": "07",
+      "name": "Financial Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-investment-research-agent",
+      "domain": "07",
+      "name": "Investment Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-bookkeeper-accountant-agent",
+      "domain": "07",
+      "name": "Bookkeeper / Accountant Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-fp-and-a-agent",
+      "domain": "07",
+      "name": "FP&A Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-startup-advisor-agent",
+      "domain": "07",
+      "name": "Startup Advisor Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-pitch-deck-agent",
+      "domain": "07",
+      "name": "Pitch Deck Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-valuation-agent",
+      "domain": "07",
+      "name": "Valuation Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-tax-preparation-assistant-agent",
+      "domain": "07",
+      "name": "Tax Preparation Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-risk-analyst-agent",
+      "domain": "07",
+      "name": "Risk Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-treasury-cash-management-agent",
+      "domain": "07",
+      "name": "Treasury / Cash Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-controller-agent",
+      "domain": "07",
+      "name": "Controller Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-cfo-advisory-agent",
+      "domain": "07",
+      "name": "CFO Advisory Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-internal-audit-agent",
+      "domain": "07",
+      "name": "Internal Audit Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-payroll-agent",
+      "domain": "07",
+      "name": "Payroll Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-investor-relations-finance-agent",
+      "domain": "07",
+      "name": "Investor Relations (Finance) Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-expense-management-agent",
+      "domain": "07",
+      "name": "Expense Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-fintech-engineer-agent",
+      "domain": "07",
+      "name": "Fintech Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-payment-integration-agent",
+      "domain": "07",
+      "name": "Payment Integration Agent"
+    },
+    {
+      "catalog_id": "AGENT-07-quantitative-analyst-agent",
+      "domain": "07",
+      "name": "Quantitative Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-growth-strategist-agent",
+      "domain": "08",
+      "name": "Growth Strategist Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-performance-marketer-agent",
+      "domain": "08",
+      "name": "Performance Marketer Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-brand-strategist-agent",
+      "domain": "08",
+      "name": "Brand Strategist Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-social-media-manager-agent",
+      "domain": "08",
+      "name": "Social Media Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-community-manager-agent",
+      "domain": "08",
+      "name": "Community Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-seo-specialist-agent",
+      "domain": "08",
+      "name": "SEO Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-email-marketing-agent",
+      "domain": "08",
+      "name": "Email Marketing Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-ad-creative-agent",
+      "domain": "08",
+      "name": "Ad Creative Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-influencer-partnerships-agent",
+      "domain": "08",
+      "name": "Influencer / Partnerships Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-product-marketing-agent",
+      "domain": "08",
+      "name": "Product Marketing Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-marketing-operations-agent",
+      "domain": "08",
+      "name": "Marketing Operations Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-content-marketing-strategist-agent",
+      "domain": "08",
+      "name": "Content Marketing Strategist Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-event-and-trade-show-marketing-agent",
+      "domain": "08",
+      "name": "Event & Trade Show Marketing Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-marketing-analytics-agent",
+      "domain": "08",
+      "name": "Marketing Analytics Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-affiliate-program-manager-agent",
+      "domain": "08",
+      "name": "Affiliate Program Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-market-researcher-agent",
+      "domain": "08",
+      "name": "Market Researcher Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-trend-analyst-agent",
+      "domain": "08",
+      "name": "Trend Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-local-seo-google-business-profile-agent",
+      "domain": "08",
+      "name": "Local SEO / Google Business Profile Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-location-and-places-research-agent",
+      "domain": "08",
+      "name": "Location & Places Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-review-management-agent",
+      "domain": "08",
+      "name": "Review Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-08-campaign-planning-agent",
+      "domain": "08",
+      "name": "Campaign Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-youtuber-creator-strategy-agent",
+      "domain": "09",
+      "name": "YouTuber / Creator Strategy Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-podcast-producer-agent",
+      "domain": "09",
+      "name": "Podcast Producer Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-cinematographer-dp-assistant-agent",
+      "domain": "09",
+      "name": "Cinematographer / DP Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-video-editor-agent",
+      "domain": "09",
+      "name": "Video Editor Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-colorist-assistant-agent",
+      "domain": "09",
+      "name": "Colorist Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-sound-designer-agent",
+      "domain": "09",
+      "name": "Sound Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-thumbnail-title-optimizer-agent",
+      "domain": "09",
+      "name": "Thumbnail / Title Optimizer Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-livestream-assistant-agent",
+      "domain": "09",
+      "name": "Livestream Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-09-short-form-content-agent",
+      "domain": "09",
+      "name": "Short-Form Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-ui-ux-designer-agent",
+      "domain": "10",
+      "name": "UI/UX Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-brand-designer-agent",
+      "domain": "10",
+      "name": "Brand Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-illustrator-agent",
+      "domain": "10",
+      "name": "Illustrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-motion-designer-agent",
+      "domain": "10",
+      "name": "Motion Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-3d-artist-agent",
+      "domain": "10",
+      "name": "3D Artist Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-3d-asset-planning-and-art-direction-agent",
+      "domain": "10",
+      "name": "3D Asset Planning & Art Direction Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-texture-and-material-planning-agent",
+      "domain": "10",
+      "name": "Texture & Material Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-multi-format-visual-content-designer-agent",
+      "domain": "10",
+      "name": "Multi-Format Visual Content Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-advanced-svg-and-vector-illustration-agent",
+      "domain": "10",
+      "name": "Advanced SVG & Vector Illustration Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-print-publication-layout-agent",
+      "domain": "10",
+      "name": "Print / Publication Layout Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-ux-researcher-agent",
+      "domain": "10",
+      "name": "UX Researcher Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-ux-writer-agent",
+      "domain": "10",
+      "name": "UX Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-design-systems-agent",
+      "domain": "10",
+      "name": "Design Systems Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-accessibility-design-agent",
+      "domain": "10",
+      "name": "Accessibility Design Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-design-ops-agent",
+      "domain": "10",
+      "name": "Design Ops Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-brand-voice-and-verbal-identity-agent",
+      "domain": "10",
+      "name": "Brand Voice & Verbal Identity Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-brand-guidelines-auditor-agent",
+      "domain": "10",
+      "name": "Brand Guidelines Auditor Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-brand-management-agent",
+      "domain": "10",
+      "name": "Brand Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-campaign-designer-and-planner-agent",
+      "domain": "10",
+      "name": "Campaign Designer & Planner Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-packaging-design-agent",
+      "domain": "10",
+      "name": "Packaging Design Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-visual-asset-generator-agent",
+      "domain": "10",
+      "name": "Visual Asset Generator Agent"
+    },
+    {
+      "catalog_id": "AGENT-10-design-to-dev-handoff-agent",
+      "domain": "10",
+      "name": "Design-to-Dev Handoff Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-product-manager-agent",
+      "domain": "11",
+      "name": "Product Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-project-manager-agent",
+      "domain": "11",
+      "name": "Project Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-scrum-master-agent",
+      "domain": "11",
+      "name": "Scrum Master Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-business-analyst-agent",
+      "domain": "11",
+      "name": "Business Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-requirements-engineer-agent",
+      "domain": "11",
+      "name": "Requirements Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-roadmap-planning-agent",
+      "domain": "11",
+      "name": "Roadmap Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-portfolio-manager-agent",
+      "domain": "11",
+      "name": "Portfolio Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-program-manager-agent",
+      "domain": "11",
+      "name": "Program Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-dependency-risk-tracker-agent",
+      "domain": "11",
+      "name": "Dependency / Risk Tracker Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-product-ops-agent",
+      "domain": "11",
+      "name": "Product Ops Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-idea-validation-agent",
+      "domain": "11",
+      "name": "Idea Validation Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-backlog-grooming-agent",
+      "domain": "11",
+      "name": "Backlog Grooming Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-platform-product-manager-agent",
+      "domain": "11",
+      "name": "Platform Product Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-11-bikeshed-detector-agent",
+      "domain": "11",
+      "name": "Bikeshed Detector Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-literature-review-agent",
+      "domain": "12",
+      "name": "Literature Review Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-research-assistant-agent",
+      "domain": "12",
+      "name": "Research Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-peer-reviewer-agent",
+      "domain": "12",
+      "name": "Peer Reviewer Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-grant-proposal-agent",
+      "domain": "12",
+      "name": "Grant Proposal Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-citation-reference-checker-agent",
+      "domain": "12",
+      "name": "Citation / Reference Checker Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-statistical-reviewer-agent",
+      "domain": "12",
+      "name": "Statistical Reviewer Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-research-analyst-agent",
+      "domain": "12",
+      "name": "Research Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-general-researcher-agent",
+      "domain": "12",
+      "name": "General Researcher Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-data-researcher-agent",
+      "domain": "12",
+      "name": "Data Researcher Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-scientific-literature-researcher-agent",
+      "domain": "12",
+      "name": "Scientific Literature Researcher Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-academic-scholastic-research-agent",
+      "domain": "12",
+      "name": "Academic / Scholastic Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-search-information-retrieval-specialist-agent",
+      "domain": "12",
+      "name": "Search / Information Retrieval Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-github-research-agent",
+      "domain": "12",
+      "name": "GitHub Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-arxiv-research-agent",
+      "domain": "12",
+      "name": "ArXiv Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-google-scholar-academic-search-agent",
+      "domain": "12",
+      "name": "Google Scholar / Academic Search Agent"
+    },
+    {
+      "catalog_id": "AGENT-12-deep-research-agent",
+      "domain": "12",
+      "name": "Deep Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-contract-review-agent",
+      "domain": "13",
+      "name": "Contract Review Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-paralegal-assistant-agent",
+      "domain": "13",
+      "name": "Paralegal Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-ip-patent-research-agent",
+      "domain": "13",
+      "name": "IP / Patent Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-compliance-officer-agent",
+      "domain": "13",
+      "name": "Compliance Officer Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-privacy-dpo-agent",
+      "domain": "13",
+      "name": "Privacy / DPO Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-policy-drafting-agent",
+      "domain": "13",
+      "name": "Policy Drafting Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-legal-advisor-agent",
+      "domain": "13",
+      "name": "Legal Advisor Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-gdpr-ccpa-compliance-agent",
+      "domain": "13",
+      "name": "GDPR / CCPA Compliance Agent"
+    },
+    {
+      "catalog_id": "AGENT-13-rubber-stamp-detector-agent",
+      "domain": "13",
+      "name": "Rubber Stamp Detector Agent"
+    },
+    {
+      "catalog_id": "AGENT-14-clinical-documentation-agent",
+      "domain": "14",
+      "name": "Clinical Documentation Agent"
+    },
+    {
+      "catalog_id": "AGENT-14-medical-research-assistant-agent",
+      "domain": "14",
+      "name": "Medical Research Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-14-patient-communication-agent",
+      "domain": "14",
+      "name": "Patient Communication Agent"
+    },
+    {
+      "catalog_id": "AGENT-14-care-coordination-agent",
+      "domain": "14",
+      "name": "Care Coordination Agent"
+    },
+    {
+      "catalog_id": "AGENT-14-health-records-summarizer-agent",
+      "domain": "14",
+      "name": "Health Records Summarizer Agent"
+    },
+    {
+      "catalog_id": "AGENT-14-hipaa-compliance-agent",
+      "domain": "14",
+      "name": "HIPAA Compliance Agent"
+    },
+    {
+      "catalog_id": "AGENT-14-healthcare-administration-agent",
+      "domain": "14",
+      "name": "Healthcare Administration Agent"
+    },
+    {
+      "catalog_id": "AGENT-15-tutor-agent",
+      "domain": "15",
+      "name": "Tutor Agent"
+    },
+    {
+      "catalog_id": "AGENT-15-curriculum-designer-agent",
+      "domain": "15",
+      "name": "Curriculum Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-15-course-creator-agent",
+      "domain": "15",
+      "name": "Course Creator Agent"
+    },
+    {
+      "catalog_id": "AGENT-15-exam-quiz-writer-agent",
+      "domain": "15",
+      "name": "Exam / Quiz Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-15-corporate-trainer-agent",
+      "domain": "15",
+      "name": "Corporate Trainer Agent"
+    },
+    {
+      "catalog_id": "AGENT-15-study-coach-agent",
+      "domain": "15",
+      "name": "Study Coach Agent"
+    },
+    {
+      "catalog_id": "AGENT-16-support-agent",
+      "domain": "16",
+      "name": "Support Agent"
+    },
+    {
+      "catalog_id": "AGENT-16-customer-success-manager-agent",
+      "domain": "16",
+      "name": "Customer Success Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-16-onboarding-agent",
+      "domain": "16",
+      "name": "Onboarding Agent"
+    },
+    {
+      "catalog_id": "AGENT-16-escalation-handler-agent",
+      "domain": "16",
+      "name": "Escalation Handler Agent"
+    },
+    {
+      "catalog_id": "AGENT-16-knowledge-base-agent",
+      "domain": "16",
+      "name": "Knowledge Base Agent"
+    },
+    {
+      "catalog_id": "AGENT-16-voice-of-customer-agent",
+      "domain": "16",
+      "name": "Voice of Customer Agent"
+    },
+    {
+      "catalog_id": "AGENT-16-support-quality-assurance-agent",
+      "domain": "16",
+      "name": "Support Quality Assurance Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-sdr-outbound-agent",
+      "domain": "17",
+      "name": "SDR / Outbound Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-sales-closer-assistant-agent",
+      "domain": "17",
+      "name": "Sales Closer Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-negotiation-coach-agent",
+      "domain": "17",
+      "name": "Negotiation Coach Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-proposal-writer-agent",
+      "domain": "17",
+      "name": "Proposal Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-account-executive-assistant-agent",
+      "domain": "17",
+      "name": "Account Executive Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-sales-operations-agent",
+      "domain": "17",
+      "name": "Sales Operations Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-channel-partner-manager-agent",
+      "domain": "17",
+      "name": "Channel Partner Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-customer-renewal-agent",
+      "domain": "17",
+      "name": "Customer Renewal Agent"
+    },
+    {
+      "catalog_id": "AGENT-17-sales-engineer-agent",
+      "domain": "17",
+      "name": "Sales Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-recruiter-agent",
+      "domain": "18",
+      "name": "Recruiter Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-interview-assistant-agent",
+      "domain": "18",
+      "name": "Interview Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-onboarding-hr-agent",
+      "domain": "18",
+      "name": "Onboarding / HR Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-performance-review-agent",
+      "domain": "18",
+      "name": "Performance Review Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-people-analytics-agent",
+      "domain": "18",
+      "name": "People Analytics Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-compensation-analyst-agent",
+      "domain": "18",
+      "name": "Compensation Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-hr-business-partner-agent",
+      "domain": "18",
+      "name": "HR Business Partner Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-learning-and-development-agent",
+      "domain": "18",
+      "name": "Learning & Development Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-dei-diversity-equity-and-inclusion-agent",
+      "domain": "18",
+      "name": "DEI (Diversity, Equity & Inclusion) Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-employee-relations-agent",
+      "domain": "18",
+      "name": "Employee Relations Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-workforce-planning-agent",
+      "domain": "18",
+      "name": "Workforce Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-18-benefits-administration-agent",
+      "domain": "18",
+      "name": "Benefits Administration Agent"
+    },
+    {
+      "catalog_id": "AGENT-19-operations-manager-agent",
+      "domain": "19",
+      "name": "Operations Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-19-supply-chain-planner-agent",
+      "domain": "19",
+      "name": "Supply Chain Planner Agent"
+    },
+    {
+      "catalog_id": "AGENT-19-procurement-agent",
+      "domain": "19",
+      "name": "Procurement Agent"
+    },
+    {
+      "catalog_id": "AGENT-19-logistics-coordinator-agent",
+      "domain": "19",
+      "name": "Logistics Coordinator Agent"
+    },
+    {
+      "catalog_id": "AGENT-19-quality-assurance-ops-agent",
+      "domain": "19",
+      "name": "Quality Assurance / Ops Agent"
+    },
+    {
+      "catalog_id": "AGENT-19-facilities-management-agent",
+      "domain": "19",
+      "name": "Facilities Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-19-business-continuity-agent",
+      "domain": "19",
+      "name": "Business Continuity Agent"
+    },
+    {
+      "catalog_id": "AGENT-19-vendor-management-agent",
+      "domain": "19",
+      "name": "Vendor Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-20-composer-agent",
+      "domain": "20",
+      "name": "Composer Agent"
+    },
+    {
+      "catalog_id": "AGENT-20-mix-engineer-assistant-agent",
+      "domain": "20",
+      "name": "Mix Engineer Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-20-session-arranger-agent",
+      "domain": "20",
+      "name": "Session Arranger Agent"
+    },
+    {
+      "catalog_id": "AGENT-20-podcast-editing-agent",
+      "domain": "20",
+      "name": "Podcast Editing Agent"
+    },
+    {
+      "catalog_id": "AGENT-20-sound-library-sample-curator-agent",
+      "domain": "20",
+      "name": "Sound Library / Sample Curator Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-game-designer-agent",
+      "domain": "21",
+      "name": "Game Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-level-designer-agent",
+      "domain": "21",
+      "name": "Level Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-game-balance-analyst-agent",
+      "domain": "21",
+      "name": "Game Balance Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-qa-tester-agent",
+      "domain": "21",
+      "name": "QA Tester Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-npc-dialogue-writer-agent",
+      "domain": "21",
+      "name": "NPC Dialogue Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-game-economy-designer-agent",
+      "domain": "21",
+      "name": "Game Economy Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-game-engine-developer-agent",
+      "domain": "21",
+      "name": "Game Engine Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-combat-systems-designer-agent",
+      "domain": "21",
+      "name": "Combat Systems Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-technical-game-designer-agent",
+      "domain": "21",
+      "name": "Technical Game Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-game-live-ops-agent",
+      "domain": "21",
+      "name": "Game Live-Ops Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-playtesting-coordination-agent",
+      "domain": "21",
+      "name": "Playtesting Coordination Agent"
+    },
+    {
+      "catalog_id": "AGENT-21-game-monetization-designer-agent",
+      "domain": "21",
+      "name": "Game Monetization Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-22-architecture-assistant-agent",
+      "domain": "22",
+      "name": "Architecture Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-22-interior-design-assistant-agent",
+      "domain": "22",
+      "name": "Interior Design Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-22-real-estate-analyst-agent",
+      "domain": "22",
+      "name": "Real Estate Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-22-property-management-agent",
+      "domain": "22",
+      "name": "Property Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-22-construction-estimator-agent",
+      "domain": "22",
+      "name": "Construction Estimator Agent"
+    },
+    {
+      "catalog_id": "AGENT-23-systems-engineer-assistant-agent",
+      "domain": "23",
+      "name": "Systems Engineer Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-23-lab-research-assistant-agent",
+      "domain": "23",
+      "name": "Lab Research Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-23-simulation-agent",
+      "domain": "23",
+      "name": "Simulation Agent"
+    },
+    {
+      "catalog_id": "AGENT-23-hardware-design-assistant-agent",
+      "domain": "23",
+      "name": "Hardware Design Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-23-reliability-engineer-agent",
+      "domain": "23",
+      "name": "Reliability Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-23-iot-engineer-agent",
+      "domain": "23",
+      "name": "IoT Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-24-osint-analyst-agent",
+      "domain": "24",
+      "name": "OSINT Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-24-fact-checker-agent",
+      "domain": "24",
+      "name": "Fact-Checker Agent"
+    },
+    {
+      "catalog_id": "AGENT-24-due-diligence-analyst-agent",
+      "domain": "24",
+      "name": "Due Diligence Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-24-competitive-intelligence-agent",
+      "domain": "24",
+      "name": "Competitive Intelligence Agent"
+    },
+    {
+      "catalog_id": "AGENT-24-investigative-reporter-agent",
+      "domain": "24",
+      "name": "Investigative Reporter Agent"
+    },
+    {
+      "catalog_id": "AGENT-25-personal-assistant-agent",
+      "domain": "25",
+      "name": "Personal Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-25-life-coach-assistant-agent",
+      "domain": "25",
+      "name": "Life Coach Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-25-travel-planner-agent",
+      "domain": "25",
+      "name": "Travel Planner Agent"
+    },
+    {
+      "catalog_id": "AGENT-25-household-manager-agent",
+      "domain": "25",
+      "name": "Household Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-25-personal-finance-planner-agent",
+      "domain": "25",
+      "name": "Personal Finance Planner Agent"
+    },
+    {
+      "catalog_id": "AGENT-25-habit-routine-coach-agent",
+      "domain": "25",
+      "name": "Habit / Routine Coach Agent"
+    },
+    {
+      "catalog_id": "AGENT-25-yak-shaver-tracker-agent",
+      "domain": "25",
+      "name": "Yak Shaver Tracker Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-chief-of-staff-agent",
+      "domain": "26",
+      "name": "Chief of Staff Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-ceo-advisor-agent",
+      "domain": "26",
+      "name": "CEO Advisor Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-coo-operations-executive-agent",
+      "domain": "26",
+      "name": "COO / Operations Executive Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-general-manager-agent",
+      "domain": "26",
+      "name": "General Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-people-manager-agent",
+      "domain": "26",
+      "name": "People Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-team-lead-agent",
+      "domain": "26",
+      "name": "Team Lead Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-board-reporting-agent",
+      "domain": "26",
+      "name": "Board Reporting Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-cross-functional-coordinator-agent",
+      "domain": "26",
+      "name": "Cross-Functional Coordinator Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-change-management-agent",
+      "domain": "26",
+      "name": "Change Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-executive-assistant-agent",
+      "domain": "26",
+      "name": "Executive Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-strategic-planning-agent",
+      "domain": "26",
+      "name": "Strategic Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-26-succession-planning-agent",
+      "domain": "26",
+      "name": "Succession Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-pr-strategist-agent",
+      "domain": "27",
+      "name": "PR Strategist Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-press-release-writer-agent",
+      "domain": "27",
+      "name": "Press Release Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-media-relations-agent",
+      "domain": "27",
+      "name": "Media Relations Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-crisis-communications-agent",
+      "domain": "27",
+      "name": "Crisis Communications Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-internal-communications-agent",
+      "domain": "27",
+      "name": "Internal Communications Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-spokesperson-prep-agent",
+      "domain": "27",
+      "name": "Spokesperson Prep Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-reputation-monitoring-agent",
+      "domain": "27",
+      "name": "Reputation Monitoring Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-investor-relations-communications-agent",
+      "domain": "27",
+      "name": "Investor Relations Communications Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-executive-speechwriting-agent",
+      "domain": "27",
+      "name": "Executive Speechwriting Agent"
+    },
+    {
+      "catalog_id": "AGENT-27-csr-impact-communications-agent",
+      "domain": "27",
+      "name": "CSR / Impact Communications Agent"
+    },
+    {
+      "catalog_id": "AGENT-28-merchandising-agent",
+      "domain": "28",
+      "name": "Merchandising Agent"
+    },
+    {
+      "catalog_id": "AGENT-28-ecommerce-store-operations-agent",
+      "domain": "28",
+      "name": "Ecommerce Store Operations Agent"
+    },
+    {
+      "catalog_id": "AGENT-28-pricing-strategy-agent",
+      "domain": "28",
+      "name": "Pricing Strategy Agent"
+    },
+    {
+      "catalog_id": "AGENT-28-inventory-planning-agent",
+      "domain": "28",
+      "name": "Inventory Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-28-marketplace-listing-optimization-agent",
+      "domain": "28",
+      "name": "Marketplace Listing Optimization Agent"
+    },
+    {
+      "catalog_id": "AGENT-28-returns-and-fulfillment-agent",
+      "domain": "28",
+      "name": "Returns and Fulfillment Agent"
+    },
+    {
+      "catalog_id": "AGENT-28-customer-reviews-analysis-agent",
+      "domain": "28",
+      "name": "Customer Reviews Analysis Agent"
+    },
+    {
+      "catalog_id": "AGENT-28-checkout-conversion-optimization-agent",
+      "domain": "28",
+      "name": "Checkout / Conversion Optimization Agent"
+    },
+    {
+      "catalog_id": "AGENT-29-production-planning-agent",
+      "domain": "29",
+      "name": "Production Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-29-quality-control-agent",
+      "domain": "29",
+      "name": "Quality Control Agent"
+    },
+    {
+      "catalog_id": "AGENT-29-plant-maintenance-agent",
+      "domain": "29",
+      "name": "Plant Maintenance Agent"
+    },
+    {
+      "catalog_id": "AGENT-29-supply-chain-risk-agent",
+      "domain": "29",
+      "name": "Supply Chain Risk Agent"
+    },
+    {
+      "catalog_id": "AGENT-29-industrial-safety-compliance-agent",
+      "domain": "29",
+      "name": "Industrial Safety Compliance Agent"
+    },
+    {
+      "catalog_id": "AGENT-29-lean-manufacturing-agent",
+      "domain": "29",
+      "name": "Lean Manufacturing Agent"
+    },
+    {
+      "catalog_id": "AGENT-30-grant-management-agent",
+      "domain": "30",
+      "name": "Grant Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-30-donor-relations-agent",
+      "domain": "30",
+      "name": "Donor Relations Agent"
+    },
+    {
+      "catalog_id": "AGENT-30-volunteer-coordination-agent",
+      "domain": "30",
+      "name": "Volunteer Coordination Agent"
+    },
+    {
+      "catalog_id": "AGENT-30-public-policy-research-agent",
+      "domain": "30",
+      "name": "Public Policy Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-30-constituent-services-agent",
+      "domain": "30",
+      "name": "Constituent Services Agent"
+    },
+    {
+      "catalog_id": "AGENT-30-program-evaluation-agent",
+      "domain": "30",
+      "name": "Program Evaluation Agent"
+    },
+    {
+      "catalog_id": "AGENT-31-guest-services-agent",
+      "domain": "31",
+      "name": "Guest Services Agent"
+    },
+    {
+      "catalog_id": "AGENT-31-event-planning-agent",
+      "domain": "31",
+      "name": "Event Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-31-travel-itinerary-agent",
+      "domain": "31",
+      "name": "Travel Itinerary Agent"
+    },
+    {
+      "catalog_id": "AGENT-31-restaurant-operations-agent",
+      "domain": "31",
+      "name": "Restaurant Operations Agent"
+    },
+    {
+      "catalog_id": "AGENT-31-menu-planning-agent",
+      "domain": "31",
+      "name": "Menu Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-31-hotel-revenue-management-agent",
+      "domain": "31",
+      "name": "Hotel Revenue Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-32-underwriting-agent",
+      "domain": "32",
+      "name": "Underwriting Agent"
+    },
+    {
+      "catalog_id": "AGENT-32-claims-processing-agent",
+      "domain": "32",
+      "name": "Claims Processing Agent"
+    },
+    {
+      "catalog_id": "AGENT-32-enterprise-risk-assessment-agent",
+      "domain": "32",
+      "name": "Enterprise Risk Assessment Agent"
+    },
+    {
+      "catalog_id": "AGENT-32-actuarial-support-agent",
+      "domain": "32",
+      "name": "Actuarial Support Agent"
+    },
+    {
+      "catalog_id": "AGENT-32-insurance-broker-assistant-agent",
+      "domain": "32",
+      "name": "Insurance Broker Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-33-esg-reporting-agent",
+      "domain": "33",
+      "name": "ESG Reporting Agent"
+    },
+    {
+      "catalog_id": "AGENT-33-carbon-accounting-agent",
+      "domain": "33",
+      "name": "Carbon Accounting Agent"
+    },
+    {
+      "catalog_id": "AGENT-33-sustainable-sourcing-agent",
+      "domain": "33",
+      "name": "Sustainable Sourcing Agent"
+    },
+    {
+      "catalog_id": "AGENT-33-climate-risk-analyst-agent",
+      "domain": "33",
+      "name": "Climate Risk Analyst Agent"
+    },
+    {
+      "catalog_id": "AGENT-33-circular-economy-agent",
+      "domain": "33",
+      "name": "Circular Economy Agent"
+    },
+    {
+      "catalog_id": "AGENT-34-fashion-trend-forecasting-agent",
+      "domain": "34",
+      "name": "Fashion Trend Forecasting Agent"
+    },
+    {
+      "catalog_id": "AGENT-34-collection-planning-agent",
+      "domain": "34",
+      "name": "Collection Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-34-tech-pack-agent",
+      "domain": "34",
+      "name": "Tech Pack Agent"
+    },
+    {
+      "catalog_id": "AGENT-34-fabric-sourcing-agent",
+      "domain": "34",
+      "name": "Fabric Sourcing Agent"
+    },
+    {
+      "catalog_id": "AGENT-34-fashion-merchandising-agent",
+      "domain": "34",
+      "name": "Fashion Merchandising Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-python-developer-agent",
+      "domain": "35",
+      "name": "Python Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-javascript-typescript-developer-agent",
+      "domain": "35",
+      "name": "JavaScript / TypeScript Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-rust-developer-agent",
+      "domain": "35",
+      "name": "Rust Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-go-developer-agent",
+      "domain": "35",
+      "name": "Go Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-java-developer-agent",
+      "domain": "35",
+      "name": "Java Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-c-c-developer-agent",
+      "domain": "35",
+      "name": "C / C++ Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-php-developer-agent",
+      "domain": "35",
+      "name": "PHP Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-ruby-developer-agent",
+      "domain": "35",
+      "name": "Ruby Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-swift-ios-developer-agent",
+      "domain": "35",
+      "name": "Swift / iOS Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-kotlin-android-developer-agent",
+      "domain": "35",
+      "name": "Kotlin / Android Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-react-developer-agent",
+      "domain": "35",
+      "name": "React Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-next-js-developer-agent",
+      "domain": "35",
+      "name": "Next.js Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-vue-nuxt-developer-agent",
+      "domain": "35",
+      "name": "Vue / Nuxt Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-django-flask-developer-agent",
+      "domain": "35",
+      "name": "Django / Flask Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-spring-boot-developer-agent",
+      "domain": "35",
+      "name": "Spring Boot Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-net-c-developer-agent",
+      "domain": "35",
+      "name": ".NET / C# Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-node-js-backend-developer-agent",
+      "domain": "35",
+      "name": "Node.js Backend Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-sql-database-query-developer-agent",
+      "domain": "35",
+      "name": "SQL / Database Query Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-shell-bash-scripting-agent",
+      "domain": "35",
+      "name": "Shell / Bash Scripting Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-embedded-firmware-developer-agent",
+      "domain": "35",
+      "name": "Embedded / Firmware Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-angular-developer-agent",
+      "domain": "35",
+      "name": "Angular Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-fastapi-developer-agent",
+      "domain": "35",
+      "name": "FastAPI Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-ruby-on-rails-developer-agent",
+      "domain": "35",
+      "name": "Ruby on Rails Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-laravel-developer-agent",
+      "domain": "35",
+      "name": "Laravel Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-symfony-developer-agent",
+      "domain": "35",
+      "name": "Symfony Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-wordpress-developer-agent",
+      "domain": "35",
+      "name": "WordPress Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-net-core-developer-agent",
+      "domain": "35",
+      "name": ".NET Core Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-net-framework-legacy-developer-agent",
+      "domain": "35",
+      "name": ".NET Framework (Legacy) Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-flutter-developer-agent",
+      "domain": "35",
+      "name": "Flutter Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-react-native-developer-agent",
+      "domain": "35",
+      "name": "React Native Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-cross-platform-mobile-developer-agent",
+      "domain": "35",
+      "name": "Cross-Platform Mobile Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-electron-desktop-developer-agent",
+      "domain": "35",
+      "name": "Electron Desktop Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-blockchain-smart-contract-developer-agent",
+      "domain": "35",
+      "name": "Blockchain / Smart Contract Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-elixir-developer-agent",
+      "domain": "35",
+      "name": "Elixir Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-erlang-developer-agent",
+      "domain": "35",
+      "name": "Erlang Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-scala-developer-agent",
+      "domain": "35",
+      "name": "Scala Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-r-developer-agent",
+      "domain": "35",
+      "name": "R Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-svelte-sveltekit-developer-agent",
+      "domain": "35",
+      "name": "Svelte / SvelteKit Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-solidjs-developer-agent",
+      "domain": "35",
+      "name": "SolidJS Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-35-deno-bun-runtime-developer-agent",
+      "domain": "35",
+      "name": "Deno / Bun Runtime Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-general-troubleshooter-agent",
+      "domain": "36",
+      "name": "General Troubleshooter Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-language-agnostic-debugger-agent",
+      "domain": "36",
+      "name": "Language-Agnostic Debugger Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-python-debugger-agent",
+      "domain": "36",
+      "name": "Python Debugger Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-javascript-browser-debugger-agent",
+      "domain": "36",
+      "name": "JavaScript / Browser Debugger Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-production-incident-debugger-agent",
+      "domain": "36",
+      "name": "Production Incident Debugger Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-root-cause-analysis-agent",
+      "domain": "36",
+      "name": "Root Cause Analysis Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-log-analysis-agent",
+      "domain": "36",
+      "name": "Log Analysis Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-performance-bottleneck-diagnostician-agent",
+      "domain": "36",
+      "name": "Performance Bottleneck Diagnostician Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-network-troubleshooting-agent",
+      "domain": "36",
+      "name": "Network Troubleshooting Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-database-query-troubleshooter-agent",
+      "domain": "36",
+      "name": "Database Query Troubleshooter Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-build-ci-failure-diagnostician-agent",
+      "domain": "36",
+      "name": "Build / CI Failure Diagnostician Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-memory-leak-detective-agent",
+      "domain": "36",
+      "name": "Memory Leak Detective Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-senior-debugger-agent",
+      "domain": "36",
+      "name": "Senior Debugger Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-junior-debugger-agent",
+      "domain": "36",
+      "name": "Junior Debugger Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-error-detective-agent",
+      "domain": "36",
+      "name": "Error Detective Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-rubber-duck-agent",
+      "domain": "36",
+      "name": "Rubber Duck Agent"
+    },
+    {
+      "catalog_id": "AGENT-36-black-box-recorder-agent",
+      "domain": "36",
+      "name": "Black Box Recorder Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-instagram-content-agent",
+      "domain": "37",
+      "name": "Instagram Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-tiktok-content-agent",
+      "domain": "37",
+      "name": "TikTok Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-youtube-shorts-agent",
+      "domain": "37",
+      "name": "YouTube Shorts Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-linkedin-content-agent",
+      "domain": "37",
+      "name": "LinkedIn Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-twitter-x-content-agent",
+      "domain": "37",
+      "name": "Twitter / X Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-facebook-content-agent",
+      "domain": "37",
+      "name": "Facebook Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-pinterest-content-agent",
+      "domain": "37",
+      "name": "Pinterest Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-reddit-community-agent",
+      "domain": "37",
+      "name": "Reddit Community Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-discord-community-agent",
+      "domain": "37",
+      "name": "Discord Community Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-snapchat-content-agent",
+      "domain": "37",
+      "name": "Snapchat Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-threads-content-agent",
+      "domain": "37",
+      "name": "Threads Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-dev-to-developer-community-content-agent",
+      "domain": "37",
+      "name": "Dev.to / Developer Community Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-medium-content-agent",
+      "domain": "37",
+      "name": "Medium Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-mastodon-content-agent",
+      "domain": "37",
+      "name": "Mastodon Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-37-bluesky-content-agent",
+      "domain": "37",
+      "name": "Bluesky Content Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-tech-blog-writer-agent",
+      "domain": "38",
+      "name": "Tech Blog Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-personal-finance-blog-agent",
+      "domain": "38",
+      "name": "Personal Finance Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-travel-blog-agent",
+      "domain": "38",
+      "name": "Travel Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-food-recipe-blog-agent",
+      "domain": "38",
+      "name": "Food / Recipe Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-lifestyle-blog-agent",
+      "domain": "38",
+      "name": "Lifestyle Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-parenting-blog-agent",
+      "domain": "38",
+      "name": "Parenting Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-fitness-health-blog-agent",
+      "domain": "38",
+      "name": "Fitness / Health Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-b2b-saas-blog-agent",
+      "domain": "38",
+      "name": "B2B / SaaS Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-product-review-blog-agent",
+      "domain": "38",
+      "name": "Product Review Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-listicle-writer-agent",
+      "domain": "38",
+      "name": "Listicle Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-long-form-investigative-blog-agent",
+      "domain": "38",
+      "name": "Long-Form Investigative Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-38-niche-hobby-blog-agent",
+      "domain": "38",
+      "name": "Niche Hobby Blog Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-wedding-planning-agent",
+      "domain": "39",
+      "name": "Wedding Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-home-renovation-planning-agent",
+      "domain": "39",
+      "name": "Home Renovation Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-gardening-assistant-agent",
+      "domain": "39",
+      "name": "Gardening Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-pet-care-assistant-agent",
+      "domain": "39",
+      "name": "Pet Care Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-parenting-advice-assistant-agent",
+      "domain": "39",
+      "name": "Parenting Advice Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-elder-care-coordination-agent",
+      "domain": "39",
+      "name": "Elder Care Coordination Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-relationship-communication-coach-agent",
+      "domain": "39",
+      "name": "Relationship Communication Coach Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-etiquette-and-protocol-advisor-agent",
+      "domain": "39",
+      "name": "Etiquette & Protocol Advisor Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-genealogy-research-agent",
+      "domain": "39",
+      "name": "Genealogy Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-book-club-facilitator-agent",
+      "domain": "39",
+      "name": "Book Club Facilitator Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-volunteer-matching-agent",
+      "domain": "39",
+      "name": "Volunteer Matching Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-household-budget-coordination-agent",
+      "domain": "39",
+      "name": "Household Budget Coordination Agent"
+    },
+    {
+      "catalog_id": "AGENT-39-sommelier-agent",
+      "domain": "39",
+      "name": "Sommelier Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-electrician-assistant-agent",
+      "domain": "40",
+      "name": "Electrician Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-plumber-assistant-agent",
+      "domain": "40",
+      "name": "Plumber Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-hvac-technician-assistant-agent",
+      "domain": "40",
+      "name": "HVAC Technician Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-auto-mechanic-assistant-agent",
+      "domain": "40",
+      "name": "Auto Mechanic Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-carpenter-woodworking-assistant-agent",
+      "domain": "40",
+      "name": "Carpenter / Woodworking Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-locksmith-assistant-agent",
+      "domain": "40",
+      "name": "Locksmith Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-landscaping-lawn-care-assistant-agent",
+      "domain": "40",
+      "name": "Landscaping / Lawn Care Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-salon-barber-business-assistant-agent",
+      "domain": "40",
+      "name": "Salon / Barber Business Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-photography-business-assistant-agent",
+      "domain": "40",
+      "name": "Photography Business Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-40-tailor-seamstress-assistant-agent",
+      "domain": "40",
+      "name": "Tailor / Seamstress Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-41-acting-coach-assistant-agent",
+      "domain": "41",
+      "name": "Acting Coach Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-41-stand-up-comedy-writer-agent",
+      "domain": "41",
+      "name": "Stand-Up Comedy Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-41-theater-director-assistant-agent",
+      "domain": "41",
+      "name": "Theater Director Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-41-dance-choreography-assistant-agent",
+      "domain": "41",
+      "name": "Dance Choreography Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-41-voice-acting-coach-agent",
+      "domain": "41",
+      "name": "Voice Acting Coach Agent"
+    },
+    {
+      "catalog_id": "AGENT-41-magic-illusion-design-agent",
+      "domain": "41",
+      "name": "Magic / Illusion Design Agent"
+    },
+    {
+      "catalog_id": "AGENT-41-live-event-production-assistant-agent",
+      "domain": "41",
+      "name": "Live Event Production Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-42-wildlife-conservation-research-agent",
+      "domain": "42",
+      "name": "Wildlife Conservation Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-42-park-ranger-assistant-agent",
+      "domain": "42",
+      "name": "Park Ranger Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-42-marine-biology-research-assistant-agent",
+      "domain": "42",
+      "name": "Marine Biology Research Assistant Agent"
+    },
+    {
+      "catalog_id": "AGENT-42-forestry-management-agent",
+      "domain": "42",
+      "name": "Forestry Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-42-outdoor-recreation-guide-agent",
+      "domain": "42",
+      "name": "Outdoor Recreation Guide Agent"
+    },
+    {
+      "catalog_id": "AGENT-42-weather-climate-data-interpretation-agent",
+      "domain": "42",
+      "name": "Weather / Climate Data Interpretation Agent"
+    },
+    {
+      "catalog_id": "AGENT-43-flight-operations-planning-agent",
+      "domain": "43",
+      "name": "Flight Operations Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-43-aircraft-maintenance-tracking-agent",
+      "domain": "43",
+      "name": "Aircraft Maintenance Tracking Agent"
+    },
+    {
+      "catalog_id": "AGENT-43-maritime-shipping-logistics-agent",
+      "domain": "43",
+      "name": "Maritime / Shipping Logistics Agent"
+    },
+    {
+      "catalog_id": "AGENT-43-railway-operations-planning-agent",
+      "domain": "43",
+      "name": "Railway Operations Planning Agent"
+    },
+    {
+      "catalog_id": "AGENT-43-warehouse-operations-agent",
+      "domain": "43",
+      "name": "Warehouse Operations Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-cloud-architect-agent",
+      "domain": "44",
+      "name": "Cloud Architect Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-aws-infrastructure-engineer-agent",
+      "domain": "44",
+      "name": "AWS Infrastructure Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-azure-infrastructure-engineer-agent",
+      "domain": "44",
+      "name": "Azure Infrastructure Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-gcp-infrastructure-engineer-agent",
+      "domain": "44",
+      "name": "GCP Infrastructure Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-multi-cloud-strategy-agent",
+      "domain": "44",
+      "name": "Multi-Cloud Strategy Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-kubernetes-specialist-agent",
+      "domain": "44",
+      "name": "Kubernetes Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-docker-containerization-expert-agent",
+      "domain": "44",
+      "name": "Docker / Containerization Expert Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-podman-rootless-containers-agent",
+      "domain": "44",
+      "name": "Podman / Rootless Containers Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-self-hosting-home-lab-agent",
+      "domain": "44",
+      "name": "Self-Hosting / Home Lab Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-terraform-infrastructure-as-code-agent",
+      "domain": "44",
+      "name": "Terraform Infrastructure-as-Code Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-terragrunt-multi-environment-agent",
+      "domain": "44",
+      "name": "Terragrunt Multi-Environment Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-network-engineer-agent",
+      "domain": "44",
+      "name": "Network Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-platform-engineer-agent",
+      "domain": "44",
+      "name": "Platform Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-internal-developer-platform-idp-architect-agent",
+      "domain": "44",
+      "name": "Internal Developer Platform (IDP) Architect Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-backstage-specialist-agent",
+      "domain": "44",
+      "name": "Backstage Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-golden-path-designer-agent",
+      "domain": "44",
+      "name": "Golden Path Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-developer-experience-dx-optimizer-agent",
+      "domain": "44",
+      "name": "Developer Experience (DX) Optimizer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-build-engineer-agent",
+      "domain": "44",
+      "name": "Build Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-deployment-engineer-agent",
+      "domain": "44",
+      "name": "Deployment Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-slack-platform-integration-agent",
+      "domain": "44",
+      "name": "Slack Platform Integration Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-chaos-engineer-agent",
+      "domain": "44",
+      "name": "Chaos Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-performance-monitoring-agent",
+      "domain": "44",
+      "name": "Performance Monitoring Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-devops-incident-responder-agent",
+      "domain": "44",
+      "name": "DevOps Incident Responder Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-it-operations-orchestrator-agent",
+      "domain": "44",
+      "name": "IT Operations Orchestrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-sre-site-reliability-engineer-agent",
+      "domain": "44",
+      "name": "SRE (Site Reliability Engineer) Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-paranoid-backup-agent",
+      "domain": "44",
+      "name": "Paranoid Backup Agent"
+    },
+    {
+      "catalog_id": "AGENT-44-graveyard-shift-agent",
+      "domain": "44",
+      "name": "Graveyard Shift Agent"
+    },
+    {
+      "catalog_id": "AGENT-45-database-administrator-agent",
+      "domain": "45",
+      "name": "Database Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-45-database-performance-optimizer-agent",
+      "domain": "45",
+      "name": "Database Performance Optimizer Agent"
+    },
+    {
+      "catalog_id": "AGENT-45-postgresql-specialist-agent",
+      "domain": "45",
+      "name": "PostgreSQL Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-45-data-platform-reliability-agent",
+      "domain": "45",
+      "name": "Data Platform Reliability Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-ai-governance-auditor-agent",
+      "domain": "46",
+      "name": "AI Governance Auditor Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-responsible-ai-reviewer-agent",
+      "domain": "46",
+      "name": "Responsible AI Reviewer Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-ai-observability-engineer-agent",
+      "domain": "46",
+      "name": "AI Observability Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-ai-writing-content-auditor-agent",
+      "domain": "46",
+      "name": "AI Writing / Content Auditor Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-model-risk-manager-agent",
+      "domain": "46",
+      "name": "Model Risk Manager Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-policy-and-guardrail-designer-agent",
+      "domain": "46",
+      "name": "Policy & Guardrail Designer Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-hallucination-investigator-agent",
+      "domain": "46",
+      "name": "Hallucination Investigator Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-prompt-regression-tester-agent",
+      "domain": "46",
+      "name": "Prompt Regression Tester Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-overconfidence-detector-agent",
+      "domain": "46",
+      "name": "Overconfidence Detector Agent"
+    },
+    {
+      "catalog_id": "AGENT-46-canary-agent",
+      "domain": "46",
+      "name": "Canary Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-windows-infrastructure-administrator-agent",
+      "domain": "47",
+      "name": "Windows Infrastructure Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-microsoft-365-administrator-agent",
+      "domain": "47",
+      "name": "Microsoft 365 Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-powershell-scripting-expert-agent",
+      "domain": "47",
+      "name": "PowerShell Scripting Expert Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-powershell-module-architect-agent",
+      "domain": "47",
+      "name": "PowerShell Module Architect Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-powershell-security-hardening-agent",
+      "domain": "47",
+      "name": "PowerShell Security Hardening Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-powershell-ui-architect-agent",
+      "domain": "47",
+      "name": "PowerShell UI Architect Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-macos-system-administrator-agent",
+      "domain": "47",
+      "name": "macOS System Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-macos-automation-and-scripting-agent",
+      "domain": "47",
+      "name": "macOS Automation & Scripting Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-homebrew-macos-package-management-agent",
+      "domain": "47",
+      "name": "Homebrew / macOS Package Management Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-linux-system-administrator-agent",
+      "domain": "47",
+      "name": "Linux System Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-debian-ubuntu-administrator-agent",
+      "domain": "47",
+      "name": "Debian / Ubuntu Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-rhel-fedora-centos-administrator-agent",
+      "domain": "47",
+      "name": "RHEL / Fedora / CentOS Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-arch-linux-administrator-agent",
+      "domain": "47",
+      "name": "Arch Linux Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-suse-opensuse-administrator-agent",
+      "domain": "47",
+      "name": "SUSE / openSUSE Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-alpine-linux-minimal-container-base-administrator-agent",
+      "domain": "47",
+      "name": "Alpine Linux / Minimal Container-Base Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-systemd-init-system-specialist-agent",
+      "domain": "47",
+      "name": "Systemd / Init System Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-linux-kernel-configuration-agent",
+      "domain": "47",
+      "name": "Linux Kernel Configuration Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-bare-metal-server-provisioning-agent",
+      "domain": "47",
+      "name": "Bare-Metal Server Provisioning Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-web-server-configuration-agent",
+      "domain": "47",
+      "name": "Web Server Configuration Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-mail-server-administrator-agent",
+      "domain": "47",
+      "name": "Mail Server Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-dns-server-administrator-agent",
+      "domain": "47",
+      "name": "DNS Server Administrator Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-server-hardening-agent",
+      "domain": "47",
+      "name": "Server Hardening Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-zsh-shell-specialist-agent",
+      "domain": "47",
+      "name": "Zsh Shell Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-fish-shell-specialist-agent",
+      "domain": "47",
+      "name": "Fish Shell Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-posix-shell-portability-agent",
+      "domain": "47",
+      "name": "POSIX Shell Portability Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-dotfiles-shell-environment-agent",
+      "domain": "47",
+      "name": "Dotfiles / Shell Environment Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-advanced-bash-scripting-agent",
+      "domain": "47",
+      "name": "Advanced Bash Scripting Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-advanced-git-agent",
+      "domain": "47",
+      "name": "Advanced Git Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-assembly-language-x86-arm-agent",
+      "domain": "47",
+      "name": "Assembly Language (x86/ARM) Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-low-level-systems-programming-agent",
+      "domain": "47",
+      "name": "Low-Level Systems Programming Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-kernel-module-device-driver-development-agent",
+      "domain": "47",
+      "name": "Kernel Module / Device Driver Development Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-bootloader-development-agent",
+      "domain": "47",
+      "name": "Bootloader Development Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-compiler-toolchain-engineer-agent",
+      "domain": "47",
+      "name": "Compiler / Toolchain Engineer Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-cross-compilation-agent",
+      "domain": "47",
+      "name": "Cross-Compilation Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-binary-analysis-agent",
+      "domain": "47",
+      "name": "Binary Analysis Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-linker-loader-specialist-agent",
+      "domain": "47",
+      "name": "Linker / Loader Specialist Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-virtualization-hypervisor-agent",
+      "domain": "47",
+      "name": "Virtualization / Hypervisor Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-filesystem-engineering-agent",
+      "domain": "47",
+      "name": "Filesystem Engineering Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-arduino-development-agent",
+      "domain": "47",
+      "name": "Arduino Development Agent"
+    },
+    {
+      "catalog_id": "AGENT-47-esp32-esp8266-development-agent",
+      "domain": "47",
+      "name": "ESP32 / ESP8266 Development Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-resume-writer-agent",
+      "domain": "48",
+      "name": "Resume Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-cv-writer-agent",
+      "domain": "48",
+      "name": "CV Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-cover-letter-writer-agent",
+      "domain": "48",
+      "name": "Cover Letter Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-statement-of-purpose-sop-writer-agent",
+      "domain": "48",
+      "name": "Statement of Purpose (SOP) Writer Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-career-document-maintenance-agent",
+      "domain": "48",
+      "name": "Career Document Maintenance Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-remote-job-search-agent",
+      "domain": "48",
+      "name": "Remote Job Search Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-job-search-strategy-agent",
+      "domain": "48",
+      "name": "Job Search Strategy Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-linkedin-profile-optimization-agent",
+      "domain": "48",
+      "name": "LinkedIn Profile Optimization Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-interview-preparation-agent",
+      "domain": "48",
+      "name": "Interview Preparation Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-salary-negotiation-prep-agent",
+      "domain": "48",
+      "name": "Salary Negotiation Prep Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-freelance-gig-marketplace-agent",
+      "domain": "48",
+      "name": "Freelance / Gig Marketplace Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-monetization-strategist-agent",
+      "domain": "48",
+      "name": "Monetization Strategist Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-side-income-research-agent",
+      "domain": "48",
+      "name": "Side-Income Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-48-passive-income-research-agent",
+      "domain": "48",
+      "name": "Passive Income Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-college-university-research-agent",
+      "domain": "49",
+      "name": "College / University Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-course-discovery-agent",
+      "domain": "49",
+      "name": "Course Discovery Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-tuition-and-fees-research-agent",
+      "domain": "49",
+      "name": "Tuition & Fees Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-admissions-essay-application-agent",
+      "domain": "49",
+      "name": "Admissions Essay / Application Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-scholarship-and-financial-aid-research-agent",
+      "domain": "49",
+      "name": "Scholarship & Financial Aid Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-free-course-and-open-educational-resource-finder-agent",
+      "domain": "49",
+      "name": "Free Course & Open Educational Resource Finder Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-study-material-curator-agent",
+      "domain": "49",
+      "name": "Study Material Curator Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-exam-preparation-agent",
+      "domain": "49",
+      "name": "Exam Preparation Agent"
+    },
+    {
+      "catalog_id": "AGENT-49-certification-pathway-research-agent",
+      "domain": "49",
+      "name": "Certification Pathway Research Agent"
+    },
+    {
+      "catalog_id": "AGENT-50-founder-s-update-report-agent",
+      "domain": "50",
+      "name": "Founder's Update Report Agent"
+    },
+    {
+      "catalog_id": "AGENT-50-monthly-business-report-agent",
+      "domain": "50",
+      "name": "Monthly Business Report Agent"
+    },
+    {
+      "catalog_id": "AGENT-50-yearly-annual-report-agent",
+      "domain": "50",
+      "name": "Yearly / Annual Report Agent"
+    },
+    {
+      "catalog_id": "AGENT-50-growth-metrics-report-agent",
+      "domain": "50",
+      "name": "Growth Metrics Report Agent"
+    },
+    {
+      "catalog_id": "AGENT-50-future-direction-strategic-outlook-report-agent",
+      "domain": "50",
+      "name": "Future Direction / Strategic Outlook Report Agent"
+    },
+    {
+      "catalog_id": "AGENT-50-tax-report-preparation-support-agent",
+      "domain": "50",
+      "name": "Tax Report Preparation Support Agent"
+    },
+    {
+      "catalog_id": "AGENT-50-investor-update-agent",
+      "domain": "50",
+      "name": "Investor Update Agent"
+    },
+    {
+      "catalog_id": "AGENT-50-cap-table-equity-report-agent",
+      "domain": "50",
+      "name": "Cap Table / Equity Report Agent"
+    },
+    {
+      "catalog_id": "AGENT-51-long-range-forecaster-clairvoyant-agent",
+      "domain": "51",
+      "name": "Long-Range Forecaster (\"Clairvoyant\") Agent"
+    },
+    {
+      "catalog_id": "AGENT-51-realist-agent",
+      "domain": "51",
+      "name": "Realist Agent"
+    },
+    {
+      "catalog_id": "AGENT-51-historian-agent",
+      "domain": "51",
+      "name": "Historian Agent"
+    },
+    {
+      "catalog_id": "AGENT-51-futurist-agent",
+      "domain": "51",
+      "name": "Futurist Agent"
+    },
+    {
+      "catalog_id": "AGENT-51-contrarian-agent",
+      "domain": "51",
+      "name": "Contrarian Agent"
+    },
+    {
+      "catalog_id": "AGENT-51-visionary-agent",
+      "domain": "51",
+      "name": "Visionary Agent"
+    },
+    {
+      "catalog_id": "AGENT-51-pre-mortem-doomsayer-agent",
+      "domain": "51",
+      "name": "Pre-Mortem Doomsayer Agent"
+    },
+    {
+      "catalog_id": "AGENT-52-webflow-developer-agent",
+      "domain": "52",
+      "name": "Webflow Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-52-framer-developer-agent",
+      "domain": "52",
+      "name": "Framer Developer Agent"
+    },
+    {
+      "catalog_id": "AGENT-52-spline-3d-web-agent",
+      "domain": "52",
+      "name": "Spline 3D Web Agent"
+    },
+    {
+      "catalog_id": "AGENT-52-wix-squarespace-site-builder-agent",
+      "domain": "52",
+      "name": "Wix / Squarespace Site Builder Agent"
+    },
+    {
+      "catalog_id": "AGENT-52-bubble-no-code-app-builder-agent",
+      "domain": "52",
+      "name": "Bubble / No-Code App Builder Agent"
+    },
+    {
+      "catalog_id": "AGENT-52-agriculture-and-agtech-agents",
+      "domain": "52",
+      "name": "Agriculture & AgTech Agents"
+    },
+    {
+      "catalog_id": "AGENT-52-veterinary-support-agents",
+      "domain": "52",
+      "name": "Veterinary Support Agents"
+    },
+    {
+      "catalog_id": "AGENT-52-automotive-and-mobility-agents",
+      "domain": "52",
+      "name": "Automotive & Mobility Agents"
+    },
+    {
+      "catalog_id": "AGENT-52-telecommunications-and-network-operations-agents",
+      "domain": "52",
+      "name": "Telecommunications & Network Operations Agents"
+    },
+    {
+      "catalog_id": "AGENT-52-sports-and-athletics-agents",
+      "domain": "52",
+      "name": "Sports & Athletics Agents"
+    },
+    {
+      "catalog_id": "AGENT-52-culinary-professional-chef-agents",
+      "domain": "52",
+      "name": "Culinary / Professional Chef Agents"
+    },
+    {
+      "catalog_id": "AGENT-52-additional-cloud-coverage",
+      "domain": "52",
+      "name": "Additional Cloud Coverage"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill Acquisition Record",
+  "type": "object",
+  "required": [
+    "skill_id",
+    "source",
+    "action",
+    "locations",
+    "quarantine_status",
+    "verification_status"
+  ],
+  "properties": {
+    "skill_id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "action": {
+      "enum": [
+        "discovered",
+        "installed",
+        "created",
+        "rejected"
+      ]
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "content_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "quarantine_status": {
+      "type": "string"
+    },
+    "verification_status": {
+      "type": "string"
+    },
+    "rollback": {
+      "type": "array"
+    }
+  }
+}

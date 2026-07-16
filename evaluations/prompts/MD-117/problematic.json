@@ -1,0 +1,25 @@
+{
+  "target_id": "MD-117",
+  "capability_id": "md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "reports/learning_experience_curriculum_course_lesson_and_assessment_research_and_design_brief/learning_experience_curriculum_course_lesson_and_assessment_research_and_design_brief_brief.md",
+  "fixture_id": "MD-117-problematic",
+  "tier": "problematic",
+  "input_conditions": [
+    "missing non-critical evidence",
+    "ambiguous scope boundary",
+    "expired or incomplete snapshot"
+  ],
+  "expected": [
+    "identify missing inputs",
+    "degrade explicitly or create Not Applicable record",
+    "do not claim completion"
+  ],
+  "prohibited": [
+    "guess missing facts",
+    "silent scope expansion",
+    "false pass"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

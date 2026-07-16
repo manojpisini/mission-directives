@@ -1,0 +1,8 @@
+{
+  "pair_id": "example",
+  "investigative_prompt_id": "example",
+  "executive_prompt_id": "example",
+  "contamination_type": "stale_snapshot",
+  "expected_behavior": "refuse",
+  "prohibited_behavior": "silent_execution"
+}

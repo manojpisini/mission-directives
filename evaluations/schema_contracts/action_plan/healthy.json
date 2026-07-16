@@ -1,0 +1,22 @@
+{
+  "snapshot_id": "example",
+  "actions": [
+    {
+      "action_id": "ACTION-001",
+      "finding_ids": [
+        "example"
+      ],
+      "description": "example",
+      "dependencies": [
+        "example"
+      ],
+      "change_surface": [
+        "example"
+      ],
+      "risk": {},
+      "verification_ids": [
+        "example"
+      ]
+    }
+  ]
+}

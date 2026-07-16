@@ -1,0 +1,17 @@
+{
+  "iteration_id": "example",
+  "target": "example",
+  "inputs": [
+    {}
+  ],
+  "actions": [
+    {}
+  ],
+  "outputs": [
+    {}
+  ],
+  "verification": [
+    {}
+  ],
+  "decision": "example"
+}

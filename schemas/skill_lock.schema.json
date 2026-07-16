@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill_lock.schema.json",
+  "type": "object",
+  "required": [
+    "skill_id",
+    "repository",
+    "skill_name",
+    "lock_status",
+    "auto_install_allowed"
+  ],
+  "properties": {
+    "skill_id": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "skill_name": {
+      "type": "string"
+    },
+    "commit_sha": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "tarball_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "lock_status": {
+      "enum": [
+        "resolved",
+        "unresolved_offline",
+        "invalid",
+        "review_required"
+      ]
+    },
+    "auto_install_allowed": {
+      "type": "boolean"
+    }
+  }
+}

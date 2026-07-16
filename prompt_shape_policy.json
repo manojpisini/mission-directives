@@ -1,0 +1,35 @@
+{
+  "allowed_shapes": [
+    "control",
+    "standalone_investigative",
+    "standalone_operational",
+    "standalone_gate",
+    "true_pair"
+  ],
+  "pair_test": [
+    "non_mutating_first_stage",
+    "stable_handoff",
+    "distinct_second_stage",
+    "shared_acceptance_criteria",
+    "material_quality_or_safety_gain"
+  ],
+  "evidence_lanes": [
+    "factual",
+    "hybrid",
+    "imaginative"
+  ],
+  "visual_requirements": [
+    "artifact_medium",
+    "skill_routing_when_preferred_skills_exist",
+    "medium_specific_quality_gates",
+    "editable_source",
+    "exact_export_verification"
+  ],
+  "anti_bloat": [
+    "shared_contracts_not_repeated",
+    "no decorative tags",
+    "no forced twins",
+    "no duplicate audience_or_medium_variants",
+    "compose_scenarios_instead"
+  ]
+}

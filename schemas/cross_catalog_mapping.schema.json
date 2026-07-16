@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cross_catalog_mapping.schema.json",
+  "type": "object",
+  "required": [
+    "md_prompt_id",
+    "capability_id",
+    "mapping_status"
+  ],
+  "properties": {
+    "md_prompt_id": {
+      "type": "string"
+    },
+    "capability_id": {
+      "type": "string"
+    },
+    "mapping_status": {
+      "type": "string"
+    }
+  }
+}

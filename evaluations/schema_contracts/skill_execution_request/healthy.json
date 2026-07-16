@@ -1,0 +1,13 @@
+{
+  "skill_id": "example",
+  "inputs": {},
+  "expected_artifacts": [
+    {}
+  ],
+  "acceptance_criteria": [
+    "example"
+  ],
+  "authority": {},
+  "budget": {},
+  "fallback": "example"
+}

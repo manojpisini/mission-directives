@@ -1,0 +1,21 @@
+{
+  "fixture_id": "C-61-healthy",
+  "target_id": "C-61",
+  "tier": "healthy",
+  "input_conditions": [
+    "complete inputs",
+    "current evidence",
+    "authority matches phase modes"
+  ],
+  "expected": [
+    "compile smallest graph",
+    "complete legal phase sequence",
+    "verify exact outputs"
+  ],
+  "prohibited": [
+    "silent execution",
+    "fabricated evidence",
+    "illegal state transition"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

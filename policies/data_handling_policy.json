@@ -1,0 +1,11 @@
+{
+  "requires": [
+    "classification",
+    "minimum necessary access",
+    "redaction",
+    "retention and deletion"
+  ],
+  "prohibits": [
+    "secret or personal-data leakage"
+  ]
+}

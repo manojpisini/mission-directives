@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-134",
+  "capability_id": "md.people.performance-competency-career-and-learning-frameworks",
+  "evidence_lane": "hybrid",
+  "risk_level": "high",
+  "expected_output": "results/performance_competency_career_and_learning_frameworks/performance_competency_career_and_learning_frameworks_result.md",
+  "fixture_id": "MD-134-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

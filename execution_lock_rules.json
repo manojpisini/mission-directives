@@ -1,0 +1,84 @@
+{
+  "rules": [
+    {
+      "id": "LOCK-SHARED-FILES",
+      "when": "executive prompts touch overlapping files or symbols",
+      "action": "serialize"
+    },
+    {
+      "id": "LOCK-DATA",
+      "when": "schema, migration, backfill, retention, or deletion touches shared data",
+      "action": "serialize and require rollback"
+    },
+    {
+      "id": "LOCK-INFRA",
+      "when": "infrastructure, network, identity, secrets, deployment, or production state overlaps",
+      "action": "serialize and require approval"
+    },
+    {
+      "id": "LOCK-PUBLIC",
+      "when": "public contracts, published docs, releases, or external communication overlap",
+      "action": "serialize and verify consumers"
+    },
+    {
+      "id": "LOCK-SECURITY-TEST",
+      "when": "attack or exploit simulation shares a target with mutation",
+      "action": "freeze mutation or stop simulation"
+    },
+    {
+      "id": "LOCK-SOURCE-OF-TRUTH",
+      "when": "multiple prompts edit the same brief, manuscript, deck, dashboard, brand system, calendar, or model",
+      "action": "freeze one authoritative artifact and serialize writes"
+    },
+    {
+      "id": "LOCK-PUBLICATION",
+      "when": "publishing, posting, sending, exporting, or uploading to an external platform",
+      "action": "require explicit authority and final factual/format review"
+    },
+    {
+      "id": "LOCK-VISUAL-EXPORT",
+      "when": "source visual and exported presentation, image, PDF, or embedded artifact can diverge",
+      "action": "verify the exact export before completion"
+    },
+    {
+      "id": "LOCK-EMPLOYMENT",
+      "when": "a workflow recommends or records a consequential employment decision",
+      "action": "require accountable human decision and prohibit autonomous final action"
+    },
+    {
+      "id": "LOCK-LEGAL-FINANCIAL",
+      "when": "a workflow signs, files, posts entries, transfers value, or makes a binding legal or financial commitment",
+      "action": "require named human authority and exact approval receipt"
+    },
+    {
+      "id": "LOCK-OSINT-IDENTITY",
+      "when": "OSINT analysis may identify or expose a person",
+      "action": "require purpose, confidence, minimization, harm review, and publication authority"
+    },
+    {
+      "id": "LOCK-LLM-DEPLOYMENT",
+      "when": "a model, prompt, retrieval, memory, or tool workflow reaches production",
+      "action": "require evaluation snapshot, permissions review, monitoring, incident and rollback readiness"
+    },
+    {
+      "id": "LOCK-SKILL-ACQUISITION",
+      "when": "a discovered or created skill is downloaded or written into user-level skill directories",
+      "action": "require exact source, dual-location receipt, quarantine, rollback, and conformance"
+    },
+    {
+      "id": "LOCK-LOOP-SINGLE-WRITER",
+      "when": "loop iterations can edit the same artifact, source file, or state",
+      "action": "serialize writes and preserve last verified artifact"
+    },
+    {
+      "id": "LOCK-LOOP-EXTERNAL-EFFECT",
+      "when": "a loop target can publish, send, deploy, delete, transfer, or perform another irreversible external effect",
+      "action": "loop drafts or dry runs only; authorize and execute the final external effect once"
+    },
+    {
+      "id": "LOCK-LOOP-BUDGET",
+      "when": "iteration, token, time, cost, tool, or no-improvement limit is reached",
+      "action": "stop and route to MD-198; never silently extend budget"
+    }
+  ]
+}

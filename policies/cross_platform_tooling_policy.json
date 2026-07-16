@@ -1,0 +1,11 @@
+{
+  "suite_version": "1.8.3",
+  "policy_id": "MD-PLATFORM-1",
+  "rules": [
+    "Every PowerShell entry script has a Bash counterpart with equivalent arguments, exit behavior, receipts, logging, and verification.",
+    "Every Bash entry script has a PowerShell counterpart.",
+    "Python remains the canonical cross-platform implementation when practical.",
+    "platform_dispatch.py selects the native wrapper without changing semantic behavior.",
+    "Scripts must support non-interactive CI behavior and human-readable TUI behavior."
+  ]
+}

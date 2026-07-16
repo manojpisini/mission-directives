@@ -1,0 +1,16 @@
+# Generic Bounded Prompt or Skill Loop
+
+```text
+RUN MD-197 + MD-198
+LOOP_TARGET {ANY_PROMPT_SCENARIO_OR_EXACT_SKILL}
+WORK_QUEUE {FINITE_ITEMS_OR_ONE_REFINEMENT_TARGET}
+DESIRED_OUTPUT {ARTIFACTS}
+DESIRED_RESULT {OBSERVABLE_END_STATE}
+QUALITY_RUBRIC {MEASURABLE_CRITERIA}
+PROGRESS_METRIC {COMPARABLE_DELTA}
+MAX_OUTER_ITERATIONS {QUEUE_CEILING}
+MAX_INNER_ITERATIONS {REFINEMENT_CEILING}
+MAX_NO_IMPROVEMENT {PLATEAU_LIMIT}
+```
+
+Looping is rejected when one pass is sufficient, evidence and hypothesis remain unchanged, or repeated effects would be consequential. Maximum iterations are ceilings, never targets.

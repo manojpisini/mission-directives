@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-73",
+  "capability_id": "md.design.brand-design-system-and-content-coherence-investigation-and-plan",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "reports/brand_design_system_and_content_coherence_investigation_and_plan/brand_design_system_and_content_coherence_investigation_and_plan_investigation.md",
+  "fixture_id": "MD-73-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

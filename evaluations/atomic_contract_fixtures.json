@@ -1,0 +1,3268 @@
+{
+  "fixtures": [
+    {
+      "prompt_id": "MD-00",
+      "fixture_id": "MD-00-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-01",
+      "fixture_id": "MD-01-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-02",
+      "fixture_id": "MD-02-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-03",
+      "fixture_id": "MD-03-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-04",
+      "fixture_id": "MD-04-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-05",
+      "fixture_id": "MD-05-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-06",
+      "fixture_id": "MD-06-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-07",
+      "fixture_id": "MD-07-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-08",
+      "fixture_id": "MD-08-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-09",
+      "fixture_id": "MD-09-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-10",
+      "fixture_id": "MD-10-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-11",
+      "fixture_id": "MD-11-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-12",
+      "fixture_id": "MD-12-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-13",
+      "fixture_id": "MD-13-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-14",
+      "fixture_id": "MD-14-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-15",
+      "fixture_id": "MD-15-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-16",
+      "fixture_id": "MD-16-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-17",
+      "fixture_id": "MD-17-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-18",
+      "fixture_id": "MD-18-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-19",
+      "fixture_id": "MD-19-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-20",
+      "fixture_id": "MD-20-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-21",
+      "fixture_id": "MD-21-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-22",
+      "fixture_id": "MD-22-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-23",
+      "fixture_id": "MD-23-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-24",
+      "fixture_id": "MD-24-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-25",
+      "fixture_id": "MD-25-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-26",
+      "fixture_id": "MD-26-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-27",
+      "fixture_id": "MD-27-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-28",
+      "fixture_id": "MD-28-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-29",
+      "fixture_id": "MD-29-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-30",
+      "fixture_id": "MD-30-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-31",
+      "fixture_id": "MD-31-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-32",
+      "fixture_id": "MD-32-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-33",
+      "fixture_id": "MD-33-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-34",
+      "fixture_id": "MD-34-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-35",
+      "fixture_id": "MD-35-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-36",
+      "fixture_id": "MD-36-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-37",
+      "fixture_id": "MD-37-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-38",
+      "fixture_id": "MD-38-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-39",
+      "fixture_id": "MD-39-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-40",
+      "fixture_id": "MD-40-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-41",
+      "fixture_id": "MD-41-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-42",
+      "fixture_id": "MD-42-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-43",
+      "fixture_id": "MD-43-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-44",
+      "fixture_id": "MD-44-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-45",
+      "fixture_id": "MD-45-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-46",
+      "fixture_id": "MD-46-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-47",
+      "fixture_id": "MD-47-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-48",
+      "fixture_id": "MD-48-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-49",
+      "fixture_id": "MD-49-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-50",
+      "fixture_id": "MD-50-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-51",
+      "fixture_id": "MD-51-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-52",
+      "fixture_id": "MD-52-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-53",
+      "fixture_id": "MD-53-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-54",
+      "fixture_id": "MD-54-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-55",
+      "fixture_id": "MD-55-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-56",
+      "fixture_id": "MD-56-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-57",
+      "fixture_id": "MD-57-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-58",
+      "fixture_id": "MD-58-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-59",
+      "fixture_id": "MD-59-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-60",
+      "fixture_id": "MD-60-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-61",
+      "fixture_id": "MD-61-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-62",
+      "fixture_id": "MD-62-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-63",
+      "fixture_id": "MD-63-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-64",
+      "fixture_id": "MD-64-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-65",
+      "fixture_id": "MD-65-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-66",
+      "fixture_id": "MD-66-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-67",
+      "fixture_id": "MD-67-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-68",
+      "fixture_id": "MD-68-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-69",
+      "fixture_id": "MD-69-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-70",
+      "fixture_id": "MD-70-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-71",
+      "fixture_id": "MD-71-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-72",
+      "fixture_id": "MD-72-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-73",
+      "fixture_id": "MD-73-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-74",
+      "fixture_id": "MD-74-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-75",
+      "fixture_id": "MD-75-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-76",
+      "fixture_id": "MD-76-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-77",
+      "fixture_id": "MD-77-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-78",
+      "fixture_id": "MD-78-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-79",
+      "fixture_id": "MD-79-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-80",
+      "fixture_id": "MD-80-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-81",
+      "fixture_id": "MD-81-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-82",
+      "fixture_id": "MD-82-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-83",
+      "fixture_id": "MD-83-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-84",
+      "fixture_id": "MD-84-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-85",
+      "fixture_id": "MD-85-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-86",
+      "fixture_id": "MD-86-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-87",
+      "fixture_id": "MD-87-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-88",
+      "fixture_id": "MD-88-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-89",
+      "fixture_id": "MD-89-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-90",
+      "fixture_id": "MD-90-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-91",
+      "fixture_id": "MD-91-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-92",
+      "fixture_id": "MD-92-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-93",
+      "fixture_id": "MD-93-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-94",
+      "fixture_id": "MD-94-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-95",
+      "fixture_id": "MD-95-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-96",
+      "fixture_id": "MD-96-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-97",
+      "fixture_id": "MD-97-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-98",
+      "fixture_id": "MD-98-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-99",
+      "fixture_id": "MD-99-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-100",
+      "fixture_id": "MD-100-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-101",
+      "fixture_id": "MD-101-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-102",
+      "fixture_id": "MD-102-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-103",
+      "fixture_id": "MD-103-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-104",
+      "fixture_id": "MD-104-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-105",
+      "fixture_id": "MD-105-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-106",
+      "fixture_id": "MD-106-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-107",
+      "fixture_id": "MD-107-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-108",
+      "fixture_id": "MD-108-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-109",
+      "fixture_id": "MD-109-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-110",
+      "fixture_id": "MD-110-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-111",
+      "fixture_id": "MD-111-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-112",
+      "fixture_id": "MD-112-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-113",
+      "fixture_id": "MD-113-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-114",
+      "fixture_id": "MD-114-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-115",
+      "fixture_id": "MD-115-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-116",
+      "fixture_id": "MD-116-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-117",
+      "fixture_id": "MD-117-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-118",
+      "fixture_id": "MD-118-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-119",
+      "fixture_id": "MD-119-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-120",
+      "fixture_id": "MD-120-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-121",
+      "fixture_id": "MD-121-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-122",
+      "fixture_id": "MD-122-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-123",
+      "fixture_id": "MD-123-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-124",
+      "fixture_id": "MD-124-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-125",
+      "fixture_id": "MD-125-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-126",
+      "fixture_id": "MD-126-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-127",
+      "fixture_id": "MD-127-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-128",
+      "fixture_id": "MD-128-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-129",
+      "fixture_id": "MD-129-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-130",
+      "fixture_id": "MD-130-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-131",
+      "fixture_id": "MD-131-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-132",
+      "fixture_id": "MD-132-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-133",
+      "fixture_id": "MD-133-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-134",
+      "fixture_id": "MD-134-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-135",
+      "fixture_id": "MD-135-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-136",
+      "fixture_id": "MD-136-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-137",
+      "fixture_id": "MD-137-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-138",
+      "fixture_id": "MD-138-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-139",
+      "fixture_id": "MD-139-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-140",
+      "fixture_id": "MD-140-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-141",
+      "fixture_id": "MD-141-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-142",
+      "fixture_id": "MD-142-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-143",
+      "fixture_id": "MD-143-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-144",
+      "fixture_id": "MD-144-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-145",
+      "fixture_id": "MD-145-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-146",
+      "fixture_id": "MD-146-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-147",
+      "fixture_id": "MD-147-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-148",
+      "fixture_id": "MD-148-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-149",
+      "fixture_id": "MD-149-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-150",
+      "fixture_id": "MD-150-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-151",
+      "fixture_id": "MD-151-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-152",
+      "fixture_id": "MD-152-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-153",
+      "fixture_id": "MD-153-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-154",
+      "fixture_id": "MD-154-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-155",
+      "fixture_id": "MD-155-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-156",
+      "fixture_id": "MD-156-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-157",
+      "fixture_id": "MD-157-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-158",
+      "fixture_id": "MD-158-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-159",
+      "fixture_id": "MD-159-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-160",
+      "fixture_id": "MD-160-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-161",
+      "fixture_id": "MD-161-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-162",
+      "fixture_id": "MD-162-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-163",
+      "fixture_id": "MD-163-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-164",
+      "fixture_id": "MD-164-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-165",
+      "fixture_id": "MD-165-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-166",
+      "fixture_id": "MD-166-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-167",
+      "fixture_id": "MD-167-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-168",
+      "fixture_id": "MD-168-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-169",
+      "fixture_id": "MD-169-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-170",
+      "fixture_id": "MD-170-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-171",
+      "fixture_id": "MD-171-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-172",
+      "fixture_id": "MD-172-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-173",
+      "fixture_id": "MD-173-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-174",
+      "fixture_id": "MD-174-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-175",
+      "fixture_id": "MD-175-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-176",
+      "fixture_id": "MD-176-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-177",
+      "fixture_id": "MD-177-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-178",
+      "fixture_id": "MD-178-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-179",
+      "fixture_id": "MD-179-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-180",
+      "fixture_id": "MD-180-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-181",
+      "fixture_id": "MD-181-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-182",
+      "fixture_id": "MD-182-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-183",
+      "fixture_id": "MD-183-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-184",
+      "fixture_id": "MD-184-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-185",
+      "fixture_id": "MD-185-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-186",
+      "fixture_id": "MD-186-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-187",
+      "fixture_id": "MD-187-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-188",
+      "fixture_id": "MD-188-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-189",
+      "fixture_id": "MD-189-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-190",
+      "fixture_id": "MD-190-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    },
+    {
+      "prompt_id": "MD-199",
+      "fixture_id": "MD-199-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
+    }
+  ]
+}

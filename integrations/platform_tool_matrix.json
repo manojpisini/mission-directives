@@ -1,0 +1,54 @@
+{
+  "suite_version": "1.8.3",
+  "dispatcher": "tools/platform_dispatch.py",
+  "tools": [
+    {
+      "tool_id": "add-prompt",
+      "bash": "tools/add-prompt.sh",
+      "powershell": "tools/add-prompt.ps1",
+      "semantic_parity_required": true
+    },
+    {
+      "tool_id": "cleanup-project",
+      "bash": "cleanup.sh",
+      "powershell": "cleanup.ps1",
+      "semantic_parity_required": true
+    },
+    {
+      "tool_id": "install_skill_dual",
+      "bash": "tools/install_skill_dual.sh",
+      "powershell": "tools/install_skill_dual.ps1",
+      "semantic_parity_required": true
+    },
+    {
+      "tool_id": "register_local_skill_dual",
+      "bash": "tools/register_local_skill_dual.sh",
+      "powershell": "tools/register_local_skill_dual.ps1",
+      "semantic_parity_required": true
+    },
+    {
+      "tool_id": "run-suite",
+      "bash": "tools/run-suite.sh",
+      "powershell": "tools/run-suite.ps1",
+      "semantic_parity_required": true
+    },
+    {
+      "tool_id": "run-tests",
+      "bash": "tools/run-tests.sh",
+      "powershell": "tools/run-tests.ps1",
+      "semantic_parity_required": true
+    },
+    {
+      "tool_id": "sync-agent-guidance",
+      "bash": "tools/sync-agent-guidance.sh",
+      "powershell": "tools/sync-agent-guidance.ps1",
+      "semantic_parity_required": true
+    },
+    {
+      "tool_id": "validate-suite",
+      "bash": "tools/validate-suite.sh",
+      "powershell": "tools/validate-suite.ps1",
+      "semantic_parity_required": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-100",
+  "capability_id": "md.business.pitch-proposal-and-business-case-development",
+  "evidence_lane": "factual",
+  "risk_level": "medium",
+  "expected_output": "results/pitch_proposal_and_business_case_development/pitch_proposal_and_business_case_development_result.md",
+  "fixture_id": "MD-100-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

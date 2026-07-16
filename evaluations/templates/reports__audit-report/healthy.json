@@ -1,0 +1,17 @@
+{
+  "fixture_type": "template_conformance",
+  "template_id": "reports/audit-report",
+  "tier": "healthy",
+  "input": {
+    "artifact": "example.md",
+    "declared_template": "reports/audit-report"
+  },
+  "expected": {
+    "status": "pass",
+    "must_detect": []
+  },
+  "prohibited": [
+    "silent_template_substitution",
+    "false_completion"
+  ]
+}

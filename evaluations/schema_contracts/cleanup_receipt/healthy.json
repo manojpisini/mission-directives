@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "status": "dry_run",
+  "project_root": "example",
+  "suite_version": "1.8.3",
+  "planned_removals": [
+    "example"
+  ],
+  "managed_blocks": [
+    ".gitignore"
+  ],
+  "preserved_paths": [
+    "example"
+  ],
+  "warnings": [
+    "example"
+  ],
+  "approval_token": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "completed_at": "2026-07-15T00:00:00Z"
+}

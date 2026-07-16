@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-49",
+  "capability_id": "md.engineering.performance-and-efficiency-investigation-and-plan",
+  "evidence_lane": "factual",
+  "risk_level": "medium",
+  "expected_output": "reports/performance_and_efficiency_investigation_and_plan/performance_and_efficiency_investigation_and_plan_investigation.md",
+  "fixture_id": "MD-49-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

@@ -1,0 +1,13 @@
+{
+  "fixture_type": "cross_platform_script_parity",
+  "tool_id": "register_local_skill_dual",
+  "bash": "tools/register_local_skill_dual.sh",
+  "powershell": "tools/register_local_skill_dual.ps1",
+  "expected": [
+    "argument_parity",
+    "exit_code_parity",
+    "receipt_parity",
+    "logging_parity",
+    "verification_parity"
+  ]
+}

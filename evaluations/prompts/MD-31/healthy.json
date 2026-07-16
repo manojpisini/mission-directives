@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-31",
+  "capability_id": "md.cleanup.safe-cleanup-dead-code-and-repository-hygiene-investigation-and-plan",
+  "evidence_lane": "factual",
+  "risk_level": "medium",
+  "expected_output": "reports/safe_cleanup_dead_code_and_repository_hygiene_investigation_and_plan/safe_cleanup_dead_code_and_repository_hygiene_investigation_and_plan_investigation.md",
+  "fixture_id": "MD-31-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

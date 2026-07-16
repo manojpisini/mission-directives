@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-77",
+  "capability_id": "md.prompt_system.prompt-suite-consistency-security-and-coherence-investigation-and-plan",
+  "evidence_lane": "factual",
+  "risk_level": "medium",
+  "expected_output": "reports/prompt_suite_consistency_security_and_coherence_investigation_and_plan/prompt_suite_consistency_security_and_coherence_investigation_and_plan_investigation.md",
+  "fixture_id": "MD-77-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

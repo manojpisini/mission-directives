@@ -1,0 +1,12 @@
+{
+  "requires": [
+    "resolved lock",
+    "trust tier",
+    "least privilege",
+    "quarantine",
+    "conformance"
+  ],
+  "prohibits": [
+    "automatic use of unresolved or quarantined skills"
+  ]
+}

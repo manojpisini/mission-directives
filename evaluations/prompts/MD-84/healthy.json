@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-84",
+  "capability_id": "md.editorial.research-backed-blog-article-and-newsletter-drafting-editing-and-publication-package",
+  "evidence_lane": "hybrid",
+  "risk_level": "medium",
+  "expected_output": "results/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package_package.md",
+  "fixture_id": "MD-84-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

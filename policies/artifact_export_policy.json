@@ -1,0 +1,10 @@
+{
+  "suite_version": "1.8.3",
+  "policy_id": "MD-EXPORT-1",
+  "rules": [
+    "Validate source artifact before export.",
+    "Verify exact page/slide/sheet count when material.",
+    "Check fonts, links, accessibility, dimensions, metadata, and reproducibility.",
+    "Record source-to-export hashes and limitations."
+  ]
+}

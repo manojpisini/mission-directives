@@ -1,0 +1,14 @@
+{
+  "approval_id": "example",
+  "approver": "example",
+  "scope": [
+    "example"
+  ],
+  "allowed_actions": [
+    "example"
+  ],
+  "constraints": [
+    "example"
+  ],
+  "expires_at": "example"
+}

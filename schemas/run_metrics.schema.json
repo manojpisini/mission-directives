@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "run_metrics.schema.json",
+  "type": "object",
+  "required": [
+    "run_id",
+    "recorded_at",
+    "tokens",
+    "external_calls",
+    "wall_time_ms"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "recorded_at": {
+      "type": "string"
+    },
+    "model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tokens": {
+      "type": "object",
+      "required": [
+        "input",
+        "output"
+      ],
+      "properties": {
+        "input": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "external_calls": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "wall_time_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cost": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "schema_failures": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "verification_failures": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "human_rating": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 5
+    }
+  }
+}

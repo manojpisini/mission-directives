@@ -1,0 +1,12 @@
+{
+  "outcome": "example",
+  "audience": [
+    "example"
+  ],
+  "scope": {},
+  "authority": {},
+  "acceptance_criteria": [
+    "example"
+  ],
+  "route_confidence": 0.0
+}

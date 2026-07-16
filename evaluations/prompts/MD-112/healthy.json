@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-112",
+  "capability_id": "md.facilitation.workshop-meeting-and-collaborative-session-design",
+  "evidence_lane": "hybrid",
+  "risk_level": "low",
+  "expected_output": "results/workshop_meeting_and_collaborative_session_design/workshop_meeting_and_collaborative_session_design_result.md",
+  "fixture_id": "MD-112-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

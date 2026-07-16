@@ -1,0 +1,44 @@
+{
+  "policy_id": "bounded_loop_execution_policy",
+  "outer_loop": "one pass per asset, file, finding, record, or queue item",
+  "inner_loop": "refine the current item only while measurable improvement continues",
+  "eligibility": [
+    "finite queue or measurable refinement objective",
+    "objective acceptance threshold",
+    "new evidence or state possible per pass",
+    "bounded iterations, cost, time, tokens, and tools",
+    "verification and rollback available"
+  ],
+  "exit_precedence": [
+    "hard_safety_or_authority_stop",
+    "desired_result_verified",
+    "queue_exhausted",
+    "quality_plateau_or_repeated_failure",
+    "budget_or_iteration_limit",
+    "human_stop"
+  ],
+  "defaults": {
+    "maximum_outer_iterations": 50,
+    "maximum_inner_iterations": 3,
+    "maximum_no_improvement": 1,
+    "minimum_improvement_delta": 0.01
+  },
+  "prohibitions": [
+    "infinite loops",
+    "maximum iterations treated as target",
+    "blind retry with unchanged evidence",
+    "repeated irreversible external effects",
+    "silent acceptance-threshold reduction"
+  ],
+  "generic_target_types": [
+    "prompt",
+    "scenario",
+    "skill",
+    "tool-backed local operation",
+    "finite artifact queue",
+    "audit-fix-verify workflow"
+  ],
+  "verification_rule": "A target score never substitutes for independent verification, and verification never substitutes for an unmet declared threshold.",
+  "queue_rule": "Each queue item receives its own artifact identity, acceptance record, and residual state.",
+  "suite_version": "1.8.3"
+}

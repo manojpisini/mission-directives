@@ -1,0 +1,16 @@
+{
+  "requires": [
+    "exact authorization",
+    "safe target",
+    "stop conditions",
+    "recovery",
+    "monitoring"
+  ],
+  "prohibits": [
+    "third-party targeting",
+    "persistence",
+    "stealth",
+    "exfiltration",
+    "destructive payloads"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "observed_path": "example",
+  "skill_count": 0,
+  "skills": [
+    {
+      "skill_id": "example",
+      "path": "example",
+      "registered_in_suite": true
+    }
+  ]
+}

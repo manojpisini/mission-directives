@@ -1,0 +1,10 @@
+{
+  "review_id": "example",
+  "planning_prompt_id": "MD-00",
+  "execution_prompt_id": "MD-00",
+  "reviewer": "example",
+  "reviewed_at": "example",
+  "decision": "changes_requested",
+  "handoff_hash": "user:approved",
+  "revision_number": 0
+}

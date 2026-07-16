@@ -1,0 +1,12 @@
+{
+  "artifact_id": "example",
+  "artifact_type": "example",
+  "hash": "example",
+  "created_at": "example",
+  "evidence_lane": "example",
+  "inputs": "example",
+  "dependencies": "example",
+  "approval_state": "example",
+  "freshness": "example",
+  "downstream_consumers": "example"
+}

@@ -1,0 +1,7 @@
+{
+  "skill_id": "example",
+  "repository": "example",
+  "skill_name": "example",
+  "lock_status": "resolved",
+  "auto_install_allowed": true
+}

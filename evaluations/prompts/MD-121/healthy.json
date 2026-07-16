@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-121",
+  "capability_id": "md.professional_communication.professional-profile-resume-portfolio-bio-and-application-package",
+  "evidence_lane": "hybrid",
+  "risk_level": "low",
+  "expected_output": "results/professional_profile_resume_portfolio_bio_and_application_package/professional_profile_resume_portfolio_bio_and_application_package_result.md",
+  "fixture_id": "MD-121-healthy",
+  "tier": "healthy",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ],
+  "execution_status": "definition_only_not_model_executed"
+}

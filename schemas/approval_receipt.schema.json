@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/approval_receipt.schema.json",
+  "title": "Approval Receipt",
+  "type": "object",
+  "required": [
+    "approval_id",
+    "approver",
+    "scope",
+    "allowed_actions",
+    "constraints",
+    "expires_at"
+  ],
+  "properties": {
+    "approval_id": {
+      "type": "string"
+    },
+    "approver": {
+      "type": "string"
+    },
+    "issued_at": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prohibited_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_snapshot_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "side_effects_acknowledged": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
