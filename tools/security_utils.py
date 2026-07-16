@@ -56,7 +56,7 @@ def ensure_no_symlink_components(path: Path, *, include_leaf: bool = True) -> Pa
         return absolute
     current = Path(parts[0])
     end = len(parts) if include_leaf else max(1, len(parts) - 1)
-    for part in parts[1:end]:
+    for idx, part in enumerate(parts[1:end], start=1):
         current /= part
         try:
             mode = current.lstat().st_mode
@@ -67,7 +67,7 @@ def ensure_no_symlink_components(path: Path, *, include_leaf: bool = True) -> Pa
             resolved = current.resolve(strict=False)
             if resolved == current:
                 raise ValueError(f"Refusing unresolvable symlink: {current}")
-            remaining = Path(*parts[end:])
+            remaining = Path(*parts[idx + 1 :])
             return ensure_no_symlink_components(
                 resolved / remaining, include_leaf=include_leaf
             )
@@ -153,7 +153,8 @@ def atomic_write_bytes(path: Path, data: bytes, *, default_mode: int = 0o644) ->
     )
     temporary = Path(tmp_name)
     try:
-        os.fchmod(fd, mode)
+        if hasattr(os, "fchmod"):
+            os.fchmod(fd, mode)
         with os.fdopen(fd, "wb", closefd=True) as handle:
             handle.write(data)
             handle.flush()
