@@ -10033,8 +10033,8 @@
     },
     {
       "path": "tools/check_generated_reproducibility.py",
-      "bytes": 2499,
-      "sha256": "1d3548febb75e05eee1c0e14878784014b10172b9e3854e63eaf0f4a7e5a36b9"
+      "bytes": 2621,
+      "sha256": "0515fa7b62af5c995d88d3c34945c59acb7b67cbe148ac2145830814d2433339"
     },
     {
       "path": "tools/check_release_consistency.py",

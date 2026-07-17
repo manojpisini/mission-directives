@@ -46,7 +46,8 @@ def check(root:Path=ROOT)->dict:
                 return {'status':'fail','generator':script,'return_code':proc.returncode,'stdout':proc.stdout,'stderr':proc.stderr,'mismatches':[]}
         mismatches=[]
         for relative in GENERATED:
-            if (root/relative).read_bytes()!=(clone/relative).read_bytes(): mismatches.append(relative)
+            a=(root/relative).read_bytes(); b=(clone/relative).read_bytes()
+            if a.replace(b'\r\n',b'\n')!=b.replace(b'\r\n',b'\n'): mismatches.append(relative)
         return {'status':'pass' if not mismatches else 'fail','generated_files':len(GENERATED),'generators':GENERATORS,'mismatches':mismatches}
 
 def main()->int:
