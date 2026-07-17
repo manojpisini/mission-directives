@@ -7,6 +7,11 @@
       "sha256": "7252ceec0b8649878bd17ef6385b2d1eca4421534fbb31f7227f3fb2fa05caf5"
     },
     {
+      "path": ".gitignore",
+      "bytes": 39,
+      "sha256": "43a11a5d9d8dc3ff30b112d6ec17bda6e2a4474b8bc17fe4466da94fdf96a5c4"
+    },
+    {
       "path": ".pre-commit-config.yaml",
       "bytes": 1093,
       "sha256": "e1eec45469bbbb2c81f71f90614564bb250a1f905347cb2b5de9c4546ff3fe81"
