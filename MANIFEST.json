@@ -17,11 +17,6 @@
       "sha256": "e1eec45469bbbb2c81f71f90614564bb250a1f905347cb2b5de9c4546ff3fe81"
     },
     {
-      "path": ".prompt_suite/logs/README.md",
-      "bytes": 169,
-      "sha256": "a3f3d6ea3b9d74cd91be1a1975d66a0d6283df92d3e5f7f404cd07bf22afb3d1"
-    },
-    {
       "path": "AGENTS.md",
       "bytes": 6787,
       "sha256": "340436be2310107ca4e1faa3ebcecee27e6e9595c83ce3ab185f04de7ca5fec4"
