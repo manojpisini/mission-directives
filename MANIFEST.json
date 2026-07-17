@@ -10018,8 +10018,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 4017,
-      "sha256": "13940704aafd1dc224773ec3ee87fee8ca9819ff1e2b525b5036101c8fd1309f"
+      "bytes": 4041,
+      "sha256": "286877632c030c4078be0267cbc05332195cc733d9fe4dd4e7cc07afb61ecbd9"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",
@@ -10233,8 +10233,8 @@
     },
     {
       "path": "tools/validate_suite.py",
-      "bytes": 35997,
-      "sha256": "9cbcb4bb2c6be338337bda920e2203a0c6431af42d699793b64647d0f6a49489"
+      "bytes": 36020,
+      "sha256": "9694d08bbd8f06855cc9b6835a7fb5a37785d011458c7f74624d8fde270d922c"
     },
     {
       "path": "tools/validate_templates.py",

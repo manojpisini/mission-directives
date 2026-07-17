@@ -388,7 +388,7 @@ if manifest_path.exists():
  manifest=load(manifest_path); listed={x['path']:x for x in manifest.get('files',[])}; actual_files={}
  from build_manifest import iter_manifest_files
  for f in iter_manifest_files(ROOT):
-  data=f.read_bytes(); rel=f.relative_to(ROOT).as_posix(); actual_files[rel]={'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data)}
+  data=f.read_bytes().replace(b'\r\n',b'\n'); rel=f.relative_to(ROOT).as_posix(); actual_files[rel]={'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data)}
  if set(listed)!=set(actual_files): errors.append('manifest path set mismatch')
  for rel,info in actual_files.items():
   if rel in listed and (listed[rel].get('sha256')!=info['sha256'] or listed[rel].get('bytes')!=info['bytes']): errors.append(f'manifest mismatch: {rel}')

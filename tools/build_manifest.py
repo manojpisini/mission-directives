@@ -80,7 +80,7 @@ def current(root: Path = ROOT) -> dict[str, object]:
     root = root.resolve()
     files = []
     for path in iter_manifest_files(root):
-        data = path.read_bytes()
+        data = path.read_bytes().replace(b'\r\n', b'\n')
         files.append(
             {
                 "path": path.relative_to(root).as_posix(),
