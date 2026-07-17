@@ -141,7 +141,7 @@ def test_cleanup_cli_requires_confirmation_when_noninteractive(tmp_path):
         timeout=30,
     )
     assert proc.returncode != 0
-    assert "confirmation" in (proc.stderr + proc.stdout).lower()
+    assert "confirm" in (proc.stderr + proc.stdout).lower()
     assert (project / "prompts").exists()
 
 

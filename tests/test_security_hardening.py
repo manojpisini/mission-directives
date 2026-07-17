@@ -316,7 +316,7 @@ def test_guidance_sync_is_transactional_and_receipt_path_is_project_relative(tmp
     monkeypatch.setattr(sync, "atomic_write_text", original_write)
     result = sync.sync_guidance(project, ROOT, receipt_path=".prompt_suite/receipt.json")
     saved = json.loads((project / ".prompt_suite/receipt.json").read_text(encoding="utf-8"))
-    assert saved["receipt_path"] == str((project / ".prompt_suite/receipt.json").absolute())
+    assert saved["receipt_path"] == (project / ".prompt_suite/receipt.json").absolute().as_posix()
     assert result["receipt_path"] == saved["receipt_path"]
 
 

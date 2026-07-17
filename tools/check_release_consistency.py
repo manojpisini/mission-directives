@@ -15,14 +15,14 @@ def check(root:Path=ROOT)->dict:
     errors=[]; version=(root/'VERSION').read_text().strip(); expected_release=f'mission-directives-{version}'
     if (root/'RELEASE_ID').read_text().strip()!=expected_release: errors.append('RELEASE_ID does not derive from VERSION')
     for name in ('AGENTS.md','CLAUDE.md'):
-        text=(root/name).read_text()
+        text=(root/name).read_text(encoding="utf-8")
         if f'Mission Directives **{version}**' not in text: errors.append(f'{name}: managed guidance version is stale')
     import yaml
     for path in (root/'prompts').glob('*.md'):
-        _,frontmatter,_=path.read_text().split('---',2)
+        _,frontmatter,_=path.read_text(encoding='utf-8').split('---',2)
         if yaml.safe_load(frontmatter).get('suite_version')!=version: errors.append(f'{path.relative_to(root)}: suite_version mismatch')
     for path in (root/'templates').rglob('*.md'):
-        _,frontmatter,_=path.read_text().split('---',2)
+        _,frontmatter,_=path.read_text(encoding='utf-8').split('---',2)
         if yaml.safe_load(frontmatter).get('suite_version')!=version: errors.append(f'{path.relative_to(root)}: suite_version mismatch')
     active_json_mismatches=[]
     for path in root.rglob('*.json'):

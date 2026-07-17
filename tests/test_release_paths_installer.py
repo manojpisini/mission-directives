@@ -9,9 +9,9 @@ def _load(path,name):
 
 def test_release_version_is_current_and_generated_guidance_uses_it():
  version=(ROOT/'VERSION').read_text().strip(); assert version=='1.8.3'
- for p in (ROOT/'prompts').glob('*.md'): assert f'suite_version: {version}' in p.read_text()
- for p in (ROOT/'templates').rglob('*.md'): assert f'suite_version: {version}' in p.read_text()
- for name in ['AGENTS.md','CLAUDE.md']: assert f'Mission Directives **{version}**' in (ROOT/name).read_text()
+ for p in (ROOT/'prompts').glob('*.md'): assert f'suite_version: {version}' in p.read_text(encoding='utf-8')
+ for p in (ROOT/'templates').rglob('*.md'): assert f'suite_version: {version}' in p.read_text(encoding='utf-8')
+ for name in ['AGENTS.md','CLAUDE.md']: assert f'Mission Directives **{version}**' in (ROOT/name).read_text(encoding='utf-8')
 
 def test_distribution_has_no_personal_home_paths():
  bad=[]; pattern=re.compile(r'C:\\\\Users\\\\[^%$<{/\\\\]+|/Users/[^/$<{]+|/home/[^/$<{]+|bl4nkslate',re.I)

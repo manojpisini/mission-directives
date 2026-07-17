@@ -32,7 +32,7 @@ def test_prompt_frontmatter_schema_accepts_catalog_entries():
  import yaml
  schema=json.loads((ROOT/'prompt-frontmatter.schema.json').read_text()); check=Draft202012Validator(schema); failures=[]
  for p in (ROOT/'prompts').glob('*.md'):
-  _,fm,_=p.read_text().split('---',2); issues=list(check.iter_errors(yaml.safe_load(fm)))
+  _,fm,_=p.read_text(encoding='utf-8').split('---',2); issues=list(check.iter_errors(yaml.safe_load(fm)))
   if issues: failures.append((p.name,[x.message for x in issues[:3]]))
  assert not failures,failures
 

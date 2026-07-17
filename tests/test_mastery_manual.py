@@ -6,6 +6,6 @@ def test_mastery_manual_is_deep_and_linked():
   assert phrase in text
  assert '../README.md' in text and 'TEMPLATE_SYSTEM_GUIDE.md' in text
 def test_new_manuals_registered():
- idx=(ROOT/'MANUALS.md').read_text()
+ idx=(ROOT/'MANUALS.md').read_text(encoding='utf-8')
  for name in ['MD_MASTERY_MANUAL','TEMPLATE_SYSTEM_GUIDE','LOGGING_AND_TELEMETRY_GUIDE','CROSS_PLATFORM_TOOLING_GUIDE','TUI_AND_OPERATOR_EXPERIENCE_GUIDE','INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE']:
   assert name in idx
