@@ -17,21 +17,6 @@
       "sha256": "a3f3d6ea3b9d74cd91be1a1975d66a0d6283df92d3e5f7f404cd07bf22afb3d1"
     },
     {
-      "path": ".ruff_cache/.gitignore",
-      "bytes": 35,
-      "sha256": "9e3a60f1e6ec4ae60215c11d54b171392745ec25e9dded433d5bd921363af316"
-    },
-    {
-      "path": ".ruff_cache/0.15.22/10881977641073249932",
-      "bytes": 252,
-      "sha256": "d81ab885b7383509e3e496e7c24841643c6311a2834b7759b72a716d603dee7f"
-    },
-    {
-      "path": ".ruff_cache/CACHEDIR.TAG",
-      "bytes": 43,
-      "sha256": "5953156d7e0c564a427251316eaf26f8870e6483ae2197f916b630e4f93e31ae"
-    },
-    {
       "path": "AGENTS.md",
       "bytes": 6787,
       "sha256": "340436be2310107ca4e1faa3ebcecee27e6e9595c83ce3ab185f04de7ca5fec4"
@@ -10033,8 +10018,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 4002,
-      "sha256": "464045a5f7f91dc44b05963edca7dac2ef4798acc7948173aa5048f979cebaa9"
+      "bytes": 4017,
+      "sha256": "13940704aafd1dc224773ec3ee87fee8ca9819ff1e2b525b5036101c8fd1309f"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",

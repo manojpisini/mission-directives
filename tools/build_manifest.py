@@ -26,7 +26,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED_FILENAMES = {"MANIFEST.json", "VALIDATION.json"}
-EXCLUDED_DIRNAMES = {"__pycache__", ".pytest_cache", ".git"}
+EXCLUDED_DIRNAMES = {"__pycache__", ".pytest_cache", ".git", ".ruff_cache"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo"}
 RUNTIME_PREFIXES = {
     (".prompt_suite", "logs"),
