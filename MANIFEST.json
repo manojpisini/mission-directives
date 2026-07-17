@@ -9898,8 +9898,8 @@
     },
     {
       "path": "tests/test_cleanup.py",
-      "bytes": 11044,
-      "sha256": "3af67ef63c168ecd77b98262782be31ad53c2127dc2e3b8eaef5ba91c8b89004"
+      "bytes": 11315,
+      "sha256": "5111111c1183b9fc77edd0b3286d217585ec15fabc03c06c6a7c9e3761492d31"
     },
     {
       "path": "tests/test_cli_failure_contract.py",
@@ -9933,8 +9933,8 @@
     },
     {
       "path": "tests/test_mastery_manual.py",
-      "bytes": 800,
-      "sha256": "6f5a3683aed80b8b1550ed959daa7ec9dbe7d9cd1289668b2feb15f4d4780af0"
+      "bytes": 827,
+      "sha256": "a1e57ce0cb87bd0e7cb2a893069f556650f9c4ace4c9d26a8d90e462803c67bc"
     },
     {
       "path": "tests/test_md.py",
@@ -9958,18 +9958,18 @@
     },
     {
       "path": "tests/test_release_paths_installer.py",
-      "bytes": 6130,
-      "sha256": "456c6452a7a928d3c56dbd87cfdb9e4e961161a0c1ed8bb13ef0de3b4bc03d99"
+      "bytes": 6276,
+      "sha256": "55db298069b71b6fb6341c77804f676c8bc6860a815ad47e371661a9aac2120e"
     },
     {
       "path": "tests/test_schema_contracts.py",
-      "bytes": 3389,
-      "sha256": "2253c411f372fbf4630b2ce3564cfc87d4b2e641d203e45dd1029df6e82622e9"
+      "bytes": 3461,
+      "sha256": "b7bc53346acc5ced23b6f94d6dfba84fc05ba0ac56df2e5d82c7a531b14b647c"
     },
     {
       "path": "tests/test_security_hardening.py",
-      "bytes": 22072,
-      "sha256": "5348f468239a5b882f6bee8afde8f65c28d17e7427fdb8b3b957ba48500ef73d"
+      "bytes": 22558,
+      "sha256": "87b5ec8dd2fb0367cf95a936ed7fbe9cd0a8ef2e5be58657226393d8e06a5351"
     },
     {
       "path": "tests/test_template_system.py",
@@ -10038,8 +10038,8 @@
     },
     {
       "path": "tools/check_release_consistency.py",
-      "bytes": 3677,
-      "sha256": "afbec59bcbc08917b93b37884a21e383c530bdeee704dadf0e5088ca25afe1b0"
+      "bytes": 3778,
+      "sha256": "7ce77a3fb1adfec193f5769eba415b2389e12b02ebfb68c8539f5cc80c5a39c8"
     },
     {
       "path": "tools/check_script_parity.py",
@@ -10233,8 +10233,8 @@
     },
     {
       "path": "tools/validate_suite.py",
-      "bytes": 35981,
-      "sha256": "5dfa82db468dd7d1d3742e095bc615bf03596d64f9a7a96643560953366a6c74"
+      "bytes": 36398,
+      "sha256": "f52ea8eb01eb29ab7f15bd5d3112aed205e1666d2f73c2c250dc917d5584959d"
     },
     {
       "path": "tools/validate_templates.py",
