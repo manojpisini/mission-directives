@@ -22,13 +22,13 @@ def _copy_suite(destination: Path) -> None:
             text=True,
             capture_output=True,
         )
-        for name in ("__pycache__", ".pytest_cache"):
+        for name in ("__pycache__", ".pytest_cache", ".venv", "node_modules"):
             shutil.rmtree(destination / name, ignore_errors=True)
         for path in destination.rglob("*"):
             if path.is_file() and (path.suffix in {".pyc", ".pyo", ".lock", ".toml"} or path.name.endswith(".toml.lock")):
                 path.unlink(missing_ok=True)
         return
-    shutil.copytree(ROOT, destination, ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache", "*.pyc", "*.pyo", "*.lock", "*.toml"))
+    shutil.copytree(ROOT, destination, ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache", ".venv", "node_modules", "*.pyc", "*.pyo", "*.lock", "*.toml"))
 
 
 def _approval_token(add_prompt, suite: Path, source: Path, title: str, **kwargs) -> str:

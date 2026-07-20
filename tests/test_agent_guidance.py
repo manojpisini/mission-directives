@@ -47,9 +47,15 @@ def test_updates_only_managed_block_when_suite_location_changes(tmp_path: Path):
     first = file_path.read_text(encoding="utf-8")
     alt_suite = tmp_path / "vendor" / "md"
     alt_suite.mkdir(parents=True)
-    for filename in ["VERSION", "catalog.json", "SCENARIO_CATALOG.json", "department_packs.json", "skill_registry.json", "agent_guidance_policy.json"]:
+    for filename in ["VERSION", "catalog.json", "SCENARIO_CATALOG.json", "skill_registry.json"]:
         source = ROOT / filename
         (alt_suite / filename).write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+    (alt_suite / "config").mkdir()
+    for filename in ["department_packs.json"]:
+        (alt_suite / "config" / filename).write_text((ROOT / "config" / filename).read_text(encoding="utf-8"), encoding="utf-8")
+    (alt_suite / "policies").mkdir()
+    for filename in ["agent_guidance_policy.json"]:
+        (alt_suite / "policies" / filename).write_text((ROOT / "policies" / filename).read_text(encoding="utf-8"), encoding="utf-8")
     (alt_suite / "prompts").mkdir()
     (alt_suite / "tools").mkdir()
     (alt_suite / "docs").mkdir()

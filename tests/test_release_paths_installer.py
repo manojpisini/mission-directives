@@ -31,8 +31,11 @@ def test_distribution_has_no_personal_home_paths():
     pattern = re.compile(
         r"C:\\\\Users\\\\[^%$<{/\\\\]+|/Users/[^/$<{]+|/home/[^/$<{]+|bl4nkslate", re.I
     )
+    skip_parts = {Path(__file__), ROOT / "tools/check_release_consistency.py"}
     for p in ROOT.rglob("*"):
-        if p in {Path(__file__), ROOT / "tools/check_release_consistency.py"}:
+        if p in skip_parts or any(
+            part in p.parts for part in (".venv", "node_modules")
+        ):
             continue
         if p.is_file() and p.suffix.lower() in {
             ".md",

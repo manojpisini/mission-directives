@@ -37,7 +37,7 @@ def test_fixture_coverage():
  assert len(list((ROOT/'evaluations/scenarios').glob('C-*/*.json')))==len(sc['composite_scenarios'])*3
 
 def test_skill_lock_blocks_unresolved():
- d=json.loads((ROOT/'skills.lock.json').read_text()); registry=json.loads((ROOT/'skill_registry.json').read_text()); expected=sum(1 for s in registry['skills'] if s.get('install_command')); assert len(d['entries'])==expected and all(not x['auto_install_allowed'] for x in d['entries'] if x['lock_status']!='resolved')
+ d=json.loads((ROOT/'config/skills.lock.json').read_text()); registry=json.loads((ROOT/'skill_registry.json').read_text()); expected=sum(1 for s in registry['skills'] if s.get('install_command')); assert len(d['entries'])==expected and all(not x['auto_install_allowed'] for x in d['entries'] if x['lock_status']!='resolved')
 
 def test_crosswalk_complete():
  d=json.loads((ROOT/'integrations/md_to_agent_library_crosswalk.json').read_text()); cat=json.loads((ROOT/'catalog.json').read_text()); assert len(d['mappings'])==len(cat['prompts'])
@@ -110,7 +110,7 @@ def test_auto_compile_context_schema_and_conditional_skill_branches(tmp_path):
 
 
 def test_supplied_installed_inventory_is_fully_registered():
-    inventory=json.loads((ROOT/'installed_skills_inventory.json').read_text())
+    inventory=json.loads((ROOT/'config/installed_skills_inventory.json').read_text())
     registry={x['skill_id'] for x in json.loads((ROOT/'skill_registry.json').read_text())['skills']}
     assert inventory['skill_count']==193
     assert all(x['skill_id'] in registry for x in inventory['skills'])
@@ -118,7 +118,7 @@ def test_supplied_installed_inventory_is_fully_registered():
 
 
 def test_real_installed_names_are_not_collapsed_as_aliases():
-    aliases=json.loads((ROOT/'skill_aliases.json').read_text())['aliases']
+    aliases=json.loads((ROOT/'config/skill_aliases.json').read_text())['aliases']
     assert aliases=={'strudle':'strudel'}
 
 

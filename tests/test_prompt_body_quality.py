@@ -162,7 +162,7 @@ def test_body_quality_audit_report_matches_required_invariants():
 
 def test_capability_graph_has_no_self_dependency_edges():
     import json
-    graph = json.loads((ROOT / "capability_graph.json").read_text(encoding="utf-8"))
+    graph = json.loads((ROOT / "config/capability_graph.json").read_text(encoding="utf-8"))
     offenders = [edge for edge in graph["edges"] if edge.get("from") == edge.get("to")]
     assert not offenders, offenders
 

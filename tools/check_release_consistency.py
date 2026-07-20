@@ -9,7 +9,7 @@ import json,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES={'.md','.json','.py','.sh','.ps1','.toml','.yaml','.yml','.txt'}
-EXCLUDED_PARTS={'__pycache__','.pytest_cache'}
+EXCLUDED_PARTS={'__pycache__','.pytest_cache','.venv','node_modules'}
 
 def check(root:Path=ROOT)->dict:
     errors=[]; version=(root/'VERSION').read_text().strip(); expected_release=f'mission-directives-{version}'
