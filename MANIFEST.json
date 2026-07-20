@@ -3,13 +3,13 @@
   "files": [
     {
       "path": ".github/workflows/validate.yml",
-      "bytes": 1080,
-      "sha256": "7252ceec0b8649878bd17ef6385b2d1eca4421534fbb31f7227f3fb2fa05caf5"
+      "bytes": 1168,
+      "sha256": "dbdc88f70cbe0935f8524ee4cb97c031417afd67f6f67361fa33d54b91bc0ecc"
     },
     {
       "path": ".gitignore",
-      "bytes": 39,
-      "sha256": "43a11a5d9d8dc3ff30b112d6ec17bda6e2a4474b8bc17fe4466da94fdf96a5c4"
+      "bytes": 142,
+      "sha256": "4a0863fe8bb09781af81724eaa811d370bc1d3dfafbaa21b2566a42b5fd4ed1d"
     },
     {
       "path": ".pre-commit-config.yaml",
@@ -213,18 +213,18 @@
     },
     {
       "path": "cleanup.ps1",
-      "bytes": 2675,
-      "sha256": "f8eeb820d4bca8ee054135e3949a3aa172f4841ff28dcafe7b4c505945ee4422"
+      "bytes": 41,
+      "sha256": "d04bc6bb5f7261d636c6c8cfaa25ff9aa3c33eabdfd73ae2af7c6501c9239741"
     },
     {
       "path": "cleanup.py",
-      "bytes": 28473,
-      "sha256": "999087497880458e308be130197047e69418fa168de43b642a6d1197ff2beb41"
+      "bytes": 296,
+      "sha256": "286f5a2a2eb8a8e2237b1eeb273c421c2962ed791ea017899dc7bc54ef329e72"
     },
     {
       "path": "cleanup.sh",
-      "bytes": 496,
-      "sha256": "49f58685f31be022c96376cbb1373686ddfaa562ebce699fd788eff58f67a965"
+      "bytes": 138,
+      "sha256": "5d4e3e0bfddde1815a0e866932d42123eda474496f6e433106ae6de6f863e761"
     },
     {
       "path": "compatibility/agent_skill_paths.json",
@@ -8033,18 +8033,18 @@
     },
     {
       "path": "install.ps1",
-      "bytes": 2545,
-      "sha256": "5822da6c4a89ef9c4eaeb870e3c4030d93cad00694c06580cd11c7ee3936bc58"
+      "bytes": 41,
+      "sha256": "da1e07ea6b0131f951f4fa59961d5a0731ab23babd7b4ce05ea91d2ffd987b4a"
     },
     {
       "path": "install.py",
-      "bytes": 13621,
-      "sha256": "dd277551bd897acfe2762b9a5e22e54696a478a07aa4051acd24d428c5b932ac"
+      "bytes": 296,
+      "sha256": "f8d76c1824af356dde49695193bd1b85a218a01948f1e496c659375e17f46906"
     },
     {
       "path": "install.sh",
-      "bytes": 493,
-      "sha256": "797adf459ce40b0131c791eaee47c5b4ad0abefa610296e71d6c17f8a9649a79"
+      "bytes": 138,
+      "sha256": "decc87af8e11644a7790a902cd02fc49b70e284182eaf67cadf4409f13919781"
     },
     {
       "path": "installed_skills_inventory.json",
@@ -8095,6 +8095,11 @@
       "path": "loop_execution_policy.json",
       "bytes": 1543,
       "sha256": "df8b06bd673bd0153eab4c74d21669206ab22a0e64394dace2857296b82c6789"
+    },
+    {
+      "path": "md.py",
+      "bytes": 296,
+      "sha256": "e17a514161dae9893dbf656d65a165ed8ae0cfe9d27a150b0990c59f555e7d3c"
     },
     {
       "path": "model_profiles.json",
@@ -9898,8 +9903,8 @@
     },
     {
       "path": "tests/test_cleanup.py",
-      "bytes": 11039,
-      "sha256": "c7f00bf278bb9ca2de8bf24fc309a5bdabb78b8e30d4ff7634ccb7ede4489cd8"
+      "bytes": 11280,
+      "sha256": "84d1aaa509d1d0756642ed8df16650b54245112d98d0866ee9da885d5eb23495"
     },
     {
       "path": "tests/test_cli_failure_contract.py",
@@ -9908,8 +9913,8 @@
     },
     {
       "path": "tests/test_cross_platform_tooling.py",
-      "bytes": 1272,
-      "sha256": "ba1cd44049e087a7ecd048bd8ae6b650db9d61d81ac32728cd37dd2a31653502"
+      "bytes": 1478,
+      "sha256": "edaae94818eb7e34c4e0813549d78a7c17f8a32b35ff2b411488a52c68ccba54"
     },
     {
       "path": "tests/test_documentation_integrity.py",
@@ -9958,8 +9963,8 @@
     },
     {
       "path": "tests/test_release_paths_installer.py",
-      "bytes": 6178,
-      "sha256": "d89b77e72c1ecff692970c712289e67e90d79307e76845777baed9d12c3ee91d"
+      "bytes": 7451,
+      "sha256": "cd60f3ca1234ecc979a9f1aec2d9a5fc75fb5ff7403f1a71659b3a4d2722ffd0"
     },
     {
       "path": "tests/test_schema_contracts.py",
@@ -9968,8 +9973,8 @@
     },
     {
       "path": "tests/test_security_hardening.py",
-      "bytes": 22078,
-      "sha256": "276691535bfccafe46837ea602a7c1f0b23053b4caf1b5ea7f4bd3762aedd39b"
+      "bytes": 24137,
+      "sha256": "72525ebc52cd2a95ec433516b2d3fae669a0e496a4d713d9df7626dc1b333760"
     },
     {
       "path": "tests/test_template_system.py",
@@ -10050,6 +10055,41 @@
       "path": "tools/check_skill_lock.py",
       "bytes": 1016,
       "sha256": "92be70f89b9999c1722514640438eee2b9debc8f8896de35e6ae58c304bbff52"
+    },
+    {
+      "path": "tools/cleanup.ps1",
+      "bytes": 2675,
+      "sha256": "f8eeb820d4bca8ee054135e3949a3aa172f4841ff28dcafe7b4c505945ee4422"
+    },
+    {
+      "path": "tools/cleanup.py",
+      "bytes": 29951,
+      "sha256": "cbee5cd3d559073df9fe9d0c975fe12f2dafb95b30d13cc440a94b1c3303690f"
+    },
+    {
+      "path": "tools/cleanup.sh",
+      "bytes": 496,
+      "sha256": "49f58685f31be022c96376cbb1373686ddfaa562ebce699fd788eff58f67a965"
+    },
+    {
+      "path": "tools/console.py",
+      "bytes": 3170,
+      "sha256": "2010e3f700252ca5cd94b931ceb782077935dd5c5570c43df014ef0044957cd0"
+    },
+    {
+      "path": "tools/install.ps1",
+      "bytes": 2545,
+      "sha256": "5822da6c4a89ef9c4eaeb870e3c4030d93cad00694c06580cd11c7ee3936bc58"
+    },
+    {
+      "path": "tools/install.py",
+      "bytes": 14426,
+      "sha256": "6e979cd4f87c621a1b6bdb4dd044ddf07bee5cc9ccd6cd711f6bcf9e34bff0db"
+    },
+    {
+      "path": "tools/install.sh",
+      "bytes": 493,
+      "sha256": "797adf459ce40b0131c791eaee47c5b4ad0abefa610296e71d6c17f8a9649a79"
     },
     {
       "path": "tools/install_skill_dual.ps1",
@@ -10193,8 +10233,8 @@
     },
     {
       "path": "tools/sync_agent_guidance.py",
-      "bytes": 20160,
-      "sha256": "37f796c47b0a12650131fd7fd968fe76223d17555b03e5fd6852d12cd13f1f10"
+      "bytes": 20622,
+      "sha256": "4b84e3afd9995eff8f5a5434a6d49b987626e2c8bbef03fa5cd3dca1e398e6c9"
     },
     {
       "path": "tools/sync_installed_skills.py",
@@ -10233,8 +10273,8 @@
     },
     {
       "path": "tools/validate_suite.py",
-      "bytes": 36020,
-      "sha256": "9694d08bbd8f06855cc9b6835a7fb5a37785d011458c7f74624d8fde270d922c"
+      "bytes": 42417,
+      "sha256": "12b6db924c7c80991c5da0abcb9c5ed93112ce8c2e7bfc0efd31fd7ac80be99c"
     },
     {
       "path": "tools/validate_templates.py",

@@ -1,3 +1,8 @@
 __pycache__/
 *.pyc
 .prompt_suite/logs/
+BODY_QUALITY_AUDIT.json
+BODY_QUALITY_AUDIT.md
+EVALUATION_STATUS.json
+TEST_RESULTS.json
+VALIDATION.json

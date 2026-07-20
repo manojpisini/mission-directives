@@ -23,6 +23,8 @@ jobs:
         run: python tools/check_release_consistency.py
       - name: Generated reproducibility
         run: python tools/check_generated_reproducibility.py
+      - name: Generate audit artifacts
+        run: python tools/audit_prompt_bodies.py
       - name: Full validation
         run: python tools/validate_suite.py
       - name: Bash wrapper smoke test

@@ -18,8 +18,8 @@ def _load(path: Path, name: str):
 
 
 def _modules():
-    installer = _load(ROOT / "install.py", "md_install_for_cleanup")
-    cleanup = _load(ROOT / "cleanup.py", "md_cleanup")
+    installer = _load(ROOT / "tools/install.py", "md_install_for_cleanup")
+    cleanup = _load(ROOT / "tools/cleanup.py", "md_cleanup")
     return installer, cleanup
 
 
@@ -58,12 +58,17 @@ def test_cleanup_removes_suite_and_managed_blocks_but_preserves_human_content(tm
     assert not (project / ".prompt_suite").exists()
     for name in ["results", "reports", "logs", "artifacts", "outputs"]:
         assert not (project / name).exists()
-    assert (project / "docs" / "user-guide.md").read_text(encoding="utf-8") == "user content\n"
+    assert (project / "docs" / "user-guide.md").read_text(
+        encoding="utf-8"
+    ) == "user content\n"
     assert "preserved_nonempty_docs" in result["warnings"]
     assert (project / ".gitignore").read_text(encoding="utf-8") == "node_modules/\n"
-    assert (project / "AGENTS.md").read_text(encoding="utf-8") == "# Human agents rules\n"
-    assert (project / "CLAUDE.md").read_text(encoding="utf-8") == "# Human Claude rules\n"
-
+    assert (project / "AGENTS.md").read_text(
+        encoding="utf-8"
+    ) == "# Human agents rules\n"
+    assert (project / "CLAUDE.md").read_text(
+        encoding="utf-8"
+    ) == "# Human Claude rules\n"
 
 
 def test_cleanup_preserves_preexisting_empty_generic_directories(tmp_path):
@@ -77,6 +82,7 @@ def test_cleanup_preserves_preexisting_empty_generic_directories(tmp_path):
     result = cleanup.cleanup(project, approval_token=preview["approval_token"])
     assert (project / "results").is_dir()
     assert "results" in result["preserved_paths"]
+
 
 def test_cleanup_deletes_agent_files_and_gitignore_when_suite_created_them(tmp_path):
     installer, cleanup = _modules()
@@ -105,7 +111,9 @@ def test_cleanup_rejects_stale_approval_token_after_managed_file_changes(tmp_pat
     assert (project / "prompts").exists()
 
 
-def test_cleanup_rolls_back_all_mutations_on_post_guidance_failure(tmp_path, monkeypatch):
+def test_cleanup_rolls_back_all_mutations_on_post_guidance_failure(
+    tmp_path, monkeypatch
+):
     installer, cleanup = _modules()
     project = tmp_path / "project"
     project.mkdir()
@@ -126,16 +134,20 @@ def test_cleanup_rolls_back_all_mutations_on_post_guidance_failure(tmp_path, mon
     except RuntimeError:
         pass
     assert (project / "prompts").is_dir()
-    assert "BEGIN MISSION DIRECTIVES MANAGED IGNORE" in (project / ".gitignore").read_text(encoding="utf-8")
-    assert "BEGIN MD MANAGED GUIDANCE" in (project / "AGENTS.md").read_text(encoding="utf-8")
+    assert "BEGIN MISSION DIRECTIVES MANAGED IGNORE" in (
+        project / ".gitignore"
+    ).read_text(encoding="utf-8")
+    assert "BEGIN MD MANAGED GUIDANCE" in (project / "AGENTS.md").read_text(
+        encoding="utf-8"
+    )
 
 
 def test_cleanup_cli_requires_confirmation_when_noninteractive(tmp_path):
-    installer = _load(ROOT / "install.py", "md_install_cleanup_cli")
+    installer = _load(ROOT / "tools/install.py", "md_install_cleanup_cli")
     project = tmp_path / "project"
     installer.install(project)
     proc = subprocess.run(
-        [sys.executable, str(ROOT / "cleanup.py"), str(project), "--no-tui"],
+        [sys.executable, str(ROOT / "tools/cleanup.py"), str(project), "--no-tui"],
         capture_output=True,
         text=True,
         timeout=30,
@@ -146,11 +158,17 @@ def test_cleanup_cli_requires_confirmation_when_noninteractive(tmp_path):
 
 
 def test_cleanup_cli_yes_shows_progress_and_formatted_summary(tmp_path):
-    installer = _load(ROOT / "install.py", "md_install_cleanup_cli_yes")
+    installer = _load(ROOT / "tools/install.py", "md_install_cleanup_cli_yes")
     project = tmp_path / "project"
     installer.install(project)
     proc = subprocess.run(
-        [sys.executable, str(ROOT / "cleanup.py"), str(project), "--yes", "--no-tui"],
+        [
+            sys.executable,
+            str(ROOT / "tools/cleanup.py"),
+            str(project),
+            "--yes",
+            "--no-tui",
+        ],
         capture_output=True,
         text=True,
         timeout=60,
@@ -164,9 +182,8 @@ def test_cleanup_cli_yes_shows_progress_and_formatted_summary(tmp_path):
     assert not (project / "prompts").exists()
 
 
-
 def test_installed_cleanup_script_can_remove_its_own_prompts_tree(tmp_path):
-    installer = _load(ROOT / "install.py", "md_install_cleanup_self")
+    installer = _load(ROOT / "tools/install.py", "md_install_cleanup_self")
     project = tmp_path / "project"
     installer.install(project)
     installed_cleanup = project / "prompts" / "cleanup.py"
@@ -181,8 +198,9 @@ def test_installed_cleanup_script_can_remove_its_own_prompts_tree(tmp_path):
     assert not (project / "prompts").exists()
 
 
-
-def test_cleanup_purge_failure_before_any_deletion_restores_everything(tmp_path, monkeypatch):
+def test_cleanup_purge_failure_before_any_deletion_restores_everything(
+    tmp_path, monkeypatch
+):
     installer, cleanup = _modules()
     project = tmp_path / "project"
     project.mkdir()
@@ -202,11 +220,15 @@ def test_cleanup_purge_failure_before_any_deletion_restores_everything(tmp_path,
 
     assert (project / "prompts").is_dir()
     assert (project / ".prompt_suite").is_dir()
-    assert "BEGIN MD MANAGED GUIDANCE" in (project / "AGENTS.md").read_text(encoding="utf-8")
+    assert "BEGIN MD MANAGED GUIDANCE" in (project / "AGENTS.md").read_text(
+        encoding="utf-8"
+    )
     assert not any(project.glob(".md-cleanup-staging-*"))
 
 
-def test_cleanup_purge_failure_never_restores_a_partial_quarantine(tmp_path, monkeypatch):
+def test_cleanup_purge_failure_never_restores_a_partial_quarantine(
+    tmp_path, monkeypatch
+):
     installer, cleanup = _modules()
     project = tmp_path / "project"
     installer.install(project)
@@ -260,8 +282,12 @@ def test_cleanup_receipt_schema_accepts_result(tmp_path):
     installer.install(project)
     preview = cleanup.preview_cleanup(project)
     result = cleanup.cleanup(project, approval_token=preview["approval_token"])
-    schema = json.loads((ROOT / "schemas" / "cleanup_receipt.schema.json").read_text(encoding="utf-8"))
-    errors = list(Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(result))
+    schema = json.loads(
+        (ROOT / "schemas" / "cleanup_receipt.schema.json").read_text(encoding="utf-8")
+    )
+    errors = list(
+        Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(result)
+    )
     assert not errors, errors
 
 

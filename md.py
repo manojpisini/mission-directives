@@ -7,7 +7,7 @@ sys.exit(
             sys.executable,
             str(
                 __import__("pathlib").Path(__file__).resolve().parent
-                / "tools/install.py"
+                / "tools/console.py"
             ),
         ]
         + sys.argv[1:]
