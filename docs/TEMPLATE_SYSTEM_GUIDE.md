@@ -1,6 +1,6 @@
 # Template System Guide
 
-[Back to Mastery Manual](MD_MASTERY_MANUAL.md) · [Manual index](../MANUALS.md)
+[Back to Mastery Manual](MD_MASTERY_MANUAL.md) · [Manual index](MANUALS.md)
 
 This guide is the authoritative operational reference for **Template System Guide** in MD 1.8.3.
 

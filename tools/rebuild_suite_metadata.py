@@ -162,9 +162,9 @@ for m in rows:
     modes = ", ".join(m.get("allowed_modes") or [])
     evidence = m.get("evidence_lane", "control")
     lines.append(
-        f"| {m['sequence']} | `{m['prompt_id']}` | `{m['capability_id']}` | [{m['title']}]({m['canonical_path']}) | `{m['prompt_role']}` | `{m['category']}` | `{evidence}` | `{m['risk_level']}` | {modes} | {pair} | {review} | {templates} | {skills} |"
+        f"| {m['sequence']} | `{m['prompt_id']}` | `{m['capability_id']}` | [{m['title']}](../{m['canonical_path']}) | `{m['prompt_role']}` | `{m['category']}` | `{evidence}` | `{m['risk_level']}` | {modes} | {pair} | {review} | {templates} | {skills} |"
     )
-(ROOT / "PROMPT_CATALOG.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+(ROOT / "docs/PROMPT_CATALOG.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 print(
     json.dumps(
         {"status": "pass", "suite_version": VERSION, "prompt_count": len(rows)},

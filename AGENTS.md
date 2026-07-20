@@ -56,7 +56,7 @@ These shortcuts are defaults, not blind dispatch rules. Confirm that the route o
 3. Use `catalog.json` for prompt metadata and `SCENARIO_CATALOG.json` for composite workflows.
 4. Use `PROMPT_EXECUTION_ORDER.md` for phase order, modes, branches, locks, and completion semantics.
 5. Load only the selected bodies from `prompts/` plus their declared prerequisites.
-6. Consult schemas, policies, `skill_registry.json`, `auto_prompt_policy.json`, and `loop_execution_policy.json` only when triggered.
+6. Consult schemas, policies, `skill_registry.json`, `policies/auto_prompt_policy.json`, and `policies/loop_execution_policy.json` only when triggered.
 
 ### Efficiency and anti-bloat rules
 
@@ -80,8 +80,8 @@ These shortcuts are defaults, not blind dispatch rules. Confirm that the route o
 
 ### Project cleanup
 
-- Preview removal with `python cleanup.py . --dry-run`.
-- Run approved cleanup with `python cleanup.py . --yes` or a reviewed approval token.
+- Preview removal with `python tools/cleanup.py . --dry-run`.
+- Run approved cleanup with `python tools/cleanup.py . --yes` or a reviewed approval token.
 - Cleanup removes only validated Mission Directives-managed paths and text blocks; preserve unrelated project content and nonempty docs.
 
 ### Core locations
@@ -92,7 +92,7 @@ These shortcuts are defaults, not blind dispatch rules. Confirm that the route o
 - Execution guide: `PROMPT_EXECUTION_ORDER.md`
 - Skill registry: `skill_registry.json`
 - CLI: `tools/md.py`
-- Manuals: `MANUALS.md` and `docs/`
+- Manuals: `docs/MANUALS.md` and `docs/`
 
 ### Honest completion
 

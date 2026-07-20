@@ -68,8 +68,8 @@ python tools/audit_prompt_bodies.py
 Read:
 
 - [Prompt Body Quality Audit](BODY_QUALITY_AUDIT.md)
-- [Structured Prompt Design Standard](PROMPT_STRUCTURE_STANDARD.md)
-- [Prompt Suite Conventions](PROMPT_SUITE_CONVENTIONS.md)
+- [Structured Prompt Design Standard](docs/PROMPT_STRUCTURE_STANDARD.md)
+- [Prompt Suite Conventions](docs/PROMPT_SUITE_CONVENTIONS.md)
 - [Prompt Body Authoring Guide](docs/PROMPT_BODY_AUTHORING_GUIDE.md)
 
 ## Conditional auto-orchestration
@@ -324,7 +324,7 @@ Factual claims remain traceable while interpretation, recommendation, narrative,
 
 Originality, craft, and internal coherence are primary. The prompt must not invent citations or imply factual verification.
 
-See [Evidence Lanes](EVIDENCE_LANES.md).
+See [Evidence Lanes](docs/EVIDENCE_LANES.md).
 
 ## Runtime marker protocol
 
@@ -388,7 +388,7 @@ The investigator owns `<verification_design>` and the acceptance-criteria artifa
 
 Read:
 
-- [Capability Architecture](CAPABILITY_ARCHITECTURE.md)
+- [Capability Architecture](docs/CAPABILITY_ARCHITECTURE.md)
 - [Pair Authoring and Verification Guide](docs/PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md)
 - [Executive Decision Rules Guide](docs/EXECUTIVE_DECISION_RULES_GUIDE.md)
 
@@ -420,7 +420,7 @@ Third-party skills are optional adapters. They require:
 Read:
 
 - [Tool Policy and Authorization Guide](docs/TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md)
-- [Skill Routing](SKILL_ROUTING.md)
+- [Skill Routing](docs/SKILL_ROUTING.md)
 - [Skill Supply-Chain Guide](docs/SKILL_SUPPLY_CHAIN_GUIDE.md)
 
 ## Department discovery packs
@@ -501,17 +501,17 @@ See [Agent Library Integration Guide](docs/AGENT_LIBRARY_INTEGRATION_GUIDE.md).
 README.md
 AGENTS.md
 CLAUDE.md
-MANUALS.md
-PROMPT_CATALOG.md
+docs/MANUALS.md
+docs/PROMPT_CATALOG.md
 PROMPT_EXECUTION_ORDER.md
-PROMPT_SUITE_CONVENTIONS.md
-PROMPT_STRUCTURE_STANDARD.md
-PROMPT_ENGINEERING_METHODS.md
-RESEARCH_BASIS.md
-CAPABILITY_ARCHITECTURE.md
-EVIDENCE_LANES.md
-SKILL_ROUTING.md
-SECURITY_BOUNDARIES.md
+docs/PROMPT_SUITE_CONVENTIONS.md
+docs/PROMPT_STRUCTURE_STANDARD.md
+docs/PROMPT_ENGINEERING_METHODS.md
+docs/RESEARCH_BASIS.md
+docs/CAPABILITY_ARCHITECTURE.md
+docs/EVIDENCE_LANES.md
+docs/SKILL_ROUTING.md
+docs/SECURITY_BOUNDARIES.md
 BODY_QUALITY_AUDIT.md
 catalog.json
 SCENARIO_CATALOG.json
@@ -590,7 +590,7 @@ The suite is healthy when it:
 
 ## Documentation
 
-Start with [Manuals and Guides](MANUALS.md).
+Start with [Manuals and Guides](docs/MANUALS.md).
 
 ## Reviewed plans and exact execution twins
 
@@ -605,7 +605,7 @@ MD 1.8.3 hardens the approval-bound project cleanup workflow. Destructive purge 
 - [Logging and Telemetry Guide](docs/LOGGING_AND_TELEMETRY_GUIDE.md)
 - [Cross-Platform Tooling Guide](docs/CROSS_PLATFORM_TOOLING_GUIDE.md)
 - [TUI and Operator Experience Guide](docs/TUI_AND_OPERATOR_EXPERIENCE_GUIDE.md)
-- [Template Registry](template_registry.json)
+- [Template Registry](config/template_registry.json)
 
 Resolve a prompt's templates with:
 

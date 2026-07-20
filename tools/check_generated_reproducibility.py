@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 GENERATED = [
     "catalog.json",
-    "PROMPT_CATALOG.md",
+    "docs/PROMPT_CATALOG.md",
     "compatibility/capability_identity_registry.json",
     "integrations/md_to_agent_library_crosswalk.json",
     "integrations/md_to_prompt_type_library_crosswalk.json",

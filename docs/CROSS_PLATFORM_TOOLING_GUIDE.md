@@ -1,6 +1,6 @@
 # Cross-Platform Tooling Guide
 
-[Back to Mastery Manual](MD_MASTERY_MANUAL.md) · [Manual index](../MANUALS.md)
+[Back to Mastery Manual](MD_MASTERY_MANUAL.md) · [Manual index](MANUALS.md)
 
 This guide is the authoritative operational reference for **Cross-Platform Tooling Guide** in MD 1.8.3.
 

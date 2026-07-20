@@ -221,7 +221,7 @@ def render_guidance(
         f"- Execution guide: `{execution_path}`",
         f"- Skill registry: `{skill_registry_path}`",
         f"- CLI: `{_join(suite_rel, 'tools/md.py')}`",
-        f"- Manuals: `{_join(suite_rel, 'MANUALS.md')}` and `{_join(suite_rel, 'docs/')}`",
+        f"- Manuals: `{_join(suite_rel, 'docs/MANUALS.md')}` and `{_join(suite_rel, 'docs/')}`",
         "",
         "### Honest completion",
         "",

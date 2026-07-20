@@ -6,3 +6,8 @@ BODY_QUALITY_AUDIT.md
 EVALUATION_STATUS.json
 TEST_RESULTS.json
 VALIDATION.json
+
+.prompt_suite/results/
+.prompt_suite/runtime/
+.prompt_suite/agent-guidance-receipt.json
+agent-guidance-receipt.json

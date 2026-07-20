@@ -8,8 +8,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 142,
-      "sha256": "4a0863fe8bb09781af81724eaa811d370bc1d3dfafbaa21b2566a42b5fd4ed1d"
+      "bytes": 259,
+      "sha256": "441bc8c4c1bace6a2f6ea13837823967a4bfb0664d3851b6c376e8e983ec6c63"
     },
     {
       "path": ".pre-commit-config.yaml",
@@ -18,8 +18,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 6787,
-      "sha256": "340436be2310107ca4e1faa3ebcecee27e6e9595c83ce3ab185f04de7ca5fec4"
+      "bytes": 6822,
+      "sha256": "94ad1b714f5c00bca3e37ef9729cc5d88a1d9854dcb102008b8058c031d7fd92"
     },
     {
       "path": "BODY_QUALITY_AUDIT.json",
@@ -32,14 +32,9 @@
       "sha256": "88a3b884281d59b8d9a3fab7a31b3e91be991fcef10ad550346bdc7900eceb39"
     },
     {
-      "path": "CAPABILITY_ARCHITECTURE.md",
-      "bytes": 11278,
-      "sha256": "04efcc2f2249bcc8d32a45fd6760593f28f1c6532efa1b8beb6f216e3cf69ab9"
-    },
-    {
       "path": "CLAUDE.md",
-      "bytes": 6787,
-      "sha256": "9cf9a0b25e1f0830b11fbe03762290ad6b06607d55e0f35364d7a5d25f253953"
+      "bytes": 6822,
+      "sha256": "448a0622ed540fe5f7f5c49651b3f8d683c7160984f1acf5199b8993d13cc1e5"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -52,19 +47,9 @@
       "sha256": "c3af7be0a52d48f553d94a709bf5c9f8b41419ac700677cc21a99dd2b0fd6b80"
     },
     {
-      "path": "COVERAGE_INDEX.md",
-      "bytes": 18513,
-      "sha256": "63e7e002a75972fd71b9f56cd6240d3d9d51581dd96702f2d3cd2f5e270e7c6b"
-    },
-    {
       "path": "EVALUATION_STATUS.json",
       "bytes": 873,
       "sha256": "e815de282e38fa6414a651adf5ef25c844286667bda84d235d1a29c9a8dc8d6e"
-    },
-    {
-      "path": "EVIDENCE_LANES.md",
-      "bytes": 1592,
-      "sha256": "12bedfc052078a8a7edb06cef58b1fe6efc7af22edb1e88397587895f0e42af2"
     },
     {
       "path": "GOVERNANCE.md",
@@ -72,29 +57,9 @@
       "sha256": "489d9ef47c5eed0b134b68635c1a80067c897cf24a8242ea93ca206b374f32fc"
     },
     {
-      "path": "GSTACK_INTEGRATION.md",
-      "bytes": 11048,
-      "sha256": "b49933cbeff75cd8bec4874686e6d0203e25d43c381bda82e6cda90a3d7d7866"
-    },
-    {
       "path": "LICENSE",
       "bytes": 473,
       "sha256": "e92df40044748f6e9fd3e32a58b5cd6028c81eb6eea57311a70a700c3a7e91be"
-    },
-    {
-      "path": "MANUALS.md",
-      "bytes": 8829,
-      "sha256": "3fdd12c1beeb193395a761e96fecd9f38fb31f0fb9119f42e64a039ffac3828d"
-    },
-    {
-      "path": "PROMPT_CATALOG.md",
-      "bytes": 104073,
-      "sha256": "7cd778c73036a624c182b08ca1728d1da62e6a57485689413f45103ce74e4033"
-    },
-    {
-      "path": "PROMPT_ENGINEERING_METHODS.md",
-      "bytes": 3781,
-      "sha256": "8f1a3012df09ac3982d44567bd7169d3780f6dd4e71ea00324b64af2a00afa0c"
     },
     {
       "path": "PROMPT_EXECUTION_ORDER.md",
@@ -102,34 +67,14 @@
       "sha256": "49ed2e493f4ec51693dd5c2a417c467a4212f759e9ec141e08641a2403bfead8"
     },
     {
-      "path": "PROMPT_STRUCTURE_STANDARD.md",
-      "bytes": 11065,
-      "sha256": "b7a710a0035a9a77dd95aa12e906bf48fb0e2b42b381334dbc4271f397f8649d"
-    },
-    {
-      "path": "PROMPT_SUITE_CONVENTIONS.md",
-      "bytes": 8547,
-      "sha256": "82581430fd722239321e6195b79cd4b70d2bf93c1480e7700015315777396678"
-    },
-    {
       "path": "README.md",
-      "bytes": 24783,
-      "sha256": "4cb952e452f37f2e5275a983b25249dc580d6ae5680d9a5239248d3253d87c46"
-    },
-    {
-      "path": "RECOMMENDED_SKILL_STACKS.md",
-      "bytes": 7756,
-      "sha256": "1a9f66c64c19c201da6dca6447e6ffe8827120c88480870be737c2ee0fbc120c"
+      "bytes": 24870,
+      "sha256": "905027372f8955bdec16b9128d900fc2fb8862e239dbb5957991ba3b9f0d9466"
     },
     {
       "path": "RELEASE_ID",
       "bytes": 25,
       "sha256": "b11b0c76df0de315cef6d41efc44a72f987d39e607c52df5dbdff661b453b87f"
-    },
-    {
-      "path": "RESEARCH_BASIS.md",
-      "bytes": 3595,
-      "sha256": "11f3e84a689d92b63acb8659b1b4527f56051b5c5f61855fe363868e5d689084"
     },
     {
       "path": "SCENARIO_CATALOG.json",
@@ -140,21 +85,6 @@
       "path": "SECURITY.md",
       "bytes": 5095,
       "sha256": "03090e9f8afd35a070eb93ae4ef4b0e15b429780b657ed8f3425ab22c76f17e6"
-    },
-    {
-      "path": "SECURITY_BOUNDARIES.md",
-      "bytes": 1328,
-      "sha256": "d90cb1eaf90c6b1b2cf35ac33f670b4d44913aa7bd3732c1787816e82c5df539"
-    },
-    {
-      "path": "SKILL_INSTALL_COMMANDS.md",
-      "bytes": 35585,
-      "sha256": "cfbfa8b0731b9774443b85011f286c79249d0c3ad05887b7f2a270123129d96f"
-    },
-    {
-      "path": "SKILL_ROUTING.md",
-      "bytes": 7273,
-      "sha256": "590cbb74470048c274487a3fef9e3a8b5c04bc0dd5416c7c6464e7f25b01b969"
     },
     {
       "path": "SUPPORT.md",
@@ -302,6 +232,11 @@
       "sha256": "746bc0af329dc97285fbd2218800d33f5fba4427bbfe80ad5ce30c546e2bde87"
     },
     {
+      "path": "docs/CAPABILITY_ARCHITECTURE.md",
+      "bytes": 11278,
+      "sha256": "04efcc2f2249bcc8d32a45fd6760593f28f1c6532efa1b8beb6f216e3cf69ab9"
+    },
+    {
       "path": "docs/CI_AND_TESTING_GUIDE.md",
       "bytes": 3981,
       "sha256": "b1d95e260a84380c7d79213203c52aa20c597ebba1df4a64fd3695f577cea145"
@@ -322,14 +257,24 @@
       "sha256": "313f62be1bd7b9dc27321e4689425bbdeb11493221d0099472008876029fa7d3"
     },
     {
+      "path": "docs/COVERAGE_INDEX.md",
+      "bytes": 18513,
+      "sha256": "63e7e002a75972fd71b9f56cd6240d3d9d51581dd96702f2d3cd2f5e270e7c6b"
+    },
+    {
       "path": "docs/CROSS_PLATFORM_TOOLING_GUIDE.md",
-      "bytes": 8851,
-      "sha256": "a16d30c993570cb2835ada882173ef11121c66c16d16acb222d1c37509cfd446"
+      "bytes": 8848,
+      "sha256": "2d4f27fdd04fd4b57223dc64eef33d68799e14b06e5d9ef5b18afcc91ca7530f"
     },
     {
       "path": "docs/EVALUATION_MANUAL.md",
       "bytes": 3686,
       "sha256": "8b9f0abaf94d09935a05a5523100387d2d6c0df1d5f4c0528d13dc4b4c7411ff"
+    },
+    {
+      "path": "docs/EVIDENCE_LANES.md",
+      "bytes": 1592,
+      "sha256": "12bedfc052078a8a7edb06cef58b1fe6efc7af22edb1e88397587895f0e42af2"
     },
     {
       "path": "docs/EXECUTIVE_DECISION_RULES_GUIDE.md",
@@ -340,6 +285,11 @@
       "path": "docs/GENERIC_SKILL_EXECUTION_GUIDE.md",
       "bytes": 6050,
       "sha256": "2ffedcf0c27370fb8a582bb65a85c692c4a1145e40c0fe88ad8299edfc47d802"
+    },
+    {
+      "path": "docs/GSTACK_INTEGRATION.md",
+      "bytes": 11048,
+      "sha256": "b49933cbeff75cd8bec4874686e6d0203e25d43c381bda82e6cda90a3d7d7866"
     },
     {
       "path": "docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md",
@@ -358,8 +308,13 @@
     },
     {
       "path": "docs/LOGGING_AND_TELEMETRY_GUIDE.md",
-      "bytes": 8043,
-      "sha256": "23034f6fc65affb01952c7e4e6ef0e05d5801496d52bdc224f5dde29262bc326"
+      "bytes": 8040,
+      "sha256": "909661f7394e0bcf1cdc38fdc5f8937de1ab9fc7520a66a3dc28bc746d3263d0"
+    },
+    {
+      "path": "docs/MANUALS.md",
+      "bytes": 8514,
+      "sha256": "1c47a0572a9d69c5d1aeb019a193a85b6613b00261d6aedb097a0982cc2d9e79"
     },
     {
       "path": "docs/MANUAL_QUALITY_STANDARD.md",
@@ -412,14 +367,44 @@
       "sha256": "412b36050a13e42f0582cf075f20c0f592632eeca672fa5e8c47f9e49ea9717e"
     },
     {
+      "path": "docs/PROMPT_CATALOG.md",
+      "bytes": 104673,
+      "sha256": "277a0ad1c41c6d0a0dfc256dcdd60394ec5061be06b2701d07e368424bf6c9b2"
+    },
+    {
+      "path": "docs/PROMPT_ENGINEERING_METHODS.md",
+      "bytes": 3781,
+      "sha256": "8f1a3012df09ac3982d44567bd7169d3780f6dd4e71ea00324b64af2a00afa0c"
+    },
+    {
+      "path": "docs/PROMPT_STRUCTURE_STANDARD.md",
+      "bytes": 11065,
+      "sha256": "b7a710a0035a9a77dd95aa12e906bf48fb0e2b42b381334dbc4271f397f8649d"
+    },
+    {
+      "path": "docs/PROMPT_SUITE_CONVENTIONS.md",
+      "bytes": 8547,
+      "sha256": "82581430fd722239321e6195b79cd4b70d2bf93c1480e7700015315777396678"
+    },
+    {
       "path": "docs/README.md",
       "bytes": 2505,
       "sha256": "a71976d89b834e8b2c06d9361af57860ba5b7ba1332aec9dd3d3f7c1d02775cf"
     },
     {
+      "path": "docs/RECOMMENDED_SKILL_STACKS.md",
+      "bytes": 7756,
+      "sha256": "1a9f66c64c19c201da6dca6447e6ffe8827120c88480870be737c2ee0fbc120c"
+    },
+    {
       "path": "docs/RECOVERY_AND_ROLLBACK_GUIDE.md",
       "bytes": 4103,
       "sha256": "bfb7878d5213daddb8b04ff7d23e42ee4c5bd667c83dfe09fd71e5d1e2dd8e35"
+    },
+    {
+      "path": "docs/RESEARCH_BASIS.md",
+      "bytes": 3595,
+      "sha256": "11f3e84a689d92b63acb8659b1b4527f56051b5c5f61855fe363868e5d689084"
     },
     {
       "path": "docs/ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md",
@@ -437,9 +422,24 @@
       "sha256": "7efe49fc3cad0e55abef022cb1a0225cf8228df75810e3ee855fc83c7a6c8f04"
     },
     {
+      "path": "docs/SECURITY_BOUNDARIES.md",
+      "bytes": 1328,
+      "sha256": "d90cb1eaf90c6b1b2cf35ac33f670b4d44913aa7bd3732c1787816e82c5df539"
+    },
+    {
       "path": "docs/SECURITY_OPERATIONS_GUIDE.md",
       "bytes": 3161,
       "sha256": "6790b549e60c59aabf7768b0acb0a033f1fe529b0cdba2666e3a29c189985761"
+    },
+    {
+      "path": "docs/SKILL_INSTALL_COMMANDS.md",
+      "bytes": 35585,
+      "sha256": "cfbfa8b0731b9774443b85011f286c79249d0c3ad05887b7f2a270123129d96f"
+    },
+    {
+      "path": "docs/SKILL_ROUTING.md",
+      "bytes": 7273,
+      "sha256": "590cbb74470048c274487a3fef9e3a8b5c04bc0dd5416c7c6464e7f25b01b969"
     },
     {
       "path": "docs/SKILL_SUPPLY_CHAIN_GUIDE.md",
@@ -453,8 +453,8 @@
     },
     {
       "path": "docs/TEMPLATE_SYSTEM_GUIDE.md",
-      "bytes": 8747,
-      "sha256": "09f6888060468f84b6b54b055de47f214428e51b9bd635d30f89f71ae5430284"
+      "bytes": 8744,
+      "sha256": "7cf6b958cb5604478140b2b66ab73711e0732a45de799d41a9d8aee7aa80367e"
     },
     {
       "path": "docs/TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md",
@@ -468,8 +468,8 @@
     },
     {
       "path": "docs/TUI_AND_OPERATOR_EXPERIENCE_GUIDE.md",
-      "bytes": 9268,
-      "sha256": "8c57e16f7c164c1f7f4a9eb8d4e400c300a982e3cca1bd2304bedb245bab2837"
+      "bytes": 9265,
+      "sha256": "c36cbc6806685396bd9e5ed421382bd1bdfc66872f9db2c662352b6ad2ea9024"
     },
     {
       "path": "docs/USER_MANUAL.md",
@@ -9903,8 +9903,8 @@
     },
     {
       "path": "tests/test_mastery_manual.py",
-      "bytes": 816,
-      "sha256": "2e61784fb1f2974dbefca4f602b6fb29d7479c56471204959760327bbe83b942"
+      "bytes": 1020,
+      "sha256": "e2720ef496cb37b5e92ea658aa8abcb801f4f1b693ae454ebdb9a2913a659233"
     },
     {
       "path": "tests/test_md.py",
@@ -9933,8 +9933,8 @@
     },
     {
       "path": "tests/test_schema_contracts.py",
-      "bytes": 3445,
-      "sha256": "c740db36046f28c3275b4c40856826b2dafcce67a01403a8d586d9a81c884180"
+      "bytes": 4573,
+      "sha256": "d8fcbac96ee372ddac3d9f0a71b4fbfb3c2dd4e6fbe1d8ef1fcd4c1ad23a54eb"
     },
     {
       "path": "tests/test_security_hardening.py",
@@ -10003,8 +10003,8 @@
     },
     {
       "path": "tools/check_generated_reproducibility.py",
-      "bytes": 3087,
-      "sha256": "8b6e4d8b4bd4bf7a58dc784dd0bffc42ac07ce03c2ab831c2699160f0da7d34c"
+      "bytes": 3092,
+      "sha256": "13bb69c7e8757acb26fae4ca560f37661a3bf972562f8aefbe7722f7188ab3b9"
     },
     {
       "path": "tools/check_release_consistency.py",
@@ -10088,8 +10088,8 @@
     },
     {
       "path": "tools/rebuild_suite_metadata.py",
-      "bytes": 6686,
-      "sha256": "611ed2412bb1a1324cf931987ac8e71058debc248e3fd71ee24bf24809d47104"
+      "bytes": 6694,
+      "sha256": "26aa0c54e572e55772b712d5f047ae000428b7f895bb36431bf87fc6019fc105"
     },
     {
       "path": "tools/refine_prompt_bodies.py",
@@ -10198,8 +10198,8 @@
     },
     {
       "path": "tools/sync_agent_guidance.py",
-      "bytes": 20658,
-      "sha256": "ce6f7dcd766145c84490ea4e6af2df618ccbf3b12af86291e4c170f5dc8a18de"
+      "bytes": 20663,
+      "sha256": "77a88ad3abc8c919a11949598cdbaec56a8015e0f9c896b279ffe0710525a467"
     },
     {
       "path": "tools/sync_installed_skills.py",
@@ -10238,8 +10238,8 @@
     },
     {
       "path": "tools/validate_suite.py",
-      "bytes": 42646,
-      "sha256": "c7fbff7ea3540313ade1d4560b272e1ded1c11ac8c9168ac9b2cae93cce4a9c1"
+      "bytes": 42716,
+      "sha256": "5bf501deba62e6ef59c6465aaa44235df163633cdeb549a85003097b057bc2cf"
     },
     {
       "path": "tools/validate_templates.py",
