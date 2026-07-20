@@ -14,7 +14,7 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         with:
           python-version: '3.12'
-      - run: uv pip install --system -r requirements-dev.txt
+      - run: uv pip install -r requirements-dev.txt
       - name: Deterministic tests
         run: python tools/run_tests.py
       - name: Validate templates
