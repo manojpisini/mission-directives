@@ -1,1 +1,0 @@
-& "$PSScriptRoot\tools\cleanup.ps1" @args

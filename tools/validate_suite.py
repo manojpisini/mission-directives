@@ -218,7 +218,7 @@ for _, m, _ in items:
     unknown = set(m.get("preferred_skills") or []) - skill_ids
     if unknown:
         errors.append(f"{m['prompt_id']}: unknown skills {sorted(unknown)}")
-inventory = load(ROOT / "installed_skills_inventory.json")
+inventory = load(ROOT / "config/installed_skills_inventory.json")
 observed_ids = {x.get("skill_id") for x in inventory.get("skills", [])}
 if inventory.get("skill_count") != len(observed_ids):
     errors.append("installed skill inventory count mismatch")
@@ -364,9 +364,9 @@ for _, m, b in items:
             )
 
 # Conditional auto-prompt contracts.
-auto = load(ROOT / "auto_prompt_policy.json")
-loop_policy = load(ROOT / "loop_execution_policy.json")
-acquisition = load(ROOT / "skill_acquisition_policy.json")
+auto = load(ROOT / "policies/auto_prompt_policy.json")
+loop_policy = load(ROOT / "policies/loop_execution_policy.json")
+acquisition = load(ROOT / "policies/skill_acquisition_policy.json")
 expected_auto = {f"MD-{i:02d}" for i in range(191, 199)}
 if not expected_auto <= set(ids):
     errors.append("conditional auto-prompt set is incomplete")
@@ -431,8 +431,8 @@ if not any(
     )
 if not any(
     row.get("tool_id") == "cleanup-project"
-    and row.get("bash") == "cleanup.sh"
-    and row.get("powershell") == "cleanup.ps1"
+    and row.get("bash") == "tools/cleanup.sh"
+    and row.get("powershell") == "tools/cleanup.ps1"
     for row in platform_matrix.get("tools", [])
 ):
     errors.append(
@@ -447,11 +447,11 @@ for required in (
 ):
     if not (ROOT / required).is_file():
         errors.append(f"missing project cleanup artifact: {required}")
-inv = load(ROOT / "installed_skills_inventory.json")
+inv = load(ROOT / "config/installed_skills_inventory.json")
 if inv.get("skill_count") != len(inv.get("skills", [])):
     errors.append("installed skill inventory count mismatch")
 
-locks = load(ROOT / "skills.lock.json")
+locks = load(ROOT / "config/skills.lock.json")
 entries = locks.get("entries", [])
 if len(entries) != len(installable):
     errors.append("skill lock count mismatch")
@@ -559,7 +559,7 @@ if len(list((ROOT / "evaluations/golden_runs").glob("C-*/manifest.json"))) < 10:
     errors.append("reference run archive incomplete")
 
 # Model profiles: populated but no fabricated production selection required.
-profiles = load(ROOT / "model_profiles.json")
+profiles = load(ROOT / "config/model_profiles.json")
 if not profiles.get("profiles"):
     errors.append("model profile registry empty")
 for p in profiles.get("profiles", []):
@@ -569,7 +569,7 @@ for p in profiles.get("profiles", []):
         )
 
 # State and policies.
-sm = load(ROOT / "run_state_machine.json")
+sm = load(ROOT / "policies/run_state_machine.json")
 states = set(sm.get("states", []))
 for a, bs in sm.get("transitions", {}).items():
     if a not in states or set(bs) - states:
@@ -588,11 +588,11 @@ for required in (
 ):
     if not (ROOT / "policies" / f"{required}.json").exists():
         errors.append(f"missing policy {required}")
-if not (ROOT / "gates.json").exists():
+if not (ROOT / "policies/gates.json").exists():
     errors.append("missing reusable gate registry")
 
 # Generated graph and body-audit integrity.
-graph = load(ROOT / "capability_graph.json")
+graph = load(ROOT / "config/capability_graph.json")
 if graph.get("suite_version") != version:
     errors.append("capability graph suite version mismatch")
 if len(graph.get("nodes", [])) != len(items):
@@ -635,7 +635,7 @@ if audit.get("pairs", {}).get("duplicated_verification_blocks") != 0:
     errors.append("prompt body pair verification duplication detected")
 
 # Template, logging, and platform integrity.
-template_registry = load(ROOT / "template_registry.json")
+template_registry = load(ROOT / "config/template_registry.json")
 template_ids = {x.get("template_id") for x in template_registry.get("templates", [])}
 used_templates = set()
 for _, m, body in items:
@@ -726,13 +726,13 @@ required_root = [
     "COVERAGE_INDEX.md",
     "catalog.json",
     "SCENARIO_CATALOG.json",
-    "capability_graph.json",
+    "config/capability_graph.json",
     "skill_registry.json",
-    "skills.lock.json",
-    "department_packs.json",
-    "assurance_profiles.json",
-    "run_state_machine.json",
-    "model_profiles.json",
+    "config/skills.lock.json",
+    "config/department_packs.json",
+    "policies/assurance_profiles.json",
+    "policies/run_state_machine.json",
+    "config/model_profiles.json",
     "tools/md.py",
     "tools/add_prompt.py",
     "tools/add-prompt.sh",
@@ -781,20 +781,20 @@ required_root = [
     "schemas/prompt_addition_receipt.schema.json",
     "policies/prompt_addition_policy.json",
     "docs/PROMPT_ADDITION_AND_REGISTRATION_GUIDE.md",
-    "template_registry.json",
-    "template_routing_policy.json",
+    "config/template_registry.json",
+    "policies/template_routing_policy.json",
     "schemas/auto_orchestration_request.schema.json",
     "schemas/visual_asset_brief.schema.json",
     "schemas/skill_creation_spec.schema.json",
     "schemas/plan_review_receipt.schema.json",
     "schemas/execution_consent_receipt.schema.json",
     "schemas/paired_workflow.schema.json",
-    "skill_acquisition_policy.json",
-    "agent_guidance_policy.json",
-    "auto_prompt_policy.json",
-    "loop_execution_policy.json",
-    "installed_skills_inventory.json",
-    "skill_aliases.json",
+    "policies/skill_acquisition_policy.json",
+    "policies/agent_guidance_policy.json",
+    "policies/auto_prompt_policy.json",
+    "policies/loop_execution_policy.json",
+    "config/installed_skills_inventory.json",
+    "config/skill_aliases.json",
     "requirements-dev.txt",
     ".github/workflows/validate.yml",
     ".pre-commit-config.yaml",
@@ -854,7 +854,7 @@ for m in manuals:
         errors.append(f"missing or shallow manual {m}")
 
 # Root agent guidance and keyword lookup integrity.
-agent_policy = load(ROOT / "agent_guidance_policy.json")
+agent_policy = load(ROOT / "policies/agent_guidance_policy.json")
 required_agent_files = {"AGENTS.md", "CLAUDE.md"}
 if set(agent_policy.get("default_agent_files", [])) != required_agent_files:
     errors.append(
@@ -918,7 +918,7 @@ except Exception as e:
     errors.append(f"MD keyword lookup validation failed: {e}")
 
 # Paired plan-review and exact-twin runtime integrity.
-state_machine = load(ROOT / "run_state_machine.json")
+state_machine = load(ROOT / "policies/run_state_machine.json")
 for state in (
     "plan_review_pending",
     "plan_revision_pending",

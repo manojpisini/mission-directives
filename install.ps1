@@ -1,1 +1,0 @@
-& "$PSScriptRoot\tools\install.ps1" @args

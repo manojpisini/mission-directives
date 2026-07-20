@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     try:
         from tool_runtime import bootstrap_tool
     except ImportError:
@@ -14,7 +15,7 @@ import json
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "capability_graph.json"
+OUT = ROOT / "config/capability_graph.json"
 
 
 def build() -> dict:
@@ -56,7 +57,11 @@ def build() -> dict:
                 if edge not in seen:
                     seen.add(edge)
                     edges.append({"from": prompt_id, "to": pair, "type": edge_type})
-    return {"suite_version": (ROOT / "VERSION").read_text().strip(), "nodes": nodes, "edges": edges}
+    return {
+        "suite_version": (ROOT / "VERSION").read_text().strip(),
+        "nodes": nodes,
+        "edges": edges,
+    }
 
 
 def main() -> int:
@@ -67,10 +72,30 @@ def main() -> int:
     if args.check:
         existing = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else None
         ok = existing == current
-        print(json.dumps({"status": "pass" if ok else "fail", "nodes": len(current["nodes"]), "edges": len(current["edges"])}, indent=2))
+        print(
+            json.dumps(
+                {
+                    "status": "pass" if ok else "fail",
+                    "nodes": len(current["nodes"]),
+                    "edges": len(current["edges"]),
+                },
+                indent=2,
+            )
+        )
         return 0 if ok else 1
-    OUT.write_text(json.dumps(current, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(json.dumps({"status": "pass", "nodes": len(current["nodes"]), "edges": len(current["edges"])}, indent=2))
+    OUT.write_text(
+        json.dumps(current, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    print(
+        json.dumps(
+            {
+                "status": "pass",
+                "nodes": len(current["nodes"]),
+                "edges": len(current["edges"]),
+            },
+            indent=2,
+        )
+    )
     return 0
 
 

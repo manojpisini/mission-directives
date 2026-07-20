@@ -292,11 +292,12 @@ def test_cleanup_receipt_schema_accepts_result(tmp_path):
 
 
 def test_root_cleanup_has_bash_and_powershell_launchers():
-    assert (ROOT / "cleanup.py").exists()
-    assert (ROOT / "cleanup.sh").exists()
-    assert (ROOT / "cleanup.ps1").exists()
-    assert "set -euo pipefail" in (ROOT / "cleanup.sh").read_text(encoding="utf-8")
-    ps = (ROOT / "cleanup.ps1").read_text(encoding="utf-8")
+    assert (ROOT / "tools/cleanup.sh").exists()
+    assert (ROOT / "tools/cleanup.ps1").exists()
+    assert "set -euo pipefail" in (ROOT / "tools/cleanup.sh").read_text(
+        encoding="utf-8"
+    )
+    ps = (ROOT / "tools/cleanup.ps1").read_text(encoding="utf-8")
     assert "Write-Progress" in ps
     assert "Mission Directives {0}" in ps
     assert "$SuiteVersion:" not in ps

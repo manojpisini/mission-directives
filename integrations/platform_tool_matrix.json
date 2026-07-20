@@ -10,8 +10,8 @@
     },
     {
       "tool_id": "cleanup-project",
-      "bash": "cleanup.sh",
-      "powershell": "cleanup.ps1",
+      "bash": "tools/cleanup.sh",
+      "powershell": "tools/cleanup.ps1",
       "semantic_parity_required": true
     },
     {

@@ -42,7 +42,7 @@ except ImportError:
     )
 
 SUITE_ROOT = Path(__file__).resolve().parents[1]
-POLICY_PATH = SUITE_ROOT / "agent_guidance_policy.json"
+POLICY_PATH = SUITE_ROOT / "policies/agent_guidance_policy.json"
 BEGIN_MARKER = "<!-- BEGIN MD MANAGED GUIDANCE -->"
 END_MARKER = "<!-- END MD MANAGED GUIDANCE -->"
 FALLBACK_DEFAULT_AGENT_FILES = ["AGENTS.md", "CLAUDE.md"]
@@ -50,7 +50,7 @@ SUPPORTED_AGENT_FILES = frozenset(FALLBACK_DEFAULT_AGENT_FILES)
 
 
 def load_policy(suite_root: Path = SUITE_ROOT) -> dict:
-    path = suite_root / "agent_guidance_policy.json"
+    path = suite_root / "policies/agent_guidance_policy.json"
     if path.exists():
         return json.loads(path.read_text(encoding="utf-8"))
     return {
@@ -138,8 +138,8 @@ def render_guidance(
     scenarios_path = _join(suite_rel, "SCENARIO_CATALOG.json")
     execution_path = _join(suite_rel, "PROMPT_EXECUTION_ORDER.md")
     skill_registry_path = _join(suite_rel, "skill_registry.json")
-    policy_path = _join(suite_rel, "auto_prompt_policy.json")
-    loop_policy_path = _join(suite_rel, "loop_execution_policy.json")
+    policy_path = _join(suite_rel, "policies/auto_prompt_policy.json")
+    loop_policy_path = _join(suite_rel, "policies/loop_execution_policy.json")
     blocks = [
         BEGIN_MARKER,
         "## MD prompt routing and productivity guidance",
