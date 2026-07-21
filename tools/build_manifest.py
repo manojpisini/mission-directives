@@ -26,7 +26,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED_FILENAMES = {"MANIFEST.json", "VALIDATION.json"}
-EXCLUDED_DIRNAMES = {"__pycache__", ".pytest_cache", ".git", ".ruff_cache"}
+EXCLUDED_DIRNAMES = {"__pycache__", ".pytest_cache", ".git", ".ruff_cache", ".venv"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo"}
 RUNTIME_PREFIXES = {
     (".prompt_suite", "logs"),
@@ -80,7 +80,7 @@ def current(root: Path = ROOT) -> dict[str, object]:
     root = root.resolve()
     files = []
     for path in iter_manifest_files(root):
-        data = path.read_bytes().replace(b'\r\n', b'\n')
+        data = path.read_bytes().replace(b"\r\n", b"\n")
         files.append(
             {
                 "path": path.relative_to(root).as_posix(),
