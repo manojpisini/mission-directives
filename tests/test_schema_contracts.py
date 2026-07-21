@@ -87,24 +87,23 @@ def test_current_runtime_artifacts_validate_against_declared_schemas():
                         "errors": [x.message for x in issues[:3]],
                     }
                 )
-        check(
-            "installed_skill_inventory.schema.json",
-            [json.loads((ROOT / "config/installed_skills_inventory.json").read_text())],
-        )
-        check(
-            "skill_lock.schema.json",
-            json.loads((ROOT / "config/skills.lock.json").read_text())["entries"],
-        )
-        check(
-            "model_profile.schema.json",
-            json.loads((ROOT / "config/model_profiles.json").read_text())["profiles"],
-        )
-        check(
-            "template_descriptor.schema.json",
-            json.loads((ROOT / "config/template_registry.json").read_text())[
-                "templates"
-            ],
-        )
+
+    check(
+        "installed_skill_inventory.schema.json",
+        [json.loads((ROOT / "config/installed_skills_inventory.json").read_text())],
+    )
+    check(
+        "skill_lock.schema.json",
+        json.loads((ROOT / "config/skills.lock.json").read_text())["entries"],
+    )
+    check(
+        "model_profile.schema.json",
+        json.loads((ROOT / "config/model_profiles.json").read_text())["profiles"],
+    )
+    check(
+        "template_descriptor.schema.json",
+        json.loads((ROOT / "config/template_registry.json").read_text())["templates"],
+    )
 
     mappings = []
     for name in [

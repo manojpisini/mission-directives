@@ -454,6 +454,7 @@ def test_skill_conformance_requires_exact_relative_artifact_path(tmp_path, monke
     fake_root = tmp_path / "suite"
     (fake_root / "evaluations/skills").mkdir(parents=True)
     (fake_root / "schemas").mkdir()
+    (fake_root / "config").mkdir()
     spec = {
         "skill_id": "demo-skill",
         "lock_required": True,
@@ -474,7 +475,7 @@ def test_skill_conformance_requires_exact_relative_artifact_path(tmp_path, monke
     (fake_root / "evaluations/skills/demo-skill.json").write_text(
         json.dumps(spec), encoding="utf-8"
     )
-    (fake_root / "skills.lock.json").write_text(
+    (fake_root / "config/skills.lock.json").write_text(
         json.dumps(
             {
                 "entries": [
@@ -653,7 +654,7 @@ def test_canonical_test_runner_disables_uncontrolled_pytest_plugin_autoload():
 
 def test_canonical_test_runner_uses_bounded_per_file_execution():
     text = (ROOT / "tools/run_tests.py").read_text(encoding="utf-8")
-    assert "glob('test_*.py')" in text
+    assert '(ROOT / "tests").glob("test_*.py")' in text or "glob('test_*.py')" in text
     assert "--per-file-timeout" in text
     assert "subprocess.TimeoutExpired" in text
 
