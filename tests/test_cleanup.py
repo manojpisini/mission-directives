@@ -186,7 +186,7 @@ def test_installed_cleanup_script_can_remove_its_own_prompts_tree(tmp_path):
     installer = _load(ROOT / "tools/install.py", "md_install_cleanup_self")
     project = tmp_path / "project"
     installer.install(project)
-    installed_cleanup = project / "prompts" / "cleanup.py"
+    installed_cleanup = project / "prompts" / "tools" / "cleanup.py"
     proc = subprocess.run(
         [sys.executable, str(installed_cleanup), str(project), "--yes", "--no-tui"],
         capture_output=True,
