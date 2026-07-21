@@ -415,6 +415,7 @@ def _tree_state_digest(root: Path) -> str:
     for directory, dirnames, filenames in os.walk(
         root, topdown=True, followlinks=False
     ):
+        dirnames[:] = [d for d in dirnames if d != ".venv"]
         current = Path(directory)
         dirnames.sort()
         filenames.sort()
