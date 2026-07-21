@@ -196,6 +196,9 @@ def iter_tree_files(root: Path) -> Iterable[Path]:
     ):
         current = Path(directory)
         for name in list(dirnames):
+            if name == ".venv":
+                dirnames.remove(name)
+                continue
             candidate = current / name
             if candidate.is_symlink():
                 raise ValueError(

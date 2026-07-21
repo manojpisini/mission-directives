@@ -178,7 +178,10 @@ def test_skills_cli_is_pinned_and_noninteractive():
     text = (ROOT / "tools" / "skill_dual.py").read_text(encoding="utf-8")
     assert "skills@1.5.17" in text
     compact = "".join(text.split())
-    assert "'npx','--yes',SKILLS_CLI_PACKAGE,'add'" in compact
+    assert (
+        "'npx','--yes',SKILLS_CLI_PACKAGE,'add'" in compact
+        or '"npx","--yes",SKILLS_CLI_PACKAGE,"add"' in compact
+    )
     assert "stdin=subprocess.DEVNULL" in compact
     assert "timeout=SKILLS_CLI_TIMEOUT_SECONDS" in compact
 
@@ -326,10 +329,15 @@ def test_cross_platform_wrappers_capture_failure_and_discover_python():
     for path in (ROOT / "tools").glob("*.ps1"):
         text = path.read_text(encoding="utf-8")
         assert "Get-Command python3" in text
-        assert "$Code=$LASTEXITCODE" in text
-        assert text.index(
-            "Write-Progress", text.index("$Code=$LASTEXITCODE")
-        ) < text.index("exit $Code")
+        if "$Code=$LASTEXITCODE" in text:
+            assert text.index(
+                "Write-Progress", text.index("$Code=$LASTEXITCODE")
+            ) < text.index("exit $Code")
+        else:
+            assert "$ExitCode = $LASTEXITCODE" in text
+            assert text.index(
+                "Write-Progress", text.index("$ExitCode = $LASTEXITCODE")
+            ) < text.index("exit $ExitCode")
 
 
 def test_agent_path_override_preserves_symlink_for_downstream_rejection(
