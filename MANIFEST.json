@@ -10208,8 +10208,8 @@
     },
     {
       "path": "tools/validate-suite.ps1",
-      "bytes": 791,
-      "sha256": "33fbbb0b834fddfbf2fcd59a137aae12376c1c38d6af86be9082cd92ff0d880e"
+      "bytes": 997,
+      "sha256": "fb0250936584aabb5940e420faaa6c062ef7be3ad147d1f25a9f2fa812f49a57"
     },
     {
       "path": "tools/validate-suite.sh",
