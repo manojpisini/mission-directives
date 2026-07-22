@@ -3,7 +3,7 @@
   "installation_root": "<project>/prompts",
   "managed_agent_files": ["AGENTS.md", "CLAUDE.md"],
   "tracked_project_directories": ["docs"],
-  "ignored_project_directories": ["prompts", ".prompt_suite", "results", "reports", "logs", "artifacts", "outputs", ".md-prompts-staging-*", ".md-prompts-backup-*"],
+  "ignored_project_directories": ["prompts", ".prompt_suite", "results", "reports", "logs", "artifacts", "outputs", ".mds-*", ".md-prompts-staging-*", ".md-prompts-backup-*"],
   "requirements": [
     "Stage the complete distribution before promotion.",
     "Fail closed when prompts already exists unless replacement is explicit.",

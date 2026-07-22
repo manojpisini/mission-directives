@@ -47,6 +47,15 @@ def _copy_suite(destination: Path) -> None:
     )
 
 
+def _symlink_or_skip(link: Path, target: Path) -> None:
+    try:
+        link.symlink_to(target)
+    except OSError as exc:
+        if getattr(exc, "winerror", None) == 1314:
+            pytest.skip("Windows symlink privilege is unavailable")
+        raise
+
+
 def _approval_token(add_prompt, suite: Path, source: Path, title: str, **kwargs) -> str:
     preview = add_prompt.add_prompt_transaction(
         suite, source=source, title=title, dry_run=True, run_full_tests=False, **kwargs
@@ -107,7 +116,7 @@ def test_prompt_addition_rejects_unknown_skill_and_symlink(tmp_path):
             preferred_skills=["definitely-missing-skill"],
         )
     link = tmp_path / "link.md"
-    link.symlink_to(source)
+    _symlink_or_skip(link, source)
     with pytest.raises(ValueError, match="symlink"):
         add_prompt.prepare_prompt(ROOT, source=link, title="Symlink prompt")
 

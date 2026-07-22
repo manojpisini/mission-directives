@@ -29,7 +29,7 @@ Use `--dry-run` first to inspect the operation. Use `--replace` only when updati
 ## Exact effects
 
 1. Copies the distribution to `<project>/prompts` through a staging directory.
-2. Adds one managed block to `<project>/.gitignore` for `/prompts/`, `/.prompt_suite/`, `/results/`, `/reports/`, `/logs/`, `/artifacts/`, `/outputs/`, `/.md-prompts-staging-*/`, and `/.md-prompts-backup-*/`.
+2. Adds one managed block to `<project>/.gitignore` for `/prompts/`, `/.prompt_suite/`, `/results/`, `/reports/`, `/logs/`, `/artifacts/`, `/outputs/`, `/.mds-*/`, `/.md-prompts-staging-*/`, and `/.md-prompts-backup-*/`.
 3. Leaves `/docs/` tracked and creates it when absent.
 4. Creates internal runtime directories.
 5. Creates or updates only `AGENTS.md` and `CLAUDE.md` using managed markers; all text outside those markers is preserved.

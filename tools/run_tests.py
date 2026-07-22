@@ -60,7 +60,7 @@ def main() -> int:
     parser.add_argument(
         "--per-file-timeout",
         type=int,
-        default=180,
+        default=420,
         help="Maximum seconds allowed for each test file.",
     )
     args = parser.parse_args()

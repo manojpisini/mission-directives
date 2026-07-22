@@ -3,8 +3,8 @@
   "files": [
     {
       "path": ".github/workflows/validate.yml",
-      "bytes": 1168,
-      "sha256": "3f5d3e03b30275fc0c3457129597dead98b51baee1bf653b4afc91a0bff54886"
+      "bytes": 1185,
+      "sha256": "b74ebb178264048cf220e76453ddd8299dd8528fbaf5548011fb74a900d1bc6f"
     },
     {
       "path": ".gitignore",
@@ -293,8 +293,8 @@
     },
     {
       "path": "docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md",
-      "bytes": 2877,
-      "sha256": "b062ae6a4a74a3f60c104a8e0d5e0e4d7e0347bb298036ded205246e3a7d1eae"
+      "bytes": 2889,
+      "sha256": "f5c6eff5f3b6062a764758aa78f8f565c1887224056e7e199cc348fd1fa87b28"
     },
     {
       "path": "docs/INSTALLED_SKILLS_INVENTORY_GUIDE.md",
@@ -348,8 +348,8 @@
     },
     {
       "path": "docs/PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md",
-      "bytes": 6450,
-      "sha256": "9a01cf7029e58bf4417b11d28d2672aff78bff2fdb71ccc38787e18a16ef5d28"
+      "bytes": 6461,
+      "sha256": "6eaac3687e15eed1af76c8405e60ea934ea0ddec9e0662bb0f17778c3bf6e6f8"
     },
     {
       "path": "docs/PROMPT_ADDITION_AND_REGISTRATION_GUIDE.md",
@@ -8148,8 +8148,8 @@
     },
     {
       "path": "policies/project_installation_policy.json",
-      "bytes": 812,
-      "sha256": "1759153ef77e430050051c31b15746b34a73c24d0e75cb70928333b2d7781940"
+      "bytes": 822,
+      "sha256": "0737b8c574bfacc758fc4cf9e0504333b61aa6867c75559540a72b7ebe0fa0e1"
     },
     {
       "path": "policies/prompt_addition_policy.json",
@@ -9863,13 +9863,13 @@
     },
     {
       "path": "tests/test_agent_guidance.py",
-      "bytes": 6389,
-      "sha256": "6f9187567c4901c95aab7b24e01ec04462e1a54ec8d164dd7ceda1e21696015f"
+      "bytes": 6767,
+      "sha256": "4ed191f5df5c60bd7a8df52b254c835af7766434e5383f334f9276ac4cf64c45"
     },
     {
       "path": "tests/test_cleanup.py",
-      "bytes": 11276,
-      "sha256": "9d938b741ecca7d9132b9460d93db8b18e9a3ce913398e5f1feac3cb9f06a9ec"
+      "bytes": 11286,
+      "sha256": "f827edaa821fe9e331ba0ef7b851d325918e24d704699514b76bfe894ba25e3f"
     },
     {
       "path": "tests/test_cli_failure_contract.py",
@@ -9908,18 +9908,18 @@
     },
     {
       "path": "tests/test_md.py",
-      "bytes": 13688,
-      "sha256": "ff96bdd5047f67e942942e3280603086a3c49c821831b52180da5c7828f7e68d"
+      "bytes": 13709,
+      "sha256": "25a7e28ba9bf60e4e93c34e3912eddf5e8d269bea96bae437025e0a2930be0a2"
     },
     {
       "path": "tests/test_prompt_addition.py",
-      "bytes": 20638,
-      "sha256": "eda4b07e88dd59f909d6550f61e0de35d834b18a638ee4a7968b5c2c737a4717"
+      "bytes": 22072,
+      "sha256": "ab0d69294bd96899d227a4ba210b36ac194e89adf22e449123c3f4f1799e2d8b"
     },
     {
       "path": "tests/test_prompt_body_quality.py",
-      "bytes": 10977,
-      "sha256": "cd7d64eded768abadbf6d5e13be74e21f1deb044219485657bdcf340aaca75a0"
+      "bytes": 10984,
+      "sha256": "42264618bad30bea3fa630e8f3b89cbea492f2763df665bfb1cab2243f94b185"
     },
     {
       "path": "tests/test_release_consistency.py",
@@ -9928,18 +9928,18 @@
     },
     {
       "path": "tests/test_release_paths_installer.py",
-      "bytes": 7451,
-      "sha256": "cd60f3ca1234ecc979a9f1aec2d9a5fc75fb5ff7403f1a71659b3a4d2722ffd0"
+      "bytes": 7580,
+      "sha256": "20fddabe4ec5d63134020c45b0ac1aebaafb94e97d03c34592311f0567209c0e"
     },
     {
       "path": "tests/test_schema_contracts.py",
-      "bytes": 4573,
-      "sha256": "d8fcbac96ee372ddac3d9f0a71b4fbfb3c2dd4e6fbe1d8ef1fcd4c1ad23a54eb"
+      "bytes": 4480,
+      "sha256": "10ba15d5700efe0e26d1770cd50a9058487c03843536fcd5777effc3f0d5d5f7"
     },
     {
       "path": "tests/test_security_hardening.py",
-      "bytes": 24137,
-      "sha256": "72525ebc52cd2a95ec433516b2d3fae669a0e496a4d713d9df7626dc1b333760"
+      "bytes": 24885,
+      "sha256": "11cb502720facf58b03549ad61c692e272bbd1c46ca4a4bcaef9c6be9af6eae7"
     },
     {
       "path": "tests/test_template_system.py",
@@ -9988,8 +9988,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 4041,
-      "sha256": "286877632c030c4078be0267cbc05332195cc733d9fe4dd4e7cc07afb61ecbd9"
+      "bytes": 4050,
+      "sha256": "495bf9f4ff4fd7182c902c0a25e495e8c7d36ae378222ef176e7a6814cad7ce0"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",
@@ -10008,8 +10008,8 @@
     },
     {
       "path": "tools/check_release_consistency.py",
-      "bytes": 3725,
-      "sha256": "6b555dbdf811c905dcb05f12a9da3b7edc0c2908c793e6c1809acbcdd48d3347"
+      "bytes": 4462,
+      "sha256": "74a01d36e06133b8f41736e880708681e26a408a2039d1a1530846edf083b18f"
     },
     {
       "path": "tools/check_script_parity.py",
@@ -10028,8 +10028,8 @@
     },
     {
       "path": "tools/cleanup.py",
-      "bytes": 29951,
-      "sha256": "cbee5cd3d559073df9fe9d0c975fe12f2dafb95b30d13cc440a94b1c3303690f"
+      "bytes": 30190,
+      "sha256": "3f73d12922441aa88186297affa7d2454e8ab94e76c229945f9586cde9162440"
     },
     {
       "path": "tools/cleanup.sh",
@@ -10048,8 +10048,8 @@
     },
     {
       "path": "tools/install.py",
-      "bytes": 14426,
-      "sha256": "6e979cd4f87c621a1b6bdb4dd044ddf07bee5cc9ccd6cd711f6bcf9e34bff0db"
+      "bytes": 14762,
+      "sha256": "c77cc973106f2b16fbce4be71262e70f1c09ae37142adac4fcf953b5e665cd1b"
     },
     {
       "path": "tools/install.sh",
@@ -10163,13 +10163,13 @@
     },
     {
       "path": "tools/run_tests.py",
-      "bytes": 4796,
-      "sha256": "b0ea8770642ee4366b3718c9bc58be8bd58ad5ea23af066b3d40785df41111f8"
+      "bytes": 5579,
+      "sha256": "615a59425a3fae19ea525b29c48e4dc90ec7be212e8f768f67d76fbe202d3ee9"
     },
     {
       "path": "tools/security_utils.py",
-      "bytes": 15369,
-      "sha256": "2d7334de1f889c54f499170aca465145cab048960c1193c65cff69a5635b5117"
+      "bytes": 16104,
+      "sha256": "7d25d77b3f043baa0e3280cb95afde778b0897aec813cdb3c87a2ed6c056a837"
     },
     {
       "path": "tools/skill_dual.py",

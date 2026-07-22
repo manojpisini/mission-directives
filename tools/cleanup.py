@@ -34,6 +34,8 @@ from security_utils import (
     read_json_bounded,
     remove_tree,
     safe_child,
+    _win_long_path,
+    _win_normal_path,
 )
 from sync_agent_guidance import _strip_managed_block
 from tui import TUI
@@ -52,7 +54,7 @@ RUNTIME_ROOTS = (
     "outputs",
     "docs",
 )
-STALE_PREFIXES = (".md-prompts-backup-", ".md-prompts-staging-")
+STALE_PREFIXES = (".md-prompts-backup-", ".md-prompts-staging-", ".mds-")
 
 
 class UserDeclined(Exception):
@@ -413,27 +415,29 @@ def _tree_state_digest(root: Path) -> str:
     root = ensure_no_symlink_components(root)
     digest = hashlib.sha256()
     for directory, dirnames, filenames in os.walk(
-        root, topdown=True, followlinks=False
+        _win_long_path(root), topdown=True, followlinks=False
     ):
         dirnames[:] = [d for d in dirnames if d != ".venv"]
-        current = Path(directory)
+        current = _win_normal_path(str(directory))
+        check_current = Path(directory)
         dirnames.sort()
         filenames.sort()
         for kind, names in ((b"D", dirnames), (b"F", filenames)):
             for name in names:
-                candidate = current / name
+                candidate = check_current / name
+                display = current / name
                 if candidate.is_symlink():
-                    raise ValueError(f"Refusing symlink in managed tree: {candidate}")
+                    raise ValueError(f"Refusing symlink in managed tree: {display}")
                 if kind == b"D" and not candidate.is_dir():
                     raise ValueError(
-                        f"Refusing non-directory entry in managed tree: {candidate}"
+                        f"Refusing non-directory entry in managed tree: {display}"
                     )
                 if kind == b"F" and not candidate.is_file():
                     raise ValueError(
-                        f"Refusing non-regular file in managed tree: {candidate}"
+                        f"Refusing non-regular file in managed tree: {display}"
                     )
                 st = candidate.stat()
-                rel = candidate.relative_to(root).as_posix().encode("utf-8")
+                rel = display.relative_to(root).as_posix().encode("utf-8")
                 digest.update(kind)
                 digest.update(len(rel).to_bytes(8, "big"))
                 digest.update(rel)
@@ -518,7 +522,7 @@ def _tree_size(path: Path) -> int:
     total = 0
     if not path.exists():
         return 0
-    for root, dirs, files in os.walk(path, followlinks=False):
+    for root, dirs, files in os.walk(_win_long_path(path), followlinks=False):
         for name in files:
             candidate = Path(root) / name
             if candidate.is_file() and not candidate.is_symlink():

@@ -19,6 +19,15 @@ def load(path: Path, name: str):
     return module
 
 
+def symlink_or_skip(link: Path, target: Path, *, target_is_directory: bool = False):
+    try:
+        link.symlink_to(target, target_is_directory=target_is_directory)
+    except OSError as exc:
+        if getattr(exc, "winerror", None) == 1314:
+            pytest.skip("Windows symlink privilege is unavailable")
+        raise
+
+
 def test_skill_id_validation_rejects_path_traversal_and_unsafe_names():
     security = load(ROOT / "tools" / "security_utils.py", "security_utils_skill_id")
     for value in [
@@ -48,7 +57,7 @@ def test_safe_child_refuses_escape_and_symlinked_parent(tmp_path):
     base.mkdir()
     outside = tmp_path / "outside"
     outside.mkdir()
-    (base / "link").symlink_to(outside, target_is_directory=True)
+    symlink_or_skip(base / "link", outside, target_is_directory=True)
     with pytest.raises(ValueError):
         security.safe_child(base, "../outside")
     with pytest.raises(ValueError):
@@ -62,7 +71,7 @@ def test_installer_rejects_runtime_symlink_escape(tmp_path):
     project.mkdir()
     outside = tmp_path / "outside"
     outside.mkdir()
-    (project / ".prompt_suite").symlink_to(outside, target_is_directory=True)
+    symlink_or_skip(project / ".prompt_suite", outside, target_is_directory=True)
     with pytest.raises(ValueError, match="symlink"):
         installer.install(project)
     assert not (project / "prompts").exists()
@@ -122,7 +131,7 @@ def test_manifest_rejects_symlink_entries(tmp_path):
     (root / "VERSION").write_text("1.0.0\n", encoding="utf-8")
     outside = tmp_path / "outside.txt"
     outside.write_text("secret", encoding="utf-8")
-    (root / "linked.txt").symlink_to(outside)
+    symlink_or_skip(root / "linked.txt", outside)
     with pytest.raises(ValueError, match="symbolic link"):
         manifest.current(root)
 
@@ -208,7 +217,7 @@ def test_sync_guidance_rejects_symlink_target_and_receipt_escape(tmp_path):
     project.mkdir()
     outside = tmp_path / "outside.md"
     outside.write_text("private", encoding="utf-8")
-    (project / "AGENTS.md").symlink_to(outside)
+    symlink_or_skip(project / "AGENTS.md", outside)
     with pytest.raises(ValueError, match="symlink"):
         sync.sync_guidance(project, ROOT, agent_files=["AGENTS.md"])
     (project / "AGENTS.md").unlink()
@@ -348,7 +357,7 @@ def test_agent_path_override_preserves_symlink_for_downstream_rejection(
     outside = tmp_path / "outside"
     outside.mkdir()
     link = tmp_path / "skills-link"
-    link.symlink_to(outside, target_is_directory=True)
+    symlink_or_skip(link, outside, target_is_directory=True)
     monkeypatch.setenv("MD_AGENTS_SKILLS_DIR", str(link))
     resolved = agent_paths.resolve("agents", system="linux")
     assert resolved == link.absolute()

@@ -34,7 +34,7 @@ def test_distribution_has_no_personal_home_paths():
     skip_parts = {Path(__file__), ROOT / "tools/check_release_consistency.py"}
     for p in ROOT.rglob("*"):
         if p in skip_parts or any(
-            part in p.parts for part in (".venv", "node_modules")
+            part in p.parts for part in (".prompt_suite", ".venv", "node_modules")
         ):
             continue
         if p.is_file() and p.suffix.lower() in {

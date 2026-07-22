@@ -186,33 +186,53 @@ def atomic_write_json(path: Path, value: Any, *, default_mode: int = 0o644) -> N
     )
 
 
+def _win_long_path(path: Path) -> str | Path:
+    if os.name != "nt":
+        return path
+    absolute = os.path.abspath(str(path))
+    if absolute.startswith("\\\\?\\"):
+        return absolute
+    if absolute.startswith("\\\\"):
+        return "\\\\?\\UNC\\" + absolute[2:]
+    return "\\\\?\\" + absolute
+
+
+def _win_normal_path(path: str) -> Path:
+    if path.startswith("\\\\?\\UNC\\"):
+        return Path("\\\\" + path[8:])
+    if path.startswith("\\\\?\\"):
+        return Path(path[4:])
+    return Path(path)
+
+
 def iter_tree_files(root: Path) -> Iterable[Path]:
     root = _absolute_lexical(root)
     ensure_no_symlink_components(root)
     if not root.is_dir():
         raise ValueError(f"Expected directory: {root}")
     for directory, dirnames, filenames in os.walk(
-        root, topdown=True, followlinks=False
+        _win_long_path(root), topdown=True, followlinks=False
     ):
-        current = Path(directory)
+        current = _win_normal_path(str(directory))
+        check_current = Path(directory)
         for name in list(dirnames):
             if name == ".venv":
                 dirnames.remove(name)
                 continue
-            candidate = current / name
+            candidate = check_current / name
             if candidate.is_symlink():
                 raise ValueError(
-                    f"Symlinks are not allowed in source trees: {candidate}"
+                    f"Symlinks are not allowed in source trees: {current / name}"
                 )
         for name in filenames:
-            candidate = current / name
+            candidate = check_current / name
             if candidate.is_symlink():
                 raise ValueError(
-                    f"Symlinks are not allowed in source trees: {candidate}"
+                    f"Symlinks are not allowed in source trees: {current / name}"
                 )
             if not candidate.is_file():
-                raise ValueError(f"Unsupported non-regular file: {candidate}")
-            yield candidate
+                raise ValueError(f"Unsupported non-regular file: {current / name}")
+            yield current / name
 
 
 def validate_tree_limits(
@@ -426,4 +446,4 @@ def remove_tree(path: Path) -> None:
         return
     if path.is_symlink() or not path.is_dir():
         raise ValueError(f"Refusing to remove non-directory or symlink path: {path}")
-    shutil.rmtree(path)
+    shutil.rmtree(_win_long_path(path))

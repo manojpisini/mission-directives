@@ -41,12 +41,13 @@ IGNORE_ENTRIES = [
     "/logs/",
     "/artifacts/",
     "/outputs/",
+    "/.mds-*/",
     "/.md-prompts-staging-*/",
     "/.md-prompts-backup-*/",
     "/.md-cleanup-staging-*/",
     "/.md-cleanup.lock",
 ]
-EXCLUDED_NAMES = {"__pycache__", ".pytest_cache", ".git"}
+EXCLUDED_NAMES = {"__pycache__", ".pytest_cache", ".git", ".venv"}
 RUNTIME_DIRS = [
     ".prompt_suite/logs",
     "results",
@@ -131,9 +132,7 @@ def _project_path(project: Path) -> Path:
 
 def _validated_paths(project: Path) -> tuple[Path, Path]:
     destination = safe_child(project, "prompts")
-    staging = safe_child(
-        project, f".md-prompts-staging-{os.getpid()}-{uuid.uuid4().hex}"
-    )
+    staging = safe_child(project, f".mds-{os.getpid()}-{uuid.uuid4().hex[:8]}")
     for name in PRESERVED_FILES:
         ensure_no_symlink_components(safe_child(project, name))
     for name in RUNTIME_DIRS:
@@ -178,7 +177,18 @@ def _remove_tree(path: Path) -> None:
     if path.exists():
         if not path.is_dir():
             raise ValueError(f"Refusing to remove non-directory path: {path}")
-        shutil.rmtree(path)
+        shutil.rmtree(_shutil_path(path))
+
+
+def _shutil_path(path: Path) -> str | Path:
+    if os.name != "nt":
+        return path
+    absolute = os.path.abspath(str(path))
+    if absolute.startswith("\\\\?\\"):
+        return absolute
+    if absolute.startswith("\\\\"):
+        return "\\\\?\\UNC\\" + absolute[2:]
+    return "\\\\?\\" + absolute
 
 
 def install(
@@ -230,7 +240,7 @@ def install(
     runtime_roots = {name: safe_child(project, name) for name in RUNTIME_ROOTS}
     existed_roots = {name: path.exists() for name, path in runtime_roots.items()}
     _remove_tree(staging)
-    shutil.copytree(SOURCE, staging, ignore=copy_filter, symlinks=True)
+    shutil.copytree(SOURCE, _shutil_path(staging), ignore=copy_filter, symlinks=True)
     # copytree(symlinks=True) is safe only because iter_tree_files rejected all
     # source symlinks; verify the staged tree again before promotion.
     list(iter_tree_files(staging))

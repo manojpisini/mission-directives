@@ -10,7 +10,7 @@ After validating the installation under `<project>/prompts`, cleanup removes:
 - Mission Directives-owned `.prompt_suite/` runtime state, receipts, logs, locks, and results;
 - runtime directories created and marked by the installer: `results/`, `reports/`, `logs/`, `artifacts/`, and `outputs/`;
 - an empty installer-created `docs/` directory;
-- verified stale `.md-prompts-backup-*` and `.md-prompts-staging-*` suite directories;
+- verified stale `.md-prompts-backup-*`, `.md-prompts-staging-*`, and `.mds-*` suite directories;
 - the block between `# BEGIN MISSION DIRECTIVES MANAGED IGNORE` and `# END MISSION DIRECTIVES MANAGED IGNORE` in `.gitignore`;
 - the block between `<!-- BEGIN MD MANAGED GUIDANCE -->` and `<!-- END MD MANAGED GUIDANCE -->` in `AGENTS.md` and `CLAUDE.md`.
 
