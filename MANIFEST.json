@@ -3,8 +3,8 @@
   "files": [
     {
       "path": ".github/workflows/validate.yml",
-      "bytes": 1185,
-      "sha256": "b74ebb178264048cf220e76453ddd8299dd8528fbaf5548011fb74a900d1bc6f"
+      "bytes": 1232,
+      "sha256": "af666cc049112e4a7ced430eea0c1a8b33b1283a2d818e4dd7d4592609dbe321"
     },
     {
       "path": ".gitignore",
@@ -18,13 +18,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 6822,
-      "sha256": "94ad1b714f5c00bca3e37ef9729cc5d88a1d9854dcb102008b8058c031d7fd92"
+      "bytes": 7958,
+      "sha256": "ee72293494f97303606c47465e8233d6b38bcd3fe388e1c78064066c58bf6666"
     },
     {
       "path": "CLAUDE.md",
-      "bytes": 6822,
-      "sha256": "448a0622ed540fe5f7f5c49651b3f8d683c7160984f1acf5199b8993d13cc1e5"
+      "bytes": 7958,
+      "sha256": "759dc8906993cec70e03b2bef697db4504b016cbd299a94ce821808ab335f10f"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -10178,8 +10178,8 @@
     },
     {
       "path": "tools/sync_agent_guidance.py",
-      "bytes": 20663,
-      "sha256": "77a88ad3abc8c919a11949598cdbaec56a8015e0f9c896b279ffe0710525a467"
+      "bytes": 21898,
+      "sha256": "f8b2535caa765308fdc337c025ed2be7aec1542dd442b075c387de11048860d1"
     },
     {
       "path": "tools/sync_installed_skills.py",
