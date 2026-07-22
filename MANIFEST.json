@@ -22,16 +22,6 @@
       "sha256": "94ad1b714f5c00bca3e37ef9729cc5d88a1d9854dcb102008b8058c031d7fd92"
     },
     {
-      "path": "BODY_QUALITY_AUDIT.json",
-      "bytes": 54383,
-      "sha256": "496e0c7e6f3594c092e0000e15dfe50e9712e4d933944cf4dd01e79e4d468ba5"
-    },
-    {
-      "path": "BODY_QUALITY_AUDIT.md",
-      "bytes": 1910,
-      "sha256": "88a3b884281d59b8d9a3fab7a31b3e91be991fcef10ad550346bdc7900eceb39"
-    },
-    {
       "path": "CLAUDE.md",
       "bytes": 6822,
       "sha256": "448a0622ed540fe5f7f5c49651b3f8d683c7160984f1acf5199b8993d13cc1e5"
@@ -45,11 +35,6 @@
       "path": "CONTRIBUTING.md",
       "bytes": 4055,
       "sha256": "c3af7be0a52d48f553d94a709bf5c9f8b41419ac700677cc21a99dd2b0fd6b80"
-    },
-    {
-      "path": "EVALUATION_STATUS.json",
-      "bytes": 873,
-      "sha256": "e815de282e38fa6414a651adf5ef25c844286667bda84d235d1a29c9a8dc8d6e"
     },
     {
       "path": "GOVERNANCE.md",
@@ -90,11 +75,6 @@
       "path": "SUPPORT.md",
       "bytes": 3692,
       "sha256": "85ee6adad56c5abcc348762e2103c87227a8d4366ffd5c46e43921cf8be8759e"
-    },
-    {
-      "path": "TEST_RESULTS.json",
-      "bytes": 21190,
-      "sha256": "51e2fce4b45e080297eb1e99f1a7eec1724aea1f306d82745a5c8efb967324ff"
     },
     {
       "path": "VERSION",
@@ -9913,8 +9893,8 @@
     },
     {
       "path": "tests/test_prompt_addition.py",
-      "bytes": 22072,
-      "sha256": "ab0d69294bd96899d227a4ba210b36ac194e89adf22e449123c3f4f1799e2d8b"
+      "bytes": 22100,
+      "sha256": "392981c7a3c2b5d04a8513725a583f75c37469b9edac5db27b0dae66277b530d"
     },
     {
       "path": "tests/test_prompt_body_quality.py",
@@ -9988,8 +9968,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 4050,
-      "sha256": "495bf9f4ff4fd7182c902c0a25e495e8c7d36ae378222ef176e7a6814cad7ce0"
+      "bytes": 4176,
+      "sha256": "70d2e9abb7ca82d31acaa4aea54ae68c6205f8cddc2f1f396272f5c8c348453d"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",

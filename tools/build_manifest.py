@@ -25,7 +25,14 @@ except ImportError:
     from tools.security_utils import atomic_write_json
 
 ROOT = Path(__file__).resolve().parents[1]
-EXCLUDED_FILENAMES = {"MANIFEST.json", "VALIDATION.json"}
+EXCLUDED_FILENAMES = {
+    "BODY_QUALITY_AUDIT.json",
+    "BODY_QUALITY_AUDIT.md",
+    "EVALUATION_STATUS.json",
+    "MANIFEST.json",
+    "TEST_RESULTS.json",
+    "VALIDATION.json",
+}
 EXCLUDED_DIRNAMES = {"__pycache__", ".pytest_cache", ".git", ".ruff_cache", ".venv"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo"}
 RUNTIME_PREFIXES = {

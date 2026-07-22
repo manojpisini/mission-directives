@@ -22,7 +22,7 @@ def _copy_suite(destination: Path) -> None:
             text=True,
             capture_output=True,
         )
-        for name in ("__pycache__", ".pytest_cache", ".venv", "node_modules"):
+        for name in ("__pycache__", ".git", ".pytest_cache", ".venv", "node_modules"):
             shutil.rmtree(destination / name, ignore_errors=True)
         for path in destination.rglob("*"):
             if path.is_file() and (
@@ -36,6 +36,7 @@ def _copy_suite(destination: Path) -> None:
         destination,
         ignore=shutil.ignore_patterns(
             "__pycache__",
+            ".git",
             ".pytest_cache",
             ".venv",
             "node_modules",
