@@ -8043,6 +8043,13 @@
       "title": "Prompt Addition, Registration, and Ecosystem Integration",
       "agent_matches": [],
       "mapping_status": "unmapped_requires_human_review"
+    },
+    {
+      "md_prompt_id": "MD-200",
+      "capability_id": "md.audit.repository-mission-promise-deviation-bloat-and-simplification-audit",
+      "title": "Repository Mission Promise Deviation Bloat and Simplification Audit",
+      "agent_matches": [],
+      "mapping_status": "unmapped_requires_human_review"
     }
   ]
 }

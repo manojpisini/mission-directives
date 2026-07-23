@@ -174,14 +174,15 @@ Create stable handoff IDs using `@EVIDENCE:{id}` for sources or observations, `?
 - tests and fixtures
 - documentation and examples
 - design and user-facing patterns
+- installation, guidance, validation
 </evidence_surfaces>
 
 <investigation>
-1. find contradictory sources of truth.
-2. identify accidental style and architecture divergence.
-3. distinguish purposeful specialization from inconsistency.
-4. trace coherence failures across layers.
-5. define a unifying target model and staged alignment plan.
+1. find contradictions, duplicate entry points, incompatible contracts.
+2. identify divergence in style, structure, naming, workflow, artifacts.
+3. distinguish purposeful specialization from drift or unowned variation.
+4. trace failures across code, docs, tests, automation, installation, guidance.
+5. define target model, staged alignment plan, residuals.
 </investigation>
 <handoff_contract>
 Produce a frozen evidence index, finding register, bounded action plan, action-risk labels, rollback needs, and objective verification criteria for `MD-26`.

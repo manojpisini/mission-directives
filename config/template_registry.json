@@ -797,7 +797,8 @@
         "MD-191",
         "MD-197",
         "MD-198",
-        "MD-199"
+        "MD-199",
+        "MD-200"
       ],
       "selection_semantics": "conditional"
     },
@@ -944,7 +945,8 @@
         "MD-191",
         "MD-197",
         "MD-198",
-        "MD-199"
+        "MD-199",
+        "MD-200"
       ],
       "selection_semantics": "conditional"
     },
@@ -1091,7 +1093,8 @@
         "MD-191",
         "MD-197",
         "MD-198",
-        "MD-199"
+        "MD-199",
+        "MD-200"
       ],
       "selection_semantics": "conditional"
     },
@@ -2976,7 +2979,8 @@
         "MD-131",
         "MD-143",
         "MD-148",
-        "MD-174"
+        "MD-174",
+        "MD-200"
       ],
       "minimum_required_contracts": [
         "core/run-manifest",

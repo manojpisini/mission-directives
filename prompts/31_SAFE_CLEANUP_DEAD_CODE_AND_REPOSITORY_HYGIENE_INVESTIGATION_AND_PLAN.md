@@ -176,14 +176,16 @@ Create stable handoff IDs using `@EVIDENCE:{id}` for sources or observations, `?
 - commented-out code
 - temporary scripts and debug artifacts
 - generated outputs and caches
+- machine-local logs and receipts
 - orphan configuration and assets
 - obsolete documentation
 - empty or misleading structure
+- manifest and ignore-rule drift
 </evidence_surfaces>
 
 <investigation>
-1. prove unused status through references, builds, runtime paths, and ownership.
-2. classify each item as safe-remove, conditional, generated, or retain.
+1. prove unused status through references, builds, runtime paths, packaging, docs, and ownership.
+2. classify each item as safe-remove, conditional, generated, machine-local, ignored, or retain.
 3. detect hidden entry points and reflection.
 4. identify cleanup dependencies and rollback needs.
 5. create small removal batches with verification criteria.

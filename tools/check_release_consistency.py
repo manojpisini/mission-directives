@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES = {".md", ".json", ".py", ".sh", ".ps1", ".toml", ".yaml", ".yml", ".txt"}
 EXCLUDED_PARTS = {
     "__pycache__",
+    ".git",
     ".pytest_cache",
     ".venv",
     "node_modules",
@@ -69,6 +70,7 @@ def check(root: Path = ROOT) -> dict:
         for p in root.rglob("*")
         if p.is_file()
         and (p.suffix == ".lock" or p.name.endswith(".toml.lock"))
+        and not any(x in p.parts for x in EXCLUDED_PARTS)
         and p.relative_to(root).parts[:2] != (".prompt_suite", "logs")
     ]
     if runtime_lock_files:

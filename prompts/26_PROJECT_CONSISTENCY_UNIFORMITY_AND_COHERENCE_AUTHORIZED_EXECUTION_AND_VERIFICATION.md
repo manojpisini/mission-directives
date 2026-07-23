@@ -185,7 +185,7 @@ Preserve IDs from the investigative handoff and use `@EVIDENCE:{id}` for sources
 1. apply approved naming and structural alignment.
 2. consolidate duplicate sources of truth.
 3. reconcile interfaces, schemas, tests, and docs.
-4. add coherence checks and guardrails.
+4. add validation, installation, agent-guidance, generated-artifact, and coherence guardrails.
 5. remove transitional duplication after verification.
 </execution>
 <verification_reference>

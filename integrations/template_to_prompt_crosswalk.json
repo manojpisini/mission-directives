@@ -133,7 +133,8 @@
         "MD-191",
         "MD-197",
         "MD-198",
-        "MD-199"
+        "MD-199",
+        "MD-200"
       ],
       "path": "templates/core/acceptance-criteria.md"
     },
@@ -269,7 +270,8 @@
         "MD-191",
         "MD-197",
         "MD-198",
-        "MD-199"
+        "MD-199",
+        "MD-200"
       ],
       "path": "templates/core/artifact-specification.md"
     },
@@ -405,7 +407,8 @@
         "MD-191",
         "MD-197",
         "MD-198",
-        "MD-199"
+        "MD-199",
+        "MD-200"
       ],
       "path": "templates/core/decision-record.md"
     },
@@ -2281,7 +2284,8 @@
         "MD-148",
         "MD-167",
         "MD-170",
-        "MD-174"
+        "MD-174",
+        "MD-200"
       ],
       "path": "templates/reports/audit-report.md"
     },

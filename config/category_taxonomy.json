@@ -1004,13 +1004,15 @@
     },
     "audit": {
       "prompt_ids": [
-        "MD-148"
+        "MD-148",
+        "MD-200"
       ],
       "roles": [
         "investigative"
       ],
       "evidence_lanes": [
-        "factual"
+        "factual",
+        "hybrid"
       ],
       "media": [
         "docx_spec",

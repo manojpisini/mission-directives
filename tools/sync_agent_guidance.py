@@ -203,7 +203,7 @@ def render_guidance(
         "",
         "### Git and workflow safety",
         "",
-        "- Write commit messages in first person, past tense, declarative form: `I fixed ...`, `I updated ...`, `I removed ...`.",
+        "- Write commit messages in past tense, declarative form without first-person pronouns: `Fixed ...`, `Updated ...`, `Removed ...`.",
         "- Before committing workflow, wrapper, manifest, generated artifact, or guidance changes, run the smallest local checks that cover the touched path and rerun `python tools/build_manifest.py` when any tracked file changed.",
         "- Do not seal ignored or machine-local outputs into `MANIFEST.json`; generated receipts such as `BODY_QUALITY_AUDIT.*`, `EVALUATION_STATUS.json`, `TEST_RESULTS.json`, `VALIDATION.json`, `.prompt_suite/results/`, `.prompt_suite/runtime/`, and `.venv/` must remain out of the manifest.",
         "- Keep GitHub Actions on Node 24-compatible action versions; do not downgrade `actions/checkout` or `astral-sh/setup-uv` to versions that emit Node 20 deprecation warnings, and keep `astral-sh/setup-uv` configured with `activate-environment: 'true'` when later steps call `python` or `uv pip` directly.",

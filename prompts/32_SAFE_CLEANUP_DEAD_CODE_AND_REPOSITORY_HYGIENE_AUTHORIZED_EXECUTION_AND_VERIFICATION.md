@@ -151,6 +151,7 @@ Consume only the current approved handoff. Generate the required dry-run manifes
 <decision_rules>
 - Execute only approved `+ACTION:{id}` records from the current `MD-31` handoff; record new issues as `#FINDING:{id}` and defer them for investigation and approval.
 - Remove an item only when non-use is evidenced across code, build, packaging, runtime, documentation, and generated-source boundaries; uncertainty means retain or quarantine.
+- Prefer deletion over disabling when behavior-preserving and rollback-verified.
 - Resolve conflicts by safety, evidence strength, dependency order, public-contract or data preservation, and reversibility; do not merge mutually incompatible actions into one batch.
 - If budget or time is insufficient, complete only the highest-priority dependency-complete batch and place the remainder in the residual register with owners and prerequisites.
 - Emit `!STOP:{reason}` when approval is stale, scope expands, verification fails, rollback is uncertain, or an action would weaken a protected boundary.
@@ -184,7 +185,7 @@ Preserve IDs from the investigative handoff and use `@EVIDENCE:{id}` for sources
 
 
 <cleanup_boundary>
-Unknown is not unused. Generated is not disposable. Old is not automatically obsolete. Delete only items proven unreferenced and approved. Keep removals small, reversible, and behavior-preserving; immediately restore any item that reveals an undocumented dependency.
+Unknown is not unused. Generated is not disposable. Old is not obsolete. Delete only items proven unreferenced and approved. Keep removals small, reversible, and behavior-preserving. Create no extra cleanup reports. Immediately restore any item that reveals an undocumented dependency.
 </cleanup_boundary>
 
 <execution>

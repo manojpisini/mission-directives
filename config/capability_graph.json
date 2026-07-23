@@ -2061,6 +2061,20 @@
       "exact_twin_only": false
     },
     {
+      "id": "MD-200",
+      "capability_id": "md.audit.repository-mission-promise-deviation-bloat-and-simplification-audit",
+      "role": "investigative",
+      "category": "audit",
+      "surface": "repository_mission_promise_deviation_bloat_and_simplification_audit",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
       "id": "MD-20",
       "capability_id": "md.governance.license-compliance-and-governance-review",
       "role": "investigative",
@@ -5636,6 +5650,31 @@
     {
       "from": "MD-04",
       "to": "MD-19",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-200",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-200",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-200",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-200",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-200",
       "type": "requires"
     },
     {

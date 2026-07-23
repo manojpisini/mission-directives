@@ -3263,6 +3263,23 @@
         "unauthorized external action",
         "silent scope expansion"
       ]
+    },
+    {
+      "prompt_id": "MD-200",
+      "fixture_id": "MD-200-contract",
+      "case": "minimum_valid",
+      "expected": [
+        "required input detection",
+        "authorized mode",
+        "declared output contract",
+        "quality gates",
+        "explicit residuals"
+      ],
+      "prohibited": [
+        "fabricated evidence",
+        "unauthorized external action",
+        "silent scope expansion"
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Prompt Catalog
 
-**Prompt count:** **200**
+**Prompt count:** **201**
 
 All prompts use canonical authorization, least-privileged tool policy, runtime markers, and task-specific completion criteria. Every genuine planning/execution pair requires user plan review, revision and re-freezing when requested, explicit execution consent, and exact reciprocal twin dispatch.
 
@@ -206,3 +206,4 @@ All prompts use canonical authorization, least-privileged tool policy, runtime m
 | 197 | `MD-197` | `md.auto_orchestration.bounded-prompt-and-skill-loop-orchestrator` | [Bounded Prompt and Skill Loop Orchestrator](../prompts/197_BOUNDED_PROMPT_AND_SKILL_LOOP_ORCHESTRATOR.md) | `operational` | `auto_orchestration` | `hybrid` | `high` | DRAFT_ONLY, PLAN_ONLY, APPLY_SAFE, APPLY_APPROVED, VERIFY_ONLY | `—` | — | `core/run-manifest`, `core/evidence-register`, `core/verification-record`, `reports/status-report` | — |
 | 198 | `MD-198` | `md.auto_orchestration.loop-exit-plateau-and-completion-adjudication-gate` | [Loop Exit Plateau and Completion Adjudication Gate](../prompts/198_LOOP_EXIT_PLATEAU_AND_COMPLETION_ADJUDICATION_GATE.md) | `gate` | `auto_orchestration` | `factual` | `high` | VERIFY_ONLY | `—` | — | `core/run-manifest`, `core/evidence-register`, `core/verification-record`, `reports/status-report` | — |
 | 199 | `MD-199` | `md.prompt_system.prompt-addition-registration-and-ecosystem-integration` | [Prompt Addition, Registration, and Ecosystem Integration](../prompts/199_PROMPT_ADDITION_REGISTRATION_AND_ECOSYSTEM_INTEGRATION.md) | `operational` | `prompt_system` | `hybrid` | `high` | PLAN_ONLY, DRAFT_ONLY, APPLY_SAFE, APPLY_APPROVED, VERIFY_ONLY | `—` | — | `core/run-manifest`, `core/evidence-register`, `core/verification-record` | `prompt-engineering-patterns`, `writing-skills`, `systematic-debugging`, `test-driven-development` |
+| 200 | `MD-200` | `md.audit.repository-mission-promise-deviation-bloat-and-simplification-audit` | [Repository Mission Promise Deviation Bloat and Simplification Audit](../prompts/200_REPOSITORY_MISSION_PROMISE_DEVIATION_BLOAT_AND_SIMPLIFICATION_AUDIT.md) | `investigative` | `audit` | `hybrid` | `medium` | AUDIT_ONLY, PLAN_ONLY | `—` | — | `reports/audit-report` | — |

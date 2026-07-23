@@ -1,6 +1,6 @@
 {
   "suite_id": "mission-directives",
-  "prompt_count": 200,
+  "prompt_count": 201,
   "prompts": [
     {
       "suite_id": "mission-directives",
@@ -32190,6 +32190,156 @@
         "core/artifact-specification",
         "core/acceptance-criteria"
       ]
+    },
+    {
+      "suite_id": "mission-directives",
+      "prompt_id": "MD-200",
+      "sequence": 200,
+      "title": "Repository Mission Promise Deviation Bloat and Simplification Audit",
+      "slug": "repository-mission-promise-deviation-bloat-and-simplification-audit",
+      "canonical_path": "prompts/200_REPOSITORY_MISSION_PROMISE_DEVIATION_BLOAT_AND_SIMPLIFICATION_AUDIT.md",
+      "category": "audit",
+      "prompt_role": "investigative",
+      "prompt_type": "analysis",
+      "status": "stable",
+      "description": "Execute repository mission promise deviation bloat and simplification audit under Mission Directives evidence, authority, template, skill, artifact, and verification contracts.",
+      "paired_prompt_id": null,
+      "pairing_required": false,
+      "default_mode": "AUDIT_ONLY",
+      "allowed_modes": [
+        "AUDIT_ONLY",
+        "PLAN_ONLY"
+      ],
+      "risk_level": "medium",
+      "change_surface": "repository_mission_promise_deviation_bloat_and_simplification_audit",
+      "dry_run_required": false,
+      "requires": [
+        "MD-00",
+        "MD-01",
+        "MD-03",
+        "MD-04",
+        "MD-02"
+      ],
+      "related_prompts": [],
+      "consumes": [
+        "runtime_context",
+        "authorized_inputs",
+        "project_evidence"
+      ],
+      "produces": [
+        "typed_runtime_artifacts"
+      ],
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "output_media": [
+        "markdown",
+        "json"
+      ],
+      "tags": [
+        "audit",
+        "investigative",
+        "analysis",
+        "hybrid"
+      ],
+      "assurance_minimum": "STANDARD",
+      "freshness_policy": "task_defined",
+      "mutates_state": false,
+      "external_effects": "task_defined",
+      "output_contract": {
+        "primary_artifact": {
+          "path": "results/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_result.md",
+          "format": "markdown",
+          "required_when_writing": true
+        },
+        "supporting_artifacts": [
+          {
+            "path": "logs/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_execution.jsonl",
+            "format": "jsonl"
+          },
+          {
+            "path": "reports/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_quality_review.md",
+            "format": "markdown"
+          }
+        ],
+        "deliverable_formats": [
+          "markdown",
+          "json"
+        ]
+      },
+      "suite_version": "1.8.3",
+      "capability_id": "md.audit.repository-mission-promise-deviation-bloat-and-simplification-audit",
+      "prompt_slug": "repository-mission-promise-deviation-bloat-and-simplification-audit",
+      "identity_status": "permanent",
+      "contract_refs": [
+        "MD-00",
+        "MD-01",
+        "MD-03",
+        "MD-04",
+        "MD-02"
+      ],
+      "do_not_use_when": [
+        "another active capability already owns the complete outcome",
+        "the requested result does not match this prompt's observable outcome",
+        "required evidence or authority cannot be obtained safely"
+      ],
+      "complexity_budget": {
+        "maximum_body_words": 1333,
+        "maximum_method_steps": 16,
+        "maximum_quality_gates": 16,
+        "maximum_examples": 4,
+        "maximum_primary_artifacts": 1
+      },
+      "output_profiles": {
+        "minimum": [
+          "results/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_result.md",
+          "assumptions_or_unknowns",
+          "verification_status"
+        ],
+        "standard": [
+          "results/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_result.md",
+          "logs/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_execution.jsonl",
+          "reports/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_quality_review.md",
+          "residuals"
+        ],
+        "comprehensive": [
+          "results/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_result.md",
+          "logs/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_execution.jsonl",
+          "reports/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_quality_review.md",
+          "alternatives_or_counterevidence",
+          "lineage_and_residuals"
+        ]
+      },
+      "uncertainty_policy": [
+        "verified_fact",
+        "supported_interpretation",
+        "creative_or_design_choice",
+        "disputed",
+        "unknown",
+        "requires_human_or_external_verification"
+      ],
+      "proof_requirements": {
+        "fixture_tiers": [
+          "healthy",
+          "problematic",
+          "adversarial"
+        ],
+        "deterministic_validation": true,
+        "live_model_measurement_required_for_behavioral_claims": true
+      },
+      "template_routes": [
+        "reports/audit-report"
+      ],
+      "template_policy": "required_resolve_then_conditionally_select_by_requested_artifact",
+      "conditional_template_routes": [
+        "core/decision-record",
+        "core/artifact-specification",
+        "core/acceptance-criteria"
+      ],
+      "source_provenance": {
+        "sha256": "7acc34ffed67e4ce5968c5c15ecca725fbe29e39290e4dcbad967f1477352f51",
+        "bytes": 3409,
+        "encoding": "utf-8+xml-escaped"
+      }
     }
   ],
   "suite_version": "1.8.3",

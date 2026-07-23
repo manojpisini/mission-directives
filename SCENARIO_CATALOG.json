@@ -14580,6 +14580,77 @@
           "then": "failed_or_residual_open"
         }
       ]
+    },
+    {
+      "scenario_id": "A-200",
+      "title": "Repository Mission Promise Deviation Bloat and Simplification Audit",
+      "purpose": "Execute repository mission promise deviation bloat and simplification audit under Mission Directives evidence, authority, template, skill, artifact, and verification contracts.",
+      "prompts": [
+        "MD-200"
+      ],
+      "default_mode": "AUDIT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/repository-mission-promise-deviation-bloat-and-simplification-audit/repository-mission-promise-deviation-bloat-and-simplification-audit_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "STANDARD",
+      "phases": [
+        {
+          "phase_id": "investigation-md-200",
+          "prompt_ids": [
+            "MD-200"
+          ],
+          "mode": "AUDIT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
     }
   ],
   "composite_scenarios": [

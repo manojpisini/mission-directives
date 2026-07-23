@@ -18,13 +18,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 8068,
-      "sha256": "bf1ae8b7fe6b7badcdccc1287108e89112134033e93254fc393c4d5ef030f340"
+      "bytes": 8098,
+      "sha256": "76c754d93269a66b5510d06a42c0c39cfab2c884c8efc4b36230e4a7bc55a057"
     },
     {
       "path": "CLAUDE.md",
-      "bytes": 8068,
-      "sha256": "2e9a04ae34ffe08d09a24e68661f0d8ea8e548fe2232206b92313b52507eb40b"
+      "bytes": 8098,
+      "sha256": "271e355216c8a40155f7f300a9888e721577b1f9a3182036bfecdf51c773634c"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -53,8 +53,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 24870,
-      "sha256": "905027372f8955bdec16b9128d900fc2fb8862e239dbb5957991ba3b9f0d9466"
+      "bytes": 13574,
+      "sha256": "c0b65962f49f9cab260670ebdae88832461b4666d68d1acdb667f2d3a3221f95"
     },
     {
       "path": "RELEASE_ID",
@@ -63,8 +63,8 @@
     },
     {
       "path": "SCENARIO_CATALOG.json",
-      "bytes": 945922,
-      "sha256": "e923c91b38580ecfa8fed7f0101746b250b6a0e84f240f6f85e43209cf992cc6"
+      "bytes": 948283,
+      "sha256": "dec64214dffa6c1644a6f9d057470e946c679a53b10c5c799e59882dd0698327"
     },
     {
       "path": "SECURITY.md",
@@ -83,8 +83,8 @@
     },
     {
       "path": "catalog.json",
-      "bytes": 1215529,
-      "sha256": "26d73517d603621ef13fba945ff1bc3b306da6c49a400288384b506592b2966e"
+      "bytes": 1221546,
+      "sha256": "629aa27874b5c5b702abb15e9b70204ebb04ea11992a0e64b879cb98612f762e"
     },
     {
       "path": "compatibility/agent_skill_paths.json",
@@ -98,8 +98,8 @@
     },
     {
       "path": "compatibility/capability_identity_registry.json",
-      "bytes": 69429,
-      "sha256": "239500690f0f8fa7d21c8dcbbc08495acd2f1b2f40ba6fdc6d792f1c1a9bc184"
+      "bytes": 69800,
+      "sha256": "5290b10e282325680f73621384c652413126c2230fd6777e5611b4b41e18ba52"
     },
     {
       "path": "compatibility/deprecated_prompt_ids.json",
@@ -138,18 +138,18 @@
     },
     {
       "path": "config/capability_graph.json",
-      "bytes": 186632,
-      "sha256": "2793de35de5dc12ccc259937ce2cd1d3bc4cba2d8bd30881e04bafb7ccb23916"
+      "bytes": 187579,
+      "sha256": "8dae1231c8e5141cdfafaeffe41a233f23e00db305c61a792cf7c34d14066943"
     },
     {
       "path": "config/category_taxonomy.json",
-      "bytes": 25181,
-      "sha256": "b6216a037965993b323a80e85f0b1a7479587c201e62505504439b6a09d2a969"
+      "bytes": 25217,
+      "sha256": "c4fd5e92bfa251612f9d3ee16cc721d8140ae62c66c993c9a786358eef5e4348"
     },
     {
       "path": "config/department_packs.json",
-      "bytes": 5157,
-      "sha256": "5c5fefb449f71ea2bbee58191aade888d68743a9eee6ded82a7ba61674cee923"
+      "bytes": 5189,
+      "sha256": "2ef1b0380d648f078b0ad748887a569d210e8c5f7554c56d237189d9b6c13d06"
     },
     {
       "path": "config/installed_skills_inventory.json",
@@ -183,8 +183,8 @@
     },
     {
       "path": "config/template_registry.json",
-      "bytes": 81543,
-      "sha256": "b3e7a1b5815b601cf979aa11451343f12d59741fd8718aeac6acc3dbf7aed0e2"
+      "bytes": 81615,
+      "sha256": "9704989621e02a20e98042a89fbcdd5d10afde171f86548176f9103e9c78ed77"
     },
     {
       "path": "docs/AGENT_LIBRARY_INTEGRATION_GUIDE.md",
@@ -348,8 +348,8 @@
     },
     {
       "path": "docs/PROMPT_CATALOG.md",
-      "bytes": 104673,
-      "sha256": "277a0ad1c41c6d0a0dfc256dcdd60394ec5061be06b2701d07e368424bf6c9b2"
+      "bytes": 105051,
+      "sha256": "bba7f17ab5df09403b50229bce3f40e0d24edd1d12ae20815ae9ff04ae3955dc"
     },
     {
       "path": "docs/PROMPT_ENGINEERING_METHODS.md",
@@ -468,8 +468,8 @@
     },
     {
       "path": "evaluations/atomic_contract_fixtures.json",
-      "bytes": 81999,
-      "sha256": "5b186226ee7edce0d639c6c1e33967c6470e988f073e7b239c74c906f8ccff7d"
+      "bytes": 82427,
+      "sha256": "18617de7edbdc7170a29feb10cde6906fae3a0bca25496923920323205b2419e"
     },
     {
       "path": "evaluations/golden_runs/C-03/manifest.json",
@@ -2695,6 +2695,21 @@
       "path": "evaluations/prompts/MD-20/problematic.json",
       "bytes": 783,
       "sha256": "e4a60c7ef79453c7e99f7ade5023eb1aab715104038954d1073f00f88b9b4927"
+    },
+    {
+      "path": "evaluations/prompts/MD-200/adversarial.json",
+      "bytes": 909,
+      "sha256": "e528522f512686e0b325df9bd82a2b5e516e0b091286023eb944f8e71c0cbee4"
+    },
+    {
+      "path": "evaluations/prompts/MD-200/healthy.json",
+      "bytes": 820,
+      "sha256": "cd305fdd4996e353af704b6a8bae7cdd50c1a334256f7dc5b4704cee614ac06b"
+    },
+    {
+      "path": "evaluations/prompts/MD-200/problematic.json",
+      "bytes": 855,
+      "sha256": "760c9718eac6638de0f8b25d4f214be5dfa2bd43d502273aec0fcbea5ffa191e"
     },
     {
       "path": "evaluations/prompts/MD-21/adversarial.json",
@@ -8013,13 +8028,13 @@
     },
     {
       "path": "integrations/md_to_agent_library_crosswalk.json",
-      "bytes": 265977,
-      "sha256": "9cc895f31f1b2ddb918c6d78dcf164d8905afbf367930aef7734a63dc0b98129"
+      "bytes": 266295,
+      "sha256": "ee18e39312e7bf8295bd0654bc29e6cbb3ca31608f4e267dca661eb872e85cc1"
     },
     {
       "path": "integrations/md_to_prompt_type_library_crosswalk.json",
-      "bytes": 277388,
-      "sha256": "09323428403de8f49fb1b81ee286a8d98df16a28350bf13b7c82a6138d5e4506"
+      "bytes": 277712,
+      "sha256": "c8a2b16b18e974ff1d27f6e8633897b61aa410ea1ecf7c159fd6e6bcb837ed0b"
     },
     {
       "path": "integrations/platform_tool_matrix.json",
@@ -8033,8 +8048,8 @@
     },
     {
       "path": "integrations/template_to_prompt_crosswalk.json",
-      "bytes": 48213,
-      "sha256": "c644b427f660e49d5275181d29716d7cc76d17d891ff4eb03449581d71b83bff"
+      "bytes": 48285,
+      "sha256": "c26b421a7e5d8d43857805ae920933810914215c29a85a8426e86bac1bdd92b6"
     },
     {
       "path": "integrations/template_to_skill_crosswalk.json",
@@ -8787,6 +8802,11 @@
       "sha256": "1fe77445ffde4f313fb020b75b234ff82077a5fddf7a18b3f9e76c63b89a696c"
     },
     {
+      "path": "prompts/200_REPOSITORY_MISSION_PROMISE_DEVIATION_BLOAT_AND_SIMPLIFICATION_AUDIT.md",
+      "bytes": 13440,
+      "sha256": "d172fb07a80dd8dea083de7f6b5f0ee28f7bb1f63dd21fa3083adfc97841fb07"
+    },
+    {
       "path": "prompts/20_LICENSE_COMPLIANCE_AND_GOVERNANCE_REVIEW.md",
       "bytes": 8357,
       "sha256": "2e041ff0e5cbd0db6e4ddddcc6c626fa0b2818549b406af93bdb752a0b1035ce"
@@ -8813,13 +8833,13 @@
     },
     {
       "path": "prompts/25_PROJECT_CONSISTENCY_UNIFORMITY_AND_COHERENCE_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10747,
-      "sha256": "553f0fd2f7f1c7ae1f5c7aee8a50b05bc59d0a4ae8674b1f071a03b8ff3bf5fb"
+      "bytes": 10878,
+      "sha256": "46a2fa60d9fd5ae05a43726970f14e4e44e88d5ec894ea17fb3560126b049e44"
     },
     {
       "path": "prompts/26_PROJECT_CONSISTENCY_UNIFORMITY_AND_COHERENCE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
-      "bytes": 12665,
-      "sha256": "28ec25af91363f3e96763e539621cac7d0e81fbfff2599faf7b1af59c0aa57a2"
+      "bytes": 12720,
+      "sha256": "94bda1a2de5440efa8e53e4b31fb85b261422e6f75d1148acec0f5fca5d32547"
     },
     {
       "path": "prompts/27_CODE_QUALITY_AND_MAINTAINABILITY_INVESTIGATION_AND_PLAN.md",
@@ -8843,13 +8863,13 @@
     },
     {
       "path": "prompts/31_SAFE_CLEANUP_DEAD_CODE_AND_REPOSITORY_HYGIENE_INVESTIGATION_AND_PLAN.md",
-      "bytes": 11021,
-      "sha256": "16733ff38c8efa1e709f96f271fd3263284974eddb3e50dea5e284df531bc4d7"
+      "bytes": 11129,
+      "sha256": "23a9a06271187c0af778f8cba324bf9472bfb2270f809e1a8cc658dc3514a217"
     },
     {
       "path": "prompts/32_SAFE_CLEANUP_DEAD_CODE_AND_REPOSITORY_HYGIENE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
-      "bytes": 13154,
-      "sha256": "4127587a9e4f419ba335c34fa6ca2e207702bd6a6b503cba4f463953d64f9238"
+      "bytes": 13254,
+      "sha256": "f6bac454c01dbcb0923e4fdfb1a80c59d0ebc1499fc4ef06728e9e87d6b930e3"
     },
     {
       "path": "prompts/33_REFACTORING_AND_MODERNIZATION_INVESTIGATION_AND_PLAN.md",
@@ -9988,8 +10008,8 @@
     },
     {
       "path": "tools/check_release_consistency.py",
-      "bytes": 4462,
-      "sha256": "74a01d36e06133b8f41736e880708681e26a408a2039d1a1530846edf083b18f"
+      "bytes": 4532,
+      "sha256": "a9bf1fe3fb9fbe9e9b661273f84403943eca194f6ad441d3552dccdb14eb12f0"
     },
     {
       "path": "tools/check_script_parity.py",
@@ -10178,8 +10198,8 @@
     },
     {
       "path": "tools/sync_agent_guidance.py",
-      "bytes": 22028,
-      "sha256": "4d560c5d0c86656210541158b2c4918a87611329b7ad627f98348dbe8a8bd4da"
+      "bytes": 22038,
+      "sha256": "0ad51fc05612c81dbe299c9c56a067ec41ec8fa12d2b58d2a12e9d41f6dad1e9"
     },
     {
       "path": "tools/sync_installed_skills.py",

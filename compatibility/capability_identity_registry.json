@@ -1600,6 +1600,14 @@
       "sequence": 199,
       "title": "Prompt Addition, Registration, and Ecosystem Integration",
       "status": "active"
+    },
+    {
+      "capability_id": "md.audit.repository-mission-promise-deviation-bloat-and-simplification-audit",
+      "prompt_id": "MD-200",
+      "prompt_slug": "repository-mission-promise-deviation-bloat-and-simplification-audit",
+      "sequence": 200,
+      "title": "Repository Mission Promise Deviation Bloat and Simplification Audit",
+      "status": "active"
     }
   ],
   "suite_version": "1.8.3"
