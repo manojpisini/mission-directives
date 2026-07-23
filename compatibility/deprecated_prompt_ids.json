@@ -1,4 +1,0 @@
-{
-  "deprecated": [],
-  "policy": "Never reuse a retired current prompt_id. Legacy IDs are namespaced."
-}

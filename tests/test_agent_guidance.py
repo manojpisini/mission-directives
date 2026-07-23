@@ -111,6 +111,8 @@ def test_rejects_any_agent_filename_other_than_agents_or_claude(tmp_path: Path):
 def test_rendered_guidance_contains_lookup_and_auto_orchestration_rules(tmp_path: Path):
     text = module.render_guidance(project_root=tmp_path, suite_root=ROOT, agent_file="AGENTS.md")
     for token in [
+        "tools/md.py route",
+        "tools/md.py compare",
         "tools/md.py lookup",
         "tools/md.py explain",
         "MD-191",
@@ -122,6 +124,8 @@ def test_rendered_guidance_contains_lookup_and_auto_orchestration_rules(tmp_path
         "Only AGENTS.md and CLAUDE.md",
         "exact execution twin",
         "pair-status",
+        "tools/keyword_context.py",
+        "Do not read prompt bodies during intent selection",
     ]:
         assert token in text
 

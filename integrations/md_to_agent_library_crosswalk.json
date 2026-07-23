@@ -1341,8 +1341,8 @@
           "status": "proposed"
         },
         {
-          "catalog_id": "AGENT-01-legacy-modernization-agent",
-          "name": "Legacy Modernization Agent",
+          "catalog_id": "AGENT-01-existing-system-modernization-agent",
+          "name": "Existing-System Modernization Agent",
           "domain": "01",
           "confidence": 0.1868,
           "status": "proposed"
@@ -1377,8 +1377,8 @@
           "status": "proposed"
         },
         {
-          "catalog_id": "AGENT-01-legacy-modernization-agent",
-          "name": "Legacy Modernization Agent",
+          "catalog_id": "AGENT-01-existing-system-modernization-agent",
+          "name": "Existing-System Modernization Agent",
           "domain": "01",
           "confidence": 0.1889,
           "status": "proposed"

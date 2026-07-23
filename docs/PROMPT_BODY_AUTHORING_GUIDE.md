@@ -33,7 +33,7 @@ Do not choose `executive` merely because the title sounds senior. Executive has 
 - `imaginative` for original creative work without fabricated verification;
 - control prompts use the control plane rather than a normal lane.
 
-### 4. Write the minimum canonical skeleton
+### 4. Write the minimum canonical structure
 
 ```xml
 <prompt>
@@ -238,4 +238,3 @@ python tools/validate_suite.py
 ## Automated prompt addition
 
 When adding a new prompt rather than editing an existing one, use `MD-199` for agentic analysis or `tools/add_prompt.py` for the deterministic transaction. Do not manually copy a file into `prompts/`; a complete addition must assign a permanent identity and update the catalog, identity registry, capability graph, atomic scenario, template and skill routes, crosswalks, three evaluation fixtures, body audit, tests, validation, and manifest. See [Prompt Addition and Registration Guide](PROMPT_ADDITION_AND_REGISTRATION_GUIDE.md).
-

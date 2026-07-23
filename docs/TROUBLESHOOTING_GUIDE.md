@@ -22,7 +22,7 @@ Add role-specific allowed and prohibited tool classes, operating-mode limits, ou
 
 The `<runtime_markers>` block must name all six exact markers.
 
-### Legacy authorization tag
+### Obsolete authorization tag
 
 Rename `<security_execution_boundary>` to `<authorization_boundary>` and retain the security-specific content.
 

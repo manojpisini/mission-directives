@@ -1,150 +1,58 @@
-# Compatibility and Identity Guide
+# Identity and Runtime Path Guide
 
 ## Purpose
 
-This guide explains how prompts and capabilities retain stable meaning while files, titles, sequences, scenarios, and architecture evolve.
+Mission Directives exposes current, permanent capability identities and current
+agent skill destinations. The repository does not ship historical release maps,
+redirect tables, or retired project snapshots.
 
-The suite previously reused numeric identifiers during major restructuring. Permanent semantic identities and a compatibility registry prevent future integrations from silently routing to a different capability.
+## Current identity contract
 
-## Identity fields
+`compatibility/capability_identity_registry.json` is the generated registry for
+every prompt in `catalog.json`. Each row binds:
 
-### `capability_id`
+- `capability_id`: permanent semantic machine identity;
+- `prompt_id`: permanent prompt identifier;
+- `prompt_slug`: stable human-readable identity;
+- `canonical_path`: current prompt body location;
+- `identity_status`: current identity state.
 
-Permanent semantic machine identity.
+Consumers should store `capability_id` and `prompt_id`. Do not route by filename,
+display title, or sequence number.
 
-Example:
+## Current agent path contract
 
-```yaml
-capability_id: md.debugging.debugging-root-cause-and-bug-resolution-investigation-and-plan
-```
+`compatibility/agent_skill_paths.json` defines supported skill installation
+destinations for Agents, Claude Code, and OpenCode. Installers load this file
+through `tools/agent_paths.py`; shell wrappers delegate to the same Python
+implementation so platform behavior remains aligned.
 
-Consumers should prefer this field for durable references.
+## Change procedure
 
-### `prompt_id`
-
-Permanent identifier within the current namespace. It is not reassigned after publication.
-
-### `prompt_slug`
-
-Stable human-readable identifier. Renames require an alias rather than silent replacement.
-
-### `sequence`
-
-Presentation order only. It is not a routing key and may change without changing capability identity.
-
-### `identity_status`
-
-Current identities use `permanent`. A future retirement must use explicit compatibility records rather than deleting history.
-
-## Legacy namespaces
-
-An old numeric ID may have a different meaning from a current ID. Historical references therefore require a namespace:
-
-```text
-legacy:v5.2:MD-12
-```
-
-A bare current `MD-12` refers only to the current catalog.
-
-## Compatibility registry
-
-```text
-compatibility/
-  aliases.json
-  capability_identity_registry.json
-  original_66_to_current.json
-  deprecated_prompt_ids.json
-  scenario_redirects.json
-```
-
-### Original-area coverage
-
-`original_66_to_current.json` maps every original capability area to current prompt IDs and classifies the relationship:
-
-- preserved;
-- renamed;
-- merged;
-- split;
-- expanded;
-- intentionally retired.
-
-A mapping should explain whether current coverage is equivalent, stronger, narrower, or redistributed.
-
-## Rename procedure
-
-1. Keep the existing capability ID.
-2. Add the old slug to aliases.
-3. Update the title and canonical path if required.
-4. Update catalogs, scenarios, crosswalks, docs, and fixtures.
-5. Verify external consumers can resolve the alias.
-
-## Merge procedure
-
-1. Identify the surviving capability or new composite owner.
-2. Map every old capability to the replacement set.
-3. Preserve output and behavior compatibility where promised.
-4. Add redirects or explicit failure for unsupported behavior.
-5. Update dependent scenarios and agent mappings.
-6. Do not reuse retired prompt IDs.
-
-## Split procedure
-
-A split may create:
-
-- investigation and executive pair;
-- several specialist capabilities;
-- a primary prompt plus reusable gates.
-
-The compatibility record must specify which replacement owns each old outcome.
-
-## Retirement procedure
-
-Retire only when:
-
-- usage and dependencies are known;
-- replacement or reason is documented;
-- scenarios and integrations are migrated;
-- aliases return a clear deprecation result;
-- artifacts remain readable;
-- the ID is permanently reserved.
-
-## Consumer guidance
-
-External tools should store:
-
-```json
-{
-  "capability_id": "...",
-  "prompt_id": "MD-29",
-  "prompt_slug": "...",
-  "catalog_revision": "..."
-}
-```
-
-Do not route by filename or sequence.
-
-## Cross-catalog implications
-
-Agent and prompt-type mappings use permanent capability IDs. A title similarity match is not sufficient to update an approved mapping.
+1. Preserve an identity when its observable capability remains the same.
+2. Add a new permanent identity when authority or observable outcome changes.
+3. Update prompt metadata, catalogs, scenarios, crosswalks, fixtures, and docs.
+4. Regenerate the capability identity registry.
+5. Run identity, reproducibility, installer-path, and manifest validation.
+6. Publish breaking consumer guidance outside the runtime repository when a
+   downstream system requires a transition record.
 
 ## Validation failures
 
-The suite should fail when:
+The suite fails when:
 
-- an active capability ID disappears;
-- IDs or slugs are duplicated;
-- a current prompt ID is reused;
-- a legacy mapping points to missing prompts;
-- a scenario references a retired capability without redirect;
-- identity registry count differs from the catalog;
-- original-area coverage becomes incomplete.
+- an active capability identity disappears;
+- prompt IDs, capability IDs, or slugs are duplicated;
+- the identity registry count differs from the catalog;
+- a registry row points to a missing canonical prompt;
+- a scenario or crosswalk references an unknown current identity;
+- agent skill destinations diverge across installer entry points.
 
 ## Review checklist
 
-- [ ] Change type is rename, merge, split, replacement, or retirement.
-- [ ] Permanent identity is preserved where meaning is preserved.
-- [ ] Aliases and redirects are explicit.
-- [ ] Original coverage remains provable.
-- [ ] Scenarios and crosswalks are updated.
-- [ ] No numeric ID is repurposed.
-- [ ] Fixtures and manuals reflect the current route.
+- [ ] Permanent identity was preserved where meaning was preserved.
+- [ ] New authority or outcomes received a new identity.
+- [ ] Scenarios, crosswalks, fixtures, and docs use current IDs.
+- [ ] Agent path changes were made in the canonical path policy.
+- [ ] Generated identity and manifest artifacts were refreshed.
+- [ ] Focused and full validation passed.

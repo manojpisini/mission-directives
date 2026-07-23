@@ -8,20 +8,23 @@ This managed section connects **AGENTS.md** to Mission Directives **1.8.3** at `
 ### When to invoke MD
 
 - Treat the standalone keyword `MD` as an explicit request to use this suite.
-- If the user supplies an exact `MD-###` or `C-###`, inspect that target with `explain` before execution.
-- If `MD` is followed by ordinary words, treat those words as a lookup query. Do not guess a prompt ID from memory.
+- Pass the full user request to the deterministic keyword-context router. It handles exact IDs, natural intent, depth and assurance modifiers, shortcuts, combinations, scenarios, and bounded workflow graphs without opening prompt bodies.
+- If the user supplies an exact `MD-###` or `C-###`, the router resolves that identifier directly; inspect the selected target with `explain` before execution.
+- If `MD` or `md` is followed by ordinary words, preserve the full wording for context parsing. Do not guess a prompt ID from memory or scan the prompt directory.
 - Even without the keyword, use MD when the request clearly benefits from its evidence, authorization, skill, loop, artifact, or verification contracts.
 - Use `MD-191` only for ambiguities whose answers change routing, authority, evidence lane, output medium, budget, or acceptance criteria. Do not interrogate the user about details that can be safely inferred or deferred.
 
-### Fast lookup workflow
+### Fast intent-routing workflow
 
 ```bash
-python tools/md.py lookup "<user terms>" --limit 8
+python tools/md.py route "<full user request>"
+python tools/md.py lookup "<operator discovery terms>" --limit 8
+python tools/md.py compare <TARGET_A> <TARGET_B>
 python tools/md.py explain <MD-ID|C-ID|DEPARTMENT_PACK>
 python tools/md.py plan <target> --mode <MODE> --root . --dry-run
 ```
 
-Lookup before opening many prompt files. Prefer the highest-confidence exact prompt or composite scenario. If results remain ambiguous, ask one route-changing question, then rerun lookup.
+The router performs keyword-context parsing, policy shortcuts, metadata lookup, and deterministic selection in that order. Use `compare` when close routes need an authority or verification-cost decision. If no route meets the confidence threshold, ask one route-changing question and rerun `route`.
 
 ### Productivity shortcuts
 
@@ -49,19 +52,21 @@ These shortcuts are defaults, not blind dispatch rules. Confirm that the route o
 - Use `python tools/add_prompt.py --source <file.md> --title "<title>"` for a deterministic transactional addition.
 - Never copy a prompt into the prompts directory manually; the catalog, identity registry, graph, templates, skills, fixtures, evaluations, tests, validation, and manifest must remain synchronized.
 
-### Canonical lookup order
+### Canonical selection order
 
-1. Run `python tools/md.py lookup "<terms>"`.
-2. Inspect the selected route with `python tools/md.py explain <target>`.
-3. Use `catalog.json` for prompt metadata and `SCENARIO_CATALOG.json` for composite workflows.
-4. Use `PROMPT_EXECUTION_ORDER.md` for phase order, modes, branches, locks, and completion semantics.
-5. Load only the selected bodies from `prompts/` plus their declared prerequisites.
-6. Consult schemas, policies, `skill_registry.json`, `policies/auto_prompt_policy.json`, and `policies/loop_execution_policy.json` only when triggered.
+1. Run `python tools/md.py route "<full user request>"`.
+2. If needed, compare close candidates with `python tools/md.py compare <targets...>`.
+3. Inspect every selected target with `python tools/md.py explain <target>`.
+4. Use `catalog.json` for prompt metadata and `SCENARIO_CATALOG.json` for composite workflows.
+5. Use `PROMPT_EXECUTION_ORDER.md` for phase order, modes, branches, locks, and completion semantics.
+6. Load only the selected bodies from `prompts/` plus their declared prerequisites.
+7. Consult schemas, policies, `skill_registry.json`, `policies/auto_prompt_policy.json`, and `policies/loop_execution_policy.json` only when triggered.
 
 ### Efficiency and anti-bloat rules
 
 - Select the **smallest coherent graph** that owns the observable outcome.
 - **Do not load every prompt**, every department pack entry, or every skill into context.
+- Do not read prompt bodies during intent selection; `tools/keyword_context.py`, policy metadata, catalogs, and scenarios own that stage.
 - Load the five control prompts once per run, then only selected capabilities and required handoffs.
 - Prefer a composite scenario when it already expresses the complete workflow; otherwise start from one primary prompt.
 - Invoke a skill through `MD-192` and `MD-196` only when its genuine capability is needed. Installed does not mean required.

@@ -159,4 +159,4 @@ Emit `!STOP:{reason}` when:
 
 ## Validation
 
-The body validator requires canonical authorization and tool-policy tags in all 199 prompts and rejects the legacy `<security_execution_boundary>` name.
+The body validator requires canonical authorization and tool-policy tags in all 199 prompts and rejects the obsolete `<security_execution_boundary>` name.

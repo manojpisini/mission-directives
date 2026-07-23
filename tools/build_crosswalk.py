@@ -10,8 +10,20 @@ def score(a,b):
  A,B=toks(a),toks(b); inter=len(A&B)
  return 0 if not inter else .7*inter/max(1,len(A|B))+.3*inter/max(1,min(len(A),len(B)))
 def parse(path,kind):
+ source=Path(path)
+ if source.suffix.lower()=='.json':
+  data=json.loads(source.read_text(encoding='utf-8'))
+  entries=data.get('entries')
+  if not isinstance(entries,list): raise ValueError(f'{source}: JSON snapshot must contain an entries array')
+  required={'catalog_id','domain','name'}
+  if any(not isinstance(row,dict) or not required <= set(row) for row in entries):
+   raise ValueError(f'{source}: every snapshot entry must contain {sorted(required)}')
+  return [
+   {'catalog_id':row['catalog_id'],'name':row['name'],'domain':row['domain']}
+   for row in entries
+  ]
  current='00'; out=[]
- for line in Path(path).read_text().splitlines():
+ for line in source.read_text(encoding='utf-8').splitlines():
   h=re.match(r'^##\s+(\d{2})',line)
   if h: current=h.group(1); continue
   m=re.match(r'^-\s+\*\*([^*]+?)\*\*',line) if kind=='agent' else re.match(r'^-\s+(.+?Prompt Type)\s*$',line)
@@ -32,4 +44,3 @@ if __name__ == '__main__':
     except ImportError:
         from tools.tool_runtime import bootstrap_tool
     _MD_TUI = bootstrap_tool(__file__)
-

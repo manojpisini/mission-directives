@@ -274,7 +274,7 @@ def _build_plan(project: Path) -> dict:
             if name == "docs" and not _directory_empty_or_marker_only(path):
                 warnings.append("preserved_nonempty_docs")
             elif not ownership_recorded:
-                warnings.append(f"preserved_legacy_unverified_{name}")
+                warnings.append(f"preserved_unverified_{name}")
             else:
                 warnings.append(f"preserved_unowned_{name}")
 

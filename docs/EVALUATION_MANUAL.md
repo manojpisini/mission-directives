@@ -124,6 +124,33 @@ Machine-reference runs are not golden. Promotion requires:
 python tools/promote_golden_run.py
 ```
 
+Promoted manifests are counted automatically in `EVALUATION_STATUS.json` and
+`python tools/md.py lifecycle`. A promotion is not inferred from the presence of
+a machine reference run.
+
+## Route-confusion regression set
+
+`evaluations/route_confusion.json` contains near-neighbor natural-language
+requests whose correct owners differ. The deterministic evaluation harness
+checks status, selection type, and exact ordered targets through
+`md.route_intent`. Add a case whenever operator feedback reveals ambiguous or
+incorrect selection.
+
+`evaluations/exact_twin_negative_cases.json` separately proves that plan
+approval without execution consent, changes after approval, and executor
+mismatch all fail closed.
+
+## Lifecycle report
+
+```bash
+python tools/md.py lifecycle
+```
+
+The report derives prompt and scenario counts, promoted golden coverage, skill
+locks, live skill passes, measured production models, and external completion
+blockers directly from canonical files. `structural_surface: implemented` does
+not override `status: external_evidence_pending`.
+
 ## Mutation testing
 
 Mutations should include:

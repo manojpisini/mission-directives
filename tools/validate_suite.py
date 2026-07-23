@@ -510,13 +510,7 @@ for s in scenarios:
         }:
             errors.append(f"{s.get('scenario_id')}: invalid phase mode")
 
-# Compatibility and crosswalk.
-compat = load(ROOT / "compatibility/original_66_to_current.json")
-if len(compat.get("mappings", [])) != 66:
-    errors.append("original capability map must contain 66 entries")
-for m in compat.get("mappings", []):
-    if not m.get("current_prompt_ids") or set(m["current_prompt_ids"]) - set(ids):
-        errors.append(f"legacy mapping invalid: {m.get('legacy_prompt_id')}")
+# Current identity and crosswalk contracts.
 ident = load(ROOT / "compatibility/capability_identity_registry.json")
 if len(ident.get("capabilities", [])) != len(items):
     errors.append("identity registry count mismatch")
@@ -734,10 +728,14 @@ required_root = [
     "policies/run_state_machine.json",
     "config/model_profiles.json",
     "tools/md.py",
+    "tools/keyword_context.py",
+    "tools/prompt_lifecycle.py",
     "tools/add_prompt.py",
     "tools/add-prompt.sh",
     "tools/add-prompt.ps1",
     "tools/run_evaluations.py",
+    "evaluations/route_confusion.json",
+    "evaluations/exact_twin_negative_cases.json",
     "tools/run_model_benchmarks.py",
     "tools/resolve_skill_lock.py",
     "tools/check_skill_lock.py",
@@ -877,6 +875,8 @@ try:
     spec.loader.exec_module(sync_module)
     rendered = sync_module.render_guidance(ROOT, ROOT, "AGENTS.md")
     for token in (
+        "tools/md.py route",
+        "tools/md.py compare",
         "tools/md.py lookup",
         "tools/md.py explain",
         "MD-191",
@@ -889,6 +889,8 @@ try:
         "pair-status",
         "MD-199",
         "add_prompt.py",
+        "tools/keyword_context.py",
+        "Do not read prompt bodies during intent selection",
     ):
         if token not in rendered:
             errors.append(f"agent guidance block missing {token}")
@@ -914,6 +916,12 @@ try:
         for x in visual.get("results", [])
     ):
         errors.append("MD keyword lookup visual route failed")
+    routed = runtime_module.route_intent("MD advanced audit fix verify repository")
+    if routed.get("selection", {}).get("targets") != ["C-108"]:
+        errors.append("MD keyword-context route selection failed")
+    combined = runtime_module.route_intent("md combine visual assets and strudel")
+    if combined.get("selection", {}).get("targets") != ["C-109", "C-110"]:
+        errors.append("MD keyword-context workflow composition failed")
 except Exception as e:
     errors.append(f"MD keyword lookup validation failed: {e}")
 
@@ -1032,7 +1040,7 @@ eval_status = (
 )
 status = {
     "status": "pass" if not errors else "fail",
-    "claim_scope": "prompt-body semantic contracts, structural integrity, deterministic runtime tests, fixture coverage, compatibility, CI configuration, lock safety, and manifest integrity",
+    "claim_scope": "prompt-body semantic contracts, structural integrity, deterministic runtime tests, fixture coverage, current identity contracts, CI configuration, lock safety, and manifest integrity",
     "suite_version": version,
     "prompt_count": len(items),
     "true_pairs": expected["pair"],

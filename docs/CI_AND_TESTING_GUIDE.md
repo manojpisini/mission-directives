@@ -43,10 +43,15 @@ python tools/check_skill_lock.py
 
 ```bash
 python tools/build_capability_graph.py --check
-python tools/audit_prompt_bodies.py --check
+python tools/audit_prompt_bodies.py
 python tools/check_skill_lock.py
 python tools/run_evaluations.py
 python tools/run_tests.py
+python tools/validate_templates.py
+python tools/check_documentation_links.py
+python tools/check_script_parity.py
+python tools/check_release_consistency.py
+python tools/check_generated_reproducibility.py
 python tools/build_manifest.py --check
 python tools/validate_suite.py
 ```
@@ -70,20 +75,32 @@ The prompt-body defect repairs use this pattern. The tests fail against generic 
 
 ## GitHub Actions
 
-`.github/workflows/validate.yml` runs on relevant prompt, schema, evaluation, tool, JSON, and Markdown changes.
+`.github/workflows/validate.yml` runs on every push and pull request across Ubuntu, Windows, and macOS with Python 3.12.
 
 The workflow must run checks in this order:
 
 1. install development dependencies;
-2. verify skill locks;
-3. verify capability graph;
-4. verify body audit;
-5. run deterministic evaluations;
-6. run unit tests;
-7. verify manifest;
-8. run complete validation.
+2. generate prompt-body audit artifacts;
+3. run deterministic tests and public-command smoke coverage;
+4. run evaluation, route-confusion, and exact-twin fixtures;
+5. validate templates and Bash/PowerShell script parity;
+6. check release metadata and generated reproducibility;
+7. run complete validation;
+8. smoke-test the platform-native wrapper;
+9. upload audit, test, evaluation, and validation artifacts even when an earlier step fails.
 
-A CI job should not regenerate files and pass silently. `--check` commands confirm committed generated artifacts match canonical sources.
+Generated artifacts are reviewed as CI uploads. Canonical reproducibility and the manifest still fail when committed package content diverges.
+
+## Uploaded evidence
+
+Each matrix job uploads a `validation-<os>` artifact containing:
+
+- `BODY_QUALITY_AUDIT.json` and `.md`;
+- `.prompt_suite/results/TEST_RESULTS.json`;
+- `.prompt_suite/results/EVALUATION_STATUS.json`;
+- `VALIDATION.json` when full validation reached its reporting stage.
+
+Artifact upload uses `if: always()` so an early failure still preserves whatever evidence was produced. Missing files warn rather than masking the original failure.
 
 ## Pre-commit
 

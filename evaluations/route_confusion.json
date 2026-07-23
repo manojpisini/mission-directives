@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "case_id": "advanced-audit-remediation",
+      "request": "MD advanced audit fix verify repository",
+      "expected_status": "selected",
+      "expected_type": "scenario",
+      "expected_targets": ["C-108"]
+    },
+    {
+      "case_id": "research-report-single-owner",
+      "request": "md in depth research report",
+      "expected_status": "selected",
+      "expected_type": "scenario",
+      "expected_targets": ["C-26"]
+    },
+    {
+      "case_id": "governed-prompt-addition",
+      "request": "MD add prompt",
+      "expected_status": "selected",
+      "expected_type": "prompt",
+      "expected_targets": ["MD-199"]
+    },
+    {
+      "case_id": "mission-deviation-audit",
+      "request": "MD mission promise deviation bloat simplification audit",
+      "expected_status": "selected",
+      "expected_type": "prompt",
+      "expected_targets": ["MD-200"]
+    },
+    {
+      "case_id": "bounded-multi-domain-workflow",
+      "request": "MD combine visual assets and strudel",
+      "expected_status": "selected",
+      "expected_type": "workflow_graph",
+      "expected_targets": ["C-109", "C-110"]
+    },
+    {
+      "case_id": "unknown-intent-fails-closed",
+      "request": "md zzzxxyy-no-such-capability",
+      "expected_status": "no_confident_match",
+      "expected_type": "none",
+      "expected_targets": []
+    },
+    {
+      "case_id": "uppercase-report-shortcut",
+      "request": "MD REPORT",
+      "expected_status": "selected",
+      "expected_type": "scenario",
+      "expected_targets": ["C-95"]
+    },
+    {
+      "case_id": "uppercase-research-shortcut",
+      "request": "MD RESEARCH",
+      "expected_status": "selected",
+      "expected_type": "scenario",
+      "expected_targets": ["C-26"]
+    },
+    {
+      "case_id": "lowercase-exact-target",
+      "request": "md md-200",
+      "expected_status": "selected",
+      "expected_type": "exact_target",
+      "expected_targets": ["MD-200"]
+    },
+    {
+      "case_id": "bare-invocation-fails-closed",
+      "request": "MD",
+      "expected_status": "no_confident_match",
+      "expected_type": "none",
+      "expected_targets": []
+    }
+  ]
+}

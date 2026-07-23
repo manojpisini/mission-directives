@@ -1139,7 +1139,7 @@
     {
       "scenario_id": "A-016",
       "title": "Project Scaffolding and Repository Bootstrap",
-      "purpose": "Creates an approved project skeleton, conventions, tooling, tests, documentation, and safe defaults from defined requirements and architecture.",
+      "purpose": "Creates an approved project foundation, conventions, tooling, tests, documentation, and safe defaults from defined requirements and architecture.",
       "prompts": [
         "MD-16"
       ],

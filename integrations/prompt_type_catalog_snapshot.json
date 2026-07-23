@@ -2363,9 +2363,9 @@
       "name": "Migration Planning Prompt Type"
     },
     {
-      "catalog_id": "PT-09-legacy-code-modernization-prompt-type",
+      "catalog_id": "PT-09-existing-code-modernization-prompt-type",
       "domain": "09",
-      "name": "Legacy Code Modernization Prompt Type"
+      "name": "Existing Code Modernization Prompt Type"
     },
     {
       "catalog_id": "PT-09-prototype-to-production-prompt-type",

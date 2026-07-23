@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Canonical Mission Directives release metadata.
 
-Every current-version consumer reads VERSION through this module. Historical
-compatibility records may retain older versions, but executable tools and
-current artifacts must never hard-code the active release number.
+Every release consumer reads VERSION through this module. Executable tools and
+generated artifacts must never hard-code the active release number.
 """
 from __future__ import annotations
 from pathlib import Path

@@ -11,7 +11,7 @@ The synchronization layer deliberately manages only:
 
 `CODEX.md`, `PI.md`, `HERMES.md`, `OPENCODE.md`, `GEMINI.md`, `QWEN.md`, `CURSOR.md`, `WINDSURF.md`, `COPILOT.md`, and custom filenames are intentionally excluded. This narrow scope prevents the suite from creating redundant or conflicting instruction surfaces.
 
-The inserted section teaches an agent where MD lives, how to search it, which files are authoritative, when to invoke conditional auto-prompts, and how to avoid loading unnecessary prompts or skills.
+The inserted section teaches an agent where MD lives, how to parse user intent algorithmically, which files are authoritative, when to invoke conditional auto-prompts, and how to avoid loading unnecessary prompts or skills.
 
 ## Design principles
 
@@ -36,7 +36,7 @@ Running the command repeatedly with the same project and suite paths produces no
 
 ### Keep routing compact
 
-Root agent files must not contain all 199 prompt bodies, all 110 scenarios, or the full skill registry. They contain a lookup protocol and high-frequency shortcuts. The canonical suite remains the source of truth.
+Root agent files must not contain all 201 prompt bodies, all 110 scenarios, or the full skill registry. They contain an intent-routing protocol and high-frequency shortcuts. The canonical suite remains the source of truth.
 
 ## Installation into a project
 
@@ -143,7 +143,7 @@ python tools/md.py explain MD-29
 python tools/md.py explain C-108
 ```
 
-### Natural-language lookup
+### Natural-language intent routing
 
 ```text
 MD audit and fix security issues
@@ -152,13 +152,22 @@ MD visual assets for a technical report
 MD personal productivity system
 ```
 
-The agent treats the words after `MD` as a lookup query:
+The agent preserves the full request and invokes the keyword-context router:
 
 ```bash
-python tools/md.py lookup "audit and fix security issues" --limit 8
+python tools/md.py route "MD advanced audit and fix security issues"
 ```
 
-`lookup` searches:
+Routing performs these deterministic stages:
+
+1. recognize a leading standalone `MD` or `md` slug without confusing it with an exact `MD-###` identifier;
+2. parse depth, assurance, mode, and composition modifiers;
+3. resolve exact prompt, scenario, or pack identifiers;
+4. apply the longest and highest-priority shortcut owner in each route family;
+5. search metadata only when no shortcut owns the intent;
+6. select the smallest prompt, scenario, or bounded workflow graph above the confidence threshold.
+
+`lookup` remains an operator discovery command. It searches:
 
 - prompt titles, descriptions, categories, roles, tags, preferred skills, and permanent capability IDs;
 - composite scenario titles and purposes;
@@ -167,7 +176,28 @@ python tools/md.py lookup "audit and fix security issues" --limit 8
 
 It returns match scores, matched terms, result type, canonical path or purpose, and the next `explain` command.
 
-`lookup` is a discovery aid. `explain` remains authoritative for the complete selected graph.
+Neither `route` nor `lookup` opens prompt bodies. `explain` remains authoritative for the complete selected graph, and only the selected bodies are loaded afterward.
+
+### Context modifiers
+
+The policy in `policies/agent_guidance_policy.json` defines phrases such as:
+
+- `advanced`, `in depth`, `comprehensive`, and `deep` for advanced depth;
+- `high assurance` and `rigorous` for stronger assurance;
+- `audit only`, `plan only`, `draft only`, and `verify only` for mode intent;
+- `workflow`, `scenario`, `combine`, and `end to end` for composition intent.
+
+Modifiers influence context and graph shape; they do not grant mutation or external-action authority.
+
+### Route comparison
+
+When two routes are plausible, compare their authority and cost without opening prompt bodies:
+
+```bash
+python tools/md.py compare C-108 C-63
+```
+
+The comparison reports route kind, default mode, minimum assurance, capability count, exact-twin pairs, risk levels, evidence lanes, mutation rights, and verification burden.
 
 ## High-frequency productivity shortcuts
 
@@ -194,12 +224,13 @@ These routes are defaults, not unconditional dispatch. The agent must still conf
 
 A connected agent should follow this order:
 
-1. Run `tools/md.py lookup` with the user's terms.
-2. Run `tools/md.py explain` for the selected prompt, scenario, or pack.
-3. Read `catalog.json` or `SCENARIO_CATALOG.json` for machine metadata.
-4. Read `PROMPT_EXECUTION_ORDER.md` for phases, modes, branches, locks, and completion semantics.
-5. Load only selected prompt bodies and their declared prerequisites from `prompts/`.
-6. Load schemas, policies, skill registry entries, or loop policies only when triggered.
+1. Run `tools/md.py route` with the full user request.
+2. Run `tools/md.py compare` only when close routes need a decision.
+3. Run `tools/md.py explain` for every selected prompt, scenario, or pack.
+4. Read `catalog.json` or `SCENARIO_CATALOG.json` for machine metadata.
+5. Read `PROMPT_EXECUTION_ORDER.md` for phases, modes, branches, locks, and completion semantics.
+6. Load only selected prompt bodies and their declared prerequisites from `prompts/`.
+7. Load schemas, policies, skill registry entries, or loop policies only when triggered.
 
 This order keeps context small and avoids scanning all prompts for routine work.
 
@@ -274,6 +305,7 @@ Run the focused tests:
 ```bash
 pytest -q tests/test_agent_guidance.py
 pytest -q tests/test_md.py
+pytest -q tests/test_lifecycle_and_public_commands.py
 ```
 
 Run the full deterministic chain:

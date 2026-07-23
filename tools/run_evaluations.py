@@ -153,6 +153,52 @@ for case in load(ROOT / "evaluations/negative_routing.json")["cases"]:
     bad = selected & set(case["must_not_select"])
     if bad:
         errors.append(f"negative route {case['case_id']} selected {sorted(bad)}")
+route_confusion_cases = load(ROOT / "evaluations/route_confusion.json")["cases"]
+for case in route_confusion_cases:
+    routed = md.route_intent(case["request"])
+    selection = routed["selection"]
+    observed = (routed["status"], selection["type"], selection["targets"])
+    expected = (
+        case["expected_status"],
+        case["expected_type"],
+        case["expected_targets"],
+    )
+    if observed != expected:
+        errors.append(
+            f"route confusion {case['case_id']} observed {observed!r} expected {expected!r}"
+        )
+exact_twin_negative_cases = load(
+    ROOT / "evaluations/exact_twin_negative_cases.json"
+)["cases"]
+for case in exact_twin_negative_cases:
+    try:
+        if case["operation"] == "authorize":
+            observed = md.authorize_exact_twin(
+                case["planning_prompt_id"],
+                case["execution_prompt_id"],
+                case["handoff_ready"],
+                case["plan_review_approved"],
+                case["user_approved"],
+            )["status"]
+            if observed != case["expected_status"]:
+                errors.append(f"exact twin case {case['case_id']} returned {observed}")
+        elif case["operation"] == "review_disposition":
+            observed = md.pair_review_disposition(
+                case["planning_prompt_id"],
+                case["handoff_ready"],
+                case["review_status"],
+                case["revisions_applied"],
+            )["next_action"]
+            if observed != case["expected_next_action"]:
+                errors.append(f"exact twin case {case['case_id']} returned {observed}")
+        elif case["operation"] == "executor_mismatch":
+            md.exact_execution_twin(
+                case["planning_prompt_id"], case["execution_prompt_id"]
+            )
+            errors.append(f"exact twin case {case['case_id']} did not fail closed")
+    except ValueError as exc:
+        if case["operation"] != "executor_mismatch" or case["expected_error"] not in str(exc):
+            errors.append(f"exact twin case {case['case_id']} raised {exc}")
 # Recovery drill transitions must be legal.
 drill = load(
     ROOT / "evaluations/recovery_drills/failed_execution_rollback_residual.json"
@@ -173,6 +219,9 @@ live_skill_pass = sum(
     for p in skill_files
     if isinstance(load(p), dict) and load(p).get("live_status") == "pass"
 )
+human_reviewed_golden_runs = len(
+    list((ROOT / "evaluations/golden_runs").glob("*/human_reviewed_manifest.json"))
+)
 status = {
     "status": "pass_with_external_measurements_pending" if not errors else "fail",
     "claim_scope": "fixture coverage, schema validity, deterministic routing, and recovery-state behavior only",
@@ -181,12 +230,14 @@ status = {
     "pair_adversarial_fixtures": len(pair_files),
     "pair_vs_single_definitions": len(pvs_files),
     "prompt_body_mutation_definitions": len(mutation_data.get("mutations", [])),
+    "route_confusion_cases": len(route_confusion_cases),
+    "exact_twin_negative_cases": len(exact_twin_negative_cases),
     "skill_conformance_definitions": len(skill_files),
     "template_conformance_fixtures": len(template_fixture_files),
     "schema_contract_fixtures": len(schema_contract_files),
     "live_skill_conformance_passes": live_skill_pass,
     "production_eligible_measured_models": len(measured),
-    "human_reviewed_golden_runs": 0,
+    "human_reviewed_golden_runs": human_reviewed_golden_runs,
     "machine_reference_runs": len(
         list((ROOT / "evaluations/golden_runs").glob("C-*/manifest.json"))
     ),

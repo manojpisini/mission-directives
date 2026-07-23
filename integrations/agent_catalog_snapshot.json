@@ -308,9 +308,9 @@
       "name": "Codebase Orchestrator Agent"
     },
     {
-      "catalog_id": "AGENT-01-legacy-modernization-agent",
+      "catalog_id": "AGENT-01-existing-system-modernization-agent",
       "domain": "01",
-      "name": "Legacy Modernization Agent"
+      "name": "Existing-System Modernization Agent"
     },
     {
       "catalog_id": "AGENT-01-code-simplification-agent",
@@ -2188,9 +2188,9 @@
       "name": ".NET Core Developer Agent"
     },
     {
-      "catalog_id": "AGENT-35-net-framework-legacy-developer-agent",
+      "catalog_id": "AGENT-35-net-framework-maintenance-developer-agent",
       "domain": "35",
-      "name": ".NET Framework (Legacy) Developer Agent"
+      "name": ".NET Framework Maintenance Developer Agent"
     },
     {
       "catalog_id": "AGENT-35-flutter-developer-agent",

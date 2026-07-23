@@ -20,8 +20,12 @@ jobs:
         run: python tools/audit_prompt_bodies.py
       - name: Deterministic tests
         run: python tools/run_tests.py
+      - name: Evaluation fixtures
+        run: python tools/run_evaluations.py
       - name: Validate templates
         run: python tools/validate_templates.py
+      - name: Script parity
+        run: python tools/check_script_parity.py
       - name: Release consistency
         run: python tools/check_release_consistency.py
       - name: Generated reproducibility
@@ -34,3 +38,15 @@ jobs:
       - name: PowerShell wrapper smoke test
         if: runner.os == 'Windows'
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./tools/validate-suite.ps1
+      - name: Upload validation artifacts
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: validation-${{ matrix.os }}
+          if-no-files-found: warn
+          path: |
+            BODY_QUALITY_AUDIT.json
+            BODY_QUALITY_AUDIT.md
+            VALIDATION.json
+            .prompt_suite/results/TEST_RESULTS.json
+            .prompt_suite/results/EVALUATION_STATUS.json

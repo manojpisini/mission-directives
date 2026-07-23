@@ -28,9 +28,6 @@ def test_apply_approved_requires_receipt(tmp_path):
  try: md.transition(str(p),'executing'); assert False
  except ValueError as e: assert 'approval' in str(e)
 
-def test_compatibility_map_complete():
- d=json.loads((ROOT/'compatibility/original_66_to_current.json').read_text()); assert len(d['mappings'])==66 and all(x['current_prompt_ids'] for x in d['mappings'])
-
 def test_fixture_coverage():
  cat=json.loads((ROOT/'catalog.json').read_text()); sc=json.loads((ROOT/'SCENARIO_CATALOG.json').read_text())
  assert len(list((ROOT/'evaluations/prompts').glob('MD-*/*.json')))==len(cat['prompts'])*3
@@ -40,7 +37,11 @@ def test_skill_lock_blocks_unresolved():
  d=json.loads((ROOT/'config/skills.lock.json').read_text()); registry=json.loads((ROOT/'skill_registry.json').read_text()); expected=sum(1 for s in registry['skills'] if s.get('install_command')); assert len(d['entries'])==expected and all(not x['auto_install_allowed'] for x in d['entries'] if x['lock_status']!='resolved')
 
 def test_crosswalk_complete():
- d=json.loads((ROOT/'integrations/md_to_agent_library_crosswalk.json').read_text()); cat=json.loads((ROOT/'catalog.json').read_text()); assert len(d['mappings'])==len(cat['prompts'])
+ cat=json.loads((ROOT/'catalog.json').read_text())
+ for name,key in [('md_to_agent_library_crosswalk.json','agent_matches'),('md_to_prompt_type_library_crosswalk.json','prompt_type_matches')]:
+  d=json.loads((ROOT/'integrations'/name).read_text())
+  assert len(d['mappings'])==len(cat['prompts'])
+  assert all(isinstance(row.get(key), list) for row in d['mappings'])
 
 
 def test_auto_plan_rejects_wasteful_loop():
@@ -273,3 +274,70 @@ def test_lookup_add_prompt_routes_to_governed_ingestion_capability():
     result = md.lookup('add a new prompt', limit=5)
     assert result['status'] == 'matched'
     assert result['results'][0]['id'] == 'MD-199'
+
+
+def test_route_intent_uses_invocation_slug_modifiers_and_shortcut_precedence():
+    result = md.route_intent('md advanced audit fix verify the repository')
+    assert result['status'] == 'selected'
+    assert result['selection']['type'] == 'scenario'
+    assert result['selection']['targets'] == ['C-108']
+    assert result['context']['invoked'] is True
+    assert result['context']['modifiers']['depth'] == 'advanced'
+
+
+def test_route_intent_prefers_specific_shortcut_over_generic_prompt_route():
+    result = md.route_intent('MD add prompt for a missing capability')
+    assert result['selection']['targets'] == ['MD-199']
+    assert 'C-94' not in result['selection']['targets']
+
+
+def test_route_intent_keeps_related_research_and_report_keywords_on_one_owner():
+    result = md.route_intent('md in depth research report')
+    assert result['selection']['targets'] == ['C-26']
+
+
+def test_route_intent_builds_a_small_workflow_for_distinct_shortcuts():
+    result = md.route_intent('MD combine visual assets and strudel')
+    assert result['selection']['type'] == 'workflow_graph'
+    assert result['selection']['targets'] == ['C-109', 'C-110']
+
+
+def test_route_intent_resolves_exact_target_without_lexical_search():
+    result = md.route_intent('MD-200')
+    assert result['selection']['type'] == 'exact_target'
+    assert result['selection']['targets'] == ['MD-200']
+    assert result['selection']['reason'] == 'explicit target identifier'
+    invoked = md.route_intent('md C-108')
+    assert invoked['selection']['targets'] == ['C-108']
+    assert invoked['context']['invoked'] is True
+
+
+def test_route_intent_handles_explicit_invocation_case_variants():
+    assert md.route_intent('MD REPORT')['selection']['targets'] == ['C-95']
+    assert md.route_intent('MD RESEARCH')['selection']['targets'] == ['C-26']
+    exact = md.route_intent('md md-200')
+    assert exact['selection']['targets'] == ['MD-200']
+    assert exact['selection']['reason'] == 'explicit target identifier'
+
+
+def test_route_intent_handles_bare_invocation_without_empty_lookup():
+    result = md.route_intent('MD')
+    assert result['status'] == 'no_confident_match'
+    assert result['context']['invoked'] is True
+    assert result['selection']['targets'] == []
+    assert 'no intent' in result['selection']['reason']
+
+
+def test_route_intent_reports_unknown_queries_without_guessing():
+    result = md.route_intent('md zzzxxyy-no-such-capability')
+    assert result['status'] == 'no_confident_match'
+    assert result['selection']['targets'] == []
+
+
+def test_compare_routes_exposes_decision_relevant_differences():
+    result = md.compare_routes(['C-108', 'C-63'])
+    assert result['targets'] == ['C-108', 'C-63']
+    assert result['comparisons'][0]['kind'] == 'scenario'
+    assert result['comparisons'][0]['capability_prompt_count'] > 0
+    assert 'default_mode' in result['differing_fields']
+    assert result['next_step'].startswith('Choose the route')

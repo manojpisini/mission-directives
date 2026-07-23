@@ -151,7 +151,7 @@ def test_body_quality_audit_report_matches_required_invariants():
     assert report["tool_policy"]["present"] == report["prompt_count"]
     assert report["runtime_markers"]["fully_implemented"] == report["prompt_count"]
     assert report["authorization_boundary"]["canonical"] == report["prompt_count"]
-    assert report["authorization_boundary"]["legacy_security_execution_boundary"] == 0
+    assert report["authorization_boundary"]["obsolete_security_execution_boundary"] == 0
     assert report["executive_prompts"]["with_decision_rules"] == 32
     assert report["pairs"]["duplicated_verification_blocks"] == 0
     assert report["pairs"]["planners_with_review_gate"] == 32

@@ -2,7 +2,7 @@
 
 [![Validate Mission Directives](https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml/badge.svg)](https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml)
 
-Mission Directives is a capability-first prompt orchestration toolkit for turning ambiguous language-model work into bounded, reviewable, and verifiable execution plans.
+Mission Directives is a curated library of advanced prompts and deterministic orchestration tools for turning natural-language intent into bounded, reviewable, and verifiable agent work with minimal context use.
 
 Instead of loading a large prompt library and hoping the model chooses well, the suite resolves a request to the smallest coherent graph of prompts, tools, skills, evidence rules, approvals, artifacts, and verification steps needed for the outcome. It supports research, engineering, security, operations, strategy, writing, reporting, design, and other professional workflows.
 
@@ -12,7 +12,7 @@ Current release: **1.8.3**
 
 Mission Directives provides a repeatable operating contract for agentic work:
 
-- deterministic lookup from natural-language intent to a prompt or composite scenario;
+- algorithmic keyword-context routing from natural-language intent to one prompt, a composite scenario, or a bounded workflow graph;
 - explicit operating modes that separate analysis, planning, drafting, execution, and verification;
 - evidence lanes for factual, hybrid, and imaginative work;
 - authorization boundaries and least-privileged tool policies;
@@ -27,8 +27,9 @@ The repository currently contains **201 prompts**, **201 atomic routes**, **110 
 
 ```text
 request
-  -> identify outcome, audience, authority, and evidence
-  -> look up the smallest suitable route
+  -> parse MD/md invocation, intent, modifiers, and exact IDs
+  -> apply shortcut ownership and metadata-only lookup
+  -> select the smallest suitable prompt, scenario, or workflow graph
   -> inspect the selected prompt or scenario
   -> plan or execute within an explicit mode
   -> preserve approvals and handoffs where required
@@ -76,7 +77,7 @@ Install the development dependencies and verify the suite:
 
 ```bash
 python -m pip install -r requirements-dev.txt
-python tools/md.py lookup "audit fix verify repository" --limit 8
+python tools/md.py route "MD advanced audit fix verify repository"
 python tools/validate_suite.py
 ```
 
@@ -122,14 +123,26 @@ See the [Installation and Project Integration Guide](docs/INSTALLATION_AND_PROJE
 
 ## Usage
 
-### 1. Find a route
+### 1. Route the full user request
 
-Search by the user's language rather than guessing an ID:
+Pass the complete request instead of guessing an ID or scanning prompt files:
 
 ```bash
-python tools/md.py lookup "repository mission drift and simplification audit" --limit 8
+python tools/md.py route "MD advanced repository mission drift and simplification audit"
+python tools/md.py route "md cleanup dead code safely"
+python tools/md.py route "MD in depth research report"
+```
+
+`route` uses `tools/keyword_context.py` and `policies/agent_guidance_policy.json`
+to parse the invocation slug, exact IDs, intent phrases, depth, assurance, mode,
+and composition modifiers. It then applies explicit shortcut ownership before
+metadata-only lookup. Prompt bodies are not opened during selection.
+
+Use raw lookup for operator discovery, or compare close candidates:
+
+```bash
 python tools/md.py lookup "cleanup dead code safely" --limit 8
-python tools/md.py lookup "research report" --limit 8
+python tools/md.py compare C-108 C-63
 ```
 
 ### 2. Inspect the selected route
@@ -159,7 +172,24 @@ MD add prompt
 MD C-108
 ```
 
-When an exact `MD-###` or `C-###` is supplied, the agent should inspect that target before execution. When ordinary words follow `MD`, it should run deterministic lookup instead of guessing from memory.
+When an exact `MD-###` or `C-###` is supplied, the router resolves it directly and the agent inspects that target before execution. When ordinary words follow `MD` or `md`, AGENTS.md and CLAUDE.md pass the full request through keyword-context parsing, lookup, and deterministic selection instead of guessing from memory or scanning prompt bodies.
+
+### Selection Algorithm
+
+```text
+full request
+  -> invocation and modifier parser
+  -> exact-ID resolution
+  -> longest/highest-priority shortcut owner per route family
+  -> transparent metadata lookup with a confidence threshold
+  -> smallest prompt, scenario, or bounded workflow graph
+  -> explain every selected target before loading its body
+```
+
+Specific shortcuts suppress broader routes in the same family. For example,
+`MD add prompt` selects `MD-199`, not the generic prompt-engineering scenario;
+`MD in depth research report` selects the research-report owner `C-26`; and
+distinct intents such as visual assets plus Strudel form a two-target workflow.
 
 ### Common Routes
 
@@ -240,7 +270,7 @@ See the [Prompt Addition and Registration Guide](docs/PROMPT_ADDITION_AND_REGIST
 | `tests/` | Deterministic regression and contract tests |
 | `docs/` | User, operator, authoring, security, and maintenance manuals |
 | `examples/` | Worked routing and execution examples |
-| `compatibility/` | Stable aliases, redirects, and identity mappings |
+| `compatibility/` | Current capability identity registry and supported agent skill destinations |
 | `integrations/` | Agent, skill, template, logging, and platform crosswalks |
 
 ## Development and Contribution
@@ -255,7 +285,7 @@ The contribution path is intentionally strict:
 4. Regenerate only the artifacts owned by the changed source.
 5. Review generated diffs for semantic drift.
 6. Run the complete validation chain.
-7. Document compatibility, authority, security, and cross-platform impact.
+7. Document identity, consumer-contract, authority, security, and cross-platform impact.
 
 Do not manually edit generated catalogs, graphs, audit reports, fixtures, validation reports, or `MANIFEST.json`. Do not commit credentials, private data, absolute personal paths, caches, local logs, runtime receipts, or unrelated refactors.
 
@@ -283,7 +313,31 @@ python tools/build_manifest.py --check
 python tools/validate_suite.py
 ```
 
-GitHub Actions runs the validation workflow on `ubuntu-latest`, `windows-latest`, and `macos-latest` with Python 3.12. Platform wrappers are smoke-tested in their native jobs.
+GitHub Actions runs the validation workflow on `ubuntu-latest`, `windows-latest`, and `macos-latest` with Python 3.12. Platform wrappers are smoke-tested in their native jobs. Every matrix job uploads body audits, deterministic test status, evaluation status, and full validation output for review.
+
+## Completion Status
+
+Run the lifecycle report to see structural coverage and external evidence gaps:
+
+```bash
+python tools/md.py lifecycle
+```
+
+The routing, catalog, scenario, exact-twin, installer, schema, fixture,
+cross-platform validation, and artifact-review surfaces are implemented. The
+project is not honestly at 100% behavioral completion until real evidence
+resolves every lifecycle blocker. At the current repository state those
+blockers are:
+
+- no human-reviewed golden run has been promoted;
+- no third-party skill has a live passing conformance result;
+- no installable skill lock has been resolved from a reviewed immutable source;
+- no measured model profile is production eligible.
+
+Use `tools/promote_golden_run.py`, `tools/run_skill_conformance.py`,
+`tools/resolve_skill_lock.py`, and `tools/run_model_benchmarks.py` to close those
+gaps with real receipts. Do not replace these measurements with fixture-only or
+machine-generated claims.
 
 ## Uninstall
 

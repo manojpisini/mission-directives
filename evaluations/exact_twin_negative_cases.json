@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "case_id": "approved-plan-without-execution-consent",
+      "operation": "authorize",
+      "planning_prompt_id": "MD-25",
+      "execution_prompt_id": "MD-26",
+      "handoff_ready": true,
+      "plan_review_approved": true,
+      "user_approved": false,
+      "expected_status": "execution_declined"
+    },
+    {
+      "case_id": "changed-plan-invalidates-review-and-consent",
+      "operation": "review_disposition",
+      "planning_prompt_id": "MD-25",
+      "handoff_ready": true,
+      "review_status": "changes_requested",
+      "revisions_applied": true,
+      "expected_next_action": "refreeze_and_request_review_again"
+    },
+    {
+      "case_id": "executor-mismatch-fails-closed",
+      "operation": "executor_mismatch",
+      "planning_prompt_id": "MD-25",
+      "execution_prompt_id": "MD-28",
+      "expected_error": "exact execution twin"
+    }
+  ]
+}

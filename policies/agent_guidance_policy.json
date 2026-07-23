@@ -2,12 +2,54 @@
   "schema_version": "1.0",
   "managed_block_id": "md-root-agent-guidance",
   "keyword": "MD",
+  "invocation_slugs": [
+    "MD",
+    "md"
+  ],
+  "intent_router": "python tools/md.py route \"<full user request>\"",
+  "selection_policy": {
+    "minimum_lookup_score": 12,
+    "workflow_relative_score": 0.8,
+    "maximum_workflow_targets": 3,
+    "prefer_shortcut_owner": true,
+    "prompt_body_reads_during_selection": false
+  },
+  "context_modifiers": {
+    "depth": [
+      {"phrase": "in depth", "value": "advanced"},
+      {"phrase": "advanced", "value": "advanced"},
+      {"phrase": "comprehensive", "value": "advanced"},
+      {"phrase": "deep", "value": "advanced"},
+      {"phrase": "quick", "value": "compact"}
+    ],
+    "assurance": [
+      {"phrase": "high assurance", "value": "HIGH_ASSURANCE"},
+      {"phrase": "rigorous", "value": "HIGH_ASSURANCE"},
+      {"phrase": "fast", "value": "FAST"}
+    ],
+    "composition": [
+      {"phrase": "end to end", "value": "workflow"},
+      {"phrase": "workflow", "value": "workflow"},
+      {"phrase": "scenario", "value": "scenario"},
+      {"phrase": "combine", "value": "workflow"}
+    ],
+    "mode": [
+      {"phrase": "audit only", "value": "AUDIT_ONLY"},
+      {"phrase": "plan only", "value": "PLAN_ONLY"},
+      {"phrase": "draft only", "value": "DRAFT_ONLY"},
+      {"phrase": "apply safe", "value": "APPLY_SAFE"},
+      {"phrase": "verify only", "value": "VERIFY_ONLY"}
+    ]
+  },
   "default_agent_files": [
     "AGENTS.md",
     "CLAUDE.md"
   ],
   "lookup_order": [
+    "tools/md.py route",
+    "tools/keyword_context.py",
     "tools/md.py lookup",
+    "tools/md.py compare",
     "tools/md.py explain",
     "catalog.json",
     "SCENARIO_CATALOG.json",
@@ -20,67 +62,93 @@
     {
       "keyword": "clarify",
       "target": "MD-191",
-      "purpose": "ask only route-changing questions"
+      "purpose": "ask only route-changing questions",
+      "route_family": "intent-clarification",
+      "priority": 100
     },
     {
       "keyword": "skill",
       "target": "MD-192 -> MD-196",
-      "purpose": "prove genuine skill need and execute an exact skill"
+      "purpose": "prove genuine skill need and execute an exact skill",
+      "route_family": "skill-acquisition",
+      "priority": 50
     },
     {
       "keyword": "find skill",
       "target": "MD-193 -> MD-194 or MD-195",
-      "purpose": "discover, qualify, install, or create a missing reusable skill"
+      "purpose": "discover, qualify, install, or create a missing reusable skill",
+      "route_family": "skill-acquisition",
+      "priority": 100
     },
     {
       "keyword": "loop",
       "target": "MD-197 -> MD-198",
-      "purpose": "bounded repeat execution with independent exit adjudication"
+      "purpose": "bounded repeat execution with independent exit adjudication",
+      "route_family": "iteration",
+      "priority": 80
     },
     {
       "keyword": "audit fix verify",
       "target": "C-108",
-      "purpose": "convergent audit, remediation, and verification"
+      "purpose": "convergent audit, remediation, and verification",
+      "route_family": "delivery",
+      "priority": 100
     },
     {
       "keyword": "research",
       "target": "C-26",
-      "purpose": "deep research report"
+      "purpose": "deep research report",
+      "route_family": "knowledge-output",
+      "priority": 90
     },
     {
       "keyword": "report",
       "target": "C-95",
-      "purpose": "professional report pipeline"
+      "purpose": "professional report pipeline",
+      "route_family": "knowledge-output",
+      "priority": 60
     },
     {
       "keyword": "add prompt",
       "target": "MD-199 / tools/add_prompt.py",
-      "purpose": "review, normalize, register, test, and transactionally add one prompt"
+      "purpose": "review, normalize, register, test, and transactionally add one prompt",
+      "route_family": "prompt-lifecycle",
+      "priority": 100
     },
     {
       "keyword": "prompt",
       "target": "C-94",
-      "purpose": "prompt creation, optimization, evaluation, and repair"
+      "purpose": "prompt creation, optimization, evaluation, and repair",
+      "route_family": "prompt-lifecycle",
+      "priority": 50
     },
     {
       "keyword": "feature",
       "target": "C-63",
-      "purpose": "feature delivery"
+      "purpose": "feature delivery",
+      "route_family": "delivery",
+      "priority": 70
     },
     {
       "keyword": "visual assets",
       "target": "C-109",
-      "purpose": "code-native vector, illustration, infographic, and presentation-asset production"
+      "purpose": "code-native vector, illustration, infographic, and presentation-asset production",
+      "route_family": "visual-production",
+      "priority": 90
     },
     {
       "keyword": "strudel",
       "target": "C-110",
-      "purpose": "Strudel composition and bounded refinement"
+      "purpose": "Strudel composition and bounded refinement",
+      "route_family": "music-production",
+      "priority": 90
     },
     {
       "keyword": "productivity",
       "target": "MD-138",
-      "purpose": "personal knowledge, productivity, and work system"
+      "purpose": "personal knowledge, productivity, and work system",
+      "route_family": "personal-productivity",
+      "priority": 80
     }
   ],
   "supported_agent_files": [

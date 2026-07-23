@@ -20,7 +20,7 @@ This index is the human navigation layer for the Mission Directives. The suite i
 
 ### Operation
 
-- [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md) — safely creating and updating root agent files, using `MD` keyword lookup, productivity shortcuts, and preserving unmanaged instructions.
+- [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md) — safely creating and updating root agent files, algorithmic `MD`/`md` intent routing, route comparison, productivity shortcuts, and preservation of unmanaged instructions.
 - [User Manual](USER_MANUAL.md) — choosing prompts and scenarios, execution modes, evidence lanes, artifacts, examples, and closure.
 - [Operator Guide](OPERATOR_GUIDE.md) — running `md.py`, reading route explanations, handling approvals, markers, failures, and residuals.
 - [Troubleshooting Guide](TROUBLESHOOTING_GUIDE.md) — routing errors, stale evidence, invalid handoffs, skill failures, marker defects, and validation failures.
@@ -54,7 +54,7 @@ This index is the human navigation layer for the Mission Directives. The suite i
 
 ### Governance and integration
 
-- [Compatibility and Identity Guide](COMPATIBILITY_AND_IDENTITY_GUIDE.md) — permanent capability IDs, aliases, redirects, original-area coverage, and deprecation.
+- [Identity and Runtime Path Guide](COMPATIBILITY_AND_IDENTITY_GUIDE.md) — permanent current capability IDs, generated identity validation, and supported agent skill destinations.
 - [Agent Library Integration Guide](AGENT_LIBRARY_INTEGRATION_GUIDE.md) — MD-to-agent and MD-to-prompt-type crosswalks, ownership boundaries, and regeneration.
 - [Contributor Guide](CONTRIBUTOR_GUIDE.md) — safe changes, tests-first workflow, catalog updates, documentation requirements, and review evidence.
 - [Manual Quality Standard](MANUAL_QUALITY_STANDARD.md) — truth, depth, examples, reproducibility, and maintenance requirements for documentation.

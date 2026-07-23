@@ -60,7 +60,7 @@ def build_report() -> dict:
     missing_markers = []
     missing_tool_policy = []
     missing_authorization = []
-    legacy_authorization = []
+    obsolete_authorization = []
     missing_exec_rules = []
     missing_verification_reference = []
     duplicate_verification = []
@@ -80,7 +80,7 @@ def build_report() -> dict:
         if block(body, "authorization_boundary") is None:
             missing_authorization.append(pid)
         if "<security_execution_boundary>" in body:
-            legacy_authorization.append(pid)
+            obsolete_authorization.append(pid)
         marker_block = block(body, "runtime_markers") or ""
         absent = [marker for marker in REQUIRED_MARKERS if marker not in marker_block]
         if absent:
@@ -159,7 +159,7 @@ def build_report() -> dict:
         errors.append(f"missing tool policy: {missing_tool_policy}")
     if missing_markers:
         errors.append(f"missing runtime markers: {missing_markers}")
-    if missing_authorization or legacy_authorization:
+    if missing_authorization or obsolete_authorization:
         errors.append("authorization boundary is missing or noncanonical")
     if missing_exec_rules:
         errors.append(f"executives missing decision rules: {missing_exec_rules}")
@@ -201,8 +201,8 @@ def build_report() -> dict:
         "authorization_boundary": {
             "canonical": len(rows) - len(missing_authorization),
             "missing": missing_authorization,
-            "legacy_security_execution_boundary": len(legacy_authorization),
-            "legacy_prompt_ids": legacy_authorization,
+            "obsolete_security_execution_boundary": len(obsolete_authorization),
+            "obsolete_prompt_ids": obsolete_authorization,
         },
         "executive_prompts": {
             "total": sum(1 for _, meta, _ in rows if meta["prompt_role"] == "executive"),
@@ -261,7 +261,7 @@ def render_markdown(report: dict) -> str:
         f"| Canonical tool policies | {t['present']} |",
         f"| Prompt bodies implementing all runtime markers | {r['fully_implemented']} |",
         f"| Canonical authorization boundaries | {a['canonical']} |",
-        f"| Legacy security-execution boundary tags | {a['legacy_security_execution_boundary']} |",
+        f"| Obsolete security-execution boundary tags | {a['obsolete_security_execution_boundary']} |",
         f"| Executive prompts with decision rules | {e['with_decision_rules']} / {e['total']} |",
         f"| Executive prompts with verification references | {e['with_verification_reference']} / {e['total']} |",
         f"| Pair verification blocks duplicated | {p['duplicated_verification_blocks']} |",

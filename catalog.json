@@ -2268,7 +2268,7 @@
       "prompt_role": "operational",
       "prompt_type": "generation",
       "status": "stable",
-      "description": "Creates an approved project skeleton, conventions, tooling, tests, documentation, and safe defaults from defined requirements and architecture.",
+      "description": "Creates an approved project foundation, conventions, tooling, tests, documentation, and safe defaults from defined requirements and architecture.",
       "paired_prompt_id": null,
       "pairing_required": false,
       "default_mode": "APPLY_SAFE",

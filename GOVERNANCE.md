@@ -5,23 +5,23 @@
 
 ## Purpose
 
-Governance protects the suite's permanent identities, execution boundaries, evidence standards, generated artifacts, templates, skills, telemetry, installers, and compatibility promises. It defines who may decide, what evidence is required, and when a change must stop rather than silently degrading a contract.
+Governance protects the suite's permanent identities, execution boundaries, evidence standards, generated artifacts, templates, skills, telemetry, installers, and current consumer contracts. It defines who may decide, what evidence is required, and when a change must stop rather than silently degrading a contract.
 
 ## Authority model
 
 | Role | Authority | May not do |
 |---|---|---|
-| Repository maintainer | Approve releases, assign owners, accept compatibility migrations, revoke unsafe routes | Waive security, manifest, or exact-twin failures without recording a residual and blocking automatic release |
+| Repository maintainer | Approve releases, assign owners, accept consumer contract changes, revoke unsafe routes | Waive security, manifest, or exact-twin failures without recording a residual and blocking automatic release |
 | Prompt owner | Refine one capability's body, fixtures, templates, and documentation | Change a permanent prompt ID or another capability's authority without governance review |
 | Pair owner | Maintain reciprocal planner/executor contracts and handoff schemas | Substitute an executor or collapse review and execution consent |
 | Template owner | Maintain one artifact contract and its conformance fixtures | Make a conditional template silently mandatory for unrelated outputs |
 | Tool owner | Maintain one executable entry point and paired shell wrappers | Diverge Bash and PowerShell semantics or bypass telemetry and exit-code propagation |
-| Reviewer | Block changes on evidence, safety, compatibility, or quality grounds | Approve their own consequential change without independent review where policy requires separation |
+| Reviewer | Block changes on evidence, safety, consumer-contract, or quality grounds | Approve their own consequential change without independent review where policy requires separation |
 | Release operator | Run the release checklist, seal the manifest, build and verify the archive | Edit canonical source while presenting generated verification as current |
 
 ## Canonical versus generated artifacts
 
-Canonical sources include prompt bodies, scenario definitions, policies, schemas, templates, compatibility records, tool source, and evaluation definitions. Generated views include catalogs, capability graphs, body-audit reports, test receipts, validation reports, and the integrity manifest.
+Canonical sources include prompt bodies, scenario definitions, policies, schemas, templates, current runtime path policies, tool source, and evaluation definitions. Generated views include catalogs, capability graphs, identity registries, body-audit reports, test receipts, validation reports, and the integrity manifest.
 
 Rules:
 
@@ -29,7 +29,7 @@ Rules:
 2. Their generator must be deterministic for identical canonical inputs.
 3. Validation must regenerate them and compare byte-for-byte with committed output.
 4. `VERSION` is the sole active-version source; other current-version fields are derived.
-5. Historical versions may appear only in explicit migration, compatibility, changelog, or archived evidence records.
+5. The runtime repository contains only the active release surface; release history belongs in source-control history and release notes.
 6. Build-machine paths, usernames, caches, runtime logs, and local receipts are not distributable canonical data.
 
 ## Change classes
@@ -42,9 +42,9 @@ Clarifies wording without changing routing, authority, inputs, outputs, schemas,
 
 Changes prompt method, template obligations, policy interpretation, schema fields, tool behavior, or verification semantics while preserving permanent identity. Requires healthy, problematic, adversarial, and mutation coverage where applicable.
 
-### Class C — compatibility change
+### Class C — consumer contract change
 
-Changes a public command, path, field, route, alias, state, or generated format. Requires a compatibility record, migration behavior, rollback path, and tests against the previous supported form.
+Changes a public command, path, field, route, state, or generated format. Requires explicit release notes, a transition procedure when consumers need one, a rollback path, and contract tests.
 
 ### Class D — consequential boundary change
 
@@ -53,7 +53,7 @@ Changes external actions, permissions, installation, skill acquisition, security
 ## Permanent identity rules
 
 - Prompt, scenario, capability, template, skill, schema, and policy IDs remain stable once published.
-- Renames require an alias or migration record when a supported consumer could still reference the prior identity.
+- Identity-preserving title or path changes must update every current registry, scenario, crosswalk, fixture, and consumer guide in one transaction.
 - A planning prompt has exactly one declared reciprocal execution twin.
 - Requested plan changes invalidate previous plan approval and execution consent.
 - Related prompts and keyword matches never override exact pair metadata.
@@ -91,9 +91,13 @@ A release is blocked unless all applicable checks pass:
 
 Passing structural checks does not prove live-model quality, third-party skill safety, or untested platform behavior. Such claims remain pending until measured.
 
-## Deprecation and compatibility
+## Contract replacement
 
-A deprecation record must name the old identity, replacement, first deprecated version, support window, migration procedure, affected consumers, and removal evidence. Removal requires proof that no supported scenario, prompt, template, tool, integration, documentation link, fixture, or compatibility record still consumes the identity.
+When a public contract must be replaced, create the new current identity, update
+all in-repository consumers atomically, document the transition in release
+notes, and prove that no current scenario, prompt, template, tool, integration,
+documentation link, or fixture consumes the replaced form. Do not retain an
+unused historical implementation or redirect table in the runtime repository.
 
 ## Exception handling
 
@@ -103,7 +107,7 @@ Exceptions are narrow, time-bounded, owned, and machine-readable where possible.
 
 - **Immediate stop:** data loss, credential exposure, unauthorized external action, corrupted release artifact, or non-reciprocal executor dispatch.
 - **Release blocker:** cross-platform divergence, invalid schema output, missing required template content, stale generated files, or installer preservation failure.
-- **Review required:** ambiguous compatibility impact, new permissions, telemetry-field expansion, or unresolved provenance.
+- **Review required:** ambiguous consumer impact, new permissions, telemetry-field expansion, or unresolved provenance.
 - **Documented residual:** unavailable live environment or external benchmark that does not invalidate deterministic claims.
 
 ## Records and auditability

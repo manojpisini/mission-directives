@@ -36,6 +36,10 @@ try:
     from telemetry import append_event
 except ImportError:
     from tools.telemetry import append_event
+try:
+    from keyword_context import parse_keyword_context
+except ImportError:
+    from tools.keyword_context import parse_keyword_context
 
 ROOT = Path(__file__).resolve().parents[1]
 MODES = {
@@ -99,6 +103,7 @@ def data():
     SCENARIOS,
 ) = data()
 SKILL_ALIASES = load_json("config/skill_aliases.json").get("aliases", {})
+AGENT_GUIDANCE_POLICY = load_json("policies/agent_guidance_policy.json")
 
 
 def dedupe(items):
@@ -378,6 +383,207 @@ def lookup(query: str, limit: int = 8, kind: str = "all") -> dict[str, Any]:
         "result_count": len(results),
         "results": results,
         "next_step": f"Run `python tools/md.py explain {results[0]['id']}` before execution.",
+    }
+
+
+def _selection_type(targets: list[str], exact: bool = False) -> str:
+    if exact:
+        return "exact_target"
+    if len(targets) > 1:
+        return "workflow_graph"
+    target = targets[0]
+    if target in SCENARIOS:
+        return "scenario"
+    if target in PACKS["department_packs"]:
+        return "department_pack"
+    return "prompt"
+
+
+def route_intent(request: str, limit: int = 8) -> dict[str, Any]:
+    """Select the smallest explainable route from user intent metadata."""
+    context = parse_keyword_context(request, AGENT_GUIDANCE_POLICY)
+    if not context["lookup_query"]:
+        return {
+            "status": "no_confident_match",
+            "context": context,
+            "selection": {
+                "type": "none",
+                "targets": [],
+                "reason": "the invocation contained no intent to route",
+            },
+            "alternatives": [],
+            "next_step": "Provide task intent after MD, or provide an exact MD/C identifier.",
+        }
+
+    exact_target = context["exact_target"]
+    if exact_target:
+        try:
+            resolve(exact_target)
+        except ValueError:
+            return {
+                "status": "no_confident_match",
+                "context": context,
+                "selection": {
+                    "type": "none",
+                    "targets": [],
+                    "reason": "explicit identifier is not registered",
+                },
+                "alternatives": [],
+                "next_step": "Check the identifier or run lookup with descriptive terms.",
+            }
+        return {
+            "status": "selected",
+            "context": context,
+            "selection": {
+                "type": _selection_type([exact_target], exact=True),
+                "targets": [exact_target],
+                "reason": "explicit target identifier",
+            },
+            "alternatives": [],
+            "explain_commands": [f"python tools/md.py explain {exact_target}"],
+        }
+
+    shortcut_targets = dedupe(
+        target
+        for shortcut in context["shortcuts"]
+        for target in shortcut["targets"]
+        if target in BY_ID or target in SCENARIOS or target in PACKS["department_packs"]
+    )
+    if shortcut_targets:
+        reasons = [
+            f"{row['keyword']} -> {row['target']}: {row['purpose']}"
+            for row in context["shortcuts"]
+            if row["targets"]
+        ]
+        return {
+            "status": "selected",
+            "context": context,
+            "selection": {
+                "type": _selection_type(shortcut_targets),
+                "targets": shortcut_targets,
+                "reason": "; ".join(reasons),
+            },
+            "alternatives": [],
+            "explain_commands": [
+                f"python tools/md.py explain {target}" for target in shortcut_targets
+            ],
+        }
+
+    found = lookup(context["lookup_query"], limit=limit)
+    routable = [
+        row
+        for row in found.get("results", [])
+        if row["kind"] in {"prompt", "scenario", "department_pack"}
+    ]
+    minimum = AGENT_GUIDANCE_POLICY.get("selection_policy", {}).get(
+        "minimum_lookup_score", 12
+    )
+    routable = [row for row in routable if row["score"] >= minimum]
+    if not routable:
+        return {
+            "status": "no_confident_match",
+            "context": context,
+            "selection": {
+                "type": "none",
+                "targets": [],
+                "reason": "no metadata candidate met the confidence threshold",
+            },
+            "alternatives": found.get("results", []),
+            "next_step": "Refine the intent or use MD clarify for one route-changing question.",
+        }
+
+    targets = [routable[0]["id"]]
+    if context["modifiers"].get("composition") == "workflow":
+        selection_policy = AGENT_GUIDANCE_POLICY.get("selection_policy", {})
+        floor = routable[0]["score"] * selection_policy.get(
+            "workflow_relative_score", 0.8
+        )
+        maximum = selection_policy.get("maximum_workflow_targets", 3)
+        targets = dedupe(row["id"] for row in routable if row["score"] >= floor)[
+            :maximum
+        ]
+    return {
+        "status": "selected",
+        "context": context,
+        "selection": {
+            "type": _selection_type(targets),
+            "targets": targets,
+            "reason": "highest-confidence metadata route from deterministic lookup",
+        },
+        "alternatives": [row for row in routable if row["id"] not in targets],
+        "explain_commands": [f"python tools/md.py explain {target}" for target in targets],
+    }
+
+
+def _verification_burden(summary: dict[str, Any]) -> str:
+    score = summary["capability_prompt_count"]
+    score += 2 * summary["paired_workflow_count"]
+    if summary["minimum_assurance"] == "HIGH_ASSURANCE":
+        score += 2
+    if "high" in summary["risk_levels"] or "critical" in summary["risk_levels"]:
+        score += 2
+    return "high" if score >= 8 else "medium" if score >= 4 else "low"
+
+
+def compare_routes(targets: list[str]) -> dict[str, Any]:
+    """Compare route authority and verification cost without choosing for the user."""
+    targets = dedupe(targets)
+    if len(targets) < 2:
+        raise ValueError("compare requires at least two distinct targets")
+    comparisons = []
+    for target in targets:
+        resolved = resolve(target)
+        details = explain(target)
+        selected = details["selected"]
+        kind = (
+            "prompt"
+            if target in BY_ID
+            else "scenario"
+            if target in SCENARIOS
+            else "department_pack"
+        )
+        capability_rows = [row for row in selected if row["prompt_id"] not in CONTROL]
+        summary = {
+            "target": target,
+            "kind": kind,
+            "title": resolved.get("title"),
+            "default_mode": details["default_mode"],
+            "minimum_assurance": details["minimum_assurance"],
+            "capability_prompt_count": len(capability_rows),
+            "paired_workflow_count": len(details["paired_workflows"]),
+            "risk_levels": sorted({row["risk"] for row in capability_rows}),
+            "evidence_lanes": sorted(
+                {row["evidence_lane"] for row in capability_rows if row["evidence_lane"]}
+            ),
+            "mutation_rights": "local_or_approved_mutation"
+            if str(details["default_mode"]).startswith("APPLY_")
+            else "read_or_plan_only",
+            "prompt_ids": [row["prompt_id"] for row in capability_rows],
+        }
+        summary["verification_burden"] = _verification_burden(summary)
+        comparisons.append(summary)
+
+    fields = [
+        "kind",
+        "default_mode",
+        "minimum_assurance",
+        "capability_prompt_count",
+        "paired_workflow_count",
+        "risk_levels",
+        "evidence_lanes",
+        "mutation_rights",
+        "verification_burden",
+    ]
+    differing = [
+        field
+        for field in fields
+        if len({json.dumps(row[field], sort_keys=True) for row in comparisons}) > 1
+    ]
+    return {
+        "targets": targets,
+        "comparisons": comparisons,
+        "differing_fields": differing,
+        "next_step": "Choose the route whose authority, evidence lane, and verification burden own the requested outcome.",
     }
 
 
@@ -1702,6 +1908,12 @@ def main():
         choices=["all", "prompts", "scenarios", "packs", "skills"],
         default="all",
     )
+    x = sub.add_parser("route")
+    x.add_argument("request")
+    x.add_argument("--limit", type=int, default=8)
+    x = sub.add_parser("compare")
+    x.add_argument("targets", nargs="+")
+    sub.add_parser("lifecycle")
     x = sub.add_parser("explain")
     x.add_argument("target")
     x = sub.add_parser("pair-status")
@@ -1839,6 +2051,16 @@ def main():
     try:
         if a.cmd == "lookup":
             result = lookup(a.query, a.limit, a.kind)
+        elif a.cmd == "route":
+            result = route_intent(a.request, a.limit)
+        elif a.cmd == "compare":
+            result = compare_routes(a.targets)
+        elif a.cmd == "lifecycle":
+            try:
+                from prompt_lifecycle import build_lifecycle_report
+            except ImportError:
+                from tools.prompt_lifecycle import build_lifecycle_report
+            result = build_lifecycle_report(ROOT)
         elif a.cmd == "explain":
             result = explain(a.target)
         elif a.cmd == "pair-status":

@@ -24,11 +24,36 @@ for path in sorted((ROOT / "prompts").glob("*.md")):
 rows.sort(key=lambda x: x["sequence"])
 
 catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
+previous_by_id = {row["prompt_id"]: row for row in catalog.get("prompts", [])}
 catalog["suite_version"] = VERSION
 catalog["prompt_count"] = len(rows)
 catalog["prompts"] = rows
 (ROOT / "catalog.json").write_text(
     json.dumps(catalog, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+)
+
+# Keep default atomic scenario labels synchronized while preserving deliberate
+# scenario-specific wording that already differs from prompt metadata.
+scenario_path = ROOT / "SCENARIO_CATALOG.json"
+scenario_catalog = json.loads(scenario_path.read_text(encoding="utf-8"))
+current_by_id = {row["prompt_id"]: row for row in rows}
+for scenario in scenario_catalog.get("atomic_scenarios", []):
+    prompt_ids = scenario.get("prompts") or []
+    if len(prompt_ids) != 1:
+        continue
+    prompt_id = prompt_ids[0]
+    previous = previous_by_id.get(prompt_id)
+    current = current_by_id.get(prompt_id)
+    if not previous or not current:
+        continue
+    if scenario.get("title") == previous.get("title"):
+        scenario["title"] = current["title"]
+    if scenario.get("purpose") == previous.get("description"):
+        scenario["purpose"] = current["description"]
+scenario_catalog["suite_version"] = VERSION
+scenario_path.write_text(
+    json.dumps(scenario_catalog, indent=2, ensure_ascii=False) + "\n",
+    encoding="utf-8",
 )
 
 identity_path = ROOT / "compatibility/capability_identity_registry.json"
