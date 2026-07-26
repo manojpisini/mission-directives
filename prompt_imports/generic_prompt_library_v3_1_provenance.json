@@ -3,7 +3,7 @@
   "library": "generic-prompt-library",
   "library_version": "3.1.0",
   "archive_sha256": "1d88a4f79f2113f68780337f00049187e38ab1284a3e7868d35916d6dcd44cb7",
-  "plan_sha256": "0b84c2796257fe7a633d2e06d959cc2e9950a1f26bbe0e9508e64ed112496e9f",
+  "plan_sha256": "0af5dd888083c4a96aab68831bf7db9664debaa73d0f75571545c593691689f9",
   "source_prompt_count": 180,
   "added_prompt_count": 56,
   "merged_profile_count": 124,

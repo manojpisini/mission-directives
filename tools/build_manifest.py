@@ -30,6 +30,8 @@ EXCLUDED_FILENAMES = {
     "BODY_QUALITY_AUDIT.md",
     "EVALUATION_STATUS.json",
     "MANIFEST.json",
+    "site-preview.err.log",
+    "site-preview.out.log",
     "TEST_RESULTS.json",
     "VALIDATION.json",
 }

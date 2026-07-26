@@ -71,3 +71,13 @@ def test_manifest_excludes_site_build_and_generated_reference_outputs(tmp_path):
         path.startswith(("site/node_modules/", "site/dist/", "site/.astro/"))
         for path in paths
     )
+def test_manifest_ignores_site_preview_logs(tmp_path):
+    (tmp_path / "VERSION").write_text("1.0.0\n")
+    (tmp_path / "site-preview.err.log").write_text("err\n")
+    (tmp_path / "site-preview.out.log").write_text("out\n")
+    (tmp_path / "kept.log").write_text("keep\n")
+
+    paths = {row["path"] for row in current(tmp_path)["files"]}
+    assert "site-preview.err.log" not in paths
+    assert "site-preview.out.log" not in paths
+    assert "kept.log" in paths

@@ -39,6 +39,11 @@ except ImportError:
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+def _stable_text_digest(path: Path) -> str:
+    data = path.read_bytes().replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()
+
 DEFAULT_PLAN = ROOT / "prompt_imports/generic_prompt_library_v3_1_plan.json"
 SCHEMA_DIR = Path("schemas/imported/generic_prompt_library_v3_1")
 MAX_ARCHIVE_BYTES = 64 * 1024 * 1024
@@ -204,7 +209,7 @@ def _preview(
         "library_version": plan.get("version"),
         "library_root": library_root,
         "archive_sha256": archive_sha256,
-        "plan_sha256": hashlib.sha256(plan_path.read_bytes()).hexdigest(),
+        "plan_sha256": _stable_text_digest(plan_path),
         "catalog_sha256": hashlib.sha256((root / "catalog.json").read_bytes()).hexdigest(),
         "source_prompt_count": len(rows),
         "add_count": len(additions),

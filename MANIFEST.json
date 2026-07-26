@@ -8867,6 +8867,11 @@
       "sha256": "c9030e3028df8cbe9daa88e82d5c16bb26f8e4a40ed31011a4dd111797ff7668"
     },
     {
+      "path": "infographic/mission-directives-overview/prompts/01-infographic-mission-directives-overview.md",
+      "bytes": 1444,
+      "sha256": "4fc5ea32c7695ad9492c8bdd3fe90c03be2ecf5736d6b0eb496ea5ad6b26f35f"
+    },
+    {
       "path": "integrations/agent_catalog_snapshot.json",
       "bytes": 90883,
       "sha256": "f4715d401c0cf4ad1f5247d314f61671f228b91c726de46d1eafc843fbbba975"
@@ -9064,7 +9069,7 @@
     {
       "path": "prompt_imports/generic_prompt_library_v3_1_provenance.json",
       "bytes": 2226,
-      "sha256": "bd75f18ea31374ec9ff01f0ea31c1dd7383ade6d3f33802cd5b564f05b9604cb"
+      "sha256": "a2468a983ef47d0ed279517d46294a5fdbfb7e7426ff3a4c25da3df539671212"
     },
     {
       "path": "prompts/00_PROJECT_CONTEXT_AND_RUN_CONFIGURATION.md",
@@ -11558,18 +11563,23 @@
     },
     {
       "path": "site/public/assets/diagrams/coverage-map.svg",
-      "bytes": 2601,
-      "sha256": "4a3e4ea05bd414054764d31380ffa431739c697fb8784d9126f9b9172b12f01a"
+      "bytes": 2600,
+      "sha256": "60f474072f356001869d4c37a63d31744f3d7e006d82bc2a19141a8d3d979a11"
     },
     {
       "path": "site/public/assets/diagrams/routing-system.svg",
-      "bytes": 2956,
-      "sha256": "b530c2b534c4fa90abbd7edce9189ccc5862a069b3d317b146d4e5442618ca06"
+      "bytes": 2988,
+      "sha256": "cd21cc6cb376def52a41a542ac7a2f58c3953ec26df16976ad0322d86b41ed99"
     },
     {
       "path": "site/public/assets/diagrams/runtime-payload.svg",
-      "bytes": 2524,
-      "sha256": "ec007ac9f2cb4e78ecf343693cd4f0aed12dc2e54b4a9b503b973d3ab3a231f7"
+      "bytes": 2523,
+      "sha256": "84905c9ac7c8d9d91e7bce612e1764a446f808845a3570e3497c17162b06a93e"
+    },
+    {
+      "path": "site/public/assets/infographics/mission-directives-overview.png",
+      "bytes": 1396312,
+      "sha256": "6eab314ee58e0c92993e505bfff1691c0aaf95f86ead1f0ebaef6e62720b1cb9"
     },
     {
       "path": "site/public/favicon.svg",
@@ -11638,13 +11648,13 @@
     },
     {
       "path": "site/src/content/docs/index.mdx",
-      "bytes": 3264,
-      "sha256": "3c3d7833e4e9a9f9a3a78c7a45793c363e651fa59f00aaec4b9accd7fee0f145"
+      "bytes": 3553,
+      "sha256": "b45b3defdf99e2ffbf531eb8856a25935d9e02b1235f2dd9bdc5f1e27faa6b23"
     },
     {
       "path": "site/src/styles/custom.css",
-      "bytes": 2979,
-      "sha256": "17f51f88ac8f76ecc28a44d38bbd806b87e2f6f93970a1fab0d194cbba05ce39"
+      "bytes": 3488,
+      "sha256": "5739afb10adf9584ee82fedcb3f52bd3148f15e965fbb58fa65c38270ce51ace"
     },
     {
       "path": "site/tsconfig.json",
@@ -12073,8 +12083,8 @@
     },
     {
       "path": "tests/test_manifest_hygiene.py",
-      "bytes": 3089,
-      "sha256": "f13e3d25972ded844be73e7e1a4fb496693bb573523ab4604178bd49d580da98"
+      "bytes": 3552,
+      "sha256": "efd4ffaa128a69a50a0fd0e42fbfab10ca801a18d7cdd6033ed4d1b253b9d6ba"
     },
     {
       "path": "tests/test_mastery_manual.py",
@@ -12168,8 +12178,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 4750,
-      "sha256": "fb977c7e5038d1063d94bf2c4477779701f0ca4d8ab7bada71d4c6277dc985b2"
+      "bytes": 4806,
+      "sha256": "c1328640f00f05470a704fdd5ed05dba3e601f64a645d966fca89bd180cae492"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",
@@ -12223,8 +12233,8 @@
     },
     {
       "path": "tools/import_prompt_library.py",
-      "bytes": 21995,
-      "sha256": "01c902358939885e6435379dcb2e742c875f692e305efc30ecf158962a21bed0"
+      "bytes": 22118,
+      "sha256": "997ed041b66c19655ab06bfaa546033053a11182f26eb43a014164d44ad9a658"
     },
     {
       "path": "tools/install.ps1",
@@ -12438,8 +12448,8 @@
     },
     {
       "path": "tools/validate_suite.py",
-      "bytes": 53679,
-      "sha256": "2fbc4af2e9bc40aac9393f03699191db51de4014a67ce792fef4ae02665f6b0e"
+      "bytes": 53717,
+      "sha256": "4de32f669d11a5de6b47c8b3b49a00473e3c36d09ccd8ab2918da7fea64692e1"
     },
     {
       "path": "tools/validate_templates.py",

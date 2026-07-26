@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 620">
   <title id="title">Prompt coverage map</title>
   <desc id="desc">A schematic coverage map of the Mission Directives prompt ecosystem across security, engineering, creative, operations, data, official, and support fields.</desc>
-  <defs><style>.bg{fill:#f7f9f8}.ring{fill:none;stroke:#cbd2ce;stroke-width:2}.node{fill:#fff;stroke:#18794e;stroke-width:2}.hot{fill:#fff3ef;stroke:#d85d3f;stroke-width:2}.ink{fill:#111513}.muted{fill:#58625c}.accent{fill:#18794e}.label{font:740 30px system-ui,sans-serif}.small{font:560 20px system-ui,sans-serif}.line{stroke:#8d9992;stroke-width:2}</style></defs>
+  <defs><style>.bg{fill:#f8faf9}.ring{fill:none;stroke:#d4dcd8;stroke-width:2}.node{fill:#fff;stroke:#146f49;stroke-width:2}.hot{fill:#fff1ec;stroke:#b84f37;stroke-width:2}.ink{fill:#0d1411}.muted{fill:#59645f}.accent{fill:#146f49}.label{font:740 28px system-ui,sans-serif}.small{font:560 19px system-ui,sans-serif}.line{stroke:#9aa49f;stroke-width:2}</style></defs>
   <rect class="bg" width="1200" height="620"/>
   <text x="60" y="64" class="label ink">Coverage is broad, but routed narrowly</text>
   <text x="60" y="98" class="small muted">The catalog spans technical, creative, official, management, and repetitive operational work without forcing every request through one giant prompt.</text>
   <circle class="ring" cx="600" cy="350" r="210"/><circle class="ring" cx="600" cy="350" r="132"/>
   <line class="line" x1="600" y1="350" x2="600" y2="154"/><line class="line" x1="600" y1="350" x2="782" y2="240"/><line class="line" x1="600" y1="350" x2="804" y2="430"/><line class="line" x1="600" y1="350" x2="600" y2="550"/><line class="line" x1="600" y1="350" x2="396" y2="430"/><line class="line" x1="600" y1="350" x2="418" y2="240"/>
-  <g transform="translate(500 298)"><rect class="node" width="200" height="104" rx="8"/><text x="44" y="44" class="label accent">MD</text><text x="36" y="76" class="small ink">router core</text></g>
-  <g transform="translate(500 120)"><rect class="hot" width="200" height="70" rx="8"/><text x="30" y="44" class="small ink">Security + red team</text></g>
-  <g transform="translate(780 210)"><rect class="node" width="220" height="70" rx="8"/><text x="34" y="44" class="small ink">Engineering + QA</text></g>
-  <g transform="translate(790 408)"><rect class="node" width="250" height="70" rx="8"/><text x="34" y="44" class="small ink">Creative + media</text></g>
-  <g transform="translate(492 528)"><rect class="node" width="216" height="70" rx="8"/><text x="34" y="44" class="small ink">Data + analysis</text></g>
-  <g transform="translate(162 408)"><rect class="node" width="250" height="70" rx="8"/><text x="34" y="44" class="small ink">Official + compliance</text></g>
-  <g transform="translate(188 210)"><rect class="node" width="230" height="70" rx="8"/><text x="34" y="44" class="small ink">Planning + support</text></g>
+  <g transform="translate(500 298)"><rect class="node" width="200" height="104" rx="4"/><text x="44" y="44" class="label accent">MD</text><text x="36" y="76" class="small ink">router core</text></g>
+  <g transform="translate(500 120)"><rect class="hot" width="200" height="70" rx="4"/><text x="30" y="44" class="small ink">Security + red team</text></g>
+  <g transform="translate(780 210)"><rect class="node" width="220" height="70" rx="4"/><text x="34" y="44" class="small ink">Engineering + QA</text></g>
+  <g transform="translate(790 408)"><rect class="node" width="250" height="70" rx="4"/><text x="34" y="44" class="small ink">Creative + media</text></g>
+  <g transform="translate(492 528)"><rect class="node" width="216" height="70" rx="4"/><text x="34" y="44" class="small ink">Data + analysis</text></g>
+  <g transform="translate(162 408)"><rect class="node" width="250" height="70" rx="4"/><text x="34" y="44" class="small ink">Official + compliance</text></g>
+  <g transform="translate(188 210)"><rect class="node" width="230" height="70" rx="4"/><text x="34" y="44" class="small ink">Planning + support</text></g>
 </svg>

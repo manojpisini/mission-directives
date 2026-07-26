@@ -251,7 +251,9 @@ if plan_is_safe:
                 errors.append(
                     f"{row.get('cp_id')}: added prompt identity does not match provenance"
                 )
-    actual_plan_sha256 = hashlib.sha256(import_plan_path.read_bytes()).hexdigest()
+    actual_plan_sha256 = hashlib.sha256(
+        import_plan_path.read_bytes().replace(b"\r\n", b"\n")
+    ).hexdigest()
     if provenance.get("plan_sha256") != actual_plan_sha256:
         errors.append("generic prompt import provenance plan hash mismatch")
     if provenance.get("source_prompt_count") != len(import_rows):
