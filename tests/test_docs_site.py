@@ -17,7 +17,7 @@ def test_site_uses_project_pages_base_and_starlight():
 
 def test_site_generation_is_canonical_and_build_driven():
     package = json.loads((SITE / "package.json").read_text(encoding="utf-8"))
-    assert package["scripts"]["prebuild"] == "npm run generate"
+    assert package["scripts"]["prebuild"] == "pnpm run generate"
     assert package["dependencies"]["astro"]
     assert package["dependencies"]["@astrojs/starlight"]
 

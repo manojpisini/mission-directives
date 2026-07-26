@@ -37,9 +37,9 @@ Run `python tools/md.py explain <ID>` and inspect `compatibility/capability_iden
 
 ```powershell
 cd site
-npm ci
-npm run generate
-npm run build
+pnpm install --frozen-lockfile
+pnpm run generate
+pnpm run build
 ```
 
 Generated reference pages live under `site/src/content/docs/reference/` and must not be edited or committed. Fix the canonical source or the generator.

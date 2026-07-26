@@ -324,7 +324,7 @@ python tools/check_generated_reproducibility.py
 python tools/build_manifest.py
 python tools/build_manifest.py --check
 python tools/validate_suite.py
-cd site && npm ci && npm run build
+cd site && pnpm install --frozen-lockfile && pnpm run build
 ```
 
 GitHub Actions runs the validation workflow on `ubuntu-latest`, `windows-latest`, and `macos-latest` with Python 3.12. Platform wrappers are smoke-tested in their native jobs. Every matrix job uploads body audits, deterministic test status, evaluation status, and full validation output for review.

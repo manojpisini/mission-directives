@@ -21,16 +21,16 @@ Starlight provides navigation, accessible documentation layouts, dark mode, and 
 
 ```bash
 cd site
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
 Production verification:
 
 ```bash
-npm run generate
-npm run build
-npm run preview
+pnpm run generate
+pnpm run build
+pnpm run preview
 ```
 
 The build must report the expected prompt, scenario, skill, and manual counts and complete the Pagefind index.
@@ -60,4 +60,4 @@ The initial visual system is intentionally restrained. Replace the favicon, typo
 
 ## Validation
 
-The source repository must keep `site/node_modules/`, `site/dist/`, `site/.astro/`, and generated references outside the manifest. `site/package-lock.json`, configuration, authored content, generator, styles, and workflow remain sealed release inputs.
+The source repository must keep `site/node_modules/`, `site/dist/`, `site/.astro/`, and generated references outside the manifest. `site/pnpm-lock.yaml`, configuration, authored content, generator, styles, and workflow remain sealed release inputs.

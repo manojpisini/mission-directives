@@ -54,7 +54,7 @@ def test_manifest_excludes_site_build_and_generated_reference_outputs(tmp_path):
     site = tmp_path / "site"
     (site / "src").mkdir(parents=True)
     (site / "package.json").write_text("{}\n")
-    (site / "package-lock.json").write_text("{}\n")
+    (site / "pnpm-lock.yaml").write_text("lockfileVersion: '9.0'\n")
     generated = site / "src" / "content" / "docs" / "reference"
     generated.mkdir(parents=True)
     (generated / "index.md").write_text("# generated\n")
@@ -65,7 +65,7 @@ def test_manifest_excludes_site_build_and_generated_reference_outputs(tmp_path):
 
     paths = {row["path"] for row in current(tmp_path)["files"]}
     assert "site/package.json" in paths
-    assert "site/package-lock.json" in paths
+    assert "site/pnpm-lock.yaml" in paths
     assert "site/src/content/docs/reference/index.md" not in paths
     assert not any(
         path.startswith(("site/node_modules/", "site/dist/", "site/.astro/"))

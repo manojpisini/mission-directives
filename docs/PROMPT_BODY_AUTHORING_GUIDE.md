@@ -179,7 +179,7 @@ Do not copy the verification list into the executive.
 ## Runtime marker example
 
 ```text
-@EVIDENCE:dep-01 package-lock.json at commit abc123
+@EVIDENCE:dep-01 pnpm-lock.yaml at commit abc123
 #FINDING:dep-01 unpinned transitive package can change without review
 +ACTION:dep-01 pin the package and regenerate the lockfile in APPLY_SAFE
 =VERIFY:dep-01 clean install produces the expected version and tests pass

@@ -58,8 +58,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 18105,
-      "sha256": "3c027d42d3f4ed7dd088f745f97474551867267a11678d5abd9c20ee087cb86a"
+      "bytes": 18130,
+      "sha256": "d671f92be6d9939837567da2436396a61787b596377a229607642982c73f8fc6"
     },
     {
       "path": "RELEASE_ID",
@@ -228,8 +228,8 @@
     },
     {
       "path": "docs/DOCUMENTATION_SITE_GUIDE.md",
-      "bytes": 2686,
-      "sha256": "80b67b99dccfda766a09d1189f9d84ccadd8c76266f871b33b0b48848a10a83f"
+      "bytes": 2711,
+      "sha256": "84a15f3194aeaeedbab91abf49661449c599acfcf7f98f874859656b2d5e6940"
     },
     {
       "path": "docs/EVALUATION_MANUAL.md",
@@ -328,8 +328,8 @@
     },
     {
       "path": "docs/PROMPT_BODY_AUTHORING_GUIDE.md",
-      "bytes": 8223,
-      "sha256": "815565e7082914efe02823bbbc16bca297995c0216bedccfa12f269b4b76beab"
+      "bytes": 8220,
+      "sha256": "140fcdeeba7880ed733f6ea9fe6145bf597597a6e99e55b876168ab6f06e589d"
     },
     {
       "path": "docs/PROMPT_BODY_VALIDATION_GUIDE.md",
@@ -11552,14 +11552,19 @@
       "sha256": "f3c33280b5dfec9791700e74cb56053fb955e3f8aa68d2be18a8d24b9ae3969a"
     },
     {
-      "path": "site/package-lock.json",
-      "bytes": 248664,
-      "sha256": "e2e73ebeac9844f669d40621790cc5acc27a0b6c258f62ba54cc4c73b9f3a13d"
+      "path": "site/package.json",
+      "bytes": 511,
+      "sha256": "1e493df552882dc028c65b050352a2aa6d1b3dc63914a0f776fc952b95d7ffe4"
     },
     {
-      "path": "site/package.json",
-      "bytes": 473,
-      "sha256": "71e3e29bbbdc25f55fbe7816fd3844310394a12e1dbd0aada7139eb28a428f67"
+      "path": "site/pnpm-lock.yaml",
+      "bytes": 142382,
+      "sha256": "3722d07d5b662af31109c00d3fee171c244dbb20c4d629018e8be6dbfa375d24"
+    },
+    {
+      "path": "site/pnpm-workspace.yaml",
+      "bytes": 29,
+      "sha256": "ac02d96368617c760f093cfe61fdec64b6244007ab3553e0d6621f706f54a353"
     },
     {
       "path": "site/public/assets/diagrams/coverage-map.svg",
@@ -11643,8 +11648,8 @@
     },
     {
       "path": "site/src/content/docs/guides/troubleshooting.md",
-      "bytes": 1954,
-      "sha256": "1de02adbcbd33b555158adb44e6214a7b3876b03af2c0343176ed4f3eb946321"
+      "bytes": 1980,
+      "sha256": "a234ebc6c1701324a9a3f662c7e38036c64563a7edef6e5f84c5b74b86c6b4cf"
     },
     {
       "path": "site/src/content/docs/index.mdx",
@@ -12058,8 +12063,8 @@
     },
     {
       "path": "tests/test_docs_site.py",
-      "bytes": 1803,
-      "sha256": "8b19316d6cbc8624ba71bb91aa81dc7962189949f08141303534d6f820ca7d0b"
+      "bytes": 1804,
+      "sha256": "d786c190bd85c93b13d790f75a7848805d42cf823274cd6ea29eed67cb687264"
     },
     {
       "path": "tests/test_documentation_integrity.py",
@@ -12083,8 +12088,8 @@
     },
     {
       "path": "tests/test_manifest_hygiene.py",
-      "bytes": 3552,
-      "sha256": "efd4ffaa128a69a50a0fd0e42fbfab10ca801a18d7cdd6033ed4d1b253b9d6ba"
+      "bytes": 3566,
+      "sha256": "3a2a50b65fcd81b24e509a6983c7118b1fef7c52716122a137e5c3eb087d4e38"
     },
     {
       "path": "tests/test_mastery_manual.py",
