@@ -222,23 +222,23 @@ const valueOr = (value, fallback = 'Not declared') => compact(value) || fallback
 
 function listValues(items, limit = 8) {
   const values = asArray(items).map((item) => typeof item === 'string' ? item : JSON.stringify(item));
-  if (!values.length) return '<span class="muted-value">None declared</span>';
-  const shown = values.slice(0, limit).map((item) => `<span>${escapeHtml(item)}</span>`).join('');
-  const rest = values.length > limit ? `<span>+${values.length - limit} more</span>` : '';
-  return `<div class="chip-row">${shown}${rest}</div>`;
+  if (!values.length) return '<p class="muted-value">None declared</p>';
+  const shown = values.slice(0, limit).map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+  const rest = values.length > limit ? `<li>+${values.length - limit} more</li>` : '';
+  return `<ul class="reference-list">${shown}${rest}</ul>`;
 }
 
 function metaCells(rows) {
-  return `<div class="reference-meta">${rows.map(([label, value]) => `<div><strong>${escapeHtml(label)}</strong><span>${escapeHtml(valueOr(value))}</span></div>`).join('')}</div>`;
+  return `<dl class="reference-meta">${rows.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(valueOr(value))}</dd></div>`).join('')}</dl>`;
 }
 
 function detailBlock(label, body) {
-  return `<div class="reference-detail"><strong>${escapeHtml(label)}</strong>${body}</div>`;
+  return `<section class="reference-detail"><h4>${escapeHtml(label)}</h4>${body}</section>`;
 }
 
 function promptCard(prompt) {
   const artifact = prompt.output_contract?.primary_artifact?.path ?? prompt.produces?.[0] ?? 'Declared by prompt body or selected scenario';
-  const boundary = prompt.do_not_use_when ? `<p>${escapeHtml(prompt.do_not_use_when)}</p>` : '<p>No additional exclusion rule declared beyond mode, authority, and verification contracts.</p>';
+  const boundary = asArray(prompt.do_not_use_when).length ? listValues(prompt.do_not_use_when, 8) : (prompt.do_not_use_when ? `<p>${escapeHtml(prompt.do_not_use_when)}</p>` : '<p>No additional exclusion rule declared beyond mode, authority, and verification contracts.</p>');
   const required = [...asArray(prompt.requires), ...asArray(prompt.consumes)].slice(0, 12);
   return `<article class="reference-card" id="${escapeHtml(prompt.prompt_id)}"><div class="reference-card__head"><span class="route-id">${escapeHtml(prompt.prompt_id)}</span><div><h3>${escapeHtml(prompt.title)}</h3><p>${escapeHtml(prompt.description)}</p></div></div>${metaCells([['Category', prompt.category], ['Role', prompt.prompt_role], ['Type', prompt.prompt_type], ['Default mode', prompt.default_mode], ['Risk', prompt.risk_level], ['Status', prompt.status]])}${detailBlock('When to use', `<p>${escapeHtml(prompt.description)}</p>`)}${detailBlock('Inputs and prerequisites', listValues(required))}${detailBlock('Outputs and artifacts', listValues([artifact, ...asArray(prompt.produces)]))}${detailBlock('Allowed modes', listValues(prompt.allowed_modes))}${detailBlock('Tags and routing hints', listValues(prompt.tags, 10))}${detailBlock('Do not use when', boundary)}</article>`;
 }

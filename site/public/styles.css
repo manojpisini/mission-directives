@@ -1401,12 +1401,14 @@ tbody td {
 /* Catalog reference pages */
 .reference-stack {
   display: grid;
-  gap: 16px;
+  gap: 18px;
 }
 .reference-card {
+  display: grid;
+  gap: 16px;
   min-width: 0;
   overflow: hidden;
-  padding: 18px;
+  padding: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--surface);
@@ -1419,61 +1421,72 @@ tbody td {
   align-items: start;
 }
 .reference-card__head .route-id {
+  justify-self: start;
+  max-width: 100%;
   min-width: 0;
+  line-height: 1.35;
+  white-space: normal;
   overflow-wrap: anywhere;
-  text-align: center;
 }
 .reference-card__head h3 {
-  margin-bottom: 6px;
+  margin: 0 0 7px;
   font-size: 17px;
+  line-height: 1.3;
 }
 .reference-card__head p {
-  margin-bottom: 0;
+  margin: 0;
   color: var(--ink-soft);
   font-size: 13px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 .reference-meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  margin-top: 16px;
+  margin: 0;
 }
 .reference-meta > div {
   min-width: 0;
-  padding: 10px 12px;
+  padding: 11px 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--surface-soft);
 }
-.reference-meta strong {
-  display: block;
+.reference-meta dt {
+  margin: 0 0 4px;
   color: var(--ink-muted);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.reference-meta span {
-  display: block;
-  margin-top: 3px;
+.reference-meta dd {
+  margin: 0;
   color: var(--ink-soft);
   font-size: 12px;
+  line-height: 1.45;
   overflow-wrap: anywhere;
 }
 .reference-detail {
-  margin-top: 14px;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
 }
-.reference-detail > strong {
-  display: block;
-  margin-bottom: 8px;
+.reference-detail h4 {
+  margin: 0 0 9px;
   color: var(--sage-800);
   font-size: 12px;
+  line-height: 1.3;
 }
 .reference-detail p,
 .reference-detail li {
-  margin-bottom: 0;
+  margin: 0;
   color: var(--ink-soft);
   font-size: 13px;
+  line-height: 1.55;
 }
 .reference-detail code {
   display: inline-block;
@@ -1482,39 +1495,61 @@ tbody td {
   color: var(--sage-800);
   font-size: 12px;
 }
+.reference-list,
 .chip-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+.reference-list li,
 .chip-row span,
 .muted-value {
   display: inline-flex;
   max-width: 100%;
-  padding: 5px 8px;
+  padding: 6px 9px;
+  border: 1px solid var(--sage-200);
   border-radius: 999px;
   background: var(--surface-sage);
   color: var(--sage-800);
   font-size: 11px;
   font-weight: 700;
+  line-height: 1.35;
   overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.muted-value {
+  margin: 0;
 }
 .reference-card,
+.reference-card *,
 .reference-card__head,
 .reference-card__head p,
 .reference-detail,
 .reference-detail p,
 .reference-detail code,
-.reference-meta span,
+.reference-meta dd,
+.reference-list li,
 .chip-row span,
 .muted-value {
+  min-width: 0;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 .footer {
   justify-content: center;
 }
+@media (max-width: 900px) {
+  .reference-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 @media (max-width: 720px) {
+  .reference-card {
+    padding: 16px;
+  }
   .reference-card__head,
   .reference-meta {
     grid-template-columns: 1fr;

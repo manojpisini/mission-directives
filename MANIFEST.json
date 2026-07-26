@@ -11598,13 +11598,13 @@
     },
     {
       "path": "site/public/pairs.html",
-      "bytes": 91879,
-      "sha256": "22c561280dcd5971156329fac358f2bba39f18b03033d30236c1b1a0a8d8677e"
+      "bytes": 87299,
+      "sha256": "fdf6cb5f8aa2cfa42ffbca0a67bdd4f9f36fc57f0633cddeda580811460d3d74"
     },
     {
       "path": "site/public/prompts.html",
-      "bytes": 562786,
-      "sha256": "bd7dae331ac62ef46fc27cb54d36ced924cbd3b55ae1c8866d9eda7b84478ae6"
+      "bytes": 543170,
+      "sha256": "8ec1b735209219f1f89d1a9a41c06f74500db9747ce0b46520539bc7848f7df2"
     },
     {
       "path": "site/public/reference.html",
@@ -11903,13 +11903,13 @@
     },
     {
       "path": "site/public/scenarios.html",
-      "bytes": 971914,
-      "sha256": "814036908613247cf5d569a58f46ab7c56aaffe8829c755a31dc4b2952261180"
+      "bytes": 921224,
+      "sha256": "a93e7da67c774029a3fcd00a0de75341711a839df6410f4e1cde7d7e9358c000"
     },
     {
       "path": "site/public/styles.css",
-      "bytes": 40785,
-      "sha256": "55b47b67eb8440a59e0dea7e1e911fdb767dc9b8c7de19bb0dd14769bbc021f1"
+      "bytes": 41495,
+      "sha256": "a3c5c37d32a4952115a7880a5fe53b1be3a17db297e3d04ba343552bad5cecd8"
     },
     {
       "path": "site/scripts/check-links.mjs",
@@ -11918,8 +11918,8 @@
     },
     {
       "path": "site/scripts/generate-reference.mjs",
-      "bytes": 33185,
-      "sha256": "e4e59b5e9062c00f204850ed1957654d8d6ca72695542b33c569481f62b3d7b2"
+      "bytes": 33244,
+      "sha256": "1cbce3539daf42d7a02a9853fc8170fb2a08eacfe2d5f38dd282b294b447b16f"
     },
     {
       "path": "site/src/pages/index.astro",
