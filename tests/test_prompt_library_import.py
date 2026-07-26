@@ -22,24 +22,26 @@ def test_imported_schema_paths_preserve_source_subdirectories():
 
 
 def test_generic_prompt_library_import_is_complete_and_deduplicated():
-    plan = json.loads(
-        (ROOT / "prompt_imports/generic_prompt_library_v3_1_plan.json").read_text()
-    )
-    imports = plan["imports"]
-    assert len(imports) == 180
-    assert {row["cp_id"] for row in imports} == {
-        f"CP-{index:03d}" for index in range(1, 181)
-    }
-    assert sum(row["disposition"] == "add" for row in imports) == 56
-    assert sum(row["disposition"] == "merge" for row in imports) == 124
+    catalog = json.loads((ROOT / "catalog.json").read_text())
+    imported = []
+    added = 0
+    merged = 0
+    for prompt in catalog["prompts"]:
+        profile = prompt.get("imported_profile")
+        if profile:
+            imported.append(profile["profile_id"])
+            added += 1
+        for row in prompt.get("imported_profiles", []):
+            imported.append(row["profile_id"])
+            merged += 1
+
+    assert set(imported) == {f"CP-{index:03d}" for index in range(1, 181)}
+    assert len(imported) == 180
+    assert added == 56
+    assert merged == 124
 
 
 def test_generic_prompt_library_profiles_and_schemas_are_wired():
-    provenance_path = (
-        ROOT / "prompt_imports/generic_prompt_library_v3_1_provenance.json"
-    )
-    assert provenance_path.exists()
-    provenance = json.loads(provenance_path.read_text())
     catalog = json.loads((ROOT / "catalog.json").read_text())
     imported = set()
     for prompt in catalog["prompts"]:
@@ -49,9 +51,6 @@ def test_generic_prompt_library_profiles_and_schemas_are_wired():
         imported.update(row["profile_id"] for row in prompt.get("imported_profiles", []))
     assert imported == {f"CP-{index:03d}" for index in range(1, 181)}
     assert len(list((ROOT / "schemas/imported/generic_prompt_library_v3_1").glob("*.json"))) == 180
-    assert provenance["source_prompt_count"] == 180
-    assert provenance["added_prompt_count"] == 56
-    assert provenance["merged_profile_count"] == 124
 
 
 def test_reviewed_workflow_refinements_are_bound_to_their_owning_profile():

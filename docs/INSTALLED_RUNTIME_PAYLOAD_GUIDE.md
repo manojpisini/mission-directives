@@ -25,7 +25,6 @@ The source repository retains assets needed to author, evaluate, test, validate,
 - `.github/`;
 - `tests/`;
 - `evaluations/`;
-- `prompt_imports/`;
 - `site/`;
 - prompt import and addition tools;
 - audit, test, validation, and manifest builders;

@@ -44,7 +44,6 @@ def _stable_text_digest(path: Path) -> str:
     data = path.read_bytes().replace(b"\r\n", b"\n")
     return hashlib.sha256(data).hexdigest()
 
-DEFAULT_PLAN = ROOT / "prompt_imports/generic_prompt_library_v3_1_plan.json"
 SCHEMA_DIR = Path("schemas/imported/generic_prompt_library_v3_1")
 MAX_ARCHIVE_BYTES = 64 * 1024 * 1024
 MAX_MEMBER_BYTES = 2 * 1024 * 1024
@@ -437,10 +436,6 @@ def _apply_import(
             "added_prompt_ids": [row.prompt_id for row in added],
             "merged_target_ids": sorted({row["target_md_id"] for row in merge_rows}),
         }
-        atomic_write_json(
-            staged / "prompt_imports/generic_prompt_library_v3_1_provenance.json",
-            provenance,
-        )
         add_prompt.validate_staged_suite(staged, run_full_tests=run_full_tests)
         lock = root / ".prompt_suite/prompt-library-import.lock"
         lock.parent.mkdir(parents=True, exist_ok=True)
@@ -466,7 +461,7 @@ def _apply_import(
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True, type=Path)
-    parser.add_argument("--plan", type=Path, default=DEFAULT_PLAN)
+    parser.add_argument("--plan", required=True, type=Path)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--approval-token")
     parser.add_argument("--skip-full-tests", action="store_true")

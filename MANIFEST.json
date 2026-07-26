@@ -13,8 +13,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 579,
-      "sha256": "28f20d7e0d086ed4b9e5d54d0330f97b86327e3560e729dc9a49b7d27010d34d"
+      "bytes": 596,
+      "sha256": "4ac722e2ceb839c4ebb85337546ac091543d8c90a91221a0ba82c92fc3be23c2"
     },
     {
       "path": ".pre-commit-config.yaml",
@@ -258,13 +258,13 @@
     },
     {
       "path": "docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md",
-      "bytes": 5116,
-      "sha256": "03f009358dd0741950654361ea851fa4b6e7d7f239faa2fb799ee40a1de3890d"
+      "bytes": 5095,
+      "sha256": "a1e3d02577a9b4cdff2de5e406054fbd4c609d422ef7fb352cff3d5df791c63d"
     },
     {
       "path": "docs/INSTALLED_RUNTIME_PAYLOAD_GUIDE.md",
-      "bytes": 3304,
-      "sha256": "d18e2f6064e8bd10b7e02ed15a3fb82d3d35952ab3afa9a9448c8ca37dfd4a65"
+      "bytes": 3283,
+      "sha256": "e7a5d8ae06e5037e96b01ee247fdb42219b01eed446a999efb8c49053a54dec5"
     },
     {
       "path": "docs/INSTALLED_SKILLS_INVENTORY_GUIDE.md",
@@ -9057,21 +9057,6 @@
       "sha256": "c9a946b5fb91bc03a62652afdbed5aec531316ece9f2756c160f5f9f21037001"
     },
     {
-      "path": "prompt_imports/generic_prompt_library_v3_1_blind_proportionality_review.md",
-      "bytes": 808,
-      "sha256": "47495966fa15d0c5f0af1890b2db4fc66d111adca44576c0b0e14a7e16dedac7"
-    },
-    {
-      "path": "prompt_imports/generic_prompt_library_v3_1_plan.json",
-      "bytes": 29452,
-      "sha256": "0af5dd888083c4a96aab68831bf7db9664debaa73d0f75571545c593691689f9"
-    },
-    {
-      "path": "prompt_imports/generic_prompt_library_v3_1_provenance.json",
-      "bytes": 2226,
-      "sha256": "a2468a983ef47d0ed279517d46294a5fdbfb7e7426ff3a4c25da3df539671212"
-    },
-    {
       "path": "prompts/00_PROJECT_CONTEXT_AND_RUN_CONFIGURATION.md",
       "bytes": 5853,
       "sha256": "9b29275d9aefa36b98594b6c049096be3bbe96f9f069f5300b061290db5a7404"
@@ -9118,8 +9103,8 @@
     },
     {
       "path": "prompts/09_ARCHITECTURE_AND_TECHNOLOGY_DECISION_ANALYSIS.md",
-      "bytes": 15748,
-      "sha256": "1b7376c5a0d09ea7815f3188ae926df9d933cf2c6e723e370e95c1802a58a9b1"
+      "bytes": 15655,
+      "sha256": "a5db6144665c0c88cb2ee8a27c3fcf5f772929088b57b219203d8709290ce41e"
     },
     {
       "path": "prompts/100_PITCH_PROPOSAL_AND_BUSINESS_CASE_DEVELOPMENT.md",
@@ -9773,8 +9758,8 @@
     },
     {
       "path": "prompts/219_LEASE_ABSTRACTION.md",
-      "bytes": 11782,
-      "sha256": "d997181b631f40f3fda1edb129ab94d7ddf36730b151169bc161bd74a031e511"
+      "bytes": 11689,
+      "sha256": "b850341bf18be3f818b8171cd964ffea5eb9d22a067322400acc226d830af455"
     },
     {
       "path": "prompts/21_CONTRIBUTOR_AND_SUPPORT_EXPERIENCE_IMPROVEMENT.md",
@@ -9808,8 +9793,8 @@
     },
     {
       "path": "prompts/225_CHANGE_ORDER_REVIEW.md",
-      "bytes": 11812,
-      "sha256": "33ebe5fa75dbf73caf2af40b6c9a9c6b817e11d734b132ecea25843f791774c7"
+      "bytes": 11719,
+      "sha256": "794a6f6948cd6faa81e661b31526edaa4c7f35929ee373a123a84d33d66bb201"
     },
     {
       "path": "prompts/226_SITE_SAFETY_CHECKLIST.md",
@@ -9843,8 +9828,8 @@
     },
     {
       "path": "prompts/231_QA_ACCEPTANCE_PLAN.md",
-      "bytes": 12029,
-      "sha256": "d03fccd38cf7a27014f23c40158d332e0e99a12338de39da4596efaeaca47f4b"
+      "bytes": 11936,
+      "sha256": "be017b085ba3437c060c7265bc47fb4794361dee5f1191ba8d3c93af1db1a1fe"
     },
     {
       "path": "prompts/232_RETAIL_ECOMMERCE_PRODUCT_LISTING_OPTIMIZATION.md",
@@ -9863,8 +9848,8 @@
     },
     {
       "path": "prompts/235_RETURN_RATE_ANALYSIS.md",
-      "bytes": 11846,
-      "sha256": "86804370a61a5b26f906cb76d7557f7e77d7b380edf2168d28528af8db0941ec"
+      "bytes": 11753,
+      "sha256": "a0696466850a56cfd786c295be3e2401650563c6ef832e656e2777691a9969f9"
     },
     {
       "path": "prompts/236_MARKETPLACE_COMPLIANCE.md",
@@ -9948,8 +9933,8 @@
     },
     {
       "path": "prompts/250_LEGISLATIVE_BILL_SUMMARY.md",
-      "bytes": 12274,
-      "sha256": "4ecd7293b9e278aa7f79163d076383d160388e4f1550860cf5dd064a4ca08dbb"
+      "bytes": 12181,
+      "sha256": "f9473e895044da200d4b504641813373aeb8fe7f3124cee8d49caa73fbc96a90"
     },
     {
       "path": "prompts/251_PRE_PRODUCTION_COMMAND_CENTER.md",
@@ -10083,8 +10068,8 @@
     },
     {
       "path": "prompts/45_API_CLI_AND_PUBLIC_CONTRACT_INTEGRITY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 14743,
-      "sha256": "7456c8546e7914d40d74170b9c49e7f06daa68d810c72f4b60c80a5401c64263"
+      "bytes": 14650,
+      "sha256": "fdf0c610e71d5c982ccace9705162a485c7f1e33f362fb19ad5a7597cdd18274"
     },
     {
       "path": "prompts/46_API_CLI_AND_PUBLIC_CONTRACT_INTEGRITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -10468,8 +10453,8 @@
     },
     {
       "path": "schemas/imported/generic_prompt_library_v3_1/README.md",
-      "bytes": 672,
-      "sha256": "818cadf7f4462c7daa5fc010d0155230433114e680f8616b24a069f789aff673"
+      "bytes": 616,
+      "sha256": "578235a3e35c5d1509ac63376899f3b968ebf205fe667f09078e73b05fa8eb6e"
     },
     {
       "path": "schemas/imported/generic_prompt_library_v3_1/cp-001-pr-code-review-workflow.schema.json",
@@ -12088,8 +12073,8 @@
     },
     {
       "path": "tests/test_manifest_hygiene.py",
-      "bytes": 3566,
-      "sha256": "3a2a50b65fcd81b24e509a6983c7118b1fef7c52716122a137e5c3eb087d4e38"
+      "bytes": 3911,
+      "sha256": "544a54840554ceee7d358a0a542fcc310d3b44b54fe636a0c22d7658d06c6056"
     },
     {
       "path": "tests/test_mastery_manual.py",
@@ -12113,8 +12098,8 @@
     },
     {
       "path": "tests/test_prompt_library_import.py",
-      "bytes": 4572,
-      "sha256": "4d45b580ed17c39f45c10cedfa37e739022fbd8f83602ba1aaa3e42062a221ce"
+      "bytes": 4367,
+      "sha256": "848ba141f35914a405a78c705dee47b7fec595eca191223b0d59adb199796929"
     },
     {
       "path": "tests/test_release_consistency.py",
@@ -12183,8 +12168,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 4806,
-      "sha256": "c1328640f00f05470a704fdd5ed05dba3e601f64a645d966fca89bd180cae492"
+      "bytes": 4824,
+      "sha256": "fed26adc98fb97e4c13f900990c7fb42187c1fe5cefee1c0fa1b7b06150b34db"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",
@@ -12238,8 +12223,8 @@
     },
     {
       "path": "tools/import_prompt_library.py",
-      "bytes": 22118,
-      "sha256": "997ed041b66c19655ab06bfaa546033053a11182f26eb43a014164d44ad9a658"
+      "bytes": 21890,
+      "sha256": "73f13083e5dda0a6e96d92415fccc4c7a2b83addd57e953ddcc196754284d93b"
     },
     {
       "path": "tools/install.ps1",
@@ -12453,8 +12438,8 @@
     },
     {
       "path": "tools/validate_suite.py",
-      "bytes": 53717,
-      "sha256": "4de32f669d11a5de6b47c8b3b49a00473e3c36d09ccd8ab2918da7fea64692e1"
+      "bytes": 50210,
+      "sha256": "aa4c6c3f84b0131d67ea56f51870dc71cbea133d3f66364082577e47b00977a0"
     },
     {
       "path": "tools/validate_templates.py",

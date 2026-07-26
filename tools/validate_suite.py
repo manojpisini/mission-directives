@@ -184,7 +184,6 @@ for f, m, body in items:
         refinement_count += 1
         attributes = refinement.group("attributes")
         profile_match = re.search(r'\bprofile="(?P<profile>CP-\d{3})"', attributes)
-        artifact_match = re.search(r'\breview_artifact="(?P<path>[^"]+)"', attributes)
         if not profile_match:
             errors.append(f"{f.name}: refinement is missing profile binding")
             continue
@@ -203,75 +202,15 @@ for f, m, body in items:
             errors.append(
                 f"{f.name}: refinement {profile_id} is owned by {expected_profile}"
             )
-        if not artifact_match:
-            errors.append(f"{profile_id}: refinement is missing review_artifact")
-            continue
-        artifact_relative = Path(artifact_match.group("path"))
-        if (
-            artifact_relative.is_absolute()
-            or ".." in artifact_relative.parts
-            or not (ROOT / artifact_relative).is_file()
-        ):
-            errors.append(f"{profile_id}: invalid review_artifact path")
 
-import_plan_path = ROOT / "prompt_imports/generic_prompt_library_v3_1_plan.json"
-provenance_path = ROOT / "prompt_imports/generic_prompt_library_v3_1_provenance.json"
-plan_is_safe = import_plan_path.is_file() and not import_plan_path.is_symlink()
-provenance_is_safe = provenance_path.is_file() and not provenance_path.is_symlink()
-if imported_profile_owners and not plan_is_safe:
-    errors.append("imported capability profiles require a safe import plan")
-if imported_profile_owners and not provenance_is_safe:
-    errors.append("imported capability profiles require safe import provenance")
-if plan_is_safe:
-    import_plan = load(import_plan_path)
-    provenance = load(provenance_path) if provenance_is_safe else {}
-    import_rows = import_plan.get("imports", [])
-    expected_profile_ids = [row.get("cp_id") for row in import_rows]
-    if len(expected_profile_ids) != len(set(expected_profile_ids)):
-        errors.append("generic prompt import plan contains duplicate CP identities")
-    if set(expected_profile_ids) != set(imported_profile_owners):
-        errors.append("imported capability profiles do not exactly match the import plan")
-    for row in import_rows:
-        actual_owner = imported_profile_owners.get(row.get("cp_id"))
-        if not actual_owner or actual_owner[1] != row.get("disposition"):
-            errors.append(
-                f"{row.get('cp_id')}: imported owner/disposition does not match the plan"
-            )
-        elif row.get("disposition") == "merge" and actual_owner[0] != row.get(
-            "target_md_id"
-        ):
-            errors.append(f"{row.get('cp_id')}: merged target does not match the plan")
-    addition_rows = [row for row in import_rows if row.get("disposition") == "add"]
-    added_prompt_ids = provenance.get("added_prompt_ids", [])
-    if len(added_prompt_ids) != len(addition_rows):
-        errors.append("generic prompt import provenance added identity count mismatch")
-    else:
-        for row, prompt_id in zip(addition_rows, added_prompt_ids, strict=True):
-            if imported_profile_owners.get(row.get("cp_id")) != (prompt_id, "add"):
-                errors.append(
-                    f"{row.get('cp_id')}: added prompt identity does not match provenance"
-                )
-    actual_plan_sha256 = hashlib.sha256(
-        import_plan_path.read_bytes().replace(b"\r\n", b"\n")
-    ).hexdigest()
-    if provenance.get("plan_sha256") != actual_plan_sha256:
-        errors.append("generic prompt import provenance plan hash mismatch")
-    if provenance.get("source_prompt_count") != len(import_rows):
-        errors.append("generic prompt import provenance source count mismatch")
-    if provenance.get("schema_count") != len(imported_profile_owners):
-        errors.append("generic prompt import provenance schema count mismatch")
-    if provenance.get("added_prompt_count") != sum(
-        row.get("disposition") == "add" for row in import_rows
-    ):
-        errors.append("generic prompt import provenance added count mismatch")
-    if provenance.get("merged_profile_count") != sum(
-        row.get("disposition") == "merge" for row in import_rows
-    ):
-        errors.append("generic prompt import provenance merged count mismatch")
-    if not re.fullmatch(r"[0-9a-f]{64}", str(provenance.get("archive_sha256") or "")):
-        errors.append("generic prompt import provenance archive hash is invalid")
-    if refinement_count and not provenance_is_safe:
-        errors.append("reviewed refinements require safe import provenance")
+if imported_profile_owners:
+    expected_profile_ids = {f"CP-{index:03d}" for index in range(1, 181)}
+    if set(imported_profile_owners) != expected_profile_ids:
+        errors.append("imported capability profiles do not exactly match CP-001..CP-180")
+    if len(imported_profile_owners) != len(expected_profile_ids):
+        errors.append("imported capability profiles contain duplicate or missing CP identities")
+    if refinement_count < 1:
+        errors.append("reviewed refinements are missing from imported capability profiles")
 for f, m, b in items:
     pid = m["prompt_id"]
     expected = f"MD-{m['sequence']:02d}"

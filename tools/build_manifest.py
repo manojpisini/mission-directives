@@ -35,7 +35,7 @@ EXCLUDED_FILENAMES = {
     "TEST_RESULTS.json",
     "VALIDATION.json",
 }
-EXCLUDED_DIRNAMES = {"__pycache__", ".pytest_cache", ".git", ".ruff_cache", ".venv"}
+EXCLUDED_DIRNAMES = {"__pycache__", ".pytest_cache", ".git", ".ruff_cache", ".venv", "prompt_imports"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo"}
 RUNTIME_PREFIXES = {
     (".prompt_suite", "logs"),

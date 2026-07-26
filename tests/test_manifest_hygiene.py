@@ -81,3 +81,12 @@ def test_manifest_ignores_site_preview_logs(tmp_path):
     assert "site-preview.err.log" not in paths
     assert "site-preview.out.log" not in paths
     assert "kept.log" in paths
+
+def test_manifest_ignores_prompt_imports(tmp_path):
+    (tmp_path / "VERSION").write_text("1.0.0\n")
+    imports = tmp_path / "prompt_imports"
+    imports.mkdir()
+    (imports / "internal-plan.json").write_text("{}\n")
+
+    paths = {row["path"] for row in current(tmp_path)["files"]}
+    assert "prompt_imports/internal-plan.json" not in paths

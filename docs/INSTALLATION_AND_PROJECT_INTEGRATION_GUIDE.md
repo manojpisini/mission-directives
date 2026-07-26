@@ -52,7 +52,6 @@ The following remain source-only:
 - `.github/`;
 - `tests/`;
 - `evaluations/`;
-- `prompt_imports/`;
 - `site/`;
 - prompt authoring/import tools;
 - repository audit, validation, test, evaluation, and manifest tools;

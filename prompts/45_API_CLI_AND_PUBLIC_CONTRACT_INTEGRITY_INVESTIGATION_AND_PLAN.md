@@ -290,7 +290,7 @@ Use `schemas/imported/generic_prompt_library_v3_1/cp-005-api-contract-design.sch
 - [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
 - [ ] The final response leads with the task deliverable, not validator or process theater.
 </source_prompt>
-<reviewed_workflow_refinement profile="CP-005" review="generic-v3.1-blind-proportionality-v1" review_artifact="prompt_imports/generic_prompt_library_v3_1_blind_proportionality_review.md">
+<reviewed_workflow_refinement profile="CP-005" review="generic-v3.1-blind-proportionality-v1">
 The source snapshot above is retained for provenance. For Mission Directives execution, use this six-stage workflow:
 
 1. Model consumer journeys and domain operations, then identify commands, queries, notifications, and ownership before choosing endpoints or events.
