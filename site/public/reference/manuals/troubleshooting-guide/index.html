@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Troubleshooting Guide from the Mission Directives documentation set." />
+  <title>Troubleshooting Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/TROUBLESHOOTING_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Troubleshooting Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/TROUBLESHOOTING_GUIDE.md</span></div><h1>Troubleshooting Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Troubleshooting Guide</h2>
+<h3>Route selects too many prompts</h3>
+<p>Check whether the outcome names one primary artifact. Remove broad department language, state exclusions, and clarify authority. A department pack is a discovery surface, not an execution request.</p>
+<h3>Route confidence is low</h3>
+<p>Inspect <code>questions_that_change_route</code>. Answer only questions that alter capability selection, authority, evidence lane, medium, or assurance.</p>
+<h3>Prompt-body audit fails</h3>
+<h4>Boilerplate completion criteria</h4>
+<p>Rewrite the block using the artifact, domain gates, verification IDs, residual behavior, and stop conditions. See <code>COMPLETION_CRITERIA_GUIDE.md</code>.</p>
+<h4>Missing tool policy</h4>
+<p>Add role-specific allowed and prohibited tool classes, operating-mode limits, output quarantine, and verification behavior.</p>
+<h4>Runtime marker missing</h4>
+<p>The <code>&lt;runtime_markers&gt;</code> block must name all six exact markers.</p>
+<h4>Obsolete authorization tag</h4>
+<p>Rename <code>&lt;security_execution_boundary&gt;</code> to <code>&lt;authorization_boundary&gt;</code> and retain the security-specific content.</p>
+<h4>Executive decision rules missing</h4>
+<p>Add action eligibility, a domain-specific priority rule, conflict resolution, budget behavior, and hard stops.</p>
+<h4>Pair verification duplicated</h4>
+<p>Delete the executive verification list and add <code>&lt;verification_reference&gt;</code> to the frozen investigator criteria.</p>
+<h4>Self-dependency</h4>
+<p>Remove the prompt's own ID from <code>requires</code> or <code>contract_refs</code>, then rebuild the capability graph.</p>
+<h3>Manifest mismatch</h3>
+<p>Run all tests and generated checks first. Then rebuild:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/build_manifest.py</code></pre></div>
+<h3>Audit report mismatch</h3>
+<p>Regenerate only after reviewing why metrics changed:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/audit_prompt_bodies.py</code></pre></div>
+<h3>Executive refuses handoff</h3>
+<p>Check:</p>
+<ul><li>snapshot freshness;</li><li>acceptance-criteria hash;</li><li>approval receipt;</li><li>target environment;</li><li>unresolved <code>?UNKNOWN</code> records;</li><li>action IDs;</li><li>rollback readiness.</li></ul>
+<p>Refusal may be correct.</p>
+<h3>No model selected</h3>
+<p><code>model_profiles.json</code> may contain no measured production-eligible model for the assurance level. Run benchmarks and ingest real results; do not mark an unmeasured profile eligible manually.</p>
+<h3>Skill cannot auto-install</h3>
+<p>The lock is unresolved, trust tier is insufficient, or permissions exceed policy. Resolve the exact revision and checksum in a networked review environment, or use native execution.</p>
+<h3>Verification passes but artifact looks wrong</h3>
+<p>Check whether the verifier reviewed the source rather than the exact export. Add medium-specific checks for PDF, slides, responsive layout, fonts, clipping, chart data, or accessibility.</p>
+<h3>Run is stuck in <code>residual_open</code></h3>
+<p>A residual requires an owner, disposition, and acceptance decision. The run cannot close merely because the main artifact exists.</p>
+<h3>Tests pass but validator fails</h3>
+<p>The unit tests cover runtime functions; the validator also checks catalogs, fixtures, manuals, schemas, graphs, paths, locks, and manifest integrity. Read <code>VALIDATION.json</code> for the exact error.</p>
+<h3>Validator passes but behavior is poor</h3>
+<p>Static validation is not live model proof. Add or run behavioral fixtures and model benchmarks.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/TROUBLESHOOTING_GUIDE.md</span></footer></main>
+
+</body>
+</html>

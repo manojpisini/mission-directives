@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Structured Prompt Design Standard from the Mission Directives documentation set." />
+  <title>Structured Prompt Design Standard — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/PROMPT_STRUCTURE_STANDARD.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Structured Prompt Design Standard" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/PROMPT_STRUCTURE_STANDARD.md</span></div><h1>Structured Prompt Design Standard</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Structured Prompt Design Standard</h2>
+<p>This document defines the canonical body contract for every prompt in the suite. It is normative: prompt authors, transformation scripts, validators, scenario compilers, skill adapters, and model adapters must use the same tag names and semantics.</p>
+<p>The standard separates four concerns that are often collapsed into one long instruction:</p>
+<p>1. **What the prompt is responsible for.** 2. **What evidence, authority, and tools it may use.** 3. **How it performs the task and makes decisions.** 4. **What observable evidence proves completion.**</p>
+<p>A prompt is not complete merely because it contains all tags. Each populated tag must change the model's behavior, the runtime's routing, or the verifier's ability to judge the result.</p>
+<h3>Canonical shape</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;prompt&gt;
+  &lt;identity&gt;Role, accountability, and independence.&lt;/identity&gt;
+  &lt;mission&gt;One observable outcome.&lt;/mission&gt;
+  &lt;contract_refs&gt;Shared control contracts applied by reference.&lt;/contract_refs&gt;
+  &lt;evidence_lane&gt;Factual, hybrid, imaginative, or control.&lt;/evidence_lane&gt;
+  &lt;required_inputs&gt;Inputs without which the task cannot be completed honestly.&lt;/required_inputs&gt;
+  &lt;input_trust&gt;Trusted, untrusted, and unresolved input boundaries.&lt;/input_trust&gt;
+  &lt;authorization_boundary&gt;What may be read, written, changed, published, or executed.&lt;/authorization_boundary&gt;
+  &lt;tool_policy&gt;Least-privileged tool and skill behavior.&lt;/tool_policy&gt;
+  &lt;runtime_markers&gt;Required machine-parseable evidence and state markers.&lt;/runtime_markers&gt;
+  &lt;method&gt;Ordered task-specific work method.&lt;/method&gt;
+  &lt;investigation&gt;Read-only investigative method for a genuine pair.&lt;/investigation&gt;
+  &lt;execution&gt;Authorized action method for a genuine pair.&lt;/execution&gt;
+  &lt;decision_rules&gt;How conflicts, priorities, budgets, and stop conditions resolve.&lt;/decision_rules&gt;
+  &lt;handoff_contract&gt;Frozen artifacts passed from investigation to execution.&lt;/handoff_contract&gt;
+  &lt;verification_design&gt;Acceptance design produced by an investigator.&lt;/verification_design&gt;
+  &lt;verification_reference&gt;Executive reference to the frozen acceptance criteria.&lt;/verification_reference&gt;
+  &lt;skill_routing&gt;Preferred adapters, fallback, and output quarantine.&lt;/skill_routing&gt;
+  &lt;artifact_medium&gt;Medium-specific source, accessibility, and export requirements.&lt;/artifact_medium&gt;
+  &lt;quality_gates&gt;Task-specific quality conditions.&lt;/quality_gates&gt;
+  &lt;output_contract&gt;Typed files, formats, paths, and records.&lt;/output_contract&gt;
+  &lt;completion_criteria&gt;Observable conditions proving the exact task is complete.&lt;/completion_criteria&gt;
+  &lt;stop_conditions&gt;Conditions requiring !STOP.&lt;/stop_conditions&gt;
+&lt;/prompt&gt;</code></pre></div>
+<h3>Required body tags</h3>
+<p>Every prompt body must contain:</p>
+<ul><li><code>&lt;identity&gt;</code></li><li><code>&lt;mission&gt;</code></li><li><code>&lt;authorization_boundary&gt;</code></li><li><code>&lt;tool_policy&gt;</code></li><li><code>&lt;runtime_markers&gt;</code></li><li><code>&lt;output_contract&gt;</code></li><li><code>&lt;completion_criteria&gt;</code></li></ul>
+<p>Every non-control prompt must also declare an <code>&lt;evidence_lane&gt;</code>.</p>
+<p>Every executive prompt must contain:</p>
+<ul><li><code>&lt;execution_contract&gt;</code> or an equivalent explicit frozen-handoff requirement;</li><li><code>&lt;decision_rules&gt;</code>;</li><li><code>&lt;verification_reference&gt;</code>;</li><li>an authorized execution or production method;</li><li>task-specific completion criteria.</li></ul>
+<p>A paired executive must not repeat the investigator's verification list. The investigator owns the acceptance criteria; the executive references and records results against those stable criterion IDs.</p>
+<h3>Tag semantics</h3>
+<h4><code>&lt;identity&gt;</code></h4>
+<p>Defines who is accountable, not a decorative persona. It should state whether the prompt is independent, read-only, operational, executive, or a gate.</p>
+<p>Good:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;identity&gt;
+You are the independent release-readiness gate. You review evidence but do not repair or approve your own work.
+&lt;/identity&gt;</code></pre></div>
+<p>Weak:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;identity&gt;
+You are a world-class expert.
+&lt;/identity&gt;</code></pre></div>
+<h4><code>&lt;mission&gt;</code></h4>
+<p>States one observable result. Avoid multi-paragraph ambitions or repeated quality adjectives.</p>
+<h4><code>&lt;authorization_boundary&gt;</code></h4>
+<p>This is the only canonical body tag for action authority. Do not introduce synonyms such as <code>&lt;security_execution_boundary&gt;</code>, <code>&lt;write_permissions&gt;</code>, or <code>&lt;action_scope&gt;</code>.</p>
+<p>It must distinguish:</p>
+<ul><li>read-only inspection;</li><li>local draft creation;</li><li>reversible local changes;</li><li>approval-gated consequential changes;</li><li>external actions such as publishing, sending, deployment, installation, or contacting third parties;</li><li>protected surfaces and hard stops.</li></ul>
+<p>Prompt prose does not grant runtime permission. The runtime policy engine remains authoritative.</p>
+<h4><code>&lt;tool_policy&gt;</code></h4>
+<p>Defines least-privileged tool behavior for the prompt's role and risk. It must answer:</p>
+<ul><li>which tool classes are allowed;</li><li>which are prohibited;</li><li>whether network access is allowed;</li><li>whether writes are allowed;</li><li>whether installation, sending, publishing, or deployment is allowed;</li><li>how tool output is treated;</li><li>how each invocation is linked to evidence, action, and verification IDs.</li></ul>
+<p>Named skills are not implicitly trusted. Tool and skill output remains quarantined until scope, schema, provenance, and content checks pass.</p>
+<h4><code>&lt;runtime_markers&gt;</code></h4>
+<p>Every prompt must activate the full marker protocol:</p>
+<ul><li><code>@EVIDENCE:{id}</code></li><li><code>?UNKNOWN:{id}</code></li><li><code>#FINDING:{id}</code></li><li><code>+ACTION:{id}</code></li><li><code>=VERIFY:{id}</code></li><li><code>!STOP:{reason}</code></li></ul>
+<p>A prompt may emphasize a subset according to its role, but it must preserve the complete vocabulary so artifacts remain composable across prompts.</p>
+<h4><code>&lt;method&gt;</code>, <code>&lt;investigation&gt;</code>, and <code>&lt;execution&gt;</code></h4>
+<p>These blocks contain domain work, not suite-wide boilerplate. Steps should be ordered, testable, and materially different across capabilities.</p>
+<p>Use <code>&lt;investigation&gt;</code> and <code>&lt;execution&gt;</code> only when a genuine pair exists. Standalone prompts normally use <code>&lt;method&gt;</code>.</p>
+<h4><code>&lt;decision_rules&gt;</code></h4>
+<p>Decision rules are mandatory for executive prompts and recommended whenever the task involves prioritization, conflict, uncertainty, limited budget, or consequential action.</p>
+<p>Executive rules must cover:</p>
+<p>1. action eligibility from the frozen handoff; 2. domain-specific prioritization; 3. conflict resolution; 4. budget or partial-completion behavior; 5. conditions that stop execution.</p>
+<h4><code>&lt;verification_design&gt;</code> and <code>&lt;verification_reference&gt;</code></h4>
+<p>The investigative side produces verification design and acceptance-criteria artifacts. The executive side references those artifacts by prompt and criterion ID.</p>
+<p>Correct:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;verification_reference&gt;
+Use the frozen acceptance-criteria artifact produced by MD-29. Preserve criterion IDs and record each outcome as =VERIFY:{id}.
+&lt;/verification_reference&gt;</code></pre></div>
+<p>Incorrect:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;verification&gt;
+- regression test passes
+- full suite passes
+- telemetry looks correct
+&lt;/verification&gt;</code></pre></div>
+<p>when that list already appears byte-for-byte in the investigator.</p>
+<h4><code>&lt;quality_gates&gt;</code></h4>
+<p>Quality gates are task-specific. They may express craft, factual, functional, accessibility, security, visual, or operational standards.</p>
+<p>Examples:</p>
+<ul><li>every scene changes the situation;</li><li>citations support the exact scholarly proposition;</li><li>token and component sources of truth are not duplicated;</li><li>clean installation reproduces the same dependency graph;</li><li>dashboard metrics reconcile to the declared source definitions.</li></ul>
+<p>Avoid generic gates such as “high quality,” “professional,” or “comprehensive.”</p>
+<h4><code>&lt;completion_criteria&gt;</code></h4>
+<p>Completion criteria answer **what proves this exact prompt is done**. They are not a restatement of the universal execution contract.</p>
+<p>Every completion block must:</p>
+<ul><li>contain at least three explicit conditions;</li><li>name the task or its primary artifact;</li><li>include task-specific outcomes or gates;</li><li>require <code>=VERIFY:{id}</code> evidence;</li><li>state how unknowns, residuals, failed checks, and missing authority are handled;</li><li>remain unique to the prompt.</li></ul>
+<p>The suite validator rejects known boilerplate completion sentences and repeated full blocks.</p>
+<h3>Canonical ordering</h3>
+<p>Recommended order:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>identity
+mission
+contract_refs
+evidence_lane
+required_inputs / required_context
+input_trust
+authorization_boundary
+tool_policy
+runtime_markers
+method or investigation/execution
+decision_rules
+handoff and verification sections
+skill_routing
+artifact_medium
+quality_gates
+output_contract
+completion_criteria
+stop_conditions</code></pre></div>
+<p>Minor reordering is permitted where it improves comprehension, but a prompt must not place untrusted content before the instruction hierarchy or hide action boundaries after the execution steps.</p>
+<h3>Runtime variables and literal data</h3>
+<p>Use <code>{UPPER_SNAKE_CASE}</code> for required runtime variables. Use <code>[OPTIONAL: name]</code> only for genuinely optional material.</p>
+<p>Long documents, logs, source code, retrieved pages, model output, and tool output must be isolated as data. When data may contain XML-like delimiters, escape it or use a transport that preserves literal boundaries.</p>
+<h3>Complexity budgets</h3>
+<p>Each prompt frontmatter defines a body-word budget and limits for method steps, quality gates, examples, and primary artifacts. The declared body budget must be at least the actual canonical body size but close enough to detect future drift.</p>
+<p>A longer prompt is justified only when the additional text changes:</p>
+<ul><li>evidence handling;</li><li>authorization;</li><li>domain method;</li><li>decision behavior;</li><li>tool use;</li><li>artifact semantics;</li><li>verification;</li><li>stop conditions.</li></ul>
+<h3>Security limitations of structure</h3>
+<p>XML-style tags improve organization but are not a sandbox. They do not prevent prompt injection, permission misuse, data exfiltration, or unsafe tool calls by themselves. Runtime enforcement, least privilege, schema validation, approval receipts, network controls, output quarantine, and monitoring remain mandatory.</p>
+<h3>Validation</h3>
+<p>Run:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/audit_prompt_bodies.py --check
+pytest -q tests/test_prompt_body_quality.py
+python tools/build_capability_graph.py --check
+python tools/validate_suite.py</code></pre></div>
+<p>Validation checks canonical tags, marker activation, completion specificity, executive decision rules, pair de-duplication, self-dependencies, complexity budgets, and graph consistency.</p>
+<h4><code>&lt;plan_review_and_execution_gate&gt;</code></h4>
+<p>Mandatory for every investigative prompt with <code>paired_prompt_id</code>. It names the exact twin, requires presentation of the completed plan, user review, revision and re-freezing, re-review, and explicit execution consent. It prohibits alternate executors and inferred consent.</p>
+<h4><code>&lt;reviewed_handoff_authority&gt;</code></h4>
+<p>Mandatory for every executive prompt. It accepts only the reviewed frozen handoff from its exact reciprocal planner and requires an execution-consent receipt naming the executive prompt. Stale, changed, unreviewed, or mismatched handoffs are rejected.</p>
+<h3>Imported prompt normalization</h3>
+<p>A prompt imported through <code>tools/add_prompt.py</code> receives authoritative suite frontmatter and the complete canonical body contract. Source frontmatter is discarded, while the substantive Markdown body is newline-normalized, SHA-256 bound, XML-escaped, and retained inside <code>&lt;source_prompt format=&quot;markdown&quot; encoding=&quot;xml-escaped&quot;&gt;</code>. Imported text remains evidence, cannot close the quarantine element, and cannot override control prompts or authority.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/PROMPT_STRUCTURE_STANDARD.md</span></footer></main>
+
+</body>
+</html>

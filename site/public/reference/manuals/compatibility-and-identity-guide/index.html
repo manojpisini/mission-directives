@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Identity and Runtime Path Guide from the Mission Directives documentation set." />
+  <title>Identity and Runtime Path Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/COMPATIBILITY_AND_IDENTITY_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Identity and Runtime Path Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/COMPATIBILITY_AND_IDENTITY_GUIDE.md</span></div><h1>Identity and Runtime Path Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Identity and Runtime Path Guide</h2>
+<h3>Purpose</h3>
+<p>Mission Directives exposes current, permanent capability identities and current agent skill destinations. The repository does not ship historical release maps, redirect tables, or retired project snapshots.</p>
+<h3>Current identity contract</h3>
+<p><code>compatibility/capability_identity_registry.json</code> is the generated registry for every prompt in <code>catalog.json</code>. Each row binds:</p>
+<ul><li><code>capability_id</code>: permanent semantic machine identity;</li><li><code>prompt_id</code>: permanent prompt identifier;</li><li><code>prompt_slug</code>: stable human-readable identity;</li><li><code>canonical_path</code>: current prompt body location;</li><li><code>identity_status</code>: current identity state.</li></ul>
+<p>Consumers should store <code>capability_id</code> and <code>prompt_id</code>. Do not route by filename, display title, or sequence number.</p>
+<h3>Current agent path contract</h3>
+<p><code>compatibility/agent_skill_paths.json</code> defines supported skill installation destinations for Agents, Claude Code, and OpenCode. Installers load this file through <code>tools/agent_paths.py</code>; shell wrappers delegate to the same Python implementation so platform behavior remains aligned.</p>
+<h3>Change procedure</h3>
+<p>1. Preserve an identity when its observable capability remains the same. 2. Add a new permanent identity when authority or observable outcome changes. 3. Update prompt metadata, catalogs, scenarios, crosswalks, fixtures, and docs. 4. Regenerate the capability identity registry. 5. Run identity, reproducibility, installer-path, and manifest validation. 6. Publish breaking consumer guidance outside the runtime repository when a downstream system requires a transition record.</p>
+<h3>Validation failures</h3>
+<p>The suite fails when:</p>
+<ul><li>an active capability identity disappears;</li><li>prompt IDs, capability IDs, or slugs are duplicated;</li><li>the identity registry count differs from the catalog;</li><li>a registry row points to a missing canonical prompt;</li><li>a scenario or crosswalk references an unknown current identity;</li><li>agent skill destinations diverge across installer entry points.</li></ul>
+<h3>Review checklist</h3>
+<ul><li>[ ] Permanent identity was preserved where meaning was preserved.</li><li>[ ] New authority or outcomes received a new identity.</li><li>[ ] Scenarios, crosswalks, fixtures, and docs use current IDs.</li><li>[ ] Agent path changes were made in the canonical path policy.</li><li>[ ] Generated identity and manifest artifacts were refreshed.</li><li>[ ] Focused and full validation passed.</li></ul></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/COMPATIBILITY_AND_IDENTITY_GUIDE.md</span></footer></main>
+
+</body>
+</html>

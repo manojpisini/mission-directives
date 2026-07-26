@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project Cleanup and Uninstall Guide from the Mission Directives documentation set." />
+  <title>Project Cleanup and Uninstall Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Project Cleanup and Uninstall Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md</span></div><h1>Project Cleanup and Uninstall Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Project Cleanup and Uninstall Guide</h2>
+<p>This guide explains how to remove a Mission Directives project installation without deleting unrelated project content. The cleanup workflow is the transactional inverse of <code>install.py</code>.</p>
+<h3>What cleanup removes</h3>
+<p>After validating the installation under <code>&lt;project&gt;/prompts</code>, cleanup removes:</p>
+<ul><li>the complete <code>prompts/</code> suite copy;</li><li>Mission Directives-owned <code>.prompt_suite/</code> runtime state, receipts, logs, locks, and results;</li><li>runtime directories created and marked by the installer: <code>results/</code>, <code>reports/</code>, <code>logs/</code>, <code>artifacts/</code>, and <code>outputs/</code>;</li><li>an empty installer-created <code>docs/</code> directory;</li><li>verified stale <code>.md-prompts-backup-*</code>, <code>.md-prompts-staging-*</code>, and <code>.mds-*</code> suite directories;</li><li>the block between <code># BEGIN MISSION DIRECTIVES MANAGED IGNORE</code> and <code># END MISSION DIRECTIVES MANAGED IGNORE</code> in <code>.gitignore</code>;</li><li>the block between <code>&lt;!-- BEGIN MD MANAGED GUIDANCE --&gt;</code> and <code>&lt;!-- END MD MANAGED GUIDANCE --&gt;</code> in <code>AGENTS.md</code> and <code>CLAUDE.md</code>.</li></ul>
+<p>Files are deleted only when their remaining content is empty. Existing human instructions and unrelated <code>.gitignore</code> entries are preserved.</p>
+<h3>What cleanup deliberately preserves</h3>
+<p>Cleanup fails closed or preserves content when ownership cannot be demonstrated. In particular:</p>
+<ul><li>a nonempty <code>docs/</code> directory is preserved because it may contain project documentation;</li><li>preexisting generic directories are preserved unless the installation receipt or managed marker proves that Mission Directives created them;</li><li>unverified backup or staging directories are retained and reported;</li><li>unrelated content outside the managed blocks in <code>AGENTS.md</code>, <code>CLAUDE.md</code>, and <code>.gitignore</code> is never rewritten or removed.</li></ul>
+<h3>Preview first</h3>
+<h4>Python</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python cleanup.py /path/to/project --dry-run</code></pre></div>
+<h4>Windows PowerShell</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>.\cleanup.ps1 -ProjectPath 'C:\path\to\project' -DryRun</code></pre></div>
+<h4>Linux and macOS</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>./cleanup.sh /path/to/project --dry-run</code></pre></div>
+<p>The preview returns a SHA-256 approval token bound to the current suite tree, managed project files, selected removal paths, and preservation decisions. A later project change invalidates the token.</p>
+<h3>Interactive cleanup</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python cleanup.py /path/to/project</code></pre></div>
+<p>The tool displays every planned removal and preservation decision. Type <code>REMOVE</code> exactly to continue.</p>
+<h3>Noninteractive cleanup</h3>
+<p>Execute the current preview directly:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python cleanup.py /path/to/project --yes</code></pre></div>
+<p>For a separately reviewed preview, pass its token:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python cleanup.py /path/to/project --approval-token '&lt;TOKEN&gt;'</code></pre></div>
+<p>Use <code>--no-tui</code> for deterministic line-oriented progress in CI or redirected terminals.</p>
+<h3>Transaction and rollback model</h3>
+<p>Cleanup performs these stages:</p>
+<p>1. validate the project path and installed suite identity; 2. discover receipts, ownership markers, managed blocks, and safe preservation decisions; 3. bind the preview to a SHA-256 approval token; 4. acquire an exclusive project cleanup lock; 5. recompute the plan and reject stale approval; 6. snapshot <code>.gitignore</code>, <code>AGENTS.md</code>, and <code>CLAUDE.md</code> with their modes; 7. remove only managed text blocks; 8. quarantine all managed directories with atomic same-filesystem renames; 9. validate the result and optional receipt; 10. purge the quarantine and print a formatted summary.</p>
+<p>Failures before destructive purge restore every quarantined path and the original project files. Purge is the explicit commit boundary: quarantined trees are deleted one at a time and verified absent. If a purge operation has already deleted or altered data and a later deletion fails, cleanup never restores only the surviving subset. It leaves the project integrations removed, retains the remaining <code>.md-cleanup-staging-*</code> quarantine, exits with status code <code>4</code>, and reports the exact recovery path. Release the file lock or permission obstruction, inspect the reported quarantine, and remove only that quarantine directory when safe. A purge failure that made no destructive change remains rollback-safe and restores the project completely.</p>
+<h3>TUI and summary</h3>
+<p>Interactive terminals receive a live progress bar. CI and <code>--no-tui</code> receive stable lines such as:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>PROGRESS 4/10 verified approval against current project state
+PROGRESS 7/10 quarantined managed suite and runtime paths</code></pre></div>
+<p>The final panel reports removed paths, managed files cleaned, bytes reclaimed, preserved paths, warnings, and elapsed time. A failure panel states the bounded reason and whether rollback was attempted.</p>
+<h3>Optional external receipt</h3>
+<p>Cleanup normally leaves no Mission Directives file in the project. To retain an audit receipt, choose an external location:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python cleanup.py /path/to/project --yes --receipt ../mission-directives-cleanup.json</code></pre></div>
+<p>The receipt must not be inside a path scheduled for removal.</p>
+<h3>Troubleshooting</h3>
+<h4>“Project state changed since approval”</h4>
+<p>A managed file, receipt, suite file, or ownership decision changed after preview. Run <code>--dry-run</code> again and review the new token.</p>
+<h4>“Mission Directives installation was not found”</h4>
+<p>The project does not contain a valid <code>prompts/VERSION</code> and matching <code>prompts/RELEASE_ID</code>. Point cleanup at the project root, not at the <code>prompts</code> directory.</p>
+<h4>A runtime directory was preserved</h4>
+<p>The installer could not prove ownership, usually because the directory existed before installation or the installation predates ownership metadata. Review it manually rather than forcing deletion.</p>
+<h4><code>docs/</code> remains</h4>
+<p>Cleanup preserves nonempty documentation. Remove it manually only after confirming that its contents are no longer required.</p>
+<h3>Related documentation</h3>
+<ul><li><a href="/mission-directives/reference/manuals/installation-and-project-integration-guide/">Installation and Project Integration Guide</a></li><li><a href="/mission-directives/reference/manuals/cross-platform-tooling-guide/">Cross-Platform Tooling Guide</a></li><li><a href="/mission-directives/reference/manuals/tui-and-operator-experience-guide/">TUI and Operator Experience Guide</a></li><li><a href="/mission-directives/reference/manuals/logging-and-telemetry-guide/">Logging and Telemetry Guide</a></li><li><a href="/mission-directives/reference/manuals/security-operations-guide/">Security Operations Guide</a></li></ul>
+<h3>Exit codes</h3>
+<ul><li><code>0</code>: preview or cleanup completed successfully.</li><li><code>1</code>: validation or rollback-safe cleanup failure.</li><li><code>3</code>: the user explicitly declined the interactive confirmation.</li><li><code>4</code>: cleanup crossed the purge commit boundary but residual quarantine remains.</li><li><code>130</code>: the process was interrupted with Ctrl-C or an equivalent signal.</li></ul>
+<p>The distinct decline code lets automation differentiate a deliberate refusal from an interrupted process.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md</span></footer></main>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Telemetry and Observability Guide from the Mission Directives documentation set." />
+  <title>Telemetry and Observability Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/TELEMETRY_AND_OBSERVABILITY_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Telemetry and Observability Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/TELEMETRY_AND_OBSERVABILITY_GUIDE.md</span></div><h1>Telemetry and Observability Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Telemetry and Observability Guide</h2>
+<h3>Purpose</h3>
+<p>Telemetry makes routing, execution, verification, failure, and improvement observable without storing unnecessary sensitive content. It supports model selection, cost control, drift detection, and retrospective learning.</p>
+<h3>Core principles</h3>
+<p>1. Collect only metrics that support a decision. 2. Prefer IDs, counts, durations, and classifications over raw prompt content. 3. Separate benchmark data from production telemetry. 4. Record provenance and collection method. 5. Do not optimize cost or refusal rates without quality and safety context.</p>
+<h3>Minimum run metrics</h3>
+<ul><li>run ID and scenario or prompt target;</li><li>prompts considered, selected, injected, rejected, and deferred;</li><li>route confidence and questions asked;</li><li>evidence snapshot age;</li><li>model and revision;</li><li>skills and lock revisions;</li><li>input and output tokens;</li><li>external calls;</li><li>wall time;</li><li>cost;</li><li>retries and schema failures;</li><li>approvals and expiry;</li><li>state transitions;</li><li>execution failures;</li><li>rollback;</li><li>verification failures;</li><li>residuals opened and closed;</li><li>human rating and review status.</li></ul>
+<h3>Recording metrics</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py record-metrics .prompt_suite/runs/run.json \
+  --input-tokens 12000 \
+  --output-tokens 2400 \
+  --external-calls 8 \
+  --wall-time-ms 95000 \
+  --model-id operator-reasoning-primary</code></pre></div>
+<p>Cost and human rating are optional when not available.</p>
+<h3>Event categories</h3>
+<h4>Routing</h4>
+<ul><li>target resolved;</li><li>route compiled;</li><li>prompts selected or rejected;</li><li>ambiguity detected;</li><li>model or skill unavailable.</li></ul>
+<h4>Evidence</h4>
+<ul><li>source collected;</li><li>snapshot frozen;</li><li>evidence invalidated;</li><li>unknown resolved;</li><li>contradiction recorded.</li></ul>
+<h4>Authorization</h4>
+<ul><li>approval requested;</li><li>receipt granted or denied;</li><li>approval expired;</li><li>protected surface encountered.</li></ul>
+<h4>Execution</h4>
+<ul><li>action started;</li><li>action completed;</li><li>action skipped or deferred;</li><li>tool failure;</li><li>rollback initiated.</li></ul>
+<h4>Verification</h4>
+<ul><li>criterion evaluated;</li><li>pass, fail, blocked, or not applicable;</li><li>residual created;</li><li>closure accepted.</li></ul>
+<h3>Privacy and retention</h3>
+<p>Do not store raw secrets, personal data, confidential source content, or full prompts by default.</p>
+<p>Define:</p>
+<ul><li>retention period;</li><li>access roles;</li><li>redaction;</li><li>aggregation;</li><li>deletion;</li><li>legal hold;</li><li>public versus restricted metrics.</li></ul>
+<h3>Metric interpretation</h3>
+<h4>Token and cost</h4>
+<p>Lower is better only when task quality, safety, and verification remain stable.</p>
+<h4>Refusal rate</h4>
+<p>A lower refusal rate may indicate unsafe compliance. Measure correct refusal and correct completion separately.</p>
+<h4>Route size</h4>
+<p>Large graphs may reflect task complexity or router over-selection. Compare to outcome quality and rejected-prompt evidence.</p>
+<h4>Verification failure rate</h4>
+<p>A higher rate can mean worse production or better verification. Interpret alongside defect escape and reviewer outcomes.</p>
+<h4>Residual reopening</h4>
+<p>Repeated reopening may reveal weak completion criteria, stale evidence, or premature closure.</p>
+<h3>Replayability</h3>
+<p>A replayable run records:</p>
+<ul><li>permanent capability IDs;</li><li>prompt and scenario revision;</li><li>model revision;</li><li>skill locks;</li><li>schemas;</li><li>evidence snapshot IDs;</li><li>policies;</li><li>random or sampling settings where relevant.</li></ul>
+<p>Replay does not require retaining sensitive source content when immutable references are sufficient.</p>
+<h3>Dashboards</h3>
+<p>Useful views include:</p>
+<ul><li>route selection accuracy;</li><li>cost and latency by capability and model;</li><li>refusal correctness;</li><li>verification pass and rollback rates;</li><li>skill conformance and failures;</li><li>stale evidence;</li><li>body-audit and documentation drift;</li><li>residual ownership and age.</li></ul>
+<h3>Improvement loop</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>telemetry
+→ anomaly or repeated residual
+→ retrospective
+→ proposed prompt, routing, schema, skill, or policy change
+→ adversarial evaluation
+→ reviewed release</code></pre></div>
+<p>Telemetry alone must not auto-edit canonical prompts.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/TELEMETRY_AND_OBSERVABILITY_GUIDE.md</span></footer></main>
+
+</body>
+</html>

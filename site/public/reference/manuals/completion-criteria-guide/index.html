@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Completion Criteria Guide from the Mission Directives documentation set." />
+  <title>Completion Criteria Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/COMPLETION_CRITERIA_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Completion Criteria Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/COMPLETION_CRITERIA_GUIDE.md</span></div><h1>Completion Criteria Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Completion Criteria Guide</h2>
+<h3>Why completion criteria exist</h3>
+<p><code>&lt;completion_criteria&gt;</code> is the contract that prevents a model or operator from confusing activity with completion. It answers:</p>
+<p>&gt; What observable evidence proves this exact prompt has fulfilled its responsibility?</p>
+<p>It is not a summary of the mission, a motivational sentence, or a copy of suite-wide truth rules.</p>
+<h3>Required properties</h3>
+<p>Every completion block must:</p>
+<p>1. contain at least three explicit conditions; 2. name the task, artifact, decision, or changed state; 3. include domain-specific success conditions; 4. require <code>=VERIFY:{id}</code> evidence; 5. state what happens to unknowns, failures, residuals, and missing authority; 6. remain unique to the prompt.</p>
+<h3>Completion by role</h3>
+<h4>Control</h4>
+<p>Completion proves the shared contract is resolvable by downstream prompts.</p>
+<p>Example conditions:</p>
+<ul><li>the runtime context identifies scope, authority, and protected surfaces;</li><li>downstream prompts can determine permitted modes;</li><li>unresolved inputs are <code>?UNKNOWN:{id}</code>;</li><li>the control artifact has an <code>=VERIFY:{id}</code> integrity record.</li></ul>
+<h4>Investigative</h4>
+<p>Completion proves the evidence and handoff are ready, not that the proposed action occurred.</p>
+<p>Require:</p>
+<ul><li>evidence index;</li><li>finding register;</li><li>bounded actions or recommendations;</li><li>acceptance criteria;</li><li>evidence freshness;</li><li>explicit unknowns and contradictions;</li><li>frozen handoff verification.</li></ul>
+<h4>Executive</h4>
+<p>Completion proves approved actions were handled and acceptance criteria were evaluated.</p>
+<p>Require:</p>
+<ul><li>each approved <code>+ACTION:{id}</code> executed, skipped, or deferred;</li><li>unchanged action IDs;</li><li>current approval and handoff;</li><li><code>=VERIFY:{id}</code> result for every criterion;</li><li>rollback and residual state;</li><li>hard stop for scope expansion or failed verification.</li></ul>
+<h4>Operational</h4>
+<p>Completion proves the declared artifact or workflow works for its audience and medium.</p>
+<p>Require the exact source artifact, exact exports, domain quality gates, and unresolved dependencies.</p>
+<h4>Gate</h4>
+<p>Completion is an independent decision, not a repair. Require the decision, supporting evidence, blocking findings, and verification status.</p>
+<h3>How to derive task-specific criteria</h3>
+<p>Use these sources in order:</p>
+<p>1. mission; 2. primary artifact; 3. domain quality gates; 4. investigative verification design; 5. execution method; 6. audience task; 7. required residual and rollback records.</p>
+<p>Do not derive completion solely from generic control text.</p>
+<h3>Good patterns</h3>
+<h4>Creative writing</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;completion_criteria&gt;
+Completion requires all of the following:
+- The manuscript fulfills the requested form, viewpoint, length, and scene purpose.
+- Every scene changes the situation and preserves causal continuity.
+- Character motives and language remain distinct, and concrete detail carries emotional work.
+- Editorial review records each accepted quality gate as =VERIFY:{id}.
+- Unresolved continuity questions remain ?UNKNOWN:{id}; rights or safety conflicts trigger !STOP:{reason}.
+&lt;/completion_criteria&gt;</code></pre></div>
+<h4>Security remediation</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;completion_criteria&gt;
+Completion requires all of the following:
+- Every approved remediation +ACTION:{id} is executed, deferred, or rejected with evidence.
+- The original vulnerable path is no longer reproducible under the authorized test plan.
+- Negative and abuse-case tests pass without weakening another control.
+- Every investigative criterion has an =VERIFY:{id} result tied to exact commands or observations.
+- New findings are not silently fixed; they enter the residual register or trigger !STOP:{reason}.
+&lt;/completion_criteria&gt;</code></pre></div>
+<h4>Report production</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;completion_criteria&gt;
+Completion requires all of the following:
+- The report answers the declared decision question and reconciles every material figure to its source.
+- Exhibits, narrative, terminology, and recommendations agree.
+- The exact DOCX/PDF/export is checked for clipping, broken links, accessibility, and pagination.
+- Claims and exports have =VERIFY:{id} records; unresolved evidence is ?UNKNOWN:{id}.
+&lt;/completion_criteria&gt;</code></pre></div>
+<h3>Anti-patterns</h3>
+<p>Reject:</p>
+<ul><li>“Complete when high quality.”</li><li>“Complete when evidenced and honestly closed.”</li><li>“Complete when all requirements are met.”</li><li>a copy of <code>&lt;quality_gates&gt;</code> with no artifact or verification requirement;</li><li>a claim that execution occurred in an investigative prompt;</li><li>a gate that repairs the subject before issuing a decision;</li><li>a completion block shared unchanged across unrelated prompts.</li></ul>
+<h3>Static checks</h3>
+<p>The body audit reports:</p>
+<ul><li>completion blocks present;</li><li>unique normalized blocks;</li><li>known boilerplate matches;</li><li>duplicate count;</li><li>bullet count;</li><li>task-title overlap;</li><li><code>=VERIFY:{id}</code> presence.</li></ul>
+<p>Run:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/audit_prompt_bodies.py --check</code></pre></div>
+<p>Static uniqueness is necessary but not sufficient. Live fixtures must still test whether models follow the conditions.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/COMPLETION_CRITERIA_GUIDE.md</span></footer></main>
+
+</body>
+</html>

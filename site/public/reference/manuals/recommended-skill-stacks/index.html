@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Recommended Skill Stacks from the Mission Directives documentation set." />
+  <title>Recommended Skill Stacks — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/RECOMMENDED_SKILL_STACKS.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Recommended Skill Stacks" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/RECOMMENDED_SKILL_STACKS.md</span></div><h1>Recommended Skill Stacks</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Recommended Skill Stacks</h2>
+<p>These are the highest-value default stacks for this suite. Install only the exact skills needed for the current workflow, review the current source and audits, and keep native prompt execution as the fallback.</p>
+<h3>Prompt engineering core</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/github/awesome-copilot --skill prompt-builder
+npx skills add https://github.com/wshobson/agents --skill prompt-engineering-patterns
+npx skills add https://github.com/google-labs-code/stitch-skills --skill enhance-prompt
+npx skills add https://github.com/affaan-m/everything-claude-code --skill prompt-optimizer
+npx skills add https://github.com/github/awesome-copilot --skill boost-prompt</code></pre></div>
+<p>Use with <code>MD-165</code> through <code>MD-168</code> and <code>MD-178</code>. Do not accept optimization claims without representative fixtures.</p>
+<h3>Academic research and review</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/mattpocock/skills --skill research
+npx skills add https://github.com/mattpocock/skills --skill edit-article
+npx skills add https://github.com/lllllllama/ai-paper-reproduction-skill --skill paper-context-resolver
+npx skills add https://github.com/anthropics/skills --skill docx</code></pre></div>
+<p>Use with <code>MD-79</code>, <code>MD-80</code>, <code>MD-82</code>, <code>MD-87</code>, <code>MD-88</code>, and <code>MD-129</code>. <code>academic-researcher</code> and <code>academic-paper-reviewer</code> are native aliases rather than invented installable packages.</p>
+<h3>Reports and executive artifacts</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/garrytan/gstack --skill document-generate
+npx skills add https://github.com/garrytan/gstack --skill make-pdf
+npx skills add https://github.com/anthropics/skills --skill docx
+npx skills add https://github.com/anthropics/skills --skill pptx
+npx skills add https://github.com/anthropics/skills --skill xlsx
+npx skills add https://github.com/mattpocock/skills --skill edit-article</code></pre></div>
+<p>Use with <code>MD-159</code>, <code>MD-169</code>, and <code>MD-170</code>. Verify source numbers, exhibit consistency, accessibility, and exact exports.</p>
+<h3>Design and frontend core</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/anthropics/skills --skill frontend-design
+npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
+npx skills add https://github.com/vercel-labs/agent-skills --skill vercel-composition-patterns
+npx skills add https://github.com/leonxlnx/taste-skill --skill design-taste-frontend
+npx skills add https://github.com/pbakaus/impeccable --skill critique
+npx skills add https://github.com/pbakaus/impeccable --skill polish
+npx skills add https://github.com/arvindrk/extract-design-system --skill extract-design-system
+npx skills add https://github.com/anthropics/skills --skill web-artifacts-builder</code></pre></div>
+<p>Use for language-model-driven interfaces, layouts, components, web artifacts, and design systems. Image generation is not included.</p>
+<h3>Presentation and visual communication</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/garrytan/gstack --skill design-html
+npx skills add https://github.com/garrytan/gstack --skill diagram
+npx skills add https://github.com/anthropics/skills --skill pptx
+npx skills add https://github.com/anthropics/skills --skill canvas-design
+npx skills add https://github.com/pbakaus/impeccable --skill polish</code></pre></div>
+<p>Use with <code>MD-101</code> through <code>MD-109</code> and <code>MD-170</code>. Review exact exports, data integrity, keyboard access, text alternatives, and responsive behavior.</p>
+<h3>Engineering delivery and QA</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/garrytan/gstack --skill spec
+npx skills add https://github.com/garrytan/gstack --skill plan-eng-review
+npx skills add https://github.com/garrytan/gstack --skill review
+npx skills add https://github.com/garrytan/gstack --skill qa
+npx skills add https://github.com/obra/superpowers --skill test-driven-development
+npx skills add https://github.com/obra/superpowers --skill verification-before-completion
+npx skills add https://github.com/obra/superpowers --skill systematic-debugging
+npx skills add https://github.com/microsoft/playwright-cli --skill playwright-cli</code></pre></div>
+<p>Use with <code>MD-124</code> and existing engineering, debugging, testing, delivery, and release prompts. Shipping and deployment remain <code>APPLY_APPROVED</code> actions.</p>
+<h3>Strategy and organization</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/garrytan/gstack --skill office-hours
+npx skills add https://github.com/garrytan/gstack --skill plan-ceo-review
+npx skills add https://github.com/garrytan/gstack --skill autoplan
+npx skills add https://github.com/garrytan/gstack --skill retro
+npx skills add https://github.com/garrytan/gstack --skill document-generate</code></pre></div>
+<p>Use for problem framing, corporate or product strategy, operating models, department plans, decisions, and retrospectives.</p>
+<h3>Research and OSINT</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/mattpocock/skills --skill research
+npx skills add https://github.com/garrytan/gstack --skill investigate
+npx skills add https://github.com/garrytan/gstack --skill scrape
+npx skills add https://github.com/garrytan/gstack --skill document-generate</code></pre></div>
+<p>Use only for authorized public-source research. Preserve provenance, collection time, identity confidence, contradictions, privacy minimization, and non-deceptive collection.</p>
+<h3>Marketing and content</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/coreyhaines31/marketingskills --skill content-strategy
+npx skills add https://github.com/coreyhaines31/marketingskills --skill seo-audit
+npx skills add https://github.com/coreyhaines31/marketingskills --skill site-architecture
+npx skills add https://github.com/coreyhaines31/marketingskills --skill copywriting
+npx skills add https://github.com/coreyhaines31/marketingskills --skill social-content
+npx skills add https://github.com/coreyhaines31/marketingskills --skill analytics-tracking</code></pre></div>
+<p>Use with source truth, brand, accessibility, privacy, and anti-spam controls. Search optimization may not override audience usefulness or factual integrity.</p>
+<h3>Skill discovery and creation</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add https://github.com/vercel-labs/skills --skill find-skills
+npx skills add https://github.com/anthropics/skills --skill skill-creator
+npx skills add https://github.com/garrytan/gstack --skill skillify</code></pre></div>
+<p>Use only after confirming that native prompt composition cannot meet the need cleanly. New skills require a narrow contract, permissions declaration, fixtures, adversarial cases, and conformance validation.</p>
+<h3>Conditional skill orchestration</h3>
+<p>Installed local skills: <code>find-skills</code>, <code>skill-creator</code>, <code>brainstorming</code>, <code>grill-me</code>, <code>grill-with-docs</code>, <code>writing-skills</code>, <code>visual-assets</code>, and <code>strudel</code>. Use them through <code>MD-191</code> through <code>MD-198</code>; do not install or execute a skill simply because it is present.</p>
+<h3>Code-native visual assets</h3>
+<p>Use the personal <code>visual-assets</code> skill for SVG, HTML, CSS, vanilla-JS illustrations, infographics, report exhibits, presentation assets, and animated explanatory graphics. It is a code-native visual-production route, not model image generation.</p>
+<h3>Music code</h3>
+<p>Use the personal <code>strudel</code> skill for Strudel composition and live-coding music programs. The misspelling <code>strudle</code> is retained only as an alias.</p>
+<h3>Personal code-native creative skills</h3>
+<p>These skills are already present in the supplied OpenCode inventory and do not use external install commands:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>visual-assets
+strudel</code></pre></div>
+<p>Use <code>visual-assets</code> through <code>MD-192</code> and <code>MD-196</code> for a genuine need for custom SVG, HTML, CSS, or vanilla-JavaScript infographics, illustrations, vector systems, report exhibits, presentation assets, mock assets, or accessible animation. Use <code>MD-197</code> only for a finite asset queue or measurable refinement loop, with <code>MD-198</code> deciding every continuation.</p>
+<p>Use <code>strudel</code> through the same generic adapter for Strudel music code, patterns, and arrangements. Neither skill is invoked merely because it is installed.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/RECOMMENDED_SKILL_STACKS.md</span></footer></main>
+
+</body>
+</html>

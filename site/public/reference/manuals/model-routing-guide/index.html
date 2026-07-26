@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Model Routing Guide from the Mission Directives documentation set." />
+  <title>Model Routing Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/MODEL_ROUTING_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Model Routing Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/MODEL_ROUTING_GUIDE.md</span></div><h1>Model Routing Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Model Routing Guide</h2>
+<h3>Purpose</h3>
+<p>Model routing selects a model only when measured evidence supports the requested prompt, evidence lane, output contract, tools, and assurance profile.</p>
+<p>The router is allowed to return **no selection**. That is safer than inventing confidence from model names or provider claims.</p>
+<h3>Profile status</h3>
+<p><code>model_profiles.json</code> distinguishes:</p>
+<ul><li>declared but unmeasured profiles;</li><li>measured profiles;</li><li>production-eligible profiles;</li><li>synthetic test profiles;</li><li>revoked or restricted profiles.</li></ul>
+<p>Unmeasured profiles cannot be automatically selected for production work.</p>
+<h3>Required measurement dimensions</h3>
+<p>Depending on the task:</p>
+<ul><li>structured-output reliability;</li><li>instruction and schema adherence;</li><li>correct refusal and escalation;</li><li>fabrication rate;</li><li>evidence and citation integrity;</li><li>tool-boundary adherence;</li><li>code or artifact correctness;</li><li>visual or multimodal capability;</li><li>long-context reliability;</li><li>latency;</li><li>tokens;</li><li>cost;</li><li>known failure modes;</li><li>context and output limits.</li></ul>
+<h3>Benchmark design</h3>
+<p>Choose fixtures across risk and role:</p>
+<ul><li>low-risk creative or transformation;</li><li>medium factual research;</li><li>high-risk code or privacy;</li><li>critical security or production action;</li><li>control and structured-output cases;</li><li>adversarial untrusted-input cases.</li></ul>
+<p>Keep constant:</p>
+<ul><li>prompt revision;</li><li>fixture revision;</li><li>model settings;</li><li>tools;</li><li>evidence;</li><li>schema;</li><li>retry policy.</li></ul>
+<p>Record any difference.</p>
+<h3>Running selection</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py select-model MD-29 --assurance HIGH_ASSURANCE</code></pre></div>
+<p>The result includes ranked eligible profiles and reasons, or:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>{
+  &quot;status&quot;: &quot;no_selection&quot;
+}</code></pre></div>
+<p>Manual override must be recorded in the run manifest with its rationale and limitations.</p>
+<h3>Benchmark result record</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>{
+  &quot;model_id&quot;: &quot;provider/model-revision&quot;,
+  &quot;fixture_id&quot;: &quot;MD-29-adversarial-01&quot;,
+  &quot;prompt_revision&quot;: &quot;hash&quot;,
+  &quot;schema_conformance&quot;: true,
+  &quot;refusal_correct&quot;: true,
+  &quot;fabricated_evidence&quot;: false,
+  &quot;input_tokens&quot;: 8200,
+  &quot;output_tokens&quot;: 1900,
+  &quot;latency_ms&quot;: 34000,
+  &quot;cost&quot;: 0.42,
+  &quot;review&quot;: {
+    &quot;score&quot;: 0.91,
+    &quot;reviewer&quot;: &quot;human-or-deterministic-rubric&quot;
+  }
+}</code></pre></div>
+<p>Preserve raw output separately.</p>
+<h3>Assurance-aware routing</h3>
+<h4>FAST</h4>
+<p>May prioritize latency and cost among profiles that meet the minimum task contract.</p>
+<h4>STANDARD</h4>
+<p>Requires measured schema, grounding, and task-quality evidence.</p>
+<h4>HIGH_ASSURANCE</h4>
+<p>Requires relevant high-risk and adversarial fixtures, correct refusal, evidence integrity, tool-boundary adherence, and recent measurements.</p>
+<p>A fallback must not silently lower assurance.</p>
+<h3>Model specialization</h3>
+<p>Model selection may vary by phase:</p>
+<ul><li>retrieval or classification;</li><li>deep analysis;</li><li>code generation;</li><li>structured artifact production;</li><li>visual review;</li><li>independent verification.</li></ul>
+<p>Multiple models are justified only when the handoff is typed and the quality gain outweighs cost and complexity.</p>
+<h3>Production eligibility</h3>
+<p>Eligibility requires review of:</p>
+<ul><li>risk-tier coverage;</li><li>failure modes;</li><li>provider or model revision;</li><li>measurement recency;</li><li>operating environment;</li><li>data policy;</li><li>tool support;</li><li>fallback;</li><li>monitoring and revocation thresholds.</li></ul>
+<p>A measured profile is not automatically approved for every department.</p>
+<h3>Calibration and drift</h3>
+<p>Compare expected confidence to actual correctness. Track:</p>
+<ul><li>schema failure;</li><li>refusal error;</li><li>fabrication;</li><li>citation error;</li><li>tool misuse;</li><li>cost and latency drift;</li><li>fixture regression;</li><li>production verification failures.</li></ul>
+<p>Revoke eligibility when performance falls below thresholds or model revision changes materially.</p>
+<h3>Privacy</h3>
+<p>Benchmark artifacts may contain sensitive data. Prefer synthetic or redacted fixtures. Store provider, retention, and data-use settings with the result.</p>
+<h3>Limitations</h3>
+<p>The delivered suite does not claim production model performance until real benchmark output is ingested. The synthetic profile tests routing mechanics only.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/MODEL_ROUTING_GUIDE.md</span></footer></main>
+
+</body>
+</html>

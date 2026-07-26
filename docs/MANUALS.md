@@ -108,5 +108,5 @@ Do not collapse those proof levels into the word “validated.”
 
 - [Installation and Project Integration Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md)
 - [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md) — runtime allowlist, source-only boundary, install transaction, receipts, and payload-change verification.
-- [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md) — Astro/Starlight generation, local development, GitHub Pages deployment, content ownership, and branding handoff.
+- [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md) — static Astro site generation, local development, GitHub Pages deployment, content ownership, and branding handoff.
 - [Project Cleanup and Uninstall Guide](PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md) — transactional removal, approval-bound preview, preservation rules, rollback, TUI, and receipts.

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Local Skill Registration Guide from the Mission Directives documentation set." />
+  <title>Local Skill Registration Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/LOCAL_SKILL_REGISTRATION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Local Skill Registration Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/LOCAL_SKILL_REGISTRATION_GUIDE.md</span></div><h1>Local Skill Registration Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Local Skill Registration Guide</h2>
+<h3>Purpose</h3>
+<p>This guide governs skills created locally rather than installed from a reviewed remote repository. Local creation is a fallback for a genuine capability gap, not a shortcut around native prompt composition, an excuse to create a skill for one trivial task, or permission to bypass supply-chain controls.</p>
+<h3>When local creation is justified</h3>
+<p>Create a local skill only when all of the following are true:</p>
+<p>1. The requested capability is materially reusable. 2. Native prompt composition cannot satisfy the acceptance criteria cleanly. 3. <code>find-skills</code> found no sufficiently trustworthy and task-fit candidate. 4. The skill has a narrow, testable input/output contract. 5. Required permissions and external effects are explicitly bounded. 6. A native fallback remains documented.</p>
+<p>Do not create a skill merely because a user mentions a technique, because a skill name sounds convenient, or because repeated execution could instead be handled by the generic loop orchestrator.</p>
+<h3>Creation workflow</h3>
+<p>Use <code>MD-195</code> with <code>skill-creator</code> and, where available, <code>writing-skills</code>. The resulting package must be created in a staging directory and include at minimum:</p>
+<ul><li><code>SKILL.md</code> with identity, trigger conditions, required inputs, method, outputs, permissions, failure behavior, and examples;</li><li>a machine-readable capability and permission declaration;</li><li>healthy, problematic, and adversarial fixtures;</li><li>prohibited actions and stop conditions;</li><li>a conformance contract describing the artifact expected by MD;</li><li>provenance for any copied or adapted material.</li></ul>
+<p>The created package remains a draft until review and deterministic conformance checks pass.</p>
+<h3>Dual registration</h3>
+<p>Register an approved staged package with:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>.\tools\register_local_skill_dual.ps1 `
+  -SourceDirectory &quot;.\staging\my-skill&quot; `
+  -SkillId &quot;my-skill&quot;</code></pre></div>
+<p>The script validates the presence of <code>SKILL.md</code>, copies the complete skill directory to both locations, computes hashes, and verifies that the registered copies match:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>%USERPROFILE%\.agents\skills\{skill_id}
+%USERPROFILE%\.config\opencode\skills\{skill_id}</code></pre></div>
+<p>Use <code>-Reinstall</code> only for an explicitly approved replacement. Registration failure at either destination is a failed operation; do not treat a one-sided copy as success.</p>
+<h3>Trust and quarantine</h3>
+<p>Presence is not trust. A newly registered local skill remains quarantined until:</p>
+<ul><li>its source and permission declaration are reviewed;</li><li>its fixtures pass;</li><li>the generic skill adapter verifies the real output shape;</li><li>the target artifact passes independent domain verification;</li><li>its registry entry is promoted according to governance policy.</li></ul>
+<p>A local skill must not auto-select solely because it exists in both directories.</p>
+<h3>Updating a local skill</h3>
+<p>Treat every material update as a new candidate revision. Re-run fixtures and conformance checks, compare permissions and external effects, then replace both registered copies together. Record the old and new hashes in the registration receipt or change record.</p>
+<h3>Removal and rollback</h3>
+<p>To retire a skill, first remove or redirect every registry and prompt route that depends on it. Preserve the last approved source and receipt when audit or rollback requirements apply. Delete both registered copies only after confirming that no active run references the skill.</p>
+<h3>Failure conditions</h3>
+<p>Stop and record <code>!STOP:{reason}</code> when:</p>
+<ul><li>the staged package lacks <code>SKILL.md</code>;</li><li>the skill requests undeclared access;</li><li>the two destination hashes differ;</li><li>fixtures or conformance tests fail;</li><li>the requested identifier collides with another capability;</li><li>the task can be completed more safely through native prompt execution.</li></ul>
+<h3>Verification checklist</h3>
+<p>Registration is complete only when the source package is reviewed, both destinations contain identical verified copies, the registry entry reflects the exact skill identity, the conformance fixture passes, and downstream use remains subject to the normal MD verification gates.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/LOCAL_SKILL_REGISTRATION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

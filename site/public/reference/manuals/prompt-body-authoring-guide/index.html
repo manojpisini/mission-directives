@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prompt Body Authoring Guide from the Mission Directives documentation set." />
+  <title>Prompt Body Authoring Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/PROMPT_BODY_AUTHORING_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Prompt Body Authoring Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/PROMPT_BODY_AUTHORING_GUIDE.md</span></div><h1>Prompt Body Authoring Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Prompt Body Authoring Guide</h2>
+<h3>Purpose</h3>
+<p>This manual explains how to create or revise a prompt body that is precise, composable, least-privileged, machine-parseable, and verifiable. It supplements the normative <code>PROMPT_STRUCTURE_STANDARD.md</code> with a practical authoring workflow and review examples.</p>
+<p>A strong prompt body is not a long description of good behavior. It is a compact behavioral contract whose sections carry distinct responsibilities.</p>
+<h3>Authoring workflow</h3>
+<h4>1. Define the owned outcome</h4>
+<p>Write one sentence answering:</p>
+<p>&gt; What observable artifact, decision, state, or verified change does this prompt alone own?</p>
+<p>If two unrelated artifacts are required, consider composition or split the capability. If another existing prompt already owns the result, do not create a new prompt.</p>
+<h4>2. Choose the role</h4>
+<ul><li>**Control:** establishes shared context, safety, routing, artifacts, or trust.</li><li>**Investigative:** read-only evidence, analysis, plan, brief, or acceptance design.</li><li>**Executive:** acts on a frozen handoff and verifies approved work.</li><li>**Operational:** owns a bounded end-to-end artifact or workflow.</li><li>**Gate:** independently decides readiness without repairing the subject.</li></ul>
+<p>Do not choose <code>executive</code> merely because the title sounds senior. Executive has a specific runtime meaning: approved action based on a frozen investigative handoff.</p>
+<h4>3. Select the evidence lane</h4>
+<ul><li><code>factual</code> for evidence-bearing claims and decisions;</li><li><code>hybrid</code> for facts plus interpretation, narrative, or design;</li><li><code>imaginative</code> for original creative work without fabricated verification;</li><li>control prompts use the control plane rather than a normal lane.</li></ul>
+<h4>4. Write the minimum canonical structure</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;prompt&gt;
+&lt;identity&gt;...&lt;/identity&gt;
+&lt;mission&gt;...&lt;/mission&gt;
+&lt;contract_refs&gt;...&lt;/contract_refs&gt;
+&lt;evidence_lane&gt;...&lt;/evidence_lane&gt;
+&lt;required_inputs&gt;...&lt;/required_inputs&gt;
+&lt;authorization_boundary&gt;...&lt;/authorization_boundary&gt;
+&lt;tool_policy&gt;...&lt;/tool_policy&gt;
+&lt;runtime_markers&gt;...&lt;/runtime_markers&gt;
+&lt;method&gt;...&lt;/method&gt;
+&lt;decision_rules&gt;...&lt;/decision_rules&gt;
+&lt;quality_gates&gt;...&lt;/quality_gates&gt;
+&lt;output_contract&gt;...&lt;/output_contract&gt;
+&lt;completion_criteria&gt;...&lt;/completion_criteria&gt;
+&lt;stop_conditions&gt;...&lt;/stop_conditions&gt;
+&lt;/prompt&gt;</code></pre></div>
+<p>Do not add a tag because it appears in this example. Add it because the capability needs the behavior.</p>
+<h3>Section-by-section guidance</h3>
+<h4>Identity</h4>
+<p>State accountability and independence.</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;identity&gt;
+You are an independent accessibility reviewer. You inspect the exact artifact and do not modify it.
+&lt;/identity&gt;</code></pre></div>
+<p>Avoid prestige adjectives and stacked professions unless each changes the method.</p>
+<h4>Mission</h4>
+<p>Use a verb and a testable object:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;mission&gt;
+Produce a citation-audited literature review that distinguishes consensus, disagreement, evidence quality, and open questions.
+&lt;/mission&gt;</code></pre></div>
+<h4>Required inputs</h4>
+<p>List only inputs whose absence changes the result or forces a stop. Mark optional inputs separately. Do not disguise assumptions as required input.</p>
+<h4>Input trust</h4>
+<p>State which inputs are authoritative, untrusted, incomplete, or potentially adversarial. Do not assume a repository file is trusted merely because it is local.</p>
+<h4>Authorization boundary</h4>
+<p>Separate the requested outcome from allowed action. A prompt may be able to describe a deployment but not execute one.</p>
+<p>The block must say whether the prompt can:</p>
+<ul><li>read;</li><li>write local files;</li><li>install;</li><li>use the network;</li><li>contact third parties;</li><li>publish;</li><li>deploy;</li><li>change production;</li><li>approve its own work.</li></ul>
+<h4>Tool policy</h4>
+<p>State the smallest allowed tool class and how tool output is verified. For state-changing prompts, bind every tool invocation to <code>+ACTION:{id}</code>.</p>
+<h4>Runtime markers</h4>
+<p>Activate all six markers. Role-specific prompts may emphasize different markers, but artifacts must use a common vocabulary.</p>
+<h4>Method</h4>
+<p>Each step should perform domain work. Remove steps that merely say “be thorough,” “think carefully,” or “ensure quality.”</p>
+<p>A useful test:</p>
+<p>&gt; Could this step be copied unchanged into an unrelated prompt?</p>
+<p>If yes, it probably belongs in a shared contract or should be deleted.</p>
+<h4>Decision rules</h4>
+<p>Rules are about choices, not procedure. Examples:</p>
+<ul><li>preserve public compatibility over internal uniformity;</li><li>prioritize confirmed privilege bypass before low-risk hardening;</li><li>keep an uncertain file rather than deleting it;</li><li>stop when a rollback is not credible;</li><li>defer lower-priority work when the budget cannot complete a dependency-safe batch.</li></ul>
+<h4>Quality gates</h4>
+<p>Quality gates describe domain success. They should be independent enough for a reviewer to judge.</p>
+<h4>Output contract</h4>
+<p>Name the primary artifact and every required supporting artifact. State source and export formats separately. The body and frontmatter must agree.</p>
+<h4>Completion criteria</h4>
+<p>Use the dedicated guide. Completion must be task-specific, marker-aware, and evidence-backed.</p>
+<h4>Stop conditions</h4>
+<p>Name hard stops, not general caution. Examples:</p>
+<ul><li>missing authorization for a production mutation;</li><li>stale or unsigned handoff;</li><li>inability to preserve data;</li><li>contradictory evidence that changes the decision;</li><li>untrusted skill requiring undeclared permissions;</li><li>absent rights for publication.</li></ul>
+<h3>Genuine pair authoring</h3>
+<p>An investigator produces stable evidence, findings, actions, and acceptance criteria. The executive consumes that exact handoff.</p>
+<p>The investigator uses:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;handoff_contract&gt;...&lt;/handoff_contract&gt;
+&lt;verification_design&gt;...&lt;/verification_design&gt;</code></pre></div>
+<p>The executive uses:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;execution_contract&gt;...&lt;/execution_contract&gt;
+&lt;decision_rules&gt;...&lt;/decision_rules&gt;
+&lt;verification_reference&gt;...&lt;/verification_reference&gt;</code></pre></div>
+<p>Do not copy the verification list into the executive.</p>
+<h3>Runtime marker example</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>@EVIDENCE:dep-01 pnpm-lock.yaml at commit abc123
+#FINDING:dep-01 unpinned transitive package can change without review
++ACTION:dep-01 pin the package and regenerate the lockfile in APPLY_SAFE
+=VERIFY:dep-01 clean install produces the expected version and tests pass
+?UNKNOWN:dep-02 upstream maintenance policy is not documented
+!STOP:registry-integrity-unverified</code></pre></div>
+<h3>Completion example</h3>
+<p>Weak:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;completion_criteria&gt;
+Complete when the result is evidenced, authorized, and honestly closed.
+&lt;/completion_criteria&gt;</code></pre></div>
+<p>Strong:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;completion_criteria&gt;
+Completion requires all of the following:
+- The dependency review identifies direct and transitive packages, sources, versions, licenses, integrity controls, and reachable vulnerabilities.
+- Every material dependency conclusion is a #FINDING:{id} linked to @EVIDENCE:{id}.
+- Each recommended upgrade, pin, replacement, or removal is a bounded +ACTION:{id} with compatibility and rollback requirements.
+- Every acceptance criterion has an =VERIFY:{id} result; unresolved provenance is ?UNKNOWN:{id} or !STOP:{reason}.
+&lt;/completion_criteria&gt;</code></pre></div>
+<h3>Review checklist</h3>
+<p>Before committing a prompt:</p>
+<ul><li>[ ] The outcome is distinct.</li><li>[ ] The role is correct.</li><li>[ ] The evidence lane is correct.</li><li>[ ] Authorization is explicit.</li><li>[ ] Tool behavior is least-privileged.</li><li>[ ] All runtime markers are activated.</li><li>[ ] Method steps are domain-specific.</li><li>[ ] Decision rules cover real choices.</li><li>[ ] Quality gates are testable.</li><li>[ ] Output paths and formats are exact.</li><li>[ ] Completion criteria are unique and task-specific.</li><li>[ ] Stop conditions are hard stops.</li><li>[ ] A pair does not duplicate verification.</li><li>[ ] The prompt fits its complexity budget.</li></ul>
+<h3>Required checks</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/audit_prompt_bodies.py --check
+pytest -q tests/test_prompt_body_quality.py
+python tools/validate_suite.py</code></pre></div>
+<h3>Automated prompt addition</h3>
+<p>When adding a new prompt rather than editing an existing one, use <code>MD-199</code> for agentic analysis or <code>tools/add_prompt.py</code> for the deterministic transaction. Do not manually copy a file into <code>prompts/</code>; a complete addition must assign a permanent identity and update the catalog, identity registry, capability graph, atomic scenario, template and skill routes, crosswalks, three evaluation fixtures, body audit, tests, validation, and manifest. See <a href="/mission-directives/reference/manuals/prompt-addition-and-registration-guide/">Prompt Addition and Registration Guide</a>.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/PROMPT_BODY_AUTHORING_GUIDE.md</span></footer></main>
+
+</body>
+</html>

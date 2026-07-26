@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Architecture Guide from the Mission Directives documentation set." />
+  <title>Architecture Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/ARCHITECTURE_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Architecture Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/ARCHITECTURE_GUIDE.md</span></div><h1>Architecture Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Architecture Guide</h2>
+<h3>Purpose</h3>
+<p>This guide explains the suite as a set of cooperating layers. The architecture is designed to prevent a single oversized prompt from owning context, authority, research, execution, verification, and publication simultaneously.</p>
+<h3>Layer 1: Permanent capability identity</h3>
+<p>Every prompt has a permanent <code>capability_id</code>, <code>prompt_id</code>, and <code>prompt_slug</code>. Sequence is an address, not identity. Compatibility files preserve aliases and redirects.</p>
+<h3>Layer 2: Control plane</h3>
+<p>Five control prompts establish:</p>
+<ul><li>run context;</li><li>safety and authorization;</li><li>routing and execution graph;</li><li>artifact and handoff contracts;</li><li>input trust and prompt structure.</li></ul>
+<p>The control plane is loaded once per run.</p>
+<h3>Layer 3: Capability roles</h3>
+<ul><li>investigative;</li><li>executive;</li><li>operational;</li><li>gate.</li></ul>
+<p>Role determines mutation rights, handoff behavior, verification ownership, and tool policy.</p>
+<h3>Layer 4: Prompt-body contract</h3>
+<p>Every body contains canonical action, tool, marker, output, and completion semantics. The body is independently audited from frontmatter.</p>
+<p>Key invariants:</p>
+<ul><li>one authorization tag name;</li><li>explicit tool policy;</li><li>full marker vocabulary;</li><li>task-specific completion;</li><li>executive decision rules;</li><li>reference-based pair verification.</li></ul>
+<h3>Layer 5: Scenario graph</h3>
+<p>Scenarios compose capabilities into phases with:</p>
+<ul><li>required inputs;</li><li>produced and consumed artifacts;</li><li>modes;</li><li>parallel groups;</li><li>locks;</li><li>branches;</li><li>completion gates.</li></ul>
+<p>Department packs are discovery indexes, not executable graphs.</p>
+<h3>Layer 6: Policy engine</h3>
+<p>Policies enforce external actions and high-stakes domains independently of prompt prose. Policy areas include publication, employment, legal, financial, OSINT, security testing, data handling, skills, and role authority.</p>
+<h3>Layer 7: Artifact system</h3>
+<p>Typed artifacts separate:</p>
+<ul><li>evidence;</li><li>findings;</li><li>actions;</li><li>approvals;</li><li>dry runs;</li><li>execution logs;</li><li>verification;</li><li>residuals;</li><li>lineage;</li><li>domain outputs.</li></ul>
+<p>Stable marker IDs connect the artifacts.</p>
+<h3>Layer 8: State machine</h3>
+<p>The state machine makes lifecycle claims enforceable. A run cannot jump from investigation to closure or from approval pending directly to execution.</p>
+<h3>Layer 9: Tool and skill adapters</h3>
+<p>Skills are optional adapters selected by output contract, trust, permission, and measured value. Lockfiles and quarantine prevent moving third-party code from becoming silently trusted.</p>
+<h3>Layer 10: Model profiles</h3>
+<p>Model routing uses measured profile data. Unmeasured models are not production-eligible. The runtime may return no selection.</p>
+<h3>Layer 11: Evaluation and proof</h3>
+<p>Proof surfaces remain separate:</p>
+<ul><li>static structure;</li><li>deterministic runtime tests;</li><li>fixture specifications;</li><li>live model measurements;</li><li>live skill conformance;</li><li>human-reviewed golden runs.</li></ul>
+<h3>Dependency graph</h3>
+<p><code>capability_graph.json</code> is generated from prompt frontmatter. It contains requirement and handoff edges. The builder removes self-dependencies and the validator rejects them.</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/build_capability_graph.py --check</code></pre></div>
+<h3>Pair architecture</h3>
+<p>Investigative side:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>evidence → findings → actions → acceptance criteria → frozen handoff</code></pre></div>
+<p>Executive side:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>approved handoff → dry run → action batches → verification reference → residuals</code></pre></div>
+<p>The verification list is not duplicated.</p>
+<h3>Failure containment</h3>
+<p>The architecture contains failure through:</p>
+<ul><li>read-only investigation;</li><li>scoped authority;</li><li>least-privileged tools;</li><li>action IDs;</li><li>approval receipts;</li><li>dry runs;</li><li>execution locks;</li><li>rollback;</li><li>independent verification;</li><li>residual-open state;</li><li><code>!STOP</code> markers.</li></ul>
+<h3>Source-of-truth hierarchy</h3>
+<p>1. policies and signed runtime authority; 2. prompt and scenario machine metadata; 3. schemas and state machine; 4. prompt bodies; 5. generated catalogs and graphs; 6. manuals and examples.</p>
+<p>Generated files must be rebuilt from canonical sources rather than hand-edited when a builder exists.</p>
+<h3>Paired review and exact-twin control</h3>
+<p>True investigative/executive pairs include an explicit human review layer between <code>handoff_frozen</code> and execution preparation. The planner presents the plan, incorporates requested revisions, re-verifies and re-freezes the handoff, and obtains review again. Explicit execution consent then authorizes only the reciprocal <code>paired_prompt_id</code>; the runtime rejects substitute executors.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/ARCHITECTURE_GUIDE.md</span></footer></main>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Generic Skill Execution Guide from the Mission Directives documentation set." />
+  <title>Generic Skill Execution Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/GENERIC_SKILL_EXECUTION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Generic Skill Execution Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/GENERIC_SKILL_EXECUTION_GUIDE.md</span></div><h1>Generic Skill Execution Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Generic Skill Execution Guide</h2>
+<h3>Purpose</h3>
+<p><code>MD-196</code> is a universal typed adapter for **any exact installed skill**. It is not limited to design skills, personal skills, or skills already curated in <code>skill_registry.json</code>. The adapter exists so a domain prompt can gain a specialist capability without copying that skill's instructions, permissions, or output assumptions into every prompt body.</p>
+<p>Availability does not equal genuine need. <code>MD-192</code> must first establish that the skill is required or materially beneficial.</p>
+<h3>Placeholder contract</h3>
+<p>A skill execution request binds:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>skill_id: &lt;canonical exact ID&gt;
+skill_requirement_spec: &lt;why native execution is insufficient or materially weaker&gt;
+inputs:
+  trusted: []
+  untrusted: []
+expected_artifacts:
+  - path:
+    format:
+    schema:
+authority:
+  allowed_actions: []
+  prohibited_actions: []
+budget:
+  tokens:
+  time:
+  cost:
+  tool_calls:
+acceptance_criteria: []
+fallback:
+  native_prompt_route:
+  stop_condition:</code></pre></div>
+<p>The adapter does not pass an unbounded conversation dump. It binds only the inputs and files needed for the exact operation.</p>
+<h3>Eligibility</h3>
+<p>A skill is eligible when all applicable conditions pass:</p>
+<p>1. its capability matches a material acceptance criterion; 2. its schema and invocation are understood; 3. required permissions fit the run authority; 4. external effects are absent or separately approved; 5. provenance and trust state are acceptable for the assurance profile; 6. output can be quarantined and independently verified; 7. the expected gain exceeds integration cost and risk; 8. a fallback exists.</p>
+<p>A skill is ineligible when it is merely relevant, duplicates the primary producer, requests excessive access, produces an incompatible artifact, lacks a safe verification path, or adds no measurable benefit.</p>
+<h3>Curated, local, and unmapped skills</h3>
+<h4>Curated and approved</h4>
+<p>A curated skill has explicit prompt routes, trust metadata, and conformance expectations in <code>skill_registry.json</code>. It may be auto-selected only when all lock and maturity controls pass.</p>
+<h4>User-owned local</h4>
+<p><code>visual-assets</code> and <code>strudel</code> are registered as user-owned local skills. Their presence in the supplied OpenCode inventory supports availability; task-specific verification remains required.</p>
+<h4>Installed but unmapped</h4>
+<p>An installed skill such as <code>code-review</code> may not yet have a curated MD route. An explicit request can still route through <code>MD-192</code> and <code>MD-196</code>, but the runtime must first inspect:</p>
+<ul><li><code>SKILL.md</code> triggers and scope;</li><li>required tools and permissions;</li><li>network and filesystem access;</li><li>input and output shape;</li><li>mutation and external effects;</li><li>source provenance;</li><li>failure and stop behavior;</li><li>overlap with the target prompt.</li></ul>
+<p>It is classified <code>installed_unmapped</code>, remains experimental, and cannot be silently auto-selected from keyword similarity.</p>
+<h3>Execution lifecycle</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>frozen task and acceptance criteria
+→ skill-fit decision
+→ canonical alias resolution
+→ schema and permission probe
+→ dry run when mutation is possible
+→ exact invocation
+→ raw output quarantine
+→ schema validation
+→ evidence, safety, accessibility, and artifact review
+→ release to downstream prompt or fallback</code></pre></div>
+<h4>Quarantine</h4>
+<p>Raw skill output is never immediately trusted as downstream evidence. Quarantine preserves:</p>
+<ul><li>exact invocation;</li><li>input hashes or references;</li><li>source and revision information;</li><li>raw stdout/stderr or artifact locations;</li><li>tool calls and external effects;</li><li>cost and latency;</li><li>failure status;</li><li>produced files.</li></ul>
+<p>Only verified artifacts are promoted.</p>
+<h3>Failure handling</h3>
+<p>Do not blindly rerun a failed skill. First classify the failure:</p>
+<ul><li>missing input;</li><li>incompatible schema;</li><li>permission denial;</li><li>tool failure;</li><li>unsafe side effect;</li><li>invalid artifact;</li><li>quality failure;</li><li>stale source;</li><li>task mismatch.</li></ul>
+<p>A retry requires a changed hypothesis, corrected input, repaired skill, different approved capability, or altered target plan. Repeated unchanged failure routes to <code>!STOP:{reason}</code> or, when genuinely iterative, the bounded loop gate.</p>
+<h3>Acquisition</h3>
+<p>When a required skill is not detected locally, route to <code>MD-193</code>. A qualified and approved candidate may be installed with:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add &lt;source&gt; --skill &lt;skill-id&gt; -g -a cline -a opencode --copy -y</code></pre></div>
+<p>Expected locations:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>~/.agents/skills/&lt;skill-id&gt;
+~/.config/opencode/skills/&lt;skill-id&gt;</code></pre></div>
+<p><code>MD-195</code> creates a new skill only when discovery finds no suitable candidate and recurring demand justifies maintenance.</p>
+<h3>Example: visual asset</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>skill_id: visual-assets
+inputs:
+  trusted:
+    - approved article brief
+    - verified data table
+    - brand tokens
+expected_artifacts:
+  - path: assets/retention-cohort.svg
+    format: svg
+acceptance_criteria:
+  - every value matches the source table
+  - visual hierarchy supports the stated insight
+  - labels remain readable at export size
+  - asset is keyboard- and screen-reader-compatible where interactive
+  - SVG remains editable and contains no raster screenshot
+fallback:
+  native_prompt_route: MD-104</code></pre></div>
+<h3>Example: Strudel composition</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>skill_id: strudel
+inputs:
+  trusted:
+    - mood, duration, tempo range, and structural brief
+expected_artifacts:
+  - path: audio/intro-theme.strudel.js
+    format: javascript
+acceptance_criteria:
+  - code parses in the target Strudel environment
+  - arrangement fits the declared duration and sections
+  - no unlicensed sampled material is assumed
+  - result is reproducible from code
+fallback:
+  native_prompt_route: MD-91</code></pre></div>
+<h3>Quality flags</h3>
+<p>Words such as **advanced**, **cutting-edge**, or **production-grade** are translated into testable requirements. They never override fit analysis or authorize broader access.</p>
+<ul><li>Advanced: robust contracts, error handling, efficiency, tests, portability.</li><li>Cutting-edge: current evidence-backed methods, comparative evaluation, experimental labeling, safe fallback.</li><li>Production-grade: least privilege, observability, recovery, conformance, maintainership, documentation.</li></ul></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/GENERIC_SKILL_EXECUTION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

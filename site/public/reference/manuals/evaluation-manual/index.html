@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Evaluation Manual from the Mission Directives documentation set." />
+  <title>Evaluation Manual — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/EVALUATION_MANUAL.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Evaluation Manual" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/EVALUATION_MANUAL.md</span></div><h1>Evaluation Manual</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Evaluation Manual</h2>
+<h3>Purpose</h3>
+<p>Evaluation determines whether the suite behaves as intended. File counts and valid frontmatter are necessary but do not prove model behavior, tool safety, or artifact quality.</p>
+<h3>Proof levels</h3>
+<h4>Static validation</h4>
+<p>Checks IDs, tags, graphs, schemas, catalogs, paths, locks, and documentation presence.</p>
+<h4>Deterministic tests</h4>
+<p>Checks reference Python behavior such as routing, state transitions, no-selection, and manifest validation.</p>
+<h4>Fixture coverage</h4>
+<p>Specifies expected and prohibited behavior for healthy, problematic, and adversarial cases.</p>
+<h4>Live model measurement</h4>
+<p>Runs named models against fixtures and records schema conformance, refusal correctness, fabrication, cost, and latency.</p>
+<h4>Live skill conformance</h4>
+<p>Runs an installed locked skill and validates the output against its adapter contract.</p>
+<h4>Human golden review</h4>
+<p>Promotes a complete run only after accountable human review.</p>
+<h3>Prompt fixtures</h3>
+<p>Each prompt has:</p>
+<ul><li>healthy fixture;</li><li>problematic fixture;</li><li>adversarial fixture.</li></ul>
+<p>Adversarial cases include prompt injection, fabricated evidence, scope creep, stale inputs, missing authority, and unsafe tool requests.</p>
+<h3>Pair fixtures</h3>
+<p>Every genuine pair has a contaminated-handoff fixture. The executive must refuse, flag, or escalate rather than silently execute.</p>
+<p>Contamination types include:</p>
+<ul><li>stale snapshot;</li><li>contradictory findings;</li><li>injected instructions in evidence;</li><li>unfrozen acceptance criteria;</li><li>expired approval;</li><li>action outside scope.</li></ul>
+<h3>Pair-versus-single evaluation</h3>
+<p>The same task is run as:</p>
+<p>1. investigation → handoff → executive; 2. one bounded full-cycle prompt.</p>
+<p>Score:</p>
+<ul><li>safety;</li><li>missed findings;</li><li>action precision;</li><li>reviewer clarity;</li><li>token cost;</li><li>latency;</li><li>unnecessary ceremony.</li></ul>
+<p>A pair is retained only when the split materially helps.</p>
+<h3>Prompt-body static audit</h3>
+<p><code>audit_prompt_bodies.py</code> adds focused checks for:</p>
+<ul><li>task-specific completion criteria;</li><li>tool-policy presence;</li><li>marker activation;</li><li>authorization naming;</li><li>executive decision rules;</li><li>pair verification de-duplication;</li><li>self-dependencies;</li><li>complexity budgets.</li></ul>
+<h3>Model benchmarks</h3>
+<p>Use:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/run_model_benchmarks.py</code></pre></div>
+<p>Do not populate measurements from memory or vendor claims. Record the exact model revision, fixture revision, temperature, tool configuration, date, cost, and latency.</p>
+<h3>Skill conformance</h3>
+<p>Use:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/run_skill_conformance.py \
+  --skill-id &lt;SKILL_ID&gt; \
+  --artifact &lt;OUTPUT_PATH&gt;</code></pre></div>
+<p>The test must use the locked revision. Output remains quarantined until the contract passes.</p>
+<h3>Golden runs</h3>
+<p>Machine-reference runs are not golden. Promotion requires:</p>
+<ul><li>complete manifest;</li><li>evidence snapshot;</li><li>artifacts;</li><li>verification;</li><li>residuals;</li><li>human reviewer identity;</li><li>decision and rationale;</li><li>immutable hashes.</li></ul>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/promote_golden_run.py</code></pre></div>
+<p>Promoted manifests are counted automatically in <code>EVALUATION_STATUS.json</code> and <code>python tools/md.py lifecycle</code>. A promotion is not inferred from the presence of a machine reference run.</p>
+<h3>Route-confusion regression set</h3>
+<p><code>evaluations/route_confusion.json</code> contains near-neighbor natural-language requests whose correct owners differ. The deterministic evaluation harness checks status, selection type, and exact ordered targets through <code>md.route_intent</code>. Add a case whenever operator feedback reveals ambiguous or incorrect selection.</p>
+<p><code>evaluations/exact_twin_negative_cases.json</code> separately proves that plan approval without execution consent, changes after approval, and executor mismatch all fail closed.</p>
+<h3>Lifecycle report</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py lifecycle</code></pre></div>
+<p>The report derives prompt and scenario counts, promoted golden coverage, skill locks, live skill passes, measured production models, and external completion blockers directly from canonical files. <code>structural_surface: implemented</code> does not override <code>status: external_evidence_pending</code>.</p>
+<h3>Mutation testing</h3>
+<p>Mutations should include:</p>
+<ul><li>generic completion criteria;</li><li>removed tool policy;</li><li>removed runtime marker;</li><li>alternate authorization tag;</li><li>missing executive decision rule;</li><li>duplicated pair verification;</li><li>self-dependency;</li><li>stale handoff acceptance;</li><li>unauthorized external action;</li><li>removed stop condition.</li></ul>
+<p>A useful invariant must fail when its protection is removed.</p>
+<h3>Running the deterministic evaluation chain</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/audit_prompt_bodies.py --check
+python tools/run_evaluations.py
+python tools/run_tests.py
+python tools/validate_suite.py</code></pre></div>
+<h3>Interpreting status</h3>
+<p><code>pass_with_external_measurements_pending</code> means deterministic proof passed but live model, live skill, or human-golden proof remains incomplete. It is an honest status, not a failure.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/EVALUATION_MANUAL.md</span></footer></main>
+
+</body>
+</html>

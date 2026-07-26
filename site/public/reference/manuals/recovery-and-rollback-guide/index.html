@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Recovery and Rollback Guide from the Mission Directives documentation set." />
+  <title>Recovery and Rollback Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/RECOVERY_AND_ROLLBACK_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Recovery and Rollback Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/RECOVERY_AND_ROLLBACK_GUIDE.md</span></div><h1>Recovery and Rollback Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Recovery and Rollback Guide</h2>
+<h3>Purpose</h3>
+<p>Recovery is a designed and verified capability, not a sentence in an action plan. This guide explains how consequential runs prepare, exercise, select, and verify rollback, roll-forward, containment, or restoration.</p>
+<h3>Recovery vocabulary</h3>
+<ul><li>**Rollback:** return to a previous known-good state.</li><li>**Roll-forward:** complete or repair the transition to a new good state.</li><li>**Restore:** recover data or systems from backup or replica.</li><li>**Containment:** limit impact while investigation continues.</li><li>**Compensation:** apply an inverse business operation when technical rollback is impossible.</li><li>**Residual:** known unresolved impact or uncertainty remaining after recovery.</li></ul>
+<h3>Pre-execution recovery contract</h3>
+<p>Before <code>APPLY_APPROVED</code>, record:</p>
+<ul><li>recovery unit;</li><li>baseline state and hash;</li><li>backup or reverse operation;</li><li>responsible operator;</li><li>maximum acceptable data loss;</li><li>recovery-time target;</li><li>validation commands;</li><li>monitoring views;</li><li>decision authority;</li><li>stop thresholds;</li><li>communication route.</li></ul>
+<p>A rollback command that has not been rehearsed is a proposal, not proof.</p>
+<h3>Recovery selection</h3>
+<p>Choose the response based on evidence.</p>
+<h4>Rollback when</h4>
+<ul><li>the prior state remains compatible;</li><li>partial effects can be reversed safely;</li><li>no irreversible downstream consumer depends on the new state;</li><li>data loss is within approved limits.</li></ul>
+<h4>Roll-forward when</h4>
+<ul><li>backward compatibility is no longer available;</li><li>rollback would corrupt data or violate contracts;</li><li>the remaining repair is smaller and safer than reversal;</li><li>the new state can be verified quickly.</li></ul>
+<h4>Contain when</h4>
+<ul><li>the failure mechanism is unknown;</li><li>action could destroy evidence;</li><li>neither rollback nor roll-forward is safe;</li><li>affected traffic or features can be isolated.</li></ul>
+<h4>Restore when</h4>
+<ul><li>current data or state is corrupted;</li><li>backup integrity and recovery point are verified;</li><li>restore procedures are rehearsed.</li></ul>
+<h3>Failure path</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>executing
+→ failed
+→ rolled_back or containment
+→ investigation reopened if assumptions changed
+→ verification_pending
+→ verified or residual_open
+→ closed only after authorized resolution</code></pre></div>
+<p>Partial success never becomes full completion silently.</p>
+<h3>Drill procedure</h3>
+<p>1. Use an isolated environment and synthetic or approved data. 2. Bind the drill to an evidence snapshot. 3. Record the initial state. 4. Execute the exact test batch. 5. Inject a controlled failure. 6. Measure detection and stop time. 7. Perform rollback, roll-forward, containment, or restore. 8. Verify system state and data independently. 9. Record damage, uncertainty, and residuals. 10. Update runbooks and actions.</p>
+<h3>Evidence package</h3>
+<p>A complete recovery package includes:</p>
+<ul><li>baseline evidence;</li><li>recovery artifact or command;</li><li>exact operator and time;</li><li>logs;</li><li>restored or resulting state;</li><li>data reconciliation;</li><li>smoke, integration, and domain checks;</li><li>rollback duration;</li><li>unmet objectives;</li><li>residual owner and expiry.</li></ul>
+<h3>Marker use</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>@EVIDENCE:rollback-01 pre-change database checksum
++ACTION:rollback-01 restore snapshot and replay approved events
+=VERIFY:rollback-01 row counts, checksums, and application reads reconcile
+?UNKNOWN:rollback-02 downstream cache invalidation status
+!STOP:restore-integrity-unverified</code></pre></div>
+<h3>Residual-risk acceptance</h3>
+<p>Residual acceptance is an authorized human decision. It records:</p>
+<ul><li>remaining risk;</li><li>impact and likelihood;</li><li>affected users or systems;</li><li>compensating controls;</li><li>owner;</li><li>expiry;</li><li>review trigger;</li><li>reason closure is acceptable.</li></ul>
+<h3>Common failures</h3>
+<ul><li>rollback script references the wrong environment;</li><li>backup exists but cannot be restored;</li><li>schema is backward-incompatible;</li><li>partial external side effects cannot be reversed;</li><li>verification checks only process status, not data;</li><li>operator closes after rollback without reopening changed assumptions;</li><li>failure evidence is overwritten during retry.</li></ul>
+<h3>Validation</h3>
+<p>The evaluation suite includes a failed-execution → rollback → residual-open drill. High-risk live systems still require environment-specific rehearsal.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/RECOVERY_AND_ROLLBACK_GUIDE.md</span></footer></main>
+
+</body>
+</html>

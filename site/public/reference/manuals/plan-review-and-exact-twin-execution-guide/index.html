@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Plan Review and Exact-Twin Execution Guide from the Mission Directives documentation set." />
+  <title>Plan Review and Exact-Twin Execution Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/PLAN_REVIEW_AND_EXACT_TWIN_EXECUTION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Plan Review and Exact-Twin Execution Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/PLAN_REVIEW_AND_EXACT_TWIN_EXECUTION_GUIDE.md</span></div><h1>Plan Review and Exact-Twin Execution Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Plan Review and Exact-Twin Execution Guide</h2>
+<h3>Purpose</h3>
+<p>This guide defines the mandatory transition from a paired investigative planning prompt to its one authorized execution twin. The policy applies to every prompt whose frontmatter declares <code>prompt_role: investigative</code>, <code>pairing_required: true</code>, and <code>paired_prompt_id</code>.</p>
+<p>The planner does not choose an executor dynamically. Its <code>paired_prompt_id</code> is the sole source of truth. The declared executor must reciprocally name the planner, have <code>prompt_role: executive</code>, and require the planner in <code>requires</code>.</p>
+<h3>Non-negotiable rule</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>plan → user review → requested revisions → re-verification → re-freeze
+→ user re-review and approval → explicit execution consent
+→ exact reciprocal executor only</code></pre></div>
+<p>No stage may be inferred from the original task. Asking for a complete result does not waive the plan-review gate.</p>
+<h3>Why review and execution consent are separate</h3>
+<p>Plan review answers: “Is this the correct plan?”</p>
+<p>Execution consent answers: “May this exact executor act on the approved frozen plan now?”</p>
+<p>A user may approve a plan but postpone execution. A user may request edits without approving anything. The runtime therefore stores separate receipts and states.</p>
+<h3>Canonical metadata</h3>
+<p>A paired planner declares:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>paired_prompt_id: MD-30
+plan_review_required: true
+execution_consent_required: true
+exact_twin_only: true
+review_cycle: review_revise_refreeze_rereview_then_consent</code></pre></div>
+<p>Its executor declares:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>paired_prompt_id: MD-29
+accepted_planning_prompt_id: MD-29
+reviewed_handoff_required: true
+execution_consent_required: true
+exact_twin_only: true</code></pre></div>
+<p>Do not add a second twin field or a routing override. Duplicate sources of truth can drift.</p>
+<h3>Planner behavior</h3>
+<p>After investigation and handoff verification, the planner must:</p>
+<p>1. freeze the evidence snapshot, findings, action plan, and acceptance criteria; 2. present the completed plan and material artifacts to the user; 3. explicitly invite changes, improvements, additions, removals, and refinements; 4. record review feedback without interpreting it as approval; 5. apply accepted feedback to every affected artifact; 6. update evidence or unknown records when the feedback changes assumptions; 7. re-run handoff-readiness verification; 8. re-freeze the complete handoff under a new content hash; 9. ask the user to review the revised plan again; 10. after explicit approval, ask whether to invoke the exact <code>paired_prompt_id</code>.</p>
+<p>The execution question must name both the exact prompt ID and title.</p>
+<h3>Review decisions</h3>
+<h4>Changes requested</h4>
+<p>The workflow enters <code>plan_revision_pending</code>. Prior plan approval and execution consent are invalidated. The planner revises, verifies, and re-freezes before requesting another review.</p>
+<h4>Approved</h4>
+<p>The workflow enters <code>execution_consent_pending</code>. Approval does not execute the twin. The planner asks one explicit consent question.</p>
+<h4>Declined</h4>
+<p>The workflow closes without execution and records an explicit residual or declined-execution record.</p>
+<h3>Exact-twin enforcement</h3>
+<p>For planner <code>MD-29</code>, only <code>MD-30</code> is legal. The following must fail:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD-29 → MD-28
+MD-29 → another debugging or engineering executor
+MD-29 → a dynamically selected “better” executor
+MD-29 → an executor inferred from keywords</code></pre></div>
+<p>Similarity, shared category, skill availability, or operator preference does not create another twin. A different executor requires a new canonical prompt relationship and suite review, not a runtime substitution.</p>
+<h3>Executor admission checks</h3>
+<p>Before work begins, the executive must verify:</p>
+<ul><li>planner ID equals its reciprocal <code>paired_prompt_id</code>;</li><li>handoff hash matches the reviewed version;</li><li>review receipt decision is <code>approved</code>;</li><li>no plan artifact changed after review;</li><li>execution-consent receipt names this exact executor;</li><li>the consent applies to the current handoff hash;</li><li>action scope, mode, environment, budget, and approval are current;</li><li>no unresolved <code>!STOP:{reason}</code> blocks execution.</li></ul>
+<p>Any mismatch is <code>!STOP:invalid-reviewed-handoff-or-exact-twin-consent</code>.</p>
+<h3>Runtime states</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>handoff_frozen
+→ plan_review_pending
+→ plan_revision_pending      (when changes are requested)
+→ handoff_frozen             (after revisions and re-verification)
+→ plan_review_pending        (re-review)
+→ execution_consent_pending  (after plan approval)
+→ dry_run_ready              (DRAFT_ONLY / APPLY_SAFE path)
+   or approval_pending       (APPLY_APPROVED path)
+→ executing</code></pre></div>
+<h3>Runtime commands</h3>
+<p>Inspect the exact twin:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py pair-status MD-29 \
+  --handoff-ready \
+  --review-status approved</code></pre></div>
+<p>Freeze a handoff for review:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py freeze-pair-handoff run.json MD-29 \
+  --handoff-hash sha256:&lt;digest&gt;</code></pre></div>
+<p>Record requested changes:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py review-pair-plan run.json MD-29 \
+  --decision changes_requested \
+  --feedback &quot;Add Windows coverage and rollback evidence&quot;</code></pre></div>
+<p>After revising, call <code>freeze-pair-handoff</code> again with the new hash. Then record approval:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py review-pair-plan run.json MD-29 \
+  --decision approved</code></pre></div>
+<p>Record explicit consent:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py consent-pair-execution run.json MD-29 --approve</code></pre></div>
+<p>The runtime writes only <code>MD-30</code> into <code>authorized_execution_prompt_ids</code>.</p>
+<h3>Failure examples</h3>
+<h4>Alternate executor requested</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>Requested: MD-28
+Required exact twin: MD-30
+Result: rejected</code></pre></div>
+<h4>Revision after approval</h4>
+<p>Any material edit changes the handoff hash. The prior review and consent no longer apply. Return to <code>plan_review_pending</code> after re-freezing.</p>
+<h4>Original request already says “execute”</h4>
+<p>The planner still presents the plan for review. The original request establishes desired outcome, not approval of an unseen plan.</p>
+<h4>User says “looks fine” before seeing the final revision</h4>
+<p>Do not infer approval. Present the revised frozen plan and ask for review of that exact version.</p>
+<h3>Validation</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pytest -q tests/test_prompt_body_quality.py tests/test_md.py
+python tools/audit_prompt_bodies.py --check
+python tools/build_capability_graph.py --check
+python tools/validate_suite.py</code></pre></div>
+<p>The validator checks all 32 genuine pairs, exact reciprocal IDs, required body blocks, state-machine support, and runtime refusal of alternate executors.</p>
+<h3>Related guides</h3>
+<ul><li><a href="/mission-directives/reference/manuals/pair-authoring-and-verification-guide/">Pair Authoring and Verification Guide</a></li><li><a href="/mission-directives/reference/manuals/executive-decision-rules-guide/">Executive Decision Rules Guide</a></li><li><a href="/mission-directives/reference/manuals/operator-guide/">Operator Guide</a></li><li><a href="/mission-directives/reference/manuals/runtime-marker-protocol/">Runtime Marker Protocol</a></li><li><a href="/mission-directives/reference/manuals/prompt-body-validation-guide/">Prompt Body Validation Guide</a></li></ul></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/PLAN_REVIEW_AND_EXACT_TWIN_EXECUTION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

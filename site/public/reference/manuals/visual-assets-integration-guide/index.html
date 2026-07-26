@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Visual Assets Integration Guide from the Mission Directives documentation set." />
+  <title>Visual Assets Integration Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/VISUAL_ASSETS_INTEGRATION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Visual Assets Integration Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/VISUAL_ASSETS_INTEGRATION_GUIDE.md</span></div><h1>Visual Assets Integration Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Visual Assets Integration Guide</h2>
+<h3>Purpose</h3>
+<p><code>visual-assets</code> is a user-owned local skill for deliberate, editorially designed visual construction. It builds assets from primitives:</p>
+<ul><li>SVG paths and shapes;</li><li>CSS;</li><li>semantic HTML;</li><li>vanilla JavaScript;</li><li>optional controlled animation.</li></ul>
+<p>It is intended to produce the kind of visual found in a carefully edited magazine, annual report, research paper, technical publication, or high-quality presentation—an artifact with a clear communication purpose and visible design decisions.</p>
+<p>It is **not** a model image-generation route. It should not substitute screenshots, stock icon packs, raster clip art, or a chart library's untouched default theme for design work.</p>
+<h3>Appropriate outputs</h3>
+<ul><li>infographics and data stories;</li><li>editorial illustrations;</li><li>technical-paper figures;</li><li>conceptual diagrams;</li><li>architecture and process visuals;</li><li>maps and relationship diagrams when the data supports them;</li><li>report exhibits;</li><li>presentation hero assets and supporting figures;</li><li>vector icon or symbol systems;</li><li>campaign and brand mock assets;</li><li>accessible animated explainers;</li><li>HTML/SVG interactive visuals;</li><li>reusable visual primitives.</li></ul>
+<h3>When not to use it</h3>
+<p>Do not invoke <code>visual-assets</code> when:</p>
+<ul><li>plain text or a simple table communicates the information better;</li><li>an existing approved asset already satisfies the need;</li><li>the visual brief, data, or factual spine is not stable;</li><li>the task requires photorealistic or model-generated imagery;</li><li>the output cannot be verified for accuracy or accessibility;</li><li>a visual would be decorative and add no information, explanation, emotion, or brand value;</li><li>the expected design gain does not justify the cost.</li></ul>
+<h3>Required brief</h3>
+<p>Before execution, freeze:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>communication_job:
+audience:
+placement:
+source_facts_or_data:
+primary_message:
+secondary_details:
+visual_form:
+dimensions_and_crop_rules:
+brand_tokens:
+typography:
+interaction_or_motion:
+accessibility_alternative:
+editability_requirements:
+export_formats:
+prohibited_elements:
+acceptance_rubric:</code></pre></div>
+<p>The skill must not invent data, claims, brand rules, or source relationships to make a composition more convenient.</p>
+<h3>Routed prompt areas</h3>
+<p>The suite routes <code>visual-assets</code> to relevant capabilities including:</p>
+<ul><li>editorial research and publication packages;</li><li>academic papers and technical figures;</li><li>scripts and storyboards;</li><li>moodboards and concept development;</li><li>brand identity and campaigns;</li><li>presentations and browser-native slides;</li><li>dashboards, infographics, diagrams, and interactive artifacts;</li><li>event and learning materials;</li><li>social content;</li><li>media production;</li><li>professional documents, portfolios, executive reports, and report production.</li></ul>
+<p><code>MD-192</code> still decides whether the skill is genuinely useful for each task. Preferred routing is not mandatory invocation.</p>
+<h3>Presentation integration</h3>
+<p>For a deck:</p>
+<p>1. <code>MD-101</code> freezes narrative and slide purpose. 2. Identify slides that require a real visual communication asset. 3. <code>MD-196</code> invokes <code>visual-assets</code> with one asset brief at a time or a finite queue. 4. The deck producer places the verified source asset without flattening it unnecessarily. 5. <code>MD-109</code> checks hierarchy, contrast, text alternatives, responsive behavior, and exact export.</p>
+<p>A slide should not receive an illustration merely to fill empty space. Every asset must support the slide's job.</p>
+<h3>Infographic and technical-figure integration</h3>
+<p>For factual visuals:</p>
+<ul><li>bind every number, category, relationship, and label to <code>@EVIDENCE:{id}</code>;</li><li>distinguish measured values from estimates and illustrative geometry;</li><li>choose a form that does not exaggerate magnitude or certainty;</li><li>retain an accessible text or table alternative;</li><li>verify units, scales, ordering, legends, and annotations;</li><li>keep source files editable.</li></ul>
+<p>For conceptual illustrations, label metaphor and interpretation rather than presenting them as measured diagrams.</p>
+<h3>Animation</h3>
+<p>Animation is acceptable when it explains sequence, transition, causality, comparison, or focus. It must:</p>
+<ul><li>have a reduced-motion path;</li><li>preserve meaning when paused or exported statically;</li><li>avoid gratuitous looping;</li><li>avoid seizure-risk timing and flashes;</li><li>keep controls keyboard accessible when interactive;</li><li>remain performant in the intended medium.</li></ul>
+<h3>Batch production</h3>
+<p>Use <code>MD-197</code> only for a genuine finite queue. Each asset receives its own communication job and rubric. Shared tokens and primitives are encouraged; cloned composition without regard to meaning is not.</p>
+<p>Outer loop:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>brief item → execute visual-assets → quarantine → verify → accept/residualize → next item</code></pre></div>
+<p>Optional inner loop:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>failed measurable criterion → targeted refinement hypothesis → new asset → independent review → exit decision</code></pre></div>
+<h3>Quality gates</h3>
+<p>A visual asset passes only when applicable checks succeed:</p>
+<h4>Information</h4>
+<ul><li>factual values and relations match sources;</li><li>the intended insight is understandable;</li><li>hierarchy reflects importance;</li><li>visual encoding does not mislead;</li><li>labels, legends, and annotations are complete.</li></ul>
+<h4>Editorial design</h4>
+<ul><li>composition has a deliberate point of view;</li><li>typography, spacing, and rhythm are controlled;</li><li>the asset is not a generic template default;</li><li>detail supports rather than obscures the message;</li><li>variants remain coherent without becoming identical.</li></ul>
+<h4>Technical</h4>
+<ul><li>valid SVG/HTML/CSS/JS;</li><li>no unexpected network dependencies;</li><li>responsive or dimension-correct behavior;</li><li>editable primitives;</li><li>no clipping, overflow, broken fonts, or hidden labels;</li><li>deterministic export where required.</li></ul>
+<h4>Accessibility</h4>
+<ul><li>sufficient contrast;</li><li>readable labels at final size;</li><li>semantic structure where interactive;</li><li>keyboard operation;</li><li>text alternative or data table;</li><li>reduced-motion support.</li></ul>
+<h4>Brand and rights</h4>
+<ul><li>approved tokens and voice;</li><li>no unlicensed stock assets or copied icon systems;</li><li>source and ownership recorded;</li><li>no misleading imitation of another brand or publication.</li></ul>
+<h3>Verification and quarantine</h3>
+<p>Raw output remains quarantined until the target prompt's verification contract or <code>MD-109</code> passes. The receipt records:</p>
+<ul><li>skill ID and alias resolution;</li><li>brief and input hashes;</li><li>exact source files;</li><li>output paths;</li><li>validation results;</li><li>accessibility review;</li><li>export results;</li><li>unresolved issues;</li><li>lineage into reports, slides, sites, or publications.</li></ul></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/VISUAL_ASSETS_INTEGRATION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

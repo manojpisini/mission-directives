@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Auto-Orchestration Runtime Guide from the Mission Directives documentation set." />
+  <title>Auto-Orchestration Runtime Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/AUTO_ORCHESTRATION_RUNTIME_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Auto-Orchestration Runtime Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/AUTO_ORCHESTRATION_RUNTIME_GUIDE.md</span></div><h1>Auto-Orchestration Runtime Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Auto-Orchestration Runtime Guide</h2>
+<h3>Purpose</h3>
+<p>The automatic layer is a conditional compiler. It never loads all auto-prompts by default. It evaluates route-changing intent ambiguity, genuine skill need, missing capability, acquisition authority, skill fit, and loop eligibility before adding a node.</p>
+<h3>Compile from a context file</h3>
+<p>Create JSON conforming to <code>schemas/auto_orchestration_request.schema.json</code>, then run:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py auto-compile request.json</code></pre></div>
+<p>The result separates active prompts, conditional branch prompts, rejected capabilities, skill status, and loop eligibility.</p>
+<h3>Questioning behavior</h3>
+<p><code>MD-191</code> may wrap any task but asks only questions whose answers change the graph, authority, evidence lane, output medium, budget, skill need, loop eligibility, or acceptance decision. It reuses answered context and normally asks one question at a time.</p>
+<h3>Missing skill flow</h3>
+<p>1. <code>MD-192</code> proves a material capability gap. 2. <code>MD-193</code> invokes <code>find-skills</code> or native discovery and qualifies exact candidates without installing. 3. <code>MD-194</code> installs a qualified candidate to both global locations when policy permits. 4. <code>MD-195</code> creates a narrow skill only when discovery is empty, native execution is insufficient, and reusable demand justifies maintenance. 5. <code>MD-196</code> executes the exact skill once, quarantines output, and verifies the target artifact.</p>
+<p>Installation and creation are mutually exclusive conditional branches.</p>
+<h3>Loop flow</h3>
+<p><code>MD-197</code> may wrap any prompt, scenario, or exact skill. It must prove a finite queue or measurable refinement objective. <code>MD-198</code> independently decides continue, complete, plateau, budget stop, safety stop, rollback, or human escalation after every pass.</p>
+<h3>Safety</h3>
+<p>Automatic does not mean ungoverned. External effects, unpinned acquisition, permission expansion, deployment, publication, sending, deletion, and irreversible mutation still require the applicable policy and authority.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/AUTO_ORCHESTRATION_RUNTIME_GUIDE.md</span></footer></main>
+
+</body>
+</html>

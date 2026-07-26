@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Operator Guide from the Mission Directives documentation set." />
+  <title>Operator Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/OPERATOR_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Operator Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/OPERATOR_GUIDE.md</span></div><h1>Operator Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Operator Guide</h2>
+<h3>Purpose</h3>
+<p>This guide is for the person running the suite, approving actions, inspecting manifests, and deciding whether a run may progress.</p>
+<h3>Operator responsibilities</h3>
+<p>The operator is accountable for:</p>
+<ul><li>declaring scope and authority;</li><li>supplying or identifying authoritative evidence;</li><li>resolving route-changing ambiguity;</li><li>reviewing high-risk handoffs;</li><li>approving exact actions rather than broad intent;</li><li>monitoring state transitions;</li><li>interpreting verification and residuals;</li><li>refusing false completion.</li></ul>
+<h3>Canonical control load</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD-00 → MD-01 → MD-03 → MD-04 → MD-02 → selected graph</code></pre></div>
+<p>Control prompts load once. Capability prompts may narrow but not weaken them.</p>
+<h3>Route inspection</h3>
+<p>Start with keyword lookup when the target is not already known:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py lookup &quot;&lt;user terms&gt;&quot; --limit 8</code></pre></div>
+<p>The lookup result is a candidate list. Confirm the selected target with <code>explain</code>; do not execute directly from a weak lexical match.</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py explain C-63</code></pre></div>
+<p>Review:</p>
+<ul><li>selected prompt IDs;</li><li>route confidence;</li><li>injected security, privacy, accessibility, or release obligations;</li><li>rejected prompts;</li><li>unresolved questions;</li><li>skill trust and lock status;</li><li>model eligibility;</li><li>required assurance and approvals.</li></ul>
+<p>A low-confidence route is not automatically wrong, but any unresolved question that changes authority or the execution graph must be answered before action.</p>
+<h3>Planning</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py plan C-63 \
+  --mode DRAFT_ONLY \
+  --root . \
+  --out .prompt_suite/runs/feature.json</code></pre></div>
+<p>Use <code>--dry-run</code> to simulate state transitions without writing the manifest.</p>
+<h3>Run states</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>configured
+→ investigating
+→ evidence_ready
+→ fan_in_pending
+→ handoff_frozen
+→ approval_pending
+→ dry_run_ready
+→ executing
+→ verification_pending
+→ verified | failed | rolled_back | residual_open
+→ closed</code></pre></div>
+<p>The runtime rejects illegal transitions.</p>
+<h3>Handoff review</h3>
+<p>Before approving an executive run, verify:</p>
+<ul><li>evidence snapshot and freshness;</li><li>findings and confidence;</li><li>proposed action IDs;</li><li>action dependencies;</li><li>protected surfaces;</li><li>rollback needs;</li><li>acceptance criteria;</li><li>unresolved blockers;</li><li>target environment;</li><li>budget and maintenance window.</li></ul>
+<p>Do not approve “fix everything.” Approve exact <code>+ACTION:{id}</code> records.</p>
+<h3>Tool and skill review</h3>
+<p>For each external skill or tool:</p>
+<ul><li>confirm repository and exact revision;</li><li>inspect permissions;</li><li>verify lock status;</li><li>review network and file access;</li><li>confirm output quarantine;</li><li>identify native fallback;</li><li>require conformance evidence for high assurance.</li></ul>
+<h3>Executive monitoring</h3>
+<p>During execution, watch for:</p>
+<ul><li>a new <code>#FINDING:{id}</code>;</li><li>target drift;</li><li>action conflicts;</li><li>budget exhaustion;</li><li>partial state;</li><li>failed verification;</li><li>rollback uncertainty;</li><li>undeclared tool permissions.</li></ul>
+<p>New findings do not inherit approval from the old plan.</p>
+<h3>Verification review</h3>
+<p>Every criterion should have:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>=VERIFY:{id}
+criterion
+method
+result
+supporting evidence
+revision or timestamp</code></pre></div>
+<p>A command exit code is not sufficient if the criterion concerns behavior, data, accessibility, security, or exact export quality.</p>
+<h3>Closing a run</h3>
+<p>Close only when:</p>
+<ul><li>verification passed or residual risk was explicitly accepted by an authorized human;</li><li>rollback state is known;</li><li>actions and residuals have owners;</li><li>lineage and artifacts are recorded;</li><li>no <code>!STOP</code> remains unresolved;</li><li>completion criteria are satisfied.</li></ul>
+<h3>Operational commands</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py lookup &quot;&lt;user terms&gt;&quot; --limit 8
+python tools/md.py list --kind packs
+python tools/md.py explain C-63
+python tools/md.py plan C-63 --mode DRAFT_ONLY --root . --out run.json
+python tools/md.py transition run.json investigating
+python tools/md.py validate-run run.json
+python tools/md.py select-model MD-29 --assurance HIGH_ASSURANCE
+python tools/sync_agent_guidance.py --project-root /path/to/project --suite-root . --dry-run --show-diff</code></pre></div>
+<h3>Operator anti-patterns</h3>
+<ul><li>selecting every prompt in a department pack;</li><li>approving a broad outcome instead of exact actions;</li><li>treating a tool name as evidence of trust;</li><li>allowing an executive to act on a stale handoff;</li><li>accepting a polished artifact without exact export verification;</li><li>closing with hidden residuals;</li><li>rewriting acceptance criteria during execution;</li><li>ignoring marker IDs and relying on prose alone.</li></ul>
+<h3>Operating the paired review gate</h3>
+<p>Use <code>freeze-pair-handoff</code>, <code>review-pair-plan</code>, and <code>consent-pair-execution</code> rather than manually moving a paired run from <code>handoff_frozen</code> to execution. The runtime resolves the executor from reciprocal <code>paired_prompt_id</code> metadata and fails closed when another executor is supplied. Revisions invalidate prior consent and require a new handoff hash and review receipt.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/OPERATOR_GUIDE.md</span></footer></main>
+
+</body>
+</html>

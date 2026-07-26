@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mission Directives Installation and Project Integration Guide from the Mission Directives documentation set." />
+  <title>Mission Directives Installation and Project Integration Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Mission Directives Installation and Project Integration Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md</span></div><h1>Mission Directives Installation and Project Integration Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Mission Directives Installation and Project Integration Guide</h2>
+<h3>Purpose</h3>
+<p>This guide explains how to install the lean execution runtime into an existing project without overwriting human-authored instructions. The installed runtime lives at <code>./prompts</code>; source-only tests, evaluations, import tooling, CI, and site assets remain in the Mission Directives repository.</p>
+<p>The exact boundary is declared by <code>config/runtime_payload.json</code> and explained in the <a href="/mission-directives/reference/manuals/installed-runtime-payload-guide/">Installed Runtime Payload Guide</a>.</p>
+<h3>Requirements</h3>
+<p>Install the runtime dependency set in the environment that will invoke the installed tools:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python -m pip install -r requirements-runtime.txt</code></pre></div>
+<p>Repository contributors use <code>requirements-dev.txt</code> instead.</p>
+<h3>Quick installation</h3>
+<p>Always inspect the dry run first.</p>
+<h4>Linux or macOS</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>./install.sh /absolute/path/to/project --dry-run
+./install.sh /absolute/path/to/project</code></pre></div>
+<h4>Windows PowerShell 7</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>./install.ps1 -ProjectPath 'C:\path\to\project' -DryRun
+./install.ps1 -ProjectPath 'C:\path\to\project'</code></pre></div>
+<h4>Portable Python</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/install.py /absolute/path/to/project --dry-run
+python tools/install.py /absolute/path/to/project</code></pre></div>
+<p>Use <code>--replace</code> only when updating an existing installation.</p>
+<h3>Runtime payload</h3>
+<p>The installer includes all files needed to route, inspect, plan, execute, verify runtime contracts, resolve templates and skills, synchronize agent guidance, log, and uninstall. This includes catalogs, prompts, scenarios, compatibility maps, configuration, examples, integrations, policies, schemas, templates, selected runtime tools, and <code>requirements-runtime.txt</code>.</p>
+<p>The following remain source-only:</p>
+<ul><li><code>.github/</code>;</li><li><code>tests/</code>;</li><li><code>evaluations/</code>;</li><li><code>site/</code>;</li><li>prompt authoring/import tools;</li><li>repository audit, validation, test, evaluation, and manifest tools;</li><li><code>requirements-dev.txt</code>.</li></ul>
+<p>This is an allowlist, not a repository copy with ignore rules. New source directories cannot silently bloat future installations.</p>
+<h3>Exact effects</h3>
+<p>1. Validates the project path and rejects overlap with the suite source. 2. Loads and validates <code>config/runtime_payload.json</code>. 3. Stages only the declared runtime files and verifies the staged tree. 4. Promotes the payload to <code>&lt;project&gt;/prompts</code>. 5. Adds one managed block to <code>&lt;project&gt;/.gitignore</code>. 6. Keeps <code>&lt;project&gt;/docs</code> tracked and creates runtime-owned directories when absent. 7. Creates or updates only <code>AGENTS.md</code> and <code>CLAUDE.md</code> using managed markers. 8. Preserves all content outside managed markers. 9. Writes installation and guidance receipts under <code>&lt;project&gt;/.prompt_suite/</code>. 10. Restores the prior suite and project files if a post-promotion step fails.</p>
+<h3>Receipt</h3>
+<p>A successful installation receipt records the runtime profile, installed file count, suite version, destination, backup path, created runtime directories, preexisting project files, guidance result, and UTC timestamp. It validates against <code>schemas/installation_receipt.schema.json</code>.</p>
+<p>The dry-run response also lists repository-only exclusions.</p>
+<h3>Reinstallation and rollback</h3>
+<p>When <code>./prompts</code> already exists, the installer fails closed unless <code>--replace</code> is supplied. Replacement first renames the old copy to <code>.md-prompts-backup-&lt;timestamp&gt;-&lt;uuid&gt;</code>. A post-promotion failure removes the failed runtime, restores the backup, and restores preserved project files.</p>
+<p>Review and delete backups only after the installed runtime passes its smoke checks.</p>
+<h3>Skill directories</h3>
+<p>Mission Directives resolves global skill directories by application and platform through <code>prompts/compatibility/agent_skill_paths.json</code>:</p>
+<ul><li><code>.agents</code>: <code>%USERPROFILE%\.agents\skills</code> on Windows, <code>$HOME/.agents/skills</code> on Linux and macOS;</li><li>Claude Code: <code>%USERPROFILE%\.claude\skills</code> on Windows, <code>$HOME/.claude/skills</code> on Linux and macOS;</li><li>OpenCode: <code>%USERPROFILE%\.config\opencode\skills</code> on Windows, <code>${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills</code> on Linux and macOS.</li></ul>
+<p>Environment overrides <code>MD_AGENTS_SKILLS_DIR</code>, <code>MD_CLAUDE_SKILLS_DIR</code>, and <code>MD_OPENCODE_SKILLS_DIR</code> take precedence.</p>
+<h3>Installed-runtime verification</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python &lt;project&gt;/prompts/tools/md.py route &quot;MD cleanup dead code safely&quot;
+python &lt;project&gt;/prompts/tools/md.py explain C-25
+python &lt;project&gt;/prompts/tools/md.py plan C-25 --mode AUDIT_ONLY --root &lt;project&gt; --dry-run</code></pre></div>
+<p>Confirm:</p>
+<ul><li><code>payload_profile</code> is <code>runtime</code>;</li><li><code>installed_file_count</code> is positive;</li><li><code>config/router_keywords.json</code> and runtime schemas exist;</li><li>source-only paths are absent;</li><li><code>.gitignore</code> does not ignore project <code>docs/</code>;</li><li><code>AGENTS.md</code> and <code>CLAUDE.md</code> contain exactly one managed guidance block.</li></ul>
+<p>Repository validators such as <code>validate_suite.py</code> and <code>build_manifest.py</code> intentionally remain upstream; run them in the Mission Directives source repository.</p>
+<h3>Removing an installation</h3>
+<p>Use the <a href="/mission-directives/reference/manuals/project-cleanup-and-uninstall-guide/">Project Cleanup and Uninstall Guide</a> for the approval-bound inverse workflow. It removes only validated Mission Directives-managed paths and text blocks while preserving unrelated project content.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

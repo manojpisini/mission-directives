@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mission Directives project overview and introduction." />
+  <title>Mission Directives — Project Overview</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="landing-page">
+  <a class="skip-link" href="#landing-main">Skip to content</a>
+
+  <header class="landing-header">
+    <div class="landing-shell landing-header__inner">
+      <a class="brand" href="index.html" aria-label="Mission Directives home">
+        <span class="brand__mark" aria-hidden="true">
+          <span class="brand__mark-line"></span>
+          <span class="brand__mark-line"></span>
+          <span class="brand__mark-dot"></span>
+        </span>
+        <span class="brand__copy">
+          <strong>Mission Directives</strong>
+          <span>Project Overview</span>
+        </span>
+      </a>
+
+      <nav class="landing-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#system">How it works</a>
+        <a href="#metrics">Project data</a>
+        <a class="button button--secondary landing-nav__docs" href="docs.html">Documentation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="landing-main">
+    <section class="landing-hero">
+      <div class="landing-shell landing-hero__grid">
+        <div class="landing-hero__copy">
+          <div class="eyebrow-row">
+            <span class="eyebrow">Mission Directives</span>
+            <span class="pill">Current release 1.8.3</span>
+          </div>
+          <h1>Bounded, reviewable, and verifiable agent work.</h1>
+          <p class="landing-hero__lead">A curated library of advanced prompts and deterministic orchestration tools that resolves natural-language intent to the smallest coherent workflow needed for the outcome.</p>
+          <div class="landing-hero__actions">
+            <a class="button button--primary button--large" href="docs.html">Open Documentation</a>
+            <a class="button button--secondary button--large" href="#about">Project background</a>
+          </div>
+          <div class="landing-trust-row" aria-label="Project characteristics">
+            <span>Deterministic routing</span>
+            <span>Explicit operating modes</span>
+            <span>Cross-platform validation</span>
+          </div>
+        </div>
+
+        <div class="landing-system-card" aria-label="Mission Directives workflow illustration">
+          <div class="landing-system-card__top">
+            <span>Intent resolution</span>
+            <small>Smallest coherent graph</small>
+          </div>
+          <div class="landing-route-flow">
+            <div class="landing-route-node"><small>01</small><strong>Request</strong><span>Intent, modifiers, IDs</span></div>
+            <div class="landing-route-line"></div>
+            <div class="landing-route-node"><small>02</small><strong>Route</strong><span>Metadata and context</span></div>
+            <div class="landing-route-line"></div>
+            <div class="landing-route-node"><small>03</small><strong>Execute</strong><span>Bounded by mode</span></div>
+            <div class="landing-route-line"></div>
+            <div class="landing-route-node"><small>04</small><strong>Verify</strong><span>Evidence and closure</span></div>
+          </div>
+          <div class="landing-system-card__footer">
+            <span>Prompt</span>
+            <span>Scenario</span>
+            <span>Workflow graph</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-section" id="about">
+      <div class="landing-shell">
+        <div class="landing-section__heading">
+          <span class="section-kicker">Project background</span>
+          <h2>Why the project exists</h2>
+          <p>Large prompt libraries become unreliable when models are expected to choose from everything at once. Mission Directives makes selection explicit, bounded, and inspectable.</p>
+        </div>
+
+        <div class="landing-feature-grid">
+          <article>
+            <span class="landing-feature-index">01</span>
+            <h3>Deterministic selection</h3>
+            <p>Route full natural-language requests to the most suitable prompt, scenario, or workflow graph without loading the complete library.</p>
+          </article>
+          <article>
+            <span class="landing-feature-index">02</span>
+            <h3>Authority boundaries</h3>
+            <p>Separate analysis, planning, drafting, application, approval, and verification so the system does only what is authorized.</p>
+          </article>
+          <article>
+            <span class="landing-feature-index">03</span>
+            <h3>Evidence and closure</h3>
+            <p>Preserve observations, uncertainties, actions, receipts, residuals, and verification records throughout the workflow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-section landing-section--tinted" id="system">
+      <div class="landing-shell landing-explainer">
+        <div class="landing-section__heading">
+          <span class="section-kicker">How it works</span>
+          <h2>From request to verified result</h2>
+          <p>The suite resolves a request to the minimum set of prompts, tools, skills, approvals, artifacts, and evidence rules required for the outcome.</p>
+        </div>
+
+        <div class="landing-process">
+          <div><strong>Parse</strong><span>Read invocation, intent, modifiers, and exact IDs.</span></div>
+          <div><strong>Select</strong><span>Rank candidate routes using metadata, rarity, and context.</span></div>
+          <div><strong>Inspect</strong><span>Explain inputs, modes, approvals, and verification duties.</span></div>
+          <div><strong>Act</strong><span>Plan or execute inside a clearly bounded operating mode.</span></div>
+          <div><strong>Verify</strong><span>Record evidence, residuals, and closure criteria.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-section" id="metrics">
+      <div class="landing-shell">
+        <div class="landing-section__heading landing-section__heading--center">
+          <span class="section-kicker">Project data</span>
+          <h2>A structured operational library</h2>
+          <p>Current repository inventory and documentation surfaces from release 1.8.3.</p>
+        </div>
+
+        <div class="landing-metrics-grid">
+          <div><strong>257</strong><span>Canonical prompts</span></div>
+          <div><strong>257</strong><span>Atomic routes</span></div>
+          <div><strong>110</strong><span>Composite scenarios</span></div>
+          <div><strong>32</strong><span>Reciprocal pairs</span></div>
+        </div>
+
+        <div class="landing-data-card">
+          <div class="landing-data-card__copy">
+            <span class="section-kicker">Documentation coverage</span>
+            <h3>One place for guides, manuals, commands, and reference.</h3>
+            <p>The dedicated documentation page includes installation, routing, operating modes, evidence markers, common routes, troubleshooting, repository layout, and release information.</p>
+            <a class="button button--primary" href="docs.html">Browse Documentation</a>
+          </div>
+          <div class="landing-data-bars" aria-label="Documentation coverage visualization">
+            <div><span>Prompt pages</span><strong>257</strong><i style="--bar:70%"></i></div>
+            <div><span>Scenario pages</span><strong>367</strong><i style="--bar:100%"></i></div>
+            <div><span>Skills &amp; aliases</span><strong>277</strong><i style="--bar:76%"></i></div>
+            <div><span>Supported platforms</span><strong>3</strong><i style="--bar:34%"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-cta">
+      <div class="landing-shell landing-cta__inner">
+        <div>
+          <span class="section-kicker">Documentation</span>
+          <h2>Start with the Quick Start guide.</h2>
+          <p>Install the suite, route your first request, inspect the selected workflow, and validate the result.</p>
+        </div>
+        <a class="button button--primary button--large" href="docs.html">Open Documentation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="landing-footer">
+    <div class="landing-shell landing-footer__inner">
+      <span>Mission Directives</span>
+      <span>Light mode · Mild sage accents · Documentation site</span>
+    </div>
+  </footer>
+</body>
+</html>

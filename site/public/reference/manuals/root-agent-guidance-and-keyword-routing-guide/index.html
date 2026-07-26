@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Root Agent Guidance and MD Keyword Routing Guide from the Mission Directives documentation set." />
+  <title>Root Agent Guidance and MD Keyword Routing Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Root Agent Guidance and MD Keyword Routing Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md</span></div><h1>Root Agent Guidance and MD Keyword Routing Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Root Agent Guidance and MD Keyword Routing Guide</h2>
+<h3>Purpose</h3>
+<p>This guide explains how to connect a project repository's root agent-instruction files to the Mission Directives without copying prompt bodies into those files or overwriting human-authored instructions.</p>
+<p>The synchronization layer deliberately manages only:</p>
+<ul><li><code>AGENTS.md</code></li><li><code>CLAUDE.md</code></li></ul>
+<p><code>CODEX.md</code>, <code>PI.md</code>, <code>HERMES.md</code>, <code>OPENCODE.md</code>, <code>GEMINI.md</code>, <code>QWEN.md</code>, <code>CURSOR.md</code>, <code>WINDSURF.md</code>, <code>COPILOT.md</code>, and custom filenames are intentionally excluded. This narrow scope prevents the suite from creating redundant or conflicting instruction surfaces.</p>
+<p>The inserted section teaches an agent where MD lives, how to parse user intent algorithmically, which files are authoritative, when to invoke conditional auto-prompts, and how to avoid loading unnecessary prompts or skills.</p>
+<h3>Design principles</h3>
+<h4>Preserve repository-owned instructions</h4>
+<p>The synchronizer owns only the text between:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;!-- BEGIN MD MANAGED GUIDANCE --&gt;
+&lt;!-- END MD MANAGED GUIDANCE --&gt;</code></pre></div>
+<p>Everything before and after those markers belongs to the repository. The synchronizer does not rewrite, reorder, summarize, or remove unmanaged instructions.</p>
+<h4>Create missing files safely</h4>
+<p>When a configured agent file does not exist, the tool creates it and inserts the managed block. When the file exists, the tool appends the block or replaces the existing managed block.</p>
+<h4>Remain idempotent</h4>
+<p>Running the command repeatedly with the same project and suite paths produces no additional changes. There is exactly one managed block per file.</p>
+<h4>Keep routing compact</h4>
+<p>Root agent files must not contain all 201 prompt bodies, all 110 scenarios, or the full skill registry. They contain an intent-routing protocol and high-frequency shortcuts. The canonical suite remains the source of truth.</p>
+<h3>Installation into a project</h3>
+<p>From the project root, run the Python tool from the suite:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python /path/to/md/tools/sync_agent_guidance.py \
+  --project-root . \
+  --suite-root /path/to/md</code></pre></div>
+<p>On Windows PowerShell:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&amp; &quot;C:\path\to\md\tools\sync-agent-guidance.ps1&quot; `
+  -ProjectRoot . `
+  -SuiteRoot &quot;C:\path\to\md&quot;</code></pre></div>
+<p>The one-line CMD wrapper can also be run from the target repository root:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>C:\path\to\md\tools\sync-agent-guidance.cmd</code></pre></div>
+<p>The tool manages exactly:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>AGENTS.md
+CLAUDE.md</code></pre></div>
+<p>To synchronize only one of the supported files:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/sync_agent_guidance.py \
+  --project-root /path/to/project \
+  --agent-file AGENTS.md</code></pre></div>
+<p><code>--agent-file</code> accepts only <code>AGENTS.md</code> or <code>CLAUDE.md</code>. Other filenames are rejected rather than silently created.</p>
+<h3>Preview and audit</h3>
+<p>Preview without writing:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/sync_agent_guidance.py \
+  --project-root /path/to/project \
+  --dry-run \
+  --show-diff</code></pre></div>
+<p>Print the generated managed block:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/sync_agent_guidance.py \
+  --project-root /path/to/project \
+  --print-block</code></pre></div>
+<p>The default receipt is written to:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>.prompt_suite/agent-guidance-receipt.json</code></pre></div>
+<p>The receipt records:</p>
+<ul><li>project and suite roots;</li><li>suite version;</li><li>managed filenames;</li><li>created, updated, removed, and unchanged files;</li><li>dry-run state;</li><li>optional unified diffs.</li></ul>
+<h3>Removing the integration</h3>
+<p>Remove only the managed MD blocks:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/sync_agent_guidance.py \
+  --project-root /path/to/project \
+  --remove</code></pre></div>
+<p>Human-authored content remains in place. A file that contains only the managed block becomes an empty file rather than being deleted automatically; file deletion is left to the repository owner.</p>
+<h3>Keyword behavior</h3>
+<p>The generated guidance treats <code>MD</code> as a simple, memorable routing keyword.</p>
+<h4>Exact target</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD MD-29
+MD C-108</code></pre></div>
+<p>The agent should inspect the exact target:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py explain MD-29
+python tools/md.py explain C-108</code></pre></div>
+<h4>Natural-language intent routing</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD audit and fix security issues
+MD academic paper review
+MD visual assets for a technical report
+MD personal productivity system</code></pre></div>
+<p>The agent preserves the full request and invokes the keyword-context router:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py route &quot;MD advanced audit and fix security issues&quot;</code></pre></div>
+<p>Routing performs these deterministic stages:</p>
+<p>1. recognize a leading standalone <code>MD</code> or <code>md</code> slug without confusing it with an exact <code>MD-###</code> identifier; 2. parse depth, assurance, mode, and composition modifiers; 3. resolve exact prompt, scenario, or pack identifiers; 4. apply the longest and highest-priority shortcut owner in each route family; 5. search metadata only when no shortcut owns the intent; 6. select the smallest prompt, scenario, or bounded workflow graph above the confidence threshold.</p>
+<p><code>lookup</code> remains an operator discovery command. It searches:</p>
+<ul><li>prompt titles, descriptions, categories, roles, tags, preferred skills, and permanent capability IDs;</li><li>composite scenario titles and purposes;</li><li>department discovery packs;</li><li>skill IDs and purposes.</li></ul>
+<p>It returns match scores, matched terms, result type, canonical path or purpose, and the next <code>explain</code> command.</p>
+<p>Neither <code>route</code> nor <code>lookup</code> opens prompt bodies. <code>explain</code> remains authoritative for the complete selected graph, and only the selected bodies are loaded afterward.</p>
+<h4>Context modifiers</h4>
+<p>The policy in <code>policies/agent_guidance_policy.json</code> defines phrases such as:</p>
+<ul><li><code>advanced</code>, <code>in depth</code>, <code>comprehensive</code>, and <code>deep</code> for advanced depth;</li><li><code>high assurance</code> and <code>rigorous</code> for stronger assurance;</li><li><code>audit only</code>, <code>plan only</code>, <code>draft only</code>, and <code>verify only</code> for mode intent;</li><li><code>workflow</code>, <code>scenario</code>, <code>combine</code>, and <code>end to end</code> for composition intent.</li></ul>
+<p>Modifiers influence context and graph shape; they do not grant mutation or external-action authority.</p>
+<h4>Route comparison</h4>
+<p>When two routes are plausible, compare their authority and cost without opening prompt bodies:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py compare C-108 C-63</code></pre></div>
+<p>The comparison reports route kind, default mode, minimum assurance, capability count, exact-twin pairs, risk levels, evidence lanes, mutation rights, and verification burden.</p>
+<h3>High-frequency productivity shortcuts</h3>
+<p>The managed block includes compact defaults:</p>
+<div class="table-card"><table><tbody><tr><td>Keyword</td><td>Default route</td><td>Use</td></tr><tr><td><code>MD clarify</code></td><td><code>MD-191</code></td><td>ask only route-changing questions</td></tr><tr><td><code>MD skill</code></td><td><code>MD-192 → MD-196</code></td><td>prove skill fit and execute an exact skill</td></tr><tr><td><code>MD find skill</code></td><td><code>MD-193 → MD-194 or MD-195</code></td><td>discover, install, or create a missing reusable skill</td></tr><tr><td><code>MD loop</code></td><td><code>MD-197 → MD-198</code></td><td>bounded repetition and independent exit adjudication</td></tr><tr><td><code>MD audit fix verify</code></td><td><code>C-108</code></td><td>convergent audit, remediation, and verification</td></tr><tr><td><code>MD research</code></td><td><code>C-26</code></td><td>deep research report</td></tr><tr><td><code>MD report</code></td><td><code>C-95</code></td><td>professional report pipeline</td></tr><tr><td><code>MD prompt</code></td><td><code>C-94</code></td><td>prompt creation and optimization pipeline</td></tr><tr><td><code>MD feature</code></td><td><code>C-63</code></td><td>feature delivery</td></tr><tr><td><code>MD visual assets</code></td><td><code>C-109</code></td><td>code-native visual-asset batch production</td></tr><tr><td><code>MD strudel</code></td><td><code>C-110</code></td><td>Strudel composition and refinement</td></tr><tr><td><code>MD productivity</code></td><td><code>MD-138</code></td><td>personal knowledge and work system</td></tr></tbody></table></div>
+<p>These routes are defaults, not unconditional dispatch. The agent must still confirm that the route owns the requested outcome.</p>
+<h3>Efficient lookup order</h3>
+<p>A connected agent should follow this order:</p>
+<p>1. Run <code>tools/md.py route</code> with the full user request. 2. Run <code>tools/md.py compare</code> only when close routes need a decision. 3. Run <code>tools/md.py explain</code> for every selected prompt, scenario, or pack. 4. Read <code>catalog.json</code> or <code>SCENARIO_CATALOG.json</code> for machine metadata. 5. Read <code>PROMPT_EXECUTION_ORDER.md</code> for phases, modes, branches, locks, and completion semantics. 6. Load only selected prompt bodies and their declared prerequisites from <code>prompts/</code>. 7. Load schemas, policies, skill registry entries, or loop policies only when triggered.</p>
+<p>This order keeps context small and avoids scanning all prompts for routine work.</p>
+<h3>Inquisitive behavior</h3>
+<p>The agent should not turn MD into a long questionnaire.</p>
+<p>Use <code>MD-191</code> when an answer changes one of the following:</p>
+<ul><li>selected prompt or scenario;</li><li>authorization boundary;</li><li>evidence lane;</li><li>assurance level;</li><li>output medium;</li><li>budget;</li><li>acceptance criteria;</li><li>whether an external action is allowed.</li></ul>
+<p>Do not ask about details that can be safely inferred, recorded as an assumption, or deferred until the relevant phase.</p>
+<h3>Skill behavior</h3>
+<p>The guidance teaches agents that an installed skill is not automatically required.</p>
+<p>A skill should be invoked only when:</p>
+<ul><li>its declared capability genuinely matches the requested result;</li><li>it materially improves an acceptance criterion;</li><li>its input and output contracts are understood;</li><li>its permissions and external effects are within authority;</li><li>its output can be independently verified.</li></ul>
+<p>Use <code>visual-assets</code> for deliberate code-native SVG, HTML, CSS, JavaScript, vector, illustration, infographic, diagram, and presentation-asset work when appropriate. Use <code>strudel</code> for Strudel music code. These are first-class examples, not exceptions to the generic skill policy.</p>
+<h3>Loop behavior</h3>
+<p>A connected agent may invoke the generic loop only when repetition has a measurable purpose:</p>
+<ul><li>a finite queue of independent items;</li><li>a remaining defect or finding;</li><li>a changed hypothesis;</li><li>a declared quality metric;</li><li>an independent verification step.</li></ul>
+<p>It must stop on verified success, quality plateau, budget exhaustion, stale evidence, lost authority, unsafe effects, repeated failure without a new hypothesis, or human stop.</p>
+<h3>Managed-block update behavior</h3>
+<p>When the suite moves, rerun the synchronizer with the new <code>--suite-root</code>. The tool updates only the managed block, including relative paths and version information.</p>
+<p>When the suite version changes, rerun the tool to update the version shown in each root agent file.</p>
+<p>Do not manually edit path or version values inside the managed block. Manual edits will be replaced on the next synchronization.</p>
+<h3>Failure handling</h3>
+<p>The synchronizer stops without writing when:</p>
+<ul><li>the suite root lacks the catalog, scenario catalog, prompt directory, or tools directory;</li><li>an agent target is absolute, escapes the project root, or is not Markdown;</li><li>begin and end markers are unmatched;</li><li>multiple managed blocks are present in one file;</li><li>a JSON policy file is malformed;</li><li>an atomic write fails.</li></ul>
+<p>Fix the structural problem and rerun. Do not remove user content to make the tool pass.</p>
+<h3>Validation</h3>
+<p>Run the focused tests:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pytest -q tests/test_agent_guidance.py
+pytest -q tests/test_md.py
+pytest -q tests/test_lifecycle_and_public_commands.py</code></pre></div>
+<p>Run the full deterministic chain:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/check_documentation_links.py
+python tools/run_tests.py
+python tools/build_manifest.py --check
+python tools/validate_suite.py</code></pre></div>
+<h3>Security and privacy</h3>
+<p>The synchronization tool performs local file reads and writes only. It does not:</p>
+<ul><li>call a language model;</li><li>install skills;</li><li>access the network;</li><li>inspect secrets;</li><li>execute a selected prompt;</li><li>publish or send content.</li></ul>
+<p>The generated agent guidance grants no additional authority. It points to the suite's existing authorization, evidence, tool, skill, loop, and verification contracts.</p>
+<h3>Router scoring reference</h3>
+<p>Natural-language selection is implemented by <code>tools/intent_router.py</code> and configured by <code>config/router_keywords.json</code>. The router maps aliases to concepts, performs conservative and recorded typo correction, enriches scenario evidence from referenced prompts, applies rarity-aware field scoring and narrow route hints, and calibrates confidence from coverage and ranking evidence. Every candidate exposes score components and field matches.</p>
+<p>Generic policy shortcuts should use <code>match_mode: exact</code> when a common word would otherwise preempt semantic routing. See the <a href="/mission-directives/reference/manuals/router-keyword-catalog-and-scoring-guide/">Router Keyword Catalog and Scoring Guide</a> for the complete contract and extension workflow.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md</span></footer></main>
+
+</body>
+</html>

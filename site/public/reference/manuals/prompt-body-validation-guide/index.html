@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prompt Body Validation Guide from the Mission Directives documentation set." />
+  <title>Prompt Body Validation Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/PROMPT_BODY_VALIDATION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Prompt Body Validation Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/PROMPT_BODY_VALIDATION_GUIDE.md</span></div><h1>Prompt Body Validation Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Prompt Body Validation Guide</h2>
+<h3>Purpose</h3>
+<p>The suite validates prompt bodies separately from frontmatter, catalogs, scenarios, schemas, skills, and runtime state. This prevents a structurally complete catalog from hiding weak or unused body contracts.</p>
+<h3>Static body audit</h3>
+<p>Run:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/audit_prompt_bodies.py
+python tools/audit_prompt_bodies.py --check</code></pre></div>
+<p>The tool produces:</p>
+<ul><li><code>BODY_QUALITY_AUDIT.json</code></li><li><code>BODY_QUALITY_AUDIT.md</code></li></ul>
+<p>The JSON file is intended for CI and dashboards. The Markdown file is a human summary.</p>
+<h3>Current invariant classes</h3>
+<h4>Completion criteria</h4>
+<p>Checks:</p>
+<ul><li>present in every prompt;</li><li>at least three bullets;</li><li>known boilerplate absent;</li><li>task-specific title or artifact terms present;</li><li><code>=VERIFY:{id}</code> required;</li><li>normalized full blocks are not duplicated across unrelated prompts.</li></ul>
+<h4>Tool policy</h4>
+<p>Checks canonical <code>&lt;tool_policy&gt;</code> presence in all prompts.</p>
+<p>The audit does not prove runtime enforcement; policy files and execution controls remain separate proof surfaces.</p>
+<h4>Runtime markers</h4>
+<p>Checks that each prompt explicitly names:</p>
+<ul><li><code>@EVIDENCE:{id}</code></li><li><code>?UNKNOWN:{id}</code></li><li><code>#FINDING:{id}</code></li><li><code>+ACTION:{id}</code></li><li><code>=VERIFY:{id}</code></li><li><code>!STOP:{reason}</code></li></ul>
+<h4>Authorization naming</h4>
+<p>Checks canonical <code>&lt;authorization_boundary&gt;</code> presence and rejects <code>&lt;security_execution_boundary&gt;</code>.</p>
+<h4>Executive behavior</h4>
+<p>Checks all executive prompts contain:</p>
+<ul><li><code>&lt;decision_rules&gt;</code>;</li><li><code>&lt;verification_reference&gt;</code>;</li><li>no duplicated <code>&lt;verification&gt;</code> block.</li></ul>
+<h4>Pair de-duplication</h4>
+<p>Compares investigator <code>&lt;verification_design&gt;</code> to executive verification content and rejects byte-equivalent duplication.</p>
+<h4>Dependency integrity</h4>
+<p>Checks that no prompt requires or contract-references itself and that <code>capability_graph.json</code> has no self-edge.</p>
+<h4>Complexity budgets</h4>
+<p>Counts body words and compares them to the declared frontmatter budget.</p>
+<h3>Regression tests</h3>
+<p><code>tests/test_prompt_body_quality.py</code> provides focused tests for every invariant. Tests were written to fail against the deficient body set before the transformations were applied.</p>
+<p>Run:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pytest -q tests/test_prompt_body_quality.py</code></pre></div>
+<h3>Full validation sequence</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/build_capability_graph.py --check
+python tools/audit_prompt_bodies.py --check
+python tools/check_skill_lock.py
+python tools/run_evaluations.py
+python tools/run_tests.py
+python tools/build_manifest.py --check
+python tools/validate_suite.py</code></pre></div>
+<h3>Reading the audit report</h3>
+<p>A <code>pass</code> means the static prompt-body invariants are satisfied. It does not mean:</p>
+<ul><li>every model follows the prompt;</li><li>every skill is safe;</li><li>a live external action was verified;</li><li>a human approved the content;</li><li>quality is universally optimal.</li></ul>
+<p>Those claims require behavioral fixtures, model benchmarks, skill conformance, external verification, or human review.</p>
+<h3>Adding a new invariant</h3>
+<p>1. Write a failing test. 2. Confirm it fails for the intended reason. 3. Add the smallest validator or transformation change. 4. Confirm the focused test passes. 5. Run all tests. 6. Regenerate the audit report. 7. Update manuals and CI. 8. Rebuild the manifest.</p>
+<h3>Mutation examples</h3>
+<p>The validator should detect mutations such as:</p>
+<ul><li>replacing completion criteria with a generic sentence;</li><li>deleting <code>&lt;tool_policy&gt;</code>;</li><li>removing one runtime marker;</li><li>changing <code>&lt;authorization_boundary&gt;</code> to an undocumented synonym;</li><li>deleting executive decision rules;</li><li>copying investigator verification into the executive;</li><li>adding a prompt self-dependency;</li><li>exceeding the declared body budget.</li></ul>
+<h3>Troubleshooting</h3>
+<h4>Audit report differs in CI</h4>
+<p>Regenerate locally and inspect the prompt changes. Do not simply overwrite the report without understanding the changed metric.</p>
+<h4>Completion block fails task-specific check</h4>
+<p>Name the artifact or domain outcome directly. Do not add random title words merely to satisfy the test.</p>
+<h4>Executive fails verification-reference check</h4>
+<p>Remove the repeated list and reference the frozen acceptance-criteria artifact produced by the paired investigator.</p>
+<h4>Tool policy is present but too broad</h4>
+<p>Static presence is only the first check. Review allowed tool classes, modes, network, writes, external effects, and output quarantine manually.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/PROMPT_BODY_VALIDATION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

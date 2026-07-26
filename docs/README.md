@@ -61,4 +61,4 @@ python tools/validate_suite.py
 `BODY_QUALITY_AUDIT.json` is machine-readable. `BODY_QUALITY_AUDIT.md` is the human summary.
 ## Documentation website
 
-The searchable Astro/Starlight site is published at <https://manojpisini.github.io/mission-directives/>. It generates prompt, scenario, skill, and manual reference pages from canonical repository sources before every build. See the [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md).
+The static Astro site is published at <https://manojpisini.github.io/mission-directives/>. It uses the checked-in landing/documentation shell and generates manual pages from `docs/*.md` before every build. See the [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md).

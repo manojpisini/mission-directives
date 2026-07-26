@@ -30,9 +30,8 @@ agent-guidance-receipt.json
 .venv/
 venv/
 
-# Astro/Starlight generated and dependency trees
+# Astro generated and dependency trees
 site/node_modules/
 site/dist/
 site/.astro/
-site/src/content/docs/reference/
 prompt_imports/

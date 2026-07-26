@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Documentation Site Guide from the Mission Directives documentation set." />
+  <title>Documentation Site Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/DOCUMENTATION_SITE_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Documentation Site Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/DOCUMENTATION_SITE_GUIDE.md</span></div><h1>Documentation Site Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Documentation Site Guide</h2>
+<h3>Purpose</h3>
+<p>The static Astro site publishes the public documentation surface at <code>https://manojpisini.github.io/mission-directives/</code>. The source lives under <code>site/</code> and uses the checked-in HTML, CSS, and JavaScript shell for the landing and documentation pages.</p>
+<h3>Architecture</h3>
+<p><code>site/scripts/generate-reference.mjs</code> runs before development and production builds. It creates the static documentation page and mirrors every root <code>docs/*.md</code> manual into <code>site/public/reference/manuals/</code>.</p>
+<p>The public site includes:</p>
+<ul><li><code>site/src/pages/index.astro</code> for the landing page shell;</li><li><code>site/public/docs.html</code> for the documentation hub;</li><li><code>site/public/styles.css</code> and <code>site/public/app.js</code> for the provided visual system and interactions;</li><li>generated manual pages under <code>site/public/reference/manuals/</code>;</li><li>static assets under <code>site/public/assets/</code>.</li></ul>
+<p>Astro provides the build and GitHub Pages base path. The site shell owns navigation, search dialog behavior, copy buttons, tabs, sidebar behavior, and the light-mode visual system.</p>
+<h3>Local development</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>cd site
+pnpm install --frozen-lockfile
+pnpm run dev</code></pre></div>
+<p>Production verification:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pnpm run generate
+pnpm run build
+pnpm run check</code></pre></div>
+<p><code>pnpm run check</code> builds the site and verifies internal links across the generated HTML pages.</p>
+<h3>Publishing</h3>
+<p><code>.github/workflows/deploy-docs.yml</code> builds with <code>withastro/action</code> and deploys with <code>actions/deploy-pages</code> after a push to <code>main</code> that changes site or canonical documentation inputs. The workflow can also be run manually.</p>
+<p>In repository settings, set Pages source to **GitHub Actions**. The public URL updates only after the workflow completes successfully.</p>
+<h3>Content ownership</h3>
+<div class="table-card"><table><tbody><tr><td>Content</td><td>Edit</td></tr><tr><td>Landing page shell</td><td><code>site/src/pages/index.astro</code></td></tr><tr><td>Documentation hub and manual generation</td><td><code>site/scripts/generate-reference.mjs</code></td></tr><tr><td>Manual source</td><td><code>docs/*.md</code></td></tr><tr><td>Visual system</td><td><code>site/public/styles.css</code></td></tr><tr><td>Interactions</td><td><code>site/public/app.js</code></td></tr><tr><td>Static diagrams and illustrations</td><td><code>site/public/assets/</code></td></tr><tr><td>Navigation and deployment base</td><td><code>site/astro.config.mjs</code></td></tr></tbody></table></div>
+<h3>Branding handoff</h3>
+<p>The current visual system is light, minimal, and sage-accented. Replace branding assets under <code>site/public/</code> when final brand assets are ready. Keep focus visibility, responsive tables, reduced-motion behavior, contrast, copy buttons, tabs, mobile navigation, and the <code>/mission-directives</code> base path intact.</p>
+<h3>Validation</h3>
+<p>The repository keeps <code>site/node_modules/</code>, <code>site/dist/</code>, and <code>site/.astro/</code> outside the manifest. The site source, generated public documentation pages, lockfile, generator, and workflow remain sealed release inputs.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/DOCUMENTATION_SITE_GUIDE.md</span></footer></main>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CI and Testing Guide from the Mission Directives documentation set." />
+  <title>CI and Testing Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/CI_AND_TESTING_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="CI and Testing Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/CI_AND_TESTING_GUIDE.md</span></div><h1>CI and Testing Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>CI and Testing Guide</h2>
+<h3>Purpose</h3>
+<p>This guide describes the deterministic checks that keep the suite coherent after prompt, schema, scenario, policy, skill, model, documentation, or runtime changes.</p>
+<h3>Local prerequisites</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python -m pip install -r requirements-dev.txt</code></pre></div>
+<p>The test environment requires Python, PyYAML, jsonschema, and pytest.</p>
+<h3>Fast focused checks</h3>
+<h4>Prompt-body work</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pytest -q tests/test_prompt_body_quality.py
+python tools/audit_prompt_bodies.py --check</code></pre></div>
+<h4>Runtime work</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pytest -q tests/test_md.py</code></pre></div>
+<h4>Graph or dependency work</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/build_capability_graph.py --check</code></pre></div>
+<h4>Skill registry or lock work</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/check_skill_lock.py</code></pre></div>
+<h3>Complete local chain</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/build_capability_graph.py --check
+python tools/audit_prompt_bodies.py
+python tools/check_skill_lock.py
+python tools/run_evaluations.py
+python tools/run_tests.py
+python tools/validate_templates.py
+python tools/check_documentation_links.py
+python tools/check_script_parity.py
+python tools/check_release_consistency.py
+python tools/check_generated_reproducibility.py
+python tools/build_manifest.py --check
+python tools/validate_suite.py</code></pre></div>
+<p>If canonical files intentionally changed, regenerate the graph, audit, test status, and manifest before running <code>--check</code>.</p>
+<h3>Test-driven defect repair</h3>
+<p>For a bug or missing invariant:</p>
+<p>1. write a focused failing test; 2. run it and confirm the failure is caused by the defect; 3. implement the smallest correction; 4. run the focused test; 5. run the full test suite; 6. regenerate derived artifacts; 7. run full validation; 8. inspect the semantic diff.</p>
+<p>The prompt-body defect repairs use this pattern. The tests fail against generic completion text, missing tool policies and markers, missing executive decision rules, duplicated verification, and self-dependencies.</p>
+<h3>GitHub Actions</h3>
+<p><code>.github/workflows/validate.yml</code> runs on every push and pull request across Ubuntu, Windows, and macOS with Python 3.12.</p>
+<p>The workflow must run checks in this order:</p>
+<p>1. install development dependencies; 2. generate prompt-body audit artifacts; 3. run deterministic tests and public-command smoke coverage; 4. run evaluation, route-confusion, and exact-twin fixtures; 5. validate templates and Bash/PowerShell script parity; 6. check release metadata and generated reproducibility; 7. run complete validation; 8. smoke-test the platform-native wrapper; 9. upload audit, test, evaluation, and validation artifacts even when an earlier step fails.</p>
+<p>Generated artifacts are reviewed as CI uploads. Canonical reproducibility and the manifest still fail when committed package content diverges.</p>
+<h3>Uploaded evidence</h3>
+<p>Each matrix job uploads a <code>validation-&lt;os&gt;</code> artifact containing:</p>
+<ul><li><code>BODY_QUALITY_AUDIT.json</code> and <code>.md</code>;</li><li><code>.prompt_suite/results/TEST_RESULTS.json</code>;</li><li><code>.prompt_suite/results/EVALUATION_STATUS.json</code>;</li><li><code>VALIDATION.json</code> when full validation reached its reporting stage.</li></ul>
+<p>Artifact upload uses <code>if: always()</code> so an early failure still preserves whatever evidence was produced. Missing files warn rather than masking the original failure.</p>
+<h3>Pre-commit</h3>
+<p>The local hooks run body audit, graph check, evaluations, tests, and suite validation. Install with:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pre-commit install</code></pre></div>
+<h3>Manifest handling</h3>
+<p><code>MANIFEST.json</code> records every package file except the manifest and current validation result. After an intentional change:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/build_manifest.py
+python tools/build_manifest.py --check</code></pre></div>
+<p>Never hand-edit hashes.</p>
+<h3>Common failures</h3>
+<h4>Manifest mismatch</h4>
+<p>A file changed after the manifest was generated. Re-run the relevant tests first, then rebuild the manifest.</p>
+<h4>Audit report mismatch</h4>
+<p>Prompt bodies changed without regenerating <code>BODY_QUALITY_AUDIT.json</code> and <code>.md</code>. Review the metric change before regenerating.</p>
+<h4>Graph mismatch</h4>
+<p>Prompt <code>requires</code> or pairing changed. Rebuild <code>capability_graph.json</code> and inspect added or removed edges.</p>
+<h4>Catalog mismatch</h4>
+<p>Frontmatter and <code>catalog.json</code> disagree. Rebuild the catalog from canonical frontmatter or fix the source inconsistency.</p>
+<h4>Body word budget exceeded</h4>
+<p>Remove duplicated prose or intentionally update the budget with a small margin after review. Do not inflate every budget to hide growth.</p>
+<h3>Proof boundary</h3>
+<p>CI proves deterministic package integrity. It does not execute third-party skills, benchmark external models, deploy systems, or provide human approval unless those jobs are explicitly configured with secure credentials and environments.</p>
+<h3>Documentation integrity check</h3>
+<p>Run:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/check_documentation_links.py</code></pre></div>
+<p>The checker scans root and <code>docs/</code> Markdown files, ignores external URLs and in-document anchors, rejects missing relative targets, and rejects links that escape the repository root. The same check runs in pytest, pre-commit, the complete validator, and CI.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/CI_AND_TESTING_GUIDE.md</span></footer></main>
+
+</body>
+</html>

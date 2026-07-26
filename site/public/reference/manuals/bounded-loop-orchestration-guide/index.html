@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bounded Loop Orchestration Guide from the Mission Directives documentation set." />
+  <title>Bounded Loop Orchestration Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/BOUNDED_LOOP_ORCHESTRATION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Bounded Loop Orchestration Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/BOUNDED_LOOP_ORCHESTRATION_GUIDE.md</span></div><h1>Bounded Loop Orchestration Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Bounded Loop Orchestration Guide</h2>
+<h3>Purpose</h3>
+<p><code>MD-197</code> can loop **any prompt, scenario, or exact skill**. The target is generic. The eligibility test—not the domain—decides whether looping is useful.</p>
+<p>The loop exists for two distinct forms of repeated work:</p>
+<p>1. **Outer work loop:** process a finite queue of assets, files, findings, records, test cases, locales, sections, or other independent items. 2. **Inner quality loop:** refine the current item while objective evidence shows that another pass can improve it.</p>
+<p>Either layer may be used alone. A batch of twelve already-acceptable one-pass assets uses twelve outer iterations and one inner iteration each. A single complex diagram may use one outer item and up to three inner refinement passes. The limits are separate so queue size is not confused with quality retry count.</p>
+<h3>Eligibility test</h3>
+<p>A loop is eligible only when all required conditions are true:</p>
+<ul><li>there is a finite queue with more than one item **or** a measurable refinement objective;</li><li>desired output and desired result are explicitly defined;</li><li>progress can be measured or independently verified;</li><li>each pass can produce new evidence, state, or a changed hypothesis;</li><li>iteration, token, time, cost, and tool budgets are bounded;</li><li>writes are serialized or isolated;</li><li>rollback or last-known-good preservation is possible for mutations;</li><li>repeated external effects are excluded;</li><li>expected value exceeds loop cost and risk.</li></ul>
+<h3>Ineligible cases</h3>
+<p>Reject the loop when:</p>
+<ul><li>one complete pass can satisfy the result;</li><li>“keep improving until satisfied” has no rubric or threshold;</li><li>the same failed invocation would be retried with unchanged evidence;</li><li>the producer would repeatedly publish, send, deploy, delete, pay, or perform another irreversible effect;</li><li>the acceptance threshold changes to make a weak result pass;</li><li>iterations cannot be compared;</li><li>the quality measure encourages cosmetic overfitting rather than useful improvement;</li><li>cost or latency exceeds the likely gain.</li></ul>
+<h3>Loop plan</h3>
+<p>A loop plan should contain:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>loop_target:
+  kind: prompt | scenario | skill
+  id:
+mode: batch | refinement | audit_fix_verify | mixed
+work_queue: []
+desired_output:
+desired_result:
+quality_rubric: []
+progress_metric:
+acceptance_threshold:
+verification_method:
+budgets:
+  maximum_outer_iterations:
+  maximum_inner_iterations:
+  maximum_no_improvement:
+  token_limit:
+  time_limit:
+  cost_limit:
+  tool_call_limit:
+concurrency:
+  single_writer_rule:
+  isolated_parallel_groups: []
+rollback:
+exit_precedence: []</code></pre></div>
+<p>Maximum limits are ceilings. The loop must stop before them when success, plateau, safety, or authority conditions require it.</p>
+<h3>Iteration record</h3>
+<p>Each pass records:</p>
+<ul><li>loop and iteration IDs;</li><li>queue item or refinement target;</li><li>input references and hashes;</li><li>hypothesis or defect class addressed;</li><li><code>+ACTION:{id}</code>;</li><li>output artifacts and lineage;</li><li>score, verification result, and delta;</li><li>new evidence;</li><li>warnings and failures;</li><li>budget consumed and remaining;</li><li>residuals;</li><li><code>MD-198</code> decision.</li></ul>
+<p>A pass with no new evidence, changed input, changed hypothesis, or processed queue item is normally not a valid iteration.</p>
+<h3>Exit precedence</h3>
+<p><code>MD-198</code> applies this order:</p>
+<p>1. **hard safety or authority stop**; 2. **desired result independently verified**; 3. **queue exhausted with accepted or explicitly residualized items**; 4. **quality plateau or repeated unchanged failure**; 5. **budget or iteration limit**; 6. **human stop or escalation**.</p>
+<p>This order prevents a quality score from overriding safety and prevents maximum-iteration chasing after success.</p>
+<p>Possible decisions:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>continue
+complete
+plateau_stop
+budget_stop
+safety_stop
+rollback
+human_escalation</code></pre></div>
+<h3>Batch example: visual assets</h3>
+<p>Suppose the queue contains twelve vector assets:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>01-market-map.svg
+02-value-chain.svg
+03-risk-matrix.svg
+...
+12-summary-illustration.svg</code></pre></div>
+<p>The outer loop:</p>
+<p>1. selects one asset brief; 2. invokes <code>MD-196</code> with <code>visual-assets</code>; 3. quarantines output; 4. verifies source accuracy, communication purpose, composition, editability, accessibility, and export; 5. invokes <code>MD-198</code>; 6. marks the item accepted or residual; 7. advances to the next item.</p>
+<p>An inner loop is added only when the current asset fails a measurable criterion and another targeted pass has a concrete hypothesis. It does not clone one template across the queue merely for efficiency.</p>
+<p>CLI planning example:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py auto-plan MD-104 \
+  --skill-id visual-assets \
+  --skill-required \
+  --loop \
+  --work-items 12 \
+  --measurable</code></pre></div>
+<h3>Audit–fix–verify convergence loop</h3>
+<p>The target may be any audit and remediation route, for example:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD-29 debugging investigation
+→ MD-30 bounded fix
+→ independent verification
+→ MD-198</code></pre></div>
+<p>A new pass is justified when:</p>
+<ul><li>the prior fix exposes a different reachable defect;</li><li>verification reveals a new causal path;</li><li>a previously blocked test becomes executable;</li><li>the remaining risk class is different and in scope.</li></ul>
+<p>A new pass is **not** justified when the same failed fix would be retried unchanged. After repeated unsuccessful hypotheses, stop and question the architecture or escalate rather than thrash.</p>
+<h3>External effects</h3>
+<p>Loops may produce local drafts, patches, previews, test runs, and dry-run manifests. They may not repeatedly:</p>
+<ul><li>publish;</li><li>send messages;</li><li>deploy;</li><li>merge;</li><li>transfer funds;</li><li>delete records;</li><li>submit filings;</li><li>create real accounts;</li><li>contact targets.</li></ul>
+<p>The loop prepares and verifies the final consequential batch. The external effect occurs once after the appropriate approval gate.</p>
+<h3>Concurrency</h3>
+<p>Parallel execution is allowed only when work items are isolated and do not write the same source of truth. Use:</p>
+<ul><li>separate output paths;</li><li>immutable source snapshots;</li><li>independent branches or worktrees where relevant;</li><li>one authoritative fan-in stage;</li><li>deterministic conflict resolution.</li></ul>
+<p>Do not let parallel workers silently update the same manuscript, deck, code file, design token set, or registry.</p>
+<h3>Plateau examples</h3>
+<h4>Quantitative</h4>
+<p>Target score: <code>0.90</code>; minimum meaningful delta: <code>0.01</code>; maximum no-improvement passes: <code>2</code>.</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>0.700 → 0.705 → 0.710</code></pre></div>
+<p>Both recent deltas are below <code>0.01</code>, so the correct decision is <code>plateau_stop</code>, not another blind pass.</p>
+<h4>Qualitative</h4>
+<p>A reviewer rubric has five independent criteria. Two consecutive passes change wording but do not resolve the failed evidence and accessibility criteria. The loop plateaus even if the producer describes the output as “more polished.”</p>
+<h3>CLI exit examples</h3>
+<p>Plateau:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py loop-decision \
+  --iteration 3 \
+  --current-score 0.71 \
+  --target-score 0.90 \
+  --previous-scores 0.70,0.705 \
+  --max-iterations 5 \
+  --max-no-improvement 2 \
+  --minimum-delta 0.01</code></pre></div>
+<p>Verified completion:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py loop-decision \
+  --iteration 2 \
+  --current-score 0.95 \
+  --target-score 0.90 \
+  --previous-scores 0.80 \
+  --verified \
+  --queue-remaining 0</code></pre></div>
+<h3>Anti-patterns</h3>
+<ul><li>treating <code>max_iterations</code> as a target;</li><li>self-scoring without independent evidence;</li><li>changing several unrelated variables per pass;</li><li>losing the last verified artifact;</li><li>retrying after authority expires;</li><li>hiding unprocessed queue items;</li><li>declaring completion because the queue is empty when items failed;</li><li>allowing a reviewer to edit the artifact it judges at high risk;</li><li>using a loop to compensate for unclear intent or a missing prerequisite.</li></ul></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/BOUNDED_LOOP_ORCHESTRATION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

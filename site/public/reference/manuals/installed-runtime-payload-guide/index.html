@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Installed Runtime Payload Guide from the Mission Directives documentation set." />
+  <title>Installed Runtime Payload Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/INSTALLED_RUNTIME_PAYLOAD_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Installed Runtime Payload Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/INSTALLED_RUNTIME_PAYLOAD_GUIDE.md</span></div><h1>Installed Runtime Payload Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Installed Runtime Payload Guide</h2>
+<h3>Purpose</h3>
+<p>This guide defines the boundary between a working-project installation and the Mission Directives source repository. <code>config/runtime_payload.json</code> is the machine-readable source of truth.</p>
+<h3>Runtime profile</h3>
+<p>The <code>runtime</code> profile contains everything required to:</p>
+<ul><li>route natural-language intent and exact IDs;</li><li>inspect prompts, scenarios, packs, schemas, policies, and identity maps;</li><li>compile plans and execution graphs;</li><li>resolve templates and registered skills;</li><li>synchronize root agent guidance;</li><li>write local telemetry and receipts;</li><li>run the managed cleanup workflow.</li></ul>
+<p>The profile includes canonical catalogs, prompt bodies, runtime configuration, compatibility data, policies, schemas, templates, examples, integrations, selected Python tools, and <code>requirements-runtime.txt</code>.</p>
+<h3>Repository-only profile</h3>
+<p>The source repository retains assets needed to author, evaluate, test, validate, package, and publish the suite:</p>
+<ul><li><code>.github/</code>;</li><li><code>tests/</code>;</li><li><code>evaluations/</code>;</li><li><code>site/</code>;</li><li>prompt import and addition tools;</li><li>audit, test, validation, and manifest builders;</li><li><code>requirements-dev.txt</code>.</li></ul>
+<p>These assets certify or develop the product. They are not dependencies of normal prompt execution in a target project.</p>
+<h3>Installation transaction</h3>
+<p><code>tools/install.py</code>:</p>
+<p>1. validates the target and rejects overlap with the suite source; 2. loads and validates the runtime payload contract; 3. rejects duplicate, escaped, missing, linked, or special-file payload entries; 4. stages only declared files and directories; 5. verifies the staged tree; 6. backs up an existing installation when replacement is explicit; 7. atomically promotes the staged runtime; 8. updates managed <code>.gitignore</code> and agent-guidance blocks; 9. creates runtime directories and ownership markers; 10. writes schema-valid installation and guidance receipts; 11. restores the previous state if a post-promotion step fails.</p>
+<h3>Audit fields</h3>
+<p>A successful installation receipt records:</p>
+<ul><li><code>payload_profile: runtime</code>;</li><li><code>installed_file_count</code>;</li><li>suite version and destination;</li><li>backup location when applicable;</li><li>created runtime directories;</li><li>preexisting project files;</li><li>guidance synchronization result;</li><li>UTC installation time.</li></ul>
+<p>A dry run reports the repository-only exclusions so operators can review the boundary before mutation.</p>
+<h3>Verification</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/install.py /path/to/project --dry-run
+python tools/install.py /path/to/project
+python /path/to/project/prompts/tools/md.py route &quot;MD cleanup dead code safely&quot;</code></pre></div>
+<p>Confirm that the project installation does not contain tests, evaluations, prompt imports, CI workflows, site sources, repository validators, or development requirements.</p>
+<h3>Changing the payload</h3>
+<p>Treat a payload change as a runtime compatibility change:</p>
+<p>1. prove the file is required by a runtime code path; 2. add or remove it in <code>config/runtime_payload.json</code>; 3. update installer regressions; 4. perform a real temporary install; 5. smoke-test routing from the installed path; 6. validate receipts and rollback; 7. update this guide and the manifest.</p>
+<p>Do not copy the repository and rely on ignore filters. An allowlisted payload is reviewable, fails closed, and does not silently grow when a new source-only directory appears.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/INSTALLED_RUNTIME_PAYLOAD_GUIDE.md</span></footer></main>
+
+</body>
+</html>

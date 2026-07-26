@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Skill Supply-Chain Guide from the Mission Directives documentation set." />
+  <title>Skill Supply-Chain Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/SKILL_SUPPLY_CHAIN_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Skill Supply-Chain Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/SKILL_SUPPLY_CHAIN_GUIDE.md</span></div><h1>Skill Supply-Chain Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Skill Supply-Chain Guide</h2>
+<h3>Purpose</h3>
+<p>Third-party skills can improve specialized work, but they are executable supply-chain dependencies. This guide defines how skills are discovered, locked, reviewed, tested, quarantined, promoted, upgraded, and retired.</p>
+<h3>Fail-closed default</h3>
+<p>A skill is not automatically trusted because:</p>
+<ul><li>it appears on Skills.sh;</li><li>the repository is popular;</li><li>installation succeeds;</li><li>its name matches the task;</li><li>another agent recommended it.</li></ul>
+<p>Unresolved locks, excessive permissions, failed conformance, or unknown external effects block automatic use.</p>
+<h3>Registry and lock responsibilities</h3>
+<h4><code>skill_registry.json</code></h4>
+<p>Defines:</p>
+<ul><li>skill ID and purpose;</li><li>install command;</li><li>mapped prompts;</li><li>trust tier;</li><li>maturity status;</li><li>required permissions;</li><li>output quarantine;</li><li>fallback;</li><li>conformance contract.</li></ul>
+<h4><code>skills.lock.json</code></h4>
+<p>Pins:</p>
+<ul><li>repository;</li><li>exact skill name or path;</li><li>commit SHA;</li><li>downloaded archive SHA-256;</li><li>resolution time;</li><li>review and auto-install state.</li></ul>
+<p>The delivered third-party locks are unresolved because the build environment did not resolve GitHub commits. Automatic install remains disabled. No fake SHA is inserted.</p>
+<h3>Trust tiers</h3>
+<ul><li><code>native</code>: package-owned code or alias.</li><li><code>verified</code>: source and behavior reviewed with current evidence.</li><li><code>community_reviewed</code>: meaningful external review, but not locally verified to the highest standard.</li><li><code>unreviewed</code>: no sufficient trust evidence.</li></ul>
+<p>Trust describes provenance evidence, not guaranteed quality.</p>
+<h3>Maturity states</h3>
+<ul><li>recommended;</li><li>approved;</li><li>experimental;</li><li>quarantined;</li><li>deprecated.</li></ul>
+<p>A skill can have a resolved lock and remain experimental or quarantined.</p>
+<h3>Lock resolution</h3>
+<p>In a trusted networked environment:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/resolve_skill_lock.py --skill frontend-design
+python tools/check_skill_lock.py</code></pre></div>
+<p>Review the exact resulting revision before promotion.</p>
+<h3>Source review</h3>
+<p>Inspect:</p>
+<ul><li>installation scripts;</li><li>dependencies;</li><li>shell and subprocess calls;</li><li>network requests;</li><li>filesystem access;</li><li>secret and credential access;</li><li>telemetry;</li><li>update behavior;</li><li>external actions;</li><li>license;</li><li>generated code or content handling.</li></ul>
+<h3>Permission comparison</h3>
+<p>The skill permissions must be a subset of the effective prompt <code>&lt;tool_policy&gt;</code> and runtime authority.</p>
+<p>A skill that needs network access cannot be selected for a read-only local prompt unless the route explicitly authorizes that access.</p>
+<h3>Output quarantine</h3>
+<p>All skill output begins quarantined. Promotion requires the applicable checks:</p>
+<ul><li>schema;</li><li>provenance;</li><li>factual integrity;</li><li>code tests;</li><li>security;</li><li>accessibility;</li><li>brand;</li><li>visual quality;</li><li>exact export;</li><li>external-effect confirmation.</li></ul>
+<p>The skill cannot approve its own output.</p>
+<h3>Conformance testing</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/run_skill_conformance.py \
+  --skill-id &lt;SKILL_ID&gt; \
+  --artifact &lt;OUTPUT_PATH&gt;</code></pre></div>
+<p>A conformance result should record:</p>
+<ul><li>locked revision;</li><li>fixture;</li><li>sandbox permissions;</li><li>raw output;</li><li>expected and actual artifact shape;</li><li>validation results;</li><li>prohibited effects;</li><li>reviewer;</li><li>status.</li></ul>
+<h3>Skill selection</h3>
+<p>Prefer:</p>
+<p>1. one primary producer; 2. one independent reviewer when needed; 3. one fallback; 4. optional specialist adapters only when they change quality.</p>
+<p>Do not chain several overlapping design or prompt-optimization skills merely because they are available.</p>
+<h3>Conflict examples</h3>
+<ul><li>two primary frontend design skills should not edit the same source concurrently;</li><li><code>polish</code> may refine an artifact but not silently replace approved information architecture;</li><li>a prompt optimizer may transform a prompt, but an independent prompt reviewer must evaluate the transformed result;</li><li>a report generator may format content but may not rewrite verified numbers without a new finding.</li></ul>
+<h3>Upgrade procedure</h3>
+<p>1. Resolve a new revision. 2. Diff code, permissions, dependencies, and outputs. 3. Keep the prior lock available for rollback. 4. Rerun healthy and adversarial conformance fixtures. 5. Review mapped prompts and policies. 6. Promote explicitly. 7. Update manifests and documentation.</p>
+<p>Never silently track a floating branch in high-assurance use.</p>
+<h3>Incident response</h3>
+<p>If a skill is suspected of compromise:</p>
+<ul><li>disable automatic selection;</li><li>quarantine outputs;</li><li>preserve lock and execution evidence;</li><li>identify affected runs;</li><li>rotate exposed credentials if authorized;</li><li>revert to native fallback;</li><li>add detections and a regression fixture;</li><li>review downstream artifacts produced by the skill.</li></ul>
+<h3>Retirement</h3>
+<p>Deprecate when the skill is unmaintained, redundant, unsafe, or no longer improves over native execution. Preserve the lock and affected-run references for audit.</p>
+<h3>Proof boundary</h3>
+<p>A resolved lock proves byte identity. A conformance pass proves behavior on tested fixtures. Neither guarantees safety on every input or environment.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/SKILL_SUPPLY_CHAIN_GUIDE.md</span></footer></main>
+
+</body>
+</html>

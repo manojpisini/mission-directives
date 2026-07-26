@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Pair Authoring and Verification Guide from the Mission Directives documentation set." />
+  <title>Pair Authoring and Verification Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Pair Authoring and Verification Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md</span></div><h1>Pair Authoring and Verification Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Pair Authoring and Verification Guide</h2>
+<h3>Purpose</h3>
+<p>A genuine pair separates non-mutating investigation from authorized execution. The split is justified only when the handoff improves safety, reviewability, parallelism, or output quality.</p>
+<p>Pairs are not a naming style. They are a runtime architecture.</p>
+<h3>The five-part pair test</h3>
+<p>Create a pair only when all conditions are true:</p>
+<p>1. Investigation can remain read-only. 2. Investigation produces a stable, reviewable handoff. 3. Execution owns a materially distinct production or mutation responsibility. 4. Both roles share objective acceptance criteria. 5. The split improves the work more than it adds ceremony.</p>
+<p>If a single bounded prompt is clearer and equally safe, use a standalone prompt.</p>
+<h3>Investigator responsibilities</h3>
+<p>The investigator must produce:</p>
+<ul><li>frozen evidence snapshot;</li><li>evidence index;</li><li><code>#FINDING:{id}</code> register;</li><li>bounded <code>+ACTION:{id}</code> plan;</li><li>dependencies and action risk;</li><li>authorization requirements;</li><li>rollback needs;</li><li>acceptance criteria;</li><li><code>?UNKNOWN:{id}</code> and contradictions;</li><li><code>=VERIFY:{id}</code> handoff-readiness record.</li></ul>
+<p>The investigator must not modify the governed subject or approve its own plan.</p>
+<h3>Executive responsibilities</h3>
+<p>The executive must:</p>
+<ul><li>verify the handoff is current and approved;</li><li>preserve evidence, finding, action, and criterion IDs;</li><li>dry-run state-changing work;</li><li>execute dependency-complete approved batches;</li><li>apply decision rules when actions conflict or budgets are limited;</li><li>reference the frozen acceptance criteria;</li><li>record each result as <code>=VERIFY:{id}</code>;</li><li>stop on scope expansion, stale approval, failed verification, or uncertain rollback;</li><li>record residuals and rollback state.</li></ul>
+<h3>Verification ownership</h3>
+<p>The investigator owns <code>&lt;verification_design&gt;</code> and the acceptance-criteria artifact.</p>
+<p>The executive owns <code>&lt;verification_reference&gt;</code> and the result records.</p>
+<p>Correct relationship:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD-29 verification design
+→ acceptance_criteria.json with criterion IDs
+→ frozen handoff and approval
+→ MD-30 executes actions
+→ MD-30 records =VERIFY results against the same IDs</code></pre></div>
+<h3>Why duplication is prohibited</h3>
+<p>Repeating the same verification list in the executive creates three risks:</p>
+<p>1. the two lists drift; 2. the executive silently weakens or omits criteria; 3. the suite pays the same token cost twice without adding behavior.</p>
+<p>An executive may contain <code>&lt;verification_additions&gt;</code> only when execution reveals a genuinely new check that was not knowable during investigation. The new check is recorded as a finding and reviewed rather than silently replacing the frozen plan.</p>
+<h3>Handoff validation</h3>
+<p>Before execution, verify:</p>
+<ul><li>investigator prompt and capability IDs;</li><li>evidence snapshot hash and freshness;</li><li>action-plan hash;</li><li>acceptance-criteria hash;</li><li>approval receipt;</li><li>target environment;</li><li>protected surfaces;</li><li>action budget;</li><li>rollback readiness;</li><li>unresolved blockers.</li></ul>
+<p>Failure produces <code>!STOP:invalid-or-stale-handoff</code>.</p>
+<h3>Executive decision rules</h3>
+<p>Every executive must contain decision rules. At minimum:</p>
+<ul><li>action eligibility;</li><li>one domain-specific priority or preservation rule;</li><li>conflict resolution;</li><li>budget behavior;</li><li>stop behavior.</li></ul>
+<p>See <code>EXECUTIVE_DECISION_RULES_GUIDE.md</code>.</p>
+<h3>Pair completion</h3>
+<p>Investigator completion means the handoff is ready. It does not mean the change is complete.</p>
+<p>Executive completion means:</p>
+<ul><li>every approved action is dispositioned;</li><li>every acceptance criterion has a result;</li><li>failures and residuals are explicit;</li><li>rollback status is known;</li><li>no new finding was silently executed.</li></ul>
+<h3>Pair review checklist</h3>
+<ul><li>[ ] The investigator is read-only.</li><li>[ ] The executive requires the investigator.</li><li>[ ] The handoff is typed and frozen.</li><li>[ ] IDs remain stable.</li><li>[ ] The investigator owns verification design.</li><li>[ ] The executive references rather than duplicates criteria.</li><li>[ ] Executive decision rules are domain-specific.</li><li>[ ] New findings cannot be executed without approval.</li><li>[ ] Dry-run and rollback requirements match risk.</li><li>[ ] Pair-versus-single evaluation exists.</li></ul>
+<h3>Validation</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pytest -q tests/test_prompt_body_quality.py
+python tools/run_evaluations.py
+python tools/validate_suite.py</code></pre></div>
+<p>The body validator rejects executive <code>&lt;verification&gt;</code> blocks and requires <code>&lt;verification_reference&gt;</code> for all paired executives.</p>
+<h3>Mandatory user review and exact execution twin</h3>
+<p>Every paired investigator contains <code>&lt;plan_review_and_execution_gate&gt;</code>. Handoff readiness starts the review cycle; it does not authorize execution.</p>
+<p>The investigator must present the plan, invite changes and refinements, incorporate accepted feedback, re-run readiness checks, re-freeze the handoff, and request review again. Only after explicit approval may it ask whether to invoke the exact reciprocal <code>paired_prompt_id</code>.</p>
+<p>Every paired executive contains <code>&lt;reviewed_handoff_authority&gt;</code>. It rejects any handoff from another planner, any version changed after approval, and any consent that names a different executor. See <a href="/mission-directives/reference/manuals/plan-review-and-exact-twin-execution-guide/">Plan Review and Exact-Twin Execution Guide</a>.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

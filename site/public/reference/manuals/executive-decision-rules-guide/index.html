@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Executive Decision Rules Guide from the Mission Directives documentation set." />
+  <title>Executive Decision Rules Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/EXECUTIVE_DECISION_RULES_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Executive Decision Rules Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/EXECUTIVE_DECISION_RULES_GUIDE.md</span></div><h1>Executive Decision Rules Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Executive Decision Rules Guide</h2>
+<h3>Purpose</h3>
+<p>Executive prompts take approved action. Procedure alone is insufficient because execution encounters conflicts, incomplete budgets, stale evidence, failed checks, and domain-specific tradeoffs.</p>
+<p><code>&lt;decision_rules&gt;</code> defines how the executive chooses without inventing authority.</p>
+<h3>Required rule categories</h3>
+<p>Every executive prompt must contain rules for all five categories.</p>
+<h4>1. Action eligibility</h4>
+<p>Only approved <code>+ACTION:{id}</code> records from the current frozen handoff may execute.</p>
+<p>New issues become <code>#FINDING:{id}</code> and return to investigation or approval.</p>
+<h4>2. Domain-specific priority</h4>
+<p>The rule must name what the capability preserves or addresses first.</p>
+<p>Examples:</p>
+<ul><li>debugging: causal fix before symptom suppression;</li><li>cleanup: proof of non-use before deletion;</li><li>migration: data integrity and rollback before speed;</li><li>accessibility: blocked user task before visual polish;</li><li>academic writing: methods and evidence before narrative force;</li><li>slides: narrative and legibility before motion;</li><li>security: confirmed reachable control bypass before cosmetic hardening.</li></ul>
+<h4>3. Conflict resolution</h4>
+<p>When actions conflict, resolve by:</p>
+<p>1. safety and protected boundaries; 2. evidence strength; 3. dependency order; 4. public contract, data, or user preservation; 5. reversibility; 6. approved priority.</p>
+<p>Do not combine mutually incompatible actions into one batch.</p>
+<h4>4. Budget and partial completion</h4>
+<p>If time, tokens, cost, or maintenance window cannot complete the whole plan:</p>
+<ul><li>choose the highest-priority dependency-complete batch;</li><li>do not start an action that cannot reach a safe terminal state;</li><li>place remaining actions in the residual register;</li><li>record owners and prerequisites;</li><li>do not claim full completion.</li></ul>
+<h4>5. Hard stops</h4>
+<p>Stop when:</p>
+<ul><li>approval is stale or absent;</li><li>scope expands;</li><li>the target differs from the approved environment;</li><li>verification fails;</li><li>rollback is uncertain;</li><li>an action weakens a protected boundary;</li><li>a new critical finding changes the plan;</li><li>a tool requires undeclared permissions.</li></ul>
+<h3>Example: cleanup executive</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;decision_rules&gt;
+- Execute only approved +ACTION:{id} records from the frozen cleanup handoff.
+- Delete only when non-use is evidenced across code, build, packaging, runtime, docs, and generated-source boundaries; uncertainty means retain or quarantine.
+- Resolve conflicts by safety, evidence, dependency order, compatibility, and reversibility.
+- If the budget is insufficient, remove only a dependency-complete batch and defer the rest with owners.
+- Emit !STOP:{reason} when runtime dependence appears, rollback is uncertain, or verification fails.
+&lt;/decision_rules&gt;</code></pre></div>
+<h3>Example: model-security executive</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>&lt;decision_rules&gt;
+- Execute only approved model-security actions against the declared model, dataset, serving path, and environment.
+- Prioritize artifact integrity, sensitive-data exposure, unsafe output trust, and abuse controls before quality tuning.
+- Do not trade away auditability or rollback for throughput.
+- Defer lower-priority controls if the evaluation budget cannot verify them independently.
+- Stop on data provenance failure, unsafe external effect, or inability to reproduce the pre-change baseline.
+&lt;/decision_rules&gt;</code></pre></div>
+<h3>Anti-patterns</h3>
+<ul><li>no decision rules in an executive prompt;</li><li>generic “use best judgment” language;</li><li>prioritization by ease rather than risk and evidence;</li><li>silent execution of newly discovered work;</li><li>partial execution reported as completion;</li><li>budget rules that permit unsafe half-migrations;</li><li>verification failure treated as a warning rather than a stop.</li></ul>
+<h3>Review questions</h3>
+<ul><li>What can this executive execute?</li><li>What must it preserve?</li><li>Which finding class comes first?</li><li>What happens when two actions conflict?</li><li>What is a safe partial batch?</li><li>What exact conditions stop the run?</li></ul>
+<h3>Validation</h3>
+<p>All 32 executive prompts must contain <code>&lt;decision_rules&gt;</code>. The static audit reports coverage, while adversarial pair fixtures test behavior against contaminated or stale handoffs.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/EXECUTIVE_DECISION_RULES_GUIDE.md</span></footer></main>
+
+</body>
+</html>

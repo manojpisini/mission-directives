@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Installed Skills Inventory Guide from the Mission Directives documentation set." />
+  <title>Installed Skills Inventory Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/INSTALLED_SKILLS_INVENTORY_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Installed Skills Inventory Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/INSTALLED_SKILLS_INVENTORY_GUIDE.md</span></div><h1>Installed Skills Inventory Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Installed Skills Inventory Guide</h2>
+<h3>Purpose</h3>
+<p><code>installed_skills_inventory.json</code> records a snapshot of skills detected in the user's OpenCode global skill directory. The supplied snapshot was normalized from the OpenCode global skill directory and is distributed using the portable logical location:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>${MD_OPENCODE_SKILLS_DIR}</code></pre></div>
+<p>At runtime this resolves through <code>compatibility/agent_skill_paths.json</code> for Windows, Linux, or macOS. The distributable inventory never records a personal home-directory path.</p>
+<p>The snapshot contains 193 skill directories, all represented in the suite registry with explicit routing or exclusion status. Presence on disk means **available for inspection**. It does not by itself mean:</p>
+<ul><li>trusted;</li><li>source-pinned;</li><li>conformant;</li><li>compatible with the current runtime;</li><li>safe for automatic selection;</li><li>authorized for the current task.</li></ul>
+<h3>Inventory, registry, and lockfile</h3>
+<p>These files have different responsibilities:</p>
+<div class="table-card"><table><tbody><tr><td>File</td><td>Meaning</td></tr><tr><td><code>installed_skills_inventory.json</code></td><td>What was observed on disk in the supplied snapshot.</td></tr><tr><td><code>installed_skills_inventory.runtime.json</code></td><td>A fresh filesystem scan generated on the current machine.</td></tr><tr><td><code>skill_registry.json</code></td><td>Skills with explicit MD metadata, routes, maturity, and verification policy.</td></tr><tr><td><code>skill_aliases.json</code></td><td>Canonical spelling and compatibility aliases.</td></tr><tr><td><code>skills.lock.json</code></td><td>Exact external-source revision and content lock state for installable third-party skills.</td></tr><tr><td><code>evaluations/skill_conformance/</code></td><td>Expected adapter behavior and live conformance status.</td></tr></tbody></table></div>
+<p>A newly observed runtime skill can be installed but unmapped until the next inventory synchronization; the supplied snapshot is fully registered. It can be mapped but blocked by an unresolved lock. It can be local and approved but still require task-level output verification.</p>
+<h3>Runtime statuses</h3>
+<p><code>tools/md.py</code> can return:</p>
+<ul><li><code>usable_local</code> — approved user-owned local skill detected in the inventory;</li><li><code>usable</code> — curated third-party skill with acceptable maturity and resolved lock;</li><li><code>native_alias</code> — runtime capability that does not depend on an external install command;</li><li><code>installed_unmapped</code> — detected on disk but not curated; explicit runtime probing is required;</li><li><code>installed_review_required</code> — curated entry detected locally, but source lock or promotion is incomplete;</li><li><code>blocked_pending_lock_or_review</code> — known skill unavailable for automatic use;</li><li><code>local_missing_or_review_required</code> — local registry entry not confirmed as approved and present;</li><li><code>unknown</code> — not detected and not registered.</li></ul>
+<h3>Personal skills</h3>
+<h4><code>visual-assets</code></h4>
+<p>Registered as a first-class user-owned local skill. It is routed for code-native vector, illustration, infographic, presentation, report, and explanatory-visual work. Output remains quarantined until target-specific verification passes.</p>
+<h4><code>strudel</code></h4>
+<p>Registered as a first-class user-owned local skill for Strudel music code. The spelling <code>strudle</code> resolves to <code>strudel</code> through <code>skill_aliases.json</code>.</p>
+<h3>Refreshing the inventory</h3>
+<p>Scan all supported global locations:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/sync_installed_skills.py</code></pre></div>
+<p>Default logical locations:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>${MD_AGENTS_SKILLS_DIR}
+${MD_CLAUDE_SKILLS_DIR}
+${MD_OPENCODE_SKILLS_DIR}</code></pre></div>
+<p>They resolve to <code>%USERPROFILE%</code>-relative paths on Windows, <code>$HOME</code>/XDG-relative paths on Linux and macOS, or explicit environment overrides.</p>
+<p>The command writes <code>installed_skills_inventory.runtime.json</code>. It does not automatically promote, trust, or register newly detected skills.</p>
+<p>Custom locations should be supplied through portable environment overrides:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD_AGENTS_SKILLS_DIR
+MD_CLAUDE_SKILLS_DIR
+MD_OPENCODE_SKILLS_DIR</code></pre></div>
+<p>Use <code>python tools/agent_paths.py all --logical</code> to inspect the logical locations and <code>python tools/agent_paths.py all --platform &lt;windows|linux|macos&gt;</code> to inspect platform defaults.</p>
+<h3>Multi-application global installation</h3>
+<p>Use the governed installer only after qualification and approval. The historical <code>*_dual</code> filenames are retained as compatibility aliases, but installation verifies <code>.agents</code>, Claude Code, and OpenCode destinations:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>.\tools\install_skill_dual.ps1 \
+  -Source &quot;https://github.com/OWNER/REPOSITORY&quot; \
+  -SkillId &quot;exact-skill-id&quot; \
+  -AcquisitionMode approved_unpinned</code></pre></div>
+<p><code>approved_unpinned</code> is an explicit risk acceptance. The default <code>locked_auto</code> mode reads <code>skills.lock.json</code>, requires a resolved approved commit, and installs from that pinned revision.</p>
+<h3>Installed but unmapped skill flow</h3>
+<p>When a user requests an installed skill that is not curated:</p>
+<p>1. canonicalize the requested ID through <code>skill_aliases.json</code>; 2. confirm that the directory and <code>SKILL.md</code> exist; 3. run <code>MD-192</code> to establish genuine task fit; 4. inspect schema, permissions, provenance, tools, network access, output shape, and side effects; 5. route conditionally through <code>MD-196</code>; 6. quarantine output; 7. record conformance evidence; 8. promote to the registry only after repeated justified use and review.</p>
+<p>Do not route such a skill to <code>find-skills</code>; it is already present. Discovery is for a genuinely missing capability.</p>
+<h3>Image-generation exclusion</h3>
+<p>The supplied inventory includes skills whose names indicate model image generation. Those entries remain visible in the inventory but are marked excluded from automatic MD routing because this suite's visual-production path is code-native. <code>visual-assets</code>, SVG/HTML diagrams, frontend artifacts, and presentation assets remain supported.</p>
+<h3>Review and maintenance</h3>
+<p>Periodically:</p>
+<ul><li>compare all supported global directories;</li><li>detect missing or divergent copies;</li><li>review changed <code>SKILL.md</code> files;</li><li>resolve or update source locks;</li><li>rerun conformance fixtures;</li><li>quarantine unexpected permission growth;</li><li>remove deprecated or unused duplicate skills;</li><li>update aliases only when canonical identity is unambiguous.</li></ul></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/INSTALLED_SKILLS_INVENTORY_GUIDE.md</span></footer></main>
+
+</body>
+</html>

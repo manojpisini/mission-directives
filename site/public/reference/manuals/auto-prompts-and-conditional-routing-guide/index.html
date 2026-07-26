@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Auto-Prompts and Conditional Routing Guide from the Mission Directives documentation set." />
+  <title>Auto-Prompts and Conditional Routing Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/AUTO_PROMPTS_AND_CONDITIONAL_ROUTING_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Auto-Prompts and Conditional Routing Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/AUTO_PROMPTS_AND_CONDITIONAL_ROUTING_GUIDE.md</span></div><h1>Auto-Prompts and Conditional Routing Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Auto-Prompts and Conditional Routing Guide</h2>
+<h3>Purpose</h3>
+<p>The auto-prompt layer resolves a small set of recurring orchestration problems that should not be reimplemented inside every domain prompt:</p>
+<ul><li>clarify intent only when ambiguity can change the route or result;</li><li>decide whether a specialist skill is genuinely necessary;</li><li>discover, qualify, install, or create a missing skill under explicit policy;</li><li>execute any exact installed skill through a typed contract;</li><li>repeat any prompt, scenario, or skill only when repetition has measurable value;</li><li>stop loops at the earliest defensible completion or failure condition.</li></ul>
+<p>These prompts are **conditional capabilities**, not a hidden preamble and not a background daemon. A runtime, orchestrator, or operator supplies trigger evidence to <code>tools/md.py auto-plan</code> or applies the equivalent rules from <code>auto_prompt_policy.json</code>. A prompt is injected only when its participation changes routing, safety, quality, authority, or verification.</p>
+<h3>The eight auto-prompts</h3>
+<div class="table-card"><table><tbody><tr><td>Prompt</td><td>Responsibility</td><td>Must not do</td></tr><tr><td><code>MD-191</code></td><td>Interrogate route-changing ambiguity and freeze an intent brief.</td><td>Ask questions whose answers cannot change the graph or acceptance decision.</td></tr><tr><td><code>MD-192</code></td><td>Compare native execution, installed skills, and possible specialist capabilities.</td><td>Choose a skill because it is fashionable, available, or keyword-adjacent.</td></tr><tr><td><code>MD-193</code></td><td>Use <code>find-skills</code> or equivalent discovery to qualify exact candidates.</td><td>Install the first search result or treat search ranking as trust evidence.</td></tr><tr><td><code>MD-194</code></td><td>Install one approved exact skill into both global skill locations.</td><td>Install without authority, provenance, rollback, or post-install verification.</td></tr><tr><td><code>MD-195</code></td><td>Create a narrow reusable skill when discovery is genuinely empty.</td><td>Create a skill for a one-off task or broaden permissions beyond the proven gap.</td></tr><tr><td><code>MD-196</code></td><td>Bind and execute any exact installed skill through typed placeholders.</td><td>Silently substitute another skill or trust the skill's self-reported success.</td></tr><tr><td><code>MD-197</code></td><td>Coordinate a finite work queue or measurable refinement cycle.</td><td>Loop a one-shot task, unchanged failure, or repeated external effect.</td></tr><tr><td><code>MD-198</code></td><td>Independently decide continue, complete, plateau, rollback, escalate, or stop.</td><td>Edit the target artifact or lower the acceptance threshold mid-loop.</td></tr></tbody></table></div>
+<h3>Trigger order</h3>
+<p>The default order is:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>clear intent?
+├─ no  → MD-191
+└─ yes → continue
+
+specialist capability materially needed?
+├─ no  → native target route
+└─ yes → MD-192
+          ├─ exact skill installed → MD-196
+          ├─ skill missing → MD-193
+          │                  ├─ qualified candidate → MD-194 → MD-196
+          │                  └─ no suitable candidate → MD-195 → conformance → MD-196
+          └─ skill redundant/prohibited → native route or stop
+
+repetition materially useful?
+├─ no  → execute once
+└─ yes → MD-197 → target pass → MD-198 → earliest valid exit</code></pre></div>
+<p>Installation and creation are alternatives, not two actions to perform in sequence. Creation is a last-resort branch after discovery proves that no suitable candidate exists.</p>
+<h3>Intent interrogation</h3>
+<p><code>MD-191</code> asks only questions that can alter one or more of:</p>
+<ul><li>observable outcome;</li><li>audience or decision owner;</li><li>scope and exclusions;</li><li>authority or protected surfaces;</li><li>evidence lane;</li><li>artifact medium;</li><li>skill requirement;</li><li>loop eligibility;</li><li>budget;</li><li>completion criteria.</li></ul>
+<p>It must use prior conversation and project evidence first. Normally it asks one high-impact question at a time. Multiple-choice wording is useful when choices are genuine and non-leading. When urgency prevents clarification, the prompt selects the safest reversible default and records it as an assumption rather than pretending the intent is known.</p>
+<h4>Good question</h4>
+<p>&gt; Will this report remain an internal draft, or will it be published externally? Publication changes the legal, privacy, accessibility, and claims-verification route.</p>
+<h4>Wasteful question</h4>
+<p>&gt; What tone do you prefer?</p>
+<p>That question is wasteful when the supplied brand guide already defines tone and the answer would not change routing or acceptance.</p>
+<h3>Skill-fit classification</h3>
+<p><code>MD-192</code> returns exactly one classification:</p>
+<ul><li>**required** — native execution cannot satisfy a material acceptance criterion;</li><li>**beneficial** — native execution is possible, but the skill offers measurable quality, efficiency, portability, or verification gain;</li><li>**optional** — the skill may be used, but omitting it does not weaken the result;</li><li>**redundant** — the skill duplicates the chosen primary producer or adds ceremony;</li><li>**prohibited** — its permissions, side effects, provenance, or output contract exceed the task.</li></ul>
+<p>A skill already present on disk may still be unreviewed. <code>installed_skills_inventory.json</code> proves availability only. Curated registry status, source provenance, runtime probing, permissions, and conformance determine whether it may execute automatically.</p>
+<h3>Missing-skill acquisition</h3>
+<p>A missing capability follows this sequence:</p>
+<p>1. freeze a machine-readable skill requirement; 2. search for exact candidates with <code>find-skills</code> or equivalent discovery; 3. inspect the candidate's <code>SKILL.md</code>, source, revision, requested permissions, tool use, files, network access, outputs, and failure behavior; 4. compare the candidate against native execution and other candidates; 5. request or verify installation authority; 6. install one exact skill into both global locations; 7. quarantine the result; 8. run conformance fixtures; 9. enable automatic selection only after promotion.</p>
+<p>Canonical dual-location installation:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>npx skills add &lt;source&gt; --skill &lt;skill-id&gt; -g -a cline -a opencode --copy -y</code></pre></div>
+<p>The expected destinations are:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>~/.agents/skills/&lt;skill-id&gt;/SKILL.md
+~/.config/opencode/skills/&lt;skill-id&gt;/SKILL.md</code></pre></div>
+<p>Use <code>tools/install_skill_dual.ps1</code> for Windows execution and destination verification. Unpinned acquisition requires explicit authorization and remains subject to the suite's skill-lock policy.</p>
+<h3>Skill creation</h3>
+<p><code>MD-195</code> may invoke <code>skill-creator</code>, <code>writing-skills</code>, or an equivalent approved capability only when:</p>
+<ul><li>discovery found no suitable candidate;</li><li>native prompts cannot satisfy the recurring requirement cleanly;</li><li>the need is reusable rather than one-off;</li><li>a maintenance owner exists;</li><li>permissions can be narrowly bounded;</li><li>healthy, problematic, and adversarial fixtures can be defined;</li><li>the skill has an explicit native fallback.</li></ul>
+<p>Terms such as **advanced**, **cutting-edge**, and **production-grade** are requirement profiles, not magical flags:</p>
+<div class="table-card"><table><tbody><tr><td>Label</td><td>Concrete meaning</td></tr><tr><td>Advanced</td><td>robust error handling, typed contracts, efficient context use, tests, portability, and useful diagnostics</td></tr><tr><td>Cutting-edge</td><td>current evidence-backed techniques, comparative evaluation, explicit experimental status where evidence is incomplete, and safe fallback</td></tr><tr><td>Production-grade</td><td>least privilege, observability, deterministic validation where possible, recovery, maintenance documentation, and conformance evidence</td></tr></tbody></table></div>
+<p>The created skill stays in staging until verification passes. Novelty claims must be supported, not inferred from wording.</p>
+<h3>Automatic routing examples</h3>
+<h4>Installed personal skill and batch loop</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py auto-plan MD-104 \
+  --skill-id visual-assets \
+  --skill-required \
+  --loop \
+  --work-items 12 \
+  --measurable</code></pre></div>
+<p>Expected auto-prompts:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD-192 → MD-196 → MD-197 → MD-198</code></pre></div>
+<h4>Installed but unmapped skill</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py auto-plan MD-27 \
+  --skill-id code-review \
+  --skill-required</code></pre></div>
+<p>The skill is not treated as missing. It routes through <code>MD-192</code> and conditionally through <code>MD-196</code> after runtime schema, permission, provenance, side-effect, and task-fit review.</p>
+<h4>Missing specialist capability</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py auto-plan MD-165 \
+  --skill-id missing-specialist \
+  --skill-required \
+  --allow-install \
+  --allow-create</code></pre></div>
+<p>The resulting graph contains alternative acquisition branches. <code>MD-194</code> runs only if discovery qualifies a candidate. <code>MD-195</code> runs only if discovery is genuinely empty and reusable demand justifies creation.</p>
+<h4>Wasteful loop request</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py auto-plan MD-165 --loop</code></pre></div>
+<p>Without a finite queue or measurable refinement objective, the router rejects <code>MD-197</code> and executes once or asks for a meaningful rubric.</p>
+<h3>Evidence and records</h3>
+<p>Auto-prompt decisions use the normal marker protocol:</p>
+<ul><li><code>@EVIDENCE:{id}</code> — installed inventory, skill schema, source, benchmark, or observed result;</li><li><code>?UNKNOWN:{id}</code> — unresolved permission, provenance, input, or acceptance condition;</li><li><code>#FINDING:{id}</code> — skill gap, route ambiguity, loop eligibility, or conformance finding;</li><li><code>+ACTION:{id}</code> — question, discovery, installation, execution, or iteration;</li><li><code>=VERIFY:{id}</code> — route-ready intent, dual-location installation, artifact acceptance, or loop exit proof;</li><li><code>!STOP:{reason}</code> — authority, safety, budget, plateau, missing evidence, or invalid loop.</li></ul>
+<h3>Failure behavior</h3>
+<p>The correct result may be:</p>
+<ul><li>no clarification needed;</li><li>no skill needed;</li><li>installed skill rejected after probing;</li><li>native fallback selected;</li><li>acquisition blocked pending approval;</li><li>creation rejected as one-off or redundant;</li><li>loop rejected as wasteful;</li><li>loop stopped with residual items;</li><li>human escalation.</li></ul>
+<p>These are valid outcomes. The auto layer exists to prevent unnecessary work as much as to enable useful automation.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/AUTO_PROMPTS_AND_CONDITIONAL_ROUTING_GUIDE.md</span></footer></main>
+
+</body>
+</html>

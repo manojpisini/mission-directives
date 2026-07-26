@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prompt Addition and Registration Guide from the Mission Directives documentation set." />
+  <title>Prompt Addition and Registration Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/PROMPT_ADDITION_AND_REGISTRATION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Prompt Addition and Registration Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/PROMPT_ADDITION_AND_REGISTRATION_GUIDE.md</span></div><h1>Prompt Addition and Registration Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Prompt Addition and Registration Guide</h2>
+<p>**Purpose:** Add one new prompt to Mission Directives from a Markdown source file without manually editing every catalog, graph, fixture, routing table, or integrity receipt. **Canonical implementations:** <code>tools/add_prompt.py</code>, <code>tools/add-prompt.sh</code>, and <code>tools/add-prompt.ps1</code> **Agentic equivalent:** <code>MD-199</code> — Prompt Addition, Registration, and Ecosystem Integration</p>
+<h3>1. What this workflow does</h3>
+<p>Prompt addition is a suite mutation, not a file-copy operation. A valid addition must create a permanent prompt identity, preserve the imported prompt's intent, satisfy the canonical prompt-body contract, and update every source of truth that makes the prompt discoverable, routable, testable, and verifiable.</p>
+<p>The script performs the following transaction:</p>
+<p>1. validates the source Markdown as a bounded, regular, UTF-8, non-symlink file; 2. validates the requested title, category, role, prompt type, risk, modes, prompt references, templates, skills, and department packs; 3. allocates the integer immediately after the highest canonical prompt sequence; 4. derives the permanent <code>MD-###</code> ID, slug, filename, capability ID, canonical output paths, and frontmatter; 5. preserves the source prompt under <code>&lt;source_prompt&gt;</code> inside a canonical Mission Directives wrapper; 6. creates healthy, problematic, and adversarial prompt fixtures; 7. adds the atomic scenario and atomic contract fixture; 8. updates template reverse routes and registered skill prompt routes; 9. creates explicit unresolved crosswalk records rather than fabricating agent or prompt-type matches; 10. optionally adds the prompt to explicitly selected department packs; 11. regenerates catalog, identity, graph, body-audit, schema-fixture, evaluation, validation, and integrity artifacts; 12. runs the full deterministic test suite by default; 13. compares the verified staging tree with the unchanged live suite under an exclusive promotion lock; 14. atomically promotes only changed and new files; 15. requires an exact approval token bound to the current preview, source digest, and catalog before mutation; 16. restores the original bytes and modes if promotion fails; 17. emits a structured receipt and telemetry event.</p>
+<h3>2. Choosing script versus <code>MD-199</code></h3>
+<p>Use the script when the source prompt and required metadata are already known and a deterministic local mutation is desired. Use <code>MD-199</code> when an agent must first investigate overlap, refine the source prompt, decide whether a distinct capability is justified, or help identify templates, skills, references, risk, modes, and department-pack placement.</p>
+<p>Both paths enforce the same identity and ecosystem rules. <code>MD-199</code> must not bypass the script's validation, and the script must not invent semantic decisions that require human or agent review.</p>
+<h3>3. Basic invocation</h3>
+<h4>Linux and macOS</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>./tools/add-prompt.sh \
+  --source ./candidate-prompt.md \
+  --title &quot;Dependency Upgrade Evidence Review&quot;</code></pre></div>
+<h4>Windows PowerShell</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>.\tools\add-prompt.ps1 `
+  --source .\candidate-prompt.md `
+  --title &quot;Dependency Upgrade Evidence Review&quot;</code></pre></div>
+<h4>Direct Python</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/add_prompt.py \
+  --source ./candidate-prompt.md \
+  --title &quot;Dependency Upgrade Evidence Review&quot;</code></pre></div>
+<h4>Unified MD CLI</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/md.py add-prompt \
+  --source ./candidate-prompt.md \
+  --title &quot;Dependency Upgrade Evidence Review&quot;</code></pre></div>
+<h4>OS-aware dispatcher</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/platform_dispatch.py add-prompt --source ./candidate-prompt.md --title &quot;Dependency Upgrade Evidence Review&quot;</code></pre></div>
+<p>When <code>--source</code> or <code>--title</code> is omitted in an interactive terminal, the script asks for it. Non-interactive runs must provide both explicitly.</p>
+<h3>4. Review-bound approval</h3>
+<p>Run <code>--dry-run</code> first. The preview is validated by <code>schemas/prompt_addition_preview.schema.json</code> and includes the complete proposed identity, routing, output contract, source digest, current catalog digest, and <code>approval_token</code>. A non-interactive mutation must pass that exact token:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/add_prompt.py --source ./candidate-prompt.md --title &quot;Dependency Upgrade Evidence Review&quot; --dry-run
+python tools/add_prompt.py --source ./candidate-prompt.md --title &quot;Dependency Upgrade Evidence Review&quot; --approval-token &lt;TOKEN&gt;</code></pre></div>
+<p>Changing the source, title, metadata, selected routes, suite version, or catalog invalidates the token. In an interactive terminal, omitting <code>--approval-token</code> displays the current preview and asks for explicit confirmation; the confirmed preview is then bound automatically. Approval is never inferred from merely running the command.</p>
+<p>After the complete suite is copied to staging, the importer recomputes the normalized <code>PreparedPrompt</code> from the immutable source snapshot and staged catalog. That staged contract must be exactly equal to the approved contract before any prompt or fixture is written. A different ID, sequence, filename, route, template, skill, output contract, digest, or normalized body fails closed with <code>suite state changed since approval</code>; the operator must run a new dry run and approve the newly issued token. The receipt is therefore derived only from a contract proven identical to the promoted contract.</p>
+<h3>5. Metadata options</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>--category &lt;safe-category&gt;
+--role operational|investigative|gate|control
+--prompt-type &lt;safe-type&gt;
+--risk low|medium|high|critical
+--mode &lt;MODE&gt;                         repeatable
+--related MD-###                      repeatable
+--requires MD-###                     repeatable
+--skill &lt;registered-skill-id&gt;         repeatable
+--template &lt;registered-template-id&gt;   repeatable
+--conditional-template &lt;template-id&gt;  repeatable
+--department-pack &lt;PACK_ID&gt;           repeatable
+--dry-run
+--approval-token &lt;TOKEN_FROM_DRY_RUN&gt;
+--skip-full-tests</code></pre></div>
+<p><code>--skip-full-tests</code> is a maintainer-only acceleration for local structural work. It does not provide the same proof as the default path and must not be used to claim a release-ready addition. Release sealing must run the full suite afterward.</p>
+<h3>6. Identity rules</h3>
+<p>The allocator reads the release-consistent <code>catalog.json</code>, cross-checks its count and canonical paths against <code>prompts/</code>, and computes:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>sequence      = highest existing sequence + 1
+prompt_id     = MD-&lt;sequence&gt;
+slug          = lowercase ASCII kebab case derived from title
+filename      = &lt;zero-padded sequence&gt;_&lt;UPPER_SNAKE_TITLE&gt;.md
+capability_id = md.&lt;category&gt;.&lt;slug&gt;</code></pre></div>
+<p>Identifiers are permanent. The tool does not fill historical gaps, reuse deleted IDs, renumber prompts, or create aliases automatically. A collision is a hard failure.</p>
+<h3>7. Source normalization</h3>
+<p>A raw Markdown source is captured once, newline-normalized, SHA-256 hashed, and placed under <code>&lt;source_prompt format=&quot;markdown&quot; encoding=&quot;xml-escaped&quot;&gt;</code>. XML-significant characters are escaped so source text cannot close the quarantine block or inject canonical control sections. The hash and byte length are recorded in prompt frontmatter and the mutation receipt. Existing YAML frontmatter is removed because the script creates authoritative suite frontmatter. The wrapper adds the standard identity, mission, evidence, authorization, tool, template, marker, skill, method, quality, output, stop, and completion contracts.</p>
+<p>This strategy preserves task-specific intent while ensuring every imported prompt remains compatible with the suite runtime. The source remains untrusted input and cannot override <code>MD-00</code>, <code>MD-01</code>, <code>MD-02</code>, <code>MD-03</code>, or <code>MD-04</code>.</p>
+<h3>8. Skills</h3>
+<p>A skill may be added through <code>--skill</code> only when its exact ID exists in <code>skill_registry.json</code>. The script also detects slash-prefixed references such as <code>/visual-assets</code> when they match a registered skill.</p>
+<p>Prompt addition does not install, approve, or execute a skill. It only records a preferred route and adds the prompt ID to that skill's <code>prompt_routes</code>. Unknown skills fail closed. Use <code>MD-193</code> through <code>MD-195</code> and the governed acquisition tools for missing skills.</p>
+<h3>9. Templates</h3>
+<p>Every new prompt receives the three core required templates by default:</p>
+<ul><li><code>core/run-manifest</code></li><li><code>core/evidence-register</code></li><li><code>core/verification-record</code></li></ul>
+<p>The default conditional templates are:</p>
+<ul><li><code>core/decision-record</code></li><li><code>core/artifact-specification</code></li><li><code>core/acceptance-criteria</code></li></ul>
+<p>Exact template IDs are validated against <code>template_registry.json</code>. Reverse routing lists are updated so template coverage remains complete. Unknown template IDs are rejected rather than substituted.</p>
+<h3>10. Pair safety</h3>
+<p>The generic script creates one unpaired prompt. It rejects <code>executive</code>, <code>paired_execution</code>, and <code>paired_investigation</code> classifications because those require an exact reciprocal twin; it never silently creates an investigative/executive pair. Pair creation requires two deliberately authored prompts with reciprocal <code>paired_prompt_id</code> values, distinct planning and execution responsibilities, user plan review, re-freezing after revisions, separate execution consent, and exact-twin runtime enforcement.</p>
+<p>Use the pair-authoring workflow and guide when a true pair is required. Do not use the generic script twice and manually approximate a pair without pair validation.</p>
+<h3>11. Staging and promotion</h3>
+<p>The live suite is snapshotted before staging. Runtime logs, caches, and advisory lock files are excluded from canonical diff accounting. The staging copy is fully regenerated and validated. Promotion acquires <code>.prompt_suite/prompt-addition.lock</code>, rechecks the live snapshot for concurrent modification, and writes each changed file atomically.</p>
+<p>Expected additions are allowed. Unexpected deletions are prohibited. If a write fails, every previously written path is restored from its original bytes and mode, and newly created paths are removed.</p>
+<p>The expensive proof run does not hold the promotion lock. This avoids blocking unrelated readers while still preventing a stale staged tree from overwriting a concurrently changed suite.</p>
+<h3>12. Generated and updated surfaces</h3>
+<p>A normal prompt addition can update:</p>
+<ul><li><code>prompts/&lt;canonical-file&gt;.md</code></li><li><code>catalog.json</code></li><li><code>PROMPT_CATALOG.md</code></li><li><code>compatibility/capability_identity_registry.json</code></li><li><code>capability_graph.json</code></li><li><code>SCENARIO_CATALOG.json</code></li><li><code>template_registry.json</code></li><li><code>integrations/template_to_prompt_crosswalk.json</code></li><li><code>category_taxonomy.json</code></li><li><code>skill_registry.json</code></li><li><code>department_packs.json</code> when explicitly requested</li><li>both integration crosswalks</li><li><code>evaluations/prompts/MD-###/{healthy,problematic,adversarial}.json</code></li><li><code>evaluations/atomic_contract_fixtures.json</code></li><li>schema contract fixtures when schemas changed</li><li><code>BODY_QUALITY_AUDIT.json</code> and <code>.md</code></li><li><code>EVALUATION_STATUS.json</code></li><li><code>TEST_RESULTS.json</code> when full tests run</li><li><code>VALIDATION.json</code></li><li><code>MANIFEST.json</code></li></ul>
+<p>The exact list is returned in <code>changed_files</code>. A schema-valid receipt is also written to <code>.prompt_suite/results/prompt-addition/MD-###-&lt;nonce&gt;.json</code>; this runtime surface is intentionally excluded from the release manifest.</p>
+<h3>13. Failure behavior</h3>
+<p>The script returns exit code <code>2</code> with a structured error for invalid user input or a failed staged proof. It must not leave a partial prompt, fixture directory, catalog entry, route, or manifest update in the live suite.</p>
+<p>Common failures include:</p>
+<ul><li>source is missing, oversized, not UTF-8, not Markdown, or symlinked;</li><li>title cannot produce a safe slug or filename;</li><li>prompt, skill, template, mode, or department-pack reference is unknown;</li><li>an operational or executive prompt omits <code>DRAFT_ONLY</code>;</li><li>body quality, template coverage, scenario coverage, evaluation coverage, tests, generated reproducibility, links, release consistency, or manifest validation fails;</li><li>the live suite changes while staging is underway;</li><li>a destination cannot be written atomically.</li></ul>
+<h3>14. Review checklist</h3>
+<p>After success, review:</p>
+<p>1. the canonical prompt file and preserved source body; 2. the assigned ID, slug, category, role, modes, risk, and output paths; 3. related and required prompt references; 4. selected template routes; 5. preferred skill routes; 6. department-pack placement; 7. unresolved crosswalk placeholders; 8. healthy, problematic, and adversarial fixtures; 9. the final test, evaluation, validation, and manifest receipts.</p>
+<p>A passing deterministic suite proves structural and runtime-contract integration. It does not by itself prove live model quality. Promote a real run through the existing evaluation workflow before making behavioral quality claims.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/PROMPT_ADDITION_AND_REGISTRATION_GUIDE.md</span></footer></main>
+
+</body>
+</html>

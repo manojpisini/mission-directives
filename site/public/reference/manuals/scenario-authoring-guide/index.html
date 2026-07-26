@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Scenario Authoring Guide from the Mission Directives documentation set." />
+  <title>Scenario Authoring Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/SCENARIO_AUTHORING_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Scenario Authoring Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/SCENARIO_AUTHORING_GUIDE.md</span></div><h1>Scenario Authoring Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Scenario Authoring Guide</h2>
+<h3>Purpose</h3>
+<p>A scenario is a reusable cross-capability execution route. It is justified when the same combination of evidence, planning, production, review, authorization, and verification recurs often enough that operators benefit from a named route.</p>
+<p>A scenario is not a department bundle and not a list of every prompt that might be relevant. It is a conditional graph whose nodes are selected only when their inputs, change surfaces, and authority requirements apply.</p>
+<h3>Required scenario contract</h3>
+<p>Every scenario declares:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>scenario_id:
+title:
+purpose:
+primary_owner:
+prompts:
+required_inputs:
+consumed_artifacts:
+produced_artifacts:
+protected_surfaces:
+possible_external_effects:
+minimum_assurance:
+phases:
+parallel_groups:
+execution_locks:
+branches:
+completion_gate:</code></pre></div>
+<h3>Outcome definition</h3>
+<p>The scenario purpose should describe one observable cross-capability result.</p>
+<p>Good:</p>
+<p>&gt; Implement an approved feature across product requirements, code, tests, security checks, documentation, and release evidence.</p>
+<p>Weak:</p>
+<p>&gt; Run the engineering department prompts.</p>
+<h3>Primary owner</h3>
+<p>Choose the prompt that owns the final result. Other prompts provide prerequisites, evidence, review, or gates.</p>
+<p>Without a primary owner, the scenario tends to produce several reports without one accountable outcome.</p>
+<h3>Phase-specific modes</h3>
+<p>Do not assign one global mode to a scenario that contains different behaviors.</p>
+<p>Example:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>phases:
+  - phase_id: discovery
+    mode: AUDIT_ONLY
+  - phase_id: planning
+    mode: PLAN_ONLY
+  - phase_id: implementation
+    mode: APPLY_SAFE
+  - phase_id: deployment
+    mode: APPLY_APPROVED
+  - phase_id: verification
+    mode: VERIFY_ONLY</code></pre></div>
+<p>The runtime may skip phases whose artifacts already exist and remain current, but it may not weaken their mode requirements.</p>
+<h3>Inputs and artifacts</h3>
+<p><code>required_inputs</code> identifies information that changes routing or makes the scenario unsafe when absent.</p>
+<p><code>consumed_artifacts</code> and <code>produced_artifacts</code> should use stable artifact types or exact paths where appropriate. If two prompts produce the same source-of-truth artifact, add a single-writer lock or redesign the graph.</p>
+<h3>Protected surfaces and external effects</h3>
+<p>State explicitly:</p>
+<ul><li>files or systems that cannot change;</li><li>data that cannot be exposed;</li><li>production environments;</li><li>external publication, sending, deployment, installation, financial, legal, or employment effects;</li><li>approvals required for each effect.</li></ul>
+<h3>Parallel groups</h3>
+<p>Parallelize only independent read-only work or isolated variants.</p>
+<p>Safe examples:</p>
+<ul><li>source retrieval and user research;</li><li>code inventory and documentation audit;</li><li>independent visual and factual review;</li><li>isolated creative directions.</li></ul>
+<p>Unsafe examples:</p>
+<ul><li>two workers editing the same manuscript;</li><li>concurrent schema migration and application deployment;</li><li>two agents changing one design-token source;</li><li>overlapping cleanup branches without a merge plan.</li></ul>
+<h3>Execution locks</h3>
+<p>Use locks for:</p>
+<ul><li>one source-of-truth artifact;</li><li>production systems;</li><li>publication channels;</li><li>data migrations;</li><li>credentials and secrets;</li><li>employment, financial, or legal decisions;</li><li>irreversible exports or submissions.</li></ul>
+<h3>Conditional branches</h3>
+<p>Scenarios should model real uncertainty.</p>
+<p>Common branches:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>evidence sufficient?
+├─ no → collect more evidence or stop
+└─ yes → continue
+
+skill locked and conformant?
+├─ no → native fallback
+└─ yes → quarantined skill execution
+
+production action approved?
+├─ no → plan or draft only
+└─ yes → dry run → execute → verify
+
+verification passed?
+├─ no → failed or rolled_back → residual_open
+└─ yes → verified</code></pre></div>
+<h3>Completion gate</h3>
+<p>The scenario gate should aggregate completion from all required phases without hiding partial success.</p>
+<p>It should require:</p>
+<ul><li>primary artifact or changed state;</li><li>phase-specific <code>=VERIFY:{id}</code> records;</li><li>no unresolved hard stop;</li><li>known rollback state;</li><li>residual ownership;</li><li>authorized external action status.</li></ul>
+<h3>Fixture requirements</h3>
+<p>Every scenario requires:</p>
+<ul><li>healthy fixture;</li><li>problematic fixture;</li><li>adversarial fixture;</li><li>negative-routing expectations where over-selection is plausible;</li><li>rollback or residual fixture when the scenario can mutate state.</li></ul>
+<h3>Anti-patterns</h3>
+<p>Do not create scenarios that:</p>
+<ul><li>load a whole department;</li><li>duplicate another scenario with a new title;</li><li>hide an execution phase behind <code>PLAN_ONLY</code>;</li><li>omit protected surfaces;</li><li>assume publication or deployment;</li><li>lack a primary owner;</li><li>allow several writers to modify one artifact;</li><li>have no failure or verification branch;</li><li>merely concatenate prompts without handoff semantics.</li></ul>
+<h3>Authoring checklist</h3>
+<p>1. Define one observable outcome. 2. Select the primary owner. 3. Add only prompts that change the result. 4. Define required inputs and evidence freshness. 5. Assign phase-specific modes. 6. Define consumed and produced artifacts. 7. Protect sensitive and live surfaces. 8. Identify parallel-safe work and locks. 9. Add evidence, approval, fallback, rollback, and verification branches. 10. Define an independent completion gate. 11. Add all fixture tiers. 12. Update execution order, catalog, coverage, graph, manuals, and manifest.</p>
+<h3>Validation</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/run_evaluations.py
+python tools/validate_suite.py</code></pre></div></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/SCENARIO_AUTHORING_GUIDE.md</span></footer></main>
+
+</body>
+</html>

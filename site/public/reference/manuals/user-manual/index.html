@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="User Manual from the Mission Directives documentation set." />
+  <title>User Manual — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/USER_MANUAL.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="User Manual" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/USER_MANUAL.md</span></div><h1>User Manual</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>User Manual</h2>
+<h3>Purpose</h3>
+<p>This manual explains how to use the suite without reading all 257 prompts. It focuses on selecting the right outcome, setting honest authority, choosing an evidence lane, understanding generated artifacts, and knowing when work is not complete.</p>
+<h3>Mental model</h3>
+<p>The suite is not a bag of prompts. It is a routed system:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>request
+→ context and authority
+→ prompt or scenario selection
+→ evidence and brief
+→ production or execution
+→ verification
+→ residuals and closure</code></pre></div>
+<p>Use one atomic prompt when one capability owns the result. Use a composite scenario when the result spans multiple distinct capabilities.</p>
+<h3>Starting a run</h3>
+<p>A useful directive contains:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>RUN {PROMPT_ID|SCENARIO_ID|DEPARTMENT_PACK}
+MODE {AUDIT_ONLY|PLAN_ONLY|DRAFT_ONLY|APPLY_SAFE|APPLY_APPROVED|VERIFY_ONLY}
+ASSURANCE {FAST|STANDARD|HIGH_ASSURANCE}
+ROOT {PROJECT_ROOT}
+OUTCOME {OBSERVABLE_RESULT}
+AUDIENCE {USERS_REVIEWERS_DECISION_MAKERS}
+SCOPE {IN_SCOPE}
+EXCLUDE {OUT_OF_SCOPE_AND_PROTECTED_SURFACES}
+AUTHORITY {ALLOWED_WRITES_AND_EXTERNAL_ACTIONS}
+EVIDENCE_LANE {FACTUAL|HYBRID|IMAGINATIVE}
+EVIDENCE {AUTHORITATIVE_INPUTS}
+MEDIA {SOURCE_AND_EXPORT_FORMATS}
+SKILLS {AUTO|EXACT_IDS|NONE}
+BUDGET {PROMPTS_CALLS_COST_TIME_PARALLELISM}
+CONSTRAINTS {LEGAL_PRIVACY_BRAND_ACCESSIBILITY_TECHNICAL}
+QUALITY {ACCEPTANCE_CRITERIA}</code></pre></div>
+<p>The most important fields are outcome, authority, evidence, and quality. Missing cosmetic preferences can usually be resolved later; missing authority or evidence may change the entire route.</p>
+<h3>Using the MD keyword</h3>
+<p>When root agent guidance is installed, begin a request with <code>MD</code> followed by an exact ID or ordinary task words:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>MD C-95
+MD research report
+MD visual assets for a slide deck
+MD audit fix verify</code></pre></div>
+<p>The agent should run deterministic keyword lookup first and inspect the selected target before execution. The keyword is a convenience layer; it does not weaken authorization, evidence, skill, loop, or verification rules.</p>
+<p>See <a href="/mission-directives/reference/manuals/root-agent-guidance-and-keyword-routing-guide/">Root Agent Guidance and Keyword Routing Guide</a>.</p>
+<h3>Choosing by outcome</h3>
+<h4>Research and analysis</h4>
+<p>Use deep research, protocol, analytics, fact verification, or a department-specific investigative capability. Public or decision-critical claims normally require <code>MD-82</code>.</p>
+<h4>Writing and communication</h4>
+<p>Choose the artifact owner: article, script, academic paper, report, policy, pitch, communication, or social package. Add editorial review only when it materially improves the result.</p>
+<h4>Engineering</h4>
+<p>Use discovery or requirements before implementation when the target is unclear. Use true pairs for debugging, cleanup, refactoring, security remediation, migration, performance, reliability, delivery, and similar change surfaces.</p>
+<h4>Visual and interactive work</h4>
+<p>Choose presentation, dashboard, infographic, diagram, workshop board, web artifact, or frontend refinement. Verify source and exact export separately.</p>
+<h4>Organizational work</h4>
+<p>Use department packs to discover capabilities, then compile the smallest graph. Do not execute an entire department pack.</p>
+<h3>Modes</h3>
+<h4><code>AUDIT_ONLY</code></h4>
+<p>Use when you want findings, evidence, or review without changes.</p>
+<h4><code>PLAN_ONLY</code></h4>
+<p>Use for plans, specifications, acceptance criteria, or approval preparation.</p>
+<h4><code>DRAFT_ONLY</code></h4>
+<p>Use for local, unapproved artifacts. A draft is not accepted, submitted, published, sent, or deployed.</p>
+<h4><code>APPLY_SAFE</code></h4>
+<p>Use for reversible local changes within explicit authority.</p>
+<h4><code>APPLY_APPROVED</code></h4>
+<p>Use only for the exact approved consequential action. A valid receipt, recovery path, and verification plan are required.</p>
+<h4><code>VERIFY_ONLY</code></h4>
+<p>Use for independent checks. The verifier should not alter the reviewed subject.</p>
+<h3>Assurance profiles</h3>
+<p>Choose the minimum assurance that matches the risk, not the shortest route you prefer.</p>
+<ul><li>FAST: low-risk local work.</li><li>STANDARD: current evidence, typed artifacts, review, verification, residuals.</li><li>HIGH_ASSURANCE: formal evidence, counterevidence, approvals, dry run, recovery, independent verification, lineage.</li></ul>
+<h3>Reading marker-rich output</h3>
+<p>A good run exposes its reasoning products without revealing private chain-of-thought:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>@EVIDENCE:market-01 authoritative market report, collected 2026-07-15
+#FINDING:market-01 demand is concentrated in two segments
+?UNKNOWN:market-02 regional price sensitivity is not measured
++ACTION:market-01 run a limited pricing experiment
+=VERIFY:market-01 finding supported by two independent sources</code></pre></div>
+<p>Markers let you trace decisions and identify where uncertainty remains.</p>
+<h3>Understanding completion</h3>
+<p>Do not judge completion by length or confidence. Check the prompt's task-specific <code>&lt;completion_criteria&gt;</code>.</p>
+<p>A run is not complete when:</p>
+<ul><li>a required artifact is missing;</li><li>a verification record is absent;</li><li>a failed action is hidden;</li><li>an unknown is treated as fact;</li><li>a residual has no owner;</li><li>an executive discovered new work and executed it without approval;</li><li>the source is correct but the export is broken;</li><li>publication or deployment was assumed rather than authorized.</li></ul>
+<h3>Skills</h3>
+<p><code>SKILLS AUTO</code> permits the router to consider registered adapters. It does not authorize installation or external effects. Unresolved locks and unreviewed permissions block automatic high-assurance use.</p>
+<p>Use <code>SKILLS NONE</code> when native prompt execution is sufficient or supply-chain risk is unacceptable.</p>
+<h3>Common examples</h3>
+<h4>Research-backed report</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>RUN C-95
+MODE DRAFT_ONLY
+ASSURANCE STANDARD
+OUTCOME Produce a decision-ready report with reconciled exhibits and exact PDF QA
+AUTHORITY local artifacts only
+EVIDENCE_LANE FACTUAL</code></pre></div>
+<h4>Safe cleanup</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>RUN C-04
+MODE PLAN_ONLY
+ASSURANCE HIGH_ASSURANCE
+OUTCOME Identify junk, dead code, generated artifacts, and duplicate sources of truth without deleting anything
+AUTHORITY read-only</code></pre></div>
+<p>The approved executive run can follow only after evidence proves non-use.</p>
+<h4>Brand and deck</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>RUN C-37 + C-41
+MODE DRAFT_ONLY
+ASSURANCE STANDARD
+OUTCOME Create a coherent brand system and browser-native presentation
+EVIDENCE_LANE HYBRID</code></pre></div>
+<h4>Imaginative work</h4>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>RUN C-33
+MODE DRAFT_ONLY
+ASSURANCE FAST
+OUTCOME Draft a short story with a specified viewpoint and scene turn
+EVIDENCE_LANE IMAGINATIVE</code></pre></div>
+<p>Do not force factual research into fiction unless the work intentionally makes factual claims.</p>
+<h3>Failure and residuals</h3>
+<p>A good run may end in:</p>
+<ul><li><code>failed</code> because verification did not pass;</li><li><code>rolled_back</code> because execution caused damage or uncertainty;</li><li><code>residual_open</code> because approved work remains;</li><li><code>!STOP</code> because evidence, authority, or recovery is insufficient.</li></ul>
+<p>These are honest outcomes, not system failures to conceal.</p>
+<h3>Where to learn more</h3>
+<ul><li><a href="/mission-directives/reference/manuals/operator-guide/">Operator Guide</a></li><li><a href="/mission-directives/reference/manuals/runtime-marker-protocol/">Runtime Marker Protocol</a></li><li><a href="/mission-directives/reference/manuals/completion-criteria-guide/">Completion Criteria Guide</a></li><li><a href="/mission-directives/reference/manuals/troubleshooting-guide/">Troubleshooting Guide</a></li></ul>
+<h3>Reviewing a paired plan before execution</h3>
+<p>When a planning prompt has an execution twin, the system will show the completed plan before doing execution work. Review the plan and provide changes, additions, removals, or refinements. The planner applies accepted feedback and presents the revised plan again. After you approve that exact version, the planner asks whether to invoke its named execution twin. Approval of the plan and permission to execute are separate choices.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/USER_MANUAL.md</span></footer></main>
+
+</body>
+</html>

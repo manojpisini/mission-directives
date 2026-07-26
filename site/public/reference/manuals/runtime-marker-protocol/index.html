@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Runtime Marker Protocol from the Mission Directives documentation set." />
+  <title>Runtime Marker Protocol — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/RUNTIME_MARKER_PROTOCOL.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Runtime Marker Protocol" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/RUNTIME_MARKER_PROTOCOL.md</span></div><h1>Runtime Marker Protocol</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Runtime Marker Protocol</h2>
+<h3>Purpose</h3>
+<p>Runtime markers give human-readable artifacts stable machine identifiers. They connect evidence, uncertainty, findings, actions, verification, and stops across prompts, tools, models, files, and handoffs.</p>
+<p>Markers are not decorative prefixes. They represent typed records and must remain stable through the run lifecycle.</p>
+<h3>Marker definitions</h3>
+<h4><code>@EVIDENCE:{id}</code></h4>
+<p>Represents a source or reproducible observation.</p>
+<p>Required context:</p>
+<ul><li>origin;</li><li>location or revision;</li><li>collection time when freshness matters;</li><li>trust state;</li><li>scope;</li><li>redaction status;</li><li>hash or citation where available.</li></ul>
+<p>Example:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>@EVIDENCE:test-17 pytest tests/test_sessions.py::test_refresh_replay — failed at commit 7ab21e</code></pre></div>
+<h4><code>?UNKNOWN:{id}</code></h4>
+<p>Represents unresolved information that could change a conclusion, action, risk, or acceptance result.</p>
+<p>Example:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>?UNKNOWN:owner-03 No owner is recorded for the production rollback runbook.</code></pre></div>
+<p>An unknown must not be silently converted to an assumption. Resolve it with new evidence, defer it with ownership, or stop.</p>
+<h4><code>#FINDING:{id}</code></h4>
+<p>Represents an evidence-backed issue, opportunity, contradiction, or conclusion.</p>
+<p>Example:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>#FINDING:auth-08 Refresh tokens remain valid after password reset.
+Evidence: @EVIDENCE:auth-08a, @EVIDENCE:auth-08b
+Confidence: high</code></pre></div>
+<h4><code>+ACTION:{id}</code></h4>
+<p>Represents bounded work. Its lifecycle may be proposed, approved, executing, executed, skipped, deferred, failed, or rolled back.</p>
+<p>Required fields:</p>
+<ul><li>target;</li><li>expected effect;</li><li>mode;</li><li>authority;</li><li>dependencies;</li><li>risk;</li><li>rollback;</li><li>verification IDs;</li><li>current status.</li></ul>
+<h4><code>=VERIFY:{id}</code></h4>
+<p>Represents an acceptance criterion and result. Execution alone is not verification.</p>
+<p>Example:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>=VERIFY:auth-08
+Criterion: refresh token is invalid after password reset
+Method: automated regression test and API replay attempt
+Result: pass
+Evidence: @EVIDENCE:auth-08c</code></pre></div>
+<h4><code>!STOP:{reason}</code></h4>
+<p>Represents a hard halt. The reason is a stable machine-readable slug where possible.</p>
+<p>Examples:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>!STOP:approval-does-not-cover-production
+!STOP:evidence-snapshot-stale
+!STOP:rollback-unavailable
+!STOP:untrusted-skill-requires-network</code></pre></div>
+<h3>Lifecycle relationships</h3>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>@EVIDENCE:e1
+   ↓ supports
+#FINDING:f1
+   ↓ motivates
++ACTION:a1
+   ↓ evaluated by
+=VERIFY:v1</code></pre></div>
+<p><code>?UNKNOWN:u1</code> may block any transition. <code>!STOP:reason</code> halts the affected path.</p>
+<h3>Pair handoff behavior</h3>
+<p>The investigator creates evidence, findings, proposed actions, and acceptance criteria. The executive preserves those IDs.</p>
+<p>The executive may add a new <code>#FINDING:{id}</code>, but it may not convert that finding into an action inside the same approved batch unless the runtime obtains new approval.</p>
+<h3>Marker use by role</h3>
+<div class="table-card"><table><tbody><tr><td>Role</td><td>Primary markers</td></tr><tr><td>Control</td><td><code>?UNKNOWN</code>, <code>!STOP</code>, <code>=VERIFY</code></td></tr><tr><td>Investigative</td><td><code>@EVIDENCE</code>, <code>?UNKNOWN</code>, <code>#FINDING</code>, <code>+ACTION</code>, <code>=VERIFY</code></td></tr><tr><td>Executive</td><td>preserved <code>+ACTION</code>, <code>=VERIFY</code>, new <code>#FINDING</code>, <code>!STOP</code></td></tr><tr><td>Operational</td><td>all markers as required by the workflow</td></tr><tr><td>Gate</td><td><code>@EVIDENCE</code>, <code>#FINDING</code>, <code>=VERIFY</code>, <code>!STOP</code></td></tr></tbody></table></div>
+<p>Every prompt still declares the complete vocabulary to preserve composability.</p>
+<h3>ID rules</h3>
+<ul><li>IDs are unique within a run.</li><li>IDs are never recycled for a different record.</li><li>Handoffs preserve IDs.</li><li>Derivatives reference parent IDs.</li><li>Corrections append history rather than rewriting prior evidence.</li><li>Redacted public artifacts may map internal IDs to safe public identifiers.</li></ul>
+<h3>Parsing guidance</h3>
+<p>The marker identifies a record; the surrounding artifact or JSON schema supplies fields. Do not infer full structured data from the marker string alone.</p>
+<p>Recommended JSON representation:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>{
+  &quot;record_id&quot;: &quot;#FINDING:auth-08&quot;,
+  &quot;type&quot;: &quot;finding&quot;,
+  &quot;summary&quot;: &quot;Refresh tokens remain valid after password reset&quot;,
+  &quot;evidence_ids&quot;: [&quot;@EVIDENCE:auth-08a&quot;],
+  &quot;confidence&quot;: &quot;high&quot;,
+  &quot;status&quot;: &quot;open&quot;
+}</code></pre></div>
+<h3>Anti-patterns</h3>
+<ul><li>using markers only in the control contract but not capability prompts;</li><li>changing IDs during handoff;</li><li>marking a proposed action as verified;</li><li>using <code>@EVIDENCE</code> for unsupported model output;</li><li>hiding uncertainty in prose rather than <code>?UNKNOWN</code>;</li><li>continuing after <code>!STOP</code> without a new authorized run state;</li><li>inventing evidence IDs without source records.</li></ul>
+<h3>Validation</h3>
+<p>Every prompt body must contain a <code>&lt;runtime_markers&gt;</code> block naming all six markers. <code>audit_prompt_bodies.py</code> verifies coverage.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/RUNTIME_MARKER_PROTOCOL.md</span></footer></main>
+
+</body>
+</html>

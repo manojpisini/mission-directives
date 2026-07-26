@@ -2,20 +2,21 @@
 
 ## Purpose
 
-The Astro/Starlight site publishes the complete public documentation surface at `https://manojpisini.github.io/mission-directives/`. The source lives under `site/`.
+The static Astro site publishes the public documentation surface at `https://manojpisini.github.io/mission-directives/`. The source lives under `site/` and uses the checked-in HTML, CSS, and JavaScript shell for the landing and documentation pages.
 
 ## Architecture
 
-Authored pages explain the main workflows. `site/scripts/generate-reference.mjs` creates the reference surface from canonical repository data before every development run and build:
+`site/scripts/generate-reference.mjs` runs before development and production builds. It creates the static documentation page and mirrors every root `docs/*.md` manual into `site/public/reference/manuals/`.
 
-- prompt pages from `catalog.json` and `prompts/`;
-- scenario pages from `SCENARIO_CATALOG.json`;
-- skill pages from `skill_registry.json`;
-- manual mirrors from `docs/`, excluding internal implementation plans.
+The public site includes:
 
-Generated pages live under `site/src/content/docs/reference/`. They are ignored by Git and the sealed manifest. Never edit them directly.
+- `site/src/pages/index.astro` for the landing page shell;
+- `site/public/docs.html` for the documentation hub;
+- `site/public/styles.css` and `site/public/app.js` for the provided visual system and interactions;
+- generated manual pages under `site/public/reference/manuals/`;
+- static assets under `site/public/assets/`.
 
-Starlight provides navigation, accessible documentation layouts, dark mode, and Pagefind search. The site uses Astro's project-page base path `/mission-directives`.
+Astro provides the build and GitHub Pages base path. The site shell owns navigation, search dialog behavior, copy buttons, tabs, sidebar behavior, and the light-mode visual system.
 
 ## Local development
 
@@ -30,34 +31,33 @@ Production verification:
 ```bash
 pnpm run generate
 pnpm run build
-pnpm run preview
+pnpm run check
 ```
 
-The build must report the expected prompt, scenario, skill, and manual counts and complete the Pagefind index.
+`pnpm run check` builds the site and verifies internal links across the generated HTML pages.
 
 ## Publishing
 
 `.github/workflows/deploy-docs.yml` builds with `withastro/action` and deploys with `actions/deploy-pages` after a push to `main` that changes site or canonical documentation inputs. The workflow can also be run manually.
 
-In repository settings, set Pages source to **GitHub Actions**. The public URL will not update until the workflow is pushed and completes successfully.
+In repository settings, set Pages source to **GitHub Actions**. The public URL updates only after the workflow completes successfully.
 
 ## Content ownership
 
 | Content | Edit |
 | --- | --- |
-| Prompt identity or metadata | `catalog.json` through the governed prompt workflow |
-| Prompt body | canonical file under `prompts/` |
-| Scenario | `SCENARIO_CATALOG.json` through its generator/authoring workflow |
-| Skill route | `skill_registry.json` |
-| Full manual | `docs/*.md` |
-| Site learning path | `site/src/content/docs/guides/` |
+| Landing page shell | `site/src/pages/index.astro` |
+| Documentation hub and manual generation | `site/scripts/generate-reference.mjs` |
+| Manual source | `docs/*.md` |
+| Visual system | `site/public/styles.css` |
+| Interactions | `site/public/app.js` |
+| Static diagrams and illustrations | `site/public/assets/` |
 | Navigation and deployment base | `site/astro.config.mjs` |
-| Visual system | `site/src/styles/custom.css` |
 
 ## Branding handoff
 
-The initial visual system is intentionally restrained. Replace the favicon, typography, color tokens, and title treatment in `site/public/`, `site/src/styles/custom.css`, and `site/astro.config.mjs`. Keep focus visibility, responsive tables, reduced-motion behavior, contrast, and project-page base paths intact.
+The current visual system is light, minimal, and sage-accented. Replace branding assets under `site/public/` when final brand assets are ready. Keep focus visibility, responsive tables, reduced-motion behavior, contrast, copy buttons, tabs, mobile navigation, and the `/mission-directives` base path intact.
 
 ## Validation
 
-The source repository must keep `site/node_modules/`, `site/dist/`, `site/.astro/`, and generated references outside the manifest. `site/pnpm-lock.yaml`, configuration, authored content, generator, styles, and workflow remain sealed release inputs.
+The repository keeps `site/node_modules/`, `site/dist/`, and `site/.astro/` outside the manifest. The site source, generated public documentation pages, lockfile, generator, and workflow remain sealed release inputs.

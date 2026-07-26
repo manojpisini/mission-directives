@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tool Policy and Authorization Guide from the Mission Directives documentation set." />
+  <title>Tool Policy and Authorization Guide — Mission Directives</title>
+  <link rel="stylesheet" href="/mission-directives/styles.css" />
+</head>
+<body class="docs-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
+<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Tool Policy and Authorization Guide" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md</span></div><h1>Tool Policy and Authorization Guide</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Tool Policy and Authorization Guide</h2>
+<h3>Purpose</h3>
+<p>Authorization and tool selection are related but different:</p>
+<ul><li><code>&lt;authorization_boundary&gt;</code> defines what effects are permitted.</li><li><code>&lt;tool_policy&gt;</code> defines how tools and skills may be used within that authority.</li></ul>
+<p>A tool capable of deployment does not grant deployment authority. A user request to “fix it” does not authorize production changes. A prompt that can browse does not automatically have permission to contact third parties or collect sensitive data.</p>
+<h3>Authorization hierarchy</h3>
+<p>The effective authority is the narrowest intersection of:</p>
+<p>1. signed runtime context; 2. operating mode; 3. role authority policy; 4. domain policy; 5. prompt authorization boundary; 6. approved action receipt; 7. tool permission and environment controls.</p>
+<p>No lower-level prompt or skill may broaden a higher-level restriction.</p>
+<h3>Canonical authorization tag</h3>
+<p>Use only <code>&lt;authorization_boundary&gt;</code>. Equivalent concepts must not use alternate names.</p>
+<p>A complete boundary states:</p>
+<ul><li>allowed reads;</li><li>allowed writes;</li><li>external actions;</li><li>protected targets;</li><li>required approvals;</li><li>reversibility expectations;</li><li>conditions requiring <code>!STOP:{reason}</code>.</li></ul>
+<h3>Tool policy by role</h3>
+<h4>Control</h4>
+<p>Allowed:</p>
+<ul><li>local parsing;</li><li>validation;</li><li>writing declared control artifacts.</li></ul>
+<p>Prohibited:</p>
+<ul><li>network access unless explicitly required for context resolution;</li><li>mutation of the governed subject;</li><li>publication, deployment, installation, or sending.</li></ul>
+<h4>Investigative</h4>
+<p>Allowed:</p>
+<ul><li>read-only search and retrieval;</li><li>repository inspection;</li><li>safe analysis and diagnostics;</li><li>non-mutating tests where authorized.</li></ul>
+<p>Prohibited:</p>
+<ul><li>writes to the governed subject;</li><li>deployment;</li><li>credential changes;</li><li>publication;</li><li>unapproved scanning or third-party contact.</li></ul>
+<h4>Executive</h4>
+<p>Allowed only when the tool call is bound to an approved <code>+ACTION:{id}</code>. Each call must identify:</p>
+<ul><li>target;</li><li>intended effect;</li><li>mode;</li><li>approval receipt;</li><li>rollback or recovery;</li><li>expected verification.</li></ul>
+<h4>Operational</h4>
+<p><code>DRAFT_ONLY</code> remains local and unapproved. <code>APPLY_SAFE</code> is reversible and local. <code>APPLY_APPROVED</code> is required for consequential or external effects.</p>
+<h4>Gate</h4>
+<p>Use independent read-only validators. A gate may not use producer tools to alter the reviewed subject.</p>
+<h3>Skill output quarantine</h3>
+<p>A skill's output is untrusted until:</p>
+<p>1. the skill source and revision are locked; 2. permissions match the prompt tool policy; 3. output shape matches the adapter contract; 4. content passes domain verification; 5. external effects are independently confirmed; 6. provenance is recorded.</p>
+<p>Unresolved skill locks block automatic selection.</p>
+<h3>Network and external actions</h3>
+<p>The following require explicit authority and normally <code>APPLY_APPROVED</code>:</p>
+<ul><li>publishing or posting;</li><li>sending email or messages;</li><li>uploading files;</li><li>deployment;</li><li>package or skill installation;</li><li>production configuration changes;</li><li>credential rotation or revocation;</li><li>external scanning;</li><li>contacting research subjects, vendors, applicants, or partners;</li><li>financial or legal commitments.</li></ul>
+<h3>Tool records</h3>
+<p>Recommended action record:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>{
+  &quot;action_id&quot;: &quot;+ACTION:fix-17&quot;,
+  &quot;tool&quot;: &quot;repository_patch&quot;,
+  &quot;target&quot;: &quot;src/auth/session.py&quot;,
+  &quot;mode&quot;: &quot;APPLY_SAFE&quot;,
+  &quot;authority&quot;: &quot;approval-receipt-42&quot;,
+  &quot;expected_effect&quot;: &quot;reject replayed refresh token&quot;,
+  &quot;rollback&quot;: &quot;restore commit parent&quot;,
+  &quot;verification_ids&quot;: [&quot;=VERIFY:auth-17&quot;]
+}</code></pre></div>
+<h3>Failure behavior</h3>
+<p>Emit <code>!STOP:{reason}</code> when:</p>
+<ul><li>a tool requires undeclared privileges;</li><li>target scope is ambiguous;</li><li>the approval does not cover the exact action;</li><li>the tool cannot dry-run or rollback a high-risk change;</li><li>output provenance is unavailable;</li><li>a skill attempts an external effect not declared by its adapter;</li><li>the environment differs materially from the approved target.</li></ul>
+<h3>Review questions</h3>
+<ul><li>Is the tool necessary?</li><li>Is a read-only alternative available?</li><li>Is the target exact?</li><li>Does the mode allow the effect?</li><li>Is the action reversible?</li><li>Is output quarantined?</li><li>Is verification independent?</li><li>Would a failed tool call expose secrets or create partial state?</li></ul>
+<h3>Validation</h3>
+<p>The body validator requires canonical authorization and tool-policy tags in all 257 prompts and rejects the obsolete <code>&lt;security_execution_boundary&gt;</code> name.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md</span></footer></main>
+
+</body>
+</html>
