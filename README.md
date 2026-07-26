@@ -121,7 +121,7 @@ Common entry points:
 
 ## Documentation Site
 
-The documentation site is a static Astro build that uses the checked-in landing/documentation HTML, CSS, and JS shell. The generator publishes every root file in `docs/` as a static manual page under `reference/manuals/` and injects the manual catalog into `docs.html`.
+The documentation site is a static Astro build that uses the checked-in landing/documentation HTML, CSS, and JS shell. The generator publishes a sectioned documentation hub: `docs.html` for overview, `guides.html` for task guides, `manuals.html` for the generated manual library, `reference.html` for runtime contracts, and every root `docs/*.md` file as a static manual page under `reference/manuals/`.
 
 ```bash
 cd site

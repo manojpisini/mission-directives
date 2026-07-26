@@ -9,9 +9,9 @@
 </head>
 <body class="docs-page">
 <a class="skip-link" href="#main-content">Skip to content</a>
-<header class="topbar"><div class="topbar__inner"><a class="brand" href="/mission-directives/index.html" aria-label="Mission Directives home"><span class="brand__mark" aria-hidden="true"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><nav class="top-actions" aria-label="Manual navigation"><a href="/mission-directives/docs.html#manual-library">All manuals</a><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/MD_MASTERY_MANUAL.md" rel="noreferrer" target="_blank">Source</a></nav></div></header>
-<main class="main manual-page" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block" data-title="Mission Directives Mastery Manual" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/MD_MASTERY_MANUAL.md</span></div><h1>Mission Directives Mastery Manual</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p></section><section class="section-block manual-body"><h2>Mission Directives Mastery Manual</h2>
-<p>**Version:** 1.8.3 **Audience:** users, operators, prompt authors, maintainers, reviewers, and integrators</p>
+<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="/mission-directives/index.html"><span aria-hidden="true" class="brand__mark"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>Manual</span></span></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button><nav aria-label="Documentation links" class="top-actions"><a href="/mission-directives/docs.html">Docs</a><a href="/mission-directives/guides.html">Guides</a><a href="/mission-directives/manuals.html">Manuals</a><a href="/mission-directives/reference.html">Reference</a></nav></div></header>
+<div class="layout"><aside aria-label="Documentation navigation" class="sidebar" id="sidebar"><div class="sidebar__scroll"><div class="version-panel"><div><span>Documentation</span><strong>Version 1.8.3</strong></div><span class="status-dot">Stable</span></div><nav class="docs-nav" id="docsNav"><section class="nav-group"><p>Documentation</p><a href="/mission-directives/docs.html"><span>Overview</span></a><a href="/mission-directives/guides.html"><span>Guides</span></a><a class="active" href="/mission-directives/manuals.html"><span>Manuals</span></a><a href="/mission-directives/reference.html"><span>Reference</span></a></section><section class="nav-group"><p>Core manuals</p><a href="/mission-directives/reference/manuals/user-manual/"><span>User manual</span></a><a href="/mission-directives/reference/manuals/operator-guide/"><span>Operator guide</span></a><a href="/mission-directives/reference/manuals/security-operations-guide/"><span>Security operations</span></a></section></nav><div class="sidebar-help"><span class="sidebar-help__icon">?</span><div><strong>Operator path</strong><p>Route, explain, plan, execute, verify.</p></div></div></div></aside><main class="main" id="main-content"><div class="content-grid"><article class="doc-content"><section class="docs-intro section-block manual-hero" data-title="Mission Directives Mastery Manual" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/MD_MASTERY_MANUAL.md</span></div><h1>Mission Directives Mastery Manual</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p><div class="manual-meta"><span>manual</span><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/MD_MASTERY_MANUAL.md" rel="noreferrer" target="_blank">Source file</a></div></section><section class="section-block manual-body" data-title="Manual content" id="content"><h2>Mission Directives Mastery Manual</h2>
+<p><strong>Version:</strong> 1.8.3 <strong>Audience:</strong> users, operators, prompt authors, maintainers, reviewers, and integrators</p>
 <p>This manual is the authoritative learning path for the suite. Start with <a href="https://github.com/manojpisini/mission-directives/blob/main/../README.md">README</a>, use the <a href="/mission-directives/reference/manuals/template-system-guide/">Template System Guide</a> for artifact routing, and use the <a href="/mission-directives/reference/manuals/installation-and-project-integration-guide/">Installation Guide</a> for project integration.</p>
 <h3>How to use this manual</h3>
 <p>Read chapters 1–5 before operating a run. Read Exact Twin Review before any paired workflow. Read Installation and Cross-Platform Tooling before integrating a project. Maintainers should also read Schemas, Evaluation and Proof, and Release Engineering. Each chapter below includes commands, decision rules, verification, and failure checks specific to that subject.</p>
@@ -234,7 +234,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h3>Artifact inspection matrix</h3>
 <div class="table-card"><table><tbody><tr><td>Artifact</td><td>Canonical source</td><td>Primary validator</td><td>Human review question</td></tr><tr><td>Prompt body</td><td><code>prompts/*.md</code></td><td><code>audit_prompt_bodies.py</code></td><td>Does the method own the requested outcome?</td></tr><tr><td>Prompt catalog</td><td><code>catalog.json</code></td><td><code>rebuild_suite_metadata.py</code></td><td>Is this a generated view only?</td></tr><tr><td>Scenario</td><td><code>SCENARIO_CATALOG.json</code></td><td><code>validate_suite.py</code></td><td>Does it form the smallest coherent graph?</td></tr><tr><td>Template</td><td><code>templates/**</code></td><td><code>validate_templates.py</code></td><td>Does each section give domain-specific direction?</td></tr><tr><td>Skill</td><td><code>skill_registry.json</code></td><td><code>check_skill_lock.py</code></td><td>Is the capability genuinely required and trusted?</td></tr><tr><td>Daily log</td><td><code>.prompt_suite/logs/*.toml</code></td><td><code>tests/test_logging.py</code></td><td>Are secrets redacted and spans correlated?</td></tr><tr><td>Agent guidance</td><td><code>AGENTS.md / CLAUDE.md</code></td><td><code>tests/test_agent_guidance.py</code></td><td>Was unmanaged text preserved?</td></tr><tr><td>Installation receipt</td><td><code>.prompt_suite/installation-receipt.json</code></td><td><code>tests/test_installer.py</code></td><td>Did prompts, ignores, docs, and guidance match policy?</td></tr><tr><td>Manifest</td><td><code>MANIFEST.json</code></td><td><code>build_manifest.py --check</code></td><td>Does a fresh extraction match every hash?</td></tr></tbody></table></div>
 <h3>Operational walkthrough 1: Repository research to verified report</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **repository research to verified report** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>repository research to verified report</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Run keyword lookup for the research outcome. 2. Inspect C-26 and its evidence assumptions. 3. Resolve the report template and only triggered supporting templates. 4. Create a source plan with freshness and authority requirements. 5. Collect evidence with stable IDs and contradiction records. 6. Draft findings separately from recommendations. 7. Validate citations, calculations, links, and residual unknowns. 8. Record verification and close without overstating behavioral proof.</p>
 <h4>Required evidence</h4>
@@ -242,7 +242,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Searching before defining the research decision or audience.</li><li>Combining evidence and recommendation without showing the inference boundary.</li><li>Using stale or circular sources as independent corroboration.</li><li>Closing with unsupported certainty when material unknowns remain.</li></ul>
 <h3>Operational walkthrough 2: Full documentation system</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **full documentation system** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>full documentation system</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Run MD-75 in AUDIT_ONLY or PLAN_ONLY. 2. Inventory code, configuration, interfaces, builds, binaries, and existing docs. 3. Design hubs, canonical pages, backlinks, forward links, redirects, owners, and freshness triggers. 4. Present the plan and incorporate user changes. 5. Re-freeze and obtain approval. 6. Request consent for MD-76 only. 7. Generate the selected manual family and verify every command and link. 8. Publish only within authorized scope.</p>
 <h4>Required evidence</h4>
@@ -250,7 +250,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Writing manuals before code, configuration, interfaces, and binaries are inventoried.</li><li>Invoking an executor other than <code>MD-76</code>.</li><li>Producing isolated pages with no hubs, backlinks, forward links, or ownership.</li><li>Documenting commands or defaults from convention rather than verified behavior.</li></ul>
 <h3>Operational walkthrough 3: Feature implementation</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **feature implementation** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>feature implementation</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Route to the smallest feature scenario or MD-124. 2. Confirm acceptance criteria, affected files, platform support, and rollback. 3. Resolve only required technical and documentation templates. 4. Write failing tests before behavior changes. 5. Implement bounded changes and preserve compatibility. 6. Run focused and full tests. 7. Update documentation and telemetry within the same task. 8. Record residuals and exact verification evidence.</p>
 <h4>Required evidence</h4>
@@ -258,7 +258,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Editing implementation before acceptance criteria and failure reproduction are stable.</li><li>Bundling unrelated refactors with the feature.</li><li>Passing unit tests while skipping integration, compatibility, or rollback checks.</li><li>Updating code without updating the user-facing or operator-facing contract.</li></ul>
 <h3>Operational walkthrough 4: Audit-fix-verify loop</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **audit-fix-verify loop** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>audit-fix-verify loop</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Use C-108 when repeated passes can reveal remaining findings. 2. Define the finite surface and severity model. 3. Audit without mutating. 4. Convert each validated finding into a bounded action. 5. Fix one coherent batch. 6. Verify original symptoms and adjacent behavior. 7. Re-audit only remaining surfaces. 8. Stop on verified closure, plateau, budget, or authority loss.</p>
 <h4>Required evidence</h4>
@@ -266,7 +266,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Repeating the same audit without new evidence or a changed hypothesis.</li><li>Fixing unvalidated scanner output.</li><li>Counting iterations rather than measuring closed findings.</li><li>Continuing after quality plateau, authority loss, or exhausted budget.</li></ul>
 <h3>Operational walkthrough 5: Visual asset batch</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **visual asset batch** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>visual asset batch</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Create a finite asset inventory with dimensions, purpose, audience, and acceptance criteria. 2. Select visual templates and the visual-assets skill only when needed. 3. Use one outer loop item per asset. 4. Use an inner refinement loop only with a measurable rubric. 5. Preserve SVG/HTML/CSS/JS editable sources. 6. Check text alternatives, labels, contrast, responsive behavior, and export dimensions. 7. Verify each item independently. 8. Stop after the queue and quality thresholds pass.</p>
 <h4>Required evidence</h4>
@@ -274,7 +274,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Generating assets without a finite inventory or placement context.</li><li>Using visual polish as a substitute for communication accuracy.</li><li>Flattening editable vectors into screenshots without need.</li><li>Applying identical composition to every asset regardless of information structure.</li></ul>
 <h3>Operational walkthrough 6: Skill acquisition</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **skill acquisition** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>skill acquisition</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Prove native prompts cannot meet the acceptance criteria cleanly. 2. Run find-skills and compare exact candidates. 3. Inspect provenance, permissions, source, lock, and expected outputs. 4. Install only the approved exact skill. 5. Resolve <code>.agents</code>, Claude Code, and OpenCode destinations per platform. 6. Verify identical SKILL.md hashes in all selected locations. 7. Keep outputs quarantined. 8. Promote only after conformance and artifact verification.</p>
 <h4>Required evidence</h4>
@@ -282,7 +282,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Installing a skill because it is popular or already mentioned.</li><li>Treating presence on disk as trust or task fit.</li><li>Writing to only one agent application while claiming global availability.</li><li>Promoting output before provenance and artifact verification pass.</li></ul>
 <h3>Operational walkthrough 7: Project installation</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **project installation** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>project installation</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Run the installer with --dry-run and an absolute project path. 2. Review the copy, ignore, runtime-directory, and guidance actions. 3. Install to ./prompts through staging. 4. Verify the managed .gitignore block excludes prompts and internal runtime outputs but not docs. 5. Confirm AGENTS.md and CLAUDE.md preserve unmanaged content. 6. Run lookup and validation from the installed prompts directory. 7. Inspect installation and guidance receipts. 8. Retain the backup until the updated installation passes.</p>
 <h4>Required evidence</h4>
@@ -290,7 +290,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Running replacement without retaining a recoverable backup.</li><li>Ignoring <code>docs/</code> or overwriting unmanaged agent instructions.</li><li>Copying runtime logs, caches, or machine receipts into the project.</li><li>Assuming installation succeeded without executing lookup and validation in the installed location.</li></ul>
 <h3>Operational walkthrough 8: Cross-platform release</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **cross-platform release** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>cross-platform release</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Read the active version from VERSION. 2. Regenerate canonical derived files. 3. Run Linux, Windows, and macOS CI jobs. 4. Exercise Bash and PowerShell wrappers with spaces and Unicode paths. 5. Compare exit codes, output, logs, and receipts. 6. Remove caches and runtime logs. 7. Build and check the manifest. 8. Archive, extract, and rerun non-mutating proof.</p>
 <h4>Required evidence</h4>
@@ -298,7 +298,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Using an Ubuntu-only run to claim PowerShell or Windows parity.</li><li>Sealing a manifest before regenerating catalogs and test receipts.</li><li>Including caches, telemetry logs, or local receipts in the archive.</li><li>Reporting success from the working tree without checking the extracted package.</li></ul>
 <h3>Operational walkthrough 9: Incident investigation</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **incident investigation** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>incident investigation</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Classify severity and containment authority. 2. Collect immutable evidence and preserve timestamps. 3. Separate facts, inferences, disputed claims, and unknowns. 4. Build a timeline with source lineage. 5. Identify affected components and trust boundaries. 6. Recommend reversible containment before permanent repair. 7. Verify recovery and monitor recurrence indicators. 8. Document residual risk and escalation ownership.</p>
 <h4>Required evidence</h4>
@@ -306,7 +306,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Changing evidence during collection or losing timestamp context.</li><li>Presenting hypotheses as confirmed facts.</li><li>Implementing permanent changes before reversible containment is evaluated.</li><li>Closing the incident when service is restored but root cause and recurrence controls remain unknown.</li></ul>
 <h3>Operational walkthrough 10: Configuration manual</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **configuration manual** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>configuration manual</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Inventory every config source, field, default, type, allowed value, and secret status. 2. Document precedence across flags, environment, files, profiles, and defaults. 3. Provide Windows, Linux, and macOS paths where behavior differs. 4. Use safe examples with no real credentials. 5. Document reload requirements and side effects. 6. Include validation errors and troubleshooting. 7. Test examples against the implementation. 8. Link to deployment, security, and upgrade guides.</p>
 <h4>Required evidence</h4>
@@ -314,7 +314,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Documenting only one configuration source while flags or environment variables override it.</li><li>Publishing real secrets in examples.</li><li>Assuming defaults from library conventions.</li><li>Omitting whether a change is dynamic, restart-bound, destructive, or migration-sensitive.</li></ul>
 <h3>Operational walkthrough 11: Built binary manual</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **built binary manual** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>built binary manual</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Inventory executable and package names. 2. Record version, platform, architecture, source revision, checksum, signature, SBOM, and provenance. 3. Document installation and companion files. 4. Document commands, flags, environment, exit codes, signals, logs, sockets, and permissions. 5. Record dynamic dependencies and runtime paths. 6. Provide debug, crash, rollback, update, uninstall, and cleanup procedures. 7. Use only safe binary inspection or authorized execution. 8. Verify every platform claim or mark it unknown.</p>
 <h4>Required evidence</h4>
@@ -322,7 +322,7 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Running an unknown binary merely to fill documentation gaps.</li><li>Confusing package metadata with observed runtime behavior.</li><li>Claiming architecture or platform support from filenames alone.</li><li>Omitting residual files, services, state, or permissions from uninstall guidance.</li></ul>
 <h3>Operational walkthrough 12: Prompt authoring</h3>
-<p>This walkthrough applies the existing Mission Directives contracts to **prompt authoring** without introducing a new capability.</p>
+<p>This walkthrough applies the existing Mission Directives contracts to <strong>prompt authoring</strong> without introducing a new capability.</p>
 <h4>Steps</h4>
 <p>1. Choose one observable outcome and permanent identity. 2. Declare role, evidence lane, modes, risk, dependencies, outputs, skills, and template routes. 3. Keep required templates minimal and conditional templates trigger-based. 4. Write task-specific method and completion criteria. 5. Add authorization, tool, marker, stop, and verification contracts. 6. For pairs, declare one reciprocal exact twin. 7. Add healthy, problematic, adversarial, and mutation coverage. 8. Rebuild catalogs and prove no self-dependency or collision.</p>
 <h4>Required evidence</h4>
@@ -330,7 +330,8 @@ python tools/build_manifest.py --check</code></pre></div>
 <h4>Common failure modes</h4>
 <ul><li>Creating a new prompt when an existing capability owns the outcome.</li><li>Using generic completion criteria or unbounded tool authority.</li><li>Making many templates required to avoid explicit conditional routing.</li><li>Changing generated catalogs directly or declaring a non-reciprocal pair.</li></ul>
 <h3>Governed prompt addition</h3>
-<p>A prompt becomes part of Mission Directives only after identity allocation, canonical normalization, structural source quarantine, routing integration, taxonomy and crosswalk updates, fixtures, deterministic proof, and manifest sealing. Use <code>MD-199</code> when an agent must assess overlap or refine the prompt; use <code>tools/add_prompt.py</code> when the source and title are already resolved. The implementation stages the complete suite, validates all prompt/template/skill/pack references, regenerates derived artifacts, runs tests by default, and promotes only a verified diff under a short exclusive lock. Full operational details and failure recovery are in <a href="/mission-directives/reference/manuals/prompt-addition-and-registration-guide/">Prompt Addition and Registration Guide</a>.</p></section><nav class="page-nav"><a href="/mission-directives/docs.html#manual-library"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from docs/MD_MASTERY_MANUAL.md</span></footer></main>
-
+<p>A prompt becomes part of Mission Directives only after identity allocation, canonical normalization, structural source quarantine, routing integration, taxonomy and crosswalk updates, fixtures, deterministic proof, and manifest sealing. Use <code>MD-199</code> when an agent must assess overlap or refine the prompt; use <code>tools/add_prompt.py</code> when the source and title are already resolved. The implementation stages the complete suite, validates all prompt/template/skill/pack references, regenerates derived artifacts, runs tests by default, and promotes only a verified diff under a short exclusive lock. Full operational details and failure recovery are in <a href="/mission-directives/reference/manuals/prompt-addition-and-registration-guide/">Prompt Addition and Registration Guide</a>.</p></section><nav class="page-nav"><a href="/mission-directives/manuals.html"><small>Back</small><strong>All manuals</strong></a><a href="/mission-directives/docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav></article></div><footer class="footer"><span>Mission Directives Documentation</span><span>Generated from repository documentation</span></footer></main></div>
+<div aria-label="Search documentation" aria-modal="true" class="search-dialog" hidden id="searchDialog" role="dialog"><div class="search-dialog__panel"><div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><input autocomplete="off" id="searchInput" placeholder="Search current page..." type="search"/><kbd>Esc</kbd></div><div class="search-results" id="searchResults"></div></div></div>
+<div class="sidebar-backdrop" hidden id="sidebarBackdrop"></div><script is:inline src="/mission-directives/app.js"></script>
 </body>
 </html>

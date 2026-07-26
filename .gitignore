@@ -35,3 +35,4 @@ site/node_modules/
 site/dist/
 site/.astro/
 prompt_imports/
+infographics/

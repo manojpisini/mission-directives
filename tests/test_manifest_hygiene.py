@@ -90,3 +90,13 @@ def test_manifest_ignores_prompt_imports(tmp_path):
 
     paths = {row["path"] for row in current(tmp_path)["files"]}
     assert "prompt_imports/internal-plan.json" not in paths
+
+
+def test_manifest_ignores_root_infographics(tmp_path):
+    (tmp_path / "VERSION").write_text("1.0.0\n")
+    infographics = tmp_path / "infographics"
+    infographics.mkdir()
+    (infographics / "draft.png").write_bytes(b"draft")
+
+    paths = {row["path"] for row in current(tmp_path)["files"]}
+    assert "infographics/draft.png" not in paths

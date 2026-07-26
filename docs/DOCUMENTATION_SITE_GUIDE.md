@@ -2,21 +2,24 @@
 
 ## Purpose
 
-The static Astro site publishes the public documentation surface at `https://manojpisini.github.io/mission-directives/`. The source lives under `site/` and uses the checked-in HTML, CSS, and JavaScript shell for the landing and documentation pages.
+The static Astro site publishes the public documentation surface at `https://manojpisini.github.io/mission-directives/`. The source lives under `site/` and uses the checked-in HTML, CSS, and JavaScript shell for the landing page, sectioned documentation hub, guide index, manual library, reference index, and generated manual pages.
 
 ## Architecture
 
-`site/scripts/generate-reference.mjs` runs before development and production builds. It creates the static documentation page and mirrors every root `docs/*.md` manual into `site/public/reference/manuals/`.
+`site/scripts/generate-reference.mjs` runs before development and production builds. It reads every root `docs/*.md` file, classifies each page as a manual, guide, or reference page, renders per-manual HTML under `site/public/reference/manuals/`, and emits the section pages that make the site navigable without one long documentation scroll.
 
 The public site includes:
 
 - `site/src/pages/index.astro` for the landing page shell;
-- `site/public/docs.html` for the documentation hub;
-- `site/public/styles.css` and `site/public/app.js` for the provided visual system and interactions;
+- `site/public/docs.html` for the documentation overview and visual system explanation;
+- `site/public/guides.html` for task-oriented guides;
+- `site/public/manuals.html` for the complete generated manual library;
+- `site/public/reference.html` for runtime markers, payload boundaries, and reference contracts;
 - generated manual pages under `site/public/reference/manuals/`;
-- static assets under `site/public/assets/`.
+- `site/public/assets/diagrams/` and `site/public/assets/infographics/` for editable technical depictions and overview visuals;
+- `site/public/styles.css` and `site/public/app.js` for the light-mode visual system and interactions.
 
-Astro provides the build and GitHub Pages base path. The site shell owns navigation, search dialog behavior, copy buttons, tabs, sidebar behavior, and the light-mode visual system.
+Astro provides the build and GitHub Pages base path. The shell owns navigation, page-local search, copy buttons, tabs, sidebar behavior, centered manual reading layouts, responsive tables, and the light-mode sage-accented visual system.
 
 ## Local development
 
@@ -47,17 +50,22 @@ In repository settings, set Pages source to **GitHub Actions**. The public URL u
 | Content | Edit |
 | --- | --- |
 | Landing page shell | `site/src/pages/index.astro` |
-| Documentation hub and manual generation | `site/scripts/generate-reference.mjs` |
+| Documentation section pages and manual generation | `site/scripts/generate-reference.mjs` |
 | Manual source | `docs/*.md` |
-| Visual system | `site/public/styles.css` |
+| Visual system and reading layout | `site/public/styles.css` |
 | Interactions | `site/public/app.js` |
-| Static diagrams and illustrations | `site/public/assets/` |
+| Static diagrams | `site/public/assets/diagrams/` |
+| Static infographics used by the site | `site/public/assets/infographics/` |
 | Navigation and deployment base | `site/astro.config.mjs` |
+
+## Visual content
+
+Use repository-safe SVG, PNG, or generated static assets under `site/public/assets/` when they are part of the public documentation site. Keep temporary or source-only experiments under a root `infographics/` folder; that folder is ignored and is not part of the release manifest.
 
 ## Branding handoff
 
-The current visual system is light, minimal, and sage-accented. Replace branding assets under `site/public/` when final brand assets are ready. Keep focus visibility, responsive tables, reduced-motion behavior, contrast, copy buttons, tabs, mobile navigation, and the `/mission-directives` base path intact.
+The current visual system is light, minimal, and sage-accented. Replace branding assets under `site/public/` when final brand assets are ready. Keep focus visibility, responsive tables, reduced-motion behavior, contrast, copy buttons, tabs, mobile navigation, centered manual widths, and the `/mission-directives` base path intact.
 
 ## Validation
 
-The repository keeps `site/node_modules/`, `site/dist/`, and `site/.astro/` outside the manifest. The site source, generated public documentation pages, lockfile, generator, and workflow remain sealed release inputs.
+The repository keeps `site/node_modules/`, `site/dist/`, `site/.astro/`, `prompt_imports/`, and root `infographics/` outside the manifest. The site source, generated public documentation pages, lockfile, generator, public assets, and workflow remain sealed release inputs.
