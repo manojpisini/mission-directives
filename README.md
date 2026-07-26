@@ -1,13 +1,32 @@
-# Mission Directives
+<p align="center">
+  <img src="assets/readme/mission-directives-banner.svg" alt="Mission Directives" width="100%" />
+</p>
 
-[![Validate Mission Directives](https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml/badge.svg)](https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml)
-[![Deploy documentation](https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml)
+<p align="center">
+  <a href="https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml"><img src="https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml/badge.svg" alt="Validate Mission Directives" /></a>
+  <a href="https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml"><img src="https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml/badge.svg" alt="Deploy documentation" /></a>
+</p>
 
-**Documentation:** [manojpisini.github.io/mission-directives](https://manojpisini.github.io/mission-directives/)
+<p align="center">
+  <strong>Bounded, reviewable, and verifiable agent work.</strong><br />
+  <a href="https://manojpisini.github.io/mission-directives/">Documentation site</a>
+</p>
 
-Mission Directives is a curated prompt and orchestration suite for turning natural-language requests into bounded, reviewable, and verifiable agent work. It routes intent to the smallest coherent prompt, scenario, or workflow graph instead of loading a whole library and hoping the model chooses well.
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
+
+Mission Directives is a curated prompt and orchestration suite for turning natural-language requests into the smallest coherent prompt, scenario, or workflow graph needed for the outcome. It keeps selection deterministic, authority explicit, and completion tied to evidence instead of asking a model to load a whole library and guess.
 
 Current release: **1.8.3**
+
+<p align="center">
+  <img src="assets/readme/routing-flow.svg" alt="Mission Directives routing flow: route, explain, plan, and verify." width="100%" />
+</p>
+
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
 
 ## What It Provides
 
@@ -17,7 +36,15 @@ Current release: **1.8.3**
 - **Lean project install:** target projects receive only runtime files needed for routing and execution; repository-only tests, evaluation assets, validators, CI, import tooling, and site sources stay upstream.
 - **Verification discipline:** every route is complete only when the requested artifact satisfies its task-specific verification contract and residuals are explicit.
 
+<p align="center">
+  <img src="assets/readme/inventory.svg" alt="Repository inventory: 257 prompts, 257 atomic routes, 110 composite scenarios, 58 manuals, and 32 reciprocal pairs." width="100%" />
+</p>
+
 Repository inventory: **257 prompts**, **257 atomic routes**, **110 composite scenarios**, **32 reciprocal investigation/execution pairs**, and **58 repository manuals**.
+
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
 
 ## How It Works
 
@@ -33,6 +60,10 @@ request
 
 Prompt numbers are stable addresses, not lifecycle state. Department packs help discovery; they are not bundles to load in full.
 
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
+
 ## Requirements
 
 - Python 3.12 is the CI-tested runtime.
@@ -42,6 +73,10 @@ Prompt numbers are stable addresses, not lifecycle state. Department packs help 
 - The documentation site uses `pnpm`.
 
 Runtime dependencies for installed projects are in [requirements-runtime.txt](requirements-runtime.txt). Repository development and validation dependencies are in [requirements-dev.txt](requirements-dev.txt).
+
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
 
 ## Quick Start
 
@@ -65,6 +100,10 @@ python tools\md.py route "MD advanced audit fix verify repository"
 python tools\validate_suite.py
 ```
 
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
+
 ## Install Into a Project
 
 Always preview first:
@@ -82,6 +121,10 @@ pwsh -NoProfile -File tools/install.ps1 -ProjectPath 'C:\path\to\project'
 ```
 
 The installer copies the explicit runtime payload, manages the Mission Directives block in `.gitignore`, creates `.prompt_suite/` runtime directories, updates only managed `AGENTS.md` and `CLAUDE.md` blocks, writes receipts, and restores the previous state if promotion fails. Use `--replace` only for intentional updates; it creates a timestamped backup first.
+
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
 
 ## Daily Usage
 
@@ -108,6 +151,10 @@ Common entry points:
 | Prompt engineering | `C-94` | Create, optimize, evaluate, or repair prompts. |
 | Personal work system | `MD-138` | Organize goals, projects, tasks, notes, and decisions. |
 
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
+
 ## Operating Modes
 
 | Mode | Boundary |
@@ -119,9 +166,13 @@ Common entry points:
 | `APPLY_APPROVED` | Perform the exact approved consequential action with receipts and recovery controls. |
 | `VERIFY_ONLY` | Independently verify an artifact or claimed result without changing it. |
 
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
+
 ## Documentation Site
 
-The documentation site is a static Astro build that uses the checked-in landing/documentation HTML, CSS, and JS shell. The generator publishes a sectioned documentation hub: `docs.html` for overview, `guides.html` for task guides, `manuals.html` for the generated manual library, `reference.html` for runtime contracts, and every root `docs/*.md` file as a static manual page under `reference/manuals/`.
+The documentation site is a static Astro build that uses the checked-in landing/documentation HTML, CSS, and JS shell. The generator publishes a sectioned documentation hub: `docs.html` for overview, `guides.html` for task guides, `manuals.html` for the generated manual library, `reference.html` for runtime contracts, `prompts.html` for every prompt, `scenarios.html` for atomic and composite scenarios, `pairs.html` for reciprocal pairs, and every root `docs/*.md` file as a static manual page under `reference/manuals/`.
 
 ```bash
 cd site
@@ -130,6 +181,10 @@ pnpm run generate
 pnpm run build
 pnpm run check
 ```
+
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
 
 ## Repository Layout
 
@@ -146,6 +201,10 @@ pnpm run check
 | `site/` | Static documentation site source. |
 | `tests/` / `evaluations/` | Repository-only validation and evaluation assets. |
 
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
+
 ## Validation
 
 Before committing runtime, manifest, prompt, schema, docs, or site changes, run the smallest checks that cover the touched surface. For broad changes:
@@ -158,6 +217,10 @@ cd site && pnpm run check
 ```
 
 `tools/validate_suite.py` checks structural contracts, deterministic runtime tests, fixture coverage, identity contracts, CI configuration, lock safety, generated artifact reproducibility, and manifest integrity. It does not certify live model quality or external-world outcomes.
+
+<p align="center">
+  <img src="assets/readme/divider.svg" alt="" width="100%" />
+</p>
 
 ## License
 

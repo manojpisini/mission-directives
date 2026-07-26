@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 36" role="img" aria-label="Section divider">
+  <path d="M24 18H412" stroke="#cbd7c3" stroke-width="1"/>
+  <path d="M588 18H976" stroke="#cbd7c3" stroke-width="1"/>
+  <path d="M470 18h60" stroke="#5f7b51" stroke-width="3" stroke-linecap="square"/>
+  <circle cx="500" cy="18" r="5" fill="#5f7b51"/>
+</svg>

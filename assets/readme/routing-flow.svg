@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
+  <title id="title">Mission Directives routing flow</title>
+  <desc id="desc">A five stage route, explain, plan, execute, verify workflow diagram.</desc>
+  <rect width="1000" height="320" rx="24" fill="#fffdf9"/>
+  <rect x="1" y="1" width="998" height="318" rx="24" fill="none" stroke="#d9dfd2"/>
+  <text x="48" y="58" fill="#1d201b" font-family="-apple-system, Segoe UI, sans-serif" font-size="24" font-weight="750">Smallest coherent execution graph</text>
+  <text x="48" y="85" fill="#667064" font-family="-apple-system, Segoe UI, sans-serif" font-size="14">Resolve intent from metadata first, then load only the prompt bodies required for the verified outcome.</text>
+  <g font-family="Cascadia Code, SFMono-Regular, Menlo, Consolas, monospace">
+    <g transform="translate(48 130)">
+      <rect width="130" height="104" rx="10" fill="#f4f7f0" stroke="#cbd7c3"/>
+      <text x="18" y="34" fill="#5f7b51" font-size="13" font-weight="700">01</text>
+      <text x="18" y="61" fill="#111827" font-size="20" font-weight="800">ROUTE</text>
+      <text x="18" y="84" fill="#46515f" font-size="12">intent + IDs</text>
+    </g>
+    <path d="M198 182H273" stroke="#5f7b51" stroke-width="4"/><path d="M273 182l-14-9v18z" fill="#5f7b51"/>
+    <g transform="translate(296 130)">
+      <rect width="130" height="104" rx="10" fill="#f4f7f0" stroke="#cbd7c3"/>
+      <text x="18" y="34" fill="#5f7b51" font-size="13" font-weight="700">02</text>
+      <text x="18" y="61" fill="#111827" font-size="20" font-weight="800">EXPLAIN</text>
+      <text x="18" y="84" fill="#46515f" font-size="12">modes + risk</text>
+    </g>
+    <path d="M446 182H521" stroke="#5f7b51" stroke-width="4"/><path d="M521 182l-14-9v18z" fill="#5f7b51"/>
+    <g transform="translate(544 130)">
+      <rect width="130" height="104" rx="10" fill="#f4f7f0" stroke="#cbd7c3"/>
+      <text x="18" y="34" fill="#5f7b51" font-size="13" font-weight="700">03</text>
+      <text x="18" y="61" fill="#111827" font-size="20" font-weight="800">PLAN</text>
+      <text x="18" y="84" fill="#46515f" font-size="12">bounded graph</text>
+    </g>
+    <path d="M694 182H769" stroke="#5f7b51" stroke-width="4"/><path d="M769 182l-14-9v18z" fill="#5f7b51"/>
+    <g transform="translate(792 130)">
+      <rect width="130" height="104" rx="10" fill="#f4f7f0" stroke="#cbd7c3"/>
+      <text x="18" y="34" fill="#5f7b51" font-size="13" font-weight="700">04</text>
+      <text x="18" y="61" fill="#111827" font-size="20" font-weight="800">VERIFY</text>
+      <text x="18" y="84" fill="#46515f" font-size="12">receipts</text>
+    </g>
+  </g>
+  <path d="M48 270H952" stroke="#d9dfd2"/>
+  <text x="48" y="294" fill="#667064" font-family="-apple-system, Segoe UI, sans-serif" font-size="12">Authority boundary: audit, plan, draft, apply-safe, apply-approved, or verify-only.</text>
+</svg>

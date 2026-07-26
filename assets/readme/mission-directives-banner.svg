@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Mission Directives README banner</title>
+  <desc id="desc">A clean sage green technical banner spelling Mission Directives with routing brackets and a small workflow trace.</desc>
+  <defs>
+    <linearGradient id="sageWash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f8f3"/>
+      <stop offset="1" stop-color="#e7eee2"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#3e5137" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="260" rx="34" fill="url(#sageWash)"/>
+  <rect x="28" y="28" width="1144" height="204" rx="26" fill="#fffdf9" stroke="#cbd7c3"/>
+  <g fill="none" stroke="#5f7b51" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M96 92 58 130 96 168"/>
+    <path d="M1104 92 1142 130 1104 168"/>
+  </g>
+  <text x="600" y="128" text-anchor="middle" dominant-baseline="middle" fill="#111827" font-family="Cascadia Code, SFMono-Regular, Menlo, Consolas, monospace" font-size="46" font-weight="700" letter-spacing="13">MISSION DIRECTIVES</text>
+  <g transform="translate(332 176)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="536" height="28" rx="14" fill="#edf3e8" stroke="#d3dfcb"/>
+    <circle cx="32" cy="14" r="5" fill="#5f7b51"/>
+    <path d="M44 14H142" stroke="#5f7b51" stroke-width="2"/>
+    <circle cx="166" cy="14" r="5" fill="#7f956f"/>
+    <path d="M178 14H276" stroke="#7f956f" stroke-width="2"/>
+    <circle cx="300" cy="14" r="5" fill="#9aa98c"/>
+    <path d="M312 14H410" stroke="#9aa98c" stroke-width="2"/>
+    <circle cx="434" cy="14" r="5" fill="#3f5f36"/>
+    <text x="466" y="18" fill="#465a3d" font-family="Cascadia Code, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">VERIFY</text>
+  </g>
+</svg>
