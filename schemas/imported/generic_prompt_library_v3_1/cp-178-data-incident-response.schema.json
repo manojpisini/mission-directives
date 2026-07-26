@@ -1,0 +1,516 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://generic-prompts.invalid/v3.1/CP-178.schema.json",
+  "title": "Data incident response result",
+  "description": "Strict machine-readable result for the prompt. It constrains the work product; it is not a certification of professional correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "const": "CP-178",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "FACT",
+        "SUPPORTED_INFERENCE",
+        "ASSUMPTION",
+        "RECOMMENDATION",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "incident": {
+          "type": "object",
+          "properties": {
+            "incident_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "opened_at": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reported_by": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "investigating",
+                "contained",
+                "recovering",
+                "closed"
+              ],
+              "minLength": 1
+            },
+            "lead": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "incident_id",
+            "opened_at",
+            "reported_by",
+            "status",
+            "lead"
+          ],
+          "additionalProperties": false
+        },
+        "timeline": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": {
+                "type": "string",
+                "minLength": 1
+              },
+              "event": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              },
+              "epistemic_status": {
+                "type": "string",
+                "enum": [
+                  "fact",
+                  "supported_inference",
+                  "unknown"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "timestamp",
+              "event",
+              "source",
+              "epistemic_status"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "systems": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "accounts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "data_classes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "subjects_or_tenants": {
+              "type": "string",
+              "minLength": 1
+            },
+            "estimated_records": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "time_window": {
+              "type": "string",
+              "minLength": 1
+            },
+            "confirmed_actions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "possible_actions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "systems",
+            "accounts",
+            "data_classes",
+            "subjects_or_tenants",
+            "estimated_records",
+            "time_window",
+            "confirmed_actions",
+            "possible_actions"
+          ],
+          "additionalProperties": false
+        },
+        "containment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "timestamp": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_preserved": {
+                "type": "string",
+                "minLength": 1
+              },
+              "service_impact": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "planned",
+                  "complete",
+                  "verified"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "action",
+              "owner",
+              "timestamp",
+              "evidence_preserved",
+              "service_impact",
+              "status"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "notification_decision_support": {
+          "type": "object",
+          "properties": {
+            "decision_owner": {
+              "type": "string",
+              "minLength": 1
+            },
+            "jurisdictions_or_contracts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "facts_available": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "facts_missing": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "deadlines": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "not_assessed",
+                "under_review",
+                "notify",
+                "do_not_notify",
+                "partial"
+              ],
+              "minLength": 1
+            }
+          },
+          "required": [
+            "decision_owner",
+            "jurisdictions_or_contracts",
+            "facts_available",
+            "facts_missing",
+            "deadlines",
+            "status"
+          ],
+          "additionalProperties": false
+        },
+        "recovery_and_actions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "due_or_trigger": {
+                "type": "string",
+                "minLength": 1
+              },
+              "priority": {
+                "type": "string",
+                "enum": [
+                  "critical",
+                  "high",
+                  "medium",
+                  "low",
+                  "backlog"
+                ],
+                "minLength": 1
+              },
+              "validation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "proposed",
+                  "approved",
+                  "in_progress",
+                  "blocked",
+                  "complete",
+                  "rejected"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "action_id",
+              "action",
+              "owner",
+              "due_or_trigger",
+              "priority",
+              "validation",
+              "status"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "incident",
+        "timeline",
+        "scope",
+        "containment",
+        "notification_decision_support",
+        "recovery_and_actions"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "Stable evidence identifier.",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "file",
+              "line_range",
+              "command_output",
+              "document",
+              "dataset",
+              "interview",
+              "observation",
+              "external_source",
+              "other"
+            ],
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "description": "Path, URL, record identifier, or source name.",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "description": "Line range, section, timestamp, query, or other locator.",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Limitations or context.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_type",
+          "source",
+          "location",
+          "supports",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "due_or_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "backlog"
+            ],
+            "minLength": 1
+          },
+          "validation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "in_progress",
+              "blocked",
+              "complete",
+              "rejected"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action_id",
+          "action",
+          "owner",
+          "due_or_trigger",
+          "priority",
+          "validation",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "run_id",
+    "generated_at",
+    "epistemic_status",
+    "summary",
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "actions"
+  ],
+  "additionalProperties": false
+}

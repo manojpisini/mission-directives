@@ -38,7 +38,7 @@ evidence_lane: factual
 preferred_skills:
 - document-generate
 - make-pdf
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -61,7 +61,11 @@ output_contract:
     format: jsonl
   - path: reports/internal_audit_control_testing_and_assurance/internal_audit_control_testing_and_assurance_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.audit.internal-audit-control-testing-and-assurance
 prompt_slug: internal-audit-control-testing-and-assurance
@@ -77,7 +81,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 784
+  maximum_body_words: 1161
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -124,6 +128,15 @@ conditional_template_routes:
 - core/decision-record
 - core/artifact-specification
 - core/acceptance-criteria
+aliases:
+- Compliance control mapping
+imported_profiles:
+- profile_id: CP-090
+  title: Compliance control mapping
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 36bb652b9fc270ba85ddd7d4effba8c647ef93031df6815ff67c6244cc6301be
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-090-compliance-control-mapping.schema.json
 ---
 
 # Internal Audit, Control Testing, and Assurance
@@ -226,5 +239,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-090" title="Compliance control mapping" schema="schemas/imported/generic_prompt_library_v3_1/cp-090-compliance-control-mapping.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Compliance control mapping
+
+## Task contract
+
+Map compliance obligations to implemented controls and verifiable evidence, exposing gaps, duplicated assertions, and controls that exist only on paper.
+
+## Use this prompt when
+
+- Preparing for SOC 2, ISO 27001, GDPR, HIPAA, contractual, or internal control assessment.
+
+## Do not use it for
+
+- Claiming certification or legal compliance from a crosswalk alone.
+
+## Required inputs
+
+1. Selected framework/requirements
+2. System/process scope
+3. Policies and procedures
+4. Technical/operational evidence
+5. Control owners and test period
+
+## Workflow
+
+1. Define scope, framework version, requirement text, systems, entities, period, and exclusions.
+2. Normalize obligations into control objectives and testable assertions; distinguish governance, design, operation, and evidence retention.
+3. Map existing controls with owner, frequency, population, systems, preventive/detective nature, and authoritative evidence source.
+4. Test design and sample operating effectiveness where authorized.
+5. Identify manual evidence, exceptions, compensating controls, and unsupported claims.
+6. Detect many-to-one and one-to-many mappings, duplicate controls, gaps, stale evidence, and requirements incorrectly marked not applicable.
+7. Produce remediation, evidence plan, ownership, retest, and readiness status without overstating assurance.
+
+## Deliverable
+
+- Requirement-control-evidence matrix
+- Design/operation findings
+- Gap and remediation plan
+- Readiness limitations
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-090-compliance-control-mapping.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every mapped control has an owner and evidence source.
+- [ ] Framework mapping is not presented as certification.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

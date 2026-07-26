@@ -14,37 +14,13 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 def _copy_suite(destination: Path) -> None:
     """Create an isolated suite fixture without runtime or cache artifacts."""
-    if sys.platform.startswith("linux") and shutil.which("cp"):
-        destination.mkdir(parents=True)
-        subprocess.run(
-            ["cp", "-a", "--reflink=auto", f"{ROOT}/.", str(destination)],
-            check=True,
-            text=True,
-            capture_output=True,
-        )
-        for name in ("__pycache__", ".git", ".pytest_cache", ".venv", "node_modules"):
-            shutil.rmtree(destination / name, ignore_errors=True)
-        for path in destination.rglob("*"):
-            if path.is_file() and (
-                path.suffix in {".pyc", ".pyo", ".lock", ".toml"}
-                or path.name.endswith(".toml.lock")
-            ):
-                path.unlink(missing_ok=True)
-        return
+    import add_prompt
+
     shutil.copytree(
         ROOT,
         destination,
-        ignore=shutil.ignore_patterns(
-            "__pycache__",
-            ".git",
-            ".pytest_cache",
-            ".venv",
-            "node_modules",
-            "*.pyc",
-            "*.pyo",
-            "*.lock",
-            "*.toml",
-        ),
+        ignore=add_prompt._copy_ignore_factory(ROOT),
+        symlinks=True,
     )
 
 
@@ -72,6 +48,21 @@ def test_prompt_addition_module_exists_and_allocates_next_id():
     prompt_id, sequence = add_prompt.next_prompt_identity(ROOT)
     assert prompt_id == f"MD-{sequence}"
     assert sequence == max(row["sequence"] for row in add_prompt._prompt_rows(ROOT)) + 1
+
+
+def test_prompt_staging_excludes_generated_site_outputs_but_keeps_source():
+    import add_prompt
+
+    ignore = add_prompt._copy_ignore_factory(ROOT)
+    site_ignored = ignore(str(ROOT / "site"), ["dist", "astro.config.mjs"])
+    reference_ignored = ignore(
+        str(ROOT / "site/src/content/docs"), ["reference", "guides"]
+    )
+
+    assert "dist" in site_ignored
+    assert "astro.config.mjs" not in site_ignored
+    assert "reference" in reference_ignored
+    assert "guides" not in reference_ignored
 
 
 def test_prompt_addition_dry_run_normalizes_title_and_registered_skills(tmp_path):

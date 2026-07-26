@@ -1,5 +1,17 @@
 __pycache__/
 *.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage/
+htmlcov/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+.DS_Store
+Thumbs.db
 .prompt_suite/logs/
 BODY_QUALITY_AUDIT.json
 BODY_QUALITY_AUDIT.md
@@ -9,5 +21,17 @@ VALIDATION.json
 
 .prompt_suite/results/
 .prompt_suite/runtime/
+.prompt_suite/*.lock
 .prompt_suite/agent-guidance-receipt.json
 agent-guidance-receipt.json
+
+.agents/
+.codex/
+.venv/
+venv/
+
+# Astro/Starlight generated and dependency trees
+site/node_modules/
+site/dist/
+site/.astro/
+site/src/content/docs/reference/

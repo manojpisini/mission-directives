@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-245",
+  "capability_id": "md.nonprofit_and_programs.field-program-monitoring",
+  "evidence_lane": "hybrid",
+  "risk_level": "high",
+  "expected_output": "results/field-program-monitoring/field-program-monitoring_result.md",
+  "fixture_id": "MD-245-healthy",
+  "tier": "healthy",
+  "execution_status": "definition_only_not_model_executed",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ]
+}

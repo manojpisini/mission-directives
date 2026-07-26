@@ -76,7 +76,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 702
+  maximum_body_words: 1139
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -132,6 +132,15 @@ conditional_template_routes:
 - core/acceptance-criteria
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Prompt injection red-team audit
+imported_profiles:
+- profile_id: CP-030
+  title: Prompt injection red-team audit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 287722ef0ea83c0a0f9d5f6fd292c01d50e2b7488accb94fb2971d4cf87e595b
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-030-prompt-injection-red-team-audit.schema.json
 ---
 
 # Prompt Injection, Untrusted Input, and Tool-Output Security — Investigation and Plan
@@ -217,4 +226,65 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-70`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-030" title="Prompt injection red-team audit" schema="schemas/imported/generic_prompt_library_v3_1/cp-030-prompt-injection-red-team-audit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Prompt injection red-team audit
+
+## Task contract
+
+Red-team an AI system against direct and indirect prompt injection across all untrusted content channels and tool boundaries, then convert failures into enforceable controls and regression tests.
+
+## Use this prompt when
+
+- An AI system reads external content, memory, files, web pages, email, tool output, or agent messages.
+
+## Do not use it for
+
+- Generating attacks against systems without authorization.
+
+## Required inputs
+
+1. System
+2. developer/user instruction hierarchy
+3. Tool and data permissions
+4. Retrieval, memory, connector, and agent architecture
+5. Sensitive assets and prohibited actions
+6. Authorized test environment and fixtures
+
+## Workflow
+
+1. Map authority boundaries and untrusted channels: user input, retrieved documents, web, email, files, tool output, memory, plugins, and inter-agent handoffs.
+2. Define attacker goals such as instruction override, data extraction, approval bypass, tool misuse, persistence, policy confusion, and cross-tenant leakage.
+3. Construct controlled test cases for direct, indirect, encoded, obfuscated, nested, multi-turn, context-overflow, and tool-result injection.
+4. Include benign lookalikes to measure overblocking.
+5. Execute in a sandbox with instrumented tool calls and canary data.
+6. Record whether the system treats content as data, requests confirmation, limits scopes, and preserves higher-priority instructions.
+7. Analyze failures by control layer: prompt architecture, content labeling, isolation, tool capability, authorization, output filtering, memory policy, or human gate.
+8. Prioritize mitigations and create minimal regression fixtures with expected safe behavior and residual-risk ownership.
+
+## Deliverable
+
+- Attack surface
+- trust-boundary map
+- Adversarial corpus and execution results
+- Control failures and mitigations
+- Security regression suite
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-030-prompt-injection-red-team-audit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Tests cover every untrusted content channel and material tool capability.
+- [ ] No live or unauthorized target is tested.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

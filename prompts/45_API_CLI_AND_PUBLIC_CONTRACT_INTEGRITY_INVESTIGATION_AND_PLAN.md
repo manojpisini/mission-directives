@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 675
+  maximum_body_words: 1202
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -132,6 +132,15 @@ conditional_template_routes:
 - docs/api-reference
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- API contract design
+imported_profiles:
+- profile_id: CP-005
+  title: API contract design
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 6fda1d74322d6b57a1061c150d4c5b017b5f6436c371b3a273b6142a2b839ad8
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-005-api-contract-design.schema.json
 ---
 
 # API, CLI, and Public Contract Integrity — Investigation and Plan
@@ -217,4 +226,81 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-46`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-005" title="API contract design" schema="schemas/imported/generic_prompt_library_v3_1/cp-005-api-contract-design.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# API contract design
+
+## Task contract
+
+Design an API or event contract that is explicit about semantics, compatibility, authority, failure, and lifecycle—not merely field names.
+
+## Use this prompt when
+
+- Creating or changing HTTP, RPC, event, webhook, CLI-machine, or internal service contracts.
+
+## Do not use it for
+
+- Writing implementation code before the consumer and compatibility model are understood.
+
+## Required inputs
+
+1. Consumer use cases
+2. actors
+3. Domain entities and invariants
+4. Authentication/authorization model
+5. Latency, ordering, and delivery requirements
+6. Versioning and deprecation constraints
+
+## Workflow
+
+1. Model consumer journeys and domain operations before choosing endpoints or events.
+2. Identify commands, queries, notifications, and ownership.
+3. Define resources/messages, identifiers, field semantics, nullability, enums, units, timestamps, and validation rules with concrete examples.
+4. Specify authority and safety: authentication, object/action authorization, tenancy, idempotency, replay protection, rate limits, and sensitive-data exposure.
+5. Define success and failure semantics: status/error taxonomy, partial results, pagination, concurrency control, retries, timeouts, cancellation, and event delivery guarantees.
+6. Evaluate backward/forward compatibility and version negotiation.
+7. Include additive-change rules, deprecation windows, and consumer migration.
+8. Produce an executable contract plus representative normal, edge, invalid, and retry examples and contract-test obligations.
+
+## Deliverable
+
+- Contract definition
+- examples
+- Compatibility/version policy
+- Error and authorization model
+- Contract-test matrix
+
+## Optional artifacts
+
+- `openapi-or-asyncapi.yaml`
+- `contract-examples.json`
+- `compatibility-policy.md`
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-005-api-contract-design.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every field has semantics, not just a type.
+- [ ] Consumer behavior is defined for errors, retries, duplicates, and version skew.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+<reviewed_workflow_refinement profile="CP-005" review="generic-v3.1-blind-proportionality-v1" review_artifact="prompt_imports/generic_prompt_library_v3_1_blind_proportionality_review.md">
+The source snapshot above is retained for provenance. For Mission Directives execution, use this six-stage workflow:
+
+1. Model consumer journeys and domain operations, then identify commands, queries, notifications, and ownership before choosing endpoints or events.
+2. Define resources/messages, identifiers, field semantics, nullability, enums, units, timestamps, validation rules, and concrete examples.
+3. Specify authentication, object/action authorization, tenancy, idempotency, replay protection, rate limits, and sensitive-data exposure.
+4. Define success and failure semantics, including errors, partial results, pagination, concurrency, retries, timeouts, cancellation, and delivery guarantees.
+5. Define one compatibility lifecycle covering version negotiation, additive-change rules, deprecation windows, and consumer migration.
+6. Produce the executable contract, representative normal/edge/invalid/retry examples, and contract-test obligations.
+</reviewed_workflow_refinement>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

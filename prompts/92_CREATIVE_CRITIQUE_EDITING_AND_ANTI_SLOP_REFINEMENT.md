@@ -39,7 +39,7 @@ produces:
 evidence_lane: hybrid
 preferred_skills:
 - stop-slop
-output_media: &id001
+output_media:
 - markdown
 - redline_spec
 tags:
@@ -57,7 +57,9 @@ output_contract:
     format: jsonl
   - path: reports/creative_critique_editing_and_anti_slop_refinement/creative_critique_editing_and_anti_slop_refinement_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - redline_spec
 suite_version: 1.8.3
 capability_id: md.editorial.creative-critique-editing-and-anti-slop-refinement
 prompt_slug: creative-critique-editing-and-anti-slop-refinement
@@ -73,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 667
+  maximum_body_words: 1296
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -118,6 +120,22 @@ complexity_budget_reason: includes mandatory template-routing contract
 conditional_template_routes:
 - docs/cli-reference
 - docs/knowledge-base-article
+aliases:
+- Creative review interviewer
+- Storyboard critique
+imported_profiles:
+- profile_id: CP-062
+  title: Creative review interviewer
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 14dda2e759bb38486dbc27deb30def726df9019af727d7ed669a3f356e3e6538
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-062-creative-review-interviewer.schema.json
+- profile_id: CP-072
+  title: Storyboard critique
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 1b4a2275f0dac8392b79f7728c9f6ea39fb219fc97a9b695eba31196fc29ff6a
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-072-storyboard-critique.schema.json
 ---
 
 # Creative Critique, Editing, and Anti-Slop Refinement
@@ -211,5 +229,108 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-062" title="Creative review interviewer" schema="schemas/imported/generic_prompt_library_v3_1/cp-062-creative-review-interviewer.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Creative review interviewer
+
+## Task contract
+
+Conduct a creative review that protects the brief and successful elements while converting subjective feedback into prioritized, actionable revisions.
+
+## Use this prompt when
+
+- Reviewing a design, edit, script, storyboard, campaign asset, or concept round.
+
+## Do not use it for
+
+- Open-ended taste polling with no decision criteria.
+
+## Required inputs
+
+1. Approved brief and success criteria
+2. Current creative version
+3. Prior decisions and feedback; then brand/channel constraints.
+4. Reviewer roles and decision owner
+
+## Workflow
+
+1. Restate the creative objective and distinguish immutable requirements from explorations.
+2. Ask what changed, what is working, what must be preserved, and where the work fails the audience or brief.
+3. Review hierarchy, message comprehension, emotional effect, craft, brand fit, accessibility, production quality, and platform behavior using observable evidence.
+4. Separate defects, strategic misalignment, preference, and new scope; resolve contradictory feedback through the decision owner.
+5. Prioritize revisions by impact and dependency, specify the intended outcome rather than prescribing arbitrary execution; then record approved elements, revision list, rejected feedback, next version scope, and acceptance gate.
+
+## Deliverable
+
+- Creative review findings
+- Preserve/revise matrix; then consolidated revision brief.
+- Approval status
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-062-creative-review-interviewer.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Feedback is tied to brief or audience effect.
+- [ ] Approved elements are protected from churn.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-072" title="Storyboard critique" schema="schemas/imported/generic_prompt_library_v3_1/cp-072-storyboard-critique.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Storyboard critique
+
+## Task contract
+
+Critique a storyboard for narrative comprehension, shot continuity, pacing, visual hierarchy, audience promise, and production feasibility.
+
+## Use this prompt when
+
+- Reviewing a storyboard, animatic, or sequential visual plan.
+
+## Do not use it for
+
+- Judging drawing polish instead of communication.
+
+## Required inputs
+
+1. Brief/script
+2. Storyboard/animatic; then audience/platform/duration.
+3. Production constraints
+4. References and approved direction
+
+## Workflow
+
+1. Summarize the story as understood from the frames alone and identify any gap between intended and perceived narrative.
+2. Review beat order, setup/payoff, information timing, emotional progression, pacing, and duration allocation; then check shot continuity: geography, screen direction, eye line, action match, scale, framing, transitions, and visual hierarchy.
+3. Assess message/brand/product clarity, opening hook, CTA/end state, captions/graphics, sound dependency, and accessibility.
+4. Test feasibility of locations, talent, camera, VFX, props, safety, rights, schedule, and post; identify costly shots without narrative value.
+5. Return preserve/revise notes by frame/beat, missing coverage, and a prioritized revision plan.
+
+## Deliverable
+
+- Narrative/continuity critique
+- Frame-level findings; then feasibility risks.
+- Revision priorities
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-072-storyboard-critique.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Each revision explains the audience or production problem it solves.
+- [ ] Successful beats are explicitly preserved.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

@@ -21,6 +21,7 @@ This index is the human navigation layer for the Mission Directives. The suite i
 ### Operation
 
 - [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md) — safely creating and updating root agent files, algorithmic `MD`/`md` intent routing, route comparison, productivity shortcuts, and preservation of unmanaged instructions.
+- [Router Keyword Catalog and Scoring Guide](ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md) — canonical concept aliases, typo recovery, candidate enrichment, rarity-aware scoring, confidence, route hints, diagnostics, and extension tests.
 - [User Manual](USER_MANUAL.md) — choosing prompts and scenarios, execution modes, evidence lanes, artifacts, examples, and closure.
 - [Operator Guide](OPERATOR_GUIDE.md) — running `md.py`, reading route explanations, handling approvals, markers, failures, and residuals.
 - [Troubleshooting Guide](TROUBLESHOOTING_GUIDE.md) — routing errors, stale evidence, invalid handoffs, skill failures, marker defects, and validation failures.
@@ -106,4 +107,6 @@ Do not collapse those proof levels into the word “validated.”
 - [TUI and Operator Experience Guide](TUI_AND_OPERATOR_EXPERIENCE_GUIDE.md) — progress, status, accessibility, and CI fallback.
 
 - [Installation and Project Integration Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md)
+- [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md) — runtime allowlist, source-only boundary, install transaction, receipts, and payload-change verification.
+- [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md) — Astro/Starlight generation, local development, GitHub Pages deployment, content ownership, and branding handoff.
 - [Project Cleanup and Uninstall Guide](PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md) — transactional removal, approval-bound preview, preservation rules, rollback, TUI, and receipts.

@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 677
+  maximum_body_words: 1080
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -132,6 +132,15 @@ conditional_template_routes:
 - docs/support-playbook
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Rollback / recovery plan
+imported_profiles:
+- profile_id: CP-019
+  title: Rollback / recovery plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: fe36107505ae697a87037114f6edd27f1f9c798129be9487cbd2df17d181dc42
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-019-rollback-recovery-plan.schema.json
 ---
 
 # Reliability, Resilience, and Recovery — Investigation and Plan
@@ -218,4 +227,63 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-52`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-019" title="Rollback / recovery plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-019-rollback-recovery-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Rollback / recovery plan
+
+## Task contract
+
+Create an executable rollback and recovery plan that restores service and data to a known-safe state with explicit loss, verification, and ownership boundaries.
+
+## Use this prompt when
+
+- Preparing a risky release, migration, configuration change, or incident recovery procedure.
+
+## Do not use it for
+
+- A generic “revert deployment” statement without data and dependency analysis.
+
+## Required inputs
+
+1. Change scope
+2. deployment topology
+3. State/data mutations and restore points
+4. Dependencies and compatibility window
+5. Monitoring and failure thresholds
+6. Operators, permissions, and communication channels
+
+## Workflow
+
+1. Enumerate failure modes and the earliest reliable indicators for each; define who can declare rollback.
+2. Inventory reversible versus irreversible changes: binaries, configuration, schemas, data transformations, queues, caches, external side effects, and client compatibility.
+3. Select restore points and prove they are usable.
+4. Specify backups, snapshots, previous artifacts, credentials, and retention.
+5. Write ordered rollback commands/actions with preconditions, permissions, time estimates, checkpoints, and abort conditions; coordinate dependent services and jobs.
+6. Define data reconciliation, loss window, duplicate/partial side-effect handling, and how to verify correctness after restore.
+7. Exercise the plan in a safe environment, capture evidence, and specify handoff, communications, and post-recovery follow-up.
+
+## Deliverable
+
+- Failure trigger matrix
+- Rollback/recovery runbook
+- Data-loss and reconciliation analysis
+- Verification and handoff checklist
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-019-rollback-recovery-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Commands and restore assets are verified or explicitly untested.
+- [ ] Irreversible effects and acceptable loss are approved.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

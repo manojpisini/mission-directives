@@ -36,7 +36,7 @@ produces:
 - typed_runtime_artifacts
 evidence_lane: factual
 preferred_skills: []
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -56,7 +56,9 @@ output_contract:
     format: json
   - path: artifacts/deep_research_and_evidence_synthesis/acceptance_criteria.json
     format: json
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.research.deep-research-and-evidence-synthesis
 prompt_slug: deep-research-and-evidence-synthesis
@@ -72,7 +74,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 631
+  maximum_body_words: 994
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -120,6 +122,15 @@ conditional_template_routes:
 - core/decision-record
 - core/artifact-specification
 - core/acceptance-criteria
+aliases:
+- Research synthesis
+imported_profiles:
+- profile_id: CP-094
+  title: Research synthesis
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: b2a41217cad22a702417041d45e87d41ee54ceb67336f53f8e7d56981aaf9029
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-094-research-synthesis.schema.json
 ---
 
 # Deep Research and Evidence Synthesis
@@ -207,5 +218,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-094" title="Research synthesis" schema="schemas/imported/generic_prompt_library_v3_1/cp-094-research-synthesis.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Research synthesis
+
+## Task contract
+
+Synthesize heterogeneous research into themes, evidence strength, contradictions, implications, and decisions without flattening uncertainty or minority findings.
+
+## Use this prompt when
+
+- Combining interviews, notes, articles, studies, analytics, or observations.
+
+## Do not use it for
+
+- Summarizing each source independently.
+
+## Required inputs
+
+1. Research question and decision
+2. Source corpus/provenance; then methods and sample context.
+3. Quality criteria
+4. Audience and output needs
+
+## Workflow
+
+1. Define synthesis question, unit of evidence, inclusion/exclusion, and how source types will be weighted.
+2. Extract atomic findings with source, context, population, method, date, and confidence; separate observation from interpretation.
+3. Code and cluster patterns while retaining negative cases, contradictions, temporal change, and segment differences.
+4. Assess evidence strength, bias, representativeness, causal limits, and where multiple sources converge or conflict.
+5. Develop themes as claims supported by evidence chains, not topic labels; connect them to user/business implications; then return decisions, recommendations, open hypotheses, and next research with traceable citations.
+
+## Deliverable
+
+- Evidence table
+- Themes with supporting/contradicting evidence
+- Implications and confidence; then decision/next-research recommendations.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-094-research-synthesis.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every theme links to multiple or clearly qualified sources.
+- [ ] Contradictions and sampling limits remain visible.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

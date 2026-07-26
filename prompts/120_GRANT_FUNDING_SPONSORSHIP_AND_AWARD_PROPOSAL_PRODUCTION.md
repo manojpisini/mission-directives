@@ -40,7 +40,7 @@ evidence_lane: hybrid
 preferred_skills:
 - stop-slop
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - proposal_package
 - budget_spec
@@ -60,7 +60,11 @@ output_contract:
     format: jsonl
   - path: reports/grant_funding_sponsorship_and_award_proposal_production/grant_funding_sponsorship_and_award_proposal_production_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - proposal_package
+  - budget_spec
+  - submission_checklist
 suite_version: 1.8.3
 capability_id: md.business.grant-funding-sponsorship-and-award-proposal-production
 prompt_slug: grant-funding-sponsorship-and-award-proposal-production
@@ -76,7 +80,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 687
+  maximum_body_words: 1050
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -121,6 +125,15 @@ template_policy: required_resolve_then_conditionally_select_by_requested_artifac
 conditional_template_routes:
 - docs/binary-distribution-manual
 - reports/professional-report
+aliases:
+- Grant/proposal builder
+imported_profiles:
+- profile_id: CP-097
+  title: Grant/proposal builder
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 48e4fb0816e332b7f0c2b86d231a4ed86e24fa037fddcfb39b59642e4954628c
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-097-grant-proposal-builder.schema.json
 ---
 
 # Grant, Funding, Sponsorship, and Award Proposal Production
@@ -215,5 +228,61 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-097" title="Grant/proposal builder" schema="schemas/imported/generic_prompt_library_v3_1/cp-097-grant-proposal-builder.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Grant/proposal builder
+
+## Task contract
+
+Build a grant or proposal that connects a documented need to credible methods, capacity, budget, timeline, outcomes, evaluation, and funder requirements without overstating impact.
+
+## Use this prompt when
+
+- Preparing a funding proposal or grant application.
+
+## Do not use it for
+
+- Inventing beneficiary evidence, partnerships, or outcomes.
+
+## Required inputs
+
+1. Funder guidelines and scoring
+2. Problem/beneficiary evidence
+3. Program model and capacity
+4. Budget/resources
+5. Timeline and evaluation
+
+## Workflow
+
+1. Extract eligibility, priorities, required sections, scoring, restrictions, attachments, dates, and compliance obligations.
+2. Define problem, population, geography, baseline, causes, and why the applicant is positioned to act, with sourced evidence.
+3. Describe activities, delivery model, partnerships, safeguarding, accessibility, equity, and implementation dependencies.
+4. Build a logic chain from resources to activities, outputs, short/long outcomes, assumptions, and external factors.
+5. Create budget and narrative aligned to activities, allowability, matching, indirect costs, procurement, and sustainability.
+6. Define indicators, data collection, learning, reporting, risk, and a submission/approval checklist.
+
+## Deliverable
+
+- Proposal narrative
+- Logic model
+- Budget and budget narrative
+- Evaluation/compliance checklist
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-097-grant-proposal-builder.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Activities, budget, and outcomes reconcile.
+- [ ] Impact claims match the evidence and evaluation design.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

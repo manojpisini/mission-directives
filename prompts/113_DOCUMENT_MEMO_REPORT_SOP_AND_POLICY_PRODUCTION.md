@@ -40,7 +40,7 @@ evidence_lane: factual
 preferred_skills:
 - stop-slop
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - docx_spec
 - pdf_spec
@@ -59,7 +59,10 @@ output_contract:
     format: jsonl
   - path: reports/document_memo_report_sop_and_policy_production/document_memo_report_sop_and_policy_production_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.professional_writing.document-memo-report-sop-and-policy-production
 prompt_slug: document-memo-report-sop-and-policy-production
@@ -75,11 +78,12 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 663
+  maximum_body_words: 1849
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
   maximum_primary_artifacts: 1
+  maximum_body_lines: 327
 output_profiles:
   minimum:
   - results/document_memo_report_sop_and_policy_production/document_memo_report_sop_and_policy_production_result.md
@@ -124,6 +128,38 @@ conditional_template_routes:
 - core/artifact-specification
 - core/acceptance-criteria
 - docs/sop
+aliases:
+- Responsible disclosure packet
+- SOP and operational runbook creator
+- SOP/runbook creator
+- Production line SOP
+- Community moderation policy
+- Agency SOW builder
+imported_profiles:
+- profile_id: CP-049
+  title: Responsible disclosure packet
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 4e688c89217b7e5d5b6874d6c419b85de5c21371ed6d4ac3448ca76326892be3
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-049-responsible-disclosure-packet.schema.json
+- profile_id: CP-093
+  title: SOP and operational runbook creator
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 86c823722292357ff35c56562f8ee9e28b1d63ee0c5103c28a33651a37a7aabc
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-093-sop-and-operational-runbook-creator.schema.json
+- profile_id: CP-096
+  title: Community moderation policy
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: b69ade58b43624955284c871459b17fc2da6547361bf9edb7c9026d01a1dec90
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-096-community-moderation-policy.schema.json
+- profile_id: CP-114
+  title: Agency SOW builder
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 107bd27aa45565055ebf5bfd2d8efb4c2e222cb77d0bf34a0ca0b789899e142c
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-114-agency-sow-builder.schema.json
 ---
 
 # Document, Memo, Report, SOP, and Policy Production
@@ -219,5 +255,215 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-049" title="Responsible disclosure packet" schema="schemas/imported/generic_prompt_library_v3_1/cp-049-responsible-disclosure-packet.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Responsible disclosure packet
+
+## Task contract
+
+Prepare a vendor-safe responsible-disclosure packet that enables reproduction and remediation while minimizing unnecessary exposure and preserving a clear timeline.
+
+## Use this prompt when
+
+- Reporting an authorized or independently discovered vulnerability to the responsible party.
+
+## Do not use it for
+
+- Public disclosure without considering coordination, policy, and affected users.
+
+## Required inputs
+
+1. Validated vulnerability evidence
+2. Affected products/versions/configuration; then safe reproduction and impact.
+3. Vendor disclosure policy/contact
+4. Researcher timeline and publication constraints
+
+## Workflow
+
+1. Verify the finding and affected scope in a safe environment; remove secrets, customer data, and unnecessary weaponization from evidence.
+2. Write a concise summary with weakness, prerequisites, affected asset, impact, and severity rationale; then provide minimal deterministic reproduction, expected/actual behavior, logs/screenshots as needed, cleanup, and fix verification criteria.
+3. List affected versions/configurations, known mitigations, uncertainty, and whether active exploitation is known or unknown.
+4. Create a coordinated timeline: discovery, validation, initial contact, acknowledgments, updates, fix, retest, advisory, and proposed disclosure date.
+5. Specify secure communication, evidence handling, attribution preference, CVE/CWE coordination where applicable, and escalation if the vendor is unresponsive.
+
+## Deliverable
+
+- Vendor-safe disclosure report
+- Minimal reproduction and evidence; then affected-version/mitigation table.
+- Coordination timeline and retest criteria
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-049-responsible-disclosure-packet.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The packet contains enough detail to reproduce without exposing unnecessary exploit capability.
+- [ ] Dates, contacts, and disclosure expectations are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-093" title="SOP and operational runbook creator" schema="schemas/imported/generic_prompt_library_v3_1/cp-093-sop-and-operational-runbook-creator.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# SOP and operational runbook creator
+
+## Task contract
+
+Create an operational SOP or runbook that enables a trained operator to recognize the trigger, execute safely, verify success, recover from failure, and escalate without hidden knowledge.
+
+## Use this prompt when
+
+- Documenting repeatable operations, maintenance, support, release, or incident procedures.
+
+## Do not use it for
+
+- Policy statements without executable steps.
+
+## Required inputs
+
+1. Trigger and desired end state
+2. Systems/tools and permissions
+3. Procedure owner/operators
+4. Known failure modes
+5. Rollback/escalation requirements
+
+## Workflow
+
+1. Define purpose, trigger, scope, prerequisites, permissions, safety warnings, inputs, and expected end state.
+2. Write ordered actions with exact targets, commands or UI paths, expected intermediate result, and decision branches; avoid ambiguous verbs.
+3. Add prechecks and stop conditions before destructive or irreversible actions.
+4. Define validation after each critical step and final success criteria using observable evidence.
+5. Document failure handling, rollback, data-loss implications, escalation contacts, evidence capture, and handoff.
+6. Test with a representative operator, record execution time and ambiguity, version the procedure, and assign review triggers.
+
+## Deliverable
+
+- Executable procedure
+- Decision branches and stop conditions
+- Rollback/escalation
+- Validation and maintenance metadata
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-093-sop-and-operational-runbook-creator.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] A trained operator can execute without undocumented decisions.
+- [ ] Every risky action has precheck and verification.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-096" title="Community moderation policy" schema="schemas/imported/generic_prompt_library_v3_1/cp-096-community-moderation-policy.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Community moderation policy
+
+## Task contract
+
+Design a community moderation policy with clear rules, context-sensitive enforcement, safety escalation, appeals, transparency, and moderator support.
+
+## Use this prompt when
+
+- Operating an online or offline community.
+
+## Do not use it for
+
+- A vague “be respectful” statement or enforcement without due process.
+
+## Required inputs
+
+1. Community purpose and users
+2. Risk/abuse history; then platform capabilities.
+3. Legal/safety constraints
+4. Moderator resources
+
+## Workflow
+
+1. Define community purpose, protected participation, jurisdiction/platform boundaries, and principles such as safety, fairness, privacy, and proportionality.
+2. Write rules as observable behavior with examples and edge cases for harassment, threats, hate, sexual content, privacy, impersonation, spam, fraud, self-harm, illegal content, and manipulation as applicable.
+3. Create an enforcement ladder by severity, intent, recurrence, reach, vulnerability, and immediate danger; define emergency reporting and preservation.
+4. Specify reporting, triage, evidence, moderator conflicts, response time, notifications, appeals, reinstatement, and record retention.
+5. Address automation, false positives, coordinated abuse, minors/vulnerable users, moderator wellbeing, and law-enforcement/legal requests; then publish transparency metrics and review rules based on incidents and community feedback.
+
+## Deliverable
+
+- Community rules
+- Enforcement and escalation matrix; then reporting/appeal process.
+- Transparency and review plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-096-community-moderation-policy.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Rules are enforceable from observable behavior.
+- [ ] Appeals and emergency safety paths are defined.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-114" title="Agency SOW builder" schema="schemas/imported/generic_prompt_library_v3_1/cp-114-agency-sow-builder.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Agency SOW builder
+
+## Task contract
+
+Build an agency statement of work that defines deliverables, assumptions, responsibilities, review rounds, timeline, commercial terms, exclusions, change control, and acceptance.
+
+## Use this prompt when
+
+- Scoping agency/client services for contracting.
+
+## Do not use it for
+
+- Providing jurisdiction-specific legal drafting without counsel.
+
+## Required inputs
+
+1. Approved engagement brief
+2. Deliverables/options; then timeline/resources.
+3. Client dependencies
+4. Pricing and commercial assumptions
+
+## Workflow
+
+1. State objectives, parties, term, scope boundary, and governing master agreement/reference documents.
+2. Define each deliverable by quantity, format, specification, owner, due date, inputs, acceptance, and included revisions.
+3. List assumptions, client responsibilities, access/assets/feedback deadlines, third-party costs, and schedule dependencies; then define project management, meetings, communication, approvals, file handoff, usage/rights inputs, expenses, and reporting.
+4. State fees, payment schedule, taxes, overages, cancellation, pause, rescheduling, and exclusions.
+5. Create change-request process, impact estimate, authorization, and acceptance/closeout; flag clauses for legal review.
+
+## Deliverable
+
+- SOW scope/deliverable schedule
+- Assumptions and responsibilities; then commercial/change-control terms.
+- Acceptance and legal-review issues
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-114-agency-sow-builder.schema.json` when structured output is requested.
+
+## Task-specific cautions
+
+- Commercial drafting support only; qualified legal review is required.
+
+## Completion gates
+
+- [ ] Deliverables and exclusions are specific enough to estimate and accept.
+- [ ] Dependencies and revision limits are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

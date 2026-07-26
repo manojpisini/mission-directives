@@ -44,7 +44,7 @@ preferred_skills:
 - xlsx
 - stop-slop
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -67,7 +67,11 @@ output_contract:
     format: jsonl
   - path: reports/report_production_visualization_brief_and_quality_assurance/report_production_visualization_brief_and_quality_assurance_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.reporting.report-production-visualization-brief-and-quality-assurance
 prompt_slug: report-production-visualization-brief-and-quality-assurance
@@ -83,7 +87,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 813
+  maximum_body_words: 1197
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -144,6 +148,15 @@ conditional_template_routes:
 - visual/infographic-specification
 - visual/diagram-specification
 - visual/animated-illustration-specification
+aliases:
+- Dashboard QA
+imported_profiles:
+- profile_id: CP-179
+  title: Dashboard QA
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 783b87290c21079d1e97bf654b15eb48a81c9fb34a6f03adc1f2035e18b47923
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-179-dashboard-qa.schema.json
 ---
 
 # Report Production, Visualization Brief, and Quality Assurance
@@ -247,5 +260,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-179" title="Dashboard QA" schema="schemas/imported/generic_prompt_library_v3_1/cp-179-dashboard-qa.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Dashboard QA
+
+## Task contract
+
+Quality-assure a dashboard by validating metric definitions, grain, joins, filters, time windows, refresh, permissions, formatting, accessibility, interactions, exports, performance, and source reconciliation.
+
+## Use this prompt when
+
+- Before release or after changes to a dashboard.
+
+## Do not use it for
+
+- Visual review without checking data.
+
+## Required inputs
+
+1. Dashboard
+2. build/version
+3. Metric registry and source data
+4. User roles/permissions
+5. Test cases and expected values
+6. Platform/performance requirements
+
+## Workflow
+
+1. Confirm scope, environment, version, users, pages, filters, refresh, and authoritative metric definitions.
+2. Reconcile headline and sampled detail values to trusted queries/sources across time, segments, edge cases, late data, nulls, and rounding.
+3. Test joins, grain, denominators, distinct counts, date/timezone, currency/unit, filters, cross-filtering, drilldowns, totals, sorting, and reset/default behavior.
+4. Test refresh/freshness indicators, failed/stale loads, cache, incremental update, and data-quality messaging.
+5. Test row/column/tenant permissions, exports, shared links, sensitive fields, audit, accessibility, responsive layout, keyboard, labels, contrast, and screen reader.
+6. Measure load/interaction/export performance and document defects with steps, evidence, severity, owner, and retest.
+
+## Deliverable
+
+- Metric reconciliation results
+- Functional/permission/accessibility findings
+- Freshness/performance results
+- Release decision and retest
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-179-dashboard-qa.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Critical metrics reconcile to trusted sources.
+- [ ] Permissions and exports are tested with representative roles.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

@@ -38,7 +38,7 @@ evidence_lane: factual
 preferred_skills:
 - prompt-engineering-patterns
 - prompt-builder
-output_media: &id001
+output_media:
 - markdown
 - json
 - prompt_spec
@@ -61,7 +61,11 @@ output_contract:
     format: jsonl
   - path: reports/prompt_review_evaluation_and_adversarial_testing/prompt_review_evaluation_and_adversarial_testing_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - prompt_spec
+  - evaluation_fixture
 suite_version: 1.8.3
 capability_id: md.prompt_engineering.prompt-review-evaluation-and-adversarial-testing
 prompt_slug: prompt-review-evaluation-and-adversarial-testing
@@ -77,11 +81,12 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 795
+  maximum_body_words: 1781
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
   maximum_primary_artifacts: 1
+  maximum_body_lines: 289
 output_profiles:
   minimum:
   - results/prompt_review_evaluation_and_adversarial_testing/prompt_review_evaluation_and_adversarial_testing_result.md
@@ -125,6 +130,29 @@ conditional_template_routes:
 - docs/developer-guide
 - reports/professional-report
 - reports/audit-report
+aliases:
+- Prompt regression evaluation
+- Eval dataset design
+- Malicious prompt corpus builder
+imported_profiles:
+- profile_id: CP-012
+  title: Prompt regression evaluation
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 0da5d41a71d42fa6b54f254861dabfff715d24f470311c6e46d07e7b5b44f596
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-012-prompt-regression-evaluation.schema.json
+- profile_id: CP-023
+  title: Eval dataset design
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: ca736a533b5de0084095a2f00ae28b97f3f7b8a451effbf598f4b1ed1d5f0cfd
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-023-eval-dataset-design.schema.json
+- profile_id: CP-048
+  title: Malicious prompt corpus builder
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 7fe542c6bdf07fb7250e59f0ae2d160d41b75bf8d4bca68053b5f139c9571af6
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-048-malicious-prompt-corpus-builder.schema.json
 ---
 
 # Prompt Review, Evaluation, and Adversarial Testing
@@ -227,5 +255,170 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-012" title="Prompt regression evaluation" schema="schemas/imported/generic_prompt_library_v3_1/cp-012-prompt-regression-evaluation.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Prompt regression evaluation
+
+## Task contract
+
+Determine whether a prompt change causes meaningful behavioral regression across representative and adversarial cases, with calibrated scoring and reviewable examples.
+
+## Use this prompt when
+
+- Comparing old/new prompts, policies, routing, or model-facing instructions.
+
+## Do not use it for
+
+- Judging outputs from one anecdotal example.
+
+## Required inputs
+
+1. Baseline and candidate prompt versions
+2. Evaluation cases with expected properties
+3. Model/runtime settings
+4. Scoring rubric and critical constraints
+5. Historical failures or production samples
+
+## Workflow
+
+1. Diff prompt intent and constraints, identifying changed authority, scope, formatting, tool use, safety, and ambiguity—not only wording.
+2. Build a stratified evaluation set covering common, edge, adversarial, multilingual, long-context, missing-information, and tool-boundary cases.
+3. Run baseline and candidate under controlled settings with randomized ordering and retained raw outputs.
+4. Score dimensions with anchored criteria: task success, constraint adherence, factual grounding, safety, verbosity, format validity, and consistency.
+5. Require human review for subjective or high-stakes dimensions.
+6. Analyze paired regressions, improvements, variance, and severity; isolate failures caused by prompt, model nondeterminism, evaluator, or test data.
+7. Recommend accept, revise, gate, or rollback with minimal failing cases and a regression suite.
+
+## Deliverable
+
+- Paired evaluation matrix
+- Regression/improvement analysis
+- Minimal failing cases
+- Release decision and regression suite
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-012-prompt-regression-evaluation.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Critical constraints have explicit pass thresholds.
+- [ ] Claims of improvement include variance and representative examples.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-023" title="Eval dataset design" schema="schemas/imported/generic_prompt_library_v3_1/cp-023-eval-dataset-design.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Eval dataset design
+
+## Task contract
+
+Design an evaluation dataset that represents real use, known risks, adversarial cases, and measurable decision thresholds without leaking answers or overfitting the evaluator.
+
+## Use this prompt when
+
+- Building benchmark, regression, red-team, or quality-evaluation data.
+
+## Do not use it for
+
+- Collecting random examples with no target behavior or sampling plan.
+
+## Required inputs
+
+1. System behavior and decisions to evaluate
+2. Production distribution or user segments
+3. Known failures and risk taxonomy
+4. Annotation resources and privacy constraints
+5. Metrics and release threshold
+
+## Workflow
+
+1. Define the evaluation claims and unit of analysis.
+2. Document what decision the dataset supports and which behaviors are in/out of scope.
+3. Create a coverage taxonomy across common, rare, boundary, adversarial, multilingual, long-context, missing-information, and tool-use cases as applicable.
+4. Specify sampling, source provenance, consent/licensing, de-identification, contamination control, train/test separation, and deduplication.
+5. Design labels and anchored rubrics with adjudication, uncertainty, inter-rater checks, and examples of borderline cases.
+6. Build balanced slices and challenge sets without distorting prevalence; retain metadata needed for error analysis.
+7. Define baseline, pass thresholds, statistical confidence, review sampling, versioning, and maintenance when production distribution changes.
+
+## Deliverable
+
+- Coverage taxonomy and sampling plan
+- Dataset schema and provenance policy
+- Annotation rubric/adjudication process
+- Metrics and release thresholds
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-023-eval-dataset-design.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Each test case maps to a defined capability or risk.
+- [ ] Privacy, licensing, leakage, and contamination controls are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-048" title="Malicious prompt corpus builder" schema="schemas/imported/generic_prompt_library_v3_1/cp-048-malicious-prompt-corpus-builder.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Malicious prompt corpus builder
+
+## Task contract
+
+Build a controlled adversarial prompt corpus that targets defined AI-system boundaries with labels, oracles, provenance, coverage, and safe handling.
+
+## Use this prompt when
+
+- Creating prompt-injection, policy, tool-abuse, or robustness test fixtures.
+
+## Do not use it for
+
+- A list of sensational attack strings with no expected behavior or coverage model.
+
+## Required inputs
+
+1. System boundaries and threat taxonomy
+2. Channels and tool capabilities
+3. Policy and expected safe behavior
+4. Languages/formats to cover
+5. Data handling and release constraints
+
+## Workflow
+
+1. Define corpus objectives and threat categories: direct/indirect injection, role confusion, data extraction, approval bypass, tool misuse, persistence, encoding, and multi-turn composition.
+2. Design case schema with channel, attacker goal, setup, payload, benign context, expected safe behavior, prohibited behavior, severity, and rationale.
+3. Generate variants across language, format, nesting, obfuscation, instruction position, authority claims, tool output, documents, and memory while avoiding unsafe real credentials or targets.
+4. Create benign hard negatives and legitimate override cases to measure over-refusal and authority comprehension.
+5. Deduplicate by attack mechanism and expected oracle, stratify coverage.
+6. Assign human review for ambiguous cases.
+7. Version the corpus, protect sensitive content, define release tiers, and connect every case to executable evaluation and failure triage.
+
+## Deliverable
+
+- Threat coverage taxonomy
+- Labeled adversarial and benign corpus
+- Expected-behavior oracles
+- Versioning/review/release policy
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-048-malicious-prompt-corpus-builder.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every case has a defined boundary and expected safe behavior.
+- [ ] Corpus coverage is measured by mechanism, not prompt count.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

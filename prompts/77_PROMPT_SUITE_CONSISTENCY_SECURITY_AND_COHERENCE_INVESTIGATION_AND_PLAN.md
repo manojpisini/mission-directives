@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 698
+  maximum_body_words: 1106
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -131,6 +131,15 @@ conditional_template_routes:
 - core/acceptance-criteria
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Prompt catalog deduplication
+imported_profiles:
+- profile_id: CP-025
+  title: Prompt catalog deduplication
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 9daa4c8418b1a5ac35a0445fdae7f7d96245ba017390b9701a6feda547ab895f
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-025-prompt-catalog-deduplication.schema.json
 ---
 
 # Prompt Suite Consistency, Security, and Coherence — Investigation and Plan
@@ -219,4 +228,62 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-78`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-025" title="Prompt catalog deduplication" schema="schemas/imported/generic_prompt_library_v3_1/cp-025-prompt-catalog-deduplication.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Prompt catalog deduplication
+
+## Task contract
+
+Semantically consolidate a prompt catalog by workflow, decision, inputs, and output contract while preserving route compatibility and intentionally distinct specializations.
+
+## Use this prompt when
+
+- A prompt library contains overlapping titles, duplicated workflows, or unclear routing.
+
+## Do not use it for
+
+- Exact-string deduplication presented as semantic consolidation.
+
+## Required inputs
+
+1. Prompt catalog and full prompt text
+2. Usage/routing data
+3. Aliases and backward-compatibility requirements
+4. Domain specializations
+5. Evaluation and ownership metadata
+
+## Workflow
+
+1. Normalize each prompt into intent, trigger, actor, inputs, workflow, decision owner, deliverable, safety boundary, and schema—not just title keywords.
+2. Compute candidate similarity using multiple views, then manually compare high-similarity pairs for phase, authority, evidence, and output differences.
+3. Cluster true equivalents under one canonical workflow.
+4. Retain separate prompts when they make materially different decisions or operate at different lifecycle phases.
+5. Define canonical names, aliases, route modes, deprecation notices, and migration behavior so existing callers do not silently change semantics.
+6. Identify coverage gaps and overrepresented domains after consolidation; do not replace duplicates with a generic super-prompt that loses domain judgment.
+7. Validate routes, examples, schemas, and evaluation cases against canonical mappings; publish reasoned merge/keep decisions.
+
+## Deliverable
+
+- Semantic similarity candidates
+- Reasoned merge/keep log
+- Canonical prompt and alias catalog
+- Route-compatibility validation
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-025-prompt-catalog-deduplication.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every merge states why decision owner, evidence, phase, and output are equivalent.
+- [ ] Every retained near-duplicate states the material distinction.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

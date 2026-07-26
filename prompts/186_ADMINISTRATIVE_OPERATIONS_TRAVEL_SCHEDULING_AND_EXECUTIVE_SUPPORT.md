@@ -39,7 +39,7 @@ evidence_lane: hybrid
 preferred_skills:
 - document-generate
 - make-pdf
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -60,7 +60,9 @@ output_contract:
     format: jsonl
   - path: reports/administrative_operations_travel_scheduling_and_executive_support/administrative_operations_travel_scheduling_and_executive_support_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.administration.administrative-operations-travel-scheduling-and-executive-support
 prompt_slug: administrative-operations-travel-scheduling-and-executive-support
@@ -76,7 +78,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 782
+  maximum_body_words: 1180
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -124,6 +126,15 @@ conditional_template_routes:
 - docs/observability-guide
 - docs/knowledge-base-article
 - decks/board-update
+aliases:
+- Executive assistant operations
+imported_profiles:
+- profile_id: CP-180
+  title: Executive assistant operations
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: d25f45a9aada5820f9e80b24b2792082e68dd8fc8993799b178b8899737950c5
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-180-executive-assistant-operations.schema.json
 ---
 
 # Administrative Operations, Travel, Scheduling, and Executive Support
@@ -226,5 +237,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-180" title="Executive assistant operations" schema="schemas/imported/generic_prompt_library_v3_1/cp-180-executive-assistant-operations.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Executive assistant operations
+
+## Task contract
+
+Run executive-assistant operations as a controlled system for priorities, calendar, inbox, meetings, travel, briefings, follow-ups, delegated work, confidential records, preferences, and escalation.
+
+## Use this prompt when
+
+- Supporting an executive or leadership office.
+
+## Do not use it for
+
+- Taking decisions or external actions beyond delegated authority.
+
+## Required inputs
+
+1. Executive priorities/preferences
+2. Calendar/inbox/access rules
+3. Stakeholders and delegated authority
+4. Travel/meeting systems; then confidentiality/escalation requirements.
+
+## Workflow
+
+1. Establish priority hierarchy, decision rights, communication preferences, confidentiality classes, response SLAs, and actions requiring approval.
+2. Operate calendar by objective, preparation, participants, travel/buffer, focus time, conflicts, timezones, accessibility, and decision value; protect against unauthorized changes.
+3. Triage inbox/messages into urgent, decision, delegate, respond, schedule, reference, and archive; draft within voice/authority and track commitments.
+4. Prepare meeting briefs with purpose, attendees, context, open decisions, pre-reads, sensitivities, logistics, and desired outcome; capture decisions/actions afterward.
+5. Coordinate travel and events with verified names, bookings, documents, contacts, buffers, preferences, privacy, and disruption alternatives; then maintain delegated/waiting/review queues, daily/weekly brief, stakeholder preferences, confidential records, receipts, and escalation; log external actions.
+
+## Deliverable
+
+- Priority/calendar/inbox operating view
+- Meeting/travel briefing packets
+- Delegation/follow-up tracker; then authority/escalation/receipt record.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-180-executive-assistant-operations.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every external action is within delegated authority and leaves a receipt.
+- [ ] Confidential information is minimized and access-controlled.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

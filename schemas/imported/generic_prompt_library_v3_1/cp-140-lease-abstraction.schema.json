@@ -1,0 +1,447 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://generic-prompts.invalid/v3.1/CP-140.schema.json",
+  "title": "Lease abstraction result",
+  "description": "Strict machine-readable result for the prompt. It constrains the work product; it is not a certification of professional correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "const": "CP-140",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "FACT",
+        "SUPPORTED_INFERENCE",
+        "ASSUMPTION",
+        "RECOMMENDATION",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "document_set": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "document": {
+                "type": "string",
+                "minLength": 1
+              },
+              "date": {
+                "type": "string",
+                "minLength": 1
+              },
+              "parties": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "precedence": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "executed",
+                  "draft",
+                  "missing",
+                  "superseded"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "document",
+              "date",
+              "parties",
+              "precedence",
+              "status"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "premises_and_term": {
+          "type": "object",
+          "properties": {
+            "premises": {
+              "type": "string",
+              "minLength": 1
+            },
+            "commencement": {
+              "type": "string",
+              "minLength": 1
+            },
+            "expiration": {
+              "type": "string",
+              "minLength": 1
+            },
+            "possession": {
+              "type": "string",
+              "minLength": 1
+            },
+            "renewal_options": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "premises",
+            "commencement",
+            "expiration",
+            "possession",
+            "renewal_options"
+          ],
+          "additionalProperties": false
+        },
+        "financial_terms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "term": {
+                "type": "string",
+                "minLength": 1
+              },
+              "amount_or_formula": {
+                "type": "string",
+                "minLength": 1
+              },
+              "frequency": {
+                "type": "string",
+                "minLength": 1
+              },
+              "due_date_rule": {
+                "type": "string",
+                "minLength": 1
+              },
+              "clause": {
+                "type": "string",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "term",
+              "amount_or_formula",
+              "frequency",
+              "due_date_rule",
+              "clause",
+              "notes"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "party": {
+                "type": "string",
+                "minLength": 1
+              },
+              "obligation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "trigger": {
+                "type": "string",
+                "minLength": 1
+              },
+              "deadline": {
+                "type": "string",
+                "minLength": 1
+              },
+              "clause": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "party",
+              "obligation",
+              "trigger",
+              "deadline",
+              "clause",
+              "owner"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "critical_dates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string",
+                "minLength": 1
+              },
+              "date_or_rule": {
+                "type": "string",
+                "minLength": 1
+              },
+              "notice_period": {
+                "type": "string",
+                "minLength": 1
+              },
+              "party": {
+                "type": "string",
+                "minLength": 1
+              },
+              "clause": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "event",
+              "date_or_rule",
+              "notice_period",
+              "party",
+              "clause",
+              "owner"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "ambiguities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "issue": {
+                "type": "string",
+                "minLength": 1
+              },
+              "conflicting_or_missing_clauses": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "legal_question": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "issue",
+              "conflicting_or_missing_clauses",
+              "legal_question"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "document_set",
+        "premises_and_term",
+        "financial_terms",
+        "obligations",
+        "critical_dates",
+        "ambiguities"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "Stable evidence identifier.",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "file",
+              "line_range",
+              "command_output",
+              "document",
+              "dataset",
+              "interview",
+              "observation",
+              "external_source",
+              "other"
+            ],
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "description": "Path, URL, record identifier, or source name.",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "description": "Line range, section, timestamp, query, or other locator.",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Limitations or context.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_type",
+          "source",
+          "location",
+          "supports",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "due_or_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "backlog"
+            ],
+            "minLength": 1
+          },
+          "validation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "in_progress",
+              "blocked",
+              "complete",
+              "rejected"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action_id",
+          "action",
+          "owner",
+          "due_or_trigger",
+          "priority",
+          "validation",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "run_id",
+    "generated_at",
+    "epistemic_status",
+    "summary",
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "actions"
+  ],
+  "additionalProperties": false
+}

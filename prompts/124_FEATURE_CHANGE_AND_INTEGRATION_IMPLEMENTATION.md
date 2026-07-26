@@ -43,7 +43,7 @@ preferred_skills:
 - review
 - test-driven-development
 - verification-before-completion
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -64,7 +64,9 @@ output_contract:
     format: jsonl
   - path: reports/feature_change_and_integration_implementation/feature_change_and_integration_implementation_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.engineering.feature-change-and-integration-implementation
 prompt_slug: feature-change-and-integration-implementation
@@ -80,7 +82,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 800
+  maximum_body_words: 1201
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -161,6 +163,15 @@ conditional_template_routes:
 - docs/onboarding-guide
 - docs/support-playbook
 - visual/data-visualization-specification
+aliases:
+- Connector integration plan
+imported_profiles:
+- profile_id: CP-014
+  title: Connector integration plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 40198a50a31e564c6a318bc40977dff3967c2c5cfe90f693ed27e0986bc98307
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-014-connector-integration-plan.schema.json
 ---
 
 # Feature, Change, and Integration Implementation
@@ -263,5 +274,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-014" title="Connector integration plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-014-connector-integration-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Connector integration plan
+
+## Task contract
+
+Design a connector integration around least privilege, event semantics, data ownership, failure recovery, and revocation rather than merely listing API calls.
+
+## Use this prompt when
+
+- Integrating systems such as GitHub, Jira, Slack, Drive, Notion, email, calendars, or internal SaaS.
+
+## Do not use it for
+
+- Implementing OAuth or webhooks before the use cases and authority model are agreed.
+
+## Required inputs
+
+1. User journeys and systems of record
+2. Objects/actions/events required
+3. Authentication model and available scopes
+4. Data classification and retention rules
+5. Rate limits, webhook behavior, and failure expectations
+
+## Workflow
+
+1. Define each integration use case, actor, trigger, source of truth, action, and expected receipt.
+2. Eliminate permissions not required by a concrete journey.
+3. Map authentication, consent, tenant installation, token storage/rotation, scopes, impersonation, and revocation.
+4. Specify object and event contracts, identifiers, versioning, pagination, ordering, deduplication, webhook verification, and replay handling.
+5. Design synchronization and conflict rules: initial import, incremental updates, deletes, edits, retries, backoff, rate limits, and partial failure.
+6. Define privacy, retention, audit logging, export/deletion, and administrator controls.
+7. Create sandbox/fixture tests, operational dashboards, support runbook, rollout, and disconnect behavior.
+
+## Deliverable
+
+- Use-case and scope matrix
+- Connector data/event contract
+- Failure/recovery and conflict model
+- Security/operations test plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-014-connector-integration-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every requested scope maps to a user-visible action.
+- [ ] Revocation and partial synchronization failure are defined.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

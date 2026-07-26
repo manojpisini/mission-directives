@@ -26,6 +26,20 @@ def _contains_phrase(text: str, phrase: str) -> bool:
     )
 
 
+def _shortcut_matches(normalized_intent: str, row: dict[str, Any]) -> bool:
+    keyword = _normalized(row["keyword"])
+    mode = row.get("match_mode", "contains")
+    if mode == "exact":
+        return normalized_intent == keyword
+    if mode == "bounded":
+        maximum = int(row.get("maximum_intent_tokens", 3))
+        return _contains_phrase(normalized_intent, keyword) and len(
+            normalized_intent.split()
+        ) <= maximum
+    if mode != "contains":
+        raise ValueError(f"Unsupported shortcut match mode: {mode}")
+    return _contains_phrase(normalized_intent, keyword)
+
 def _strip_phrase(text: str, phrase: str) -> str:
     normalized_phrase = _normalized(phrase)
     return re.sub(
@@ -83,7 +97,7 @@ def parse_keyword_context(request: str, policy: dict[str, Any]) -> dict[str, Any
 
     shortcut_candidates = []
     for order, row in enumerate(policy.get("shortcut_routes", [])):
-        if _contains_phrase(normalized_intent, row["keyword"]):
+        if _shortcut_matches(normalized_intent, row):
             shortcut_candidates.append(
                 {
                     **row,

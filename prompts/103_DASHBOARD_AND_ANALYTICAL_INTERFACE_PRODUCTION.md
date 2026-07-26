@@ -42,7 +42,7 @@ preferred_skills:
 - design-taste-frontend-v1
 - impeccable
 - visual-assets
-output_media: &id001
+output_media:
 - html
 - css
 - javascript
@@ -62,7 +62,11 @@ output_contract:
     format: jsonl
   - path: reports/dashboard_and_analytical_interface_production/dashboard_and_analytical_interface_production_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - html
+  - css
+  - javascript
+  - dashboard_spec
 suite_version: 1.8.3
 capability_id: md.data_visualization.dashboard-and-analytical-interface-production
 prompt_slug: dashboard-and-analytical-interface-production
@@ -78,7 +82,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 720
+  maximum_body_words: 1078
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -130,6 +134,15 @@ conditional_template_routes:
 - decks/executive-brief
 - reports/executive-report
 - decks/data-story
+aliases:
+- Dashboard requirements interviewer
+imported_profiles:
+- profile_id: CP-103
+  title: Dashboard requirements interviewer
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 5feb0ca90430d83a190fb81f51ae463cfac5ad9f1e84f68c88ca0b8808c4873f
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-103-dashboard-requirements-interviewer.schema.json
 ---
 
 # Dashboard and Analytical Interface Production
@@ -232,5 +245,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-103" title="Dashboard requirements interviewer" schema="schemas/imported/generic_prompt_library_v3_1/cp-103-dashboard-requirements-interviewer.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Dashboard requirements interviewer
+
+## Task contract
+
+Interview dashboard stakeholders to define the decisions, audiences, canonical metrics, freshness, interactions, permissions, alerts, and operational ownership before design.
+
+## Use this prompt when
+
+- Planning a new dashboard or major redesign.
+
+## Do not use it for
+
+- Collecting a wishlist of charts.
+
+## Required inputs
+
+1. Audience/roles
+2. Decisions and workflows
+3. Existing metrics/reports; then data availability.
+4. Refresh, access, and platform constraints
+
+## Workflow
+
+1. Identify audience roles, frequency of use, decision moments, current workarounds, and what action follows each insight.
+2. For each decision, define metric, grain, target/baseline, segments, filters, time windows, thresholds, and acceptable latency.
+3. Resolve canonical definitions and ownership; identify conflicting metrics, sources, reconciliation, and confidence.
+4. Design information hierarchy, overview/detail, drilldowns, comparisons, annotations, explanations, export, and accessibility.
+5. Specify refresh, data-quality indicators, permissions/row-level security, sensitive fields, alerting, subscriptions, and audit needs; then define performance, mobile/display, rollout, adoption, feedback, and dashboard-success measures.
+
+## Deliverable
+
+- Decision-to-metric matrix
+- Dashboard content/interaction requirements; then data/security/freshness contract.
+- Acceptance and adoption criteria
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-103-dashboard-requirements-interviewer.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every visual answers a named decision question.
+- [ ] Metric ownership and permissions are resolved.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

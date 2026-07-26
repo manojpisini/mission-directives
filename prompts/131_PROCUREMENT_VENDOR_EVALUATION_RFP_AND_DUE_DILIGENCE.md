@@ -38,7 +38,7 @@ evidence_lane: factual
 preferred_skills:
 - document-generate
 - make-pdf
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -61,7 +61,11 @@ output_contract:
     format: jsonl
   - path: reports/procurement_vendor_evaluation_rfp_and_due_diligence/procurement_vendor_evaluation_rfp_and_due_diligence_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.procurement.procurement-vendor-evaluation-rfp-and-due-diligence
 prompt_slug: procurement-vendor-evaluation-rfp-and-due-diligence
@@ -77,7 +81,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 805
+  maximum_body_words: 1177
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -129,6 +133,15 @@ conditional_template_routes:
 - docs/privacy-guide
 - docs/requirements-specification
 - reports/professional-report
+aliases:
+- Procurement/vendor evaluation
+imported_profiles:
+- profile_id: CP-079
+  title: Procurement/vendor evaluation
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 9f98b999814c6491100100206e00c5b693565e625e13188d9d61e513605d9962
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-079-procurement-vendor-evaluation.schema.json
 ---
 
 # Procurement, Vendor Evaluation, RFP, and Due Diligence
@@ -231,5 +244,61 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-079" title="Procurement/vendor evaluation" schema="schemas/imported/generic_prompt_library_v3_1/cp-079-procurement-vendor-evaluation.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Procurement/vendor evaluation
+
+## Task contract
+
+Evaluate vendors against normalized requirements, total cost, security, implementation, service, concentration, and exit risk with a transparent decision model.
+
+## Use this prompt when
+
+- Selecting or renewing a vendor, platform, agency, or service provider.
+
+## Do not use it for
+
+- Choosing solely from feature checklists or quoted price.
+
+## Required inputs
+
+1. Business/technical requirements
+2. Vendor proposals and demos
+3. Pricing/terms
+4. Security/legal/compliance evidence
+5. Implementation and exit constraints
+
+## Workflow
+
+1. Define mandatory, weighted, and optional requirements with business outcomes, evidence standard, and decision owner.
+2. Normalize proposals for scope, quantities, usage, implementation, support, overages, taxes, renewals, and assumptions to calculate total evaluated cost.
+3. Validate capability through references, proof of concept, sample deliverables, architecture, service levels, roadmap, and operating model.
+4. Assess security, privacy, compliance, financial stability, subcontractors, data portability, lock-in, concentration, and incident history.
+5. Model implementation dependencies, change management, staffing, migration, and time to value.
+6. Compare options, negotiate gaps, define conditions/exit plan, and record recommendation plus dissent.
+
+## Deliverable
+
+- Requirement/evidence matrix
+- Total evaluated cost
+- Risk and implementation assessment
+- Recommendation and exit conditions
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-079-procurement-vendor-evaluation.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Scores have evidence and anchored criteria.
+- [ ] Exit and data portability are considered before selection.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

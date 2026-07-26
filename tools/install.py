@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Install or update Mission Directives inside another project.
+"""Install or update the Mission Directives runtime inside another project.
 
-The complete distribution is staged and promoted to <project>/prompts. The
+The declared runtime payload is staged and promoted to <project>/prompts. The
 installer manages one .gitignore block, creates internal runtime directories,
 and synchronizes only AGENTS.md and CLAUDE.md. Any failure after promotion
 restores the previous suite and the original human-authored project files.
@@ -31,6 +31,8 @@ from security_utils import (
 from tui import TUI
 
 SOURCE = Path(__file__).resolve().parent.parent
+PAYLOAD_CONTRACT = SOURCE / "config/runtime_payload.json"
+PAYLOAD_PROFILE = "runtime"
 BEGIN = "# BEGIN MISSION DIRECTIVES MANAGED IGNORE"
 END = "# END MISSION DIRECTIVES MANAGED IGNORE"
 IGNORE_ENTRIES = [
@@ -47,7 +49,7 @@ IGNORE_ENTRIES = [
     "/.md-cleanup-staging-*/",
     "/.md-cleanup.lock",
 ]
-EXCLUDED_NAMES = {"__pycache__", ".pytest_cache", ".git", ".venv"}
+
 RUNTIME_DIRS = [
     ".prompt_suite/logs",
     "results",
@@ -68,25 +70,6 @@ RUNTIME_ROOTS = [
 ]
 MANAGED_MARKER = ".mission-directives-managed.json"
 PRESERVED_FILES = [".gitignore", "AGENTS.md", "CLAUDE.md"]
-
-
-def copy_filter(directory: str, names: list[str]) -> list[str]:
-    ignored: list[str] = []
-    current = Path(directory)
-    for name in names:
-        candidate = current / name
-        if name in EXCLUDED_NAMES or name.endswith((".pyc", ".pyo", ".toml.lock")):
-            ignored.append(name)
-            continue
-        try:
-            relative = candidate.absolute().relative_to(SOURCE)
-        except ValueError as exc:
-            raise ValueError(
-                f"Copy candidate escaped suite source: {candidate}"
-            ) from exc
-        if relative.parts[:2] == (".prompt_suite", "logs") and name != "README.md":
-            ignored.append(name)
-    return ignored
 
 
 def managed_ignore(existing: str) -> str:
@@ -180,6 +163,53 @@ def _remove_tree(path: Path) -> None:
         shutil.rmtree(_shutil_path(path))
 
 
+def _load_runtime_payload() -> dict:
+    data = json.loads(PAYLOAD_CONTRACT.read_text(encoding="utf-8"))
+    if data.get("profile") != PAYLOAD_PROFILE:
+        raise ValueError("Runtime payload profile must be 'runtime'")
+    required = {"root_files", "directories", "tool_files"}
+    if not required <= set(data):
+        raise ValueError("Runtime payload contract is missing required collections")
+    entries = [
+        *data["root_files"],
+        *data["directories"],
+        *(f"tools/{name}" for name in data["tool_files"]),
+    ]
+    if len(entries) != len(set(entries)):
+        raise ValueError("Runtime payload contract contains duplicate paths")
+    for entry in entries:
+        safe_child(SOURCE, entry)
+    return data
+
+
+def _copy_runtime_payload(staging: Path, payload: dict) -> int:
+    staging.mkdir(parents=True, exist_ok=False)
+    for relative in payload["root_files"]:
+        source = safe_child(SOURCE, relative)
+        if not source.is_file():
+            raise ValueError(f"Runtime payload file is missing: {relative}")
+        destination = safe_child(staging, relative)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(_shutil_path(source), _shutil_path(destination))
+
+    for relative in payload["directories"]:
+        source = safe_child(SOURCE, relative)
+        list(iter_tree_files(source))
+        destination = safe_child(staging, relative)
+        shutil.copytree(_shutil_path(source), _shutil_path(destination), symlinks=True)
+
+    tools_dir = safe_child(staging, "tools")
+    tools_dir.mkdir(parents=True, exist_ok=True)
+    for name in payload["tool_files"]:
+        source = safe_child(SOURCE / "tools", name)
+        if not source.is_file():
+            raise ValueError(f"Runtime tool is missing: tools/{name}")
+        destination = safe_child(tools_dir, name)
+        shutil.copy2(_shutil_path(source), _shutil_path(destination))
+
+    return len(list(iter_tree_files(staging)))
+
+
 def _shutil_path(path: Path) -> str | Path:
     if os.name != "nt":
         return path
@@ -210,13 +240,11 @@ def install(
             f"{destination} exists; rerun with --replace to update it"
         )
 
-    # Refuse links or special files in the distributable before copytree can
-    # follow or reinterpret them.
-    list(iter_tree_files(SOURCE))
+    payload = _load_runtime_payload()
     if progress:
-        progress("verified suite source")
+        progress("verified runtime payload contract")
     actions = [
-        "stage complete suite",
+        "stage runtime payload",
         "promote to prompts",
         "update managed .gitignore",
         "create runtime directories",
@@ -233,6 +261,8 @@ def install(
             "actions": actions,
             "gitignore_entries": IGNORE_ENTRIES,
             "docs_ignored": False,
+            "payload_profile": PAYLOAD_PROFILE,
+            "repository_only": payload.get("repository_only", []),
         }
 
     snapshot = _snapshot(project)
@@ -240,12 +270,9 @@ def install(
     runtime_roots = {name: safe_child(project, name) for name in RUNTIME_ROOTS}
     existed_roots = {name: path.exists() for name, path in runtime_roots.items()}
     _remove_tree(staging)
-    shutil.copytree(SOURCE, _shutil_path(staging), ignore=copy_filter, symlinks=True)
-    # copytree(symlinks=True) is safe only because iter_tree_files rejected all
-    # source symlinks; verify the staged tree again before promotion.
-    list(iter_tree_files(staging))
+    installed_file_count = _copy_runtime_payload(staging, payload)
     if progress:
-        progress("staged complete suite")
+        progress("staged runtime payload")
 
     if destination.exists():
         backup = safe_child(
@@ -300,6 +327,8 @@ def install(
             "project_root": str(project),
             "suite_destination": "prompts",
             "suite_version": (destination / "VERSION").read_text().strip(),
+            "payload_profile": PAYLOAD_PROFILE,
+            "installed_file_count": installed_file_count,
             "backup": str(backup) if backup else "",
             "gitignore_entries": IGNORE_ENTRIES,
             "docs_ignored": False,

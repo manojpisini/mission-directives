@@ -40,7 +40,7 @@ preferred_skills:
 - benchmark-models
 - xlsx
 - document-generate
-output_media: &id001
+output_media:
 - markdown
 - json
 - xlsx_spec
@@ -63,7 +63,11 @@ output_contract:
     format: jsonl
   - path: reports/experiment_a_b_test_and_causal_measurement_design/experiment_a_b_test_and_causal_measurement_design_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - xlsx_spec
+  - chart_spec
 suite_version: 1.8.3
 capability_id: md.analytics.experiment-a-b-test-and-causal-measurement-design
 prompt_slug: experiment-a-b-test-and-causal-measurement-design
@@ -79,7 +83,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 782
+  maximum_body_words: 1160
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -127,6 +131,17 @@ conditional_template_routes:
 - docs/testing-guide
 - docs/observability-guide
 - decks/data-story
+aliases:
+- Content and creative experiment design
+- Content experiment planner
+- Creative testing plan
+imported_profiles:
+- profile_id: CP-068
+  title: Content and creative experiment design
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: a75cdc5d6b71b7c9450ce497c2401976c1c96115511a0b2552cc6142b6fc20cc
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-068-content-and-creative-experiment-design.schema.json
 ---
 
 # Experiment, A/B Test, and Causal Measurement Design
@@ -229,5 +244,61 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-068" title="Content and creative experiment design" schema="schemas/imported/generic_prompt_library_v3_1/cp-068-content-and-creative-experiment-design.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Content and creative experiment design
+
+## Task contract
+
+Design a content or creative experiment with a falsifiable hypothesis, controlled variants, meaningful outcome metric, adequate run window, and explicit decision rule.
+
+## Use this prompt when
+
+- Testing messages, formats, creative treatments, offers, or channel tactics.
+
+## Do not use it for
+
+- Running many variants without a learning question.
+
+## Required inputs
+
+1. Decision to inform
+2. Audience and context
+3. Baseline performance
+4. Controllable variable and variants
+5. Metric, traffic, duration, and constraints
+
+## Workflow
+
+1. Frame the decision and hypothesis as cause, audience/context, expected behavior, and business consequence.
+2. Choose one primary variable or a justified factorial design; document what remains constant.
+3. Define assignment, eligibility, sample-size or traffic rationale, run length, novelty/seasonality effects, and contamination risks.
+4. Select primary and guardrail metrics with denominator, attribution window, minimum detectable effect, and data-quality checks.
+5. Specify launch checks, stop conditions, ethics/brand constraints, analysis method, and how inconclusive results will be handled.
+6. Precommit decision rules and a learning capture plan before viewing results.
+
+## Deliverable
+
+- Experiment hypothesis/design
+- Variant and control specification
+- Measurement and analysis plan
+- Stop/decision rules
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-068-content-and-creative-experiment-design.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The test can change a named decision.
+- [ ] Primary metric and decision threshold are defined before launch.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

@@ -1489,6 +1489,216 @@
         "skill_package",
         "skill_requirement_spec"
       ]
+    },
+    "healthcare_and_clinical": {
+      "prompt_ids": [
+        "MD-201",
+        "MD-202",
+        "MD-203",
+        "MD-204",
+        "MD-205",
+        "MD-206",
+        "MD-207"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "insurance": {
+      "prompt_ids": [
+        "MD-208",
+        "MD-209",
+        "MD-210",
+        "MD-211",
+        "MD-212"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "tax_and_finance_advisory": {
+      "prompt_ids": [
+        "MD-213",
+        "MD-214",
+        "MD-215",
+        "MD-216"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "real_estate": {
+      "prompt_ids": [
+        "MD-217",
+        "MD-218",
+        "MD-219",
+        "MD-220",
+        "MD-221"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "construction": {
+      "prompt_ids": [
+        "MD-222",
+        "MD-223",
+        "MD-224",
+        "MD-225",
+        "MD-226",
+        "MD-227"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "manufacturing_and_quality": {
+      "prompt_ids": [
+        "MD-228",
+        "MD-229",
+        "MD-230",
+        "MD-231"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "retail_and_ecommerce": {
+      "prompt_ids": [
+        "MD-232",
+        "MD-233",
+        "MD-234",
+        "MD-235",
+        "MD-236"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "hospitality_and_travel": {
+      "prompt_ids": [
+        "MD-237",
+        "MD-238",
+        "MD-239",
+        "MD-240"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "nonprofit_and_programs": {
+      "prompt_ids": [
+        "MD-241",
+        "MD-242",
+        "MD-243",
+        "MD-244",
+        "MD-245"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "government_and_policy": {
+      "prompt_ids": [
+        "MD-246",
+        "MD-247",
+        "MD-248",
+        "MD-249",
+        "MD-250"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
+    },
+    "creative_and_media_operations": {
+      "prompt_ids": [
+        "MD-251",
+        "MD-252",
+        "MD-253",
+        "MD-254",
+        "MD-255",
+        "MD-256"
+      ],
+      "roles": [
+        "operational"
+      ],
+      "evidence_lanes": [
+        "hybrid"
+      ],
+      "media": [
+        "json",
+        "markdown"
+      ]
     }
   }
 }

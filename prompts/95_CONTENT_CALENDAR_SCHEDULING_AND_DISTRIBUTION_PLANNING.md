@@ -38,7 +38,7 @@ produces:
 - typed_runtime_artifacts
 evidence_lane: hybrid
 preferred_skills: []
-output_media: &id001
+output_media:
 - markdown
 - csv
 - calendar_spec
@@ -57,7 +57,10 @@ output_contract:
     format: jsonl
   - path: reports/content_calendar_scheduling_and_distribution_planning/content_calendar_scheduling_and_distribution_planning_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - csv
+  - calendar_spec
 suite_version: 1.8.3
 capability_id: md.content_operations.content-calendar-scheduling-and-distribution-planning
 prompt_slug: content-calendar-scheduling-and-distribution-planning
@@ -73,11 +76,12 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 599
+  maximum_body_words: 1783
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
   maximum_primary_artifacts: 1
+  maximum_body_lines: 323
 output_profiles:
   minimum:
   - results/content_calendar_scheduling_and_distribution_planning/content_calendar_scheduling_and_distribution_planning_result.md
@@ -126,6 +130,36 @@ conditional_template_routes:
 - docs/support-playbook
 - docs/binary-distribution-manual
 - decks/training-workshop
+aliases:
+- Content pipeline manager
+- Campaign calendar planner
+- Editorial calendar gap audit
+- Editorial pitch calendar
+imported_profiles:
+- profile_id: CP-054
+  title: Content pipeline manager
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 6edfde1a0fe1e6ed6deacfc9fba4b1f3bec8ffcb0b076843238cca5849d39547
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-054-content-pipeline-manager.schema.json
+- profile_id: CP-058
+  title: Campaign calendar planner
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 655b6241ec0c9580fb141a555e99ce534de0a082d5eacd9cbf711ae246bde4cd
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-058-campaign-calendar-planner.schema.json
+- profile_id: CP-064
+  title: Editorial calendar gap audit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 1a056bcacf7a5f3f7cbea386ec85218f0a18c95be8142b43ca6cade48ba6fecb
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-064-editorial-calendar-gap-audit.schema.json
+- profile_id: CP-118
+  title: Editorial pitch calendar
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 39e4bc98e3bb7be3036b98ccb92af67e4c0f483297275cad49e5a81cf83bc8de
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-118-editorial-pitch-calendar.schema.json
 ---
 
 # Content Calendar, Scheduling, and Distribution Planning
@@ -212,5 +246,220 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-054" title="Content pipeline manager" schema="schemas/imported/generic_prompt_library_v3_1/cp-054-content-pipeline-manager.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Content pipeline manager
+
+## Task contract
+
+Design and operate a content pipeline from idea intake through briefing, production, review, publication, reuse, measurement, and retirement with clear state ownership.
+
+## Use this prompt when
+
+- Content volume requires repeatable workflow and queue management.
+
+## Do not use it for
+
+- One-off content creation.
+
+## Required inputs
+
+1. Content goals and channels
+2. Roles and capacity
+3. Asset types and SLAs
+4. Approval rules
+5. Publishing and measurement systems
+
+## Workflow
+
+1. Define canonical pipeline states and the entry/exit criteria for idea, selected, briefed, assigned, in production, review, revision, approved, scheduled, published, measured, repurposed, and archived.
+2. Specify required metadata and artifacts at each state.
+3. Document audience, promise, format, source evidence, rights, owner, due date, channel, campaign, and dependencies.
+4. Define work-in-progress limits, prioritization, service levels, blocked reasons, aging alerts, and escalation.
+5. Design review routing by content risk, brand/legal needs, and channel; consolidate feedback and prevent silent state changes.
+6. Connect scheduling, publishing receipts, links, analytics, reuse opportunities, and asset lineage.
+7. Create operating views and cadences for queue health, throughput, quality, bottlenecks, and retirement of stale work.
+
+## Deliverable
+
+- Pipeline state model
+- Metadata and ownership contract
+- Queue/review operating rules
+- Measurement and repurposing loop
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-054-content-pipeline-manager.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Each state has one owner and objective transition criteria.
+- [ ] Published assets retain source, rights, version, and measurement links.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-058" title="Campaign calendar planner" schema="schemas/imported/generic_prompt_library_v3_1/cp-058-campaign-calendar-planner.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Campaign calendar planner
+
+## Task contract
+
+Build a campaign calendar that coordinates narrative phases, channel roles, content cadence, reuse, approvals, media moments, and reporting.
+
+## Use this prompt when
+
+- Planning a multi-channel campaign over time.
+
+## Do not use it for
+
+- A production schedule with no campaign narrative or channel strategy.
+
+## Required inputs
+
+1. Campaign objective/audience
+2. Launch or key dates
+3. Channel roles and assets
+4. Budget/media constraints
+5. Approval and measurement cadence
+
+## Workflow
+
+1. Define campaign phases—tease, announce, explain, prove, convert, sustain, close—based on audience journey rather than equal weekly posting.
+2. Assign each channel a role and content behavior.
+3. Identify anchor assets, derivative units, paid/earned/owned coordination, and reuse windows.
+4. Map moments, deadlines, cultural/seasonal context, embargoes, dependencies, and audience fatigue/conflict risks.
+5. Schedule briefing, production, legal/brand review, trafficking, publishing access, and contingency dates before public moments.
+6. Attach tracking, hypotheses, reporting windows, optimization decisions, and stop/extend criteria.
+7. Return a calendar with owners, readiness, gaps, and recovery options for late assets or changing conditions.
+
+## Deliverable
+
+- Phase/channel calendar
+- Asset and approval dependencies
+- Measurement/optimization schedule
+- Contingency plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-058-campaign-calendar-planner.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every calendar item has a channel role and audience purpose.
+- [ ] Reporting windows are linked to decisions, not only status.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-064" title="Editorial calendar gap audit" schema="schemas/imported/generic_prompt_library_v3_1/cp-064-editorial-calendar-gap-audit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Editorial calendar gap audit
+
+## Task contract
+
+Audit an editorial calendar for strategic, audience, funnel, format, seasonal, and asset gaps while identifying overused themes and stale inventory.
+
+## Use this prompt when
+
+- A publishing plan exists but may be unbalanced or repetitive.
+
+## Do not use it for
+
+- Generating topics without examining current coverage and performance.
+
+## Required inputs
+
+1. Editorial calendar and backlog
+2. Audience segments and goals
+3. Content pillars/funnel stages
+4. Performance and search/listening data
+5. Seasonal/news moments and asset inventory
+
+## Workflow
+
+1. Normalize calendar items by audience, problem, pillar, funnel/job, format, channel, date, owner, source asset, and status.
+2. Measure coverage and concentration: missing audiences/problems/stages, overused themes, repetitive formats, cadence gaps, and competing messages.
+3. Compare planned content to performance, search demand, sales/support questions, product moments, and seasonal/news opportunities.
+4. Identify stale, blocked, rights-limited, duplicated, or unsupported items and reusable evergreen assets.
+5. Prioritize gaps by audience value and strategic need.
+6. Avoid filling every empty cell with low-value volume.
+7. Return calendar changes, briefs needed, retire/repurpose decisions, and measurement questions.
+
+## Deliverable
+
+- Coverage matrix
+- Gap/overuse findings
+- Add/repurpose/retire decisions
+- Updated editorial priorities
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-064-editorial-calendar-gap-audit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Recommendations identify the audience or funnel need they fill.
+- [ ] Volume is not treated as coverage.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-118" title="Editorial pitch calendar" schema="schemas/imported/generic_prompt_library_v3_1/cp-118-editorial-pitch-calendar.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Editorial pitch calendar
+
+## Task contract
+
+Build an editorial pitch calendar around genuine news moments, seasonal relevance, outlet deadlines, asset readiness, spokesperson availability, and follow-up learning.
+
+## Use this prompt when
+
+- Planning recurring earned-media outreach.
+
+## Do not use it for
+
+- Filling dates with weak or fabricated hooks.
+
+## Required inputs
+
+1. Business/news roadmap
+2. Seasonal/cultural calendar
+3. Editorial lead times
+4. Story angles/proof; then assets/spokespeople/approvals.
+
+## Workflow
+
+1. Inventory confirmed announcements, data releases, milestones, expert availability, customer stories, and evergreen angles.
+2. Map external news cycles, seasonal moments, conferences, editorial deadlines, awareness days, and sensitive periods; evaluate genuine relevance.
+3. Match each moment to audience, angle, target beats/outlets, evidence, spokesperson, assets, and exclusivity/embargo strategy.
+4. Work backward for research, asset creation, legal/client approval, media-list verification, pitching, and follow-up.
+5. Mark readiness, dependencies, conflicts, backup angles, and kill criteria for weak or delayed stories; then schedule outcome review and relationship notes to improve future timing and targeting.
+
+## Deliverable
+
+- Pitch opportunity calendar
+- Lead-time/readiness plan; then target/asset/spokesperson dependencies.
+- Backup and review rules
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-118-editorial-pitch-calendar.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every pitch date is supported by a credible hook and ready proof.
+- [ ] Editorial lead times are respected.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

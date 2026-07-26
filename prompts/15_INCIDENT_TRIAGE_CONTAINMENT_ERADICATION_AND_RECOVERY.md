@@ -69,7 +69,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 543
+  maximum_body_words: 1013
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -117,6 +117,15 @@ conditional_template_routes:
 - docs/operator-runbook
 - docs/observability-guide
 - docs/support-playbook
+aliases:
+- Data incident response
+imported_profiles:
+- profile_id: CP-178
+  title: Data incident response
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 3b56a05e29974846b628e8ecf5a330cd6f232783e4f834c92b628f037155f4ac
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-178-data-incident-response.schema.json
 ---
 
 # Incident Triage, Containment, Eradication, and Recovery
@@ -193,4 +202,73 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-178" title="Data incident response" schema="schemas/imported/generic_prompt_library_v3_1/cp-178-data-incident-response.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Data incident response
+
+## Task contract
+
+Respond to a suspected data incident by validating the event, containing exposure, preserving evidence, scoping systems and data, escalating privacy/legal decisions, recovering safely, and learning.
+
+## Use this prompt when
+
+- Potential unauthorized access, disclosure, loss, corruption, exfiltration, or misdelivery of data occurs.
+
+## Do not use it for
+
+- Public notification decisions without qualified privacy/legal authority.
+
+## Required inputs
+
+1. Alert/report
+2. timestamps
+3. Systems/accounts/data classes
+4. Logs and access evidence
+5. Incident response/privacy policy
+6. Contacts and regulatory/customer context
+
+## Workflow
+
+1. Open incident record, verify report source, preserve logs/artifacts, protect chain of custody, and avoid altering evidence.
+2. Contain accounts, tokens, sharing, connectors, endpoints, jobs, or public links proportionately while preserving service and investigation.
+3. Scope affected systems, records, data classes, subjects/tenants, volume, region, access/action, actor, time window, downloads/sharing, and encryption.
+4. Determine root access path and whether data was viewed, changed, exported, retained, or only potentially exposed; distinguish confirmed from possible.
+5. Escalate to security, privacy, legal, leadership, insurers, vendors, and authorities under current policy.
+6. Support notification decision with facts and deadlines.
+7. Recover, rotate/revoke, correct data/access, validate controls, monitor, communicate, document decisions, and create corrective actions.
+
+## Decision and escalation rules
+
+- Notification, reporting, privilege, and evidence-retention decisions belong to authorized privacy, legal, security, and regulatory owners.
+- Distinguish confirmed access or exfiltration from potential exposure, and preserve the evidence supporting that classification.
+- Do not restore normal access until containment, credential rotation, data correction, and monitoring criteria are verified.
+
+## Deliverable
+
+- Incident timeline/scope
+- Containment/evidence record
+- Data-impact and notification decision support
+- Recovery/corrective actions
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-178-data-incident-response.schema.json` when structured output is requested.
+
+## Task-specific cautions
+
+- Qualified security, privacy, legal, and regulatory professionals control notification and legal determinations.
+
+## Completion gates
+
+- [ ] Confirmed and potential exposure are separated.
+- [ ] Evidence and decision timeline are preserved.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

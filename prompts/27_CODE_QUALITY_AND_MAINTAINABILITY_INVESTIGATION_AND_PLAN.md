@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 660
+  maximum_body_words: 1159
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -132,6 +132,15 @@ conditional_template_routes:
 - docs/maintainer-guide
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- PR / code review workflow
+imported_profiles:
+- profile_id: CP-001
+  title: PR / code review workflow
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 539cff97211ecbee1b715b1c050e9167c6d2869fde360c7ffb76078599206aa5
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-001-pr-code-review-workflow.schema.json
 ---
 
 # Code Quality and Maintainability — Investigation and Plan
@@ -219,4 +228,76 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-28`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-001" title="PR / code review workflow" schema="schemas/imported/generic_prompt_library_v3_1/cp-001-pr-code-review-workflow.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# PR / code review workflow
+
+## Task contract
+
+Review a proposed change against its stated intent and the repository contracts it can affect, then return only defects that are concrete, actionable, and worth blocking or fixing.
+
+## Use this prompt when
+
+- A pull request, patch, commit range, or working-tree diff is available.
+- The reviewer can inspect surrounding code, tests, and public contracts.
+
+## Do not use it for
+
+- A whole-repository architecture audit with no bounded change set.
+- Implementing the requested changes.
+
+## Required inputs
+
+1. Change intent and acceptance criteria
+2. Base and head revisions or diff
+3. Affected runtime paths and public contracts
+4. Repository test/build commands
+5. Compatibility and rollout constraints
+
+## Workflow
+
+1. Establish the review boundary: enumerate changed files, generated files, migrations, API/schema changes, and the intended behavior stated by the author.
+2. Trace each changed behavior through callers, callees, state transitions, error paths, authorization checks, and compatibility surfaces.
+3. Do not review isolated lines without context.
+4. Challenge normal, edge, failure, concurrency, and rollback paths; identify concrete counterexamples rather than stylistic preferences.
+5. Inspect tests for regression coverage, false confidence, missing assertions, brittle mocks, and whether they exercise the production registration path.
+6. Run the narrowest safe checks that can confirm or falsify each candidate finding; discard findings that cannot be supported.
+7. Return severity-ranked inline findings with exact locations, consequence, evidence, and the smallest credible fix, followed by merge readiness and residual uncertainty.
+
+## Evidence and tools
+
+- git diff --stat &lt;base&gt;...&lt;head&gt;
+- git diff --find-renames &lt;base&gt;...&lt;head&gt;
+- rg -n "&lt;changed symbol&gt;" &lt;scope&gt;
+- Run targeted tests/type checks/lint only after inspecting scripts.
+
+## Deliverable
+
+- Inline findings tied to file
+- line ranges
+- Merge-readiness decision with blocking reasons
+- Validation performed and untested risk
+
+## Optional artifacts
+
+- `review-findings.json`
+- `review-summary.md`
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-001-pr-code-review-workflow.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every blocking finding has a reproducible failure mode or contract violation.
+- [ ] Non-blocking style preferences are excluded unless they create measurable maintenance or correctness risk.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

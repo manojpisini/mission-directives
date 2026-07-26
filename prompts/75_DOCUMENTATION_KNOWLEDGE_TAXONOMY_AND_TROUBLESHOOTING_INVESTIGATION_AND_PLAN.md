@@ -110,12 +110,12 @@ do_not_use_when:
 - repository, build, binary, configuration, or interface evidence required for truthful documentation is unavailable
 - the requested documentation would disclose protected secrets or sensitive implementation details without authority
 complexity_budget:
-  maximum_body_words: 3200
+  maximum_body_words: 3244
   maximum_method_steps: 20
   maximum_quality_gates: 40
   maximum_examples: 6
   maximum_primary_artifacts: 1
-  maximum_body_lines: 650
+  maximum_body_lines: 411
 output_profiles:
   minimum:
   - documentation investigation report
@@ -212,6 +212,15 @@ conditional_template_routes:
 - decks/design-review
 - reports/audit-report
 - visual/diagram-specification
+aliases:
+- Documentation gap audit
+imported_profiles:
+- profile_id: CP-015
+  title: Documentation gap audit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 6c6b0295a3cc84a37afe003501acc4b49da062b07d396fb3ca1aa5ed89e433e6
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-015-documentation-gap-audit.schema.json
 ---
 
 # Complete Documentation System — Codebase Investigation, Information Architecture, and Production Plan
@@ -544,4 +553,62 @@ Completion requires all of the following:
 - The handoff contains a dependency-ordered action plan and frozen acceptance-criteria artifact, and its readiness is demonstrated by an `=VERIFY:{id}` record.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-76`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-015" title="Documentation gap audit" schema="schemas/imported/generic_prompt_library_v3_1/cp-015-documentation-gap-audit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Documentation gap audit
+
+## Task contract
+
+Find documentation that is missing, stale, contradictory, duplicated, or disconnected from executable behavior, then define a canonical information architecture and repair order.
+
+## Use this prompt when
+
+- Repository or product documentation has drifted or become hard to navigate.
+
+## Do not use it for
+
+- Copyediting prose without checking implementation.
+
+## Required inputs
+
+1. Documentation corpus and navigation
+2. Current commands, APIs, configuration, and workflows
+3. Decision records and ownership
+4. User/contributor support questions
+5. Release and deprecation history
+
+## Workflow
+
+1. Inventory document types, audiences, authority, owners, and lifecycle; distinguish canonical guidance, generated references, tutorials, decisions, and archives.
+2. Trace high-value user journeys through documentation and executable sources; flag missing prerequisites, dead links, undocumented commands, and stale examples.
+3. Compare duplicated claims across README, docs, CLI help, schemas, code comments, and generated references.
+4. Identify conflicts and select a canonical source.
+5. Search implementation for public surfaces absent from docs and docs for features absent from implementation.
+6. Design the smallest navigation and cross-link model; archive or merge redundant material instead of preserving parallel truth.
+7. Prioritize repairs by user impact and breakage risk, with owners and verification steps such as runnable examples or link checks.
+
+## Deliverable
+
+- Documentation inventory and authority map
+- Gap/contradiction register
+- Canonical information architecture
+- Prioritized repair plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-015-documentation-gap-audit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every material claim has a canonical owner.
+- [ ] Examples and commands are executable or explicitly marked illustrative.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

@@ -80,6 +80,31 @@ def test_installer_dry_run_and_full_install(tmp_path):
     result = installer.install(project)
     assert result["status"] == "installed"
     assert (project / "prompts" / "VERSION").read_text().strip() == "1.8.3"
+    assert result["payload_profile"] == "runtime"
+    for relative in [
+        "catalog.json",
+        "SCENARIO_CATALOG.json",
+        "config/router_keywords.json",
+        "policies/agent_guidance_policy.json",
+        "schemas/auto_orchestration_request.schema.json",
+        "tools/md.py",
+        "tools/keyword_context.py",
+        "tools/template_router.py",
+        "requirements-runtime.txt",
+    ]:
+        assert (project / "prompts" / relative).is_file(), relative
+    for relative in [
+        "tests",
+        "evaluations",
+        "prompt_imports",
+        "site",
+        ".github",
+        "tools/validate_suite.py",
+        "tools/run_tests.py",
+        "tools/add_prompt.py",
+        "requirements-dev.txt",
+    ]:
+        assert not (project / "prompts" / relative).exists(), relative
     ignore = (project / ".gitignore").read_text()
     assert (
         "/prompts/" in ignore

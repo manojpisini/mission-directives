@@ -1,0 +1,428 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://generic-prompts.invalid/v3.1/CP-099.schema.json",
+  "title": "Data cleaning plan result",
+  "description": "Strict machine-readable result for the prompt. It constrains the work product; it is not a certification of professional correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "const": "CP-099",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "FACT",
+        "SUPPORTED_INFERENCE",
+        "ASSUMPTION",
+        "RECOMMENDATION",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "dataset_profile": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "type": "string",
+              "minLength": 1
+            },
+            "grain": {
+              "type": "string",
+              "minLength": 1
+            },
+            "primary_keys": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "row_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "time_range": {
+              "type": "string",
+              "minLength": 1
+            },
+            "immutable_source_location": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "source",
+            "grain",
+            "primary_keys",
+            "row_count",
+            "time_range",
+            "immutable_source_location"
+          ],
+          "additionalProperties": false
+        },
+        "cleaning_rules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rule_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "field_or_scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "issue": {
+                "type": "string",
+                "minLength": 1
+              },
+              "action": {
+                "type": "string",
+                "enum": [
+                  "normalize",
+                  "correct",
+                  "flag",
+                  "quarantine",
+                  "impute",
+                  "exclude",
+                  "retain"
+                ],
+                "minLength": 1
+              },
+              "logic": {
+                "type": "string",
+                "minLength": 1
+              },
+              "assumption": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason_code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "validation": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "rule_id",
+              "field_or_scope",
+              "issue",
+              "action",
+              "logic",
+              "assumption",
+              "reason_code",
+              "validation"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "transformation_summary": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "rule_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rows_examined": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "rows_changed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "rows_quarantined": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "before_after_check": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "rule_id",
+              "rows_examined",
+              "rows_changed",
+              "rows_quarantined",
+              "before_after_check"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "record_locator": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason_code": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "open",
+                  "accepted",
+                  "corrected",
+                  "quarantined"
+                ],
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "record_locator",
+              "reason_code",
+              "status",
+              "owner",
+              "notes"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "validation": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "check": {
+                "type": "string",
+                "minLength": 1
+              },
+              "expected": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observed": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pass",
+                  "fail",
+                  "warning"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "check",
+              "expected",
+              "observed",
+              "status"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "dataset_profile",
+        "cleaning_rules",
+        "transformation_summary",
+        "exceptions",
+        "validation"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "Stable evidence identifier.",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "file",
+              "line_range",
+              "command_output",
+              "document",
+              "dataset",
+              "interview",
+              "observation",
+              "external_source",
+              "other"
+            ],
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "description": "Path, URL, record identifier, or source name.",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "description": "Line range, section, timestamp, query, or other locator.",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Limitations or context.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_type",
+          "source",
+          "location",
+          "supports",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "due_or_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "backlog"
+            ],
+            "minLength": 1
+          },
+          "validation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "in_progress",
+              "blocked",
+              "complete",
+              "rejected"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action_id",
+          "action",
+          "owner",
+          "due_or_trigger",
+          "priority",
+          "validation",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "run_id",
+    "generated_at",
+    "epistemic_status",
+    "summary",
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "actions"
+  ],
+  "additionalProperties": false
+}

@@ -76,7 +76,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 694
+  maximum_body_words: 1370
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -132,6 +132,22 @@ conditional_template_routes:
 - core/acceptance-criteria
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Supply-chain risk review
+- Third-party connector security review
+imported_profiles:
+- profile_id: CP-035
+  title: Supply-chain risk review
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: d496bc0f4d4e0436f3d7bf3b39341e931c4ee515936ba1139a5f5e78362750be
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-035-supply-chain-risk-review.schema.json
+- profile_id: CP-047
+  title: Third-party connector security review
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 29a74a710d6a7279b41beedf66fe2a829ad765ccf63a494e735f4c8aa9d3194e
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-047-third-party-connector-security-review.schema.json
 ---
 
 # Dependency and Software Supply Chain Security — Investigation and Plan
@@ -218,4 +234,117 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-40`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-035" title="Supply-chain risk review" schema="schemas/imported/generic_prompt_library_v3_1/cp-035-supply-chain-risk-review.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Supply-chain risk review
+
+## Task contract
+
+Assess software and workflow supply-chain risk across dependencies, build actions, install scripts, plugins, artifacts, provenance, and release trust.
+
+## Use this prompt when
+
+- Reviewing dependencies, CI actions, package sources, plugins, skills, or build/release pipelines.
+
+## Do not use it for
+
+- Treating a vulnerability feed as the complete supply-chain review.
+
+## Required inputs
+
+1. Dependency
+2. lock manifests
+3. Build/install/release scripts
+4. CI actions and permissions
+5. Package/plugin registries and source repositories
+6. Artifact signing, provenance, and update policy
+
+## Workflow
+
+1. Inventory first-party and third-party components, source, version/pin, integrity mechanism, maintainer, update path, install/build hooks, and runtime privilege.
+2. Identify trust transitions: registry, source checkout, CI action, container base, compiler, generated code, plugin/skill import, artifact storage, and release signing.
+3. Review known advisories, maintainer health, ownership transfer, typosquatting, license, abandoned packages, mutable tags, and unpinned or network-fetched code.
+4. Inspect install/build scripts and CI for arbitrary execution, secret access, artifact/cache poisoning, dependency confusion, and provenance gaps.
+5. Prioritize components by reachability, privilege, exploitability, update cost, and replaceability; distinguish dev-only from production exposure.
+6. Define pinning, verification, allowlists, provenance/SBOM, isolation, update testing, removal, and incident response.
+
+## Deliverable
+
+- Component and trust inventory
+- Supply-chain risk findings
+- Provenance/pinning gaps
+- Prioritized hardening and replacement plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-035-supply-chain-risk-review.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Each material dependency is assessed in context of reachability and privilege.
+- [ ] Mutable or unverifiable build inputs are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-047" title="Third-party connector security review" schema="schemas/imported/generic_prompt_library_v3_1/cp-047-third-party-connector-security-review.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Third-party connector security review
+
+## Task contract
+
+Review a third-party connector across OAuth authority, webhook trust, data handling, tenancy, lifecycle, revocation, and auditability.
+
+## Use this prompt when
+
+- Adopting or reviewing a SaaS connector, app installation, plugin, or integration provider.
+
+## Do not use it for
+
+- Assuming vendor certification replaces architecture-specific review.
+
+## Required inputs
+
+1. Connector use cases
+2. data flows
+3. OAuth scopes and installation model
+4. Webhook/API behavior
+5. Vendor retention/subprocessors/security terms
+6. Revocation, audit, and incident capabilities
+
+## Workflow
+
+1. Map user/admin installation, consent, tenant binding, token issuance, rotation, storage, impersonation, and uninstall.
+2. Validate each scope against a concrete use case.
+3. Identify broad read/write, offline, admin, or cross-tenant authority.
+4. Review webhook authenticity, replay, ordering, retries, event filtering, endpoint exposure, and failure recovery.
+5. Trace data fields, destinations, retention, training/secondary use, subprocessors, region, deletion/export, and support access.
+6. Assess permission drift, user/role changes, orphan tokens, revocation latency, audit logs, rate limits, and vendor outage/compromise.
+7. Define least scopes, data minimization, verification tests, monitoring, disconnect behavior, and vendor-risk acceptance.
+
+## Deliverable
+
+- Connector authority/data-flow map
+- Scope and webhook findings
+- Lifecycle/revocation assessment
+- Security requirements and tests
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-047-third-party-connector-security-review.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every scope and retained data field has a justified purpose.
+- [ ] Uninstall/revocation behavior is verified.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

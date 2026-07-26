@@ -41,7 +41,7 @@ preferred_skills:
 - stop-slop
 - brand-guidelines
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - email_spec
 - deck_spec
@@ -61,7 +61,11 @@ output_contract:
     format: jsonl
   - path: reports/sales_enablement_customer_communication_and_lifecycle_content/sales_enablement_customer_communication_and_lifecycle_content_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - email_spec
+  - deck_spec
+  - playbook
 suite_version: 1.8.3
 capability_id: md.sales_enablement.sales-enablement-customer-communication-and-lifecycle-content
 prompt_slug: sales-enablement-customer-communication-and-lifecycle-content
@@ -77,7 +81,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 676
+  maximum_body_words: 1043
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -132,6 +136,15 @@ conditional_template_routes:
 - reports/executive-report
 - reports/professional-report
 - reports/evaluation-report
+aliases:
+- Sales discovery interviewer
+imported_profiles:
+- profile_id: CP-081
+  title: Sales discovery interviewer
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: d9974f108e5c5a4c4680fe631e55650c87f08cf07311843cb1f0b63d968b95a8
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-081-sales-discovery-interviewer.schema.json
 ---
 
 # Sales Enablement, Customer Communication, and Lifecycle Content
@@ -226,5 +239,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-081" title="Sales discovery interviewer" schema="schemas/imported/generic_prompt_library_v3_1/cp-081-sales-discovery-interviewer.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Sales discovery interviewer
+
+## Task contract
+
+Conduct a sales discovery interview that validates problem, impact, current workflow, buying context, and fit before proposing a solution.
+
+## Use this prompt when
+
+- Qualifying or understanding a prospective customer.
+
+## Do not use it for
+
+- Interrogating for budget before establishing value or manipulating urgency.
+
+## Required inputs
+
+1. Account/context research
+2. Target persona; then hypothesized problem.
+3. Offering boundaries
+4. Sales stage and time
+
+## Workflow
+
+1. Establish role, goals, current priorities, and why the conversation is relevant now; then explore current workflow, tools, participants, frequency, friction, workarounds, and what triggers the problem.
+2. Quantify or qualify impact in time, cost, risk, revenue, quality, or strategic delay; distinguish stated pain from validated consequence.
+3. Understand desired future state, evaluation criteria, constraints, alternatives, and what would make change not worthwhile.
+4. Map buying process: stakeholders, authority, security/legal/procurement, budget source, timing, champion, and decision event without forcing a framework.
+5. Summarize fit, gaps, mutual next step, evidence required, and disqualifiers; avoid proposing unsupported capabilities.
+
+## Deliverable
+
+- Discovery summary
+- Current/future workflow; then impact and qualification.
+- Mutual next-step plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-081-sales-discovery-interviewer.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Recommendation reflects verified need and buying process.
+- [ ] Unknowns and disqualifiers are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

@@ -41,7 +41,7 @@ preferred_skills:
 - review
 - test-driven-development
 - verification-before-completion
-output_media: &id001
+output_media:
 - markdown
 - json
 - architecture_spec
@@ -64,7 +64,11 @@ output_contract:
     format: jsonl
   - path: reports/knowledge_retrieval_search_and_rag_quality_evaluation/knowledge_retrieval_search_and_rag_quality_evaluation_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - architecture_spec
+  - evaluation_plan
 suite_version: 1.8.3
 capability_id: md.llm_engineering.knowledge-retrieval-search-and-rag-quality-evaluation
 prompt_slug: knowledge-retrieval-search-and-rag-quality-evaluation
@@ -80,7 +84,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 787
+  maximum_body_words: 1192
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -139,6 +143,15 @@ conditional_template_routes:
 - reports/evaluation-report
 - visual/diagram-specification
 - visual/data-visualization-specification
+aliases:
+- Knowledge graph gap analysis
+imported_profiles:
+- profile_id: CP-028
+  title: Knowledge graph gap analysis
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 77023bf7012a67077e09ce12646ed980aab8058f698299a0ff229641b40f9b97
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-028-knowledge-graph-gap-analysis.schema.json
 ---
 
 # Knowledge Retrieval, Search, and RAG Quality Evaluation
@@ -241,5 +254,67 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-028" title="Knowledge graph gap analysis" schema="schemas/imported/generic_prompt_library_v3_1/cp-028-knowledge-graph-gap-analysis.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Knowledge graph gap analysis
+
+## Task contract
+
+Find missing, orphaned, contradictory, or weakly supported relationships in a knowledge graph that links scenarios, prompts, skills, templates, documents, evaluations, and runtime capabilities.
+
+## Use this prompt when
+
+- A knowledge graph or linked catalog is incomplete or structurally unreliable.
+
+## Do not use it for
+
+- Inferring factual relationships solely from label similarity.
+
+## Required inputs
+
+1. Graph schema and node/edge inventories
+2. Source documents and canonical identifiers
+3. Routing and usage data
+4. Required relationship rules
+5. Confidence/provenance model
+
+## Workflow
+
+1. Validate graph schema, identifier stability, edge direction, cardinality, provenance, versioning, and allowed node/edge types.
+2. Compute structural diagnostics: orphan nodes, disconnected components, dangling references, missing reverse or required edges, cycles, hubs, and duplicated identities.
+3. Compare graph claims to source evidence and runtime routing; distinguish absent relationship from absent evidence.
+4. Test semantic coverage by tracing representative journeys from scenario to prompt, skill, template, documentation, evaluation, and execution capability.
+5. Rank gaps by broken user journey, safety impact, discoverability, and graph-maintenance cost.
+6. Reject edges supported only by lexical similarity.
+7. Define additions, merges, deletions, provenance requirements, and automated integrity constraints.
+
+## Deliverable
+
+- Structural graph diagnostics
+- Evidence-backed gap register
+- Journey coverage analysis
+- Graph repair and integrity rules
+
+## Optional artifacts
+
+- `graph-integrity.json`
+- `gap-map.dot`
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-028-knowledge-graph-gap-analysis.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every proposed edge has provenance and relation semantics.
+- [ ] Orphans are classified as missing link, intentional root/leaf, or obsolete node.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

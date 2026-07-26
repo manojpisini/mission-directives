@@ -70,7 +70,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 519
+  maximum_body_words: 905
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -122,6 +122,15 @@ conditional_template_routes:
 - docs/user-manual
 - docs/configuration-reference
 - docs/troubleshooting-guide
+aliases:
+- Release notes / changelog
+imported_profiles:
+- profile_id: CP-009
+  title: Release notes / changelog
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 54887a195543ed0364f4382d337936a0c7ce3248db616cf8123bac3ec96e5bfd
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-009-release-notes-changelog.schema.json
 ---
 
 # Stakeholder, Status, Roadmap, and Release Communication
@@ -194,4 +203,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-009" title="Release notes / changelog" schema="schemas/imported/generic_prompt_library_v3_1/cp-009-release-notes-changelog.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Release notes / changelog
+
+## Task contract
+
+Turn verified repository and issue history into concise release communication that separates user impact, breaking changes, fixes, migrations, and known limitations.
+
+## Use this prompt when
+
+- Preparing release notes or a changelog for a bounded release.
+
+## Do not use it for
+
+- Copying commit messages verbatim or advertising unverified features.
+
+## Required inputs
+
+1. Release range/tags
+2. Merged changes and linked issues
+3. Audience and distribution channel; then breaking-change and migration evidence.
+4. Known issues and rollout status
+
+## Workflow
+
+1. Establish the exact release boundary and exclude internal, reverted, duplicate, and unreleased changes.
+2. Group changes by user outcome—added, changed, fixed, deprecated, removed, security, performance, operations—rather than repository folder.
+3. Verify each claim against code, tests, issue state, and rollout status; identify affected users, prerequisites, and behavior changes.
+4. Call out breaking changes, migrations, data/schema changes, feature flags, compatibility, and rollback or support paths.
+5. Write audience-appropriate notes with links and examples; keep security details proportionate to disclosure policy; then check version/date consistency and produce a machine-readable entry if the release process consumes one.
+
+## Deliverable
+
+- User-facing release notes
+- Maintainer changelog entry
+- Breaking-change and migration section; then known issues.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-009-release-notes-changelog.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every published claim is in the release boundary and verified.
+- [ ] Breaking and deprecated behavior is explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

@@ -1,0 +1,465 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://generic-prompts.invalid/v3.1/CP-149.schema.json",
+  "title": "Manufacturing root-cause quality issue result",
+  "description": "Strict machine-readable result for the prompt. It constrains the work product; it is not a certification of professional correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "const": "CP-149",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "FACT",
+        "SUPPORTED_INFERENCE",
+        "ASSUMPTION",
+        "RECOMMENDATION",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "problem": {
+          "type": "object",
+          "properties": {
+            "part_or_process": {
+              "type": "string",
+              "minLength": 1
+            },
+            "specification": {
+              "type": "string",
+              "minLength": 1
+            },
+            "defect": {
+              "type": "string",
+              "minLength": 1
+            },
+            "affected_population": {
+              "type": "string",
+              "minLength": 1
+            },
+            "detection_point": {
+              "type": "string",
+              "minLength": 1
+            },
+            "customer_or_safety_impact": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "part_or_process",
+            "specification",
+            "defect",
+            "affected_population",
+            "detection_point",
+            "customer_or_safety_impact"
+          ],
+          "additionalProperties": false
+        },
+        "containment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "location": {
+                "type": "string",
+                "minLength": 1
+              },
+              "population": {
+                "type": "string",
+                "minLength": 1
+              },
+              "action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "planned",
+                  "active",
+                  "verified",
+                  "released"
+                ],
+                "minLength": 1
+              },
+              "release_criteria": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "location",
+              "population",
+              "action",
+              "owner",
+              "status",
+              "release_criteria"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "measurement_validation": {
+          "type": "object",
+          "properties": {
+            "method": {
+              "type": "string",
+              "minLength": 1
+            },
+            "instrument": {
+              "type": "string",
+              "minLength": 1
+            },
+            "calibration_status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "repeatability_reproducibility": {
+              "type": "string",
+              "minLength": 1
+            },
+            "conclusion": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "method",
+            "instrument",
+            "calibration_status",
+            "repeatability_reproducibility",
+            "conclusion"
+          ],
+          "additionalProperties": false
+        },
+        "causes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "cause_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "root_cause",
+                  "escape_cause",
+                  "contributing_condition",
+                  "rejected_hypothesis"
+                ],
+                "minLength": 1
+              },
+              "hypothesis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "verification_test": {
+                "type": "string",
+                "minLength": 1
+              },
+              "result": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "cause_id",
+              "type",
+              "hypothesis",
+              "evidence",
+              "verification_test",
+              "result"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "corrective_actions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cause_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "due": {
+                "type": "string",
+                "minLength": 1
+              },
+              "validation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "planned",
+                  "implemented",
+                  "effective",
+                  "ineffective"
+                ],
+                "minLength": 1
+              }
+            },
+            "required": [
+              "action",
+              "cause_ids",
+              "owner",
+              "due",
+              "validation",
+              "status"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "system_updates": {
+          "type": "object",
+          "properties": {
+            "fmea": {
+              "type": "string",
+              "minLength": 1
+            },
+            "control_plan": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sop": {
+              "type": "string",
+              "minLength": 1
+            },
+            "training": {
+              "type": "string",
+              "minLength": 1
+            },
+            "monitoring_window": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "fmea",
+            "control_plan",
+            "sop",
+            "training",
+            "monitoring_window"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "problem",
+        "containment",
+        "measurement_validation",
+        "causes",
+        "corrective_actions",
+        "system_updates"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "Stable evidence identifier.",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "file",
+              "line_range",
+              "command_output",
+              "document",
+              "dataset",
+              "interview",
+              "observation",
+              "external_source",
+              "other"
+            ],
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "description": "Path, URL, record identifier, or source name.",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "description": "Line range, section, timestamp, query, or other locator.",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Limitations or context.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_type",
+          "source",
+          "location",
+          "supports",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "due_or_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "backlog"
+            ],
+            "minLength": 1
+          },
+          "validation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "in_progress",
+              "blocked",
+              "complete",
+              "rejected"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action_id",
+          "action",
+          "owner",
+          "due_or_trigger",
+          "priority",
+          "validation",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "run_id",
+    "generated_at",
+    "epistemic_status",
+    "summary",
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "actions"
+  ],
+  "additionalProperties": false
+}

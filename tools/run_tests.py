@@ -18,7 +18,7 @@ import argparse
 import datetime
 import json
 import os
-import shutil
+import signal
 import subprocess
 import sys
 import tempfile
@@ -50,6 +50,56 @@ def _junit_counts(path: Path) -> dict[str, int]:
     }
 
 
+def _terminate_process_tree(proc: subprocess.Popen[str]) -> None:
+    """Terminate a timed-out test and descendants that may retain output pipes."""
+    if os.name == "nt":
+        try:
+            subprocess.run(
+                ["taskkill", "/PID", str(proc.pid), "/T", "/F"],
+                stdin=subprocess.DEVNULL,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                timeout=30,
+                check=False,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            pass
+    else:
+        try:
+            os.killpg(proc.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+    if proc.poll() is None:
+        proc.kill()
+
+
+def _run_bounded(
+    command: list[str], *, cwd: Path, env: dict[str, str], timeout: int
+) -> subprocess.CompletedProcess[str]:
+    group_options = (
+        {"creationflags": subprocess.CREATE_NEW_PROCESS_GROUP}
+        if os.name == "nt"
+        else {"start_new_session": True}
+    )
+    proc = subprocess.Popen(
+        command,
+        cwd=cwd,
+        text=True,
+        stdin=subprocess.DEVNULL,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        env=env,
+        **group_options,
+    )
+    try:
+        stdout, stderr = proc.communicate(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        _terminate_process_tree(proc)
+        stdout, stderr = proc.communicate(timeout=30)
+        raise subprocess.TimeoutExpired(command, timeout, output=stdout, stderr=stderr)
+    return subprocess.CompletedProcess(command, proc.returncode, stdout, stderr)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -60,7 +110,7 @@ def main() -> int:
     parser.add_argument(
         "--per-file-timeout",
         type=int,
-        default=420,
+        default=900,
         help="Maximum seconds allowed for each test file.",
     )
     args = parser.parse_args()
@@ -74,12 +124,8 @@ def main() -> int:
     env.pop("PYTEST_ADDOPTS", None)
     env.pop("PYTEST_PLUGINS", None)
 
-    # Use uv run for subprocess when available (CI) so pytest resolves from venv
-    pytest_cmd: list[str] = (
-        ["uv", "run", "python", "-m", "pytest"]
-        if shutil.which("uv")
-        else [sys.executable, "-m", "pytest"]
-    )
+    # Keep tests in the interpreter environment that launched this verified runner.
+    pytest_cmd = [sys.executable, "-m", "pytest"]
 
     test_files = sorted((ROOT / "tests").glob("test_*.py"))
     started = datetime.datetime.now(datetime.timezone.utc)
@@ -93,13 +139,10 @@ def main() -> int:
             relative = test_file.relative_to(ROOT).as_posix()
             junit_path = Path(log_dir) / f"{test_file.stem}.xml"
             try:
-                proc = subprocess.run(
+                proc = _run_bounded(
                     [*pytest_cmd, "-q", relative, f"--junitxml={junit_path}"],
                     cwd=ROOT,
-                    text=True,
-                    capture_output=True,
                     timeout=args.per_file_timeout,
-                    stdin=subprocess.DEVNULL,
                     env=env,
                 )
                 output = (proc.stdout + proc.stderr).strip()

@@ -36,7 +36,7 @@ produces:
 - typed_runtime_artifacts
 evidence_lane: factual
 preferred_skills: []
-output_media: &id001
+output_media:
 - markdown
 - json
 - csv
@@ -58,7 +58,11 @@ output_contract:
     format: json
   - path: artifacts/data_analysis_statistical_reasoning_and_decision_support/acceptance_criteria.json
     format: json
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - csv
+  - chart_spec
 suite_version: 1.8.3
 capability_id: md.analytics.data-analysis-statistical-reasoning-and-decision-support
 prompt_slug: data-analysis-statistical-reasoning-and-decision-support
@@ -74,7 +78,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 608
+  maximum_body_words: 1245
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -125,6 +129,22 @@ conditional_template_routes:
 - core/artifact-specification
 - core/acceptance-criteria
 - docs/knowledge-base-article
+aliases:
+- Analyst question framing
+- Exploratory data analysis
+imported_profiles:
+- profile_id: CP-101
+  title: Analyst question framing
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 9a5e5a23635d3c6b4add73adb733cb454c4e29a6a511ba9c325414e013f89db8
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-101-analyst-question-framing.schema.json
+- profile_id: CP-102
+  title: Exploratory data analysis
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 6b62a6e90c1077430fc7d12598f6d543b9e793835769c4e5db285c1e37128616
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-102-exploratory-data-analysis.schema.json
 ---
 
 # Data Analysis, Statistical Reasoning, and Decision Support
@@ -212,5 +232,112 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-101" title="Analyst question framing" schema="schemas/imported/generic_prompt_library_v3_1/cp-101-analyst-question-framing.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Analyst question framing
+
+## Task contract
+
+Frame an analytical question so the business decision, metric, population, grain, time window, comparison, exclusions, and evidence limits are explicit before querying data.
+
+## Use this prompt when
+
+- A stakeholder asks a vague data question.
+
+## Do not use it for
+
+- Running analysis before defining what decision it should inform.
+
+## Required inputs
+
+1. Stakeholder question
+2. Decision and owner
+3. Business process; then available data/metrics.
+4. Timing and constraints
+
+## Workflow
+
+1. Restate the decision and action that could change based on the answer; identify the decision owner and deadline.
+2. Define population, unit of analysis, grain, event/entity, observation window, attribution window, and comparison/baseline.
+3. Define primary metric with formula, numerator, denominator, filters, exclusions, timezone, currency/unit, and treatment of missing/cancelled/duplicate events.
+4. Identify segments, confounders, cohort effects, seasonality, selection bias, and whether descriptive, diagnostic, predictive, or causal evidence is required.
+5. Map required sources, joins, coverage, freshness, lineage, and known limitations; state unavailable evidence; then produce an analysis brief with acceptance criteria, planned outputs, and questions needing stakeholder resolution.
+
+## Deliverable
+
+- Decision-linked analytical question
+- Metric/grain/filter specification; then data and bias requirements.
+- Analysis acceptance criteria
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-101-analyst-question-framing.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The question has one decision owner and defined unit of analysis.
+- [ ] Metric definitions are executable.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-102" title="Exploratory data analysis" schema="schemas/imported/generic_prompt_library_v3_1/cp-102-exploratory-data-analysis.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Exploratory data analysis
+
+## Task contract
+
+Perform exploratory data analysis that reveals structure, anomalies, segments, relationships, and limitations without presenting exploratory patterns as confirmed causal conclusions.
+
+## Use this prompt when
+
+- Understanding a new or poorly characterized dataset.
+
+## Do not use it for
+
+- A final causal or production decision without validation.
+
+## Required inputs
+
+1. Dataset and provenance
+2. Analytical question
+3. Schema/metric definitions
+4. Relevant population/context
+5. Privacy constraints
+
+## Workflow
+
+1. Validate ingestion, schema, grain, keys, time range, coverage, duplicates, and missingness before interpretation.
+2. Compute robust summaries and distributions by meaningful segment and time.
+3. Inspect tails, zeros, structural missingness, and data-generation artifacts.
+4. Visualize trends, cohorts, funnels, transitions, geography, or distributions appropriate to the question; annotate denominator and uncertainty.
+5. Explore relationships with stratification and controls for obvious confounding; distinguish association, selection, and measurement artifacts.
+6. Investigate anomalies through source records and pipeline logic rather than removing them reflexively.
+7. Return findings, counterevidence, confidence, caveats, candidate explanations, and next confirmatory analyses.
+
+## Deliverable
+
+- Data/profile summary
+- Segment/trend/anomaly findings
+- Relationship exploration
+- Caveats and next tests
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-102-exploratory-data-analysis.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every chart states grain, denominator, and time window.
+- [ ] Causal language is avoided unless design supports it.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

@@ -40,7 +40,7 @@ evidence_lane: hybrid
 preferred_skills:
 - document-generate
 - stop-slop
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -63,7 +63,11 @@ output_contract:
     format: jsonl
   - path: reports/hiring_interview_selection_and_onboarding_design/hiring_interview_selection_and_onboarding_design_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.people.hiring-interview-selection-and-onboarding-design
 prompt_slug: hiring-interview-selection-and-onboarding-design
@@ -79,7 +83,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 797
+  maximum_body_words: 1169
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -130,6 +134,15 @@ conditional_template_routes:
 - reports/executive-report
 - reports/professional-report
 - reports/evaluation-report
+aliases:
+- Hiring scorecard builder
+imported_profiles:
+- profile_id: CP-077
+  title: Hiring scorecard builder
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 59b03333356561cc766228223a5540b2bf44de820e774556a1e759f76cbc9ce6
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-077-hiring-scorecard-builder.schema.json
 ---
 
 # Hiring, Interview, Selection, and Onboarding Design
@@ -232,5 +245,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-077" title="Hiring scorecard builder" schema="schemas/imported/generic_prompt_library_v3_1/cp-077-hiring-scorecard-builder.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Hiring scorecard builder
+
+## Task contract
+
+Build a hiring scorecard that converts role success into observable outcomes, competencies, structured evidence, interview ownership, and anchored ratings.
+
+## Use this prompt when
+
+- Defining or repairing a hiring process.
+
+## Do not use it for
+
+- Using vague traits or culture fit as selection criteria.
+
+## Required inputs
+
+1. Role mission and business context
+2. First-year outcomes
+3. Required/learnable skills
+4. Team interfaces and constraints
+5. Interview capacity and legal/HR rules
+
+## Workflow
+
+1. Define the role mission and 3–6 measurable outcomes for 30/90/180/365 days.
+2. Derive competencies and knowledge from those outcomes.
+3. Separate must-have at entry from learnable after hire.
+4. Create anchored evidence levels for each competency with behavioral examples and disqualifying red flags.
+5. Design an interview loop where each stage owns distinct evidence, uses structured questions/work samples, and avoids duplicate assessment.
+6. Define scoring, note-taking, independent submission, debrief, reference checks, accessibility, and bias controls.
+7. Produce the candidate scorecard and calibration examples; remove criteria unrelated to job performance.
+
+## Deliverable
+
+- Role outcomes
+- Competency/rating rubric
+- Interview loop and question ownership
+- Debrief/calibration process
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-077-hiring-scorecard-builder.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every criterion predicts a named role outcome.
+- [ ] Rating anchors distinguish evidence levels.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

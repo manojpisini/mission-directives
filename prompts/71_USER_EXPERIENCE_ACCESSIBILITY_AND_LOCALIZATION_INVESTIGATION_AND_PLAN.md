@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 686
+  maximum_body_words: 1447
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -129,6 +129,22 @@ conditional_template_routes:
 - core/acceptance-criteria
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- CLI UX review
+- Accessibility audit
+imported_profiles:
+- profile_id: CP-021
+  title: CLI UX review
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 759ab2caef81c4609745eb0c48180a4466c0447d0672f874b5f2fe75aca191c4
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-021-cli-ux-review.schema.json
+- profile_id: CP-086
+  title: Accessibility audit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 062e76a471c39cbfcb8e1105be86ab9f8f67c248e468b99086539d24b7faede3
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-086-accessibility-audit.schema.json
 ---
 
 # User Experience, Accessibility, and Localization — Investigation and Plan
@@ -215,4 +231,133 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-72`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-021" title="CLI UX review" schema="schemas/imported/generic_prompt_library_v3_1/cp-021-cli-ux-review.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# CLI UX review
+
+## Task contract
+
+Evaluate a command-line interface as a user and automation contract, covering discovery, parsing, output streams, exit semantics, dry-run safety, and wrapper parity.
+
+## Use this prompt when
+
+- Reviewing an existing CLI or designing compatibility-preserving improvements.
+
+## Do not use it for
+
+- A source-only review that never exercises command behavior.
+
+## Required inputs
+
+1. Command registry/parser definitions
+2. CLI help and documentation
+3. Representative user journeys
+4. Shell/platform wrappers
+5. Machine-consumer requirements
+
+## Workflow
+
+1. Enumerate the public command tree, aliases, defaults, hidden/deprecated commands, and equivalent wrapper entry points.
+2. Walk discovery and correction journeys: root help, subcommand help, missing arguments, invalid values, unknown commands, examples, and completion where supported.
+3. Check output contracts: human versus machine mode, stdout/stderr separation, stable exit codes, quiet/verbose behavior, formatting, and redaction.
+4. Exercise destructive and state-changing commands against fixtures.
+5. Verify confirmation, `--dry-run`, idempotency, cancellation, and that preview matches actual planned actions.
+6. Compare Bash, PowerShell, Python, package scripts, and documentation for quoting, path, environment, and failure-message parity.
+7. Return severity-ranked usability defects and a canonical command/exit/output contract with regression tests.
+
+## Evidence and tools
+
+- &lt;cli&gt; --help
+- &lt;cli&gt; &lt;command&gt; --help
+- Exercise invalid/missing args and capture exit code/stdout/stderr in a fixture environment.
+
+## Deliverable
+
+- Command-surface inventory
+- Journey findings
+- Exit/output contract
+- Dry-run and wrapper-parity test plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-021-cli-ux-review.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every documented command and option maps to runtime behavior.
+- [ ] Machine-readable modes are stable and free of human decoration.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-086" title="Accessibility audit" schema="schemas/imported/generic_prompt_library_v3_1/cp-086-accessibility-audit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Accessibility audit
+
+## Task contract
+
+Audit a digital experience for accessibility across keyboard, focus, semantics, screen readers, contrast, zoom/reflow, motion, forms, media, errors, and assistive-technology workflows.
+
+## Use this prompt when
+
+- Assessing web, mobile, document, or product accessibility.
+
+## Do not use it for
+
+- Claiming formal conformance from automated scans alone.
+
+## Required inputs
+
+1. Product/pages/components
+2. user journeys
+3. Target platforms/browsers/assistive tech
+4. Applicable WCAG level or policy
+5. Design/code/accessibility tree
+6. Known users and constraints
+
+## Workflow
+
+1. Define scope, applicable WCAG version/level or organizational standard, environments, and critical user journeys.
+2. Run automated checks as discovery, then manually test keyboard order, visible focus, traps, skip mechanisms, dialogs, menus, and dynamic updates.
+3. Inspect semantic structure, names/roles/states, headings, landmarks, labels, instructions, status/error announcements, and screen-reader reading order.
+4. Check contrast, non-color cues, text spacing, zoom/reflow, responsive layout, orientation, target size, motion, flashing, and reduced-motion behavior.
+5. Test forms, authentication, timeouts, drag/gesture alternatives, tables, media captions/transcripts/audio description, and documents as applicable.
+6. Report each issue with user impact, criterion, steps, evidence, affected components, remediation, and retest.
+7. Separate conformance evidence from advisory improvements.
+
+## Decision and escalation rules
+
+- Rank findings by user impact, frequency, task blockage, and availability of a workaround—not by rule count alone.
+- Require manual assistive-technology and keyboard checks for critical journeys even when automated scans pass.
+- Escalate inaccessible authentication, consent, payment, safety, or public-service paths as release blockers.
+
+## Frameworks and professional methods
+
+- WCAG and platform accessibility guidance appropriate to scope
+
+## Deliverable
+
+- Accessibility scope/method
+- Issue register with WCAG mapping
+- Critical-journey results
+- Remediation/retest plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-086-accessibility-audit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Manual critical-journey testing supplements automation.
+- [ ] Conformance claims are limited to tested scope and evidence.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

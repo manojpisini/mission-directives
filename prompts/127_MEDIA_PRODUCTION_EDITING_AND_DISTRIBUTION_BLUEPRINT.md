@@ -41,7 +41,7 @@ preferred_skills:
 - stop-slop
 - visual-assets
 - strudel
-output_media: &id001
+output_media:
 - markdown
 - json
 - edit_decision_list
@@ -65,7 +65,12 @@ output_contract:
     format: jsonl
   - path: reports/media_production_editing_and_distribution_blueprint/media_production_editing_and_distribution_blueprint_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - edit_decision_list
+  - caption_spec
+  - distribution_package
 suite_version: 1.8.3
 capability_id: md.media_production.media-production-editing-and-distribution-blueprint
 prompt_slug: media-production-editing-and-distribution-blueprint
@@ -81,7 +86,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 818
+  maximum_body_words: 1197
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -128,6 +133,15 @@ conditional_template_routes:
 - core/artifact-specification
 - core/acceptance-criteria
 - visual/animated-illustration-specification
+aliases:
+- Previz planner
+imported_profiles:
+- profile_id: CP-055
+  title: Previz planner
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: b5cba3da945bb3aa55ea2a9a15227702452ffda81f4ca0c226cf415d872c88ca
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-055-previz-planner.schema.json
 ---
 
 # Media Production, Editing, and Distribution Blueprint
@@ -232,5 +246,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-055" title="Previz planner" schema="schemas/imported/generic_prompt_library_v3_1/cp-055-previz-planner.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Previz planner
+
+## Task contract
+
+Translate a concept or script into previsualization decisions that clarify visual storytelling and production feasibility before expensive execution.
+
+## Use this prompt when
+
+- Planning video, animation, photography, spatial, or motion work.
+
+## Do not use it for
+
+- Replacing the director or cinematographer’s final on-set judgment.
+
+## Required inputs
+
+1. Script/concept and audience
+2. Duration/aspect/platform; then visual references.
+3. Locations/talent/resources
+4. Production and post constraints
+
+## Workflow
+
+1. Break the narrative into beats with purpose, audience information, emotional turn, duration, and transition.
+2. For each beat, define shot or frame intent, subject/action, composition, camera/lens or virtual-camera behavior, movement, light, graphics, and sound cues.
+3. Check continuity of screen direction, geography, eye lines, scale, color, pacing, and visual hierarchy.
+4. Assess feasibility: location, talent, safety, equipment, VFX, rights, time, weather, and post complexity; identify shots needing tests or alternatives.
+5. Prioritize hero moments and coverage; mark flexible versus non-negotiable shots and build contingency options; then return storyboard/animatic instructions, shot dependencies, unresolved decisions, and production notes.
+
+## Deliverable
+
+- Beat and shot plan
+- Continuity/pacing notes; then feasibility and test requirements.
+- Fallback coverage
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-055-previz-planner.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every shot exists for a narrative or information purpose.
+- [ ] High-cost or high-risk shots have a test or fallback.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

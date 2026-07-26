@@ -43,7 +43,7 @@ preferred_skills:
 - pptx
 - xlsx
 - stop-slop
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -66,7 +66,11 @@ output_contract:
     format: jsonl
   - path: reports/meeting_intelligence_decision_capture_and_follow_through/meeting_intelligence_decision_capture_and_follow_through_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.reporting.meeting-intelligence-decision-capture-and-follow-through
 prompt_slug: meeting-intelligence-decision-capture-and-follow-through
@@ -82,7 +86,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 799
+  maximum_body_words: 1407
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -129,6 +133,22 @@ conditional_template_routes:
 - core/decision-record
 - core/artifact-specification
 - core/acceptance-criteria
+aliases:
+- Meeting agenda and decision tracker
+- Creative decision log
+imported_profiles:
+- profile_id: CP-061
+  title: Meeting agenda and decision tracker
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 1e0c737f4490048bf3d6fae44474603bc0dea0cd3f0737f46d9beb06daf5a7c2
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-061-meeting-agenda-and-decision-tracker.schema.json
+- profile_id: CP-074
+  title: Creative decision log
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 8eca83ed89a629af6e63e3d0e6376f0c6e12fbdde4d714c0bc6ed96c24d54a89
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-074-creative-decision-log.schema.json
 ---
 
 # Meeting Intelligence, Decision Capture, and Follow-Through
@@ -231,5 +251,106 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-061" title="Meeting agenda and decision tracker" schema="schemas/imported/generic_prompt_library_v3_1/cp-061-meeting-agenda-and-decision-tracker.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Meeting agenda and decision tracker
+
+## Task contract
+
+Design a meeting around specific decisions and capture the resulting record so discussion produces owned actions rather than another meeting.
+
+## Use this prompt when
+
+- A meeting requires preparation, decisions, and follow-through.
+
+## Do not use it for
+
+- Meetings with no objective beyond general information sharing.
+
+## Required inputs
+
+1. Meeting objective
+2. Participants and decision rights
+3. Pre-reads/evidence; then decisions/questions.
+4. Timebox and follow-up system
+
+## Workflow
+
+1. Define the meeting outcome and decide whether synchronous discussion is necessary.
+2. Build an agenda with context, decision questions, owner, timebox, required pre-read, and desired artifact for each item.
+3. Sequence high-value decisions before updates; identify topics to handle asynchronously or in smaller groups.
+4. During/after the meeting, capture facts, arguments, decisions, dissent, assumptions, and unresolved questions without rewriting the transcript.
+5. Assign actions with owner/date/dependency and state what will happen if a decision remains open; then distribute a decision record and schedule only the next checkpoint required by dependencies.
+
+## Deliverable
+
+- Decision-oriented agenda
+- Decision and rationale log
+- Action register; then follow-up checkpoint.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-061-meeting-agenda-and-decision-tracker.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every agenda item has an outcome, not only a topic.
+- [ ] Actions and decisions are distinguishable.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-074" title="Creative decision log" schema="schemas/imported/generic_prompt_library_v3_1/cp-074-creative-decision-log.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Creative decision log
+
+## Task contract
+
+Maintain a lightweight creative decision log that preserves rationale, rejected options, dependencies, ownership, and conditions for reopening decisions.
+
+## Use this prompt when
+
+- Creative work experiences repeated feedback, reversals, or multi-stakeholder decisions.
+
+## Do not use it for
+
+- Logging every minor execution choice.
+
+## Required inputs
+
+1. Decision and context
+2. Options considered; then evidence/criteria.
+3. Decision owner and date
+4. Dependencies and revisit triggers
+
+## Workflow
+
+1. Capture only consequential decisions affecting strategy, direction, scope, rights, budget, schedule, or downstream work.
+2. State the decision question, chosen option, owner, date, and effective scope/version; then record rationale, evidence, criteria, assumptions, rejected alternatives, and material dissent.
+3. Link affected assets, briefs, approvals, dependencies, and actions so downstream teams can apply it.
+4. Define conditions that reopen the decision—new evidence, failed test, changed constraint, expiry, or authority change; then review the log at milestones and supersede decisions explicitly rather than editing history.
+
+## Deliverable
+
+- Decision records
+- Rejected-option rationale; then dependency links; then reopen/supersession conditions.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-074-creative-decision-log.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Entries are consequential and actionable.
+- [ ] Superseded decisions remain historically traceable.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

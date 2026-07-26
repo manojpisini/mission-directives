@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-223",
+  "capability_id": "md.construction.construction-punch-list",
+  "evidence_lane": "hybrid",
+  "risk_level": "high",
+  "expected_output": "results/construction-punch-list/construction-punch-list_result.md",
+  "fixture_id": "MD-223-healthy",
+  "tier": "healthy",
+  "execution_status": "definition_only_not_model_executed",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ]
+}

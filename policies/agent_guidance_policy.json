@@ -16,29 +16,80 @@
   },
   "context_modifiers": {
     "depth": [
-      {"phrase": "in depth", "value": "advanced"},
-      {"phrase": "advanced", "value": "advanced"},
-      {"phrase": "comprehensive", "value": "advanced"},
-      {"phrase": "deep", "value": "advanced"},
-      {"phrase": "quick", "value": "compact"}
+      {
+        "phrase": "in depth",
+        "value": "advanced"
+      },
+      {
+        "phrase": "advanced",
+        "value": "advanced"
+      },
+      {
+        "phrase": "comprehensive",
+        "value": "advanced"
+      },
+      {
+        "phrase": "deep",
+        "value": "advanced"
+      },
+      {
+        "phrase": "quick",
+        "value": "compact"
+      }
     ],
     "assurance": [
-      {"phrase": "high assurance", "value": "HIGH_ASSURANCE"},
-      {"phrase": "rigorous", "value": "HIGH_ASSURANCE"},
-      {"phrase": "fast", "value": "FAST"}
+      {
+        "phrase": "high assurance",
+        "value": "HIGH_ASSURANCE"
+      },
+      {
+        "phrase": "rigorous",
+        "value": "HIGH_ASSURANCE"
+      },
+      {
+        "phrase": "fast",
+        "value": "FAST"
+      }
     ],
     "composition": [
-      {"phrase": "end to end", "value": "workflow"},
-      {"phrase": "workflow", "value": "workflow"},
-      {"phrase": "scenario", "value": "scenario"},
-      {"phrase": "combine", "value": "workflow"}
+      {
+        "phrase": "end to end",
+        "value": "workflow"
+      },
+      {
+        "phrase": "workflow",
+        "value": "workflow"
+      },
+      {
+        "phrase": "scenario",
+        "value": "scenario"
+      },
+      {
+        "phrase": "combine",
+        "value": "workflow"
+      }
     ],
     "mode": [
-      {"phrase": "audit only", "value": "AUDIT_ONLY"},
-      {"phrase": "plan only", "value": "PLAN_ONLY"},
-      {"phrase": "draft only", "value": "DRAFT_ONLY"},
-      {"phrase": "apply safe", "value": "APPLY_SAFE"},
-      {"phrase": "verify only", "value": "VERIFY_ONLY"}
+      {
+        "phrase": "audit only",
+        "value": "AUDIT_ONLY"
+      },
+      {
+        "phrase": "plan only",
+        "value": "PLAN_ONLY"
+      },
+      {
+        "phrase": "draft only",
+        "value": "DRAFT_ONLY"
+      },
+      {
+        "phrase": "apply safe",
+        "value": "APPLY_SAFE"
+      },
+      {
+        "phrase": "verify only",
+        "value": "VERIFY_ONLY"
+      }
     ]
   },
   "default_agent_files": [
@@ -120,7 +171,8 @@
       "target": "C-94",
       "purpose": "prompt creation, optimization, evaluation, and repair",
       "route_family": "prompt-lifecycle",
-      "priority": 50
+      "priority": 50,
+      "match_mode": "exact"
     },
     {
       "keyword": "feature",

@@ -1,0 +1,405 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://generic-prompts.invalid/v3.1/CP-135.schema.json",
+  "title": "Deduction evidence organizer result",
+  "description": "Strict machine-readable result for the prompt. It constrains the work product; it is not a certification of professional correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "const": "CP-135",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "FACT",
+        "SUPPORTED_INFERENCE",
+        "ASSUMPTION",
+        "RECOMMENDATION",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "deduction_evidence_register": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "category": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "open",
+                  "partial",
+                  "verified",
+                  "closed",
+                  "not_applicable",
+                  "unknown"
+                ],
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "item_id",
+              "category",
+              "description",
+              "status",
+              "owner",
+              "evidence_ids",
+              "notes"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "source_file_index": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "open",
+                  "partial",
+                  "complete",
+                  "not_applicable",
+                  "unknown"
+                ],
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "item",
+              "description",
+              "owner",
+              "status",
+              "evidence_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "reconciliation_and_exceptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "open",
+                  "partial",
+                  "complete",
+                  "not_applicable",
+                  "unknown"
+                ],
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "item",
+              "description",
+              "owner",
+              "status",
+              "evidence_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "professional_review_questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 1
+              },
+              "why_it_matters": {
+                "type": "string",
+                "minLength": 1
+              },
+              "answer_or_status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "decision_owner": {
+                "type": "string",
+                "minLength": 1
+              },
+              "blocking": {
+                "type": "boolean"
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "question",
+              "why_it_matters",
+              "answer_or_status",
+              "decision_owner",
+              "blocking",
+              "evidence_ids"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "deduction_evidence_register",
+        "source_file_index",
+        "reconciliation_and_exceptions",
+        "professional_review_questions"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "Stable evidence identifier.",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "file",
+              "line_range",
+              "command_output",
+              "document",
+              "dataset",
+              "interview",
+              "observation",
+              "external_source",
+              "other"
+            ],
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "description": "Path, URL, record identifier, or source name.",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "description": "Line range, section, timestamp, query, or other locator.",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Limitations or context.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_type",
+          "source",
+          "location",
+          "supports",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "due_or_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "backlog"
+            ],
+            "minLength": 1
+          },
+          "validation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "in_progress",
+              "blocked",
+              "complete",
+              "rejected"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action_id",
+          "action",
+          "owner",
+          "due_or_trigger",
+          "priority",
+          "validation",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "run_id",
+    "generated_at",
+    "epistemic_status",
+    "summary",
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "actions"
+  ],
+  "additionalProperties": false
+}

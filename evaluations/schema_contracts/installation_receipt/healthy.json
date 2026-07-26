@@ -4,6 +4,8 @@
   "project_root": "example",
   "suite_destination": "prompts",
   "suite_version": "1.8.3",
+  "payload_profile": "runtime",
+  "installed_file_count": 314,
   "gitignore_entries": [
     "example"
   ],

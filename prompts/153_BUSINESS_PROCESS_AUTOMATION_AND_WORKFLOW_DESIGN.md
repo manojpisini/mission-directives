@@ -43,7 +43,7 @@ preferred_skills:
 - review
 - test-driven-development
 - verification-before-completion
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -64,7 +64,9 @@ output_contract:
     format: jsonl
   - path: reports/business_process_automation_and_workflow_design/business_process_automation_and_workflow_design_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.automation.business-process-automation-and-workflow-design
 prompt_slug: business-process-automation-and-workflow-design
@@ -80,7 +82,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 779
+  maximum_body_words: 1162
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -127,6 +129,15 @@ conditional_template_routes:
 - core/rollback-plan
 - docs/administrator-manual
 - docs/policy
+aliases:
+- Approval workflow planner
+imported_profiles:
+- profile_id: CP-066
+  title: Approval workflow planner
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: e06003be347c3e6e8655db577e19bedf055ffeafd712491f59906e85df57fedc
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-066-approval-workflow-planner.schema.json
 ---
 
 # Business Process Automation and Workflow Design
@@ -229,5 +240,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-066" title="Approval workflow planner" schema="schemas/imported/generic_prompt_library_v3_1/cp-066-approval-workflow-planner.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Approval workflow planner
+
+## Task contract
+
+Design an approval workflow that routes the right artifact to the right decision maker with explicit criteria, deadlines, consolidated feedback, escalation, and auditable sign-off.
+
+## Use this prompt when
+
+- Work requires brand, legal, technical, client, executive, or release approval.
+
+## Do not use it for
+
+- Adding approval layers without distinct decision authority.
+
+## Required inputs
+
+1. Artifacts and risk levels
+2. Reviewer/approver roles
+3. Decision criteria
+4. Timeline and revision capacity
+5. System of record and escalation policy
+
+## Workflow
+
+1. List each approval object and the decision it requires; separate review/advice from formal approval.
+2. Assign one accountable approver per decision and identify required specialist reviews by risk/threshold.
+3. Define submission package, version, criteria, allowed decisions, deadline, and what constitutes silence or expiry.
+4. Design parallel/sequential routing based on dependency.
+5. Consolidate feedback and resolve conflicts through the decision owner.
+6. Specify rejection/revision loop, escalation, emergency path, delegation, reapproval triggers, and audit record.
+7. Remove redundant gates and test the workflow against normal, late, conflicting, and unavailable-approver scenarios.
+
+## Deliverable
+
+- Approval matrix
+- Routing and escalation workflow
+- Decision/feedback record format
+- SLA and reapproval rules
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-066-approval-workflow-planner.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every gate has unique authority and criteria.
+- [ ] Silence is not treated as approval unless policy explicitly says so.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

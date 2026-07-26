@@ -329,3 +329,8 @@ The synchronization tool performs local file reads and writes only. It does not:
 - publish or send content.
 
 The generated agent guidance grants no additional authority. It points to the suite's existing authorization, evidence, tool, skill, loop, and verification contracts.
+## Router scoring reference
+
+Natural-language selection is implemented by `tools/intent_router.py` and configured by `config/router_keywords.json`. The router maps aliases to concepts, performs conservative and recorded typo correction, enriches scenario evidence from referenced prompts, applies rarity-aware field scoring and narrow route hints, and calibrates confidence from coverage and ranking evidence. Every candidate exposes score components and field matches.
+
+Generic policy shortcuts should use `match_mode: exact` when a common word would otherwise preempt semantic routing. See the [Router Keyword Catalog and Scoring Guide](ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md) for the complete contract and extension workflow.

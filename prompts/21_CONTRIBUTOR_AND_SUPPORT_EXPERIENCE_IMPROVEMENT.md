@@ -70,7 +70,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 515
+  maximum_body_words: 939
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -126,6 +126,15 @@ conditional_template_routes:
 - docs/knowledge-base-article
 - reports/executive-report
 - reports/professional-report
+aliases:
+- Repo / developer onboarding audit
+imported_profiles:
+- profile_id: CP-010
+  title: Repo / developer onboarding audit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 070ff3ef6c5b71248e249e4cf893625f5a92882f38bfd3abba93cc7a7b965b1d
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-010-repo-developer-onboarding-audit.schema.json
 ---
 
 # Contributor and Support Experience Improvement
@@ -198,4 +207,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-010" title="Repo / developer onboarding audit" schema="schemas/imported/generic_prompt_library_v3_1/cp-010-repo-developer-onboarding-audit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Repo / developer onboarding audit
+
+## Task contract
+
+Verify that a new contributor can reach a successful first change using only current repository guidance, and identify every hidden prerequisite or dead end.
+
+## Use this prompt when
+
+- Auditing developer onboarding for a repository or workspace.
+
+## Do not use it for
+
+- Writing a generic welcome document without testing the path.
+
+## Required inputs
+
+1. Supported operating systems and tool versions
+2. README/setup/architecture/contribution docs
+3. Primary build, test, and run commands
+4. Required services and credentials
+5. A representative starter change
+
+## Workflow
+
+1. Start from a clean supported environment and inventory explicit versus implicit prerequisites, including shells, package managers, native tools, services, and access.
+2. Follow documentation literally through clone, bootstrap, configuration, data setup, build, run, test, and cleanup; record the first failure and recovery information.
+3. Trace a representative code path from entry point to tests and architecture docs.
+4. Verify that ownership, conventions, and debugging guidance are discoverable.
+5. Check command parity across local, container, CI, and supported platforms; identify stale paths, undocumented environment variables, and hidden generated steps.
+6. Evaluate contributor safety: secrets, destructive commands, sample data, migrations, hooks, and how to reset a broken environment.
+7. Return a prioritized onboarding repair plan with a verified happy path and time-to-first-success.
+
+## Deliverable
+
+- Verified onboarding journey
+- Hidden prerequisite and failure inventory
+- Documentation/automation fixes
+- Time-to-first-success and acceptance test
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-010-repo-developer-onboarding-audit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The happy path was executed or each unavailable step is explicitly marked unverified.
+- [ ] Every required prerequisite is declared before it is needed.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

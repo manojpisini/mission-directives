@@ -40,7 +40,7 @@ preferred_skills:
 - benchmark-models
 - xlsx
 - document-generate
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -61,7 +61,9 @@ output_contract:
     format: jsonl
   - path: reports/data_governance_quality_lineage_and_master_data/data_governance_quality_lineage_and_master_data_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.data_governance.data-governance-quality-lineage-and-master-data
 prompt_slug: data-governance-quality-lineage-and-master-data
@@ -77,11 +79,12 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 787
+  maximum_body_words: 2095
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
   maximum_primary_artifacts: 1
+  maximum_body_lines: 363
 output_profiles:
   minimum:
   - results/data_governance_quality_lineage_and_master_data/data_governance_quality_lineage_and_master_data_result.md
@@ -125,6 +128,36 @@ conditional_template_routes:
 - core/acceptance-criteria
 - docs/administrator-manual
 - docs/policy
+aliases:
+- Data governance audit
+- Data cleaning plan
+- Data quality report
+- Metric definition registry
+imported_profiles:
+- profile_id: CP-088
+  title: Data governance audit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 0a42aa8aa6949fde3178d32809f101f0879058e0fb89cc5fc7fb060da9f14988
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-088-data-governance-audit.schema.json
+- profile_id: CP-099
+  title: Data cleaning plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: f1b5f261b350a0dc00313e9769b74cf334e632b261029a7e208b9095697b25db
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-099-data-cleaning-plan.schema.json
+- profile_id: CP-100
+  title: Data quality report
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 5272cc4d079d2192d3af9693b3679e89176b3ba79530e62d4a87de3dfa12b8bd
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-100-data-quality-report.schema.json
+- profile_id: CP-104
+  title: Metric definition registry
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 8b6a164420dac98ca09ac45002b522e7a10447906520cb20a218a423b3e853eb
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-104-metric-definition-registry.schema.json
 ---
 
 # Data Governance, Quality, Lineage, and Master Data
@@ -227,5 +260,244 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-088" title="Data governance audit" schema="schemas/imported/generic_prompt_library_v3_1/cp-088-data-governance-audit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Data governance audit
+
+## Task contract
+
+Audit data governance across ownership, classification, lineage, quality, access, retention, use, sharing, and lifecycle controls tied to real datasets and decisions.
+
+## Use this prompt when
+
+- Establishing or reviewing governance for analytics, operational, ML, or regulated data.
+
+## Do not use it for
+
+- Creating policy documents with no dataset-level implementation.
+
+## Required inputs
+
+1. Dataset
+2. system inventory
+3. Business purposes and owners
+4. Data flows/lineage
+5. Access and retention policies
+6. Quality/compliance obligations
+
+## Workflow
+
+1. Inventory critical data products, systems of record, owners/stewards, purpose, classification, subjects, regions, and consumers.
+2. Trace lineage from collection through transformation, sharing, derived products, models, reports, archives, and deletion; identify unowned copies.
+3. Evaluate quality contracts—definitions, grain, keys, freshness, completeness, reconciliation, issue ownership, and consumer communication.
+4. Review access and use: least privilege, purpose limitation, approval, segregation, sensitive fields, exports, third parties, and auditability.
+5. Review retention, legal hold, deletion, backup, archival, versioning, and deprecation across primary and derived stores.
+6. Define governance decisions, controls, data contracts, issue workflow, metrics, and accountable forums proportionate to risk.
+
+## Decision and escalation rules
+
+- No dataset is governed merely because it is cataloged; ownership, purpose, access, retention, quality, and deletion must be enforceable.
+- Escalate orphaned sensitive data, uncontrolled secondary use, or lineage gaps that prevent correction and deletion.
+- Treat policy statements without operating controls or evidence as unresolved.
+
+## Deliverable
+
+- Data product/ownership inventory
+- Lineage and lifecycle map
+- Access/quality/retention findings
+- Governance operating model
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-088-data-governance-audit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every critical dataset has an owner, purpose, and lifecycle.
+- [ ] Derived copies are included in retention and deletion.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-099" title="Data cleaning plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-099-data-cleaning-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Data cleaning plan
+
+## Task contract
+
+Create a reproducible data-cleaning plan that preserves source lineage, distinguishes correction from imputation, and records every transformation and exception.
+
+## Use this prompt when
+
+- Preparing tabular, event, survey, operational, or analytical data for use.
+
+## Do not use it for
+
+- Silently altering source data or deleting inconvenient records.
+
+## Required inputs
+
+1. Dataset
+2. source documentation
+3. Intended analyses/consumers
+4. Schema and business rules
+5. Known quality issues
+6. Privacy/retention constraints
+
+## Workflow
+
+1. Profile schema, types, units, keys, grain, ranges, missingness, duplicates, distributions, encodings, and source partitions without mutating originals.
+2. Define canonical types and normalization rules for identifiers, dates/timezones, units, categories, text, and null values.
+3. Create issue-specific rules for duplicates, invalid values, outliers, inconsistent categories, referential gaps, and impossible combinations.
+4. Distinguish fix, flag, quarantine, impute, and retain.
+5. For imputation or exclusion, state assumptions, affected fields/segments, bias risk, and downstream sensitivity.
+6. Implement transformations as deterministic, versioned steps with row-level reason codes, counts, before/after checks, and reversible source references.
+7. Validate cleaned outputs against schema, business totals, samples, and downstream expectations.
+8. Publish a data-quality summary and unresolved exceptions.
+
+## Decision and escalation rules
+
+- Preserve immutable raw data and transformation provenance before any destructive cleaning step.
+- Do not impute, normalize, deduplicate, or remove outliers without documenting the analytical consequence and reversibility.
+- Escalate changes that alter business grain, key uniqueness, financial totals, or regulated records.
+
+## Deliverable
+
+- Cleaning rulebook
+- Transformation
+- audit trail
+- Exception/quarantine plan
+- Validation summary
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-099-data-cleaning-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Original data remains immutable and traceable.
+- [ ] Every changed or removed record has a reason.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-100" title="Data quality report" schema="schemas/imported/generic_prompt_library_v3_1/cp-100-data-quality-report.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Data quality report
+
+## Task contract
+
+Report data quality as decision-relevant evidence across completeness, validity, consistency, uniqueness, freshness, integrity, and drift with ownership and remediation.
+
+## Use this prompt when
+
+- Assessing a dataset or data product for operational or analytical use.
+
+## Do not use it for
+
+- Publishing a single opaque quality score.
+
+## Required inputs
+
+1. Dataset
+2. data product
+3. Consumer requirements and SLAs
+4. Schema/business rules
+5. Reference sources
+6. Historical quality baseline
+
+## Workflow
+
+1. Define the data product, grain, key, consumers, decision use, critical fields, and quality thresholds.
+2. Measure completeness, validity, uniqueness, referential integrity, consistency, freshness, volume, and distribution by meaningful segment and time window.
+3. Reconcile to trusted sources and explain tolerances, timing, and expected semantic differences.
+4. Analyze anomalies and drift against historical baseline.
+5. Separate source changes, pipeline defects, legitimate population change, and measurement error.
+6. Assess business impact and affected consumers.
+7. Assign issue severity, owner, root-cause path, correction, and communication.
+8. Return dimension-level results, evidence, confidence, limitations, and an improvement/monitoring plan.
+
+## Decision and escalation rules
+
+- Tie every quality rule to a named data use, owner, grain, and decision consequence.
+- Do not average away segment-level failures or report a single quality score without dimension-level evidence.
+- Escalate freshness, reconciliation, or uniqueness failures that can change published metrics, payments, eligibility, or compliance outcomes.
+
+## Deliverable
+
+- Quality metrics by dimension
+- segment
+- Reconciliation and drift findings
+- Consumer impact
+- Remediation/monitoring plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-100-data-quality-report.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Metrics have denominators and thresholds.
+- [ ] Averages do not hide critical segment failures.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-104" title="Metric definition registry" schema="schemas/imported/generic_prompt_library_v3_1/cp-104-metric-definition-registry.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Metric definition registry
+
+## Task contract
+
+Create a canonical metric registry with executable definitions, ownership, lineage, caveats, change history, and example queries so teams cannot silently redefine the same measure.
+
+## Use this prompt when
+
+- Standardizing business/product/operational metrics.
+
+## Do not use it for
+
+- A glossary containing names without formulas.
+
+## Required inputs
+
+1. Metric candidates and business concepts
+2. Source schemas and models
+3. Stakeholder definitions; then reporting/experiment use cases.
+4. Governance/change process
+
+## Workflow
+
+1. For each metric, define business meaning, decision use, owner/steward, status, and related dimensions.
+2. Specify formula, numerator, denominator, unit, grain, entity/event, filters, exclusions, deduplication, time window, timezone, attribution, and late-data treatment.
+3. Map source tables/fields, joins, transformations, lineage, freshness, quality checks, and system of record.
+4. Document valid segments, aggregation rules, non-additive behavior, caveats, minimum sample, and examples of misuse.
+5. Provide executable reference query/model and test cases with known outputs; then define versioning, approval, deprecation, communication, and reconciliation for changes.
+
+## Deliverable
+
+- Canonical metric definitions
+- Lineage/reference queries; then quality and misuse notes.
+- Change/deprecation governance
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-104-metric-definition-registry.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Metrics are executable and testable.
+- [ ] Competing definitions are resolved or explicitly versioned.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

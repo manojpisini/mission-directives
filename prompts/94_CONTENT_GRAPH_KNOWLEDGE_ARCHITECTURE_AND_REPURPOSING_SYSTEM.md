@@ -38,7 +38,7 @@ produces:
 - typed_runtime_artifacts
 evidence_lane: hybrid
 preferred_skills: []
-output_media: &id001
+output_media:
 - markdown
 - json
 - graph_spec
@@ -57,7 +57,10 @@ output_contract:
     format: jsonl
   - path: reports/content_graph_knowledge_architecture_and_repurposing_system/content_graph_knowledge_architecture_and_repurposing_system_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - graph_spec
 suite_version: 1.8.3
 capability_id: md.knowledge_design.content-graph-knowledge-architecture-and-repurposing-system
 prompt_slug: content-graph-knowledge-architecture-and-repurposing-system
@@ -73,7 +76,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 614
+  maximum_body_words: 982
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -127,6 +130,15 @@ conditional_template_routes:
 - docs/troubleshooting-guide
 - docs/adr
 - visual/diagram-specification
+aliases:
+- Content repurposing planner
+imported_profiles:
+- profile_id: CP-063
+  title: Content repurposing planner
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 4ac7f4b32bb58347faccbfc45b2c4960a2ce42b1d59f5246633b2c3ef75c10dd
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-063-content-repurposing-planner.schema.json
 ---
 
 # Content Graph, Knowledge Architecture, and Repurposing System
@@ -213,5 +225,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-063" title="Content repurposing planner" schema="schemas/imported/generic_prompt_library_v3_1/cp-063-content-repurposing-planner.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Content repurposing planner
+
+## Task contract
+
+Transform one source asset into a channel-appropriate content system without losing the original claim, context, rights, or audience promise.
+
+## Use this prompt when
+
+- Repurposing video, article, research, event, podcast, report, or campaign asset.
+
+## Do not use it for
+
+- Copying identical content into every channel.
+
+## Required inputs
+
+1. Source asset/transcript
+2. Core claims and evidence; then target audiences/channels.
+3. Rights and brand rules
+4. Publishing cadence and metrics
+
+## Workflow
+
+1. Extract the source thesis, proof, narrative beats, quotable moments, visuals, and contextual caveats.
+2. Define each channel’s audience job, consumption context, format, length, hook, CTA, and native behavior.
+3. Create a derivative map—shorts, posts, newsletter, slides, clips, thumbnails, scripts, FAQ—while preserving source traceability.
+4. Adapt structure and framing rather than merely truncating; identify claims that cannot survive without context.
+5. Plan asset dependencies, captions, accessibility, rights, localization, approvals, and reuse windows; then schedule production and measurement; link every derivative to source version and performance learning.
+
+## Deliverable
+
+- Source-to-derivative map
+- Channel-specific briefs; then asset/rights/approval plan.
+- Publishing and learning schedule
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-063-content-repurposing-planner.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every derivative has a distinct channel purpose.
+- [ ] Claims and rights remain traceable to the source.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

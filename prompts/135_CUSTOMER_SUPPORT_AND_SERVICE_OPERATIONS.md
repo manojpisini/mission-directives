@@ -39,7 +39,7 @@ evidence_lane: hybrid
 preferred_skills:
 - document-generate
 - stop-slop
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -60,7 +60,9 @@ output_contract:
     format: jsonl
   - path: reports/customer_support_and_service_operations/customer_support_and_service_operations_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.customer_operations.customer-support-and-service-operations
 prompt_slug: customer-support-and-service-operations
@@ -76,7 +78,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 786
+  maximum_body_words: 1170
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -128,6 +130,15 @@ conditional_template_routes:
 - docs/operator-runbook
 - docs/observability-guide
 - reports/audit-report
+aliases:
+- Customer support escalation
+imported_profiles:
+- profile_id: CP-080
+  title: Customer support escalation
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 7022e80bb5e04dc556b10dd920a7faa01ec77b35a1e18d8298c7ce4ed60c120b
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-080-customer-support-escalation.schema.json
 ---
 
 # Customer Support and Service Operations
@@ -230,5 +241,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-080" title="Customer support escalation" schema="schemas/imported/generic_prompt_library_v3_1/cp-080-customer-support-escalation.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Customer support escalation
+
+## Task contract
+
+Create an escalation packet that enables the receiving support or engineering owner to reproduce, prioritize, communicate, and resolve a customer-impacting issue without re-interviewing the customer.
+
+## Use this prompt when
+
+- Frontline support needs to escalate a defect, outage, account, billing, or data issue.
+
+## Do not use it for
+
+- Forwarding an unstructured conversation.
+
+## Required inputs
+
+1. Customer/account and contact
+2. Symptoms and timestamps; then impact/severity.
+3. Reproduction and evidence
+4. Workarounds and prior actions
+
+## Workflow
+
+1. Summarize the issue in customer language and technical terms, including first occurrence, frequency, affected users/data/workflow, and business impact.
+2. Capture environment, account/tenant, versions, identifiers, sequence, inputs, expected/actual result, timestamps/timezone, and reproducibility; then attach redacted logs/screenshots/requests and distinguish customer claim, support observation, and inference.
+3. Record troubleshooting already attempted, changes made, workaround, risk of workaround, and current customer state.
+4. Assign severity using impact and urgency, identify owner/SLA, dependencies, communication cadence, and next customer update.
+5. Define resolution evidence and closure criteria, including fix validation with the customer and follow-up.
+
+## Deliverable
+
+- Reproduction-ready escalation
+- Impact/severity assessment; then evidence and attempted actions.
+- Owner/SLA/customer communication plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-080-customer-support-escalation.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The receiving team can act without repeating basic discovery.
+- [ ] Sensitive customer data is minimized/redacted.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

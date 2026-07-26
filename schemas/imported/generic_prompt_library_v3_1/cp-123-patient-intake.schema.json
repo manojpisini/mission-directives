@@ -1,0 +1,588 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://generic-prompts.invalid/v3.1/CP-123.schema.json",
+  "title": "Patient intake result",
+  "description": "Strict machine-readable result for the prompt. It constrains the work product; it is not a certification of professional correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "const": "CP-123",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "FACT",
+        "SUPPORTED_INFERENCE",
+        "ASSUMPTION",
+        "RECOMMENDATION",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "patient_identification": {
+          "type": "object",
+          "properties": {
+            "patient_reference": {
+              "type": "string",
+              "minLength": 1
+            },
+            "identity_verified": {
+              "type": "boolean"
+            },
+            "preferred_name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "contact": {
+              "type": "string",
+              "minLength": 1
+            },
+            "emergency_contact": {
+              "type": "string",
+              "minLength": 1
+            },
+            "language": {
+              "type": "string",
+              "minLength": 1
+            },
+            "accessibility_needs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "representative_authority": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "patient_reference",
+            "identity_verified",
+            "preferred_name",
+            "contact",
+            "emergency_contact",
+            "language",
+            "accessibility_needs",
+            "representative_authority"
+          ],
+          "additionalProperties": false
+        },
+        "chief_concern": {
+          "type": "object",
+          "properties": {
+            "patient_words": {
+              "type": "string",
+              "minLength": 1
+            },
+            "onset": {
+              "type": "string",
+              "minLength": 1
+            },
+            "duration": {
+              "type": "string",
+              "minLength": 1
+            },
+            "severity": {
+              "type": "string",
+              "minLength": 1
+            },
+            "goals": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "patient_words",
+            "onset",
+            "duration",
+            "severity",
+            "goals"
+          ],
+          "additionalProperties": false
+        },
+        "symptoms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "symptom": {
+                "type": "string",
+                "minLength": 1
+              },
+              "onset": {
+                "type": "string",
+                "minLength": 1
+              },
+              "pattern": {
+                "type": "string",
+                "minLength": 1
+              },
+              "severity": {
+                "type": "string",
+                "minLength": 1
+              },
+              "context": {
+                "type": "string",
+                "minLength": 1
+              },
+              "unknowns": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "symptom",
+              "onset",
+              "pattern",
+              "severity",
+              "context",
+              "unknowns"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "medications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dose": {
+                "type": "string",
+                "minLength": 1
+              },
+              "frequency": {
+                "type": "string",
+                "minLength": 1
+              },
+              "route": {
+                "type": "string",
+                "minLength": 1
+              },
+              "purpose": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "dose",
+              "frequency",
+              "route",
+              "purpose",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "allergies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "substance": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reaction": {
+                "type": "string",
+                "minLength": 1
+              },
+              "severity": {
+                "type": "string",
+                "minLength": 1
+              },
+              "date_or_context": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "substance",
+              "reaction",
+              "severity",
+              "date_or_context",
+              "source"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "history": {
+          "type": "object",
+          "properties": {
+            "medical": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "surgical": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "family": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "social": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "pregnancy_or_other_relevant_status": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "medical",
+            "surgical",
+            "family",
+            "social",
+            "pregnancy_or_other_relevant_status"
+          ],
+          "additionalProperties": false
+        },
+        "consent_and_privacy": {
+          "type": "object",
+          "properties": {
+            "privacy_notice": {
+              "type": "string",
+              "enum": [
+                "acknowledged",
+                "declined",
+                "not_obtained",
+                "not_applicable"
+              ],
+              "minLength": 1
+            },
+            "care_consent": {
+              "type": "string",
+              "enum": [
+                "obtained",
+                "declined",
+                "pending",
+                "not_applicable"
+              ],
+              "minLength": 1
+            },
+            "record_sharing": {
+              "type": "string",
+              "minLength": 1
+            },
+            "telehealth": {
+              "type": "string",
+              "minLength": 1
+            },
+            "release_of_information": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "privacy_notice",
+            "care_consent",
+            "record_sharing",
+            "telehealth",
+            "release_of_information"
+          ],
+          "additionalProperties": false
+        },
+        "red_flags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "flag": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reported": {
+                "type": "boolean"
+              },
+              "action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "escalated_to": {
+                "type": "string",
+                "minLength": 1
+              },
+              "timestamp": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "flag",
+              "reported",
+              "action",
+              "escalated_to",
+              "timestamp"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "clinician_handoff": {
+          "type": "object",
+          "properties": {
+            "summary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "conflicts_or_unknowns": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "priority": {
+              "type": "string",
+              "enum": [
+                "routine",
+                "same_day_review",
+                "urgent_escalation"
+              ],
+              "minLength": 1
+            },
+            "recipient": {
+              "type": "string",
+              "minLength": 1
+            },
+            "acknowledged": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "summary",
+            "conflicts_or_unknowns",
+            "priority",
+            "recipient",
+            "acknowledged"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "patient_identification",
+        "chief_concern",
+        "symptoms",
+        "medications",
+        "allergies",
+        "history",
+        "consent_and_privacy",
+        "red_flags",
+        "clinician_handoff"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "Stable evidence identifier.",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "file",
+              "line_range",
+              "command_output",
+              "document",
+              "dataset",
+              "interview",
+              "observation",
+              "external_source",
+              "other"
+            ],
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "description": "Path, URL, record identifier, or source name.",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "description": "Line range, section, timestamp, query, or other locator.",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Limitations or context.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_type",
+          "source",
+          "location",
+          "supports",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "due_or_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "backlog"
+            ],
+            "minLength": 1
+          },
+          "validation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "in_progress",
+              "blocked",
+              "complete",
+              "rejected"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action_id",
+          "action",
+          "owner",
+          "due_or_trigger",
+          "priority",
+          "validation",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "run_id",
+    "generated_at",
+    "epistemic_status",
+    "summary",
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "actions"
+  ],
+  "additionalProperties": false
+}

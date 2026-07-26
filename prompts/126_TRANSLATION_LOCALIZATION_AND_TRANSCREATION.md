@@ -39,7 +39,7 @@ evidence_lane: hybrid
 preferred_skills:
 - stop-slop
 - docx
-output_media: &id001
+output_media:
 - markdown
 - json
 - translation_memory
@@ -63,7 +63,12 @@ output_contract:
     format: jsonl
   - path: reports/translation_localization_and_transcreation/translation_localization_and_transcreation_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - translation_memory
+  - terminology_glossary
+  - locale_package
 suite_version: 1.8.3
 capability_id: md.localization.translation-localization-and-transcreation
 prompt_slug: translation-localization-and-transcreation
@@ -79,7 +84,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 784
+  maximum_body_words: 1164
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -122,6 +127,15 @@ template_routes:
 template_policy: required_resolve_then_conditionally_select_by_requested_artifact
 conditional_template_routes:
 - docs/binary-distribution-manual
+aliases:
+- Localization readiness
+imported_profiles:
+- profile_id: CP-087
+  title: Localization readiness
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 019fd341974efd96ed3eea2a4c048b7f86578fedb5fd21f80607d6d2e5067756
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-087-localization-readiness.schema.json
 ---
 
 # Translation, Localization, and Transcreation
@@ -224,5 +238,61 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-087" title="Localization readiness" schema="schemas/imported/generic_prompt_library_v3_1/cp-087-localization-readiness.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Localization readiness
+
+## Task contract
+
+Assess whether product, content, data, and operations can support localization without broken layout, meaning, formatting, or culturally inappropriate behavior.
+
+## Use this prompt when
+
+- Preparing software/content for additional locales or regions.
+
+## Do not use it for
+
+- Word-for-word translation without product adaptation.
+
+## Required inputs
+
+1. Target locales/markets
+2. UI/content inventory
+3. Code and string resources
+4. Date/number/currency/address rules
+5. Legal/cultural/operational constraints
+
+## Workflow
+
+1. Inventory user-visible strings, embedded text, images, audio, metadata, emails, notifications, documents, and support content; identify concatenated or hard-coded language.
+2. Review internationalization architecture: resource keys, plurals/gender, interpolation, context notes, fallback, locale detection, RTL, font/encoding, sorting/search, and input methods.
+3. Test layout expansion, truncation, line breaks, responsive behavior, graphics, mirrored UI, accessibility, and pseudo-localization.
+4. Validate locale data: dates, calendars, timezones, numbers, currency, units, names, addresses, phones, taxes, and collation.
+5. Assess cultural imagery, color, examples, humor, claims, legal text, consent, payments, support hours, and regional availability.
+6. Create readiness gaps, translator context/glossary, test matrix, rollout order, and ownership for updates.
+
+## Deliverable
+
+- Localization inventory
+- I18n and layout findings
+- Locale/cultural requirements
+- Translation/testing rollout plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-087-localization-readiness.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Strings and locale-sensitive data are externalized and contextualized.
+- [ ] Target-market operations and legal differences are considered.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

@@ -98,7 +98,21 @@ RUNTIME_PREFIXES = {
     (".prompt_suite", "results"),
     (".prompt_suite", "runtime"),
 }
-IGNORED_NAMES = {"__pycache__", ".pytest_cache", ".git"}
+SITE_GENERATED_PREFIXES = {
+    ("site", ".astro"),
+    ("site", "dist"),
+    ("site", "node_modules"),
+    ("site", "src", "content", "docs", "reference"),
+}
+NON_SOURCE_PREFIXES = RUNTIME_PREFIXES | SITE_GENERATED_PREFIXES
+IGNORED_NAMES = {
+    "__pycache__",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".git",
+    "node_modules",
+}
 
 
 @dataclasses.dataclass(frozen=True)
@@ -1107,7 +1121,7 @@ def _manifest_files(root: Path) -> dict[str, tuple[bytes, int]]:
         ):
             continue
         if (
-            any(parts[: len(prefix)] == prefix for prefix in RUNTIME_PREFIXES)
+            any(parts[: len(prefix)] == prefix for prefix in NON_SOURCE_PREFIXES)
             and path.name != "README.md"
         ):
             continue
@@ -1135,13 +1149,17 @@ def _copy_ignore_factory(source_root: Path):
                 ignored.append(name)
                 continue
             parts = (current_rel / name).parts
-            if (
+            runtime_generated = (
                 any(
                     len(parts) > len(prefix) and parts[: len(prefix)] == prefix
                     for prefix in RUNTIME_PREFIXES
                 )
                 and name != "README.md"
-            ):
+            )
+            site_generated = any(
+                parts[: len(prefix)] == prefix for prefix in SITE_GENERATED_PREFIXES
+            )
+            if runtime_generated or site_generated:
                 ignored.append(name)
         return ignored
 

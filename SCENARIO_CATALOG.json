@@ -282,6 +282,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Agent handoff quality review"
+      ],
+      "imported_profiles": [
+        "CP-013"
       ]
     },
     {
@@ -424,6 +430,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Client and agency engagement intake",
+        "Client intake interviewer",
+        "Agency client intake"
+      ],
+      "imported_profiles": [
+        "CP-071"
       ]
     },
     {
@@ -708,6 +722,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Dependency upgrade / replacement",
+        "Architecture drift audit"
+      ],
+      "imported_profiles": [
+        "CP-004",
+        "CP-017"
       ]
     },
     {
@@ -850,6 +872,18 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Security threat model",
+        "Attack path analysis",
+        "Abuse case modeling",
+        "CI/CD attack surface audit"
+      ],
+      "imported_profiles": [
+        "CP-011",
+        "CP-031",
+        "CP-032",
+        "CP-036"
       ]
     },
     {
@@ -992,6 +1026,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Safe exploit reproduction plan"
+      ],
+      "imported_profiles": [
+        "CP-040"
       ]
     },
     {
@@ -1063,6 +1103,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Red-team report generation"
+      ],
+      "imported_profiles": [
+        "CP-044"
       ]
     },
     {
@@ -1134,6 +1180,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Data incident response"
+      ],
+      "imported_profiles": [
+        "CP-178"
       ]
     },
     {
@@ -1276,6 +1328,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Release notes / changelog"
+      ],
+      "imported_profiles": [
+        "CP-009"
       ]
     },
     {
@@ -1347,6 +1405,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "External action readiness",
+        "Launch readiness checklist"
+      ],
+      "imported_profiles": [
+        "CP-027",
+        "CP-069"
       ]
     },
     {
@@ -1418,6 +1484,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Incident postmortem",
+        "Campaign postmortem"
+      ],
+      "imported_profiles": [
+        "CP-002",
+        "CP-115"
       ]
     },
     {
@@ -1560,6 +1634,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Repo / developer onboarding audit"
+      ],
+      "imported_profiles": [
+        "CP-010"
       ]
     },
     {
@@ -1631,6 +1711,16 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Technical debt triage",
+        "Risk register and treatment plan",
+        "Creative risk register",
+        "Risk register"
+      ],
+      "imported_profiles": [
+        "CP-018",
+        "CP-067"
       ]
     },
     {
@@ -1986,6 +2076,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "PR / code review workflow"
+      ],
+      "imported_profiles": [
+        "CP-001"
       ]
     },
     {
@@ -2554,6 +2650,16 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Test strategy / test repair",
+        "Data pipeline validation",
+        "Security regression test design"
+      ],
+      "imported_profiles": [
+        "CP-006",
+        "CP-008",
+        "CP-038"
       ]
     },
     {
@@ -2696,6 +2802,16 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Vulnerability triage",
+        "Data exfiltration audit",
+        "Security hardening plan"
+      ],
+      "imported_profiles": [
+        "CP-039",
+        "CP-042",
+        "CP-046"
       ]
     },
     {
@@ -2838,6 +2954,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Supply-chain risk review",
+        "Third-party connector security review"
+      ],
+      "imported_profiles": [
+        "CP-035",
+        "CP-047"
       ]
     },
     {
@@ -2980,6 +3104,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Config / environment audit",
+        "Secrets exposure audit"
+      ],
+      "imported_profiles": [
+        "CP-020",
+        "CP-034"
       ]
     },
     {
@@ -3122,6 +3254,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Auth/AuthZ review"
+      ],
+      "imported_profiles": [
+        "CP-041"
       ]
     },
     {
@@ -3264,6 +3402,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "API contract design"
+      ],
+      "imported_profiles": [
+        "CP-005"
       ]
     },
     {
@@ -3406,6 +3550,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Migration plan",
+        "Schema evolution plan"
+      ],
+      "imported_profiles": [
+        "CP-003",
+        "CP-022"
       ]
     },
     {
@@ -3548,6 +3700,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Performance investigation"
+      ],
+      "imported_profiles": [
+        "CP-016"
       ]
     },
     {
@@ -3690,6 +3848,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Rollback / recovery plan"
+      ],
+      "imported_profiles": [
+        "CP-019"
       ]
     },
     {
@@ -3974,6 +4138,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Observability plan",
+        "Blue-team detection plan"
+      ],
+      "imported_profiles": [
+        "CP-007",
+        "CP-045"
       ]
     },
     {
@@ -4258,6 +4430,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Privacy impact assessment"
+      ],
+      "imported_profiles": [
+        "CP-089"
       ]
     },
     {
@@ -4400,6 +4578,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Workflow wrapper parity"
+      ],
+      "imported_profiles": [
+        "CP-026"
       ]
     },
     {
@@ -4542,6 +4726,18 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Agent policy conflict audit",
+        "Agent tool abuse audit",
+        "Agentic workflow threat model",
+        "Sandbox escape risk audit"
+      ],
+      "imported_profiles": [
+        "CP-024",
+        "CP-033",
+        "CP-037",
+        "CP-043"
       ]
     },
     {
@@ -4968,6 +5164,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Prompt injection red-team audit"
+      ],
+      "imported_profiles": [
+        "CP-030"
       ]
     },
     {
@@ -5110,6 +5312,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "CLI UX review",
+        "Accessibility audit"
+      ],
+      "imported_profiles": [
+        "CP-021",
+        "CP-086"
       ]
     },
     {
@@ -5394,6 +5604,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Documentation gap audit"
+      ],
+      "imported_profiles": [
+        "CP-015"
       ]
     },
     {
@@ -5536,6 +5752,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Prompt catalog deduplication"
+      ],
+      "imported_profiles": [
+        "CP-025"
       ]
     },
     {
@@ -5678,6 +5900,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Research synthesis"
+      ],
+      "imported_profiles": [
+        "CP-094"
       ]
     },
     {
@@ -5820,6 +6048,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Analyst question framing",
+        "Exploratory data analysis"
+      ],
+      "imported_profiles": [
+        "CP-101",
+        "CP-102"
       ]
     },
     {
@@ -6623,6 +6859,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Creative review interviewer",
+        "Storyboard critique"
+      ],
+      "imported_profiles": [
+        "CP-062",
+        "CP-072"
       ]
     },
     {
@@ -6765,6 +7009,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Content repurposing planner"
+      ],
+      "imported_profiles": [
+        "CP-063"
       ]
     },
     {
@@ -6836,6 +7086,18 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Content pipeline manager",
+        "Campaign calendar planner",
+        "Editorial calendar gap audit",
+        "Editorial pitch calendar"
+      ],
+      "imported_profiles": [
+        "CP-054",
+        "CP-058",
+        "CP-064",
+        "CP-118"
       ]
     },
     {
@@ -6910,6 +7172,18 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Creative brief interrogation",
+        "Moodboard analysis and direction synthesis",
+        "Mood board interrogation",
+        "Moodboard critique and synthesis",
+        "Thumbnail/title ideation board"
+      ],
+      "imported_profiles": [
+        "CP-050",
+        "CP-056",
+        "CP-073"
       ]
     },
     {
@@ -7434,6 +7708,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Dashboard requirements interviewer"
+      ],
+      "imported_profiles": [
+        "CP-103"
       ]
     },
     {
@@ -8029,6 +8309,18 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Project kickoff interviewer",
+        "Timeline builder",
+        "Production schedule planner",
+        "Asset dependency tracker"
+      ],
+      "imported_profiles": [
+        "CP-051",
+        "CP-052",
+        "CP-053",
+        "CP-065"
       ]
     },
     {
@@ -8103,6 +8395,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Idea board workshop and interrogation",
+        "Idea board facilitator",
+        "Idea board interrogation"
+      ],
+      "imported_profiles": [
+        "CP-057"
       ]
     },
     {
@@ -8176,6 +8476,20 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Responsible disclosure packet",
+        "SOP and operational runbook creator",
+        "SOP/runbook creator",
+        "Production line SOP",
+        "Community moderation policy",
+        "Agency SOW builder"
+      ],
+      "imported_profiles": [
+        "CP-049",
+        "CP-093",
+        "CP-096",
+        "CP-114"
       ]
     },
     {
@@ -8249,6 +8563,18 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Go-to-market plan",
+        "Campaign messaging house",
+        "Paid media brief",
+        "Audience segmentation brief"
+      ],
+      "imported_profiles": [
+        "CP-083",
+        "CP-111",
+        "CP-113",
+        "CP-121"
       ]
     },
     {
@@ -8323,6 +8649,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Sales discovery interviewer"
+      ],
+      "imported_profiles": [
+        "CP-081"
       ]
     },
     {
@@ -8469,6 +8801,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Training curriculum builder"
+      ],
+      "imported_profiles": [
+        "CP-092"
       ]
     },
     {
@@ -8615,6 +8953,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "UX research plan",
+        "Usability test moderator"
+      ],
+      "imported_profiles": [
+        "CP-084",
+        "CP-085"
       ]
     },
     {
@@ -8688,6 +9034,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Grant/proposal builder"
+      ],
+      "imported_profiles": [
+        "CP-097"
       ]
     },
     {
@@ -8910,6 +9262,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Influencer/creator brief"
+      ],
+      "imported_profiles": [
+        "CP-116"
       ]
     },
     {
@@ -8987,6 +9345,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Connector integration plan"
+      ],
+      "imported_profiles": [
+        "CP-014"
       ]
     },
     {
@@ -9063,6 +9427,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Content and creative experiment design",
+        "Content experiment planner",
+        "Creative testing plan"
+      ],
+      "imported_profiles": [
+        "CP-068"
       ]
     },
     {
@@ -9137,6 +9509,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Localization readiness"
+      ],
+      "imported_profiles": [
+        "CP-087"
       ]
     },
     {
@@ -9211,6 +9589,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Previz planner"
+      ],
+      "imported_profiles": [
+        "CP-055"
       ]
     },
     {
@@ -9509,6 +9893,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Procurement/vendor evaluation"
+      ],
+      "imported_profiles": [
+        "CP-079"
       ]
     },
     {
@@ -9657,6 +10047,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Hiring scorecard builder"
+      ],
+      "imported_profiles": [
+        "CP-077"
       ]
     },
     {
@@ -9731,6 +10127,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Performance review writer"
+      ],
+      "imported_profiles": [
+        "CP-078"
       ]
     },
     {
@@ -9805,6 +10207,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Customer support escalation"
+      ],
+      "imported_profiles": [
+        "CP-080"
       ]
     },
     {
@@ -10025,6 +10433,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Personal manager cockpit"
+      ],
+      "imported_profiles": [
+        "CP-070"
       ]
     },
     {
@@ -10477,6 +10891,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Legal contract review triage"
+      ],
+      "imported_profiles": [
+        "CP-075"
       ]
     },
     {
@@ -10551,6 +10971,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Finance model sanity check"
+      ],
+      "imported_profiles": [
+        "CP-076"
       ]
     },
     {
@@ -10773,6 +11199,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Compliance control mapping"
+      ],
+      "imported_profiles": [
+        "CP-090"
       ]
     },
     {
@@ -11075,6 +11507,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Product requirements document"
+      ],
+      "imported_profiles": [
+        "CP-082"
       ]
     },
     {
@@ -11152,6 +11590,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Approval workflow planner"
+      ],
+      "imported_profiles": [
+        "CP-066"
       ]
     },
     {
@@ -11228,6 +11672,18 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Data governance audit",
+        "Data cleaning plan",
+        "Data quality report",
+        "Metric definition registry"
+      ],
+      "imported_profiles": [
+        "CP-088",
+        "CP-099",
+        "CP-100",
+        "CP-104"
       ]
     },
     {
@@ -11304,6 +11760,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Competitive teardown"
+      ],
+      "imported_profiles": [
+        "CP-095"
       ]
     },
     {
@@ -11378,6 +11840,16 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Incident comms planner",
+        "Publicist crisis response",
+        "PR risk review"
+      ],
+      "imported_profiles": [
+        "CP-091",
+        "CP-109",
+        "CP-119"
       ]
     },
     {
@@ -11452,6 +11924,22 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "PR strategy brief",
+        "Press release drafting",
+        "Media pitch builder",
+        "Media list planner",
+        "Brand reputation monitor",
+        "Media kit builder"
+      ],
+      "imported_profiles": [
+        "CP-106",
+        "CP-107",
+        "CP-108",
+        "CP-110",
+        "CP-117",
+        "CP-120"
       ]
     },
     {
@@ -11605,6 +12093,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Manager status report"
+      ],
+      "imported_profiles": [
+        "CP-060"
       ]
     },
     {
@@ -11683,6 +12177,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Meeting agenda and decision tracker",
+        "Creative decision log"
+      ],
+      "imported_profiles": [
+        "CP-061",
+        "CP-074"
       ]
     },
     {
@@ -12202,6 +12704,16 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Prompt regression evaluation",
+        "Eval dataset design",
+        "Malicious prompt corpus builder"
+      ],
+      "imported_profiles": [
+        "CP-012",
+        "CP-023",
+        "CP-048"
       ]
     },
     {
@@ -12354,6 +12866,14 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Decision memo",
+        "Insight memo"
+      ],
+      "imported_profiles": [
+        "CP-098",
+        "CP-105"
       ]
     },
     {
@@ -12432,6 +12952,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Dashboard QA"
+      ],
+      "imported_profiles": [
+        "CP-179"
       ]
     },
     {
@@ -12580,6 +13106,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Stakeholder alignment memo"
+      ],
+      "imported_profiles": [
+        "CP-059"
       ]
     },
     {
@@ -13550,6 +14082,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Marketer funnel audit"
+      ],
+      "imported_profiles": [
+        "CP-112"
       ]
     },
     {
@@ -13624,6 +14162,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Executive assistant operations"
+      ],
+      "imported_profiles": [
+        "CP-180"
       ]
     },
     {
@@ -13854,6 +14398,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Knowledge graph gap analysis"
+      ],
+      "imported_profiles": [
+        "CP-028"
       ]
     },
     {
@@ -13925,6 +14475,12 @@
           "condition": "verification_failed",
           "then": "failed_or_residual_open"
         }
+      ],
+      "aliases": [
+        "Human approval packet"
+      ],
+      "imported_profiles": [
+        "CP-029"
       ]
     },
     {
@@ -14623,6 +15179,3982 @@
             "MD-200"
           ],
           "mode": "AUDIT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-201",
+      "title": "Healthcare / clinical operations",
+      "purpose": "Design or audit clinical operations as a safe workflow spanning intake, triage, scheduling, documentation, orders, results, follow-up, escalation, privacy, and accountable handoffs.",
+      "prompts": [
+        "MD-201"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/healthcare-clinical-operations/healthcare-clinical-operations_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-201",
+          "prompt_ids": [
+            "MD-201"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-202",
+      "title": "Patient intake",
+      "purpose": "Conduct a privacy-conscious patient intake that captures identity, reason for care, history, medication/allergy safety, consent, accessibility, and urgent warning signs for qualified clinical review.",
+      "prompts": [
+        "MD-202"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/patient-intake/patient-intake_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-202",
+          "prompt_ids": [
+            "MD-202"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-203",
+      "title": "Care-plan summary",
+      "purpose": "Create a patient-centered care-plan summary that accurately reflects clinician-approved diagnoses, goals, treatments, medications, monitoring, responsibilities, and escalation instructions in understandable language.",
+      "prompts": [
+        "MD-203"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/care-plan-summary/care-plan-summary_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-203",
+          "prompt_ids": [
+            "MD-203"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-204",
+      "title": "Clinical note QA",
+      "purpose": "Quality-check a clinical note for identity, completeness, internal consistency, source attribution, medication/allergy safety, coding support, privacy, and required clinician correction without rewriting clinical judgment.",
+      "prompts": [
+        "MD-204"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/clinical-note-qa/clinical-note-qa_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-204",
+          "prompt_ids": [
+            "MD-204"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-205",
+      "title": "Insurance prior-auth packet",
+      "purpose": "Assemble an insurance prior-authorization packet that matches payer criteria to clinician-supported evidence, required forms, coding, timelines, and submission/appeal tracking.",
+      "prompts": [
+        "MD-205"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/insurance-prior-auth-packet/insurance-prior-auth-packet_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-205",
+          "prompt_ids": [
+            "MD-205"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-206",
+      "title": "Medical billing denial triage",
+      "purpose": "Triage a medical billing denial by verifying claim history, denial reason, coding/documentation support, payer rules, deadlines, and the correct correction, appeal, or contractual action.",
+      "prompts": [
+        "MD-206"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/medical-billing-denial-triage/medical-billing-denial-triage_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-206",
+          "prompt_ids": [
+            "MD-206"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-207",
+      "title": "HIPAA evidence checklist",
+      "purpose": "Create a HIPAA-oriented evidence checklist that maps privacy, security, breach, and business-associate requirements to scoped controls and artifacts without claiming formal compliance.",
+      "prompts": [
+        "MD-207"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/hipaa-evidence-checklist/hipaa-evidence-checklist_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-207",
+          "prompt_ids": [
+            "MD-207"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-208",
+      "title": "Insurance claims intake",
+      "purpose": "Conduct insurance claim intake that captures policy, loss/event, parties, damage/injury, evidence, coverage notices, urgent assistance, fraud/privacy safeguards, and accountable handoff.",
+      "prompts": [
+        "MD-208"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/insurance-claims-intake/insurance-claims-intake_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-208",
+          "prompt_ids": [
+            "MD-208"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-209",
+      "title": "Underwriting risk memo",
+      "purpose": "Prepare an underwriting risk memo that connects verified exposure data to appetite, hazards, controls, loss experience, uncertainty, terms, and an accountable underwriting decision.",
+      "prompts": [
+        "MD-209"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/underwriting-risk-memo/underwriting-risk-memo_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-209",
+          "prompt_ids": [
+            "MD-209"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-210",
+      "title": "Insurance policy comparison",
+      "purpose": "Compare insurance policies on aligned coverage scenarios, limits, deductibles, exclusions, conditions, service, and total cost without reducing the decision to premium alone.",
+      "prompts": [
+        "MD-210"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/insurance-policy-comparison/insurance-policy-comparison_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-210",
+          "prompt_ids": [
+            "MD-210"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-211",
+      "title": "Insurance denial appeal prep",
+      "purpose": "Prepare an insurance denial appeal by matching the denial rationale to policy, facts, evidence, procedure, and deadlines while avoiding unsupported legal or medical claims.",
+      "prompts": [
+        "MD-211"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/insurance-denial-appeal-prep/insurance-denial-appeal-prep_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-211",
+          "prompt_ids": [
+            "MD-211"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-212",
+      "title": "Insurance fraud signal review",
+      "purpose": "Review potential insurance fraud signals as hypotheses requiring corroboration, fairness, privacy, and authorized investigation—not as proof or accusation.",
+      "prompts": [
+        "MD-212"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/insurance-fraud-signal-review/insurance-fraud-signal-review_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-212",
+          "prompt_ids": [
+            "MD-212"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-213",
+      "title": "Tax document checklist",
+      "purpose": "Create a jurisdiction- and taxpayer-specific tax document checklist that identifies required source records, missing evidence, deadlines, and professional-review triggers without preparing or filing a return.",
+      "prompts": [
+        "MD-213"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/tax-document-checklist/tax-document-checklist_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-213",
+          "prompt_ids": [
+            "MD-213"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-214",
+      "title": "Deduction evidence organizer",
+      "purpose": "Organize deduction evidence into complete, traceable support for qualified tax review, separating substantiation from eligibility and personal from business use.",
+      "prompts": [
+        "MD-214"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/deduction-evidence-organizer/deduction-evidence-organizer_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-214",
+          "prompt_ids": [
+            "MD-214"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-215",
+      "title": "Filing risk review",
+      "purpose": "Review a tax filing package for completeness, consistency, unusual positions, elections, basis, deadlines, payment, and adviser escalation before submission.",
+      "prompts": [
+        "MD-215"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/filing-risk-review/filing-risk-review_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-215",
+          "prompt_ids": [
+            "MD-215"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-216",
+      "title": "Entity tax planning brief",
+      "purpose": "Prepare an entity tax planning brief that frames structure, owner compensation/distributions, timing, investments, transactions, cash, and compliance questions for qualified tax and legal advisers.",
+      "prompts": [
+        "MD-216"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/entity-tax-planning-brief/entity-tax-planning-brief_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-216",
+          "prompt_ids": [
+            "MD-216"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-217",
+      "title": "Real estate listing strategy",
+      "purpose": "Create a real-estate listing strategy grounded in verified property facts, target buyers, positioning, preparation, pricing evidence, marketing, showing operations, and feedback decisions.",
+      "prompts": [
+        "MD-217"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/real-estate-listing-strategy/real-estate-listing-strategy_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-217",
+          "prompt_ids": [
+            "MD-217"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-218",
+      "title": "Property due diligence",
+      "purpose": "Conduct property due diligence by building a source-backed issue register across title, legal, physical, environmental, financial, tenancy, utilities, zoning, and transaction conditions.",
+      "prompts": [
+        "MD-218"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/property-due-diligence/property-due-diligence_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-218",
+          "prompt_ids": [
+            "MD-218"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-219",
+      "title": "Lease abstraction",
+      "purpose": "Abstract a lease into a structured obligation, option, payment, notice, and risk record while preserving clause citations and routing interpretation to qualified legal review.",
+      "prompts": [
+        "MD-219"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/lease-abstraction/lease-abstraction_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-219",
+          "prompt_ids": [
+            "MD-219"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-220",
+      "title": "Buyer/seller checklist",
+      "purpose": "Create a buyer or seller transaction checklist that coordinates documents, financing, inspections, title, disclosures, contingencies, possession, deadlines, and accountable owners.",
+      "prompts": [
+        "MD-220"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/buyer-seller-checklist/buyer-seller-checklist_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-220",
+          "prompt_ids": [
+            "MD-220"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-221",
+      "title": "Market comp memo",
+      "purpose": "Prepare a market comparable memo using relevant, dated, source-backed properties and transparent adjustments to support a range and uncertainty rather than false precision.",
+      "prompts": [
+        "MD-221"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/market-comp-memo/market-comp-memo_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-221",
+          "prompt_ids": [
+            "MD-221"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-222",
+      "title": "Construction scope of work",
+      "purpose": "Define a construction scope of work that makes deliverables, interfaces, standards, exclusions, schedule, inspections, acceptance, and change control unambiguous enough to price and execute.",
+      "prompts": [
+        "MD-222"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/construction-scope-of-work/construction-scope-of-work_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-222",
+          "prompt_ids": [
+            "MD-222"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-223",
+      "title": "Construction punch list",
+      "purpose": "Create a location-specific construction punch list that distinguishes incomplete work, defects, safety issues, documentation gaps, and closure evidence.",
+      "prompts": [
+        "MD-223"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/construction-punch-list/construction-punch-list_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-223",
+          "prompt_ids": [
+            "MD-223"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-224",
+      "title": "RFI tracker",
+      "purpose": "Track construction RFIs from a precise document conflict or information need through response, schedule/cost effect, distribution, linked change, and closure.",
+      "prompts": [
+        "MD-224"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/rfi-tracker/rfi-tracker_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-224",
+          "prompt_ids": [
+            "MD-224"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-225",
+      "title": "Change order review",
+      "purpose": "Review a construction change order for contractual basis, scope delta, quantity/rate support, schedule effect, downstream impacts, markups, and authorized revised documents.",
+      "prompts": [
+        "MD-225"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/change-order-review/change-order-review_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-225",
+          "prompt_ids": [
+            "MD-225"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-226",
+      "title": "Site safety checklist",
+      "purpose": "Create a site-specific safety inspection checklist that helps a competent person identify hazards, verify controls, assign correction, and escalate imminent danger under applicable rules.",
+      "prompts": [
+        "MD-226"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/site-safety-checklist/site-safety-checklist_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-226",
+          "prompt_ids": [
+            "MD-226"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-227",
+      "title": "Contractor bid comparison",
+      "purpose": "Normalize contractor bids so scope, exclusions, quantities, alternates, schedule, staffing, qualifications, commercial terms, and total evaluated cost can be compared fairly.",
+      "prompts": [
+        "MD-227"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/contractor-bid-comparison/contractor-bid-comparison_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-227",
+          "prompt_ids": [
+            "MD-227"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-228",
+      "title": "Manufacturing root-cause quality issue",
+      "purpose": "Lead a manufacturing quality root-cause investigation from containment through verified measurement, causal analysis, corrective action, and recurrence prevention using an appropriate 8D/DMAIC-style discipline.",
+      "prompts": [
+        "MD-228"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/manufacturing-root-cause-quality-issue/manufacturing-root-cause-quality-issue_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-228",
+          "prompt_ids": [
+            "MD-228"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-229",
+      "title": "Maintenance schedule",
+      "purpose": "Build a risk-based preventive and predictive maintenance schedule from asset criticality, failure modes, manufacturer guidance, condition data, resources, and production windows.",
+      "prompts": [
+        "MD-229"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/maintenance-schedule/maintenance-schedule_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-229",
+          "prompt_ids": [
+            "MD-229"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-230",
+      "title": "Supplier defect report",
+      "purpose": "Create a supplier defect report that establishes traceability, specification breach, containment, affected inventory, disposition, corrective-action request, and verified recurrence prevention.",
+      "prompts": [
+        "MD-230"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/supplier-defect-report/supplier-defect-report_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-230",
+          "prompt_ids": [
+            "MD-230"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-231",
+      "title": "QA acceptance plan",
+      "purpose": "Define a QA acceptance plan with measurable characteristics, sampling/test methods, calibrated instruments, pass/fail rules, traceability, nonconformance handling, and release authority.",
+      "prompts": [
+        "MD-231"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/qa-acceptance-plan/qa-acceptance-plan_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-231",
+          "prompt_ids": [
+            "MD-231"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-232",
+      "title": "Retail/ecommerce product listing optimization",
+      "purpose": "Optimize a retail or ecommerce product listing using verified product facts, search intent, structured attributes, benefit clarity, imagery, accessibility, claims compliance, and conversion learning.",
+      "prompts": [
+        "MD-232"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/retail-ecommerce-product-listing-optimization/retail-ecommerce-product-listing-optimization_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-232",
+          "prompt_ids": [
+            "MD-232"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-233",
+      "title": "Merchandising calendar",
+      "purpose": "Build a merchandising calendar that coordinates assortment, inventory arrival, seasonal stories, launches, promotions, content, placement, markdown, and operational readiness.",
+      "prompts": [
+        "MD-233"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/merchandising-calendar/merchandising-calendar_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-233",
+          "prompt_ids": [
+            "MD-233"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-234",
+      "title": "SKU rationalization",
+      "purpose": "Rationalize a SKU portfolio by demand, margin, turns, substitution, customer role, operational complexity, supplier constraints, and exit cost while protecting strategically necessary items.",
+      "prompts": [
+        "MD-234"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/sku-rationalization/sku-rationalization_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-234",
+          "prompt_ids": [
+            "MD-234"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-235",
+      "title": "Return-rate analysis",
+      "purpose": "Analyze return rates by product, reason, cohort, channel, supplier, expectation, fulfillment, fraud, and cost to identify correct product, content, operations, or policy interventions.",
+      "prompts": [
+        "MD-235"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/return-rate-analysis/return-rate-analysis_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-235",
+          "prompt_ids": [
+            "MD-235"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-236",
+      "title": "Marketplace compliance",
+      "purpose": "Review marketplace compliance for product eligibility, claims, images, identifiers, variants, pricing, fulfillment, reviews, privacy, tax, and regional restrictions using current platform and jurisdiction sources.",
+      "prompts": [
+        "MD-236"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/marketplace-compliance/marketplace-compliance_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-236",
+          "prompt_ids": [
+            "MD-236"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-237",
+      "title": "Hospitality guest experience audit",
+      "purpose": "Audit the hospitality guest journey from discovery through follow-up, identifying service, accessibility, wait, cleanliness, trust, personalization, and recovery breakdowns with accountable owners.",
+      "prompts": [
+        "MD-237"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/hospitality-guest-experience-audit/hospitality-guest-experience-audit_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-237",
+          "prompt_ids": [
+            "MD-237"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-238",
+      "title": "Itinerary operations plan",
+      "purpose": "Turn a travel itinerary into an executable operations plan with verified bookings, transfers, buffers, documents, accessibility, time zones, contacts, disruptions, and communication.",
+      "prompts": [
+        "MD-238"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/itinerary-operations-plan/itinerary-operations-plan_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-238",
+          "prompt_ids": [
+            "MD-238"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-239",
+      "title": "Event hospitality checklist",
+      "purpose": "Coordinate event hospitality across invitations, travel, lodging, arrival, credentials, dietary/accessibility needs, seating, hosts, transport, emergency contacts, and follow-up.",
+      "prompts": [
+        "MD-239"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/event-hospitality-checklist/event-hospitality-checklist_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-239",
+          "prompt_ids": [
+            "MD-239"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-240",
+      "title": "Travel disruption response",
+      "purpose": "Stabilize travelers during disruption by verifying safety, rights, constraints, alternatives, costs, authority, communications, and handoff.",
+      "prompts": [
+        "MD-240"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/travel-disruption-response/travel-disruption-response_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-240",
+          "prompt_ids": [
+            "MD-240"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-241",
+      "title": "Nonprofit donor campaign",
+      "purpose": "Design a nonprofit donor campaign around a truthful case for support, ethical storytelling, audience, ask, channels, stewardship, consent, budget, and measurable outcomes.",
+      "prompts": [
+        "MD-241"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/nonprofit-donor-campaign/nonprofit-donor-campaign_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-241",
+          "prompt_ids": [
+            "MD-241"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-242",
+      "title": "Nonprofit impact report",
+      "purpose": "Produce a nonprofit impact report that distinguishes activities, outputs, outcomes, contribution, limitations, finance, learning, and beneficiary voice without overstating causality.",
+      "prompts": [
+        "MD-242"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/nonprofit-impact-report/nonprofit-impact-report_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-242",
+          "prompt_ids": [
+            "MD-242"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-243",
+      "title": "Volunteer operations",
+      "purpose": "Design volunteer operations covering recruitment, screening, role boundaries, training, scheduling, safeguarding, supervision, expenses, recognition, incidents, and offboarding.",
+      "prompts": [
+        "MD-243"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/volunteer-operations/volunteer-operations_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-243",
+          "prompt_ids": [
+            "MD-243"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-244",
+      "title": "Grant compliance tracking",
+      "purpose": "Track grant compliance as an operational system of award conditions, budget restrictions, milestones, procurement, subrecipients, evidence, reports, deviations, and closeout.",
+      "prompts": [
+        "MD-244"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/grant-compliance-tracking/grant-compliance-tracking_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-244",
+          "prompt_ids": [
+            "MD-244"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-245",
+      "title": "Field-program monitoring",
+      "purpose": "Create a field-program monitoring system that measures reach, quality, outcomes, safeguarding, feedback, anomalies, and learning while accounting for access, bias, and operational burden.",
+      "prompts": [
+        "MD-245"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/field-program-monitoring/field-program-monitoring_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-245",
+          "prompt_ids": [
+            "MD-245"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-246",
+      "title": "Government public notice drafting",
+      "purpose": "Draft a government public notice that clearly states authority, purpose, affected area, dates, participation method, accessibility, language access, records, contact, and approval status for legal review.",
+      "prompts": [
+        "MD-246"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/government-public-notice-drafting/government-public-notice-drafting_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-246",
+          "prompt_ids": [
+            "MD-246"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-247",
+      "title": "Citizen response packet",
+      "purpose": "Prepare a clear, respectful citizen response packet that verifies jurisdiction and facts, explains policy/actions, protects privacy, and provides referral, appeal, or escalation options.",
+      "prompts": [
+        "MD-247"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/citizen-response-packet/citizen-response-packet_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-247",
+          "prompt_ids": [
+            "MD-247"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-248",
+      "title": "Procurement compliance",
+      "purpose": "Review a public procurement for authority, thresholds, competition, specifications, conflicts, evaluation, approvals, contract terms, funding restrictions, transparency, and records.",
+      "prompts": [
+        "MD-248"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/procurement-compliance/procurement-compliance_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-248",
+          "prompt_ids": [
+            "MD-248"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-249",
+      "title": "Policy memo",
+      "purpose": "Write a policy memo that frames a public problem, affected populations, legal/institutional context, evidence, options, distributional effects, implementation, cost, risk, recommendation, and evaluation.",
+      "prompts": [
+        "MD-249"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/policy-memo/policy-memo_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-249",
+          "prompt_ids": [
+            "MD-249"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-250",
+      "title": "Legislative bill summary",
+      "purpose": "Summarize a legislative bill from authoritative text by explaining operative changes, affected parties, dates, mandates, funding, enforcement, delegated rulemaking, ambiguities, and status without adding advocacy unless requested.",
+      "prompts": [
+        "MD-250"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/legislative-bill-summary/legislative-bill-summary_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-250",
+          "prompt_ids": [
+            "MD-250"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-251",
+      "title": "Pre-production command center",
+      "purpose": "Operate a pre-production command center that integrates brief, script, budget, schedule, casting, crew, locations, permits, rights, safety, equipment, assets, approvals, and contingencies into daily readiness.",
+      "prompts": [
+        "MD-251"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/pre-production-command-center/pre-production-command-center_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-251",
+          "prompt_ids": [
+            "MD-251"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-252",
+      "title": "Publicist outreach operations",
+      "purpose": "Run publicist outreach as a controlled relationship queue with qualified targets, personalization, embargoes, assets, follow-ups, responses, interviews, opt-outs, and outcome learning.",
+      "prompts": [
+        "MD-252"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/publicist-outreach-operations/publicist-outreach-operations_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-252",
+          "prompt_ids": [
+            "MD-252"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-253",
+      "title": "Media agency account operations",
+      "purpose": "Operate a media agency account across briefs, planning, trafficking, budget pacing, creative readiness, approvals, measurement, issue escalation, billing inputs, and client action tracking.",
+      "prompts": [
+        "MD-253"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/media-agency-account-operations/media-agency-account-operations_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-253",
+          "prompt_ids": [
+            "MD-253"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-254",
+      "title": "Influencer/creator campaign operations",
+      "purpose": "Operate influencer and creator campaigns through sourcing, vetting, contracts, briefs, disclosure, content review, rights, posting, measurement, payment, safety, and learning.",
+      "prompts": [
+        "MD-254"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/influencer-creator-campaign-operations/influencer-creator-campaign-operations_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-254",
+          "prompt_ids": [
+            "MD-254"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-255",
+      "title": "Content production gruntwork",
+      "purpose": "Execute repetitive content-production tasks with disciplined intake, naming, metadata, transcription, selects, versions, resizing, captions, exports, QC, and status so scale does not destroy traceability.",
+      "prompts": [
+        "MD-255"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/content-production-gruntwork/content-production-gruntwork_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-255",
+          "prompt_ids": [
+            "MD-255"
+          ],
+          "mode": "DRAFT_ONLY"
+        }
+      ],
+      "parallel_groups": [
+        {
+          "group": "read_only_analysis",
+          "rule": "parallel only when artifacts and evidence scopes do not overlap"
+        }
+      ],
+      "execution_locks": [
+        "single_writer_per_source_of_truth",
+        "external_action_requires_approval",
+        "skill_output_quarantine"
+      ],
+      "completion_gate": "exact artifact verified; residuals recorded; external actions separately authorized",
+      "branches": [
+        {
+          "condition": "evidence_insufficient_or_stale",
+          "then": "stop_or_return_to_investigation"
+        },
+        {
+          "condition": "consequential_action_requested",
+          "then": "approval_pending_then_apply_approved"
+        },
+        {
+          "condition": "verification_failed",
+          "then": "failed_or_residual_open"
+        }
+      ]
+    },
+    {
+      "scenario_id": "A-256",
+      "title": "Creative legal clearance",
+      "purpose": "Prepare creative assets for qualified legal clearance by inventorying claims, trademarks, copyright, music, talent, locations, releases, licenses, disclosures, territories, and unresolved risk.",
+      "prompts": [
+        "MD-256"
+      ],
+      "default_mode": "DRAFT_ONLY",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "required_inputs": [
+        "observable outcome",
+        "audience or decision owner",
+        "scope and exclusions",
+        "authority",
+        "authoritative evidence or creative inputs"
+      ],
+      "produced_artifacts": [
+        "results/creative-legal-clearance/creative-legal-clearance_result.md"
+      ],
+      "consumed_artifacts": [
+        "runtime_context",
+        "evidence_snapshot",
+        "applicable prior handoffs"
+      ],
+      "protected_surfaces": [
+        "external publication",
+        "production mutation",
+        "regulated decisions",
+        "secrets and sensitive data"
+      ],
+      "possible_external_effects": [
+        "none unless explicitly authorized in MD-00"
+      ],
+      "minimum_assurance": "HIGH_ASSURANCE",
+      "phases": [
+        {
+          "phase_id": "production-md-256",
+          "prompt_ids": [
+            "MD-256"
+          ],
+          "mode": "DRAFT_ONLY"
         }
       ],
       "parallel_groups": [

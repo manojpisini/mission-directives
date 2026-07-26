@@ -36,7 +36,7 @@ produces:
 - typed_runtime_artifacts
 evidence_lane: factual
 preferred_skills: []
-output_media: &id001
+output_media:
 - markdown
 - survey_spec
 - interview_guide
@@ -58,7 +58,11 @@ output_contract:
     format: json
   - path: artifacts/survey_interview_questionnaire_and_research_instrument_design/acceptance_criteria.json
     format: json
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - survey_spec
+  - interview_guide
+  - codebook
 suite_version: 1.8.3
 capability_id: md.research.survey-interview-questionnaire-and-research-instrument-design
 prompt_slug: survey-interview-questionnaire-and-research-instrument-design
@@ -74,7 +78,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 648
+  maximum_body_words: 1291
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -129,6 +133,22 @@ conditional_template_routes:
 - decks/data-story
 - reports/professional-report
 - visual/data-visualization-specification
+aliases:
+- UX research plan
+- Usability test moderator
+imported_profiles:
+- profile_id: CP-084
+  title: UX research plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 92ec09370e99a492e12531ab669a9094bef2d9fc96fde01cb051e8737a088363
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-084-ux-research-plan.schema.json
+- profile_id: CP-085
+  title: Usability test moderator
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 1c106fe31f262afb9d8ae043dcc00071cce72c30ad0ed8f5370a561736797aab
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-085-usability-test-moderator.schema.json
 ---
 
 # Survey, Interview, Questionnaire, and Research Instrument Design
@@ -216,5 +236,112 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-084" title="UX research plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-084-ux-research-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# UX research plan
+
+## Task contract
+
+Design a UX research study that answers a decision-relevant question with appropriate participants, method, bias controls, evidence capture, and synthesis.
+
+## Use this prompt when
+
+- A product/design decision requires user evidence.
+
+## Do not use it for
+
+- Research with no decision owner or use.
+
+## Required inputs
+
+1. Decision and research questions
+2. Target users/segments
+3. Current product/prototype
+4. Constraints and risk
+5. Recruiting/consent capability
+
+## Workflow
+
+1. Define the decision, known evidence, assumptions, and research questions; separate exploratory, evaluative, and measurement goals.
+2. Choose method and sample based on question.
+3. Document interview, contextual inquiry, diary, usability, survey, logs, or mixed method—and state limits.
+4. Specify inclusion/exclusion, recruitment, sample diversity, incentives, consent, privacy, accessibility, and sensitive-topic safeguards.
+5. Create a neutral guide with tasks/probes, counterbalancing, pilot, observer rules, and data-capture template.
+6. Plan analysis: coding, task metrics, severity, triangulation, negative cases, confidence, and how to avoid overgeneralizing small samples.
+7. Define timeline, roles, repository, synthesis artifact, stakeholder readout, and decision/action follow-through.
+
+## Deliverable
+
+- Research plan
+- Recruiting/consent criteria
+- Guide and capture template
+- Synthesis/decision plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-084-ux-research-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every question can influence a named decision.
+- [ ] Method limitations and participant protections are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-085" title="Usability test moderator" schema="schemas/imported/generic_prompt_library_v3_1/cp-085-usability-test-moderator.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Usability test moderator
+
+## Task contract
+
+Moderate a usability test that reveals task comprehension and interaction breakdowns without teaching, leading, or turning participant opinion into behavior evidence.
+
+## Use this prompt when
+
+- Evaluating a prototype or product workflow with participants.
+
+## Do not use it for
+
+- A focus group about general preferences.
+
+## Required inputs
+
+1. Research goals and prototype
+2. Participant criteria; then task scenarios.
+3. Success/critical errors
+4. Consent and recording setup
+
+## Workflow
+
+1. Prepare neutral introduction, consent, confidentiality, think-aloud instruction, and reassurance that the design—not participant—is tested.
+2. Present realistic task scenarios without interface labels or hints; define start/end and capture success, time, errors, recovery, confidence, and assistance.
+3. Use neutral probes after behavior—“What are you expecting?” “What made you choose that?”—and avoid explaining until the task is closed.
+4. Observe navigation, comprehension, feedback, accessibility, trust, and workaround behavior; distinguish moderator intervention from product success.
+5. Run post-task ratings and debrief for expectations and alternatives, without replacing observed behavior with preference; then synthesize issue by task, evidence, severity, frequency, cause hypothesis, affected users, and design recommendation.
+
+## Deliverable
+
+- Moderator script
+- Observation/task record; then severity-ranked usability findings.
+- Evidence clips/notes plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-085-usability-test-moderator.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Task wording does not reveal the interface solution.
+- [ ] Findings cite observed behavior and context.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

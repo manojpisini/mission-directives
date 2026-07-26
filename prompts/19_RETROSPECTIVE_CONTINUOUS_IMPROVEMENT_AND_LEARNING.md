@@ -72,7 +72,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 512
+  maximum_body_words: 1194
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -122,6 +122,22 @@ conditional_template_routes:
 - docs/administrator-manual
 - docs/policy
 - decks/training-workshop
+aliases:
+- Incident postmortem
+- Campaign postmortem
+imported_profiles:
+- profile_id: CP-002
+  title: Incident postmortem
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: c0fbebec44829bbf606917e14dfc6ed827c9685b1c72029cb880ba8858fa76bb
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-002-incident-postmortem.schema.json
+- profile_id: CP-115
+  title: Campaign postmortem
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: fd6f8e6854850644666bb48556db1d816e6b2a093df38ba08970cc84d47ae223
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-115-campaign-postmortem.schema.json
 ---
 
 # Retrospective, Continuous Improvement, and Learning
@@ -194,4 +210,126 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-002" title="Incident postmortem" schema="schemas/imported/generic_prompt_library_v3_1/cp-002-incident-postmortem.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Incident postmortem
+
+## Task contract
+
+Reconstruct an incident as a causal system failure, distinguish root causes from contributing conditions, and define corrective actions that reduce recurrence rather than merely documenting chronology.
+
+## Use this prompt when
+
+- An operational, security, data, reliability, or delivery incident has stabilized enough for analysis.
+
+## Do not use it for
+
+- Live incident command or immediate containment.
+- Assigning blame to individuals.
+
+## Required inputs
+
+1. Incident start/end
+2. detection timestamps
+3. User/business impact
+4. Logs, alerts, traces, deploy and change history
+5. Actions taken during response
+6. Relevant architecture and operating procedures
+
+## Workflow
+
+1. Freeze the factual record: normalize timestamps, sources, and confidence; separate observed facts from recollection and inference.
+2. Build a timeline from precursor conditions through detection, escalation, mitigation, recovery, and confirmation; mark blind periods and delayed signals.
+3. Model the failure mechanism using causal links.
+4. Document triggering event, latent conditions, control failures, propagation, and why existing safeguards did not stop impact.
+5. Evaluate response quality: detection latency, decision latency, ownership, communications, reversibility, and evidence preservation.
+6. Define corrective actions across prevention, detection, containment, recovery, and organizational learning.
+7. Each action needs an owner, due date, verification test, and recurrence hypothesis.
+8. Close with residual risk and explicit non-actions so the postmortem does not become an unbounded wish list.
+
+## Deliverable
+
+- Fact
+- inference-separated timeline
+- Causal analysis and control failures
+- Verified corrective-action register
+- Residual recurrence risk
+
+## Optional artifacts
+
+- `timeline.csv`
+- `causal-map.dot`
+- `corrective-actions.json`
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-002-incident-postmortem.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Root cause statements explain the mechanism, not merely the last human action.
+- [ ] Every action has a measurable closure test.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-115" title="Campaign postmortem" schema="schemas/imported/generic_prompt_library_v3_1/cp-115-campaign-postmortem.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Campaign postmortem
+
+## Task contract
+
+Analyze a completed campaign against goals, audience response, spend, creative/channel performance, operational execution, and learning to decide what to repeat, change, or stop.
+
+## Use this prompt when
+
+- A campaign or major phase has completed.
+
+## Do not use it for
+
+- A celebratory results deck that omits underperformance or data limits.
+
+## Required inputs
+
+1. Objectives/targets
+2. Spend and delivery
+3. Channel/creative metrics
+4. Audience/conversion/retention data
+5. Execution timeline/issues
+
+## Workflow
+
+1. Reconstruct campaign plan, hypotheses, audiences, phases, budget, targets, and major in-flight changes.
+2. Validate data definitions, attribution windows, spend reconciliation, tracking gaps, and comparable baseline.
+3. Analyze outcomes by channel, audience, creative, offer, placement, time, and downstream quality.
+4. Distinguish scale from efficiency and correlation from incrementality.
+5. Evaluate creative/message learnings, fatigue, winners/losers, and whether variants tested cleanly.
+6. Review operations: asset readiness, approvals, pacing, platform issues, handoffs, and decisions that affected results.
+7. Return learnings, causal confidence, actions to scale/modify/retire, and next experiments with owners.
+
+## Deliverable
+
+- Goal-versus-actual analysis
+- Channel/audience/creative learnings
+- Operational retrospective
+- Next-action and experiment plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-115-campaign-postmortem.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Spend and outcomes reconcile.
+- [ ] Learning statements include confidence and alternative explanations.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

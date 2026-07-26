@@ -123,6 +123,14 @@ def test_real_installed_names_are_not_collapsed_as_aliases():
     assert aliases=={'strudle':'strudel'}
 
 
+def test_prompt_lookup_accepts_registered_aliases(monkeypatch):
+    prompt = next(row for row in md.CAT["prompts"] if row["prompt_id"] == "MD-11")
+    monkeypatch.setitem(prompt, "aliases", ["Security threat model"])
+    result = md.lookup("security threat model", kind="prompts")
+    assert result["results"][0]["id"] == "MD-11"
+    assert result["results"][0]["match_type"] == "exact_alias"
+
+
 def test_visual_assets_is_first_class_and_broadly_routed():
     registry={x['skill_id']:x for x in json.loads((ROOT/'skill_registry.json').read_text())['skills']}
     skill=registry['visual-assets']
@@ -177,6 +185,26 @@ def test_lookup_unknown_query_is_honest():
     out = md.lookup('zzzxxyy-no-such-capability', limit=5)
     assert out['status'] == 'no_confident_match'
     assert out['results'] == []
+
+
+def test_lookup_explains_concept_coverage_and_score_components():
+    out = md.lookup('repository hygiene cleanup', limit=3)
+    top = out['results'][0]
+    assert top['matched_concepts']
+    assert 0 < top['query_concept_coverage'] <= 1
+    assert set(top['score_breakdown']) >= {
+        'field_match', 'phrase_boost', 'route_hint_boost', 'coverage_boost'
+    }
+
+
+def test_lookup_recovers_conservative_domain_typos():
+    out = md.lookup('repositry hygene cleanup', limit=8)
+    assert out['status'] == 'matched'
+    assert {'C-04', 'MD-31'} & {row['id'] for row in out['results']}
+    assert out['query_analysis']['corrections'] == {
+        'hygene': 'hygiene',
+        'repositry': 'repository',
+    }
 
 
 def test_exact_execution_twin_is_reciprocal_and_immutable():
@@ -332,6 +360,37 @@ def test_route_intent_reports_unknown_queries_without_guessing():
     result = md.route_intent('md zzzxxyy-no-such-capability')
     assert result['status'] == 'no_confident_match'
     assert result['selection']['targets'] == []
+
+
+def test_route_intent_prefers_prompt_suite_hygiene_over_generic_prompt_creation():
+    result = md.route_intent(
+        'MD inspect all prompts for hygiene cleanup dead junk stale references '
+        'without removing core functionality'
+    )
+    assert result['status'] == 'selected'
+    assert result['selection']['targets'] == ['C-25']
+
+
+def test_route_intent_does_not_let_generic_prompt_shortcut_hijack_suite_hygiene():
+    result = md.route_intent("MD prompt suite cleanup")
+    assert result["status"] == "selected"
+    assert result["selection"]["targets"] == ["C-25"]
+
+def test_route_intent_handles_broad_router_installation_and_docs_delivery_request():
+    result = md.route_intent(
+        'Improve router keyword catalog dictionary coverage and scoring, install all '
+        'runtime files into the working project without validation bloat, and build '
+        'an Astro documentation site deployed with GitHub Pages actions'
+    )
+    assert result['status'] == 'selected'
+    assert result['selection']['targets'] == ['C-63']
+
+
+def test_route_intent_can_select_department_pack():
+    result = md.route_intent('MD security risk and intelligence department pack')
+    assert result['status'] == 'selected'
+    assert result['selection']['type'] == 'department_pack'
+    assert result['selection']['targets'] == ['SECURITY_RISK_AND_INTELLIGENCE']
 
 
 def test_compare_routes_exposes_decision_relevant_differences():

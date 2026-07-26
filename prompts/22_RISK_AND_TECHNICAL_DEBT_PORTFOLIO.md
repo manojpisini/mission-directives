@@ -72,7 +72,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 506
+  maximum_body_words: 1159
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -134,6 +134,24 @@ conditional_template_routes:
 - decks/data-story
 - visual/diagram-specification
 - visual/data-visualization-specification
+aliases:
+- Technical debt triage
+- Risk register and treatment plan
+- Creative risk register
+- Risk register
+imported_profiles:
+- profile_id: CP-018
+  title: Technical debt triage
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: c343eed8777c4859a7626726da0fae1f696adf56bb2dfacde407f9a02e4cdb3e
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-018-technical-debt-triage.schema.json
+- profile_id: CP-067
+  title: Risk register and treatment plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 813cb0f5d565e09078588e38bc74703c62cc053998d71f337481efdba8a140c3
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-067-risk-register-and-treatment-plan.schema.json
 ---
 
 # Risk and Technical Debt Portfolio
@@ -206,4 +224,116 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-018" title="Technical debt triage" schema="schemas/imported/generic_prompt_library_v3_1/cp-018-technical-debt-triage.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Technical debt triage
+
+## Task contract
+
+Triage technical debt by measurable product and change risk, not age or aesthetic preference, and identify deletion or simplification opportunities before remediation work.
+
+## Use this prompt when
+
+- A debt backlog is too large, vague, or disconnected from delivery decisions.
+
+## Do not use it for
+
+- Labeling all legacy code as debt.
+
+## Required inputs
+
+1. Debt candidates and affected areas
+2. Change frequency and incident history
+3. User/business impact
+4. Maintenance and delivery cost
+5. Planned roadmap and deprecation state
+
+## Workflow
+
+1. Normalize each candidate into a concrete condition, affected behavior, evidence, and consequence.
+2. Split broad labels such as “refactor module.”.
+3. Determine whether the underlying capability is still required; prefer delete, merge, or retire before repair.
+4. Assess current impact: defects, security, performance, onboarding, delivery lead time, operational burden, and blocked roadmap.
+5. Estimate change risk and remediation leverage, including how many future changes or incidents the work is likely to affect.
+6. Group causal clusters so symptoms are not funded separately from the same root problem.
+7. Rank into act now, schedule with trigger, opportunistic, accept, or remove, with owner and closure evidence.
+
+## Deliverable
+
+- Normalized debt register
+- Value/risk prioritization
+- Delete/merge opportunities
+- Trigger-based remediation roadmap
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-018-technical-debt-triage.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Each item states what worsens if no action is taken.
+- [ ] Priority is not based solely on code age or size.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-067" title="Risk register and treatment plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-067-risk-register-and-treatment-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Risk register and treatment plan
+
+## Task contract
+
+Create a risk register that turns uncertain future events into owned prevention, contingency, trigger, and treatment decisions rather than a static list.
+
+## Use this prompt when
+
+- Managing project, operational, product, legal, security, financial, or creative risk.
+
+## Do not use it for
+
+- Documenting current issues as future risks.
+
+## Required inputs
+
+1. Objectives and constraints
+2. Known uncertainties/dependencies
+3. Historical incidents
+4. Risk appetite/thresholds
+5. Owners and review cadence
+
+## Workflow
+
+1. State each risk as cause-event-consequence and distinguish risk, issue, assumption, dependency, and opportunity.
+2. Identify affected objective, exposure window, leading indicators, dependencies, and evidence.
+3. Assess likelihood and impact using anchored criteria appropriate to the context.
+4. Record uncertainty rather than false precision.
+5. Select treatment: avoid, reduce, transfer/share, accept, exploit, or monitor; define prevention and contingency separately.
+6. Assign owner, trigger, due date, residual risk, escalation threshold, and acceptance authority.
+7. Review interactions and concentration, retire expired risks, and update from incidents and decisions.
+
+## Deliverable
+
+- Risk register
+- Treatment and contingency actions
+- Trigger/escalation model
+- Residual-risk decisions
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-067-risk-register-and-treatment-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every material risk has an owner and trigger.
+- [ ] Current issues are tracked separately from future uncertainty.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

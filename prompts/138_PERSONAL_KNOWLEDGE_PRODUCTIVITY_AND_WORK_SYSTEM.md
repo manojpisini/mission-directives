@@ -37,7 +37,7 @@ produces:
 - typed_runtime_artifacts
 evidence_lane: hybrid
 preferred_skills: []
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -58,7 +58,9 @@ output_contract:
     format: jsonl
   - path: reports/personal_knowledge_productivity_and_work_system/personal_knowledge_productivity_and_work_system_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.personal_productivity.personal-knowledge-productivity-and-work-system
 prompt_slug: personal-knowledge-productivity-and-work-system
@@ -74,7 +76,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 792
+  maximum_body_words: 1173
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -126,6 +128,15 @@ conditional_template_routes:
 - docs/maintainer-guide
 - decks/training-workshop
 - reports/audit-report
+aliases:
+- Personal manager cockpit
+imported_profiles:
+- profile_id: CP-070
+  title: Personal manager cockpit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 2cf656bbff411c5ed57f9f3121a833c4a36f91c26966cfbe6dcd28b6740ba434
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-070-personal-manager-cockpit.schema.json
 ---
 
 # Personal Knowledge, Productivity, and Work System
@@ -228,5 +239,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-070" title="Personal manager cockpit" schema="schemas/imported/generic_prompt_library_v3_1/cp-070-personal-manager-cockpit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Personal manager cockpit
+
+## Task contract
+
+Create a personal manager cockpit that turns projects, deadlines, delegated work, review queues, and commitments into a small set of current decisions and next actions.
+
+## Use this prompt when
+
+- Managing multiple projects and responsibilities.
+
+## Do not use it for
+
+- Replacing the team’s system of record with a private duplicate.
+
+## Required inputs
+
+1. Active projects and goals
+2. Calendar/deadlines
+3. Delegated tasks and waiting items
+4. Review/approval queue; then risks and priorities.
+
+## Workflow
+
+1. Define the cockpit’s decision horizon—today, this week, this month—and link rather than duplicate canonical project systems.
+2. Normalize commitments into outcome, owner, next action, due date, status, dependency, and source link.
+3. Separate personal actions, delegated/waiting, review/approval, blocked, scheduled, and someday items; then prioritize by consequence, deadline, leverage, dependency, and energy/availability; limit active focus.
+4. Create daily and weekly review loops for stale items, follow-ups, calendar alignment, risk escalation, and completed outcomes.
+5. Return a concise dashboard with top outcomes, next actions, delegated follow-ups, decisions, and parking lot.
+
+## Deliverable
+
+- Manager dashboard
+- Next-action list; then delegation/waiting review.
+- Weekly review protocol
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-070-personal-manager-cockpit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every active item has one next action or waiting condition.
+- [ ] Canonical sources are linked rather than copied without synchronization.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

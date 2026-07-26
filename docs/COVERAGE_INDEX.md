@@ -1,6 +1,6 @@
 # Coverage Index
 
-The suite contains **199 prompts**, **32 genuine pairs**, **110 composite scenarios**, **16 department packs**, and **277 registered skills**. The supplied OpenCode snapshot contains **193 installed skills**, all represented with explicit routing or exclusion status.
+The suite contains **257 prompts**, **32 genuine pairs**, **110 composite scenarios**, **27 department packs**, and **277 registered skills**. The supplied OpenCode snapshot contains **193 installed skills**, all represented with explicit routing or exclusion status.
 
 ## Department packs
 
@@ -239,8 +239,8 @@ Add a new prompt only when its outcome, evidence surface, method, artifact, qual
 | Machine reference runs | 10 | contract references complete; human promotion pending |
 | Model profiles | 4 seeded records | real production measurements pending |
 | Original prompt-area compatibility | 66 of 66 | mapped |
-| MD-to-agent-library crosswalk | 199 prompts | machine-proposed; human review pending |
-| MD-to-prompt-type crosswalk | 199 prompts | machine-proposed; human review pending |
+| MD-to-agent-library crosswalk | 257 prompts | machine-proposed; human review pending |
+| MD-to-prompt-type crosswalk | 257 prompts | machine-proposed; human review pending |
 
 Coverage proves that the test and integration surfaces exist. It does not prove live model or third-party skill quality.
 

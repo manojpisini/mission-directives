@@ -30,3 +30,44 @@ def test_manifest_ignores_daily_runtime_logs(tmp_path):
     assert '.prompt_suite/logs/README.md' in paths
     assert '.prompt_suite/logs/2026-07-15.toml' not in paths
     assert '.prompt_suite/logs/2026-07-15.toml.lock' not in paths
+
+
+def test_manifest_ignores_advisory_lock_files(tmp_path):
+    (tmp_path / "VERSION").write_text("1.0.0\n")
+    runtime = tmp_path / ".prompt_suite"
+    runtime.mkdir()
+    (runtime / "prompt-library-import.lock").write_text("")
+    paths = {row["path"] for row in current(tmp_path)["files"]}
+    assert ".prompt_suite/prompt-library-import.lock" not in paths
+
+
+def test_manifest_keeps_release_lockfiles(tmp_path):
+    (tmp_path / "VERSION").write_text("1.0.0\n")
+    (tmp_path / "Cargo.lock").write_text("version = 3\n")
+    (tmp_path / "dependencies.lock").write_text("sealed\n")
+    paths = {row["path"] for row in current(tmp_path)["files"]}
+    assert "Cargo.lock" in paths
+    assert "dependencies.lock" in paths
+
+def test_manifest_excludes_site_build_and_generated_reference_outputs(tmp_path):
+    (tmp_path / "VERSION").write_text("1.0.0\n")
+    site = tmp_path / "site"
+    (site / "src").mkdir(parents=True)
+    (site / "package.json").write_text("{}\n")
+    (site / "package-lock.json").write_text("{}\n")
+    generated = site / "src" / "content" / "docs" / "reference"
+    generated.mkdir(parents=True)
+    (generated / "index.md").write_text("# generated\n")
+    for relative in ("node_modules/pkg/index.js", "dist/index.html", ".astro/data.json"):
+        output = site / relative
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text("generated\n")
+
+    paths = {row["path"] for row in current(tmp_path)["files"]}
+    assert "site/package.json" in paths
+    assert "site/package-lock.json" in paths
+    assert "site/src/content/docs/reference/index.md" not in paths
+    assert not any(
+        path.startswith(("site/node_modules/", "site/dist/", "site/.astro/"))
+        for path in paths
+    )

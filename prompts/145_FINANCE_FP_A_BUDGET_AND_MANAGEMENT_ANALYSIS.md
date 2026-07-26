@@ -39,7 +39,7 @@ preferred_skills:
 - xlsx
 - document-generate
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -64,7 +64,13 @@ output_contract:
     format: jsonl
   - path: reports/finance_fp_a_budget_and_management_analysis/finance_fp_a_budget_and_management_analysis_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
+  - xlsx_spec
+  - chart_spec
 suite_version: 1.8.3
 capability_id: md.finance.finance-fp-a-budget-and-management-analysis
 prompt_slug: finance-fp-a-budget-and-management-analysis
@@ -80,7 +86,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 814
+  maximum_body_words: 1226
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -122,6 +128,15 @@ template_routes:
 template_policy: required_resolve_then_conditionally_select_by_requested_artifact
 complexity_budget_reason: includes mandatory template-routing contract
 conditional_template_routes: []
+aliases:
+- Finance model sanity check
+imported_profiles:
+- profile_id: CP-076
+  title: Finance model sanity check
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: a965fd3aa37a58172a41757128ac5b05fb5680fca7a4ce9bd7e76f9a5997168c
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-076-finance-model-sanity-check.schema.json
 ---
 
 # Finance, FP&A, Budget, and Management Analysis
@@ -225,5 +240,66 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-076" title="Finance model sanity check" schema="schemas/imported/generic_prompt_library_v3_1/cp-076-finance-model-sanity-check.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Finance model sanity check
+
+## Task contract
+
+Stress-test a financial model for formula integrity, assumption consistency, accounting logic, scenario sensitivity, and decision usefulness without presenting the result as audited financial advice.
+
+## Use this prompt when
+
+- Reviewing spreadsheet or code-based forecasts, budgets, valuations, or operating models.
+
+## Do not use it for
+
+- Certifying financial statements or investment suitability.
+
+## Required inputs
+
+1. Model files and version
+2. Purpose and decision
+3. Historical actuals/source data
+4. Assumptions and scenarios
+5. Accounting/valuation conventions
+
+## Workflow
+
+1. Map sheets/modules, inputs, formulas, outputs, time periods, units, currencies, signs, and scenario controls; identify hard-coded values in formula regions.
+2. Check formula consistency, references, circularity, broken links, subtotal logic, aggregation, date alignment, and balance/reconciliation relationships.
+3. Trace key assumptions to sources and ensure one canonical value.
+4. Test consistency across revenue, cost, headcount, working capital, capex, financing, tax, and cash.
+5. Run base, downside, upside, and break-even sensitivities on the assumptions that actually drive the decision; identify nonlinear or cliff effects.
+6. Compare outputs to historical trends, unit economics, operational capacity, covenants, liquidity, and external benchmarks where appropriate.
+7. Return errors, assumption risks, scenario results, missing inputs, and decision limits with a reproducible check log.
+
+## Deliverable
+
+- Formula/control findings
+- Assumption register
+- Sensitivity/downside analysis
+- Decision caveats and repairs
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-076-finance-model-sanity-check.schema.json` when structured output is requested.
+
+## Task-specific cautions
+
+- Not an audit, tax opinion, investment recommendation, or accounting certification.
+
+## Completion gates
+
+- [ ] Material outputs reconcile to inputs and accounting identities.
+- [ ] Sensitivity focuses on decision-driving assumptions.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

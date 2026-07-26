@@ -1,0 +1,411 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://generic-prompts.invalid/v3.1/CP-167.schema.json",
+  "title": "Government public notice drafting result",
+  "description": "Strict machine-readable result for the prompt. It constrains the work product; it is not a certification of professional correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "const": "CP-167",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "FACT",
+        "SUPPORTED_INFERENCE",
+        "ASSUMPTION",
+        "RECOMMENDATION",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "notice_metadata": {
+          "type": "object",
+          "properties": {
+            "issuing_body": {
+              "type": "string",
+              "minLength": 1
+            },
+            "authority": {
+              "type": "string",
+              "minLength": 1
+            },
+            "notice_type": {
+              "type": "string",
+              "minLength": 1
+            },
+            "jurisdiction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "project_or_docket": {
+              "type": "string",
+              "minLength": 1
+            },
+            "approval_status": {
+              "type": "string",
+              "enum": [
+                "draft",
+                "legal_review",
+                "approved",
+                "published"
+              ],
+              "minLength": 1
+            }
+          },
+          "required": [
+            "issuing_body",
+            "authority",
+            "notice_type",
+            "jurisdiction",
+            "project_or_docket",
+            "approval_status"
+          ],
+          "additionalProperties": false
+        },
+        "public_notice": {
+          "type": "object",
+          "properties": {
+            "headline": {
+              "type": "string",
+              "minLength": 1
+            },
+            "purpose": {
+              "type": "string",
+              "minLength": 1
+            },
+            "proposed_action": {
+              "type": "string",
+              "minLength": 1
+            },
+            "affected_area_or_parties": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dates_and_times": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "participation_methods": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            },
+            "records_location": {
+              "type": "string",
+              "minLength": 1
+            },
+            "contact": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "headline",
+            "purpose",
+            "proposed_action",
+            "affected_area_or_parties",
+            "dates_and_times",
+            "participation_methods",
+            "records_location",
+            "contact"
+          ],
+          "additionalProperties": false
+        },
+        "accessibility_language": {
+          "type": "object",
+          "properties": {
+            "accommodations": {
+              "type": "string",
+              "minLength": 1
+            },
+            "language_access": {
+              "type": "string",
+              "minLength": 1
+            },
+            "alternative_formats": {
+              "type": "string",
+              "minLength": 1
+            },
+            "request_deadline": {
+              "type": "string",
+              "minLength": 1
+            },
+            "contact": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "accommodations",
+            "language_access",
+            "alternative_formats",
+            "request_deadline",
+            "contact"
+          ],
+          "additionalProperties": false
+        },
+        "requirements_check": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "requirement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              },
+              "included": {
+                "type": "boolean"
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "requirement",
+              "source",
+              "included",
+              "location",
+              "notes"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "publication_record": {
+          "type": "object",
+          "properties": {
+            "channels": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "publication_dates": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "proof_locations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "channels",
+            "publication_dates",
+            "proof_locations"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "notice_metadata",
+        "public_notice",
+        "accessibility_language",
+        "requirements_check",
+        "publication_record"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "Stable evidence identifier.",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "file",
+              "line_range",
+              "command_output",
+              "document",
+              "dataset",
+              "interview",
+              "observation",
+              "external_source",
+              "other"
+            ],
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "description": "Path, URL, record identifier, or source name.",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "description": "Line range, section, timestamp, query, or other locator.",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Limitations or context.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_type",
+          "source",
+          "location",
+          "supports",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "due_or_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "backlog"
+            ],
+            "minLength": 1
+          },
+          "validation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "in_progress",
+              "blocked",
+              "complete",
+              "rejected"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action_id",
+          "action",
+          "owner",
+          "due_or_trigger",
+          "priority",
+          "validation",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "run_id",
+    "generated_at",
+    "epistemic_status",
+    "summary",
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "actions"
+  ],
+  "additionalProperties": false
+}

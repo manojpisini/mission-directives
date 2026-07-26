@@ -71,7 +71,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 503
+  maximum_body_words: 1330
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -128,6 +128,22 @@ conditional_template_routes:
 - docs/adr
 - visual/diagram-specification
 - visual/data-visualization-specification
+aliases:
+- Dependency upgrade / replacement
+- Architecture drift audit
+imported_profiles:
+- profile_id: CP-004
+  title: Dependency upgrade / replacement
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 18834cb13ff781a7809368d167db0cc647b21bb9f8cd0b183229e2af3b2b0fdd
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-004-dependency-upgrade-replacement.schema.json
+- profile_id: CP-017
+  title: Architecture drift audit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: df8001e33faf88f0ffcad6997b3b0285ace417fb6cdfb9773b7256c9363feed5
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-017-architecture-drift-audit.schema.json
 ---
 
 # Architecture and Technology Decision Analysis
@@ -200,4 +216,139 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-004" title="Dependency upgrade / replacement" schema="schemas/imported/generic_prompt_library_v3_1/cp-004-dependency-upgrade-replacement.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Dependency upgrade / replacement
+
+## Task contract
+
+Evaluate and execute a dependency upgrade or replacement as a behavioral and supply-chain change, not a version-number edit.
+
+## Use this prompt when
+
+- Upgrading a library/runtime/framework or replacing one dependency with another.
+
+## Do not use it for
+
+- Blind bulk upgrades without a bounded risk review.
+
+## Required inputs
+
+1. Current and target versions or candidate replacement
+2. Direct and transitive usage
+3. Release notes, advisories, licenses, and support policy
+4. Affected build/runtime environments
+5. Regression and rollback constraints
+
+## Workflow
+
+1. Inventory actual usage: imports, enabled features, configuration, generated code, plugins, native bindings, and transitive reliance.
+2. Review release or replacement deltas for breaking behavior, defaults, security fixes, removed APIs, platform support, and licensing.
+3. Map affected contracts and create a change matrix by package, environment, and runtime path; separate compile-time from behavioral risk.
+4. Design the smallest migration, including compatibility shims only where a defined consumer requires them.
+5. Identify dependencies that can be deleted instead.
+6. Run targeted compile, test, integration, performance, and packaging checks; compare lockfile and artifact changes for unexpected transitive churn.
+7. Define rollout, rollback, monitoring, and the condition for removing temporary compatibility code.
+
+## Evidence and tools
+
+- Inspect package-manager dependency tree and lockfile diff.
+- Search for imported symbols, feature flags, config keys, and runtime registration.
+
+## Deliverable
+
+- Upgrade/replacement risk matrix
+- Required code/config changes
+- Validation and rollout plan
+- Rollback and deprecation conditions
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-004-dependency-upgrade-replacement.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The recommendation accounts for behavior, security, license, platform, and transitive risk.
+- [ ] Temporary shims have an owner and removal trigger.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-017" title="Architecture drift audit" schema="schemas/imported/generic_prompt_library_v3_1/cp-017-architecture-drift-audit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Architecture drift audit
+
+## Task contract
+
+Compare intended architecture with actual dependency, ownership, and runtime behavior to identify boundary erosion, duplicated responsibilities, and undocumented structural change.
+
+## Use this prompt when
+
+- Architecture documents and repository reality may have diverged.
+
+## Do not use it for
+
+- Enforcing diagrams that are no longer authoritative without stakeholder review.
+
+## Required inputs
+
+1. Architecture
+2. ADR/RFC sources
+3. Repository package/module graph
+4. Runtime topology and data flows
+5. Ownership and deployment boundaries
+6. Known exceptions and migration history
+
+## Workflow
+
+1. Establish the authoritative architecture by date and decision status.
+2. Separate current rules from historical intent.
+3. Generate actual dependency, call, data-flow, and deployment views from code/configuration.
+4. Include dynamic registration and generated paths.
+5. Compare intended versus actual boundaries: dependency direction, service ownership, data ownership, shared libraries, optional/core coupling, and bypasses.
+6. Classify each difference as beneficial evolution, approved exception, accidental drift, unfinished migration, or obsolete documentation.
+7. Assess consequences—change coupling, security, deployment risk, duplicated policy, inconsistent behavior, and loss of replaceability.
+8. Recommend accept-and-document, repair, consolidate, or redesign with a staged path and architecture tests.
+
+## Deliverable
+
+- Intended-vs-actual architecture map
+- Drift register with classification
+- Boundary
+- ownership corrections
+- Architecture-test plan
+
+## Optional artifacts
+
+- `actual-dependencies.dot`
+- `drift-register.json`
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-017-architecture-drift-audit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every drift finding cites both the intended rule and actual evidence.
+- [ ] Approved evolution is not mislabeled as defect.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+<reviewed_workflow_refinement profile="CP-017" review="generic-v3.1-blind-proportionality-v1" review_artifact="prompt_imports/generic_prompt_library_v3_1_blind_proportionality_review.md">
+The source snapshot above is retained for provenance. For Mission Directives execution, use this six-stage workflow:
+
+1. Establish the authoritative architecture by date and decision status, separating current rules from historical intent.
+2. Generate actual dependency, call, data-flow, and deployment views from code and configuration, including dynamic registration and generated paths.
+3. Compare intended and actual dependency direction, service and data ownership, shared libraries, optional/core coupling, and bypasses.
+4. Classify each difference as beneficial evolution, approved exception, accidental drift, unfinished migration, or obsolete documentation.
+5. Assess change coupling, security, deployment risk, duplicated policy, inconsistent behavior, and loss of replaceability.
+6. Recommend accept-and-document, repair, consolidate, or redesign, with a staged path and architecture tests.
+</reviewed_workflow_refinement>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

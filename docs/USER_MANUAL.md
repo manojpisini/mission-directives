@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This manual explains how to use the suite without reading all 199 prompts. It focuses on selecting the right outcome, setting honest authority, choosing an evidence lane, understanding generated artifacts, and knowing when work is not complete.
+This manual explains how to use the suite without reading all 257 prompts. It focuses on selecting the right outcome, setting honest authority, choosing an evidence lane, understanding generated artifacts, and knowing when work is not complete.
 
 ## Mental model
 

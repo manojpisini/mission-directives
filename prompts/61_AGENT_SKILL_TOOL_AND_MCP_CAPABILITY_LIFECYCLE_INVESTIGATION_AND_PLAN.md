@@ -76,7 +76,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 676
+  maximum_body_words: 1065
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -130,6 +130,15 @@ conditional_template_routes:
 - core/acceptance-criteria
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Workflow wrapper parity
+imported_profiles:
+- profile_id: CP-026
+  title: Workflow wrapper parity
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 2f1ff32282227a5269b7b68287526855369f39fb77a7f6a30b19ebe0b61dc2c8
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-026-workflow-wrapper-parity.schema.json
 ---
 
 # Agent, Skill, Tool, and MCP Capability Lifecycle — Investigation and Plan
@@ -216,4 +225,61 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-62`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-026" title="Workflow wrapper parity" schema="schemas/imported/generic_prompt_library_v3_1/cp-026-workflow-wrapper-parity.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Workflow wrapper parity
+
+## Task contract
+
+Verify that multiple workflow wrappers invoke the same underlying behavior with equivalent arguments, paths, outputs, errors, and cleanup across supported shells and platforms.
+
+## Use this prompt when
+
+- A project exposes Bash, PowerShell, Python, Make, package-script, or CI wrappers for the same operation.
+
+## Do not use it for
+
+- Demanding identical syntax where platform semantics legitimately differ.
+
+## Required inputs
+
+1. Wrapper scripts and canonical implementation
+2. Supported operating systems/shells
+3. Argument and environment contract
+4. Fixture workspace
+5. Expected outputs and failure cases
+
+## Workflow
+
+1. Identify the canonical operation and enumerate every wrapper, alias, documentation command, and CI invocation.
+2. Normalize argument mapping, defaults, environment variables, working directory, path resolution, quoting, encoding, and shell error behavior.
+3. Run a parity matrix across success, missing prerequisite, invalid input, spaces/unicode paths, partial failure, interruption, and dry-run cases.
+4. Compare side effects, stdout/stderr, exit codes, generated files, cleanup, and idempotency; hash outputs where deterministic.
+5. Classify differences as intentional platform adaptation, documentation drift, wrapper defect, or canonical-implementation defect.
+6. Consolidate duplicated logic into the canonical implementation and add cross-platform contract tests.
+
+## Deliverable
+
+- Wrapper inventory and canonical target
+- Cross-platform parity matrix
+- Defects and intentional differences
+- Consolidation/test plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-026-workflow-wrapper-parity.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Equivalent invocations produce equivalent state and machine-observable results.
+- [ ] Platform-specific differences are documented and tested.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

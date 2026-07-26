@@ -72,11 +72,12 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 535
+  maximum_body_words: 1918
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
   maximum_primary_artifacts: 1
+  maximum_body_lines: 347
 output_profiles:
   minimum:
   - reports/threat_modeling_and_attack_surface_analysis/threat_modeling_and_attack_surface_analysis_investigation.md
@@ -118,6 +119,36 @@ template_routes:
 - reports/security-assessment
 template_policy: required_resolve_then_conditionally_select_by_requested_artifact
 conditional_template_routes: []
+aliases:
+- Security threat model
+- Attack path analysis
+- Abuse case modeling
+- CI/CD attack surface audit
+imported_profiles:
+- profile_id: CP-011
+  title: Security threat model
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 014e046b5b32f5a2e9ec5ae00fee3590e86fcfb98c0bbc6d72c1438a92224af1
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-011-security-threat-model.schema.json
+- profile_id: CP-031
+  title: Attack path analysis
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: fe135b9494edcd024456bfac651ddd97d09c274aeb2ba4228daf38bcb4912868
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-031-attack-path-analysis.schema.json
+- profile_id: CP-032
+  title: Abuse case modeling
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 8a5e57c51dfb0d70d919903e530de88dfdd581743ef5b61402ae9e68f6e379f1
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-032-abuse-case-modeling.schema.json
+- profile_id: CP-036
+  title: CI/CD attack surface audit
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: f29e06ce4eadb80d84178b4e7ba8dc93317a43039c27c7428f996f929ddb8b7b
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-036-ci-cd-attack-surface-audit.schema.json
 ---
 
 # Threat Modeling and Attack Surface Analysis
@@ -190,4 +221,258 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-011" title="Security threat model" schema="schemas/imported/generic_prompt_library_v3_1/cp-011-security-threat-model.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Security threat model
+
+## Task contract
+
+Create an architecture-grounded threat model that connects assets and security objectives to realistic threat scenarios, controls, validation, and residual-risk ownership.
+
+## Use this prompt when
+
+- Designing or reviewing a system, feature, service, or trust-boundary change.
+
+## Do not use it for
+
+- A vulnerability scan with no architectural context.
+
+## Required inputs
+
+1. Architecture
+2. data-flow diagrams
+3. Assets and security objectives
+4. Actors, identities, roles, and trust boundaries
+5. Deployment and integration model
+6. Existing controls and incident history
+
+## Workflow
+
+1. Define scope, assets, security objectives, assumptions, and out-of-scope dependencies.
+2. Identify what loss of confidentiality, integrity, availability, authenticity, or accountability means.
+3. Map components, data flows, identities, entry points, trust boundaries, persistence, and external dependencies with evidence.
+4. Enumerate threats using an appropriate method—such as STRIDE for element-level coverage, abuse cases for product misuse, and attack trees for high-impact goals—without treating the framework as the result.
+5. For each scenario, document preconditions, attacker capability, path, affected asset, existing control, control gap, likelihood rationale, impact, and detection opportunity.
+6. Prioritize mitigations by risk reduction and implementation layer.
+7. Define security requirements and verification tests.
+8. Assign residual-risk acceptance, review triggers, and model-maintenance ownership.
+
+## Decision and escalation rules
+
+- Separate inherent risk from residual risk after existing and proposed controls.
+- Escalate any material threat that crosses a trust boundary without a control owner, test, or accepted-risk decision.
+- Do not treat completion of STRIDE or another taxonomy as proof that threat coverage is complete.
+
+## Frameworks and professional methods
+
+- STRIDE
+- abuse cases
+- attack trees
+- MITRE ATT&amp;CK/CAPEC when mapping known techniques is useful
+
+## Deliverable
+
+- System/data-flow
+- trust-boundary model
+- Threat and abuse-case register
+- Mitigation and verification plan
+- Residual-risk register
+
+## Optional artifacts
+
+- `data-flow-model.dot`
+- `threat-register.json`
+- `security-requirements.md`
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-011-security-threat-model.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Each material threat names a path, asset, control, and verification method.
+- [ ] Residual risk has an accountable owner.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-031" title="Attack path analysis" schema="schemas/imported/generic_prompt_library_v3_1/cp-031-attack-path-analysis.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Attack path analysis
+
+## Task contract
+
+Trace realistic attacker paths from exposed entry points through privilege, trust, and dependency transitions to material impact, identifying where the chain can be broken.
+
+## Use this prompt when
+
+- Prioritizing security findings in an architecture or environment.
+
+## Do not use it for
+
+- Listing vulnerabilities without chaining prerequisites and reachability.
+
+## Required inputs
+
+1. Architecture, identities, network
+2. data flows
+3. Assets and impact objectives
+4. Known vulnerabilities/misconfigurations
+5. Trust relationships and credentials
+6. Existing preventive/detective controls
+
+## Workflow
+
+1. Define attacker starting positions, capabilities, objectives, and prohibited assumptions.
+2. Enumerate reachable entry points and preconditions using architecture and evidence, not vulnerability scores alone.
+3. Build paths through authentication, authorization, credential access, privilege gain, lateral movement, persistence, and data/command channels.
+4. For every edge, record required condition, evidence, uncertainty, control, observability, and whether the edge is currently exploitable.
+5. Rank complete paths by impact, likelihood, stealth, prerequisites, and control concentration.
+6. Identify single controls that break multiple paths.
+7. Recommend remediation and detection at the earliest economical cut points, then state residual reachable paths.
+
+## Decision and escalation rules
+
+- Connect attack-path steps only when prerequisites and reachable transitions are evidenced; mark hypothetical edges explicitly.
+- Prioritize choke points that break several paths over controls that affect only one terminal step.
+- Keep reproduction within authorized, isolated targets and stop before actions that could affect live systems or third parties.
+
+## Frameworks and professional methods
+
+- attack trees
+- MITRE ATT&amp;CK where technique mapping adds value
+
+## Deliverable
+
+- Attack-path graph
+- Edge evidence and assumptions
+- Path prioritization
+- Choke-point mitigation/detection plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-031-attack-path-analysis.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] No path is reported without a complete sequence of evidenced or explicitly assumed edges.
+- [ ] Mitigations identify which path edges they break.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-032" title="Abuse case modeling" schema="schemas/imported/generic_prompt_library_v3_1/cp-032-abuse-case-modeling.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Abuse case modeling
+
+## Task contract
+
+Model how legitimate features can be intentionally misused without exploiting a software defect, and design product, policy, and operational controls proportionate to that misuse.
+
+## Use this prompt when
+
+- Assessing fraud, harassment, automation abuse, evasion, manipulation, or policy circumvention.
+
+## Do not use it for
+
+- Traditional vulnerability enumeration alone.
+
+## Required inputs
+
+1. Intended user journeys and product capabilities
+2. Actors, incentives, and valuable outcomes
+3. Policy and legal constraints
+4. Rate/scale/economics of abuse
+5. Existing moderation, fraud, or support controls
+
+## Workflow
+
+1. Identify valuable actions and resources the product intentionally exposes, including composition of individually legitimate features.
+2. Define misuse actors, incentives, capabilities, constraints, and target victims or systems.
+3. Write abuse cases as actor-goal-precondition-sequence-impact stories, covering low-tech, high-scale, collusive, automated, and insider variants.
+4. Assess detectability, economics, false-positive harm, evasion, and how controls may displace abuse rather than reduce it.
+5. Design layered controls across product friction, limits, verification, permissions, monitoring, review, appeals, and victim recovery.
+6. Prioritize by expected harm and control effectiveness.
+7. Create abuse metrics, test scenarios, and residual-risk ownership.
+
+## Deliverable
+
+- Abuse-case catalog
+- Misuse economics and detection analysis
+- Layered control plan
+- Abuse metrics and test cases
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-032-abuse-case-modeling.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Cases use intended functionality rather than assuming an exploit.
+- [ ] Controls account for false positives and user recovery.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-036" title="CI/CD attack surface audit" schema="schemas/imported/generic_prompt_library_v3_1/cp-036-ci-cd-attack-surface-audit.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# CI/CD attack surface audit
+
+## Task contract
+
+Model and test the CI/CD pipeline as a privileged production system, identifying paths from untrusted changes to secrets, artifacts, releases, and deployment.
+
+## Use this prompt when
+
+- Reviewing GitHub Actions, GitLab CI, Jenkins, Azure Pipelines, or equivalent.
+
+## Do not use it for
+
+- A syntax-only workflow review.
+
+## Required inputs
+
+1. Workflow definitions
+2. triggers
+3. Repository/organization permissions
+4. Secrets, tokens, OIDC, environments, and approvals
+5. Artifact/cache/package flow
+6. Release/deployment/signing process
+
+## Workflow
+
+1. Map triggers and trust: push, pull request, fork, `pull_request_target`, schedules, manual dispatch, reusable workflows, and external contributions.
+2. Inventory job permissions, secrets, OIDC claims, environments, runners, service accounts, and which untrusted code can execute before privileged steps.
+3. Trace source, dependency, cache, artifact, image, package, and release flows for poisoning, substitution, path traversal, or unsigned promotion.
+4. Inspect third-party actions, mutable tags, shell interpolation, checkout refs, generated outputs, artifact downloads, cache keys, and command injection.
+5. Test controlled scenarios for fork PRs, compromised dependency, artifact replacement, cache collision, and approval bypass.
+6. Apply least permissions, isolation, trusted build separation, provenance/signing, protected environments, and detection with regression checks.
+
+## Deliverable
+
+- Pipeline trust/permission graph
+- Attack-surface findings
+- Artifact provenance analysis
+- Hardening and regression-test plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-036-ci-cd-attack-surface-audit.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Untrusted code cannot access production secrets or alter trusted release artifacts without an explicit gate.
+- [ ] Every third-party action/version is accounted for.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

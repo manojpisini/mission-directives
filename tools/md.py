@@ -38,8 +38,10 @@ except ImportError:
     from tools.telemetry import append_event
 try:
     from keyword_context import parse_keyword_context
+    from intent_router import lookup_routes
 except ImportError:
     from tools.keyword_context import parse_keyword_context
+    from tools.intent_router import lookup_routes
 
 ROOT = Path(__file__).resolve().parents[1]
 MODES = {
@@ -104,286 +106,27 @@ def data():
 ) = data()
 SKILL_ALIASES = load_json("config/skill_aliases.json").get("aliases", {})
 AGENT_GUIDANCE_POLICY = load_json("policies/agent_guidance_policy.json")
+ROUTER_KEYWORDS = load_json("config/router_keywords.json")
 
 
 def dedupe(items):
     return list(dict.fromkeys(items))
 
 
-LOOKUP_STOPWORDS = {
-    "a",
-    "an",
-    "and",
-    "as",
-    "at",
-    "be",
-    "by",
-    "for",
-    "from",
-    "in",
-    "into",
-    "is",
-    "it",
-    "of",
-    "on",
-    "or",
-    "the",
-    "to",
-    "use",
-    "using",
-    "with",
-    "md",
-}
-LOOKUP_EXPANSIONS = {
-    "audit": {"audit", "review", "assessment", "investigation", "verification"},
-    "fix": {
-        "fix",
-        "repair",
-        "remediation",
-        "resolution",
-        "execution",
-        "implementation",
-    },
-    "debug": {"debug", "debugging", "bug", "root", "cause", "triage"},
-    "research": {"research", "evidence", "investigation", "analysis", "sources"},
-    "report": {"report", "reporting", "document", "memo", "brief"},
-    "visual": {
-        "visual",
-        "assets",
-        "vector",
-        "illustration",
-        "infographic",
-        "diagram",
-        "presentation",
-        "graphics",
-    },
-    "assets": {"assets", "visual", "vector", "illustration", "graphics"},
-    "skill": {"skill", "skills", "adapter", "capability", "tool"},
-    "loop": {"loop", "iteration", "iterative", "batch", "convergence", "repeat"},
-    "productivity": {
-        "productivity",
-        "work",
-        "system",
-        "tasks",
-        "knowledge",
-        "planning",
-    },
-    "prompt": {
-        "prompt",
-        "prompts",
-        "context",
-        "engineering",
-        "optimization",
-        "addition",
-        "authoring",
-        "registration",
-    },
-    "new": {"new", "add", "addition", "create", "authoring", "registration"},
-    "security": {"security", "threat", "vulnerability", "hardening", "risk"},
-    "academic": {"academic", "paper", "scholarly", "research", "manuscript", "review"},
-    "marketing": {"marketing", "campaign", "content", "seo", "audience", "growth"},
-    "presentation": {"presentation", "slides", "deck", "visual"},
-}
-
-
-def _lookup_tokens(value: str) -> list[str]:
-    raw = [x.lower() for x in re.findall(r"[A-Za-z0-9]+", value)]
-    return [x for x in raw if x not in LOOKUP_STOPWORDS]
-
-
-def _expanded_lookup_tokens(tokens: list[str]) -> set[str]:
-    expanded = set(tokens)
-    for token in tokens:
-        expanded.update(LOOKUP_EXPANSIONS.get(token, set()))
-    return expanded
-
-
-def _score_lookup_candidate(
-    query: str,
-    tokens: set[str],
-    identifier: str,
-    title: str,
-    fields: list[tuple[str, int]],
-) -> tuple[float, str, list[str]]:
-    q = query.strip().lower()
-    ident = identifier.lower()
-    title_l = title.lower()
-    if q == ident:
-        return 100.0, "exact_id", [identifier]
-    score = 0.0
-    match_type = "keyword"
-    matched = set()
-    if q and q == title_l:
-        score += 60
-        match_type = "exact_title"
-    elif q and q in title_l:
-        score += 18
-        match_type = "title_phrase"
-    for text, weight in fields:
-        words = set(_lookup_tokens(text))
-        overlap = tokens & words
-        if overlap:
-            score += weight * len(overlap)
-            matched.update(overlap)
-    if tokens:
-        score += 8 * (len(matched) / len(tokens))
-    return score, match_type, sorted(matched)
-
-
 def lookup(query: str, limit: int = 8, kind: str = "all") -> dict[str, Any]:
-    """Deterministic keyword lookup across prompts, scenarios, packs, and skills.
-
-    This is intentionally lexical and transparent. It is a fast discovery aid,
-    not a substitute for `explain`, which remains the authority for a selected
-    target's complete graph and constraints.
-    """
-    if kind not in {"all", "prompts", "scenarios", "packs", "skills"}:
-        raise ValueError(f"Invalid lookup kind: {kind}")
-    query = query.strip()
-    if not query:
-        raise ValueError("lookup query cannot be empty")
-    base_tokens = _lookup_tokens(query)
-    tokens = _expanded_lookup_tokens(base_tokens)
-    results = []
-    if kind in {"all", "prompts"}:
-        for p in CAT["prompts"]:
-            fields = [
-                (p.get("title", ""), 10),
-                (p.get("description", ""), 4),
-                (p.get("category", ""), 7),
-                (p.get("prompt_role", ""), 5),
-                (p.get("prompt_type", ""), 5),
-                (" ".join(p.get("tags", [])), 7),
-                (" ".join(p.get("preferred_skills", [])), 8),
-                (p.get("capability_id", ""), 6),
-            ]
-            score, match_type, matched = _score_lookup_candidate(
-                query, tokens, p["prompt_id"], p["title"], fields
-            )
-            if score >= 8:
-                results.append(
-                    {
-                        "kind": "prompt",
-                        "id": p["prompt_id"],
-                        "title": p["title"],
-                        "description": p.get("description"),
-                        "category": p.get("category"),
-                        "role": p.get("prompt_role"),
-                        "default_mode": p.get("default_mode"),
-                        "path": p.get("canonical_path"),
-                        "score": round(score, 3),
-                        "match_type": match_type,
-                        "matched_terms": matched,
-                    }
-                )
-    if kind in {"all", "scenarios"}:
-        for s in SC["composite_scenarios"]:
-            fields = [
-                (s.get("title", ""), 11),
-                (s.get("purpose", ""), 5),
-                (" ".join(s.get("prompts", [])), 1),
-            ]
-            score, match_type, matched = _score_lookup_candidate(
-                query, tokens, s["scenario_id"], s["title"], fields
-            )
-            if score >= 8:
-                results.append(
-                    {
-                        "kind": "scenario",
-                        "id": s["scenario_id"],
-                        "title": s["title"],
-                        "description": s.get("purpose"),
-                        "default_mode": s.get("default_mode"),
-                        "score": round(score, 3),
-                        "match_type": match_type,
-                        "matched_terms": matched,
-                    }
-                )
-    if kind in {"all", "packs"}:
-        for pack_id, prompt_ids in PACKS["department_packs"].items():
-            title = pack_id.replace("_", " ").title()
-            prompt_titles = " ".join(
-                BY_ID[x]["title"] for x in prompt_ids if x in BY_ID
-            )
-            score, match_type, matched = _score_lookup_candidate(
-                query, tokens, pack_id, title, [(title, 8), (prompt_titles, 1)]
-            )
-            if score >= 10:
-                results.append(
-                    {
-                        "kind": "pack",
-                        "id": pack_id,
-                        "title": title,
-                        "description": "Department discovery profile; compile to a smaller task-specific graph before execution.",
-                        "score": round(score, 3),
-                        "match_type": match_type,
-                        "matched_terms": matched,
-                    }
-                )
-    if kind in {"all", "skills"}:
-        for skill in SKILLS["skills"]:
-            sid = skill["skill_id"]
-            title = sid.replace("-", " ").title()
-            fields = [
-                (sid, 12),
-                (skill.get("purpose", ""), 5),
-                (" ".join(skill.get("prompt_routes", [])), 1),
-                (skill.get("kind", ""), 2),
-            ]
-            score, match_type, matched = _score_lookup_candidate(
-                query, tokens, sid, title, fields
-            )
-            if score >= 9:
-                results.append(
-                    {
-                        "kind": "skill",
-                        "id": sid,
-                        "title": title,
-                        "description": skill.get("purpose"),
-                        "skill_status": skill_status(sid),
-                        "score": round(score, 3),
-                        "match_type": match_type,
-                        "matched_terms": matched,
-                    }
-                )
-    original = set(base_tokens)
-    filtered = []
-    for row in results:
-        base_hits = original & set(row.get("matched_terms", []))
-        coverage = (len(base_hits) / len(original)) if original else 0.0
-        if (
-            row.get("match_type") in {"exact_id", "exact_title", "title_phrase"}
-            or coverage >= 0.34
-        ):
-            row["query_token_coverage"] = round(coverage, 3)
-            filtered.append(row)
-    results = filtered
-    kind_priority = {"scenario": 0, "prompt": 1, "skill": 2, "pack": 3}
-    results.sort(
-        key=lambda row: (-row["score"], kind_priority.get(row["kind"], 9), row["id"])
+    """Deterministic concept-aware lookup across runtime routing metadata."""
+    return lookup_routes(
+        query,
+        cat=CAT,
+        scenarios=SC,
+        packs=PACKS,
+        skills=SKILLS,
+        by_id=BY_ID,
+        config=ROUTER_KEYWORDS,
+        skill_status=skill_status,
+        limit=limit,
+        kind=kind,
     )
-    results = results[: max(1, min(limit, 50))]
-    if not results:
-        return {
-            "status": "no_confident_match",
-            "query": query,
-            "kind": kind,
-            "results": [],
-            "next_step": "Refine the terms or use MD-191 to ask one route-changing clarification question.",
-        }
-    top = results[0]["score"]
-    for row in results:
-        row["confidence"] = round(
-            min(1.0, row["score"] / max(100.0, top if top else 100.0)), 3
-        )
-    return {
-        "status": "matched",
-        "query": query,
-        "kind": kind,
-        "result_count": len(results),
-        "results": results,
-        "next_step": f"Run `python tools/md.py explain {results[0]['id']}` before execution.",
-    }
 
 
 def _selection_type(targets: list[str], exact: bool = False) -> str:
@@ -473,7 +216,7 @@ def route_intent(request: str, limit: int = 8) -> dict[str, Any]:
     routable = [
         row
         for row in found.get("results", [])
-        if row["kind"] in {"prompt", "scenario", "department_pack"}
+        if row["kind"] in {"prompt", "scenario", "pack"}
     ]
     minimum = AGENT_GUIDANCE_POLICY.get("selection_policy", {}).get(
         "minimum_lookup_score", 12

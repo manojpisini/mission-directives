@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "description": "Deterministic routing vocabulary, concept aliases, scoring weights, and narrow route hints. This file is runtime configuration and is installed with Mission Directives.",
+  "stopwords": [
+    "a",
+    "all",
+    "also",
+    "an",
+    "and",
+    "any",
+    "as",
+    "at",
+    "be",
+    "better",
+    "by",
+    "for",
+    "from",
+    "full",
+    "in",
+    "into",
+    "is",
+    "it",
+    "make",
+    "no",
+    "such",
+    "md",
+    "of",
+    "on",
+    "or",
+    "proper",
+    "the",
+    "to",
+    "use",
+    "using",
+    "with"
+  ],
+  "concepts": {
+    "analysis": ["analysis", "analyze", "analyst", "assessment", "inspect", "investigate"],
+    "approval": ["approval", "approve", "authorization", "authorize", "consent", "signoff"],
+    "architecture": ["architecture", "architectural", "system-design", "blueprint"],
+    "attack": ["attack", "attacks", "exploit", "exploitation", "offensive", "red-team", "adversarial"],
+    "audit": ["audit", "auditing", "review", "assessment", "inspection"],
+    "automation": ["automation", "automate", "workflow", "orchestration", "pipeline"],
+    "brand": ["brand", "branding", "identity", "visual-identity"],
+    "campaign": ["campaign", "promotion", "launch", "activation"],
+    "cleanup": ["cleanup", "clean-up", "cleaning", "hygiene", "housekeeping", "declutter", "junk", "cruft", "bloat"],
+    "code": ["code", "codebase", "repository", "repo", "software", "implementation"],
+    "content": ["content", "editorial", "copy", "copywriting", "creator"],
+    "cybersecurity": ["cybersecurity", "infosec", "application-security", "appsec", "security"],
+    "data": ["data", "dataset", "records", "spreadsheet", "table"],
+    "data_cleaning": ["data-cleaning", "cleanse", "cleansing", "deduplicate", "normalize", "impute"],
+    "dead": ["dead", "unused", "obsolete", "orphaned", "unreachable", "deprecated"],
+    "deployment": ["deployment", "deploy", "publish", "release", "hosting"],
+    "design": ["design", "designer", "creative", "visual", "ux", "ui"],
+    "documentation": ["documentation", "docs", "guide", "manual", "wiki", "knowledge-base", "reference"],
+    "evidence": ["evidence", "source", "sources", "citation", "proof", "verification"],
+    "feature": ["feature", "functionality", "capability", "enhancement"],
+    "creation": ["creation", "create", "add", "addition", "new", "authoring", "registration"],
+    "finance": ["finance", "financial", "accounting", "budget", "forecast"],
+    "governance": ["governance", "policy", "compliance", "control", "oversight"],
+    "healthcare": ["healthcare", "clinical", "patient", "medical", "health"],
+    "installation": ["installation", "install", "setup", "bootstrap", "distribution", "payload", "integration"],
+    "legal": ["legal", "law", "contract", "regulatory", "compliance"],
+    "management": ["management", "manager", "leadership", "operations", "administration"],
+    "manifest": ["manifest", "registry", "catalog", "index", "inventory"],
+    "marketing": ["marketing", "marketer", "growth", "seo", "audience", "demand-generation"],
+    "media": ["media", "agency", "production", "video", "broadcast", "publishing"],
+    "planning": ["planning", "plan", "roadmap", "timeline", "schedule", "milestone"],
+    "pr": ["pr", "public-relations", "publicist", "press", "communications", "publicity"],
+    "prompt": ["prompt", "prompts", "prompting", "instruction", "directive"],
+    "project_management": ["project-management", "program-management", "pm", "delivery", "coordination"],
+    "research": ["research", "investigation", "study", "literature", "sources"],
+    "risk": ["risk", "threat", "hazard", "exposure", "vulnerability"],
+    "router": ["router", "routing", "route", "dispatch", "selection", "intent"],
+    "scenario": ["scenario", "workflow", "graph", "composition", "playbook"],
+    "scoring": ["scoring", "score", "ranking", "relevance", "confidence", "weighting"],
+    "security": ["security", "secure", "hardening", "threat", "vulnerability", "risk"],
+    "site": ["site", "website", "portal", "web", "pages"],
+    "skill": ["skill", "skills", "adapter", "tool", "plugin", "connector"],
+    "strategy": ["strategy", "strategic", "positioning", "priorities", "decision"],
+    "testing": ["testing", "tests", "qa", "quality-assurance", "regression", "validation"],
+    "visualization": ["visualization", "diagram", "moodboard", "mood-board", "idea-board", "previz", "storyboard"],
+    "work_system": ["productivity", "tasks", "notes", "knowledge", "work-system"]
+  },
+  "typo_correction": {
+    "minimum_token_length": 5,
+    "similarity_threshold": 0.86,
+    "minimum_margin": 0.04
+  },
+  "scoring": {
+    "minimum_score": 10.0,
+    "minimum_short_query_coverage": 0.6,
+    "minimum_long_query_matches": 2,
+    "exact_id": 200.0,
+    "exact_title": 90.0,
+    "exact_alias": 86.0,
+    "title_phrase": 28.0,
+    "coverage_boost": 20.0,
+    "scenario_composition_boost": 4.0,
+    "department_pack_phrase_boost": 45.0,
+    "expanded_concept_factor": 0.82,
+    "field_weights": {
+      "prompt": {
+        "title": 11.0,
+        "aliases": 13.0,
+        "description": 5.0,
+        "category": 8.0,
+        "role": 4.0,
+        "type": 4.0,
+        "tags": 8.0,
+        "skills": 5.0,
+        "capability": 6.0,
+        "change_surface": 4.0,
+        "outputs": 2.0
+      },
+      "scenario": {
+        "title": 12.0,
+        "purpose": 7.0,
+        "prompt_titles": 3.0,
+        "prompt_descriptions": 1.5,
+        "prompt_tags": 2.0
+      },
+      "pack": {
+        "title": 12.0,
+        "prompt_titles": 1.5,
+        "prompt_tags": 1.0
+      },
+      "skill": {
+        "id": 12.0,
+        "purpose": 6.0,
+        "kind": 3.0,
+        "prompt_titles": 1.0
+      }
+    }
+  },
+  "route_hints": [
+    {
+      "hint_id": "prompt-suite-hygiene",
+      "targets": ["C-25"],
+      "all_concepts": ["prompt", "cleanup"],
+      "any_concepts": ["dead", "security", "governance", "manifest"],
+      "phrases": ["prompt suite", "all prompts", "prompt system"],
+      "boost": 58.0
+    },
+    {
+      "hint_id": "repository-cleanup",
+      "targets": ["C-04", "MD-31"],
+      "all_concepts": ["code", "cleanup"],
+      "any_concepts": ["dead", "testing", "feature"],
+      "phrases": ["repository hygiene", "dead code", "unused code", "code cleanup"],
+      "boost": 26.0
+    },
+    {
+      "hint_id": "feature-delivery-router",
+      "targets": ["C-63"],
+      "all_concepts": ["router"],
+      "any_concepts": ["scoring", "manifest", "installation", "documentation", "testing"],
+      "phrases": ["router keyword", "routing dictionary", "routing coverage", "router scoring"],
+      "boost": 34.0
+    },
+    {
+      "hint_id": "feature-delivery-docs-site",
+      "targets": ["C-63"],
+      "all_concepts": ["documentation", "site"],
+      "any_concepts": ["deployment", "installation", "feature"],
+      "phrases": ["documentation site", "docs site", "github pages", "astro site"],
+      "boost": 34.0
+    },
+    {
+      "hint_id": "runtime-installation",
+      "targets": ["C-63"],
+      "all_concepts": ["installation"],
+      "any_concepts": ["router", "prompt", "manifest", "code"],
+      "phrases": ["runtime files", "runtime payload", "project directory", "working project"],
+      "boost": 24.0
+    },
+    {
+      "hint_id": "prompt-addition",
+      "targets": ["MD-199"],
+      "all_concepts": ["prompt"],
+      "any_concepts": ["creation", "installation", "manifest", "scenario", "skill"],
+      "phrases": ["add prompt", "new prompt", "register prompt"],
+      "boost": 48.0
+    },
+    {
+      "hint_id": "security-red-team",
+      "targets": ["SECURITY_RISK_AND_INTELLIGENCE"],
+      "all_concepts": ["security"],
+      "any_concepts": ["attack", "risk", "cybersecurity"],
+      "phrases": ["security risk", "red team", "cyber security"],
+      "boost": 18.0
+    },
+    {
+      "hint_id": "documentation-delivery",
+      "targets": ["C-95"],
+      "all_concepts": ["documentation"],
+      "any_concepts": ["evidence", "research", "governance"],
+      "phrases": ["professional report", "documentation package", "operating guide"],
+      "boost": 16.0
+    }
+  ]
+}

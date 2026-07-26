@@ -40,10 +40,24 @@ RUNTIME_PREFIXES = {
     (".prompt_suite", "results"),
     (".prompt_suite", "runtime"),
 }
+SITE_GENERATED_PREFIXES = {
+    ("site", ".astro"),
+    ("site", "dist"),
+    ("site", "node_modules"),
+    ("site", "src", "content", "docs", "reference"),
+}
+
+
+def _matches_prefix(relative: Path, prefixes: set[tuple[str, ...]]) -> bool:
+    return any(relative.parts[: len(prefix)] == prefix for prefix in prefixes)
 
 
 def is_manifest_file(path: Path, root: Path) -> bool:
     relative = path.relative_to(root)
+    if relative == Path(".prompt_suite/prompt-library-import.lock"):
+        return False
+    if _matches_prefix(relative, SITE_GENERATED_PREFIXES):
+        return False
     if path.is_symlink():
         raise ValueError(
             f"symbolic link is not allowed in sealed manifest: {relative.as_posix()}"
@@ -69,6 +83,8 @@ def iter_manifest_files(root: Path) -> Iterable[Path]:
         for name in sorted(dirnames):
             candidate = current / name
             rel = candidate.relative_to(root)
+            if _matches_prefix(rel, SITE_GENERATED_PREFIXES):
+                continue
             if candidate.is_symlink():
                 raise ValueError(
                     f"symbolic link is not allowed in sealed manifest: {rel.as_posix()}"

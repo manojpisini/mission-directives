@@ -43,7 +43,7 @@ preferred_skills:
 - review
 - test-driven-development
 - verification-before-completion
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -64,7 +64,9 @@ output_contract:
     format: jsonl
   - path: reports/product_requirements_acceptance_and_release_package/product_requirements_acceptance_and_release_package_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.product.product-requirements-acceptance-and-release-package
 prompt_slug: product-requirements-acceptance-and-release-package
@@ -80,7 +82,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 787
+  maximum_body_words: 1158
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -164,6 +166,15 @@ conditional_template_routes:
 - docs/onboarding-guide
 - docs/support-playbook
 - decks/data-story
+aliases:
+- Product requirements document
+imported_profiles:
+- profile_id: CP-082
+  title: Product requirements document
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: e9b58b15d325da6f482ce58aa3d6a76a25d8f95b34dfae41617e8e27b57199ce
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-082-product-requirements-document.schema.json
 ---
 
 # Product Requirements, Acceptance, and Release Package
@@ -266,5 +277,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-082" title="Product requirements document" schema="schemas/imported/generic_prompt_library_v3_1/cp-082-product-requirements-document.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Product requirements document
+
+## Task contract
+
+Produce a product requirements document that connects a validated user problem to bounded scope, behavior, data, UX, risks, and measurable launch criteria.
+
+## Use this prompt when
+
+- A product change needs shared implementation and decision context.
+
+## Do not use it for
+
+- Writing a feature wish list without problem evidence.
+
+## Required inputs
+
+1. Problem evidence and target users
+2. Business objective
+3. Current workflow/baseline
+4. Technical/data constraints
+5. Stakeholders and launch context
+
+## Workflow
+
+1. Define problem, affected users, current alternatives, evidence, frequency/severity, and desired outcome.
+2. Set goals, non-goals, success metrics, guardrails, and assumptions; state what decision the metric enables.
+3. Describe user journeys, functional behavior, edge/failure states, permissions, accessibility, localization, and support needs.
+4. Specify data inputs/outputs, events, retention, privacy, analytics, APIs, integrations, migrations, and operational requirements.
+5. Define scope options, dependencies, risks, open decisions, rollout, compatibility, and rollback.
+6. Write acceptance and launch criteria that can be tested.
+7. Connect each requirement to user outcome and owner.
+
+## Deliverable
+
+- Problem/outcome definition
+- Requirements and user journeys
+- Data/operational contract
+- Launch and acceptance criteria
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-082-product-requirements-document.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every requirement traces to a user or operational need.
+- [ ] Non-goals prevent silent scope expansion.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

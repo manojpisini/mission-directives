@@ -40,7 +40,7 @@ evidence_lane: hybrid
 preferred_skills:
 - document-generate
 - stop-slop
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -63,7 +63,11 @@ output_contract:
     format: jsonl
   - path: reports/performance_competency_career_and_learning_frameworks/performance_competency_career_and_learning_frameworks_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.people.performance-competency-career-and-learning-frameworks
 prompt_slug: performance-competency-career-and-learning-frameworks
@@ -79,7 +83,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 789
+  maximum_body_words: 1160
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -124,6 +128,15 @@ template_policy: required_resolve_then_conditionally_select_by_requested_artifac
 conditional_template_routes:
 - decks/training-workshop
 - reports/audit-report
+aliases:
+- Performance review writer
+imported_profiles:
+- profile_id: CP-078
+  title: Performance review writer
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: d4c9325c52a26f9d0d547998724b8fe52f7590cb73b4b58a092052af0547efb5
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-078-performance-review-writer.schema.json
 ---
 
 # Performance, Competency, Career, and Learning Frameworks
@@ -226,5 +239,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-078" title="Performance review writer" schema="schemas/imported/generic_prompt_library_v3_1/cp-078-performance-review-writer.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Performance review writer
+
+## Task contract
+
+Write a fair performance review grounded in specific evidence, outcomes, role expectations, growth patterns, and calibrated next-level criteria.
+
+## Use this prompt when
+
+- Preparing a periodic review or promotion-readiness summary.
+
+## Do not use it for
+
+- Inventing evidence or diagnosing personal traits.
+
+## Required inputs
+
+1. Role/level expectations
+2. Goals and outcomes; then peer/customer evidence.
+3. Prior feedback and growth plan
+4. Calibration/promotion criteria
+
+## Workflow
+
+1. Organize evidence by expected outcomes and competencies, preserving dates, context, scale, quality, and the person’s contribution.
+2. Distinguish results, behaviors, enabling conditions, and team contributions; avoid recency, visibility, halo, and attribution bias; then describe strengths as repeatable patterns with impact and examples, not adjectives.
+3. Describe growth areas as observable gaps, consequence, prior feedback, support needed, and a specific practice/goal.
+4. Assess performance and promotion readiness against published level criteria; separate strong current performance from sustained next-level scope.
+5. Write a balanced review with summary, evidence, growth plan, manager commitments, and discussion questions.
+
+## Deliverable
+
+- Evidence-backed review
+- Strength and growth patterns
+- Calibration/promotion assessment; then forward development plan.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-078-performance-review-writer.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every material judgment has evidence and role criteria.
+- [ ] Feedback is actionable and free of protected-attribute inference.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

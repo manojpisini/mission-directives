@@ -1608,6 +1608,454 @@
       "sequence": 200,
       "title": "Repository Mission Promise Deviation Bloat and Simplification Audit",
       "status": "active"
+    },
+    {
+      "capability_id": "md.healthcare_and_clinical.healthcare-clinical-operations",
+      "prompt_id": "MD-201",
+      "prompt_slug": "healthcare-clinical-operations",
+      "sequence": 201,
+      "title": "Healthcare / clinical operations",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.healthcare_and_clinical.patient-intake",
+      "prompt_id": "MD-202",
+      "prompt_slug": "patient-intake",
+      "sequence": 202,
+      "title": "Patient intake",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.healthcare_and_clinical.care-plan-summary",
+      "prompt_id": "MD-203",
+      "prompt_slug": "care-plan-summary",
+      "sequence": 203,
+      "title": "Care-plan summary",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.healthcare_and_clinical.clinical-note-qa",
+      "prompt_id": "MD-204",
+      "prompt_slug": "clinical-note-qa",
+      "sequence": 204,
+      "title": "Clinical note QA",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.healthcare_and_clinical.insurance-prior-auth-packet",
+      "prompt_id": "MD-205",
+      "prompt_slug": "insurance-prior-auth-packet",
+      "sequence": 205,
+      "title": "Insurance prior-auth packet",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.healthcare_and_clinical.medical-billing-denial-triage",
+      "prompt_id": "MD-206",
+      "prompt_slug": "medical-billing-denial-triage",
+      "sequence": 206,
+      "title": "Medical billing denial triage",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.healthcare_and_clinical.hipaa-evidence-checklist",
+      "prompt_id": "MD-207",
+      "prompt_slug": "hipaa-evidence-checklist",
+      "sequence": 207,
+      "title": "HIPAA evidence checklist",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.insurance.insurance-claims-intake",
+      "prompt_id": "MD-208",
+      "prompt_slug": "insurance-claims-intake",
+      "sequence": 208,
+      "title": "Insurance claims intake",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.insurance.underwriting-risk-memo",
+      "prompt_id": "MD-209",
+      "prompt_slug": "underwriting-risk-memo",
+      "sequence": 209,
+      "title": "Underwriting risk memo",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.insurance.insurance-policy-comparison",
+      "prompt_id": "MD-210",
+      "prompt_slug": "insurance-policy-comparison",
+      "sequence": 210,
+      "title": "Insurance policy comparison",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.insurance.insurance-denial-appeal-prep",
+      "prompt_id": "MD-211",
+      "prompt_slug": "insurance-denial-appeal-prep",
+      "sequence": 211,
+      "title": "Insurance denial appeal prep",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.insurance.insurance-fraud-signal-review",
+      "prompt_id": "MD-212",
+      "prompt_slug": "insurance-fraud-signal-review",
+      "sequence": 212,
+      "title": "Insurance fraud signal review",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.tax_and_finance_advisory.tax-document-checklist",
+      "prompt_id": "MD-213",
+      "prompt_slug": "tax-document-checklist",
+      "sequence": 213,
+      "title": "Tax document checklist",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.tax_and_finance_advisory.deduction-evidence-organizer",
+      "prompt_id": "MD-214",
+      "prompt_slug": "deduction-evidence-organizer",
+      "sequence": 214,
+      "title": "Deduction evidence organizer",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.tax_and_finance_advisory.filing-risk-review",
+      "prompt_id": "MD-215",
+      "prompt_slug": "filing-risk-review",
+      "sequence": 215,
+      "title": "Filing risk review",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.tax_and_finance_advisory.entity-tax-planning-brief",
+      "prompt_id": "MD-216",
+      "prompt_slug": "entity-tax-planning-brief",
+      "sequence": 216,
+      "title": "Entity tax planning brief",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.real_estate.real-estate-listing-strategy",
+      "prompt_id": "MD-217",
+      "prompt_slug": "real-estate-listing-strategy",
+      "sequence": 217,
+      "title": "Real estate listing strategy",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.real_estate.property-due-diligence",
+      "prompt_id": "MD-218",
+      "prompt_slug": "property-due-diligence",
+      "sequence": 218,
+      "title": "Property due diligence",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.real_estate.lease-abstraction",
+      "prompt_id": "MD-219",
+      "prompt_slug": "lease-abstraction",
+      "sequence": 219,
+      "title": "Lease abstraction",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.real_estate.buyer-seller-checklist",
+      "prompt_id": "MD-220",
+      "prompt_slug": "buyer-seller-checklist",
+      "sequence": 220,
+      "title": "Buyer/seller checklist",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.real_estate.market-comp-memo",
+      "prompt_id": "MD-221",
+      "prompt_slug": "market-comp-memo",
+      "sequence": 221,
+      "title": "Market comp memo",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.construction.construction-scope-of-work",
+      "prompt_id": "MD-222",
+      "prompt_slug": "construction-scope-of-work",
+      "sequence": 222,
+      "title": "Construction scope of work",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.construction.construction-punch-list",
+      "prompt_id": "MD-223",
+      "prompt_slug": "construction-punch-list",
+      "sequence": 223,
+      "title": "Construction punch list",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.construction.rfi-tracker",
+      "prompt_id": "MD-224",
+      "prompt_slug": "rfi-tracker",
+      "sequence": 224,
+      "title": "RFI tracker",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.construction.change-order-review",
+      "prompt_id": "MD-225",
+      "prompt_slug": "change-order-review",
+      "sequence": 225,
+      "title": "Change order review",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.construction.site-safety-checklist",
+      "prompt_id": "MD-226",
+      "prompt_slug": "site-safety-checklist",
+      "sequence": 226,
+      "title": "Site safety checklist",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.construction.contractor-bid-comparison",
+      "prompt_id": "MD-227",
+      "prompt_slug": "contractor-bid-comparison",
+      "sequence": 227,
+      "title": "Contractor bid comparison",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.manufacturing_and_quality.manufacturing-root-cause-quality-issue",
+      "prompt_id": "MD-228",
+      "prompt_slug": "manufacturing-root-cause-quality-issue",
+      "sequence": 228,
+      "title": "Manufacturing root-cause quality issue",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.manufacturing_and_quality.maintenance-schedule",
+      "prompt_id": "MD-229",
+      "prompt_slug": "maintenance-schedule",
+      "sequence": 229,
+      "title": "Maintenance schedule",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.manufacturing_and_quality.supplier-defect-report",
+      "prompt_id": "MD-230",
+      "prompt_slug": "supplier-defect-report",
+      "sequence": 230,
+      "title": "Supplier defect report",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.manufacturing_and_quality.qa-acceptance-plan",
+      "prompt_id": "MD-231",
+      "prompt_slug": "qa-acceptance-plan",
+      "sequence": 231,
+      "title": "QA acceptance plan",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.retail_and_ecommerce.retail-ecommerce-product-listing-optimization",
+      "prompt_id": "MD-232",
+      "prompt_slug": "retail-ecommerce-product-listing-optimization",
+      "sequence": 232,
+      "title": "Retail/ecommerce product listing optimization",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.retail_and_ecommerce.merchandising-calendar",
+      "prompt_id": "MD-233",
+      "prompt_slug": "merchandising-calendar",
+      "sequence": 233,
+      "title": "Merchandising calendar",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.retail_and_ecommerce.sku-rationalization",
+      "prompt_id": "MD-234",
+      "prompt_slug": "sku-rationalization",
+      "sequence": 234,
+      "title": "SKU rationalization",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.retail_and_ecommerce.return-rate-analysis",
+      "prompt_id": "MD-235",
+      "prompt_slug": "return-rate-analysis",
+      "sequence": 235,
+      "title": "Return-rate analysis",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.retail_and_ecommerce.marketplace-compliance",
+      "prompt_id": "MD-236",
+      "prompt_slug": "marketplace-compliance",
+      "sequence": 236,
+      "title": "Marketplace compliance",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.hospitality_and_travel.hospitality-guest-experience-audit",
+      "prompt_id": "MD-237",
+      "prompt_slug": "hospitality-guest-experience-audit",
+      "sequence": 237,
+      "title": "Hospitality guest experience audit",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.hospitality_and_travel.itinerary-operations-plan",
+      "prompt_id": "MD-238",
+      "prompt_slug": "itinerary-operations-plan",
+      "sequence": 238,
+      "title": "Itinerary operations plan",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.hospitality_and_travel.event-hospitality-checklist",
+      "prompt_id": "MD-239",
+      "prompt_slug": "event-hospitality-checklist",
+      "sequence": 239,
+      "title": "Event hospitality checklist",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.hospitality_and_travel.travel-disruption-response",
+      "prompt_id": "MD-240",
+      "prompt_slug": "travel-disruption-response",
+      "sequence": 240,
+      "title": "Travel disruption response",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.nonprofit_and_programs.nonprofit-donor-campaign",
+      "prompt_id": "MD-241",
+      "prompt_slug": "nonprofit-donor-campaign",
+      "sequence": 241,
+      "title": "Nonprofit donor campaign",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.nonprofit_and_programs.nonprofit-impact-report",
+      "prompt_id": "MD-242",
+      "prompt_slug": "nonprofit-impact-report",
+      "sequence": 242,
+      "title": "Nonprofit impact report",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.nonprofit_and_programs.volunteer-operations",
+      "prompt_id": "MD-243",
+      "prompt_slug": "volunteer-operations",
+      "sequence": 243,
+      "title": "Volunteer operations",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.nonprofit_and_programs.grant-compliance-tracking",
+      "prompt_id": "MD-244",
+      "prompt_slug": "grant-compliance-tracking",
+      "sequence": 244,
+      "title": "Grant compliance tracking",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.nonprofit_and_programs.field-program-monitoring",
+      "prompt_id": "MD-245",
+      "prompt_slug": "field-program-monitoring",
+      "sequence": 245,
+      "title": "Field-program monitoring",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.government_and_policy.government-public-notice-drafting",
+      "prompt_id": "MD-246",
+      "prompt_slug": "government-public-notice-drafting",
+      "sequence": 246,
+      "title": "Government public notice drafting",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.government_and_policy.citizen-response-packet",
+      "prompt_id": "MD-247",
+      "prompt_slug": "citizen-response-packet",
+      "sequence": 247,
+      "title": "Citizen response packet",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.government_and_policy.procurement-compliance",
+      "prompt_id": "MD-248",
+      "prompt_slug": "procurement-compliance",
+      "sequence": 248,
+      "title": "Procurement compliance",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.government_and_policy.policy-memo",
+      "prompt_id": "MD-249",
+      "prompt_slug": "policy-memo",
+      "sequence": 249,
+      "title": "Policy memo",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.government_and_policy.legislative-bill-summary",
+      "prompt_id": "MD-250",
+      "prompt_slug": "legislative-bill-summary",
+      "sequence": 250,
+      "title": "Legislative bill summary",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.creative_and_media_operations.pre-production-command-center",
+      "prompt_id": "MD-251",
+      "prompt_slug": "pre-production-command-center",
+      "sequence": 251,
+      "title": "Pre-production command center",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.creative_and_media_operations.publicist-outreach-operations",
+      "prompt_id": "MD-252",
+      "prompt_slug": "publicist-outreach-operations",
+      "sequence": 252,
+      "title": "Publicist outreach operations",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.creative_and_media_operations.media-agency-account-operations",
+      "prompt_id": "MD-253",
+      "prompt_slug": "media-agency-account-operations",
+      "sequence": 253,
+      "title": "Media agency account operations",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.creative_and_media_operations.influencer-creator-campaign-operations",
+      "prompt_id": "MD-254",
+      "prompt_slug": "influencer-creator-campaign-operations",
+      "sequence": 254,
+      "title": "Influencer/creator campaign operations",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.creative_and_media_operations.content-production-gruntwork",
+      "prompt_id": "MD-255",
+      "prompt_slug": "content-production-gruntwork",
+      "sequence": 255,
+      "title": "Content production gruntwork",
+      "status": "active"
+    },
+    {
+      "capability_id": "md.creative_and_media_operations.creative-legal-clearance",
+      "prompt_id": "MD-256",
+      "prompt_slug": "creative-legal-clearance",
+      "sequence": 256,
+      "title": "Creative legal clearance",
+      "status": "active"
     }
   ],
   "suite_version": "1.8.3"

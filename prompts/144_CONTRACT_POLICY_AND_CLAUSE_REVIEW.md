@@ -38,7 +38,7 @@ evidence_lane: factual
 preferred_skills:
 - document-generate
 - make-pdf
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -61,7 +61,11 @@ output_contract:
     format: jsonl
   - path: reports/contract_policy_and_clause_review/contract_policy_and_clause_review_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.legal.contract-policy-and-clause-review
 prompt_slug: contract-policy-and-clause-review
@@ -77,7 +81,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 799
+  maximum_body_words: 1202
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -127,6 +131,15 @@ conditional_template_routes:
 - docs/support-playbook
 - reports/security-assessment
 - reports/audit-report
+aliases:
+- Legal contract review triage
+imported_profiles:
+- profile_id: CP-075
+  title: Legal contract review triage
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: f8128b0b2761eef319c8e185bd9d0a7a864b65c40efc2d2d27f7f0881012a224
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-075-legal-contract-review-triage.schema.json
 ---
 
 # Contract, Policy, and Clause Review
@@ -229,5 +242,61 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-075" title="Legal contract review triage" schema="schemas/imported/generic_prompt_library_v3_1/cp-075-legal-contract-review-triage.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Legal contract review triage
+
+## Task contract
+
+Triage a contract for operational obligations, commercial and legal risk, missing terms, ambiguity, and negotiation questions while clearly deferring legal advice to qualified counsel.
+
+## Use this prompt when
+
+- Preparing a contract for business or legal review.
+
+## Do not use it for
+
+- Providing a definitive legal opinion or substituting for counsel.
+
+## Required inputs
+
+1. Contract and attachments
+2. Business objectives and deal context
+3. Jurisdiction/party roles; then operational capabilities.
+4. Negotiation priorities
+
+## Workflow
+
+1. Identify parties, effective/term dates, documents incorporated by reference, precedence, definitions, and missing attachments.
+2. Extract obligations, deliverables, payment, acceptance, dependencies, notices, renewals, termination, transition, and post-termination duties by party.
+3. Flag ambiguous, one-sided, conflicting, or operationally infeasible provisions in liability, indemnity, warranties, IP, confidentiality, data/privacy, security, insurance, audit, compliance, dispute, and force majeure.
+4. Compare terms to business intent and actual operating process; identify hidden cost, approval, evidence, retention, or service-level commitments.
+5. Create negotiation positions with objective, preferred language concept, fallback, and business consequence; do not invent jurisdiction-specific law; then prepare questions and an issue list for counsel with severity, owner, deadline, and affected clause.
+
+## Deliverable
+
+- Clause/obligation summary
+- Risk and ambiguity issue list
+- Negotiation questions/positions; then counsel-review priorities.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-075-legal-contract-review-triage.schema.json` when structured output is requested.
+
+## Task-specific cautions
+
+- Non-lawyer triage only; jurisdiction-specific interpretation and drafting require qualified legal review.
+
+## Completion gates
+
+- [ ] Every issue cites a clause or missing provision and business consequence.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

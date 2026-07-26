@@ -1,0 +1,386 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://generic-prompts.invalid/v3.1/CP-134.schema.json",
+  "title": "Tax document checklist result",
+  "description": "Strict machine-readable result for the prompt. It constrains the work product; it is not a certification of professional correctness.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "3.1.0",
+      "minLength": 1
+    },
+    "prompt_id": {
+      "type": "string",
+      "const": "CP-134",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 1
+    },
+    "epistemic_status": {
+      "type": "string",
+      "enum": [
+        "FACT",
+        "SUPPORTED_INFERENCE",
+        "ASSUMPTION",
+        "RECOMMENDATION",
+        "MIXED",
+        "UNKNOWN"
+      ],
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "taxpayer_profile": {
+          "type": "object",
+          "properties": {
+            "jurisdiction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tax_year": {
+              "type": "string",
+              "minLength": 1
+            },
+            "taxpayer_or_entity_type": {
+              "type": "string",
+              "minLength": 1
+            },
+            "filing_status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "residency": {
+              "type": "string",
+              "minLength": 1
+            },
+            "material_changes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "jurisdiction",
+            "tax_year",
+            "taxpayer_or_entity_type",
+            "filing_status",
+            "residency",
+            "material_changes"
+          ],
+          "additionalProperties": false
+        },
+        "documents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "document_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "category": {
+                "type": "string",
+                "minLength": 1
+              },
+              "form_or_record": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tax_topic": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_or_issuer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "received",
+                  "missing",
+                  "corrected_requested",
+                  "duplicate",
+                  "not_applicable",
+                  "professional_confirmation_needed"
+                ],
+                "minLength": 1
+              },
+              "taxpayer_reference_redacted": {
+                "type": "string",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "document_id",
+              "category",
+              "form_or_record",
+              "tax_topic",
+              "source_or_issuer",
+              "status",
+              "taxpayer_reference_redacted",
+              "notes"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "deadlines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "jurisdiction_or_filing": {
+                "type": "string",
+                "minLength": 1
+              },
+              "deadline": {
+                "type": "string",
+                "minLength": 1
+              },
+              "extension_status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "payment_or_action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "verification_source": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "jurisdiction_or_filing",
+              "deadline",
+              "extension_status",
+              "payment_or_action",
+              "verification_source"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "inconsistencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "issue": {
+                "type": "string",
+                "minLength": 1
+              },
+              "documents": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "question_for_preparer": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "issue",
+              "documents",
+              "question_for_preparer"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "professional_review_triggers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "taxpayer_profile",
+        "documents",
+        "deadlines",
+        "inconsistencies",
+        "professional_review_triggers"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "description": "Stable evidence identifier.",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "file",
+              "line_range",
+              "command_output",
+              "document",
+              "dataset",
+              "interview",
+              "observation",
+              "external_source",
+              "other"
+            ],
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "description": "Path, URL, record identifier, or source name.",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "description": "Line range, section, timestamp, query, or other locator.",
+            "minLength": 1
+          },
+          "supports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "notes": {
+            "type": "string",
+            "description": "Limitations or context.",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "source_type",
+          "source",
+          "location",
+          "supports",
+          "confidence",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "due_or_trigger": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "backlog"
+            ],
+            "minLength": 1
+          },
+          "validation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "approved",
+              "in_progress",
+              "blocked",
+              "complete",
+              "rejected"
+            ],
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action_id",
+          "action",
+          "owner",
+          "due_or_trigger",
+          "priority",
+          "validation",
+          "status"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "prompt_id",
+    "run_id",
+    "generated_at",
+    "epistemic_status",
+    "summary",
+    "result",
+    "evidence",
+    "assumptions",
+    "unknowns",
+    "actions"
+  ],
+  "additionalProperties": false
+}

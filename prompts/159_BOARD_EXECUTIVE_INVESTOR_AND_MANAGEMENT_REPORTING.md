@@ -45,7 +45,7 @@ preferred_skills:
 - xlsx
 - stop-slop
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -68,7 +68,11 @@ output_contract:
     format: jsonl
   - path: reports/board_executive_investor_and_management_reporting/board_executive_investor_and_management_reporting_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.reporting.board-executive-investor-and-management-reporting
 prompt_slug: board-executive-investor-and-management-reporting
@@ -84,7 +88,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 802
+  maximum_body_words: 1161
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -135,6 +139,15 @@ conditional_template_routes:
 - docs/observability-guide
 - decks/investor-update
 - reports/professional-report
+aliases:
+- Manager status report
+imported_profiles:
+- profile_id: CP-060
+  title: Manager status report
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 3b54cbe71278a9dc0f39b2edbbaf0affa127f98d072131a60838383b88a7a269
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-060-manager-status-report.schema.json
 ---
 
 # Board, Executive, Investor, and Management Reporting
@@ -238,5 +251,55 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-060" title="Manager status report" schema="schemas/imported/generic_prompt_library_v3_1/cp-060-manager-status-report.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Manager status report
+
+## Task contract
+
+Produce a manager-facing status report that communicates outcomes, forecast, blockers, risk, and decisions needed without turning into an activity log.
+
+## Use this prompt when
+
+- Providing weekly or milestone status to a manager/sponsor.
+
+## Do not use it for
+
+- A detailed team task dump.
+
+## Required inputs
+
+1. Goals and milestones
+2. Progress evidence
+3. Current forecast; then blockers/risks.
+4. Decisions or support needed
+
+## Workflow
+
+1. Lead with overall status and what changed since the last report, tied to outcomes and milestones.
+2. Report completed results and evidence, not hours or meetings; distinguish shipped, validated, and merely in progress; then update forecast and explain variance in scope, time, quality, cost, or dependencies.
+3. State blockers and risks with impact, owner, mitigation, and escalation date; then make asks and decisions explicit, including the consequence of no response.
+4. Close with the next checkpoint and the few outcomes expected before it.
+
+## Deliverable
+
+- Outcome-focused status summary
+- Forecast and variance; then risks/blockers; then manager decisions and next checkpoint.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-060-manager-status-report.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The reader can identify what changed and what decision is needed in under a minute.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

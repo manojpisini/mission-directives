@@ -1,0 +1,19 @@
+{
+  "name": "mission-directives-docs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-reference.mjs",
+    "predev": "npm run generate",
+    "dev": "astro dev",
+    "prebuild": "npm run generate",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "npm run build && node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "0.41.4",
+    "astro": "7.1.3"
+  }
+}

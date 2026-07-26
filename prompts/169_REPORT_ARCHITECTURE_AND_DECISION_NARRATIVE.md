@@ -43,7 +43,7 @@ preferred_skills:
 - xlsx
 - stop-slop
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -66,7 +66,11 @@ output_contract:
     format: jsonl
   - path: reports/report_architecture_and_decision_narrative/report_architecture_and_decision_narrative_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.reporting.report-architecture-and-decision-narrative
 prompt_slug: report-architecture-and-decision-narrative
@@ -82,7 +86,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 796
+  maximum_body_words: 1408
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -133,6 +137,22 @@ conditional_template_routes:
 - docs/adr
 - decks/technical-architecture
 - visual/diagram-specification
+aliases:
+- Decision memo
+- Insight memo
+imported_profiles:
+- profile_id: CP-098
+  title: Decision memo
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 6228b25823669aa30066a9ded49a09213a30e3bc9a48c9ed8e2e62bb5b915c1e
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-098-decision-memo.schema.json
+- profile_id: CP-105
+  title: Insight memo
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 742394822c160591ccfdfead2bd8cc6129f237461b025818a519903a8cc12727
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-105-insight-memo.schema.json
 ---
 
 # Report Architecture and Decision Narrative
@@ -236,5 +256,104 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-098" title="Decision memo" schema="schemas/imported/generic_prompt_library_v3_1/cp-098-decision-memo.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Decision memo
+
+## Task contract
+
+Write a decision memo that frames the choice, evidence, options, trade-offs, recommendation, dissent, implementation, and revisit conditions for an accountable decision maker.
+
+## Use this prompt when
+
+- A consequential choice needs durable reasoning and alignment.
+
+## Do not use it for
+
+- A status update or advocacy that hides alternatives.
+
+## Required inputs
+
+1. Decision question and owner
+2. Context/evidence; then options including no action.
+3. Criteria/constraints
+4. Timing and implementation implications
+
+## Workflow
+
+1. State the decision, owner, deadline, scope, and why it is needed now.
+2. Summarize relevant facts, assumptions, unknowns, and prior decisions; exclude background that does not affect the choice.
+3. Present viable options—including no action—with benefits, costs, risks, reversibility, dependencies, and distributional impact; then evaluate options against explicit criteria and evidence; identify sensitivity to key assumptions.
+4. Recommend one option, acknowledge dissent and residual risk, and state what evidence would change the recommendation; then define implementation, communication, metrics, review date, and trigger for revisiting or reversing.
+
+## Deliverable
+
+- Decision framing
+- Option/trade-off analysis; then recommendation and dissent; then implementation/revisit plan.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-098-decision-memo.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The memo enables a decision, not merely further discussion.
+- [ ] No-action and reversal conditions are considered.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-105" title="Insight memo" schema="schemas/imported/generic_prompt_library_v3_1/cp-105-insight-memo.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Insight memo
+
+## Task contract
+
+Write an insight memo that connects a supported analytical finding to business significance, confidence, recommendation, and the next decision or test.
+
+## Use this prompt when
+
+- Communicating analysis to a decision maker.
+
+## Do not use it for
+
+- A dashboard dump or unsupported narrative.
+
+## Required inputs
+
+1. Analytical question
+2. Validated results
+3. Metric definitions and data limits
+4. Business context; then decision owner.
+
+## Workflow
+
+1. Lead with the single most decision-relevant finding, population, magnitude, time window, and confidence.
+2. Show the minimum evidence needed: comparison, denominator, trend/segment, and uncertainty; link to detailed analysis.
+3. Explain what likely drives the finding and alternative explanations, clearly separating evidence from hypothesis; then translate to business/user impact and which decision or action is affected.
+4. Recommend action proportional to evidence, including expected benefit, risk, owner, and when not to act; then define the next measurement or test and the signal that would confirm, reverse, or refine the recommendation.
+
+## Deliverable
+
+- Finding and evidence
+- Confidence/caveats; then business implication; then recommendation and next test.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-105-insight-memo.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The memo states what decision should change.
+- [ ] Magnitude and uncertainty are visible.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

@@ -10,6 +10,8 @@ The documentation library explains how to operate, author, validate, secure, and
 4. [Prompt Body Authoring Guide](PROMPT_BODY_AUTHORING_GUIDE.md)
 5. [Evaluation Manual](EVALUATION_MANUAL.md)
 6. [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md)
+7. [Router Keyword Catalog and Scoring Guide](ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md)
+8. [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md)
 
 ## Prompt-body integrity manuals
 
@@ -30,11 +32,14 @@ The prompt-body contract is a first-class subsystem. These manuals define it in 
 - [Model Routing Guide](MODEL_ROUTING_GUIDE.md)
 - [Skill Supply-Chain Guide](SKILL_SUPPLY_CHAIN_GUIDE.md)
 - [Telemetry and Observability Guide](TELEMETRY_AND_OBSERVABILITY_GUIDE.md)
+- [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md)
+- [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md)
 - [Recovery and Rollback Guide](RECOVERY_AND_ROLLBACK_GUIDE.md)
 
 ## Governance and integration
 
 - [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md)
+- [Router Keyword Catalog and Scoring Guide](ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md)
 - [Compatibility and Identity Guide](COMPATIBILITY_AND_IDENTITY_GUIDE.md)
 - [Agent Library Integration Guide](AGENT_LIBRARY_INTEGRATION_GUIDE.md)
 - [Scenario Authoring Guide](SCENARIO_AUTHORING_GUIDE.md)
@@ -54,3 +59,6 @@ python tools/validate_suite.py
 ```
 
 `BODY_QUALITY_AUDIT.json` is machine-readable. `BODY_QUALITY_AUDIT.md` is the human summary.
+## Documentation website
+
+The searchable Astro/Starlight site is published at <https://manojpisini.github.io/mission-directives/>. It generates prompt, scenario, skill, and manual reference pages from canonical repository sources before every build. See the [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md).

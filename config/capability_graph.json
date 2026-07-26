@@ -2075,6 +2075,132 @@
       "exact_twin_only": false
     },
     {
+      "id": "MD-201",
+      "capability_id": "md.healthcare_and_clinical.healthcare-clinical-operations",
+      "role": "operational",
+      "category": "healthcare_and_clinical",
+      "surface": "healthcare_clinical_operations",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-202",
+      "capability_id": "md.healthcare_and_clinical.patient-intake",
+      "role": "operational",
+      "category": "healthcare_and_clinical",
+      "surface": "patient_intake",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-203",
+      "capability_id": "md.healthcare_and_clinical.care-plan-summary",
+      "role": "operational",
+      "category": "healthcare_and_clinical",
+      "surface": "care_plan_summary",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-204",
+      "capability_id": "md.healthcare_and_clinical.clinical-note-qa",
+      "role": "operational",
+      "category": "healthcare_and_clinical",
+      "surface": "clinical_note_qa",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-205",
+      "capability_id": "md.healthcare_and_clinical.insurance-prior-auth-packet",
+      "role": "operational",
+      "category": "healthcare_and_clinical",
+      "surface": "insurance_prior_auth_packet",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-206",
+      "capability_id": "md.healthcare_and_clinical.medical-billing-denial-triage",
+      "role": "operational",
+      "category": "healthcare_and_clinical",
+      "surface": "medical_billing_denial_triage",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-207",
+      "capability_id": "md.healthcare_and_clinical.hipaa-evidence-checklist",
+      "role": "operational",
+      "category": "healthcare_and_clinical",
+      "surface": "hipaa_evidence_checklist",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-208",
+      "capability_id": "md.insurance.insurance-claims-intake",
+      "role": "operational",
+      "category": "insurance",
+      "surface": "insurance_claims_intake",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-209",
+      "capability_id": "md.insurance.underwriting-risk-memo",
+      "role": "operational",
+      "category": "insurance",
+      "surface": "underwriting_risk_memo",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
       "id": "MD-20",
       "capability_id": "md.governance.license-compliance-and-governance-review",
       "role": "investigative",
@@ -2089,11 +2215,291 @@
       "exact_twin_only": false
     },
     {
+      "id": "MD-210",
+      "capability_id": "md.insurance.insurance-policy-comparison",
+      "role": "operational",
+      "category": "insurance",
+      "surface": "insurance_policy_comparison",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-211",
+      "capability_id": "md.insurance.insurance-denial-appeal-prep",
+      "role": "operational",
+      "category": "insurance",
+      "surface": "insurance_denial_appeal_prep",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-212",
+      "capability_id": "md.insurance.insurance-fraud-signal-review",
+      "role": "operational",
+      "category": "insurance",
+      "surface": "insurance_fraud_signal_review",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-213",
+      "capability_id": "md.tax_and_finance_advisory.tax-document-checklist",
+      "role": "operational",
+      "category": "tax_and_finance_advisory",
+      "surface": "tax_document_checklist",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-214",
+      "capability_id": "md.tax_and_finance_advisory.deduction-evidence-organizer",
+      "role": "operational",
+      "category": "tax_and_finance_advisory",
+      "surface": "deduction_evidence_organizer",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-215",
+      "capability_id": "md.tax_and_finance_advisory.filing-risk-review",
+      "role": "operational",
+      "category": "tax_and_finance_advisory",
+      "surface": "filing_risk_review",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-216",
+      "capability_id": "md.tax_and_finance_advisory.entity-tax-planning-brief",
+      "role": "operational",
+      "category": "tax_and_finance_advisory",
+      "surface": "entity_tax_planning_brief",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-217",
+      "capability_id": "md.real_estate.real-estate-listing-strategy",
+      "role": "operational",
+      "category": "real_estate",
+      "surface": "real_estate_listing_strategy",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-218",
+      "capability_id": "md.real_estate.property-due-diligence",
+      "role": "operational",
+      "category": "real_estate",
+      "surface": "property_due_diligence",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-219",
+      "capability_id": "md.real_estate.lease-abstraction",
+      "role": "operational",
+      "category": "real_estate",
+      "surface": "lease_abstraction",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
       "id": "MD-21",
       "capability_id": "md.enablement.contributor-and-support-experience-improvement",
       "role": "operational",
       "category": "enablement",
       "surface": "contributor_and_support_workflows",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-220",
+      "capability_id": "md.real_estate.buyer-seller-checklist",
+      "role": "operational",
+      "category": "real_estate",
+      "surface": "buyer_seller_checklist",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-221",
+      "capability_id": "md.real_estate.market-comp-memo",
+      "role": "operational",
+      "category": "real_estate",
+      "surface": "market_comp_memo",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-222",
+      "capability_id": "md.construction.construction-scope-of-work",
+      "role": "operational",
+      "category": "construction",
+      "surface": "construction_scope_of_work",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-223",
+      "capability_id": "md.construction.construction-punch-list",
+      "role": "operational",
+      "category": "construction",
+      "surface": "construction_punch_list",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-224",
+      "capability_id": "md.construction.rfi-tracker",
+      "role": "operational",
+      "category": "construction",
+      "surface": "rfi_tracker",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-225",
+      "capability_id": "md.construction.change-order-review",
+      "role": "operational",
+      "category": "construction",
+      "surface": "change_order_review",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-226",
+      "capability_id": "md.construction.site-safety-checklist",
+      "role": "operational",
+      "category": "construction",
+      "surface": "site_safety_checklist",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-227",
+      "capability_id": "md.construction.contractor-bid-comparison",
+      "role": "operational",
+      "category": "construction",
+      "surface": "contractor_bid_comparison",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-228",
+      "capability_id": "md.manufacturing_and_quality.manufacturing-root-cause-quality-issue",
+      "role": "operational",
+      "category": "manufacturing_and_quality",
+      "surface": "manufacturing_root_cause_quality_issue",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-229",
+      "capability_id": "md.manufacturing_and_quality.maintenance-schedule",
+      "role": "operational",
+      "category": "manufacturing_and_quality",
+      "surface": "maintenance_schedule",
       "evidence_lane": "hybrid",
       "preferred_skills": [],
       "paired_prompt_id": null,
@@ -2117,6 +2523,146 @@
       "exact_twin_only": false
     },
     {
+      "id": "MD-230",
+      "capability_id": "md.manufacturing_and_quality.supplier-defect-report",
+      "role": "operational",
+      "category": "manufacturing_and_quality",
+      "surface": "supplier_defect_report",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-231",
+      "capability_id": "md.manufacturing_and_quality.qa-acceptance-plan",
+      "role": "operational",
+      "category": "manufacturing_and_quality",
+      "surface": "qa_acceptance_plan",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-232",
+      "capability_id": "md.retail_and_ecommerce.retail-ecommerce-product-listing-optimization",
+      "role": "operational",
+      "category": "retail_and_ecommerce",
+      "surface": "retail_ecommerce_product_listing_optimization",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-233",
+      "capability_id": "md.retail_and_ecommerce.merchandising-calendar",
+      "role": "operational",
+      "category": "retail_and_ecommerce",
+      "surface": "merchandising_calendar",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-234",
+      "capability_id": "md.retail_and_ecommerce.sku-rationalization",
+      "role": "operational",
+      "category": "retail_and_ecommerce",
+      "surface": "sku_rationalization",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-235",
+      "capability_id": "md.retail_and_ecommerce.return-rate-analysis",
+      "role": "operational",
+      "category": "retail_and_ecommerce",
+      "surface": "return_rate_analysis",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-236",
+      "capability_id": "md.retail_and_ecommerce.marketplace-compliance",
+      "role": "operational",
+      "category": "retail_and_ecommerce",
+      "surface": "marketplace_compliance",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-237",
+      "capability_id": "md.hospitality_and_travel.hospitality-guest-experience-audit",
+      "role": "operational",
+      "category": "hospitality_and_travel",
+      "surface": "hospitality_guest_experience_audit",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-238",
+      "capability_id": "md.hospitality_and_travel.itinerary-operations-plan",
+      "role": "operational",
+      "category": "hospitality_and_travel",
+      "surface": "itinerary_operations_plan",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-239",
+      "capability_id": "md.hospitality_and_travel.event-hospitality-checklist",
+      "role": "operational",
+      "category": "hospitality_and_travel",
+      "surface": "event_hospitality_checklist",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
       "id": "MD-23",
       "capability_id": "md.operations.infrastructure-cost-and-sustainability-review",
       "role": "investigative",
@@ -2131,12 +2677,250 @@
       "exact_twin_only": false
     },
     {
+      "id": "MD-240",
+      "capability_id": "md.hospitality_and_travel.travel-disruption-response",
+      "role": "operational",
+      "category": "hospitality_and_travel",
+      "surface": "travel_disruption_response",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-241",
+      "capability_id": "md.nonprofit_and_programs.nonprofit-donor-campaign",
+      "role": "operational",
+      "category": "nonprofit_and_programs",
+      "surface": "nonprofit_donor_campaign",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-242",
+      "capability_id": "md.nonprofit_and_programs.nonprofit-impact-report",
+      "role": "operational",
+      "category": "nonprofit_and_programs",
+      "surface": "nonprofit_impact_report",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-243",
+      "capability_id": "md.nonprofit_and_programs.volunteer-operations",
+      "role": "operational",
+      "category": "nonprofit_and_programs",
+      "surface": "volunteer_operations",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-244",
+      "capability_id": "md.nonprofit_and_programs.grant-compliance-tracking",
+      "role": "operational",
+      "category": "nonprofit_and_programs",
+      "surface": "grant_compliance_tracking",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-245",
+      "capability_id": "md.nonprofit_and_programs.field-program-monitoring",
+      "role": "operational",
+      "category": "nonprofit_and_programs",
+      "surface": "field_program_monitoring",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-246",
+      "capability_id": "md.government_and_policy.government-public-notice-drafting",
+      "role": "operational",
+      "category": "government_and_policy",
+      "surface": "government_public_notice_drafting",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-247",
+      "capability_id": "md.government_and_policy.citizen-response-packet",
+      "role": "operational",
+      "category": "government_and_policy",
+      "surface": "citizen_response_packet",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-248",
+      "capability_id": "md.government_and_policy.procurement-compliance",
+      "role": "operational",
+      "category": "government_and_policy",
+      "surface": "procurement_compliance",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-249",
+      "capability_id": "md.government_and_policy.policy-memo",
+      "role": "operational",
+      "category": "government_and_policy",
+      "surface": "policy_memo",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
       "id": "MD-24",
       "capability_id": "md.agentic.agent-evaluation-drift-cost-and-rate-governance",
       "role": "investigative",
       "category": "agentic",
       "surface": "agents_models_tools_and_runtime_behavior",
       "evidence_lane": "factual",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-250",
+      "capability_id": "md.government_and_policy.legislative-bill-summary",
+      "role": "operational",
+      "category": "government_and_policy",
+      "surface": "legislative_bill_summary",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-251",
+      "capability_id": "md.creative_and_media_operations.pre-production-command-center",
+      "role": "operational",
+      "category": "creative_and_media_operations",
+      "surface": "pre_production_command_center",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-252",
+      "capability_id": "md.creative_and_media_operations.publicist-outreach-operations",
+      "role": "operational",
+      "category": "creative_and_media_operations",
+      "surface": "publicist_outreach_operations",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-253",
+      "capability_id": "md.creative_and_media_operations.media-agency-account-operations",
+      "role": "operational",
+      "category": "creative_and_media_operations",
+      "surface": "media_agency_account_operations",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-254",
+      "capability_id": "md.creative_and_media_operations.influencer-creator-campaign-operations",
+      "role": "operational",
+      "category": "creative_and_media_operations",
+      "surface": "influencer_creator_campaign_operations",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-255",
+      "capability_id": "md.creative_and_media_operations.content-production-gruntwork",
+      "role": "operational",
+      "category": "creative_and_media_operations",
+      "surface": "content_production_gruntwork",
+      "evidence_lane": "hybrid",
+      "preferred_skills": [],
+      "paired_prompt_id": null,
+      "plan_review_required": false,
+      "reviewed_handoff_required": false,
+      "execution_consent_required": false,
+      "exact_twin_only": false
+    },
+    {
+      "id": "MD-256",
+      "capability_id": "md.creative_and_media_operations.creative-legal-clearance",
+      "role": "operational",
+      "category": "creative_and_media_operations",
+      "surface": "creative_legal_clearance",
+      "evidence_lane": "hybrid",
       "preferred_skills": [],
       "paired_prompt_id": null,
       "plan_review_required": false,
@@ -5679,6 +6463,231 @@
     },
     {
       "from": "MD-00",
+      "to": "MD-201",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-201",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-201",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-201",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-201",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-202",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-202",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-202",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-202",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-202",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-203",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-203",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-203",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-203",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-203",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-204",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-204",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-204",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-204",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-204",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-205",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-205",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-205",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-205",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-205",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-206",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-206",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-206",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-206",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-206",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-207",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-207",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-207",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-207",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-207",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-208",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-208",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-208",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-208",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-208",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-209",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-209",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-209",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-209",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-209",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
       "to": "MD-20",
       "type": "requires"
     },
@@ -5695,6 +6704,256 @@
     {
       "from": "MD-04",
       "to": "MD-20",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-210",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-210",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-210",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-210",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-210",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-211",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-211",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-211",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-211",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-211",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-212",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-212",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-212",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-212",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-212",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-213",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-213",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-213",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-213",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-213",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-214",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-214",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-214",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-214",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-214",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-215",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-215",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-215",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-215",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-215",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-216",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-216",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-216",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-216",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-216",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-217",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-217",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-217",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-217",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-217",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-218",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-218",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-218",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-218",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-218",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-219",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-219",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-219",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-219",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-219",
       "type": "requires"
     },
     {
@@ -5719,6 +6978,256 @@
     },
     {
       "from": "MD-00",
+      "to": "MD-220",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-220",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-220",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-220",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-220",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-221",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-221",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-221",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-221",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-221",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-222",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-222",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-222",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-222",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-222",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-223",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-223",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-223",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-223",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-223",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-224",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-224",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-224",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-224",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-224",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-225",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-225",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-225",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-225",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-225",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-226",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-226",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-226",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-226",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-226",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-227",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-227",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-227",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-227",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-227",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-228",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-228",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-228",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-228",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-228",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-229",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-229",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-229",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-229",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-229",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
       "to": "MD-22",
       "type": "requires"
     },
@@ -5735,6 +7244,256 @@
     {
       "from": "MD-04",
       "to": "MD-22",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-230",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-230",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-230",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-230",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-230",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-231",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-231",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-231",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-231",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-231",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-232",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-232",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-232",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-232",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-232",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-233",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-233",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-233",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-233",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-233",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-234",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-234",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-234",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-234",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-234",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-235",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-235",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-235",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-235",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-235",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-236",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-236",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-236",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-236",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-236",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-237",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-237",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-237",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-237",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-237",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-238",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-238",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-238",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-238",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-238",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-239",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-239",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-239",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-239",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-239",
       "type": "requires"
     },
     {
@@ -5759,6 +7518,256 @@
     },
     {
       "from": "MD-00",
+      "to": "MD-240",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-240",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-240",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-240",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-240",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-241",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-241",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-241",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-241",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-241",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-242",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-242",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-242",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-242",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-242",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-243",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-243",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-243",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-243",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-243",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-244",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-244",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-244",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-244",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-244",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-245",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-245",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-245",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-245",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-245",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-246",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-246",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-246",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-246",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-246",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-247",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-247",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-247",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-247",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-247",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-248",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-248",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-248",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-248",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-248",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-249",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-249",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-249",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-249",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-249",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
       "to": "MD-24",
       "type": "requires"
     },
@@ -5775,6 +7784,181 @@
     {
       "from": "MD-04",
       "to": "MD-24",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-250",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-250",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-250",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-250",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-250",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-251",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-251",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-251",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-251",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-251",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-252",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-252",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-252",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-252",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-252",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-253",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-253",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-253",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-253",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-253",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-254",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-254",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-254",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-254",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-254",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-255",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-255",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-255",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-255",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-255",
+      "type": "requires"
+    },
+    {
+      "from": "MD-00",
+      "to": "MD-256",
+      "type": "requires"
+    },
+    {
+      "from": "MD-01",
+      "to": "MD-256",
+      "type": "requires"
+    },
+    {
+      "from": "MD-02",
+      "to": "MD-256",
+      "type": "requires"
+    },
+    {
+      "from": "MD-03",
+      "to": "MD-256",
+      "type": "requires"
+    },
+    {
+      "from": "MD-04",
+      "to": "MD-256",
       "type": "requires"
     },
     {

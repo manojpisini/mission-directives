@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 662
+  maximum_body_words: 1077
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -132,6 +132,15 @@ conditional_template_routes:
 - docs/testing-guide
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Performance investigation
+imported_profiles:
+- profile_id: CP-016
+  title: Performance investigation
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 6f8e865640780b092c210acfdd05dd9ab8b72ae0d1c9c4ae6ef056436b393bab
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-016-performance-investigation.schema.json
 ---
 
 # Performance and Efficiency — Investigation and Plan
@@ -217,4 +226,65 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-50`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-016" title="Performance investigation" schema="schemas/imported/generic_prompt_library_v3_1/cp-016-performance-investigation.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Performance investigation
+
+## Task contract
+
+Reproduce and isolate a performance problem with measurement discipline, identify the limiting resource or algorithm, and verify the smallest fix against realistic load.
+
+## Use this prompt when
+
+- Latency, throughput, resource use, startup, build, rendering, or query performance is degraded.
+
+## Do not use it for
+
+- Optimizing without a reproducible baseline or user-impact target.
+
+## Required inputs
+
+1. Observed symptom
+2. target SLO
+3. Representative workload and environment
+4. Version/change history
+5. Profiles, traces, metrics, and logs
+6. Resource and correctness constraints
+
+## Workflow
+
+1. Define the performance contract and reproduce the symptom with fixed inputs, environment, warmup, sampling, and correctness checks.
+2. Decompose end-to-end time or resource use by stage.
+3. Use profiling, tracing, query plans, allocation analysis, or build timing appropriate to the system.
+4. Form competing hypotheses and run controlled experiments that change one factor at a time.
+5. Distinguish CPU, I/O, lock, network, allocation, algorithmic, cache, and downstream limits.
+6. Inspect recent changes and scale sensitivity; test cold/warm, small/large, concurrent, failure, and degraded-dependency cases.
+7. Implement or propose the smallest change that addresses the verified bottleneck without shifting cost or weakening correctness.
+8. Re-run the benchmark, quantify effect and variance, check regressions, and define production monitoring and rollback.
+
+## Deliverable
+
+- Reproduction benchmark
+- Bottleneck evidence
+- rejected hypotheses
+- Minimal fix proposal
+- Before/after validation and monitoring
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-016-performance-investigation.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Improvement is measured against the same workload and correctness criteria.
+- [ ] The root bottleneck is demonstrated rather than inferred from intuition.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

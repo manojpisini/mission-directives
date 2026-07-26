@@ -2,7 +2,10 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
+import subprocess
 import sys
+import time
 from pathlib import Path
 
 import pytest
@@ -674,6 +677,24 @@ def test_canonical_test_runner_uses_bounded_per_file_execution():
     assert '(ROOT / "tests").glob("test_*.py")' in text or "glob('test_*.py')" in text
     assert "--per-file-timeout" in text
     assert "subprocess.TimeoutExpired" in text
+    assert "CREATE_NEW_PROCESS_GROUP" in text
+    assert "start_new_session" in text
+    assert '"taskkill"' in text
+    assert "os.killpg" in text
+    assert "pytest_cmd = [sys.executable" in text
+
+
+def test_canonical_test_runner_timeout_terminates_promptly(tmp_path):
+    runner = load(ROOT / "tools/run_tests.py", "md_run_tests_timeout")
+    started = time.monotonic()
+    with pytest.raises(subprocess.TimeoutExpired):
+        runner._run_bounded(
+            [sys.executable, "-c", "import time; time.sleep(60)"],
+            cwd=tmp_path,
+            env=os.environ.copy(),
+            timeout=1,
+        )
+    assert time.monotonic() - started < 10
 
 
 def test_canonical_test_runner_uses_structured_junit_counts(tmp_path):

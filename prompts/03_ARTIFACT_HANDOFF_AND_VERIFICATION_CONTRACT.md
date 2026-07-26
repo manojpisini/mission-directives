@@ -59,7 +59,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 450
+  maximum_body_words: 836
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -95,6 +95,15 @@ conditional_template_routes:
 - core/decision-record
 - core/artifact-specification
 - core/acceptance-criteria
+aliases:
+- Agent handoff quality review
+imported_profiles:
+- profile_id: CP-013
+  title: Agent handoff quality review
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 42fb18f08c86f839efd4bf3cd474e3a4c131f0f48265019196622e71090a66dc
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-013-agent-handoff-quality-review.schema.json
 ---
 
 # Artifact, Handoff, and Verification Contract
@@ -153,5 +162,61 @@ Completion requires all of the following:
 - Each handoff preserves stable IDs and distinguishes proposed, approved, executed, verified, deferred, failed, and residual states.
 - An `=VERIFY:{id}` record confirms that required artifacts can be validated independently and that incomplete evidence cannot masquerade as completion.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-013" title="Agent handoff quality review" schema="schemas/imported/generic_prompt_library_v3_1/cp-013-agent-handoff-quality-review.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Agent handoff quality review
+
+## Task contract
+
+Verify that an agent handoff contains enough explicit state, authority, evidence, and completion criteria for another agent to execute without reconstructing hidden decisions.
+
+## Use this prompt when
+
+- Reviewing plans, task packets, inter-agent messages, or resumable work.
+
+## Do not use it for
+
+- Evaluating the final product rather than the handoff.
+
+## Required inputs
+
+1. Handoff packet
+2. Original user request and constraints
+3. Current workspace/repository state
+4. Tool and permission model
+5. Expected deliverable and acceptance criteria
+
+## Workflow
+
+1. Reconstruct the task solely from the handoff and list any decision, file, identifier, environment, dependency, or permission that must be guessed.
+2. Check scope and authority: what may be read, written, sent, purchased, deployed, or approved; identify actions requiring human consent.
+3. Verify state references—paths, revisions, artifacts, IDs, schemas, partial outputs, failed attempts, and commands—are precise and current.
+4. Test execution order and dependency closure: prerequisites, branching decisions, stop conditions, rollback, and recovery from interruption.
+5. Check evidence and epistemic labels so the receiving agent can distinguish facts, assumptions, recommendations, and unresolved questions.
+6. Return a repaired handoff that is minimal but executable, plus blocking gaps that cannot be inferred safely.
+
+## Deliverable
+
+- Handoff completeness findings
+- Repaired executable handoff
+- Authority/approval gaps
+- Resume and completion conditions
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-013-agent-handoff-quality-review.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] A new executor can identify the next action without consulting hidden conversation state.
+- [ ] External actions and approvals are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

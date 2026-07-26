@@ -97,6 +97,179 @@ if len(cap_ids) != len(set(cap_ids)):
 slugs = [m.get("prompt_slug") for _, m, _ in items]
 if len(slugs) != len(set(slugs)):
     errors.append("prompt_slug values must be unique")
+
+# Imported capability identity, provenance, schema, and refinement ownership.
+imported_profile_owners = {}
+refinement_count = 0
+for f, m, body in items:
+    standalone = m.get("imported_profile")
+    standalone_profile_id = (
+        standalone.get("profile_id") if isinstance(standalone, dict) else None
+    )
+    profiles = []
+    if isinstance(standalone, dict):
+        profiles.append((standalone, m.get("machine_output_schema"), "add"))
+    elif standalone is not None:
+        errors.append(f"{f.name}: imported_profile must be an object")
+    merged_profiles = m.get("imported_profiles") or []
+    if not isinstance(merged_profiles, list):
+        errors.append(f"{f.name}: imported_profiles must be a list")
+        merged_profiles = []
+    for profile in merged_profiles:
+        if not isinstance(profile, dict):
+            errors.append(f"{f.name}: imported_profiles entries must be objects")
+            continue
+        profiles.append((profile, profile.get("schema_path"), "merge"))
+    if body.count("<capability_profile") != body.count("</capability_profile>"):
+        errors.append(f"{f.name}: unbalanced capability profile blocks")
+    if body.count("<reviewed_workflow_refinement") != body.count(
+        "</reviewed_workflow_refinement>"
+    ):
+        errors.append(f"{f.name}: unbalanced reviewed refinement blocks")
+    for profile, schema_path, disposition in profiles:
+        profile_id = profile.get("profile_id")
+        if not re.fullmatch(r"CP-\d{3}", str(profile_id or "")):
+            errors.append(f"{f.name}: invalid imported profile ID {profile_id!r}")
+            continue
+        if profile_id in imported_profile_owners:
+            previous = imported_profile_owners[profile_id][0]
+            errors.append(
+                f"{profile_id}: duplicate imported profile ownership in {previous} and {m['prompt_id']}"
+            )
+        imported_profile_owners[profile_id] = (m["prompt_id"], disposition)
+        if not re.fullmatch(r"[0-9a-f]{64}", str(profile.get("source_sha256") or "")):
+            errors.append(f"{profile_id}: invalid source_sha256")
+        if not isinstance(schema_path, str) or not schema_path:
+            errors.append(f"{profile_id}: missing schema path")
+            continue
+        schema_relative = Path(schema_path)
+        if schema_relative.is_absolute() or ".." in schema_relative.parts:
+            errors.append(f"{profile_id}: unsafe schema path {schema_path}")
+            continue
+        schema_file = ROOT / schema_relative
+        if not schema_file.is_file() or schema_file.is_symlink():
+            errors.append(f"{profile_id}: schema path is missing or unsafe: {schema_path}")
+            continue
+        schema = load(schema_file)
+        schema_prompt_id = (
+            schema.get("properties", {}).get("prompt_id", {}).get("const")
+            if isinstance(schema, dict)
+            else None
+        )
+        if schema_prompt_id != profile_id:
+            errors.append(
+                f"{profile_id}: schema prompt_id const is {schema_prompt_id!r}"
+            )
+        if disposition == "merge":
+            openings = re.findall(r"<capability_profile\b[^>]*>", body)
+            matching = [
+                opening
+                for opening in openings
+                if re.search(rf'\bid="{re.escape(profile_id)}"', opening)
+            ]
+            if len(matching) != 1:
+                errors.append(
+                    f"{m['prompt_id']}: expected one capability block for {profile_id}"
+                )
+            elif not re.search(
+                rf'\bschema="{re.escape(schema_path)}"', matching[0]
+            ):
+                errors.append(f"{profile_id}: capability block schema mismatch")
+
+    refinement_pattern = re.compile(
+        r"<reviewed_workflow_refinement\b(?P<attributes>[^>]*)>"
+    )
+    owner_pattern = re.compile(r'<capability_profile\s+id="(?P<profile>CP-\d{3})"')
+    for refinement in refinement_pattern.finditer(body):
+        refinement_count += 1
+        attributes = refinement.group("attributes")
+        profile_match = re.search(r'\bprofile="(?P<profile>CP-\d{3})"', attributes)
+        artifact_match = re.search(r'\breview_artifact="(?P<path>[^"]+)"', attributes)
+        if not profile_match:
+            errors.append(f"{f.name}: refinement is missing profile binding")
+            continue
+        profile_id = profile_match.group("profile")
+        prefix = body[: refinement.start()]
+        owner_matches = list(owner_pattern.finditer(prefix))
+        inside_merged_profile = bool(owner_matches) and prefix.rfind(
+            "<capability_profile"
+        ) > prefix.rfind("</capability_profile>")
+        expected_profile = (
+            owner_matches[-1].group("profile")
+            if inside_merged_profile
+            else standalone_profile_id
+        )
+        if profile_id != expected_profile:
+            errors.append(
+                f"{f.name}: refinement {profile_id} is owned by {expected_profile}"
+            )
+        if not artifact_match:
+            errors.append(f"{profile_id}: refinement is missing review_artifact")
+            continue
+        artifact_relative = Path(artifact_match.group("path"))
+        if (
+            artifact_relative.is_absolute()
+            or ".." in artifact_relative.parts
+            or not (ROOT / artifact_relative).is_file()
+        ):
+            errors.append(f"{profile_id}: invalid review_artifact path")
+
+import_plan_path = ROOT / "prompt_imports/generic_prompt_library_v3_1_plan.json"
+provenance_path = ROOT / "prompt_imports/generic_prompt_library_v3_1_provenance.json"
+plan_is_safe = import_plan_path.is_file() and not import_plan_path.is_symlink()
+provenance_is_safe = provenance_path.is_file() and not provenance_path.is_symlink()
+if imported_profile_owners and not plan_is_safe:
+    errors.append("imported capability profiles require a safe import plan")
+if imported_profile_owners and not provenance_is_safe:
+    errors.append("imported capability profiles require safe import provenance")
+if plan_is_safe:
+    import_plan = load(import_plan_path)
+    provenance = load(provenance_path) if provenance_is_safe else {}
+    import_rows = import_plan.get("imports", [])
+    expected_profile_ids = [row.get("cp_id") for row in import_rows]
+    if len(expected_profile_ids) != len(set(expected_profile_ids)):
+        errors.append("generic prompt import plan contains duplicate CP identities")
+    if set(expected_profile_ids) != set(imported_profile_owners):
+        errors.append("imported capability profiles do not exactly match the import plan")
+    for row in import_rows:
+        actual_owner = imported_profile_owners.get(row.get("cp_id"))
+        if not actual_owner or actual_owner[1] != row.get("disposition"):
+            errors.append(
+                f"{row.get('cp_id')}: imported owner/disposition does not match the plan"
+            )
+        elif row.get("disposition") == "merge" and actual_owner[0] != row.get(
+            "target_md_id"
+        ):
+            errors.append(f"{row.get('cp_id')}: merged target does not match the plan")
+    addition_rows = [row for row in import_rows if row.get("disposition") == "add"]
+    added_prompt_ids = provenance.get("added_prompt_ids", [])
+    if len(added_prompt_ids) != len(addition_rows):
+        errors.append("generic prompt import provenance added identity count mismatch")
+    else:
+        for row, prompt_id in zip(addition_rows, added_prompt_ids, strict=True):
+            if imported_profile_owners.get(row.get("cp_id")) != (prompt_id, "add"):
+                errors.append(
+                    f"{row.get('cp_id')}: added prompt identity does not match provenance"
+                )
+    actual_plan_sha256 = hashlib.sha256(import_plan_path.read_bytes()).hexdigest()
+    if provenance.get("plan_sha256") != actual_plan_sha256:
+        errors.append("generic prompt import provenance plan hash mismatch")
+    if provenance.get("source_prompt_count") != len(import_rows):
+        errors.append("generic prompt import provenance source count mismatch")
+    if provenance.get("schema_count") != len(imported_profile_owners):
+        errors.append("generic prompt import provenance schema count mismatch")
+    if provenance.get("added_prompt_count") != sum(
+        row.get("disposition") == "add" for row in import_rows
+    ):
+        errors.append("generic prompt import provenance added count mismatch")
+    if provenance.get("merged_profile_count") != sum(
+        row.get("disposition") == "merge" for row in import_rows
+    ):
+        errors.append("generic prompt import provenance merged count mismatch")
+    if not re.fullmatch(r"[0-9a-f]{64}", str(provenance.get("archive_sha256") or "")):
+        errors.append("generic prompt import provenance archive hash is invalid")
+    if refinement_count and not provenance_is_safe:
+        errors.append("reviewed refinements require safe import provenance")
 for f, m, b in items:
     pid = m["prompt_id"]
     expected = f"MD-{m['sequence']:02d}"
@@ -512,8 +685,19 @@ for s in scenarios:
 
 # Current identity and crosswalk contracts.
 ident = load(ROOT / "compatibility/capability_identity_registry.json")
-if len(ident.get("capabilities", [])) != len(items):
-    errors.append("identity registry count mismatch")
+expected_capabilities = [
+    {
+        "capability_id": metadata["capability_id"],
+        "prompt_id": metadata["prompt_id"],
+        "prompt_slug": metadata["prompt_slug"],
+        "sequence": metadata["sequence"],
+        "title": metadata["title"],
+        "status": "active",
+    }
+    for _, metadata, _ in sorted(items, key=lambda item: item[1]["sequence"])
+]
+if ident.get("capabilities") != expected_capabilities:
+    errors.append("identity registry does not exactly match prompt metadata")
 for name in (
     "md_to_agent_library_crosswalk.json",
     "md_to_prompt_type_library_crosswalk.json",
@@ -806,6 +990,38 @@ required_root = [
 for name in required_root:
     if not (ROOT / name).exists():
         errors.append(f"missing required artifact {name}")
+
+# Public inventory claims must stay synchronized with canonical metadata.
+prompt_count = len(items)
+pair_count = sum(
+    1
+    for _, metadata, _ in items
+    if metadata.get("prompt_role") == "investigative"
+    and metadata.get("paired_prompt_id")
+)
+composite_count = len(sc.get("composite_scenarios", []))
+skill_count = len(registry.get("skills", []))
+public_inventory_claims = {
+    "README.md": (
+        f"**{prompt_count} prompts**",
+        f"**{prompt_count} atomic routes**",
+        f"**{composite_count} composite scenarios**",
+        f"**{pair_count} reciprocal investigation/execution pairs**",
+    ),
+    "docs/COVERAGE_INDEX.md": (
+        f"**{prompt_count} prompts**",
+        f"**{pair_count} genuine pairs**",
+        f"**{composite_count} composite scenarios**",
+        f"**{skill_count} registered skills**",
+    ),
+    "docs/USER_MANUAL.md": (f"all {prompt_count} prompts",),
+    "docs/TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md": (f"all {prompt_count} prompts",),
+}
+for relative, claims in public_inventory_claims.items():
+    text = (ROOT / relative).read_text(encoding="utf-8")
+    for claim in claims:
+        if claim not in text:
+            errors.append(f"{relative}: stale or missing public inventory claim {claim}")
 manuals = [
     "USER_MANUAL",
     "OPERATOR_GUIDE",

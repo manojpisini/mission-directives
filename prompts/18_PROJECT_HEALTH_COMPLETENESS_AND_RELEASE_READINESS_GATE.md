@@ -63,7 +63,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 480
+  maximum_body_words: 1148
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -113,6 +113,22 @@ conditional_template_routes:
 - docs/operator-runbook
 - docs/observability-guide
 - docs/support-playbook
+aliases:
+- External action readiness
+- Launch readiness checklist
+imported_profiles:
+- profile_id: CP-027
+  title: External action readiness
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: d2a1000bb31d59f5f1bbc023dce3352bdd36ae099e105bae84afbed6eac2c05a
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-027-external-action-readiness.schema.json
+- profile_id: CP-069
+  title: Launch readiness checklist
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 96ae32c2a3523987dc382e1221b112e6b892bc84333c8e5c4faa66f67d9369b2
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-069-launch-readiness-checklist.schema.json
 ---
 
 # Project Health, Completeness, and Release Readiness Gate
@@ -184,4 +200,112 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-027" title="External action readiness" schema="schemas/imported/generic_prompt_library_v3_1/cp-027-external-action-readiness.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# External action readiness
+
+## Task contract
+
+Determine whether an external or irreversible action is authorized, sufficiently specified, observable, and recoverable before execution.
+
+## Use this prompt when
+
+- Before send, publish, deploy, purchase, payment, ticket creation, account change, deletion, or other external side effect.
+
+## Do not use it for
+
+- Performing the external action itself unless separately and explicitly authorized.
+
+## Required inputs
+
+1. Exact requested action and target
+2. Requester authority and approval evidence
+3. Payload/artifact to be sent or applied
+4. Cost, data, and reversibility impact
+5. Receipt, rollback, and escalation mechanism
+
+## Workflow
+
+1. Restate the exact action, target, scope, actor, timing, and expected result.
+2. Detect ambiguity that could affect recipients, money, data, or production state.
+3. Verify authority and approval at the required level, including separation of draft/review/send and any legal, financial, privacy, or production gates.
+4. Validate the payload and dependencies: recipients, environment, version, links, attachments, credentials, limits, and idempotency key.
+5. Assess side effects, blast radius, sensitive-data exposure, cost, notification, and whether a dry run or preview exists.
+6. Define success receipt, monitoring, cancellation/rollback, duplicate prevention, and incident escalation.
+7. Return ready/not-ready with blocking conditions and an execution packet that another authorized actor can follow exactly.
+
+## Deliverable
+
+- Readiness decision
+- Approval and authority evidence
+- Exact execution packet
+- Receipt/rollback/escalation plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-027-external-action-readiness.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] No external action is marked ready without authority and an exact target/payload.
+- [ ] Irreversible effects and rollback limits are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-069" title="Launch readiness checklist" schema="schemas/imported/generic_prompt_library_v3_1/cp-069-launch-readiness-checklist.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Launch readiness checklist
+
+## Task contract
+
+Gate a launch on verified product, content, operational, legal, measurement, access, and recovery readiness with explicit go/no-go authority.
+
+## Use this prompt when
+
+- Before publishing, releasing, launching, or activating a campaign/product.
+
+## Do not use it for
+
+- A ceremonial checklist completed without evidence.
+
+## Required inputs
+
+1. Launch scope and date
+2. Deliverables and environments
+3. Owners/approvers; then tracking/support/rollback plans.
+4. Known risks and dependencies
+
+## Workflow
+
+1. Define launch object, audience, environment, success indicators, decision owner, and latest safe decision time.
+2. Verify asset/product completeness, links, copy, configuration, permissions, localization, accessibility, compatibility, and legal/brand approvals.
+3. Test critical user journeys, tracking/analytics, notifications, support flows, monitoring, capacity, and incident contacts; then confirm publishing/deployment access, exact versions, backups, unpublish/rollback, kill switch, and duplicate prevention.
+4. Review open risks, exceptions, dependencies, communications, and the consequence of delay versus launch.
+5. Issue go, conditional go, hold, or no-go with evidence, conditions, owners, and post-launch checks.
+
+## Deliverable
+
+- Launch readiness matrix
+- Open exceptions and owners; then go/no-go decision.
+- Rollback and post-launch plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-069-launch-readiness-checklist.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every critical check has evidence, not only a checkbox.
+- [ ] Rollback or unpublish has been verified or risk-accepted.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

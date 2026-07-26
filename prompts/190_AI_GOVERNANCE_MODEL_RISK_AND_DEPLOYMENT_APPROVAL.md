@@ -35,7 +35,7 @@ produces:
 - typed_runtime_artifacts
 evidence_lane: factual
 preferred_skills: []
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -56,7 +56,9 @@ output_contract:
     format: jsonl
   - path: reports/ai_governance_model_risk_and_deployment_approval/ai_governance_model_risk_and_deployment_approval_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.ai_governance.ai-governance-model-risk-and-deployment-approval
 prompt_slug: ai-governance-model-risk-and-deployment-approval
@@ -72,7 +74,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 761
+  maximum_body_words: 1145
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -127,6 +129,15 @@ conditional_template_routes:
 - reports/security-assessment
 - docs/observability-guide
 - visual/data-visualization-specification
+aliases:
+- Human approval packet
+imported_profiles:
+- profile_id: CP-029
+  title: Human approval packet
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 8a48b99888328958cd5f13f8aad613987772f1c1155e891c4dd650020df02e9b
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-029-human-approval-packet.schema.json
 ---
 
 # AI Governance, Model Risk, and Deployment Approval
@@ -228,5 +239,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-029" title="Human approval packet" schema="schemas/imported/generic_prompt_library_v3_1/cp-029-human-approval-packet.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Human approval packet
+
+## Task contract
+
+Convert a proposed plan into a compact approval packet that exposes decision, scope, authority, risks, irreversible effects, and exact execution conditions.
+
+## Use this prompt when
+
+- A human must approve a plan, external action, production change, purchase, disclosure, or high-impact workflow.
+
+## Do not use it for
+
+- Replacing legally required consent or professional approval forms.
+
+## Required inputs
+
+1. Proposed action and rationale
+2. Alternatives considered; then affected systems/people/data/cost.
+3. Execution and rollback plan
+4. Required approvers and policy
+
+## Workflow
+
+1. State the decision requested in one sentence with scope, target, timing, and executor.
+2. Summarize evidence, expected benefit, alternatives—including no action—and why the recommendation is preferred; then expose material risks, uncertainty, privacy/security implications, cost, irreversible effects, and who bears residual risk.
+3. Provide exact execution steps, prerequisites, permissions, validation, receipts, rollback/cancellation, and stop conditions.
+4. Separate approval choices: approve, approve with conditions, request changes, reject, or defer; include expiry and reapproval triggers.
+5. Record approver identity, decision, conditions, timestamp, and evidence without implying consent from silence.
+
+## Deliverable
+
+- Decision-ready approval summary
+- Risk/alternative analysis; then exact execution and rollback packet.
+- Explicit approval record
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-029-human-approval-packet.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The approver can understand consequences without reading hidden context.
+- [ ] Approval is explicit, scoped, and time-bound where appropriate.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

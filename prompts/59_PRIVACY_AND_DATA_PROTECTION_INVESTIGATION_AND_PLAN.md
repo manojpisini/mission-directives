@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 678
+  maximum_body_words: 1132
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -133,6 +133,15 @@ conditional_template_routes:
 - docs/policy
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Privacy impact assessment
+imported_profiles:
+- profile_id: CP-089
+  title: Privacy impact assessment
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 1deb7a5cd3484f2909e053de8ddc9923fbdffb2ab574458bb1185bd18d5834cb
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-089-privacy-impact-assessment.schema.json
 ---
 
 # Privacy and Data Protection — Investigation and Plan
@@ -219,4 +228,72 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-60`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-089" title="Privacy impact assessment" schema="schemas/imported/generic_prompt_library_v3_1/cp-089-privacy-impact-assessment.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Privacy impact assessment
+
+## Task contract
+
+Perform a privacy impact assessment that connects a proposed processing activity to purpose, data minimization, lawful/consent basis, sharing, security, retention, rights, and residual risk.
+
+## Use this prompt when
+
+- Designing or changing collection, use, sharing, tracking, profiling, AI, or monitoring involving personal data.
+
+## Do not use it for
+
+- Providing jurisdiction-specific legal advice without qualified review.
+
+## Required inputs
+
+1. Processing purpose
+2. user journey
+3. Data categories/subjects/sources
+4. Systems, recipients, and regions
+5. Retention/deletion
+6. Consent/legal and security context
+
+## Workflow
+
+1. Define processing activity, decision owner, intended benefit, necessity, affected people, and alternatives with less data.
+2. Map personal/sensitive data from collection through use, inference, combination, sharing, storage, access, model/provider processing, and deletion.
+3. Assess notice, consent or other applicable basis, purpose limitation, minimization, fairness, vulnerable groups, secondary use, and user expectations.
+4. Evaluate rights and controls: access, correction, deletion, objection/opt-out, portability, appeal, human review, and dark-pattern risk.
+5. Assess security, retention, de-identification, re-identification, vendors, cross-border transfer, breach impact, and accountability.
+6. Define mitigations, residual privacy risk, consultation/approval needs, implementation evidence, and review triggers.
+
+## Decision and escalation rules
+
+- Escalate high-risk processing, vulnerable populations, large-scale monitoring, sensitive categories, or novel automated decisions to qualified privacy/legal review.
+- Prefer elimination or minimization before relying on consent, notice, contracts, or downstream controls.
+- Do not approve processing when purpose, lawful basis, retention, sharing, or deletion remains undefined.
+
+## Deliverable
+
+- Processing/data-flow description
+- Necessity/fairness assessment
+- Privacy risk and controls
+- Residual-risk/approval record
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-089-privacy-impact-assessment.schema.json` when structured output is requested.
+
+## Task-specific cautions
+
+- Use qualified privacy/legal review for applicable law and formal determinations.
+
+## Completion gates
+
+- [ ] Every data field and recipient has a stated purpose.
+- [ ] Deletion and user rights include derived/vendor copies.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

@@ -42,7 +42,7 @@ preferred_skills:
 - brand-guidelines
 - canvas-design
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - social_package
 - carousel_spec
@@ -63,7 +63,12 @@ output_contract:
     format: jsonl
   - path: reports/social_media_short_form_and_community_content_production/social_media_short_form_and_community_content_production_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - social_package
+  - carousel_spec
+  - short_video_spec
+  - community_plan
 suite_version: 1.8.3
 capability_id: md.content_operations.social-media-short-form-and-community-content-production
 prompt_slug: social-media-short-form-and-community-content-production
@@ -79,7 +84,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 698
+  maximum_body_words: 1071
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -130,6 +135,15 @@ conditional_template_routes:
 - docs/support-playbook
 - docs/cli-reference
 - docs/binary-distribution-manual
+aliases:
+- Influencer/creator brief
+imported_profiles:
+- profile_id: CP-116
+  title: Influencer/creator brief
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 66f2d2515ae21bf68179e409ca861d302c0e61f445ae3b8c867ce7c28fdfc958
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-116-influencer-creator-brief.schema.json
 ---
 
 # Social Media, Short-Form, and Community Content Production
@@ -224,5 +238,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-116" title="Influencer/creator brief" schema="schemas/imported/generic_prompt_library_v3_1/cp-116-influencer-creator-brief.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Influencer/creator brief
+
+## Task contract
+
+Create a creator brief that balances authentic creator expression with clear audience, claims, deliverables, rights, disclosure, safety, approval, and measurement requirements.
+
+## Use this prompt when
+
+- Commissioning influencer or creator content.
+
+## Do not use it for
+
+- Writing a rigid script that undermines creator authenticity unless regulation requires exact language.
+
+## Required inputs
+
+1. Campaign objective/audience
+2. Creator/channel context
+3. Product/offer and claims
+4. Deliverables/timeline; then rights/disclosure/brand-safety terms.
+
+## Workflow
+
+1. Define audience, objective, key takeaway, CTA, and why the creator is relevant.
+2. Provide product/use context, approved proof, claims boundaries, prohibited claims, sensitive topics, and required disclosures.
+3. Specify deliverables by platform, format, duration, quantity, posting window, tags/links, accessibility, and technical requirements.
+4. Separate mandatory elements from creative freedom; provide references and anti-references without prescribing imitation; then define review/approval, factual correction, reshoot/revision, brand safety, competitor/exclusivity, comments, crisis, and takedown rules.
+5. Specify usage rights, whitelisting/paid use, territory, term, raw files, reporting, payment dependencies, and performance metrics.
+
+## Deliverable
+
+- Creator-facing brief
+- Deliverable/specification table; then claims/disclosure/safety rules.
+- Rights/review/measurement terms
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-116-influencer-creator-brief.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Mandatory and flexible elements are clearly separated.
+- [ ] Disclosure and usage rights are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

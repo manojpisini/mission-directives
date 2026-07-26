@@ -2,14 +2,19 @@
   "suite_version": "1.8.3",
   "files": [
     {
+      "path": ".github/workflows/deploy-docs.yml",
+      "bytes": 883,
+      "sha256": "3d1564fd522d6390f3389010d31ccf51bb66df6f1ee6cdbdced40278bbb1053c"
+    },
+    {
       "path": ".github/workflows/validate.yml",
       "bytes": 1848,
       "sha256": "393d6433dbd7e8987369d45d6bfb5aef8158ecc1b5c720a3f97697f5f00cd190"
     },
     {
       "path": ".gitignore",
-      "bytes": 259,
-      "sha256": "441bc8c4c1bace6a2f6ea13837823967a4bfb0664d3851b6c376e8e983ec6c63"
+      "bytes": 579,
+      "sha256": "28f20d7e0d086ed4b9e5d54d0330f97b86327e3560e729dc9a49b7d27010d34d"
     },
     {
       "path": ".pre-commit-config.yaml",
@@ -53,8 +58,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 16205,
-      "sha256": "85858332ff4e606bfd054d0f380403fa6a853ad30be7126fdcf453a50e5f7a6f"
+      "bytes": 18105,
+      "sha256": "3c027d42d3f4ed7dd088f745f97474551867267a11678d5abd9c20ee087cb86a"
     },
     {
       "path": "RELEASE_ID",
@@ -63,8 +68,8 @@
     },
     {
       "path": "SCENARIO_CATALOG.json",
-      "bytes": 948285,
-      "sha256": "cfedad12ab36cf21968ae131ddae8ebf4a44cbf58a2c1ec8589d415eca26ec30"
+      "bytes": 1085853,
+      "sha256": "53c3156d37d745c7e2e2b119c54d0d17a64250c9f1d6a423ae236e49d1aa1b69"
     },
     {
       "path": "SECURITY.md",
@@ -83,8 +88,8 @@
     },
     {
       "path": "catalog.json",
-      "bytes": 1221548,
-      "sha256": "b91a7c848aba0b2ccc2f20bedf5c4ca166e921fdfb8726e2b7f91341f0b0547c"
+      "bytes": 1589083,
+      "sha256": "7fcfff9b9456eb4447ecd89921d9e98442e8826c10b6d77eab6a839c743755a3"
     },
     {
       "path": "compatibility/agent_skill_paths.json",
@@ -93,8 +98,8 @@
     },
     {
       "path": "compatibility/capability_identity_registry.json",
-      "bytes": 69800,
-      "sha256": "5290b10e282325680f73621384c652413126c2230fd6777e5611b4b41e18ba52"
+      "bytes": 84213,
+      "sha256": "ff7dbb782be730d846e7a7f82f742e38aaf22fcf08442e1211eca45ffa8dddad"
     },
     {
       "path": "config/bundles.json",
@@ -103,18 +108,18 @@
     },
     {
       "path": "config/capability_graph.json",
-      "bytes": 187579,
-      "sha256": "8dae1231c8e5141cdfafaeffe41a233f23e00db305c61a792cf7c34d14066943"
+      "bytes": 237357,
+      "sha256": "6e36f2b3090747dbd39d6ba44232017bd064820a31b3e2b122ebcc3696f812ca"
     },
     {
       "path": "config/category_taxonomy.json",
-      "bytes": 25217,
-      "sha256": "c4fd5e92bfa251612f9d3ee16cc721d8140ae62c66c993c9a786358eef5e4348"
+      "bytes": 28720,
+      "sha256": "573950e661f7dabf73352b9bf485feb7cb8cee14e2b0460cb9cc99cf8c2d5eb9"
     },
     {
       "path": "config/department_packs.json",
-      "bytes": 5189,
-      "sha256": "2ef1b0380d648f078b0ad748887a569d210e8c5f7554c56d237189d9b6c13d06"
+      "bytes": 7304,
+      "sha256": "194fc4eb4fd5234db81daba564e639b1cdeda8170034344c45783ef541e1eaff"
     },
     {
       "path": "config/installed_skills_inventory.json",
@@ -137,6 +142,16 @@
       "sha256": "e72c3961de2a17a920cbdc45aaff8ba3167898011bcdc811c5825e6c067daf4a"
     },
     {
+      "path": "config/router_keywords.json",
+      "bytes": 8129,
+      "sha256": "4a11807646bef3e64ad3286fe99162996f54503a4ef66454848e29fdd2477220"
+    },
+    {
+      "path": "config/runtime_payload.json",
+      "bytes": 1757,
+      "sha256": "234392a49f875b1b21ffaffd4c40930d05f36d52d363fe0a03c886712e6981c9"
+    },
+    {
       "path": "config/skill_aliases.json",
       "bytes": 48,
       "sha256": "3502c4680675a4342c6bf726b180710f39dbf51e81e0263e57a7616d13aee33b"
@@ -148,8 +163,8 @@
     },
     {
       "path": "config/template_registry.json",
-      "bytes": 81615,
-      "sha256": "9704989621e02a20e98042a89fbcdd5d10afde171f86548176f9103e9c78ed77"
+      "bytes": 87663,
+      "sha256": "d3897bdf6858b22915e2c4da4b4ea17d20f1290b397b6652fbba78f1bcdb68d8"
     },
     {
       "path": "docs/AGENT_LIBRARY_INTEGRATION_GUIDE.md",
@@ -204,12 +219,17 @@
     {
       "path": "docs/COVERAGE_INDEX.md",
       "bytes": 18513,
-      "sha256": "63e7e002a75972fd71b9f56cd6240d3d9d51581dd96702f2d3cd2f5e270e7c6b"
+      "sha256": "af4def37f3b6d24162302e1d1e3d79171563c135ffad6f1e9b5777220a5ab108"
     },
     {
       "path": "docs/CROSS_PLATFORM_TOOLING_GUIDE.md",
       "bytes": 8848,
       "sha256": "2d4f27fdd04fd4b57223dc64eef33d68799e14b06e5d9ef5b18afcc91ca7530f"
+    },
+    {
+      "path": "docs/DOCUMENTATION_SITE_GUIDE.md",
+      "bytes": 2686,
+      "sha256": "80b67b99dccfda766a09d1189f9d84ccadd8c76266f871b33b0b48848a10a83f"
     },
     {
       "path": "docs/EVALUATION_MANUAL.md",
@@ -238,8 +258,13 @@
     },
     {
       "path": "docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md",
-      "bytes": 2889,
-      "sha256": "f5c6eff5f3b6062a764758aa78f8f565c1887224056e7e199cc348fd1fa87b28"
+      "bytes": 5116,
+      "sha256": "03f009358dd0741950654361ea851fa4b6e7d7f239faa2fb799ee40a1de3890d"
+    },
+    {
+      "path": "docs/INSTALLED_RUNTIME_PAYLOAD_GUIDE.md",
+      "bytes": 3304,
+      "sha256": "d18e2f6064e8bd10b7e02ed15a3fb82d3d35952ab3afa9a9448c8ca37dfd4a65"
     },
     {
       "path": "docs/INSTALLED_SKILLS_INVENTORY_GUIDE.md",
@@ -258,8 +283,8 @@
     },
     {
       "path": "docs/MANUALS.md",
-      "bytes": 8565,
-      "sha256": "f7d28fc41c00446eb676350c28caa96bac26f3cacadcb8da0acf981d45bc943b"
+      "bytes": 9160,
+      "sha256": "2f82961cdc3033c78f035b638525697f1361f4f5b3376d3eb2f415fbb4325269"
     },
     {
       "path": "docs/MANUAL_QUALITY_STANDARD.md",
@@ -313,8 +338,8 @@
     },
     {
       "path": "docs/PROMPT_CATALOG.md",
-      "bytes": 105051,
-      "sha256": "bba7f17ab5df09403b50229bce3f40e0d24edd1d12ae20815ae9ff04ae3955dc"
+      "bytes": 124166,
+      "sha256": "78a91e87e561680562a26dab2537e83bde04f8f2c9c91873bf217b5f995fd584"
     },
     {
       "path": "docs/PROMPT_ENGINEERING_METHODS.md",
@@ -333,8 +358,8 @@
     },
     {
       "path": "docs/README.md",
-      "bytes": 2505,
-      "sha256": "a71976d89b834e8b2c06d9361af57860ba5b7ba1332aec9dd3d3f7c1d02775cf"
+      "bytes": 3204,
+      "sha256": "5787620dc07276c8c3cab1b53fa0aa7eec33ba2792e27dafc85ae9cbcd3a246c"
     },
     {
       "path": "docs/RECOMMENDED_SKILL_STACKS.md",
@@ -353,8 +378,13 @@
     },
     {
       "path": "docs/ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md",
-      "bytes": 11170,
-      "sha256": "4f60beb3d00ff1cfc6791a2a6fdb526fa7adfca81ea3dcfbbc6435f52a77bc8a"
+      "bytes": 11904,
+      "sha256": "4ab81cd04e103ef8f6756af71ae496ad72358be004144a273aacdc80b86851c5"
+    },
+    {
+      "path": "docs/ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md",
+      "bytes": 4335,
+      "sha256": "74e0ba40534d67a4339fab84cbc5044e8fa8fc092be069622ba2f0657885e0ab"
     },
     {
       "path": "docs/RUNTIME_MARKER_PROTOCOL.md",
@@ -404,7 +434,7 @@
     {
       "path": "docs/TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md",
       "bytes": 4289,
-      "sha256": "39869d718d589f32e06edffcc146a52db1f1f805d847da4eec57d0efe45b2c67"
+      "sha256": "50a29ef807c33f71c8b92bcd6b7799d5fe3525861a812b1d1b9238b3f3beb712"
     },
     {
       "path": "docs/TROUBLESHOOTING_GUIDE.md",
@@ -419,7 +449,7 @@
     {
       "path": "docs/USER_MANUAL.md",
       "bytes": 7450,
-      "sha256": "7d406ec35e2611153d596f69fb2a82f12436b0dced3392d15b88ffa196ad6a54"
+      "sha256": "f304dffbe0ea1ca5654771a8cf8d69950daaf7d327da7e4e3559e4ec47baea57"
     },
     {
       "path": "docs/VISUAL_ASSETS_INTEGRATION_GUIDE.md",
@@ -432,9 +462,14 @@
       "sha256": "0a2812285ce853de0b2448842871dbc2e648f7122e38a94707a93cbdcd0c17e4"
     },
     {
+      "path": "docs/superpowers/plans/2026-07-26-router-runtime-docs-site.md",
+      "bytes": 55,
+      "sha256": "307223f9ca64517e331081709a2b8e9afff75c6aeba0b6d2036eec0cfb2dd3f1"
+    },
+    {
       "path": "evaluations/atomic_contract_fixtures.json",
-      "bytes": 82427,
-      "sha256": "18617de7edbdc7170a29feb10cde6906fae3a0bca25496923920323205b2419e"
+      "bytes": 106395,
+      "sha256": "e72a749f1875c80fdfa64805f412992ff50502c40e0348b9b139bdff898a6252"
     },
     {
       "path": "evaluations/exact_twin_negative_cases.json",
@@ -2682,6 +2717,141 @@
       "sha256": "760c9718eac6638de0f8b25d4f214be5dfa2bd43d502273aec0fcbea5ffa191e"
     },
     {
+      "path": "evaluations/prompts/MD-201/adversarial.json",
+      "bytes": 818,
+      "sha256": "967bb4bbee66f8845c0a9e6fb621be0d134bef22916827e3dfba93e82a1944a7"
+    },
+    {
+      "path": "evaluations/prompts/MD-201/healthy.json",
+      "bytes": 729,
+      "sha256": "cd5f56e7857991c4e9be792f52f0ab81c61c163beea18635f8a202bc0bb6a52f"
+    },
+    {
+      "path": "evaluations/prompts/MD-201/problematic.json",
+      "bytes": 764,
+      "sha256": "e2630f59c8d274bc23becc03436655329a58c38a64591194852de18e595c67d1"
+    },
+    {
+      "path": "evaluations/prompts/MD-202/adversarial.json",
+      "bytes": 770,
+      "sha256": "26cb54ecf239b81000c05e3a2b722d591d340057f5450ee0841311c748180ddf"
+    },
+    {
+      "path": "evaluations/prompts/MD-202/healthy.json",
+      "bytes": 681,
+      "sha256": "907085cfbd69e159f87b8091b853fab510acd33ef15d1dfd38cf8f56c881ec70"
+    },
+    {
+      "path": "evaluations/prompts/MD-202/problematic.json",
+      "bytes": 716,
+      "sha256": "cf39449884c6c104d77b3df0f7c95b96f4bf02c86e998d03c96700e090c51f00"
+    },
+    {
+      "path": "evaluations/prompts/MD-203/adversarial.json",
+      "bytes": 779,
+      "sha256": "039837d906b6c73f8a71604249d74762248dc59ad4702f4dfab21ce723279f90"
+    },
+    {
+      "path": "evaluations/prompts/MD-203/healthy.json",
+      "bytes": 690,
+      "sha256": "c55d1421faecf226cd1ef16548f36c26465702a801eeb8276f0272fb4c73dc01"
+    },
+    {
+      "path": "evaluations/prompts/MD-203/problematic.json",
+      "bytes": 725,
+      "sha256": "4d0f3cf73eceb0ea215491a23006b3ccdb90bb1b6bc9ee817e748dfda8b6bfa5"
+    },
+    {
+      "path": "evaluations/prompts/MD-204/adversarial.json",
+      "bytes": 776,
+      "sha256": "3c39c2a9a75a0c3eac93bc27d7a8b898440c00fd6468bb750b0637eeea82d40b"
+    },
+    {
+      "path": "evaluations/prompts/MD-204/healthy.json",
+      "bytes": 687,
+      "sha256": "ff29795bfcaab9ef1259f95e8fef694aa8bd8486cc0204c8f0b1e284c5683610"
+    },
+    {
+      "path": "evaluations/prompts/MD-204/problematic.json",
+      "bytes": 722,
+      "sha256": "bba6df3babd08ebdfe841d74d9b15c14a5d76f78f3e66f8766aa1809693ec8f6"
+    },
+    {
+      "path": "evaluations/prompts/MD-205/adversarial.json",
+      "bytes": 809,
+      "sha256": "274abaccdbab08cf1fedaab83a7b8fe917c2ec6389447f8171d3bdd46b99e6a9"
+    },
+    {
+      "path": "evaluations/prompts/MD-205/healthy.json",
+      "bytes": 720,
+      "sha256": "1f5ebd86ddb8d8b2c5f2b5c94bb6bdb6748fa66849a336acb0e20ecdf191e173"
+    },
+    {
+      "path": "evaluations/prompts/MD-205/problematic.json",
+      "bytes": 755,
+      "sha256": "ffee6c6ea78bc0068e63b415da8f7762ca2ca5e52996a039c27a8134a3348915"
+    },
+    {
+      "path": "evaluations/prompts/MD-206/adversarial.json",
+      "bytes": 815,
+      "sha256": "1a4269d05f48457591815dc730fed8881eb99afcec48f3729c405edcfd626b27"
+    },
+    {
+      "path": "evaluations/prompts/MD-206/healthy.json",
+      "bytes": 726,
+      "sha256": "18a3fe0ebf57b249f1a67b2233c51712d4c62cf18ab2b7ffe21cdaf5106435eb"
+    },
+    {
+      "path": "evaluations/prompts/MD-206/problematic.json",
+      "bytes": 761,
+      "sha256": "801c8fa3907bca3df08a3bfce3d8f9fdf017be04537e3037c954fc5972ac0339"
+    },
+    {
+      "path": "evaluations/prompts/MD-207/adversarial.json",
+      "bytes": 800,
+      "sha256": "932af13433b1238934f45fb2b5dba948e05277c6ec04a18e7009a52e36a9f98f"
+    },
+    {
+      "path": "evaluations/prompts/MD-207/healthy.json",
+      "bytes": 711,
+      "sha256": "338267f04db4d13cefc641419735312b1a0be72f3299daa53ce1091644d9cf1e"
+    },
+    {
+      "path": "evaluations/prompts/MD-207/problematic.json",
+      "bytes": 746,
+      "sha256": "aebecdce8ccf30982841ae9d831c20615a6e9e8d97d0610345fbe523c9e1ae11"
+    },
+    {
+      "path": "evaluations/prompts/MD-208/adversarial.json",
+      "bytes": 783,
+      "sha256": "e4fac326303469a44cdaf43df2829bf4fbe6e6781378c16be520f251fbd00fc7"
+    },
+    {
+      "path": "evaluations/prompts/MD-208/healthy.json",
+      "bytes": 694,
+      "sha256": "ebb05040a1b0f46f15092051d00f934303dcbd072fb086660f3944d090bc17a3"
+    },
+    {
+      "path": "evaluations/prompts/MD-208/problematic.json",
+      "bytes": 729,
+      "sha256": "0be0e66800e6eac5fb7951880b32dbe83cc7ca9c5a429626a98ab27487353948"
+    },
+    {
+      "path": "evaluations/prompts/MD-209/adversarial.json",
+      "bytes": 780,
+      "sha256": "680055058dfaf59eea3a3afad6e29afbcc5bcd478f45e407114b110658f629cf"
+    },
+    {
+      "path": "evaluations/prompts/MD-209/healthy.json",
+      "bytes": 691,
+      "sha256": "32d325abb358dfa47f9a65fea6eb723f1789e0298e4a4bee349f5a2359faa3ad"
+    },
+    {
+      "path": "evaluations/prompts/MD-209/problematic.json",
+      "bytes": 726,
+      "sha256": "73cec8c44565a26427bad55e0a6fff3f7fce261c3b52cb0a134fc8617be8fff1"
+    },
+    {
       "path": "evaluations/prompts/MD-21/adversarial.json",
       "bytes": 849,
       "sha256": "f457d796f0d437be8a4b8bae5047b4ae2afc285e1b0e7c628b901c3e6cb910c7"
@@ -2695,6 +2865,156 @@
       "path": "evaluations/prompts/MD-21/problematic.json",
       "bytes": 795,
       "sha256": "28c2c102d8cab08ada1651f52415582b7b252727cf1b7284b31e188f52cf6bc0"
+    },
+    {
+      "path": "evaluations/prompts/MD-210/adversarial.json",
+      "bytes": 795,
+      "sha256": "29e1ea14c23dc6f1de64d65b21e4061dac3f5a6d9209eb288a0944fea868f0e1"
+    },
+    {
+      "path": "evaluations/prompts/MD-210/healthy.json",
+      "bytes": 706,
+      "sha256": "365b4a5479d89f9944dfc620fe18ded559308b90bc011c4fb76dec33d8196bfa"
+    },
+    {
+      "path": "evaluations/prompts/MD-210/problematic.json",
+      "bytes": 741,
+      "sha256": "4550942be544ece8c17686e010e1ecde1d157d2a7270a657aaef2ff3f272da98"
+    },
+    {
+      "path": "evaluations/prompts/MD-211/adversarial.json",
+      "bytes": 798,
+      "sha256": "84cadd42bcb3b5a61dbc03ab30e3bc95e2229a8e86676dfb89ccbec72a16a24e"
+    },
+    {
+      "path": "evaluations/prompts/MD-211/healthy.json",
+      "bytes": 709,
+      "sha256": "c62abdfc37ac96e87c44cef9e39fe5574b5cdb5c805b24ab8da45a33bfabe135"
+    },
+    {
+      "path": "evaluations/prompts/MD-211/problematic.json",
+      "bytes": 744,
+      "sha256": "b1f5e63c48df8f07b965f4c530117518d25fa02802343b0a3aa92447450a1235"
+    },
+    {
+      "path": "evaluations/prompts/MD-212/adversarial.json",
+      "bytes": 801,
+      "sha256": "327da3b1204f597bf7c5bb6b6b94162ff928d48b5519bf1b23ba701896929fcc"
+    },
+    {
+      "path": "evaluations/prompts/MD-212/healthy.json",
+      "bytes": 712,
+      "sha256": "7cedab6b88d1c68e006f3cf5596a66809933c08251563f1698e10d8c968e43fb"
+    },
+    {
+      "path": "evaluations/prompts/MD-212/problematic.json",
+      "bytes": 747,
+      "sha256": "11e733d17f04e9026cdd108ab7dd90b1a19369b9a8e5e80fe71ae8cb10ab4bab"
+    },
+    {
+      "path": "evaluations/prompts/MD-213/adversarial.json",
+      "bytes": 791,
+      "sha256": "4fc53145b61956d6790871baee700b3e62c05c961a1b785d3a4d684c07ffe0b0"
+    },
+    {
+      "path": "evaluations/prompts/MD-213/healthy.json",
+      "bytes": 702,
+      "sha256": "e8f45bc7fe96fcd8475cbc4311f6b10e7f8a977955ea5a23ddc21a5597434203"
+    },
+    {
+      "path": "evaluations/prompts/MD-213/problematic.json",
+      "bytes": 737,
+      "sha256": "272e15045c309f6439c03a12430edaf10da3cded862bb68072c18aeab9124abb"
+    },
+    {
+      "path": "evaluations/prompts/MD-214/adversarial.json",
+      "bytes": 809,
+      "sha256": "7c23b2de82cd59680633bb16494d786179e645af2f1ef93125433451ca534c94"
+    },
+    {
+      "path": "evaluations/prompts/MD-214/healthy.json",
+      "bytes": 720,
+      "sha256": "8fd6d5c73f8b5c827dfa02514a3dddb55d46052d09bb1928ef6424aa00073c0c"
+    },
+    {
+      "path": "evaluations/prompts/MD-214/problematic.json",
+      "bytes": 755,
+      "sha256": "4c374aa2ba0810cac9d209ecfd140052b258a7f5a740d5a429cd77cba4919f0c"
+    },
+    {
+      "path": "evaluations/prompts/MD-215/adversarial.json",
+      "bytes": 779,
+      "sha256": "734cb84bd1c37fba0173bb54c4cb4789a5952aa6556318791547a7212fc23e74"
+    },
+    {
+      "path": "evaluations/prompts/MD-215/healthy.json",
+      "bytes": 690,
+      "sha256": "6d57ef3f49cbd6999dacbab9a82bc66d85c54f4bf6f4d158d3ff56f8d023095c"
+    },
+    {
+      "path": "evaluations/prompts/MD-215/problematic.json",
+      "bytes": 725,
+      "sha256": "4bc837487eac8a507362779bc1d1ac7eab6b9b0116915bf747f87a7350c679b3"
+    },
+    {
+      "path": "evaluations/prompts/MD-216/adversarial.json",
+      "bytes": 800,
+      "sha256": "d17f55f29d8d6dfab6f88b2171654562f46af9a4430774ba595eb4904f93c111"
+    },
+    {
+      "path": "evaluations/prompts/MD-216/healthy.json",
+      "bytes": 711,
+      "sha256": "5acea2cb396475fcd21e51235d4d1169cf3993c4b581806d3ceeb62549a2aec3"
+    },
+    {
+      "path": "evaluations/prompts/MD-216/problematic.json",
+      "bytes": 746,
+      "sha256": "a2bbad583234ba23707de356a365ff4606eac78beb7627bd7f4b151d46a74132"
+    },
+    {
+      "path": "evaluations/prompts/MD-217/adversarial.json",
+      "bytes": 796,
+      "sha256": "5904196e79d997abc04c691e222779946c052719f3ec6ef90b6255c1ee7aecaa"
+    },
+    {
+      "path": "evaluations/prompts/MD-217/healthy.json",
+      "bytes": 707,
+      "sha256": "9c96cd618a757bcdedfc4c6c46e3c6f486a2c35e9adf0b830b140935626f2dd1"
+    },
+    {
+      "path": "evaluations/prompts/MD-217/problematic.json",
+      "bytes": 742,
+      "sha256": "eec7bc8ce89f7a5df41f70b3f4ddafa8f1aab5a60db9ee52b33e2bbec4b29fc8"
+    },
+    {
+      "path": "evaluations/prompts/MD-218/adversarial.json",
+      "bytes": 778,
+      "sha256": "50d49ed59aae82e446d459783d6ff4982cc67b0bdcb668e0ba68beb2400789e6"
+    },
+    {
+      "path": "evaluations/prompts/MD-218/healthy.json",
+      "bytes": 689,
+      "sha256": "df53cad3fdf5b07389e36b28b5ff9ce358b52fba8d216a0a4e8a24aadba85c83"
+    },
+    {
+      "path": "evaluations/prompts/MD-218/problematic.json",
+      "bytes": 724,
+      "sha256": "ac71a71486ea24766853fac856f0f752b2614d494b396b9217c5f2bc680bd489"
+    },
+    {
+      "path": "evaluations/prompts/MD-219/adversarial.json",
+      "bytes": 763,
+      "sha256": "a71e16e0641fb5e9dbd65488c712981f2857cd07dec37c2fef1091b50610e6e3"
+    },
+    {
+      "path": "evaluations/prompts/MD-219/healthy.json",
+      "bytes": 674,
+      "sha256": "9f2a6d9c21ca6a6e84aeafb702266ce52d4b096ef60217b097fe91abc1a0e6f8"
+    },
+    {
+      "path": "evaluations/prompts/MD-219/problematic.json",
+      "bytes": 709,
+      "sha256": "759cb7e3f1eee11b6ae55a6feb8251fd55b93137c2c353ea0692a98dd0b0dfd9"
     },
     {
       "path": "evaluations/prompts/MD-22/adversarial.json",
@@ -2712,6 +3032,156 @@
       "sha256": "3145badc1f8b503e0175cd4fc339641112d7e46160bbe210511263fcfdbc0feb"
     },
     {
+      "path": "evaluations/prompts/MD-220/adversarial.json",
+      "bytes": 778,
+      "sha256": "ffbb5ea0d38ecd51858d5d43fcb75a384bcf6534195bf046c5418241eb334d92"
+    },
+    {
+      "path": "evaluations/prompts/MD-220/healthy.json",
+      "bytes": 689,
+      "sha256": "995f244f967900ed5dd4c6cf7584d3bc24f6f0718cd07838b935fcd6560add2b"
+    },
+    {
+      "path": "evaluations/prompts/MD-220/problematic.json",
+      "bytes": 724,
+      "sha256": "0325def3dfca9dc8e2e53a3a91bc527289215a835e5e8147b98491de08a1f58f"
+    },
+    {
+      "path": "evaluations/prompts/MD-221/adversarial.json",
+      "bytes": 760,
+      "sha256": "e912f4b311f8aaf15eaa7d15f808f5f939f0ef50bfb6fd9458118e87f37984af"
+    },
+    {
+      "path": "evaluations/prompts/MD-221/healthy.json",
+      "bytes": 671,
+      "sha256": "4687d53b8839741e78830bafd07fe8fdfd48b0697e68f016d7e20e0d517c3233"
+    },
+    {
+      "path": "evaluations/prompts/MD-221/problematic.json",
+      "bytes": 706,
+      "sha256": "16737cb16e7db39d0674532cec9f927eb2db609182197345eebe6a9e67df792c"
+    },
+    {
+      "path": "evaluations/prompts/MD-222/adversarial.json",
+      "bytes": 791,
+      "sha256": "68f1068ae445ede501ab29b40d76a93946e9c5c4952813b11f3779acb6f74726"
+    },
+    {
+      "path": "evaluations/prompts/MD-222/healthy.json",
+      "bytes": 702,
+      "sha256": "859cb20d76967e0ed6946d87aaaad314498625bc60be766978c4d62c5fa90170"
+    },
+    {
+      "path": "evaluations/prompts/MD-222/problematic.json",
+      "bytes": 737,
+      "sha256": "c152bca759d05f0fac8b20471ddf74fc9e5dc1d483a5956204dbdceab87209aa"
+    },
+    {
+      "path": "evaluations/prompts/MD-223/adversarial.json",
+      "bytes": 782,
+      "sha256": "15260e5a798e3a97131c549b8abf154378c7ae6e88f93fc58d1e65c461d0b1be"
+    },
+    {
+      "path": "evaluations/prompts/MD-223/healthy.json",
+      "bytes": 693,
+      "sha256": "cc2c0b268cac147d19652ef8fea3644641c797deb37b08ecc71dd84d5d535da5"
+    },
+    {
+      "path": "evaluations/prompts/MD-223/problematic.json",
+      "bytes": 728,
+      "sha256": "67875ef345ccbb45c7ed31de3d89ac5df8a09fa864e7f5777169fffa2da0dd26"
+    },
+    {
+      "path": "evaluations/prompts/MD-224/adversarial.json",
+      "bytes": 746,
+      "sha256": "85264b9eb7378c4d44228cb40aaf7dd4e5051c9f272fcde1ff5bc1d9886396f3"
+    },
+    {
+      "path": "evaluations/prompts/MD-224/healthy.json",
+      "bytes": 657,
+      "sha256": "5a590cc7fd340acab877d0651ffdc82de790089b026b7f8d0a85314b378f42bb"
+    },
+    {
+      "path": "evaluations/prompts/MD-224/problematic.json",
+      "bytes": 692,
+      "sha256": "227314dd6e2bf0cd76eed2e2e184391b702de2997871dd81463ef2d9d58f0923"
+    },
+    {
+      "path": "evaluations/prompts/MD-225/adversarial.json",
+      "bytes": 770,
+      "sha256": "20ff63b8cb941e1eb5d75f19652399d447c3c611799431b5448808f8808b00cd"
+    },
+    {
+      "path": "evaluations/prompts/MD-225/healthy.json",
+      "bytes": 681,
+      "sha256": "aa192e4a2042826375ad1a8f3b42c17e42a60f02a0e6865220643eb3cafa831e"
+    },
+    {
+      "path": "evaluations/prompts/MD-225/problematic.json",
+      "bytes": 716,
+      "sha256": "9b39bc926f3a30d19350880cd93c7bd2025ef4d18f58fe92a578b605b54a2b55"
+    },
+    {
+      "path": "evaluations/prompts/MD-226/adversarial.json",
+      "bytes": 776,
+      "sha256": "1944cccbb533464d8abc24c17c7801e323b5e97b78e2c2fea242664ad4d97799"
+    },
+    {
+      "path": "evaluations/prompts/MD-226/healthy.json",
+      "bytes": 687,
+      "sha256": "25d40d9a89c3e1985b31f3d3db75f277f548b01c8841b88835eac91405061b90"
+    },
+    {
+      "path": "evaluations/prompts/MD-226/problematic.json",
+      "bytes": 722,
+      "sha256": "e0c7b2e8454cd98eff9ff6a2996467224b76982d571c4ff01144ec546d12959f"
+    },
+    {
+      "path": "evaluations/prompts/MD-227/adversarial.json",
+      "bytes": 788,
+      "sha256": "a73f5ff1f99b6705c55644f3568956bc3a964a04beedbac725f9ef9b2b3af7e0"
+    },
+    {
+      "path": "evaluations/prompts/MD-227/healthy.json",
+      "bytes": 699,
+      "sha256": "ae05b4073428d3375d0ba75364191f132fd721fc888e4c8b7c4e679630ab1d8b"
+    },
+    {
+      "path": "evaluations/prompts/MD-227/problematic.json",
+      "bytes": 734,
+      "sha256": "341dbfbb4638a3a4c158aab14358c737e2954fcf5f26cda100e1e6127ef41fba"
+    },
+    {
+      "path": "evaluations/prompts/MD-228/adversarial.json",
+      "bytes": 840,
+      "sha256": "2e86e17765041902ff857be2a56381c7a38782aa60bf0bb7acb320723454a491"
+    },
+    {
+      "path": "evaluations/prompts/MD-228/healthy.json",
+      "bytes": 751,
+      "sha256": "a19567948c90aac638b079ce5b8ac37915222897a4d2993dbecd2bc9bbcc71ae"
+    },
+    {
+      "path": "evaluations/prompts/MD-228/problematic.json",
+      "bytes": 786,
+      "sha256": "b80ac0ca91a107e42146f83aa785ec8d4737636b5d7e3fe5290568fc6bd7e7e3"
+    },
+    {
+      "path": "evaluations/prompts/MD-229/adversarial.json",
+      "bytes": 786,
+      "sha256": "0e454dbbf6c5cde5c4cb4447fd0f7797d0aea366f9195baabf0dd6e9fb4ec26e"
+    },
+    {
+      "path": "evaluations/prompts/MD-229/healthy.json",
+      "bytes": 697,
+      "sha256": "7ede24297daa0b4810d256411a4f32b62482c5fcca0c0f797cc4581a25b52d5c"
+    },
+    {
+      "path": "evaluations/prompts/MD-229/problematic.json",
+      "bytes": 732,
+      "sha256": "143ed206e151fe4e2ab8bd063a519150b72715578236497f4d600c9027f9a13f"
+    },
+    {
       "path": "evaluations/prompts/MD-23/adversarial.json",
       "bytes": 854,
       "sha256": "b0a8ac6f97a10615858e198f9833c01042baa0b54f345d472c8b31fedf3f7c49"
@@ -2725,6 +3195,156 @@
       "path": "evaluations/prompts/MD-23/problematic.json",
       "bytes": 800,
       "sha256": "56a88584473e1ec14107d3b1166794f926e046cf15f50cc044e7d8fbcfe586f7"
+    },
+    {
+      "path": "evaluations/prompts/MD-230/adversarial.json",
+      "bytes": 792,
+      "sha256": "8891e2fa2f2afb5908ec4b092c7d5b0d3dd292d6fa83ca9374e618fe5cb5242f"
+    },
+    {
+      "path": "evaluations/prompts/MD-230/healthy.json",
+      "bytes": 703,
+      "sha256": "f52b983ac3f1e12b6c72f264efe8e73c55633550192ab5ccf9f058976e477dbd"
+    },
+    {
+      "path": "evaluations/prompts/MD-230/problematic.json",
+      "bytes": 738,
+      "sha256": "1a3254134dfbaadcfbe7ee87007f66d69f6f9df6a7e6ac3a90aacc51d584fc2b"
+    },
+    {
+      "path": "evaluations/prompts/MD-231/adversarial.json",
+      "bytes": 780,
+      "sha256": "e197a744c94a4f0294694c9f52e9933d01a6f3159722ee7fbfd731253a8d4775"
+    },
+    {
+      "path": "evaluations/prompts/MD-231/healthy.json",
+      "bytes": 691,
+      "sha256": "782a14f1efa8afcde2c9944c6d872891d3c994bbfa3eff53bf2be75dd594a8d3"
+    },
+    {
+      "path": "evaluations/prompts/MD-231/problematic.json",
+      "bytes": 726,
+      "sha256": "73ea6ddb3161cdefedb63926bcb92abc5b5a2bdcd41ea0169e5f568271eb98ef"
+    },
+    {
+      "path": "evaluations/prompts/MD-232/adversarial.json",
+      "bytes": 856,
+      "sha256": "00ad3fa315859386686bdca6b0eb6ac921ffd19cfbbb086bc6db7dfffde0f82d"
+    },
+    {
+      "path": "evaluations/prompts/MD-232/healthy.json",
+      "bytes": 767,
+      "sha256": "baf80706f06ab2ed9eb88174a6ba2b3cd7c216157356b5d8508af6d2e87a4ea5"
+    },
+    {
+      "path": "evaluations/prompts/MD-232/problematic.json",
+      "bytes": 802,
+      "sha256": "8e08cd6b021d6a0e1b4c0b7705db616d17cec18ffd058e91d82565083e197d2d"
+    },
+    {
+      "path": "evaluations/prompts/MD-233/adversarial.json",
+      "bytes": 787,
+      "sha256": "88c4ab2ce975fe13b1f4c30c57c2dafdd414c915025d66502312fddd75d02c75"
+    },
+    {
+      "path": "evaluations/prompts/MD-233/healthy.json",
+      "bytes": 698,
+      "sha256": "7cadaea4fb59ff525b3ab2875d2769f58c3c44b25923108e9b7a7121612d18be"
+    },
+    {
+      "path": "evaluations/prompts/MD-233/problematic.json",
+      "bytes": 733,
+      "sha256": "00b9a405757782bb976700bbee0b27998d6eb9e3577b99a456a46a377ce844b1"
+    },
+    {
+      "path": "evaluations/prompts/MD-234/adversarial.json",
+      "bytes": 778,
+      "sha256": "0f1320e4e7891108070c6304646c336c4085224c58323573e59af80178acf5b0"
+    },
+    {
+      "path": "evaluations/prompts/MD-234/healthy.json",
+      "bytes": 689,
+      "sha256": "5c89e88c2d7b8e558e8233f2f92b753421f5f55b6453c2ca47531091a511e7cc"
+    },
+    {
+      "path": "evaluations/prompts/MD-234/problematic.json",
+      "bytes": 724,
+      "sha256": "571e461e9a79142b1f52f99c1238530799ba15973db2d8fababe42c138bd1cad"
+    },
+    {
+      "path": "evaluations/prompts/MD-235/adversarial.json",
+      "bytes": 781,
+      "sha256": "c77eb47727eabeb2f5302d1690d8f1a2ab9ca56bb46946f24fb2b6ee20a3755f"
+    },
+    {
+      "path": "evaluations/prompts/MD-235/healthy.json",
+      "bytes": 692,
+      "sha256": "db734f454edc9dd436b6874e18a5de0ce57fe980d12dc37510b60c2478751cbc"
+    },
+    {
+      "path": "evaluations/prompts/MD-235/problematic.json",
+      "bytes": 727,
+      "sha256": "afafa3204b7f2caad322fbd35e7a7fbf24494edbe8d2af9d91887b6b5e054626"
+    },
+    {
+      "path": "evaluations/prompts/MD-236/adversarial.json",
+      "bytes": 787,
+      "sha256": "94c6b56ef6e8a42ceca1c8331f5247300c4c4e5d8e5f6f448acd0d487212f742"
+    },
+    {
+      "path": "evaluations/prompts/MD-236/healthy.json",
+      "bytes": 698,
+      "sha256": "cde5ed4bc69257822a3416066826a49340d5ba543df7c8bad1e2cb59b4c4e72b"
+    },
+    {
+      "path": "evaluations/prompts/MD-236/problematic.json",
+      "bytes": 733,
+      "sha256": "11346219022e5652ef707f9ef6908d02977b675044b9db5826407bc9cdf6dca5"
+    },
+    {
+      "path": "evaluations/prompts/MD-237/adversarial.json",
+      "bytes": 825,
+      "sha256": "47c7c8be44da6c83f606fe2be6a3305511f883f25c85ba3094060e3c2ad4aa39"
+    },
+    {
+      "path": "evaluations/prompts/MD-237/healthy.json",
+      "bytes": 736,
+      "sha256": "ed64d67dc14e73c67a3a0872b95863f1d398bd2c30784afbe9b72b79a804936b"
+    },
+    {
+      "path": "evaluations/prompts/MD-237/problematic.json",
+      "bytes": 771,
+      "sha256": "462606695a8729cbea2ebed6181832d90c613b2cd8f33c33d46fe0bc7ec2e4a4"
+    },
+    {
+      "path": "evaluations/prompts/MD-238/adversarial.json",
+      "bytes": 798,
+      "sha256": "0bba51456a424d953d0d509f090984c6e32b484c6af703d7ae060c52d82b034f"
+    },
+    {
+      "path": "evaluations/prompts/MD-238/healthy.json",
+      "bytes": 709,
+      "sha256": "b7ff313a7892dd79bc814e0edca61f6eef937751abfea2329b0f1a398eab14a5"
+    },
+    {
+      "path": "evaluations/prompts/MD-238/problematic.json",
+      "bytes": 744,
+      "sha256": "728abf3ef995048e03d5e1d9a2d7ba86822ae079343d961552c93a2bb9c302c8"
+    },
+    {
+      "path": "evaluations/prompts/MD-239/adversarial.json",
+      "bytes": 804,
+      "sha256": "0f3d08cb835ddaec3e406465b1a7871a917e02c9d15f7c19eb5d067669e0a3c9"
+    },
+    {
+      "path": "evaluations/prompts/MD-239/healthy.json",
+      "bytes": 715,
+      "sha256": "7bb53b572e9be2c4e609f9a9556683de98adecc2df04ea79484a052a2e4ce290"
+    },
+    {
+      "path": "evaluations/prompts/MD-239/problematic.json",
+      "bytes": 750,
+      "sha256": "588e87427b063225c9cfca78349cafddb9b8425093b3629eb016d39284fdc227"
     },
     {
       "path": "evaluations/prompts/MD-24/adversarial.json",
@@ -2742,6 +3362,156 @@
       "sha256": "df7d8cafdfea230bec2134d954aa53b28b69d8e1e3a5f7430647501982347e0c"
     },
     {
+      "path": "evaluations/prompts/MD-240/adversarial.json",
+      "bytes": 801,
+      "sha256": "41a8100426894642604ca0cde49b54dd1ba1ac087a80db20db6197b13091b288"
+    },
+    {
+      "path": "evaluations/prompts/MD-240/healthy.json",
+      "bytes": 712,
+      "sha256": "2f6eca6025bff084f7d529e8d41e7e6a602e6a2b85c0300438167e80c3d05091"
+    },
+    {
+      "path": "evaluations/prompts/MD-240/problematic.json",
+      "bytes": 747,
+      "sha256": "7f84d00f37826c7707f3ad66776c03f3315efa9451a9fbee6906cb37c5b382b3"
+    },
+    {
+      "path": "evaluations/prompts/MD-241/adversarial.json",
+      "bytes": 795,
+      "sha256": "69243ea21a61f8704d9960dd4900adbdee55d17367650afcb6c6540348841876"
+    },
+    {
+      "path": "evaluations/prompts/MD-241/healthy.json",
+      "bytes": 706,
+      "sha256": "39d6a4ddb80f3be03606e7850f161984182987afb8cdd47531a9bc0cb0ac4c9a"
+    },
+    {
+      "path": "evaluations/prompts/MD-241/problematic.json",
+      "bytes": 741,
+      "sha256": "65165b9da1b61f4100cb8eaf036dd1aac891fda532950036e6a35d52dfe8908d"
+    },
+    {
+      "path": "evaluations/prompts/MD-242/adversarial.json",
+      "bytes": 792,
+      "sha256": "93785247442c0f4b63fcdfacf86a4c5eca0efd4b763f5eff1717a045ec27ee77"
+    },
+    {
+      "path": "evaluations/prompts/MD-242/healthy.json",
+      "bytes": 703,
+      "sha256": "53c1aa0f4beb5ec9f8e4419acac7850cc3fda78225572d9bb98607367ee3d599"
+    },
+    {
+      "path": "evaluations/prompts/MD-242/problematic.json",
+      "bytes": 738,
+      "sha256": "e99029f0a19ee57f15561019eeefc2e383fb7ed7fd1712fc20957737046a80cb"
+    },
+    {
+      "path": "evaluations/prompts/MD-243/adversarial.json",
+      "bytes": 783,
+      "sha256": "d518ff1c13f263eeecbf7c5dca42f7fbad721cdb0197e9234322fa2e3abd990f"
+    },
+    {
+      "path": "evaluations/prompts/MD-243/healthy.json",
+      "bytes": 694,
+      "sha256": "32390d459d6a9d56d5d52b3895e3bf92b4299e5cde92c24f2107e4937bfa7971"
+    },
+    {
+      "path": "evaluations/prompts/MD-243/problematic.json",
+      "bytes": 729,
+      "sha256": "2607d1e8cead6f6427a529fd402a4eaebba3d7809258b7afd8971e736b1967b8"
+    },
+    {
+      "path": "evaluations/prompts/MD-244/adversarial.json",
+      "bytes": 798,
+      "sha256": "d93d2b53ec24157e021f7fb676165c3f93bf5524b0787f57ddef7cef5e6e9ec3"
+    },
+    {
+      "path": "evaluations/prompts/MD-244/healthy.json",
+      "bytes": 709,
+      "sha256": "343c96654c62951924bf818018eea9c7aa83cce7ab21e4b12756e687d4752e7d"
+    },
+    {
+      "path": "evaluations/prompts/MD-244/problematic.json",
+      "bytes": 744,
+      "sha256": "a5c35178c23ef77b5bced7b75d37cf4cec9f8b60d56614f325ad17707ce83824"
+    },
+    {
+      "path": "evaluations/prompts/MD-245/adversarial.json",
+      "bytes": 795,
+      "sha256": "5e22da7f4ca046cf441b7acce32af259d4766d154a13eb88c6454d94e4292dae"
+    },
+    {
+      "path": "evaluations/prompts/MD-245/healthy.json",
+      "bytes": 706,
+      "sha256": "3fa80e2ff89d178412fb5425ded4674b6fe235bccef9e869558fcb9421f5b9c0"
+    },
+    {
+      "path": "evaluations/prompts/MD-245/problematic.json",
+      "bytes": 741,
+      "sha256": "4a463f9ee395bf237597e46ca9205fab7985aac26242c0fbee1ab0cad5c04946"
+    },
+    {
+      "path": "evaluations/prompts/MD-246/adversarial.json",
+      "bytes": 825,
+      "sha256": "4873e982db31572b5878708089e05b230aeef0449b9137639ef3711952e7d1fe"
+    },
+    {
+      "path": "evaluations/prompts/MD-246/healthy.json",
+      "bytes": 736,
+      "sha256": "efe66fc4fa8b529efe8b7d2fb408b18eccc428e4520a552a66f3d916a1ad3688"
+    },
+    {
+      "path": "evaluations/prompts/MD-246/problematic.json",
+      "bytes": 771,
+      "sha256": "1ca5e7babb8a594eb11abc31c2a41720753e8892181e19dda7481df18d0ab80b"
+    },
+    {
+      "path": "evaluations/prompts/MD-247/adversarial.json",
+      "bytes": 795,
+      "sha256": "3cae3ff31a06a5679a31b7cabc68df9beea01d9a626dff66955dea2646469378"
+    },
+    {
+      "path": "evaluations/prompts/MD-247/healthy.json",
+      "bytes": 706,
+      "sha256": "23cb8039f21f16fb0142d02761323e6cd7ef2e49279085be8037766ffeb291a8"
+    },
+    {
+      "path": "evaluations/prompts/MD-247/problematic.json",
+      "bytes": 741,
+      "sha256": "fbfcc6a156952de40552f00e73c9a3e259763e50c923bad1d0bfd37e527c593c"
+    },
+    {
+      "path": "evaluations/prompts/MD-248/adversarial.json",
+      "bytes": 792,
+      "sha256": "a7bb3b56a0143ea695ee8187c00eba0647b4c207209ece6100c86e795c38a91b"
+    },
+    {
+      "path": "evaluations/prompts/MD-248/healthy.json",
+      "bytes": 703,
+      "sha256": "d61a4ab20f035c096697fbc6725010ee4306c1690b9053d3237adbb0797ee6f9"
+    },
+    {
+      "path": "evaluations/prompts/MD-248/problematic.json",
+      "bytes": 738,
+      "sha256": "d22a69cf1bf583caeb2d2b74e447ecf6ef3ad93e63d9ea0a8eec71c8157aeadd"
+    },
+    {
+      "path": "evaluations/prompts/MD-249/adversarial.json",
+      "bytes": 759,
+      "sha256": "e88aac418f55313507b872c7224f325a42c75a97503320ab06d4e38b68274637"
+    },
+    {
+      "path": "evaluations/prompts/MD-249/healthy.json",
+      "bytes": 670,
+      "sha256": "7fc3bf35714afc00f1375b9d3a312e40abfcd339210ee2aa37315aa9cb34eb17"
+    },
+    {
+      "path": "evaluations/prompts/MD-249/problematic.json",
+      "bytes": 705,
+      "sha256": "2dd66a754aad4281eef6dd2b791edc05ad189c28376d02930ed48fb399c14f72"
+    },
+    {
       "path": "evaluations/prompts/MD-25/adversarial.json",
       "bytes": 919,
       "sha256": "95d84b6fcd4ddb51e8f12c49ccf431eb23ae6256b80e5c5b9bf30b5c7dc032a8"
@@ -2755,6 +3525,111 @@
       "path": "evaluations/prompts/MD-25/problematic.json",
       "bytes": 865,
       "sha256": "0be221817bff3f7a39ced7253f1db70515154478e2f09279e12e28602ada8783"
+    },
+    {
+      "path": "evaluations/prompts/MD-250/adversarial.json",
+      "bytes": 798,
+      "sha256": "f1c8aeddd55032bdeb1ded790476e16328b3cdd1cbd0c9269e4ff64f05bd3a72"
+    },
+    {
+      "path": "evaluations/prompts/MD-250/healthy.json",
+      "bytes": 709,
+      "sha256": "7d6d66b94f88c956e9d378c5b50d46ba71d20d2e7387a3dac405a4f16fab105a"
+    },
+    {
+      "path": "evaluations/prompts/MD-250/problematic.json",
+      "bytes": 744,
+      "sha256": "d1a69d0e7fd8bef130519ef3b5b82427303ba7d433a7fb3ee5d8d63f30aef457"
+    },
+    {
+      "path": "evaluations/prompts/MD-251/adversarial.json",
+      "bytes": 817,
+      "sha256": "7c44282fcb0aaefd4b15cc2d2292b14b4967b7fb6282f5f04fd0dce6a75a46dd"
+    },
+    {
+      "path": "evaluations/prompts/MD-251/healthy.json",
+      "bytes": 728,
+      "sha256": "9ae737d2ef8e865eb60fc7a68dfba857b6b31939dac1269b9b42191128113ec0"
+    },
+    {
+      "path": "evaluations/prompts/MD-251/problematic.json",
+      "bytes": 763,
+      "sha256": "7a4b22bd6d18376da3b8ef4363551983d079c7b2022f4262eb069e12014a94ab"
+    },
+    {
+      "path": "evaluations/prompts/MD-252/adversarial.json",
+      "bytes": 817,
+      "sha256": "21e7041dc5b9a387012de77e5212150865ce7b9e179083020df7484cf80f989e"
+    },
+    {
+      "path": "evaluations/prompts/MD-252/healthy.json",
+      "bytes": 728,
+      "sha256": "85d8ba7f1c3ef2d18d836fb5934f77cde5ae2ab1e3ae8959563df27ae4d8d385"
+    },
+    {
+      "path": "evaluations/prompts/MD-252/problematic.json",
+      "bytes": 763,
+      "sha256": "84986507f36bcb27b371ed7e187acf597458b405e886e331bd1206590fa42969"
+    },
+    {
+      "path": "evaluations/prompts/MD-253/adversarial.json",
+      "bytes": 823,
+      "sha256": "9561e587509e5cc826690c59ca798cc0577724befc5a33ef0cd7caa577c75db5"
+    },
+    {
+      "path": "evaluations/prompts/MD-253/healthy.json",
+      "bytes": 734,
+      "sha256": "a4b5057f0d27e77a24091c25a63f73a8273f56ec37201d5386aa24dfce341734"
+    },
+    {
+      "path": "evaluations/prompts/MD-253/problematic.json",
+      "bytes": 769,
+      "sha256": "ee1da4091b380b35541abfcf68443f65ab591152e9fa3af7ac2d06851eb0bf92"
+    },
+    {
+      "path": "evaluations/prompts/MD-254/adversarial.json",
+      "bytes": 844,
+      "sha256": "4cb73017ebd6c4805d29014bd6b51e26a37224ce892b2e2baebd5e78cc7a17b4"
+    },
+    {
+      "path": "evaluations/prompts/MD-254/healthy.json",
+      "bytes": 755,
+      "sha256": "90c788901175f6f77ca07b06e72d6af734e2ae4f96528f544b70aa6063a509c4"
+    },
+    {
+      "path": "evaluations/prompts/MD-254/problematic.json",
+      "bytes": 790,
+      "sha256": "d267ec29aa44d3ac65254f77f1694cffaad8b0c05183c24a555020c59b83f84f"
+    },
+    {
+      "path": "evaluations/prompts/MD-255/adversarial.json",
+      "bytes": 814,
+      "sha256": "fadb1bd17a96cf222d5e66ed835a9825595ec5cf39eb6561e7125859375b8078"
+    },
+    {
+      "path": "evaluations/prompts/MD-255/healthy.json",
+      "bytes": 725,
+      "sha256": "96b81db9db3f093a90b714b4d7abf5d966d229b5c91b430d3874b42c64ecfb85"
+    },
+    {
+      "path": "evaluations/prompts/MD-255/problematic.json",
+      "bytes": 760,
+      "sha256": "6d9c8947de49eb53884c91b488258025915d2c249513af2e7b76f9654222d67b"
+    },
+    {
+      "path": "evaluations/prompts/MD-256/adversarial.json",
+      "bytes": 802,
+      "sha256": "8267aec86ed7e8af0e56150e54d680fb7196c0171054946bdf28fdbf98c3b390"
+    },
+    {
+      "path": "evaluations/prompts/MD-256/healthy.json",
+      "bytes": 713,
+      "sha256": "a265aab4ed842d9d50c4e2b29f7784983c8493074e50987b8045b91199ffb9e5"
+    },
+    {
+      "path": "evaluations/prompts/MD-256/problematic.json",
+      "bytes": 748,
+      "sha256": "652ee9559443e18af71489fd7c474ebcca0d6810f0591cd7b02789cc54a4fb4b"
     },
     {
       "path": "evaluations/prompts/MD-26/adversarial.json",
@@ -5733,8 +6608,8 @@
     },
     {
       "path": "evaluations/schema_contracts/installation_receipt/healthy.json",
-      "bytes": 364,
-      "sha256": "3b568e6f42a540ec96e8d5ebac1626e2a6d13f87401adc31b1e79520bb6c8afa"
+      "bytes": 427,
+      "sha256": "d4beff62c44f690d2a50bf366943186404caf4ca2aee43e8d6821323a8a3ad9d"
     },
     {
       "path": "evaluations/schema_contracts/installed_skill_inventory/adversarial.json",
@@ -8003,13 +8878,13 @@
     },
     {
       "path": "integrations/md_to_agent_library_crosswalk.json",
-      "bytes": 266331,
-      "sha256": "78c5d98ae1345bcac8f97e38b8771109f39048d6c6235438e82d6d0ef14e4e46"
+      "bytes": 280173,
+      "sha256": "511b230bc2d39d8ccb281ad9414d53bd401823e1164199da581075e2860282a3"
     },
     {
       "path": "integrations/md_to_prompt_type_library_crosswalk.json",
-      "bytes": 277712,
-      "sha256": "c8a2b16b18e974ff1d27f6e8633897b61aa410ea1ecf7c159fd6e6bcb837ed0b"
+      "bytes": 291890,
+      "sha256": "d562b458458ae23617101ec12aa141c6103e2dfeee68fe962c14f36eb580b16a"
     },
     {
       "path": "integrations/platform_tool_matrix.json",
@@ -8023,8 +8898,8 @@
     },
     {
       "path": "integrations/template_to_prompt_crosswalk.json",
-      "bytes": 48285,
-      "sha256": "c26b421a7e5d8d43857805ae920933810914215c29a85a8426e86bac1bdd92b6"
+      "bytes": 54333,
+      "sha256": "7b9dbe488ce594732786cf692c36200127804596ffa7415dcc8ea9b481f941d2"
     },
     {
       "path": "integrations/template_to_skill_crosswalk.json",
@@ -8043,8 +8918,8 @@
     },
     {
       "path": "policies/agent_guidance_policy.json",
-      "bytes": 4795,
-      "sha256": "45ce5d7dc23a51f3413906679b001f5d8cc160f73c37d467919295fdeb335059"
+      "bytes": 5232,
+      "sha256": "d953bc8a61453c852cf2f828b21ef42ffa8b09351106a7b491a123d1bcc2838e"
     },
     {
       "path": "policies/artifact_export_policy.json",
@@ -8118,8 +8993,8 @@
     },
     {
       "path": "policies/project_installation_policy.json",
-      "bytes": 822,
-      "sha256": "0737b8c574bfacc758fc4cf9e0504333b61aa6867c75559540a72b7ebe0fa0e1"
+      "bytes": 1277,
+      "sha256": "55c33af457075cae74005633beb286a8a3aa56e8368da721e165f7c02fbbe2a6"
     },
     {
       "path": "policies/prompt_addition_policy.json",
@@ -8177,6 +9052,21 @@
       "sha256": "c9a946b5fb91bc03a62652afdbed5aec531316ece9f2756c160f5f9f21037001"
     },
     {
+      "path": "prompt_imports/generic_prompt_library_v3_1_blind_proportionality_review.md",
+      "bytes": 808,
+      "sha256": "47495966fa15d0c5f0af1890b2db4fc66d111adca44576c0b0e14a7e16dedac7"
+    },
+    {
+      "path": "prompt_imports/generic_prompt_library_v3_1_plan.json",
+      "bytes": 29452,
+      "sha256": "0af5dd888083c4a96aab68831bf7db9664debaa73d0f75571545c593691689f9"
+    },
+    {
+      "path": "prompt_imports/generic_prompt_library_v3_1_provenance.json",
+      "bytes": 2226,
+      "sha256": "bd75f18ea31374ec9ff01f0ea31c1dd7383ade6d3f33802cd5b564f05b9604cb"
+    },
+    {
       "path": "prompts/00_PROJECT_CONTEXT_AND_RUN_CONFIGURATION.md",
       "bytes": 5853,
       "sha256": "9b29275d9aefa36b98594b6c049096be3bbe96f9f069f5300b061290db5a7404"
@@ -8193,8 +9083,8 @@
     },
     {
       "path": "prompts/03_ARTIFACT_HANDOFF_AND_VERIFICATION_CONTRACT.md",
-      "bytes": 6088,
-      "sha256": "93cf2b5627d7052cd7e327b99bd8d77c4c50388d4dd2f7ea31811f09774d2398"
+      "bytes": 9067,
+      "sha256": "b1074c492564437375bb9d43d51467bbd2ec96b89d9f560095727a84e8c941b9"
     },
     {
       "path": "prompts/04_PROMPT_STRUCTURE_AND_INPUT_TRUST_CONTRACT.md",
@@ -8203,8 +9093,8 @@
     },
     {
       "path": "prompts/05_PROBLEM_OPPORTUNITY_AND_STRATEGY_FRAMING.md",
-      "bytes": 8324,
-      "sha256": "14569048cb720be9c82844addb0f4b78733b3b790ab5c4cfb5cdc58e48770a94"
+      "bytes": 11249,
+      "sha256": "df7e1edfe1fae4ce455a50984b4ea53d00f243226bad676978fd6dc2e5875fbb"
     },
     {
       "path": "prompts/06_MARKET_USER_AND_COMPETITIVE_RESEARCH.md",
@@ -8223,8 +9113,8 @@
     },
     {
       "path": "prompts/09_ARCHITECTURE_AND_TECHNOLOGY_DECISION_ANALYSIS.md",
-      "bytes": 8653,
-      "sha256": "e5faa62961676c05462b9c0568fdc0828f4838c6ec35515a334849028a29fe81"
+      "bytes": 15748,
+      "sha256": "1b7376c5a0d09ea7815f3188ae926df9d933cf2c6e723e370e95c1802a58a9b1"
     },
     {
       "path": "prompts/100_PITCH_PROPOSAL_AND_BUSINESS_CASE_DEVELOPMENT.md",
@@ -8243,8 +9133,8 @@
     },
     {
       "path": "prompts/103_DASHBOARD_AND_ANALYTICAL_INTERFACE_PRODUCTION.md",
-      "bytes": 10256,
-      "sha256": "9307c280aedda09b1e7fcbeac341a770487ee65b3dc497bce60e1172c347eac5"
+      "bytes": 13128,
+      "sha256": "0821b3c1e159f18a8758e138e67b73ef7c4c3adf924fa36907de0bdcbcb83812"
     },
     {
       "path": "prompts/104_INFOGRAPHIC_AND_DATA_STORYTELLING_PRODUCTION.md",
@@ -8288,28 +9178,28 @@
     },
     {
       "path": "prompts/111_PROGRAM_PROJECT_AND_OPERATIONS_PLANNING.md",
-      "bytes": 9095,
-      "sha256": "e7a425e91e7a59f831bdf0c12491c57c91993fa89d47f0a6ffe3d5d3383c35df"
+      "bytes": 19517,
+      "sha256": "b23dda3b9831bb35c9393fb7650f245897b1ebd7decdad29d2d350b20b41ff64"
     },
     {
       "path": "prompts/112_WORKSHOP_MEETING_AND_COLLABORATIVE_SESSION_DESIGN.md",
-      "bytes": 9704,
-      "sha256": "1648d2d49c87bc1f44270dbf5ed8df61b94c29dd50c9a751fb15c8a5994a6856"
+      "bytes": 12705,
+      "sha256": "49c20c24da72a3dff1cba280582b30bdce3d1fcfaab0a0313986b8b78c9884dd"
     },
     {
       "path": "prompts/113_DOCUMENT_MEMO_REPORT_SOP_AND_POLICY_PRODUCTION.md",
-      "bytes": 9725,
-      "sha256": "ef03faec6a6491703cca8b69415fb7629502dbf8d2c3174d162827c4bdd28dd8"
+      "bytes": 20745,
+      "sha256": "3178d9c45b4d9cac53926424b22dcbc5b2bb9595f5ba91c20ac8cc3d100f26d3"
     },
     {
       "path": "prompts/114_MARKETING_AUDIENCE_AND_GO_TO_MARKET_STRATEGY.md",
-      "bytes": 9502,
-      "sha256": "b695392b0e7647d41b88b730ce21a15715f2e7640480ebcd8fb977f1e7623af4"
+      "bytes": 19921,
+      "sha256": "be49314e375c97f11c0d3e82122e83f23497d3231becb9e9333a2b51d5b7254f"
     },
     {
       "path": "prompts/115_SALES_ENABLEMENT_CUSTOMER_COMMUNICATION_AND_LIFECYCLE_CONTENT.md",
-      "bytes": 10451,
-      "sha256": "18e8399a86c8981115075f3abf90237169a06a98ff53d90f0e7398e1446eb6a2"
+      "bytes": 13241,
+      "sha256": "a4cf5f6933ddb37a3a29201725758a517b0306f7a94f7cba9abf4208d3a73873"
     },
     {
       "path": "prompts/116_SPREADSHEET_FINANCIAL_FORECAST_AND_SCENARIO_MODEL_SPECIFICATION.md",
@@ -8318,8 +9208,8 @@
     },
     {
       "path": "prompts/117_LEARNING_EXPERIENCE_CURRICULUM_COURSE_LESSON_AND_ASSESSMENT_RESEARCH_AND_DESIGN_BRIEF.md",
-      "bytes": 12356,
-      "sha256": "a19ef496e013cf0070f2767515593e9aa0d5886a55f478ac8175afe322fc6469"
+      "bytes": 15219,
+      "sha256": "413e9d41a3181530441d04f6b2764e6d12d9a3cd499bdb3a4b6aa9fa77d22fd3"
     },
     {
       "path": "prompts/118_LEARNING_EXPERIENCE_CURRICULUM_COURSE_LESSON_AND_ASSESSMENT_MATERIAL_PRODUCTION_AND_VALIDATION.md",
@@ -8328,18 +9218,18 @@
     },
     {
       "path": "prompts/119_SURVEY_INTERVIEW_QUESTIONNAIRE_AND_RESEARCH_INSTRUMENT_DESIGN.md",
-      "bytes": 10236,
-      "sha256": "d0293001abff35a3137c21a3a0a340f407e4e928087c68f97512d9377626ea71"
+      "bytes": 15620,
+      "sha256": "96c552e567c8bb538d42e65738f85d470dc12eee60756f6a58abf9260f5d3478"
     },
     {
       "path": "prompts/11_THREAT_MODELING_AND_ATTACK_SURFACE_ANALYSIS.md",
-      "bytes": 8480,
-      "sha256": "7e8db5c8d5d918d238ebe723cf85875a7aa69e32b9a20ea6a6e80f0a1bfabc0a"
+      "bytes": 20677,
+      "sha256": "505fe0a5f0ffa913436600912ed2c0bf2feace3a9ec8778514b42bb599325468"
     },
     {
       "path": "prompts/120_GRANT_FUNDING_SPONSORSHIP_AND_AWARD_PROPOSAL_PRODUCTION.md",
-      "bytes": 10218,
-      "sha256": "9fd611b4f12424fdb050a2f701e3709f396e872026ab23b8d32ca1e2e7fbd9c5"
+      "bytes": 13009,
+      "sha256": "766f0e253a83aec263a4755cdf1110a1f49d0df1486ad37067d8db2a7ec63c14"
     },
     {
       "path": "prompts/121_PROFESSIONAL_PROFILE_RESUME_PORTFOLIO_BIO_AND_APPLICATION_PACKAGE.md",
@@ -8353,28 +9243,28 @@
     },
     {
       "path": "prompts/123_SOCIAL_MEDIA_SHORT_FORM_AND_COMMUNITY_CONTENT_PRODUCTION.md",
-      "bytes": 10503,
-      "sha256": "a9c8877f41bb58c0abdbc97a9cf4b049e236c17a1ebdba085fda178e49978adb"
+      "bytes": 13422,
+      "sha256": "5b41369e621fef096ee174e0103cbdcf59556faedd544a8f970a8c3bdc16dad2"
     },
     {
       "path": "prompts/124_FEATURE_CHANGE_AND_INTEGRATION_IMPLEMENTATION.md",
-      "bytes": 11873,
-      "sha256": "b59f5a67cfe4ba1add13cf4a33714a4f6e52a3dc7f25db0f879488c26c4ac5e8"
+      "bytes": 14859,
+      "sha256": "168af8a5fc668f29d35ab04e4d6610a94ef11078a54505ee8cedcc4f68ea2022"
     },
     {
       "path": "prompts/125_EXPERIMENT_A_B_TEST_AND_CAUSAL_MEASUREMENT_DESIGN.md",
-      "bytes": 11019,
-      "sha256": "a42ca66b7ad3dc257ecb3531f628dc6d452598e2a9380eb96e250d7e5b256710"
+      "bytes": 13950,
+      "sha256": "843840f34afe1103386f7e82af8002f0be2ea38e1f0d0b355a57c6df089f79e0"
     },
     {
       "path": "prompts/126_TRANSLATION_LOCALIZATION_AND_TRANSCREATION.md",
-      "bytes": 10695,
-      "sha256": "906a213e7d2417fe587afa4fdfb67be55ff78863c5b6cdf054f50e889679bc1a"
+      "bytes": 13702,
+      "sha256": "d957fab9aeaa90e209955d02f256ff7257b263280863d7aa3192edd9de1eebe2"
     },
     {
       "path": "prompts/127_MEDIA_PRODUCTION_EDITING_AND_DISTRIBUTION_BLUEPRINT.md",
-      "bytes": 11350,
-      "sha256": "c1ba991a46cf93bdb9182900cb31c6ac513567632b9a68b6b280ab089d2d9463"
+      "bytes": 14149,
+      "sha256": "2c5748ea20b86035f63de88f00b4963d296d3deb912f74cb90dfc4023b7471a1"
     },
     {
       "path": "prompts/128_CONTENT_PERFORMANCE_AND_EDITORIAL_OPTIMIZATION.md",
@@ -8398,8 +9288,8 @@
     },
     {
       "path": "prompts/131_PROCUREMENT_VENDOR_EVALUATION_RFP_AND_DUE_DILIGENCE.md",
-      "bytes": 11315,
-      "sha256": "a92b3189a0fce1e5fac06d1169fc6d646a8e91bced1ac1afae4fe1d5c8e130ea"
+      "bytes": 14212,
+      "sha256": "68ee24ef1ae057117680b169f6fb23130bc883b1da73329599f2eeb4d81e472d"
     },
     {
       "path": "prompts/132_WORKFORCE_STRATEGY_AND_CAPACITY_PLANNING.md",
@@ -8408,18 +9298,18 @@
     },
     {
       "path": "prompts/133_HIRING_INTERVIEW_SELECTION_AND_ONBOARDING_DESIGN.md",
-      "bytes": 11192,
-      "sha256": "769123eed6c7de3b86ba73608e117a4f658fc07777fc140bb16d6fb658388c44"
+      "bytes": 13908,
+      "sha256": "458c90aee59de416e02e2d73efe427c2d949342e37d588951fd001cbcbc52978"
     },
     {
       "path": "prompts/134_PERFORMANCE_COMPETENCY_CAREER_AND_LEARNING_FRAMEWORKS.md",
-      "bytes": 11128,
-      "sha256": "75830c27a87098e026739f5463496dc0ef2b1e803992ff36086526821418f70f"
+      "bytes": 13944,
+      "sha256": "a0a5aa65cd8da31c42830193fa0adddf52a4e75ab304296561fcf50d8689e402"
     },
     {
       "path": "prompts/135_CUSTOMER_SUPPORT_AND_SERVICE_OPERATIONS.md",
-      "bytes": 10722,
-      "sha256": "a8f583b0ebb7a9ffec3d389bf8e5f9325fda3a8ed87e65e5d6434934904fffbd"
+      "bytes": 13632,
+      "sha256": "4904c1c497c4f6609b3b50212dc56f7c6f0197a85ca5f9ae96dfa7c31ddd8fea"
     },
     {
       "path": "prompts/136_CUSTOMER_SUCCESS_RETENTION_AND_VOICE_OF_CUSTOMER.md",
@@ -8433,8 +9323,8 @@
     },
     {
       "path": "prompts/138_PERSONAL_KNOWLEDGE_PRODUCTIVITY_AND_WORK_SYSTEM.md",
-      "bytes": 11015,
-      "sha256": "94374099667b9b96905b1f1ca560fbb0af8ade82408341828b12bfb917c3e5f5"
+      "bytes": 13762,
+      "sha256": "67dd4beb3399bffdace2a5ea894ef169b3c3b646076c6ca802d57b2a3dc0d2ef"
     },
     {
       "path": "prompts/139_OSINT_RESEARCH_PLANNING_AUTHORIZATION_AND_COLLECTION_GOVERNANCE.md",
@@ -8443,8 +9333,8 @@
     },
     {
       "path": "prompts/13_SAFE_EXPLOIT_REPRODUCTION_AND_PATCH_VALIDATION.md",
-      "bytes": 8294,
-      "sha256": "7f91b6d517f76423405d9b66626ebd47993f50947e8438ecad24d1be685e9c15"
+      "bytes": 11210,
+      "sha256": "87e3dadaa0c4b58977377de8ef1d5789f8823d995e0585594670241b22f126b0"
     },
     {
       "path": "prompts/140_OSINT_COLLECTION_SOURCE_VALIDATION_AND_PRESERVATION.md",
@@ -8468,13 +9358,13 @@
     },
     {
       "path": "prompts/144_CONTRACT_POLICY_AND_CLAUSE_REVIEW.md",
-      "bytes": 10660,
-      "sha256": "e3806dac63ec623f39c055bec0c05cd074ddb444e6029aa9a9f1de77ee9d36f3"
+      "bytes": 13812,
+      "sha256": "c2a56f650324a7548450cc44f7e8a1691a69823b494156624143e85fb92e704e"
     },
     {
       "path": "prompts/145_FINANCE_FP_A_BUDGET_AND_MANAGEMENT_ANALYSIS.md",
-      "bytes": 10866,
-      "sha256": "e603a850fa273c821acb2ec7d3a1c445d940a0c5329e0cec7a2b1df5a6c1a1ed"
+      "bytes": 14073,
+      "sha256": "ca9ce3c0f6db8c859a6fe657d1fb2240eb6b2ebd609774d4bfb07e18b00cf69a"
     },
     {
       "path": "prompts/146_ACCOUNTING_CLOSE_RECONCILIATION_AND_CONTROL_REVIEW.md",
@@ -8488,8 +9378,8 @@
     },
     {
       "path": "prompts/148_INTERNAL_AUDIT_CONTROL_TESTING_AND_ASSURANCE.md",
-      "bytes": 10732,
-      "sha256": "87726b744930cf9de15e3438e95b9ee3b9cdc6b9b4bead0df5c6c0708d43cb75"
+      "bytes": 13636,
+      "sha256": "adbfc7e01e0ee6cd251ee9f237c43ebe919a21831901f3f0027763870de6164e"
     },
     {
       "path": "prompts/149_OPERATIONS_PROCESS_DESIGN_AND_CONTINUOUS_IMPROVEMENT.md",
@@ -8498,8 +9388,8 @@
     },
     {
       "path": "prompts/14_MODEL_AND_AI_SYSTEM_RED_TEAM_EVALUATION.md",
-      "bytes": 8238,
-      "sha256": "64fa4e1de64bc74803b83f00368d82dfd81d91e9fa9c9590a4ef80558068db3b"
+      "bytes": 11204,
+      "sha256": "66e6962c9fc1faab1235efc721dd791a24f2cd6ddfa163cd800b3921285cb83a"
     },
     {
       "path": "prompts/150_SUPPLY_CHAIN_INVENTORY_LOGISTICS_AND_RESILIENCE_PLANNING.md",
@@ -8513,33 +9403,33 @@
     },
     {
       "path": "prompts/152_PRODUCT_REQUIREMENTS_ACCEPTANCE_AND_RELEASE_PACKAGE.md",
-      "bytes": 12020,
-      "sha256": "e943a380f9789a7bf55bd3bc8155c22cb5bcb1f2e6c1e81b66f3311f6a1dd308"
+      "bytes": 14798,
+      "sha256": "6538b7f5dec8415bdad7433b22c29dae0390814685833370e3ff8757ee331983"
     },
     {
       "path": "prompts/153_BUSINESS_PROCESS_AUTOMATION_AND_WORKFLOW_DESIGN.md",
-      "bytes": 10950,
-      "sha256": "8b6cddbe65302a72ebac31045ed48b9f12c8490cd4886a4b3f18dcca5c83049c"
+      "bytes": 13750,
+      "sha256": "9f6115049e8c2a07f9727de066a600e3f72abefa88779bb1cb337b790ba8e463"
     },
     {
       "path": "prompts/154_DATA_GOVERNANCE_QUALITY_LINEAGE_AND_MASTER_DATA.md",
-      "bytes": 10882,
-      "sha256": "84fb9b6364e20ad25c8cc54436fd66f74475c7b2a7f6e3ba685c298132080f13"
+      "bytes": 22535,
+      "sha256": "d5a22e5bebf709747836e2b548bc736e340520a28541718821c0a21eb675f7fb"
     },
     {
       "path": "prompts/155_COMPETITIVE_INTELLIGENCE_AND_STRATEGIC_SCENARIO_PLANNING.md",
-      "bytes": 11332,
-      "sha256": "ce0263fbea74b1f51d9e7884f6b1f84a2ec1c11993ed3a9d23f6aa2af97001ef"
+      "bytes": 14193,
+      "sha256": "84d34f15b8a5ee02b04c1af011c66bdf98f5295e3e4d73c6cbb6b244213d5abc"
     },
     {
       "path": "prompts/156_CRISIS_COMMUNICATION_AND_ISSUES_MANAGEMENT.md",
-      "bytes": 10872,
-      "sha256": "14d9209a5a7335d3ad06415f5df514478e9f5e3adab25afdd2ea13d43775b342"
+      "bytes": 18896,
+      "sha256": "4ce2b63d42e4e50bc1f725e65d5b805fb93d9ab3803d1a978d1890fe294935b8"
     },
     {
       "path": "prompts/157_PUBLIC_RELATIONS_MEDIA_BRIEFING_AND_THOUGHT_LEADERSHIP.md",
-      "bytes": 11250,
-      "sha256": "e9636f6ca7a2b015ad3ec5d10503c105c552de3a17760483e1e02eeb9f1db3bb"
+      "bytes": 26118,
+      "sha256": "244bbb51aadfe66501a3ae9257aa80edd2c704ee0efd9de3906c23b3d1968e1a"
     },
     {
       "path": "prompts/158_PARTNERSHIP_ALLIANCE_AND_ECOSYSTEM_STRATEGY.md",
@@ -8548,18 +9438,18 @@
     },
     {
       "path": "prompts/159_BOARD_EXECUTIVE_INVESTOR_AND_MANAGEMENT_REPORTING.md",
-      "bytes": 11312,
-      "sha256": "70c5cc2642d30d110307bc43fa1bad0d55c61ec0f3f87f8e4d14a9c48983d6a4"
+      "bytes": 13819,
+      "sha256": "bd0811419ead1217132b5676975b71c4bfcadda29de5223eaee8a49aa01ffcc9"
     },
     {
       "path": "prompts/15_INCIDENT_TRIAGE_CONTAINMENT_ERADICATION_AND_RECOVERY.md",
-      "bytes": 8861,
-      "sha256": "ce8325bc03266af81e7dba0fc62f76e719be907043694fd82284fd3e2b3798d0"
+      "bytes": 12473,
+      "sha256": "d250f97d8a4f2cd97c92fff846da3d35e12cd3920ee6ae46f37e39648cfe5b96"
     },
     {
       "path": "prompts/160_MEETING_INTELLIGENCE_DECISION_CAPTURE_AND_FOLLOW_THROUGH.md",
-      "bytes": 11392,
-      "sha256": "68ee2d593e319c850655822bc1e633f7f60c3ce42698d16440b21cda079eae4c"
+      "bytes": 16520,
+      "sha256": "cbf035ac2a33a3c55109ecfc7b54a1ed65a12f7aadbb3e9ce0b0059cafb8e665"
     },
     {
       "path": "prompts/161_POLICY_ANALYSIS_PUBLIC_AFFAIRS_AND_REGULATORY_MONITORING.md",
@@ -8593,8 +9483,8 @@
     },
     {
       "path": "prompts/167_PROMPT_REVIEW_EVALUATION_AND_ADVERSARIAL_TESTING.md",
-      "bytes": 11098,
-      "sha256": "bb5528371e8bdd48f7f40dbabca9504469bd11caa9c4f8cc9f865591454e1c70"
+      "bytes": 19721,
+      "sha256": "468d0dffaafd567009aef187056b72375d02e2888f967e595a3ab937326c2fa3"
     },
     {
       "path": "prompts/168_PROMPT_REPAIR_REFACTORING_AND_FAILURE_RESOLUTION.md",
@@ -8603,8 +9493,8 @@
     },
     {
       "path": "prompts/169_REPORT_ARCHITECTURE_AND_DECISION_NARRATIVE.md",
-      "bytes": 10960,
-      "sha256": "6a4dfccda2a37761f2ba29416f20b9706bf72f04c1de53e2e0e9e789dc42eb38"
+      "bytes": 15879,
+      "sha256": "62bb47fc38333296fdccf0a5278c34e29244726e25ec4a80f17ce40cd70c47ce"
     },
     {
       "path": "prompts/16_PROJECT_SCAFFOLDING_AND_REPOSITORY_BOOTSTRAP.md",
@@ -8613,8 +9503,8 @@
     },
     {
       "path": "prompts/170_REPORT_PRODUCTION_VISUALIZATION_BRIEF_AND_QUALITY_ASSURANCE.md",
-      "bytes": 11999,
-      "sha256": "1f1ff94e13dfcd000a6bccad028f3646f076e2fca3830e0a3e40bb5a77c6ba53"
+      "bytes": 14862,
+      "sha256": "175b47152006e7de9fb3a8caf1fd396629d999d4df9a3cfa310d420d8e7cadeb"
     },
     {
       "path": "prompts/171_CHANGE_MANAGEMENT_ADOPTION_AND_ENABLEMENT.md",
@@ -8623,8 +9513,8 @@
     },
     {
       "path": "prompts/172_STAKEHOLDER_MAPPING_ENGAGEMENT_AND_COALITION_PLANNING.md",
-      "bytes": 11048,
-      "sha256": "942ca74c1b22c35f0f1e78eb479d26dc9e43f55436197fa8470e6d272d2c4dc8"
+      "bytes": 13719,
+      "sha256": "d6ea83c9327c9de1d1122f7d3ec6befb6e2e37bde6803f34b3109f07b51a1617"
     },
     {
       "path": "prompts/173_ORGANIZATIONAL_DESIGN_OPERATING_MODEL_AND_GOVERNANCE.md",
@@ -8663,8 +9553,8 @@
     },
     {
       "path": "prompts/17_STAKEHOLDER_STATUS_ROADMAP_AND_RELEASE_COMMUNICATION.md",
-      "bytes": 8676,
-      "sha256": "3f03b51e864c461ee54894ae8d77ae2a9912eb23a6baa298d4c3ee0053879497"
+      "bytes": 11506,
+      "sha256": "d974e67ed120c9b9d5f509c77dc99825fdda5ced773990aba58b8932a8e749da"
     },
     {
       "path": "prompts/180_RECORDS_MANAGEMENT_RETENTION_AND_INSTITUTIONAL_MEMORY.md",
@@ -8693,13 +9583,13 @@
     },
     {
       "path": "prompts/185_REVENUE_OPERATIONS_AND_LIFECYCLE_MEASUREMENT.md",
-      "bytes": 10897,
-      "sha256": "342ef1e4be58c61e379dff61208531b667bd48b630330f7c18dc340a66bfcb11"
+      "bytes": 13772,
+      "sha256": "5d410b5872629c380c5602cce04ef8fe5600a172f150a00a73db3f6ea19349ff"
     },
     {
       "path": "prompts/186_ADMINISTRATIVE_OPERATIONS_TRAVEL_SCHEDULING_AND_EXECUTIVE_SUPPORT.md",
-      "bytes": 11599,
-      "sha256": "47aacde469348e43e7a19ed200ab8cc558325277950655bc159d71422cedbcd7"
+      "bytes": 14772,
+      "sha256": "cca68b3c4e2064edcd4ba6ecea9142f9073be2a78aea9351ea6aaa55d743ca11"
     },
     {
       "path": "prompts/187_MODEL_EVALUATION_BENCHMARKING_AND_SELECTION.md",
@@ -8713,18 +9603,18 @@
     },
     {
       "path": "prompts/189_KNOWLEDGE_RETRIEVAL_SEARCH_AND_RAG_QUALITY_EVALUATION.md",
-      "bytes": 11541,
-      "sha256": "8778cb05f05d6f629ec55982f39e733af09f31c26776e3013e426298c2fffcfb"
+      "bytes": 14674,
+      "sha256": "24f436e88170e7ac30314372ae0916a2972b7cd26cec41b2330572973de255e2"
     },
     {
       "path": "prompts/18_PROJECT_HEALTH_COMPLETENESS_AND_RELEASE_READINESS_GATE.md",
-      "bytes": 7651,
-      "sha256": "0807a8c3783cf22d23560e62ad37b33cd684d61cd407f7504d5c16c347485cdd"
+      "bytes": 13177,
+      "sha256": "42430b7ba71000123c26fb967b3332d39a24d10baaa9d28ef784ac2b88434270"
     },
     {
       "path": "prompts/190_AI_GOVERNANCE_MODEL_RISK_AND_DEPLOYMENT_APPROVAL.md",
-      "bytes": 10692,
-      "sha256": "c37caa207a4078349d7e4f43250b7f64c8b8ac7df5b11125fd8372ac08e6ca4a"
+      "bytes": 13555,
+      "sha256": "00a5f8921b8fcfe2d95dbe6f98f89408e1f51e8612f729c0055823df8676400e"
     },
     {
       "path": "prompts/191_INTENT_INTERROGATION_AND_ROUTE_CLARIFICATION.md",
@@ -8773,8 +9663,8 @@
     },
     {
       "path": "prompts/19_RETROSPECTIVE_CONTINUOUS_IMPROVEMENT_AND_LEARNING.md",
-      "bytes": 8700,
-      "sha256": "1fe77445ffde4f313fb020b75b234ff82077a5fddf7a18b3f9e76c63b89a696c"
+      "bytes": 14383,
+      "sha256": "9b5141d671da8bf7d54458e6dcf16aabed1f8b7e1559dcf56ebf66840792229a"
     },
     {
       "path": "prompts/200_REPOSITORY_MISSION_PROMISE_DEVIATION_BLOAT_AND_SIMPLIFICATION_AUDIT.md",
@@ -8782,19 +9672,214 @@
       "sha256": "d172fb07a80dd8dea083de7f6b5f0ee28f7bb1f63dd21fa3083adfc97841fb07"
     },
     {
+      "path": "prompts/201_HEALTHCARE_CLINICAL_OPERATIONS.md",
+      "bytes": 11837,
+      "sha256": "6cbdf3cc2fe4e9429c2ba92fd1d48d80fff689bc7439d5535bed881fb9c56fb6"
+    },
+    {
+      "path": "prompts/202_PATIENT_INTAKE.md",
+      "bytes": 11387,
+      "sha256": "89a551f001628c1cf4c887f55f2393e08a0ed93d21c168d05ecc517cc9e769f2"
+    },
+    {
+      "path": "prompts/203_CARE_PLAN_SUMMARY.md",
+      "bytes": 10722,
+      "sha256": "2f40a94dc86040f1bfcfbb963e2e9dbfcd2a495ea8286ea96442fb4eaeaa470c"
+    },
+    {
+      "path": "prompts/204_CLINICAL_NOTE_QA.md",
+      "bytes": 10944,
+      "sha256": "acbae3912f9a2d7f83360c36a5e5b9dec2e78082cbfd6483bc57c0eeb75ccca7"
+    },
+    {
+      "path": "prompts/205_INSURANCE_PRIOR_AUTH_PACKET.md",
+      "bytes": 11189,
+      "sha256": "209375c64cb27ee2c363638b887d7bb005d56b2035847a496759474cba9af90c"
+    },
+    {
+      "path": "prompts/206_MEDICAL_BILLING_DENIAL_TRIAGE.md",
+      "bytes": 11417,
+      "sha256": "954cc0350538c0683404ebf07b202d11c090ac97c59e7415cb8702f9fb7d91f5"
+    },
+    {
+      "path": "prompts/207_HIPAA_EVIDENCE_CHECKLIST.md",
+      "bytes": 11255,
+      "sha256": "9c91b21644cee86798cd50443abf66309ea30cf43cfd62d2c4d0378b8e17dbe0"
+    },
+    {
+      "path": "prompts/208_INSURANCE_CLAIMS_INTAKE.md",
+      "bytes": 10960,
+      "sha256": "5f29d44a4e8ea156ef9260b619a341989121d99d802688e77bcef73fa710b80c"
+    },
+    {
+      "path": "prompts/209_UNDERWRITING_RISK_MEMO.md",
+      "bytes": 10910,
+      "sha256": "06754aacf5d4f51baad2f34a12d2b104b86378a581233abca712dcbe7f64f1bd"
+    },
+    {
       "path": "prompts/20_LICENSE_COMPLIANCE_AND_GOVERNANCE_REVIEW.md",
       "bytes": 8357,
       "sha256": "2e041ff0e5cbd0db6e4ddddcc6c626fa0b2818549b406af93bdb752a0b1035ce"
     },
     {
+      "path": "prompts/210_INSURANCE_POLICY_COMPARISON.md",
+      "bytes": 11170,
+      "sha256": "6bb58c7bf28612b33b53feb41f80e3253a363706608caab8650aea76c6b8fe05"
+    },
+    {
+      "path": "prompts/211_INSURANCE_DENIAL_APPEAL_PREP.md",
+      "bytes": 11148,
+      "sha256": "bf21f8e3df924b561767409bc4483e15c4cb1a4b85cb1b17e2cd9cc555591d17"
+    },
+    {
+      "path": "prompts/212_INSURANCE_FRAUD_SIGNAL_REVIEW.md",
+      "bytes": 11148,
+      "sha256": "60e7151c272a1e4a476cea8be21d8bdba081c35f93468ba8cf417d55170a2298"
+    },
+    {
+      "path": "prompts/213_TAX_DOCUMENT_CHECKLIST.md",
+      "bytes": 11448,
+      "sha256": "11e7109f5f75823e132487a196e17ccb5ec3817d496858bb767db2f7c438c2a2"
+    },
+    {
+      "path": "prompts/214_DEDUCTION_EVIDENCE_ORGANIZER.md",
+      "bytes": 11154,
+      "sha256": "1590688790a17920c6e36e6aa5fae06a41afc0cfb6af7f94aeb5a9fbadb78c12"
+    },
+    {
+      "path": "prompts/215_FILING_RISK_REVIEW.md",
+      "bytes": 10892,
+      "sha256": "49d906acf737bf2ccee3c4c196f1ece7e54d56b7fd215a4de51681eb7ad35a47"
+    },
+    {
+      "path": "prompts/216_ENTITY_TAX_PLANNING_BRIEF.md",
+      "bytes": 11289,
+      "sha256": "ef03dea9cb4a4e95477371bde81e830fa66a3d358e2170f9fa19cfdde6e0346f"
+    },
+    {
+      "path": "prompts/217_REAL_ESTATE_LISTING_STRATEGY.md",
+      "bytes": 11197,
+      "sha256": "081cf10f28de3273cf3b30043e2e5973e250c0798b3c13c83170792202cae70d"
+    },
+    {
+      "path": "prompts/218_PROPERTY_DUE_DILIGENCE.md",
+      "bytes": 11405,
+      "sha256": "8488934dce7f61e73d0d156285bd111309f853e34b66b2e54f8590db1537410b"
+    },
+    {
+      "path": "prompts/219_LEASE_ABSTRACTION.md",
+      "bytes": 11782,
+      "sha256": "d997181b631f40f3fda1edb129ab94d7ddf36730b151169bc161bd74a031e511"
+    },
+    {
       "path": "prompts/21_CONTRIBUTOR_AND_SUPPORT_EXPERIENCE_IMPROVEMENT.md",
-      "bytes": 8601,
-      "sha256": "89d0d60c16ca7e3ca6b357f3cc03a9d71eddae5ad215f22590721ac5184dfd6e"
+      "bytes": 11735,
+      "sha256": "e4b5f0051850defa7001c3421fa32caa5faf7409f3c76367c58f24c1b37050ed"
+    },
+    {
+      "path": "prompts/220_BUYER_SELLER_CHECKLIST.md",
+      "bytes": 10898,
+      "sha256": "23f77cb5405d019b40d148c90824d5ced63fb4216f2422c54587d86336aae7ee"
+    },
+    {
+      "path": "prompts/221_MARKET_COMP_MEMO.md",
+      "bytes": 10656,
+      "sha256": "6b867c91075193d285b13f3eb97d0dca332ce79b2e3a6e6b700fadf0a02aa8b6"
+    },
+    {
+      "path": "prompts/222_CONSTRUCTION_SCOPE_OF_WORK.md",
+      "bytes": 11162,
+      "sha256": "ed56e9db3b56e1a24b201fa72666d46a1bc721779d72817592d401e5033bb17a"
+    },
+    {
+      "path": "prompts/223_CONSTRUCTION_PUNCH_LIST.md",
+      "bytes": 10782,
+      "sha256": "b5690025930b02408fe92500e587d37dee08d1d551106d3f0d2a8f86f8f157a0"
+    },
+    {
+      "path": "prompts/224_RFI_TRACKER.md",
+      "bytes": 10334,
+      "sha256": "ad152ca578e86d581d994c65d412341cc073706897dc27406eadea24ccb4e506"
+    },
+    {
+      "path": "prompts/225_CHANGE_ORDER_REVIEW.md",
+      "bytes": 11812,
+      "sha256": "33ebe5fa75dbf73caf2af40b6c9a9c6b817e11d734b132ecea25843f791774c7"
+    },
+    {
+      "path": "prompts/226_SITE_SAFETY_CHECKLIST.md",
+      "bytes": 10979,
+      "sha256": "ea14b47fb3e7c87f294adf5bae26fe77980b05f2332667d1a46456003406a53e"
+    },
+    {
+      "path": "prompts/227_CONTRACTOR_BID_COMPARISON.md",
+      "bytes": 10954,
+      "sha256": "bc8a720a07b9644517ee06655f2542a474035995e14467295d4d0ea968163866"
+    },
+    {
+      "path": "prompts/228_MANUFACTURING_ROOT_CAUSE_QUALITY_ISSUE.md",
+      "bytes": 12209,
+      "sha256": "524c9af1aeae431b46fe0e39f83e9973d74be2c17fdc44b48a3251b088becadd"
+    },
+    {
+      "path": "prompts/229_MAINTENANCE_SCHEDULE.md",
+      "bytes": 10763,
+      "sha256": "b939367a61000a8a0fdcbe0d689da2bf810f2a6493ebb61ef3994b1dd21ff171"
     },
     {
       "path": "prompts/22_RISK_AND_TECHNICAL_DEBT_PORTFOLIO.md",
-      "bytes": 8401,
-      "sha256": "f10638a4e8decbe90291aee8e6bc86cca6998fc4552310bab3620a98ca46c57c"
+      "bytes": 13725,
+      "sha256": "3bc1af2f84b796eb4d2299f96edf4772a0f9d228c15a61cfbef0b18197e0d4dc"
+    },
+    {
+      "path": "prompts/230_SUPPLIER_DEFECT_REPORT.md",
+      "bytes": 10929,
+      "sha256": "adc4e0943415b28741faba4d8154316b665090d74e00602eb2c74d6c74fb6984"
+    },
+    {
+      "path": "prompts/231_QA_ACCEPTANCE_PLAN.md",
+      "bytes": 12029,
+      "sha256": "d03fccd38cf7a27014f23c40158d332e0e99a12338de39da4596efaeaca47f4b"
+    },
+    {
+      "path": "prompts/232_RETAIL_ECOMMERCE_PRODUCT_LISTING_OPTIMIZATION.md",
+      "bytes": 11874,
+      "sha256": "c8d9c6a9cfcb5c8b233a3971746a9ff188193349809c951ebb3af19d1fe8b6ad"
+    },
+    {
+      "path": "prompts/233_MERCHANDISING_CALENDAR.md",
+      "bytes": 10757,
+      "sha256": "1b003b58b933e331988c3cd5cf01be71dea37d77434492b6c6f99e8ea527091d"
+    },
+    {
+      "path": "prompts/234_SKU_RATIONALIZATION.md",
+      "bytes": 10828,
+      "sha256": "a4049f680061945da64a2bda0ab3afd281d3cfb0da6b8a1de2ca07b6372a8c06"
+    },
+    {
+      "path": "prompts/235_RETURN_RATE_ANALYSIS.md",
+      "bytes": 11846,
+      "sha256": "86804370a61a5b26f906cb76d7557f7e77d7b380edf2168d28528af8db0941ec"
+    },
+    {
+      "path": "prompts/236_MARKETPLACE_COMPLIANCE.md",
+      "bytes": 10971,
+      "sha256": "f6db6e224d6ffef9adad20262418ba7bcb44a08fe0624533c2bf8387aa2fde82"
+    },
+    {
+      "path": "prompts/237_HOSPITALITY_GUEST_EXPERIENCE_AUDIT.md",
+      "bytes": 11342,
+      "sha256": "312c7d2bf0dbce4ee70337e21fbe99d2b665f2c35ce82d51ae57f55ef13b2b80"
+    },
+    {
+      "path": "prompts/238_ITINERARY_OPERATIONS_PLAN.md",
+      "bytes": 11020,
+      "sha256": "6b32e12ae13679a7a3ed8dd6eb348f07cc7227820a6245d3ece872ca1bbef63b"
+    },
+    {
+      "path": "prompts/239_EVENT_HOSPITALITY_CHECKLIST.md",
+      "bytes": 11013,
+      "sha256": "15a61fda857d6b1a8b0392e3e04c4511507a01ee46e0d3ef45318addfe8c3282"
     },
     {
       "path": "prompts/23_INFRASTRUCTURE_COST_AND_SUSTAINABILITY_REVIEW.md",
@@ -8802,9 +9887,94 @@
       "sha256": "76379cfbd741c445b60615713d02213226af90a2ae0bc9a83136d5d6885926ee"
     },
     {
+      "path": "prompts/240_TRAVEL_DISRUPTION_RESPONSE.md",
+      "bytes": 11092,
+      "sha256": "9d71e75ec42492839c7bcbea705809404131751905b001ad6644ff9aa6c80c99"
+    },
+    {
+      "path": "prompts/241_NONPROFIT_DONOR_CAMPAIGN.md",
+      "bytes": 10830,
+      "sha256": "d0d8e2d195e4560f4e5442e080604ef13cf15ff9e791207a95d1ee06f8147050"
+    },
+    {
+      "path": "prompts/242_NONPROFIT_IMPACT_REPORT.md",
+      "bytes": 10867,
+      "sha256": "17489360434df54fe07e16102b7041882f000e798ad82e233a45fd647c2caa43"
+    },
+    {
+      "path": "prompts/243_VOLUNTEER_OPERATIONS.md",
+      "bytes": 10795,
+      "sha256": "9b6094b1903d1d02c5a2d78e096be3d57bf84b8ec90f44c9091780e2c7cb7e6d"
+    },
+    {
+      "path": "prompts/244_GRANT_COMPLIANCE_TRACKING.md",
+      "bytes": 10940,
+      "sha256": "6e430927967a4924f3dc657150f4b0cd07fca4b5177f62ff30267fb0b3c91600"
+    },
+    {
+      "path": "prompts/245_FIELD_PROGRAM_MONITORING.md",
+      "bytes": 10957,
+      "sha256": "9015c118ef380116915ca16fbf500bd0e00a8da07508416160e9f60359821b48"
+    },
+    {
+      "path": "prompts/246_GOVERNMENT_PUBLIC_NOTICE_DRAFTING.md",
+      "bytes": 11562,
+      "sha256": "cd354900649f3a14bcd347eec3a3b409e232ceba574dd4d6ffbfd7fd296048c5"
+    },
+    {
+      "path": "prompts/247_CITIZEN_RESPONSE_PACKET.md",
+      "bytes": 10903,
+      "sha256": "573d0bfad47b88b3827778ec4fc69aad68e67a14d11dcf0d61db260eca1f512f"
+    },
+    {
+      "path": "prompts/248_PROCUREMENT_COMPLIANCE.md",
+      "bytes": 11024,
+      "sha256": "aba38bb067b0b366eee66bbb84f0eb309d044e182c49c40bfbd9f8965002dbeb"
+    },
+    {
+      "path": "prompts/249_POLICY_MEMO.md",
+      "bytes": 10511,
+      "sha256": "37fae62b23e0a1efa231b5b579af80b85a9e4ad6241cc8743d134eadeea4397c"
+    },
+    {
       "path": "prompts/24_AGENT_EVALUATION_DRIFT_COST_AND_RATE_GOVERNANCE.md",
       "bytes": 8597,
       "sha256": "44e88d704a8fbe42a0421c978fa70997c03151b2f1e4ef093215ca3fe2f67e55"
+    },
+    {
+      "path": "prompts/250_LEGISLATIVE_BILL_SUMMARY.md",
+      "bytes": 12274,
+      "sha256": "4ecd7293b9e278aa7f79163d076383d160388e4f1550860cf5dd064a4ca08dbb"
+    },
+    {
+      "path": "prompts/251_PRE_PRODUCTION_COMMAND_CENTER.md",
+      "bytes": 11232,
+      "sha256": "c1d0486c11248c2baf59b21eeb71ddaae826050b8b20ef8d3ce260ab5f246578"
+    },
+    {
+      "path": "prompts/252_PUBLICIST_OUTREACH_OPERATIONS.md",
+      "bytes": 11049,
+      "sha256": "46a907c8f992c80d6ef40f49d96427f3728690f4b4746d117469b15e88804915"
+    },
+    {
+      "path": "prompts/253_MEDIA_AGENCY_ACCOUNT_OPERATIONS.md",
+      "bytes": 11238,
+      "sha256": "face51ca6f726cce172b461073279953cb742f9b19c740af873c139db051d136"
+    },
+    {
+      "path": "prompts/254_INFLUENCER_CREATOR_CAMPAIGN_OPERATIONS.md",
+      "bytes": 11550,
+      "sha256": "12c6a8dfd46ff631355015bdafe85bf259c7e37f5ee67f0191fbb72dd81de5ca"
+    },
+    {
+      "path": "prompts/255_CONTENT_PRODUCTION_GRUNTWORK.md",
+      "bytes": 11097,
+      "sha256": "313ffbf64d7d544d6596f6467fa1eda34c4d7648f42f96ab5b0a56bc497d9d0f"
+    },
+    {
+      "path": "prompts/256_CREATIVE_LEGAL_CLEARANCE.md",
+      "bytes": 11224,
+      "sha256": "b48de623a458b53b0e9fe668f9ce12eff1481eda01c1f4d0caf9ff3ca06e107c"
     },
     {
       "path": "prompts/25_PROJECT_CONSISTENCY_UNIFORMITY_AND_COHERENCE_INVESTIGATION_AND_PLAN.md",
@@ -8818,8 +9988,8 @@
     },
     {
       "path": "prompts/27_CODE_QUALITY_AND_MAINTAINABILITY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10285,
-      "sha256": "792ac138bc94a9f387f74491187bfcaf3771ae5c20fcfc3ad28df0e1706f1922"
+      "bytes": 13871,
+      "sha256": "b3f71270b5d712155b4701d8420859ba819d3a5c1b7f0ef900a612b5a1696240"
     },
     {
       "path": "prompts/28_CODE_QUALITY_AND_MAINTAINABILITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8858,8 +10028,8 @@
     },
     {
       "path": "prompts/35_TESTING_AND_VERIFICATION_INVESTIGATION_AND_PLAN.md",
-      "bytes": 9983,
-      "sha256": "c5a97225abe76d2360202152fee34fbc4b7de2423b09348e9740f15d1ade6ff5"
+      "bytes": 18622,
+      "sha256": "481beb3c17cbedef3d7c2a2befd1ecd68fda79bb9ca0c76100d18f27b5ff51ff"
     },
     {
       "path": "prompts/36_TESTING_AND_VERIFICATION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8868,8 +10038,8 @@
     },
     {
       "path": "prompts/37_SECURITY_POSTURE_VULNERABILITY_AND_FIXES_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10924,
-      "sha256": "088df001c40dfe6b2696765cc0c06b17d3903c0520dac622c87d8fec48fd25e8"
+      "bytes": 19289,
+      "sha256": "c6b2f168557b75d46983dbaa5e6718dfe73b6705e5ba75741cc6f9474e041091"
     },
     {
       "path": "prompts/38_SECURITY_POSTURE_VULNERABILITY_AND_FIXES_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8878,8 +10048,8 @@
     },
     {
       "path": "prompts/39_DEPENDENCY_AND_SOFTWARE_SUPPLY_CHAIN_SECURITY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10945,
-      "sha256": "be0c2485cc25f3f58f6720431aad0a00807c1c9de6fe2faca855d28014fbffbf"
+      "bytes": 16726,
+      "sha256": "8b4b3f1c87707b89387be66d8c4ff2e1d0c1afdaeffe80afadca8379c707cfcf"
     },
     {
       "path": "prompts/40_DEPENDENCY_AND_SOFTWARE_SUPPLY_CHAIN_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8888,8 +10058,8 @@
     },
     {
       "path": "prompts/41_CONFIGURATION_ENVIRONMENT_AND_SECRETS_SECURITY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 11136,
-      "sha256": "984c195f0f4a1c68efea81c54ac4d5d983c3e570d0d4090db337085b090227d1"
+      "bytes": 16738,
+      "sha256": "62e74abd60e8f971dbc8f97028892cea176bd79a7fc027f09f91ee7cbc4153be"
     },
     {
       "path": "prompts/42_CONFIGURATION_ENVIRONMENT_AND_SECRETS_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8898,8 +10068,8 @@
     },
     {
       "path": "prompts/43_IDENTITY_AUTHENTICATION_AUTHORIZATION_AND_SESSION_SECURITY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 11452,
-      "sha256": "679a1def3d3c47df8db69e126b6c33fafb5f8737ee9c168ad1d830daf8ee5f5a"
+      "bytes": 14759,
+      "sha256": "31aed8156d73becfd6f175b3359e4a09cba675abc0d09855a4ccf48aa3843259"
     },
     {
       "path": "prompts/44_IDENTITY_AUTHENTICATION_AUTHORIZATION_AND_SESSION_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8908,8 +10078,8 @@
     },
     {
       "path": "prompts/45_API_CLI_AND_PUBLIC_CONTRACT_INTEGRITY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10441,
-      "sha256": "aa66f38fb435df92ceb7479586a04e11644ee9df8d47094d7f32b418c60ef350"
+      "bytes": 14743,
+      "sha256": "7456c8546e7914d40d74170b9c49e7f06daa68d810c72f4b60c80a5401c64263"
     },
     {
       "path": "prompts/46_API_CLI_AND_PUBLIC_CONTRACT_INTEGRITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8918,8 +10088,8 @@
     },
     {
       "path": "prompts/47_DATA_STORAGE_SCHEMA_AND_MIGRATION_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10343,
-      "sha256": "2d73461718a4aecafa7a5906f47811ffc8b5aa9f2dece66c5abefaa7d9bf94fe"
+      "bytes": 16413,
+      "sha256": "e3856cdc9eeee982d45401c27020b1c245f280a476714771d579d43e39c07e88"
     },
     {
       "path": "prompts/48_DATA_STORAGE_SCHEMA_AND_MIGRATION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8928,8 +10098,8 @@
     },
     {
       "path": "prompts/49_PERFORMANCE_AND_EFFICIENCY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10102,
-      "sha256": "93fee364506a270ed1406432f9cfc9716c9def2ae2f9d162e1c652202b1d4f74"
+      "bytes": 13158,
+      "sha256": "59920d33a2d2a7edeb8d1dd7557120c7cb1ec57a19a9aa5d9dda5aa955997756"
     },
     {
       "path": "prompts/50_PERFORMANCE_AND_EFFICIENCY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8938,8 +10108,8 @@
     },
     {
       "path": "prompts/51_RELIABILITY_RESILIENCE_AND_RECOVERY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10444,
-      "sha256": "f68d5c06b727dd7f7842a62d1d7d9d476e881cfbd8780f2d8b160a1ba61d9372"
+      "bytes": 13461,
+      "sha256": "238c3d0588e88fd606376a4804e464773d3f8d29b5c4d25473769a7a9331bff4"
     },
     {
       "path": "prompts/52_RELIABILITY_RESILIENCE_AND_RECOVERY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8958,8 +10128,8 @@
     },
     {
       "path": "prompts/55_OBSERVABILITY_DETECTION_AND_OPERATIONS_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10544,
-      "sha256": "4e8a6400a8aa76282dd321fcb048bd84c75f256ddc55f594c131560f3a072fac"
+      "bytes": 16223,
+      "sha256": "466212177bd56d58811accd3a419885289fe0fc8270c235c03322f03fe3c5648"
     },
     {
       "path": "prompts/56_OBSERVABILITY_DETECTION_AND_OPERATIONS_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8978,8 +10148,8 @@
     },
     {
       "path": "prompts/59_PRIVACY_AND_DATA_PROTECTION_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10203,
-      "sha256": "98dfce7d7782fa07c33cd9ed7e4bdc4bc7663873f2c7f821a4065f9693a27346"
+      "bytes": 13733,
+      "sha256": "3e499a90d179b904e41c4041e40ee7f1de210de972cb8745072a7d537c31218f"
     },
     {
       "path": "prompts/60_PRIVACY_AND_DATA_PROTECTION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8988,8 +10158,8 @@
     },
     {
       "path": "prompts/61_AGENT_SKILL_TOOL_AND_MCP_CAPABILITY_LIFECYCLE_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10663,
-      "sha256": "d4ff0d6a5346b1f0e92b0a536fbaec6dd7d5059ee175e696fd60fc45cb484fd9"
+      "bytes": 13628,
+      "sha256": "b867701b5255a49ab7bd12417c09778d691e268bb1e584abb6fcb1e04f3433de"
     },
     {
       "path": "prompts/62_AGENT_SKILL_TOOL_AND_MCP_CAPABILITY_LIFECYCLE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -8998,8 +10168,8 @@
     },
     {
       "path": "prompts/63_AGENTIC_SECURITY_PERMISSIONS_AND_TRUST_BOUNDARIES_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10877,
-      "sha256": "330906e348c203b58e058c1f4070f0ecb4c0b40d734ae8224ff2cb751ef2d2d2"
+      "bytes": 22688,
+      "sha256": "da2d796a4305166108e453cb50e12cfba358d469f7138c400f806a9eee56aee5"
     },
     {
       "path": "prompts/64_AGENTIC_SECURITY_PERMISSIONS_AND_TRUST_BOUNDARIES_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -9028,8 +10198,8 @@
     },
     {
       "path": "prompts/69_PROMPT_INJECTION_UNTRUSTED_INPUT_AND_TOOL_OUTPUT_SECURITY_INVESTIGATION_AND_PLAN.md",
-      "bytes": 11399,
-      "sha256": "f6aed753a388d1d8bb9f290e9b8c9626d883afa92609e5462e5b8a87e9d97f8d"
+      "bytes": 14685,
+      "sha256": "893faf86ee556f2108475eca145cd471c743a44fe82d602866fbd81440a18b94"
     },
     {
       "path": "prompts/70_PROMPT_INJECTION_UNTRUSTED_INPUT_AND_TOOL_OUTPUT_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -9038,8 +10208,8 @@
     },
     {
       "path": "prompts/71_USER_EXPERIENCE_ACCESSIBILITY_AND_LOCALIZATION_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10871,
-      "sha256": "aa5b1b2cbd1bee4e1604a11dd2ce6a8f1e29f325fce078ef128e192e9851dd84"
+      "bytes": 17115,
+      "sha256": "c123ff6a9943c25fea0b626cb64a9ab4424503050c1f4577bb5997ef727a6a0d"
     },
     {
       "path": "prompts/72_USER_EXPERIENCE_ACCESSIBILITY_AND_LOCALIZATION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -9058,8 +10228,8 @@
     },
     {
       "path": "prompts/75_DOCUMENTATION_KNOWLEDGE_TAXONOMY_AND_TROUBLESHOOTING_INVESTIGATION_AND_PLAN.md",
-      "bytes": 30554,
-      "sha256": "e9b058d7070030d56f41e7819040dc859501ee56b4e87cda06ba0e57524b410f"
+      "bytes": 33559,
+      "sha256": "2a855f17b96d0b787732895352ce592196abf19cc4d69fff588f03af0634b3e1"
     },
     {
       "path": "prompts/76_DOCUMENTATION_KNOWLEDGE_TAXONOMY_AND_TROUBLESHOOTING_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -9068,8 +10238,8 @@
     },
     {
       "path": "prompts/77_PROMPT_SUITE_CONSISTENCY_SECURITY_AND_COHERENCE_INVESTIGATION_AND_PLAN.md",
-      "bytes": 10963,
-      "sha256": "18337c49b68ef286dad16aaf4f335e41d22ecf0bdba913d5ff2904319593e98f"
+      "bytes": 14069,
+      "sha256": "25429aed44b070376630fe190e8f62ba551c89dcfc34d0871cd8607f83a36089"
     },
     {
       "path": "prompts/78_PROMPT_SUITE_CONSISTENCY_SECURITY_AND_COHERENCE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
@@ -9078,8 +10248,8 @@
     },
     {
       "path": "prompts/79_DEEP_RESEARCH_AND_EVIDENCE_SYNTHESIS.md",
-      "bytes": 9034,
-      "sha256": "d22c125da8b5774275616a54de681906208f8446c34644009ace019cd6c1f5ac"
+      "bytes": 11761,
+      "sha256": "57863d7923ac502d0df4399074dea4029358ca2ce1c2e03741667e74882e27d7"
     },
     {
       "path": "prompts/80_RESEARCH_PROTOCOL_LITERATURE_SEARCH_AND_SOURCE_STRATEGY.md",
@@ -9088,8 +10258,8 @@
     },
     {
       "path": "prompts/81_DATA_ANALYSIS_STATISTICAL_REASONING_AND_DECISION_SUPPORT.md",
-      "bytes": 9633,
-      "sha256": "b04033a807931c0a1f132b5a9b3552a3c007f3f837ba439aee07a55b43102a75"
+      "bytes": 15054,
+      "sha256": "06e3db11a033db28b6c0ca697bbf91d345447a06f2bb5bcbf1b15ce42c69782b"
     },
     {
       "path": "prompts/82_RESEARCH_INTEGRITY_CITATION_AND_FACT_VERIFICATION.md",
@@ -9143,8 +10313,8 @@
     },
     {
       "path": "prompts/92_CREATIVE_CRITIQUE_EDITING_AND_ANTI_SLOP_REFINEMENT.md",
-      "bytes": 9644,
-      "sha256": "1c716f8f8a6cefd75b899a7f38c89dacced72564f33b6e9c626c020247f72501"
+      "bytes": 14865,
+      "sha256": "4de2b2369e8cf784568c06b768172a4e2d0faf1e9dd1d2d91680096803adcdeb"
     },
     {
       "path": "prompts/93_CONTENT_STRATEGY_PORTFOLIO_AND_EDITORIAL_ARCHITECTURE.md",
@@ -9153,18 +10323,18 @@
     },
     {
       "path": "prompts/94_CONTENT_GRAPH_KNOWLEDGE_ARCHITECTURE_AND_REPURPOSING_SYSTEM.md",
-      "bytes": 9782,
-      "sha256": "79dff58183073a444609c0959451e542b7b9df6c88420ee49c6281f69434d774"
+      "bytes": 12529,
+      "sha256": "b28feffdf54dd4678ce9afe11030c6d0e71fb03003685d7d2846b5a77b19d2f1"
     },
     {
       "path": "prompts/95_CONTENT_CALENDAR_SCHEDULING_AND_DISTRIBUTION_PLANNING.md",
-      "bytes": 9498,
-      "sha256": "55a7cb47d5a301026a12f8063c27b79a2c70bd83dd4e9c929aaa3d6c92792a4c"
+      "bytes": 19968,
+      "sha256": "d13a2ee13c673d399fa2e167f284853f0ca039cecf5d43c09b098a3d1a82d8b9"
     },
     {
       "path": "prompts/96_IDEA_EXPLORATION_CONCEPT_DEVELOPMENT_AND_MOODBOARD_BRIEF.md",
-      "bytes": 10107,
-      "sha256": "a957cf19ba1cd6fa440488d69d78bda7879ea8aeff8159ccd88c04ecf23d752e"
+      "bytes": 18540,
+      "sha256": "eabd7be971a4fee623715d7457d996898b4ac8c3eb5e27d01102961f43e6c04f"
     },
     {
       "path": "prompts/97_BRAND_STRATEGY_POSITIONING_NAMING_AND_ARCHITECTURE.md",
@@ -9185,6 +10355,11 @@
       "path": "requirements-dev.txt",
       "bytes": 49,
       "sha256": "00a27188140217e8344a3032abf6f83c45ce15bdeb0d95919d7b8a1aaf1822f6"
+    },
+    {
+      "path": "requirements-runtime.txt",
+      "bytes": 20,
+      "sha256": "9984fa6ad6d35d2468011c4c278583e9bb4983d83be6bb3f5aabcef9c99b19b7"
     },
     {
       "path": "schemas/acceptance_criteria.schema.json",
@@ -9287,9 +10462,914 @@
       "sha256": "352c4e206b902f698710b7d1b39c2118d99ce78e7f93015f8c74f4ebc07582b7"
     },
     {
+      "path": "schemas/imported/generic_prompt_library_v3_1/README.md",
+      "bytes": 672,
+      "sha256": "818cadf7f4462c7daa5fc010d0155230433114e680f8616b24a069f789aff673"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-001-pr-code-review-workflow.schema.json",
+      "bytes": 9830,
+      "sha256": "bee25c8114896b7af3e42829045b749e34ad95ccf5ca904b26a90a1cc902130b"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-002-incident-postmortem.schema.json",
+      "bytes": 11181,
+      "sha256": "67f6cdd92602c0413a3eb8f84dc177aa2d2d73a090355730c10ca101f4f5097d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-003-migration-plan.schema.json",
+      "bytes": 10287,
+      "sha256": "e6aff42b24a1f413ab65f17395b3363ee44a24f3cf5fc2ea347e878b8f05d816"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-004-dependency-upgrade-replacement.schema.json",
+      "bytes": 10405,
+      "sha256": "f757618da7c2e6fb7375476b794bbbc2514c6eb43ed2d5bdc3221eb6f477299e"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-005-api-contract-design.schema.json",
+      "bytes": 9895,
+      "sha256": "9043b6a08feb5aefc6d3d6d43d045acd96ac7e437ed396e8eaf005ee7eb70d3f"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-006-test-strategy-test-repair.schema.json",
+      "bytes": 10819,
+      "sha256": "033d6a2b481a29e62a7512283f2a62a39906e9c939fa510ea9b150026d4d95f8"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-007-observability-plan.schema.json",
+      "bytes": 10139,
+      "sha256": "f1bdde1fa7d3cb77643042b9d3714687db2a423b07158ff9bbfea660d82f284c"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-008-data-pipeline-validation.schema.json",
+      "bytes": 9805,
+      "sha256": "f185bba92d09901a350a15a5b32478f4e1a9bcba3d6c653478a8fa98ea46a719"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-009-release-notes-changelog.schema.json",
+      "bytes": 10697,
+      "sha256": "1df2aba96142d22b72f888f056fc323dca7b13c22d632c9a334ad1d441ddf0ea"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-010-repo-developer-onboarding-audit.schema.json",
+      "bytes": 10714,
+      "sha256": "92e783a30fa3d9e02a5460cc453f04355f230317541dfefdc6c3f229fecdd960"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-011-security-threat-model.schema.json",
+      "bytes": 11091,
+      "sha256": "b94a73d9b6588c6e627446479eca3ae80789cdfe23392c74d21f808a4b1c4fa0"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-012-prompt-regression-evaluation.schema.json",
+      "bytes": 10135,
+      "sha256": "4312a1b2f3fc09e14790b5e144a91e85e7b91d97e2c5dec2b5b5fae430f2aaac"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-013-agent-handoff-quality-review.schema.json",
+      "bytes": 11015,
+      "sha256": "55ae42e8e9a4642e7ba362677b2c0b4f808309a222d2658715853f806baacb9f"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-014-connector-integration-plan.schema.json",
+      "bytes": 10261,
+      "sha256": "7a56cd0d37c1d3ffd00ddfff0b33355d203fb0d88181a25865a8cb369e165a1a"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-015-documentation-gap-audit.schema.json",
+      "bytes": 10677,
+      "sha256": "8c3758fcb652aca79d12d971c93da9e0e14e49227d8a4ee318147da9a28e0f38"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-016-performance-investigation.schema.json",
+      "bytes": 10127,
+      "sha256": "df0462b26902fb11979ad9ddd3549cb84587687d446c0a7aca252365968041d7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-017-architecture-drift-audit.schema.json",
+      "bytes": 10680,
+      "sha256": "8a925f8dbeacec471ce67c85da1022e250d8fa7a491f44bebd5270ec3ce975eb"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-018-technical-debt-triage.schema.json",
+      "bytes": 10416,
+      "sha256": "6af761e678dd15853060fef978dc52e56860df85e37ec424e5e9637c71841e7d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-019-rollback-recovery-plan.schema.json",
+      "bytes": 10373,
+      "sha256": "3ee0b8bd7edd1aed9887a18e4336bc69b159dc6e06684c238151aad5ce0f17ce"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-020-config-environment-audit.schema.json",
+      "bytes": 11220,
+      "sha256": "b9c94f6b5e0a1a48b6c81ea79fece1d40ed72218a4cdc2350f5ccba15a4956cf"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-021-cli-ux-review.schema.json",
+      "bytes": 13312,
+      "sha256": "a85552e7fbbefbf56a199528d46b7d54d7f98a48b8cbbc70a588a832685ec98d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-022-schema-evolution-plan.schema.json",
+      "bytes": 10057,
+      "sha256": "9ec68d135d020be7667b72ac99c9c4d91cae1bd4671347f036c19a79d1d3e0b0"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-023-eval-dataset-design.schema.json",
+      "bytes": 9770,
+      "sha256": "d1a8a953ac6c05018015d0de7ab2fd2e4b39555542befa9ff967d494a71f5b44"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-024-agent-policy-conflict-audit.schema.json",
+      "bytes": 10920,
+      "sha256": "2373656ace097d8b45975faab85dd5604ba000d21992231fbd27cc3be543461a"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-025-prompt-catalog-deduplication.schema.json",
+      "bytes": 10668,
+      "sha256": "9803222a14b8a8ee3d6d8c8e0bb2d0e8162a4fe06a05f99ffe7639258ef73de2"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-026-workflow-wrapper-parity.schema.json",
+      "bytes": 11245,
+      "sha256": "58dc109701ef3ded8c712f7b57c380c8e1e1879fb8e1f506a79e3effee327624"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-027-external-action-readiness.schema.json",
+      "bytes": 9880,
+      "sha256": "c9551e112964bb7dd0fd810735a2bfa1df477ef6887c2781ee244cc87cd2344c"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-028-knowledge-graph-gap-analysis.schema.json",
+      "bytes": 10319,
+      "sha256": "39acb1242885b30cee2bdd88644fa88e7111c133584ca57044990a6ec0dcbf23"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-029-human-approval-packet.schema.json",
+      "bytes": 10542,
+      "sha256": "636bbfa4078e19df1a65b424ed445c4cdda9256137358ab77a203bb3f22e00a0"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-030-prompt-injection-red-team-audit.schema.json",
+      "bytes": 9784,
+      "sha256": "b3d8e19c0d8bb528b1128e15facaa408c8cfd18b62faa024864241f8d5a813c7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-031-attack-path-analysis.schema.json",
+      "bytes": 10049,
+      "sha256": "6c11ab93bbe6576611359749467b760c2f8356db51e303bea654946f7c485725"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-032-abuse-case-modeling.schema.json",
+      "bytes": 10305,
+      "sha256": "820cfbff2cae8cfb5502198e6a6599cc1348a797e3cc401199cb77c8b12423ce"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-033-agent-tool-abuse-audit.schema.json",
+      "bytes": 10976,
+      "sha256": "4492c2e659a0eb7a8681aee8c2dab93d876e596982c067d78d54302aec9102a7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-034-secrets-exposure-audit.schema.json",
+      "bytes": 10922,
+      "sha256": "fa5c91c92d8075da556e1abb342d4c41f2a2b1e91f7cf6c38b0c46262ed9243b"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-035-supply-chain-risk-review.schema.json",
+      "bytes": 11238,
+      "sha256": "6229d045858ab939ce2b6e176522e98c1dce1ec770a6b7b497cfbcd5c8393e41"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-036-ci-cd-attack-surface-audit.schema.json",
+      "bytes": 10616,
+      "sha256": "7d26d0bc20d6396ccda8530badc63b1629846c86bb8c8531390a34a0515080c7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-037-agentic-workflow-threat-model.schema.json",
+      "bytes": 10310,
+      "sha256": "47a7d82bbb96e6f4c8f88de5976f515ff302e391c967040eb8c227f1c417021e"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-038-security-regression-test-design.schema.json",
+      "bytes": 10123,
+      "sha256": "c765e2b38bc20a4f1d20411fbe3561d09f1f1fdc246a6b4ffdb61b6c714abc2a"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-039-vulnerability-triage.schema.json",
+      "bytes": 10053,
+      "sha256": "6991a465857a39432a085befcc5c47b649dd1953c240646254fc1b46a7c682bf"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-040-safe-exploit-reproduction-plan.schema.json",
+      "bytes": 10154,
+      "sha256": "2f167a0988bda6ad6117b9079013a222dd799bbad021616c8cec0076a6c7539d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-041-auth-authz-review.schema.json",
+      "bytes": 10604,
+      "sha256": "b6fb15baaa8e50323370902f0fc4f74b1c906b137c44bbbbc188c42c00fc45d7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-042-data-exfiltration-audit.schema.json",
+      "bytes": 11189,
+      "sha256": "f1ec3b4c835f4cd4e6233a3e2b359f8e830ebdfd53e47057b5e7702d039c8c4a"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-043-sandbox-escape-risk-audit.schema.json",
+      "bytes": 10521,
+      "sha256": "29b049c0d9d23f8352fcdab57a6f0692ba7d864f24e8cdc3b78a744fa8dc8480"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-044-red-team-report-generation.schema.json",
+      "bytes": 10618,
+      "sha256": "174d9077fdeede107452bccea03a3c77fff6db6b2ce558b9d621cffdb0e6af1f"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-045-blue-team-detection-plan.schema.json",
+      "bytes": 10295,
+      "sha256": "369518f6c5c8c6cb20c46dce65ebdfcc58ed0bd5214268e0908d17fddeca404f"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-046-security-hardening-plan.schema.json",
+      "bytes": 10300,
+      "sha256": "472d0ba67d4823576a388cd0f6dc0f3c72b7ef970cc2de3eb488430df59964c1"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-047-third-party-connector-security-review.schema.json",
+      "bytes": 11250,
+      "sha256": "384f801a18d12ee3e82978ebf0232c307c2c8e7e1dc412cab220d248dbd6638a"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-048-malicious-prompt-corpus-builder.schema.json",
+      "bytes": 9830,
+      "sha256": "cb609861a27ce3611d0d76c8a6fdfa7cd05e363441222db415ddd7d41f24bdb4"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-049-responsible-disclosure-packet.schema.json",
+      "bytes": 10866,
+      "sha256": "1404276172056ff1a58c9d4f0c9c3c66d57ffcdff2ffee70641e8d6e01cbfd6b"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-050-creative-brief-interrogation.schema.json",
+      "bytes": 10540,
+      "sha256": "0d7f7794ddc132b147d1bf48737b0b3eb10d57d476ad292d65ef7c9bd00a4803"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-051-project-kickoff-interviewer.schema.json",
+      "bytes": 11302,
+      "sha256": "a8e4b59f7d83928df1616f6b013fd9a1ca73644a5896892b6ed9a3d0c4e86617"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-052-timeline-builder.schema.json",
+      "bytes": 10860,
+      "sha256": "0a48a534054f8c195f2b324a5ffa082087b5335a68d6b0a341c223fb56d5a1dc"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-053-production-schedule-planner.schema.json",
+      "bytes": 11671,
+      "sha256": "924994ac91d7704407ec82f4409abbef3b8d333fd64313499248c4af2b80c242"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-054-content-pipeline-manager.schema.json",
+      "bytes": 10060,
+      "sha256": "280048a6dbd66fe316d5da2f9bc9043060d05a27e11ce24269cd9ae627f6c31e"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-055-previz-planner.schema.json",
+      "bytes": 10258,
+      "sha256": "3417dcc9f28dae49f6e0a84297b84cff5a88ed164c2667e9644ae24d8dcf1e49"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-056-moodboard-analysis-and-direction-synthesis.schema.json",
+      "bytes": 10891,
+      "sha256": "2e455eea8e1c2451d659c50c972470dfcc75e913d983871c39a1e7e067a0613b"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-057-idea-board-workshop-and-interrogation.schema.json",
+      "bytes": 9769,
+      "sha256": "3cabeb202a4215c7ac909fa6b67d32016011bf25a6fa4823d9c8c2ae20639c9b"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-058-campaign-calendar-planner.schema.json",
+      "bytes": 11447,
+      "sha256": "08cc8562366cf1b7353a3745cfd41bbceec982e4d49a55d1489b7d847b2dd12a"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-059-stakeholder-alignment-memo.schema.json",
+      "bytes": 10137,
+      "sha256": "261b78b4cf32c8ed0166664d536129ae7d0f84d4fcfb2c312cb09c334c1e1e65"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-060-manager-status-report.schema.json",
+      "bytes": 10549,
+      "sha256": "12808b523ce9396b8952ba334a8528692614cfc41cb4c6d0a4aadba672e1fcd7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-061-meeting-agenda-and-decision-tracker.schema.json",
+      "bytes": 10427,
+      "sha256": "76f9a4c9e7b77c445d95028ddd0be89b98d3dec623803fcc924b40284c5d1cf9"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-062-creative-review-interviewer.schema.json",
+      "bytes": 10884,
+      "sha256": "d527ac972d0c873feb078372e4904f7e633ed7d80d1daf4eb1d4a15edeea17bb"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-063-content-repurposing-planner.schema.json",
+      "bytes": 10924,
+      "sha256": "607655c50a8c6782127ba5ad7a93189f2a3e17c9b8ade6204364d714a933ca88"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-064-editorial-calendar-gap-audit.schema.json",
+      "bytes": 10729,
+      "sha256": "b0bb5c8367d8d7c8cf27e6a2fcf7ac7a343610cd89692cbedb9e4c1d622b825d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-065-asset-dependency-tracker.schema.json",
+      "bytes": 10323,
+      "sha256": "44276ba6fc72bc900f286c18fe68f1c5b9fa36fd03e4b45835966b7b0b3059df"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-066-approval-workflow-planner.schema.json",
+      "bytes": 10151,
+      "sha256": "17852caf7077281f376b5bfb4ee0e140c2183a61131bb52b9c4695fe5ff6e8da"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-067-risk-register-and-treatment-plan.schema.json",
+      "bytes": 10779,
+      "sha256": "7ba0e918e82e9b755495322e9ffc5c9ae184e5c7ed5063bf4294c743612143c6"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-068-content-and-creative-experiment-design.schema.json",
+      "bytes": 10100,
+      "sha256": "abacd461a93beb706bf3b9c682df9662c39e7f26273fe2859ee21cf4ef7aea28"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-069-launch-readiness-checklist.schema.json",
+      "bytes": 10097,
+      "sha256": "8eaca8ed51f7297df2a79a8e56f723314713542019441421641269d67a0ccef6"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-070-personal-manager-cockpit.schema.json",
+      "bytes": 9747,
+      "sha256": "d3c5d4822987b001e8b7f700bc09070eccce76fdd67b534f135bdde00905eccb"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-071-client-and-agency-engagement-intake.schema.json",
+      "bytes": 10698,
+      "sha256": "3c2911dd0678f64bdf41fbfbc08b04ea03b9508236107b8e2eaf9ffef50000bd"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-072-storyboard-critique.schema.json",
+      "bytes": 10763,
+      "sha256": "377959273c70e51b3006f7588876905b8f4fd146d0dfd0e03b26ec8d22c23a50"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-073-thumbnail-title-ideation-board.schema.json",
+      "bytes": 10626,
+      "sha256": "8dcb8db1891431025d33fc3f5b1a735603ae9e9ef6e2c51aeeb29093008fb4e3"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-074-creative-decision-log.schema.json",
+      "bytes": 10443,
+      "sha256": "56cb7da6a4b0f081a3828965f70013febd2582f7b6d5301bc67c09c669691333"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-075-legal-contract-review-triage.schema.json",
+      "bytes": 10317,
+      "sha256": "680fdd9107918d096d1223c3fb7d501206d9ce1f2d82e1187fc103dab43a4aed"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-076-finance-model-sanity-check.schema.json",
+      "bytes": 10675,
+      "sha256": "326de7d039a0147e9a3568f324efaa6ddca70442ac989f89bf58f22132b89e38"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-077-hiring-scorecard-builder.schema.json",
+      "bytes": 9632,
+      "sha256": "889635ea8c2ae0e1f5bf7ecb45b4f6d6509ac62ed41289f9efc21ad6f0f42259"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-078-performance-review-writer.schema.json",
+      "bytes": 9800,
+      "sha256": "e33ca035c0a154d0e55d499879f6af745bcf2470017f83d5f918c72575717ca8"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-079-procurement-vendor-evaluation.schema.json",
+      "bytes": 10807,
+      "sha256": "e1e4eee85d6298f4a06a87bafc05d9639ab62cb016bd603525e70e709b87e0ac"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-080-customer-support-escalation.schema.json",
+      "bytes": 10412,
+      "sha256": "e3f6228efdb1cbcf4298b303fdd62ce45967ca3aad660a1aab8d89d91b3a666d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-081-sales-discovery-interviewer.schema.json",
+      "bytes": 9628,
+      "sha256": "d37a7b527dc85a267a25e06d8dc967d67d11ddca56a25e3699fe0a3f09384b17"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-082-product-requirements-document.schema.json",
+      "bytes": 10812,
+      "sha256": "17ef0498df607862f948bfe9e48b8a07cf6558c867a68fefee19b6abfdedf7b1"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-083-go-to-market-plan.schema.json",
+      "bytes": 9798,
+      "sha256": "79f512fa547af1f39dc6bc00cfab7f13325f32f541b39f973b9295abc1f66881"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-084-ux-research-plan.schema.json",
+      "bytes": 10299,
+      "sha256": "3d5b059f9ff0f9db1b50899d77fe44083bfe46709334cd7a9aa66b1e8f817b23"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-085-usability-test-moderator.schema.json",
+      "bytes": 10351,
+      "sha256": "a6ce48b88c7111243abdd0a03e75fc47abf8f76ffe85cac03343baed360a3848"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-086-accessibility-audit.schema.json",
+      "bytes": 9622,
+      "sha256": "81e7b648520fa7c71cbc6f32bc28c479de8c13e3d740e2687e700b7bd1fb7f12"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-087-localization-readiness.schema.json",
+      "bytes": 11432,
+      "sha256": "69b216b9e7ee70c80ceb97a239e92746f701a6ef05c561e4ea7e721f162db18f"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-088-data-governance-audit.schema.json",
+      "bytes": 10934,
+      "sha256": "45d1a1aea664f324e17ba4a7bc68735c99bfe1a2feb8acd0616e8378a87e7758"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-089-privacy-impact-assessment.schema.json",
+      "bytes": 10238,
+      "sha256": "7689d92e4b2ae9df1c3caf40dc3cfb5ab9f62b72f021bd0479bcea6f6b45285d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-090-compliance-control-mapping.schema.json",
+      "bytes": 11500,
+      "sha256": "58790de4b60e4848221c4574ecd44f18a2a6121d726ccb629ee3e48a9d33dd08"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-091-incident-comms-planner.schema.json",
+      "bytes": 10109,
+      "sha256": "fedec58ac43964a37de15bef8582f58ac20ffa0f30ea935b50ac48b46d87543f"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-092-training-curriculum-builder.schema.json",
+      "bytes": 9654,
+      "sha256": "31b32528162cca76c3eb1684f0f650e6f948108918110046370a8a7da8854ad3"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-093-sop-and-operational-runbook-creator.schema.json",
+      "bytes": 10156,
+      "sha256": "9edeb51b8e0112b24213c1e8d3d40f796090027051e2ca47896e3ebc13afaa58"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-094-research-synthesis.schema.json",
+      "bytes": 9938,
+      "sha256": "a9a7ce35d23be7199ee4b796224f9982fc221e40004a08955ccac1c0c9c909d3"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-095-competitive-teardown.schema.json",
+      "bytes": 9866,
+      "sha256": "02e3069cb474630bc0bb21b9eb5cfd6cac8c39e67d647473e70b1c3004477531"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-096-community-moderation-policy.schema.json",
+      "bytes": 9933,
+      "sha256": "7072d2d4231cb90c5a57543f87c56f0066e045d2990b705706121fbbd5ef41ed"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-097-grant-proposal-builder.schema.json",
+      "bytes": 10375,
+      "sha256": "d97dea9603b9ff92ebfd9df84f00ac8c534e32749bbfff086e861421849fd212"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-098-decision-memo.schema.json",
+      "bytes": 10426,
+      "sha256": "7f8fb016c29e3fdab04803f9138bd6b99f6d9bd691989d4295978c42b0aa0b3d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-099-data-cleaning-plan.schema.json",
+      "bytes": 10531,
+      "sha256": "79092501300af951833a8b0973fc01f5d659db0d4b770f73922595782943d770"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-100-data-quality-report.schema.json",
+      "bytes": 10414,
+      "sha256": "a8e3ca619cd941fc6fc373ebc8b0aeb79e79f38f717436eaa58d893d11fc9c0d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-101-analyst-question-framing.schema.json",
+      "bytes": 10875,
+      "sha256": "bb1b491645e49d2a65483b4551f81bcac1cf57cfa740905472215d7a615b92b5"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-102-exploratory-data-analysis.schema.json",
+      "bytes": 10575,
+      "sha256": "2635b1bb343f01292c743b13ab82991161316565c92c9a6712200990328ffe90"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-103-dashboard-requirements-interviewer.schema.json",
+      "bytes": 10899,
+      "sha256": "13e9b53cbb1ef280a9d6ac270dda3f344d317fa84c7e996374cb0de0ae77b703"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-104-metric-definition-registry.schema.json",
+      "bytes": 10960,
+      "sha256": "4f70267889dc10d7c46357d58df7fc1c18e261ab54abb9a4b426909e111c9428"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-105-insight-memo.schema.json",
+      "bytes": 10608,
+      "sha256": "5c7a6ffbd28f8e2b0135b31353f63a1c4133eef2e3a144f9a7a4942952c5aedd"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-106-pr-strategy-brief.schema.json",
+      "bytes": 10101,
+      "sha256": "1fce95c95613b05038d65ae4eb168bf1fa0e72010e6eb7007cfd5386d3c46ced"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-107-press-release-drafting.schema.json",
+      "bytes": 10277,
+      "sha256": "9a2c5e6d481724223379571b0dc2177e1b8f60c9e224f85bf856cbcb18e74816"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-108-media-pitch-builder.schema.json",
+      "bytes": 10368,
+      "sha256": "8d334567ae469870f8d60a926b74e8dd9277306583c087db863328f84b402f97"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-109-publicist-crisis-response.schema.json",
+      "bytes": 9666,
+      "sha256": "81a076f5896be893b59a1c43ebdc579c77197e073a3446bb79a899846c4b8460"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-110-media-list-planner.schema.json",
+      "bytes": 10116,
+      "sha256": "5b02f7aabe7f7d2e8539d0ed5762a2be2dc51be100a86f1e8d92ed3e8cb8ff66"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-111-campaign-messaging-house.schema.json",
+      "bytes": 10166,
+      "sha256": "08b92e3aa749121e19c15dd57c0c778f655c770205bb727920bd68e6c5a8e812"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-112-marketer-funnel-audit.schema.json",
+      "bytes": 10426,
+      "sha256": "9d4d2eadb05606babf7105cbbfd4d542d50c7ff32dd0fdaa5827beda34d45695"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-113-paid-media-brief.schema.json",
+      "bytes": 10254,
+      "sha256": "407aadd5b5bae426bb4f06cc8370e5bf6e0382ec56d08a3639ee76d3d9aa3615"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-114-agency-sow-builder.schema.json",
+      "bytes": 11471,
+      "sha256": "2c7d6e6d00bcf7414ba72220bd9d281b6872fc0e66138b5bcce34dc1a836ed63"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-115-campaign-postmortem.schema.json",
+      "bytes": 9752,
+      "sha256": "6473cc4f77030f168f543a6663fc197a789b56fecb2154acc6bd9f216efe75bc"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-116-influencer-creator-brief.schema.json",
+      "bytes": 9787,
+      "sha256": "cf8be6c23b83e48eb660886b13c9dbb2fba98d04d3f3da1c32cad9aa71617188"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-117-brand-reputation-monitor.schema.json",
+      "bytes": 10193,
+      "sha256": "9b137f18a03587bb71a5a439691c5bc18b35998a99e29e497427bdaaa945a55d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-118-editorial-pitch-calendar.schema.json",
+      "bytes": 10549,
+      "sha256": "ef918a5d5f8eaa0a8948116bb14d31a7c93cd10266c659e0d7c08cff0319e1e5"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-119-pr-risk-review.schema.json",
+      "bytes": 10650,
+      "sha256": "4eeca9a4766e7a878915911356ed4522341d38b02100a0e818c82c50ca3a91d8"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-120-media-kit-builder.schema.json",
+      "bytes": 10348,
+      "sha256": "fb196d0653a175d3a0d01b81ccbceb6e9fd34494a2cf8614ddffe748c0d4547e"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-121-audience-segmentation-brief.schema.json",
+      "bytes": 10360,
+      "sha256": "e36c4c10a780bae8aa00eeef105f020761e429519585446d065e7f847fa956ec"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-122-healthcare-clinical-operations.schema.json",
+      "bytes": 10324,
+      "sha256": "ba73b025d0dc6664b5b212fff595c9ec83fc549c39858e14dc367ecffba30f2b"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-123-patient-intake.schema.json",
+      "bytes": 14595,
+      "sha256": "17281e34dbae2702008e5267161906a815845e6024a9d00d7f1cea10fb36c3af"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-124-care-plan-summary.schema.json",
+      "bytes": 10614,
+      "sha256": "37ffa043ed58e265d4dad81bd04adbb4991ad1430603272c8c5c43996e192d66"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-125-clinical-note-qa.schema.json",
+      "bytes": 10636,
+      "sha256": "fbf8ee7fd4c8938a2a6ca57e1d3fc875e67498ac1f4c077d4bf20360bbdf4dde"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-126-insurance-prior-auth-packet.schema.json",
+      "bytes": 11134,
+      "sha256": "7260df7badc7346bad1dc8ad869e619aad68b623694626cf376ef73a70fd7250"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-127-medical-billing-denial-triage.schema.json",
+      "bytes": 10356,
+      "sha256": "4e9f222fd0aa9b98c1017c4b881e256ad2dd00d94d68db5251c9d9007f350018"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-128-hipaa-evidence-checklist.schema.json",
+      "bytes": 10954,
+      "sha256": "ca96f430e44d2a974e110d60121537be5757f030cc67d34522f1f54440f52e7f"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-129-insurance-claims-intake.schema.json",
+      "bytes": 10404,
+      "sha256": "19629b2f0bc12a4b311fbd143829c0f4d4614fa9c769c1f70ba9b7062744d861"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-130-underwriting-risk-memo.schema.json",
+      "bytes": 10628,
+      "sha256": "fb95d37af1a764df544be28840a41ef9e92338d493d952690934d9c6901129c4"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-131-insurance-policy-comparison.schema.json",
+      "bytes": 10338,
+      "sha256": "f25b9686a029e1deb5704064624b426d0bbc4f307ffaa4ddf5046289397083cb"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-132-insurance-denial-appeal-prep.schema.json",
+      "bytes": 10680,
+      "sha256": "77f6a50ebd9ad823e67f9771c00abfe8424631c3eb0de0c7a913db1998e2b69c"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-133-insurance-fraud-signal-review.schema.json",
+      "bytes": 10089,
+      "sha256": "692f8deaf81c33fe1389e660fd69ce4c9f289cd3f3c5919398c6d16ac5ac0519"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-134-tax-document-checklist.schema.json",
+      "bytes": 9626,
+      "sha256": "1cac64fd90b77ec5b0b1c26771c3d5f0c048c05f34e39a2850112a9c687e05a2"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-135-deduction-evidence-organizer.schema.json",
+      "bytes": 10074,
+      "sha256": "34a0433edb28494582b44c057d92d5716e93b2ba79b41ef15f76a789519ccb42"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-136-filing-risk-review.schema.json",
+      "bytes": 11366,
+      "sha256": "b5ca52bb6c9193f54da0c5787381acc3b33d82b18b4ecd2bf004e5df45985ad1"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-137-entity-tax-planning-brief.schema.json",
+      "bytes": 10982,
+      "sha256": "848b91a84fcb0047eec311dbccbe5ee74f4cc1f616313e3087d922b3d6fec41c"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-138-real-estate-listing-strategy.schema.json",
+      "bytes": 10307,
+      "sha256": "a8ea391e0eec82538b41b84689d4ddef30b5a936d31526114d9b948d37be17ac"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-139-property-due-diligence.schema.json",
+      "bytes": 10315,
+      "sha256": "e45ff81463a85068420f254f273794d858ec085dbcfd5c3c2858b86135d4928b"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-140-lease-abstraction.schema.json",
+      "bytes": 10985,
+      "sha256": "a752a0dc47dc8d7519f1e5626cd57e54da504a3fd4f5bb33b75394c0f8a0656e"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-141-buyer-seller-checklist.schema.json",
+      "bytes": 10367,
+      "sha256": "81b087baeb687b0d016b34f1c0d9b380954d67c1f1b90d0eff104138c5e17fbe"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-142-market-comp-memo.schema.json",
+      "bytes": 9803,
+      "sha256": "9d7ca3571ca5c218e9190ad7a505d43709d07a65d297cb81e120d0e4c4e995a7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-143-construction-scope-of-work.schema.json",
+      "bytes": 11198,
+      "sha256": "e2359bf68c08c63ad260e146e83075792fa3d50cdac51375be0c887390c43dc0"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-144-construction-punch-list.schema.json",
+      "bytes": 10398,
+      "sha256": "6144405c7cc32bb23d81ad17a15339425ea464d36a16dd807a6b4ab2c41cd031"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-145-rfi-tracker.schema.json",
+      "bytes": 10041,
+      "sha256": "831b52c17d005d8ba3a2023b3c3c79ced128d9f23abde4b14c11dbd1a638ff29"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-146-change-order-review.schema.json",
+      "bytes": 10826,
+      "sha256": "955102fe03da477bdef6dda751fe3a6b9ed9873e84b3a0a2a15513616a7f4bc4"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-147-site-safety-checklist.schema.json",
+      "bytes": 10358,
+      "sha256": "2a58b0b3c85b81ae3fa8a5b3b6f97f7a84ad7f989da16246893dca2c3b6f0ef2"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-148-contractor-bid-comparison.schema.json",
+      "bytes": 10893,
+      "sha256": "1de2bf7eea21b93165604f592fadd6ce303719b218d6feb58d9eced3673a0102"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-149-manufacturing-root-cause-quality-issue.schema.json",
+      "bytes": 11548,
+      "sha256": "2b1e2b9f4c0536977deed5ffa7a3ad07e234c69a9e5d7117ab152eecc5faf8d6"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-150-maintenance-schedule.schema.json",
+      "bytes": 11225,
+      "sha256": "8882f7497148ea7a7a80597c27a079cd144838927e271a6c00cb1e7d769286c7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-151-supplier-defect-report.schema.json",
+      "bytes": 10104,
+      "sha256": "3991c31dd6fc1fa8ac6bc5920aff40edd8d3b32caad280bd08f2942c821cf8ba"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-152-qa-acceptance-plan.schema.json",
+      "bytes": 10529,
+      "sha256": "c61f9b59cf2c08e1cdffeeae69280f4392280b27a16113f8f28a5e1339fb9d02"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-153-retail-ecommerce-product-listing-optimization.schema.json",
+      "bytes": 10304,
+      "sha256": "07e69a2d81b14d02cc7d4e811aaa4dfa8890e4040e06bc829008eeab97f107f0"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-154-merchandising-calendar.schema.json",
+      "bytes": 10987,
+      "sha256": "473486fdb4d10b9f91b86b558cf64ab8f0cc8f09383a08ecc80f76d60503504b"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-155-sku-rationalization.schema.json",
+      "bytes": 9783,
+      "sha256": "78f35c30a710e4735ea7cd59ebc0ebae93b410caec33e64c9dde2d2eb52dfda5"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-156-return-rate-analysis.schema.json",
+      "bytes": 9809,
+      "sha256": "570625feb2b09f99b0d0202d74581f8e9633d074185005578a912dae7969f6cc"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-157-marketplace-compliance.schema.json",
+      "bytes": 10874,
+      "sha256": "da2f3332eb086db76546ca31cd5fbc6a166675a1213354779bde8d14ea9c26c7"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-158-hospitality-guest-experience-audit.schema.json",
+      "bytes": 11059,
+      "sha256": "77a29217758c3e3a1ea0d5d544e541f135519c310c5f2eee2075caeb9df5876d"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-159-itinerary-operations-plan.schema.json",
+      "bytes": 9736,
+      "sha256": "4105fea4dc809b71bdfb047074bcbe7f751ee3110b7a08a63affc287a297f2cd"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-160-event-hospitality-checklist.schema.json",
+      "bytes": 9790,
+      "sha256": "7b7adf26d8c701e5ae6b78328e1a5c894f50fe23f874704025f2c152c09f679e"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-161-travel-disruption-response.schema.json",
+      "bytes": 10670,
+      "sha256": "e61aecf7552a24c1dfb38693822e784ac2a1fc21ad2369f2bbc9263a5c67c7be"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-162-nonprofit-donor-campaign.schema.json",
+      "bytes": 9767,
+      "sha256": "54d071a0e2855370ec714cc310fa769573c8c4219055db53c4adb77a50652d3a"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-163-nonprofit-impact-report.schema.json",
+      "bytes": 9840,
+      "sha256": "eb15ce2f06a142597dedc692c48567b6ec82067817e4d292d14989062af32866"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-164-volunteer-operations.schema.json",
+      "bytes": 9901,
+      "sha256": "b2a1b95797aeea03ac0019a43818e0bcc52b6eabe2d2004768f8957965cfe564"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-165-grant-compliance-tracking.schema.json",
+      "bytes": 10403,
+      "sha256": "a08e79d0c5dfb2068d0985fe92815727368938e2c275ad65501de064293b7a63"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-166-field-program-monitoring.schema.json",
+      "bytes": 10107,
+      "sha256": "d211de39870aeb4f067d5ae1339c0a0e4b227a4f59795f81c5bdbaacad06f050"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-167-government-public-notice-drafting.schema.json",
+      "bytes": 10117,
+      "sha256": "ae8a716205ccabd75823eaa8946e3d154a01b10bbe6cc2292faf633d2f06d167"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-168-citizen-response-packet.schema.json",
+      "bytes": 10964,
+      "sha256": "a86c2393c81f7d80ed11f2b143fffa0d2e804918ffdf6fe8e1f88fabf485db79"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-169-procurement-compliance.schema.json",
+      "bytes": 11270,
+      "sha256": "d3ee2674507c113bb113b00c057655f5c02b7ca11f16e1554db3a63e3e28c469"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-170-policy-memo.schema.json",
+      "bytes": 13640,
+      "sha256": "b3acc77fa010038c610c0ec23476e8cd69111c6227d16400def8bf51b2c1287e"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-171-legislative-bill-summary.schema.json",
+      "bytes": 9960,
+      "sha256": "b38e976547802308d3d210f2c01e6f6e890ff22ed87ae9bd4a2b44ac159a08e4"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-172-pre-production-command-center.schema.json",
+      "bytes": 10442,
+      "sha256": "9ca091c062eedbba52f1ce1ca839225ae399be4927ea55ae2b44727a877ad169"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-173-publicist-outreach-operations.schema.json",
+      "bytes": 10414,
+      "sha256": "e597367ebd74d83de6efd6001ebb3c6bcdd65fbaa5eb7aaa988acc048f4f8274"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-174-media-agency-account-operations.schema.json",
+      "bytes": 10433,
+      "sha256": "7845b65750b73ec13d7a43e2fccbf438e055df0fe09e551127d53940acd6e790"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-175-influencer-creator-campaign-operations.schema.json",
+      "bytes": 10471,
+      "sha256": "d14541f5df9236dc7d736d39aca73e2d57149bbcd7646392e3956be9b32e0eb5"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-176-content-production-gruntwork.schema.json",
+      "bytes": 10317,
+      "sha256": "b1ce3c920db0144d8e896f0857c594eda11785a927f44f05cd9d799bc2cbd5e1"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-177-creative-legal-clearance.schema.json",
+      "bytes": 10967,
+      "sha256": "0ef5590628628e6f0819917c9ff44988f28251c924b99f8063bb24bd80331964"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-178-data-incident-response.schema.json",
+      "bytes": 12824,
+      "sha256": "6cfa4e051fd4f3e3695d2ad6d0486758cb08bb9750c0724bd959b60f4dd10505"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-179-dashboard-qa.schema.json",
+      "bytes": 13508,
+      "sha256": "50b624dc9764ba2b6a664f38267197f187f2cdcd04c3b7468ff5851fdedeccc5"
+    },
+    {
+      "path": "schemas/imported/generic_prompt_library_v3_1/cp-180-executive-assistant-operations.schema.json",
+      "bytes": 12694,
+      "sha256": "560cc6489ea754fa4868915d0a79c3977effecd693bb437f117904c33ef4ae08"
+    },
+    {
       "path": "schemas/installation_receipt.schema.json",
-      "bytes": 1751,
-      "sha256": "5c696c6806ebc795c5ae3a230d018abb54b5ac56187338343b0a422b2e2e0ad1"
+      "bytes": 1940,
+      "sha256": "f19a6fec16b0b9d498c1e16dea721c6a1cb60212d47143f3c801aab9ef03514b"
     },
     {
       "path": "schemas/installed_skill_inventory.schema.json",
@@ -9460,6 +11540,116 @@
       "path": "schemas/visual_asset_brief.schema.json",
       "bytes": 1895,
       "sha256": "c408f659ecfaf8c42e4efda67df814d7d483fdda9d52a1c9dcc478a639a41d69"
+    },
+    {
+      "path": "site/astro.config.mjs",
+      "bytes": 2157,
+      "sha256": "f3c33280b5dfec9791700e74cb56053fb955e3f8aa68d2be18a8d24b9ae3969a"
+    },
+    {
+      "path": "site/package-lock.json",
+      "bytes": 248664,
+      "sha256": "e2e73ebeac9844f669d40621790cc5acc27a0b6c258f62ba54cc4c73b9f3a13d"
+    },
+    {
+      "path": "site/package.json",
+      "bytes": 473,
+      "sha256": "71e3e29bbbdc25f55fbe7816fd3844310394a12e1dbd0aada7139eb28a428f67"
+    },
+    {
+      "path": "site/public/assets/diagrams/coverage-map.svg",
+      "bytes": 2601,
+      "sha256": "4a3e4ea05bd414054764d31380ffa431739c697fb8784d9126f9b9172b12f01a"
+    },
+    {
+      "path": "site/public/assets/diagrams/routing-system.svg",
+      "bytes": 2956,
+      "sha256": "b530c2b534c4fa90abbd7edce9189ccc5862a069b3d317b146d4e5442618ca06"
+    },
+    {
+      "path": "site/public/assets/diagrams/runtime-payload.svg",
+      "bytes": 2524,
+      "sha256": "ec007ac9f2cb4e78ecf343693cd4f0aed12dc2e54b4a9b503b973d3ab3a231f7"
+    },
+    {
+      "path": "site/public/favicon.svg",
+      "bytes": 345,
+      "sha256": "90a2c6ee6a568a5f4c2c35d0be75c8529833d1848a851471619b7f3407ba24ec"
+    },
+    {
+      "path": "site/scripts/check-links.mjs",
+      "bytes": 2348,
+      "sha256": "6656ae8cc3374310acf5f85c47122172c465073342c4af1e34d0b42bb24b51fd"
+    },
+    {
+      "path": "site/scripts/generate-reference.mjs",
+      "bytes": 11929,
+      "sha256": "4610d86fb4d71660c288982eddfe08d2a6239c12103b0a4b36c3ab760ec3a2fd"
+    },
+    {
+      "path": "site/src/content.config.ts",
+      "bytes": 280,
+      "sha256": "2c524ac11d7b302699febf2b21bad6a5ee4e34b3b36887ed423e555fd8d2f83c"
+    },
+    {
+      "path": "site/src/content/docs/guides/identity.md",
+      "bytes": 1668,
+      "sha256": "c6628e3b70d02727ec299cfe7d16e4579ea1a0fec495a9d175a5b66314c302a1"
+    },
+    {
+      "path": "site/src/content/docs/guides/invocation.md",
+      "bytes": 1738,
+      "sha256": "18dd3678fc375bdd2ca00c2ee611099616da8850e937e76f7327c0281f2eaa19"
+    },
+    {
+      "path": "site/src/content/docs/guides/quick-start.md",
+      "bytes": 2019,
+      "sha256": "ade67074af8e34dfce8932638ac0276504be5886a91e81e5cf9aca84d36656a9"
+    },
+    {
+      "path": "site/src/content/docs/guides/recipes.md",
+      "bytes": 2017,
+      "sha256": "48c195e3536f2018ad1621aaac1e19b3277bdf4b0aa951b16763a9eedfdedb15"
+    },
+    {
+      "path": "site/src/content/docs/guides/routing.md",
+      "bytes": 2336,
+      "sha256": "2acaf6a283caeddeeef26197704d8833da4d2b930ee69316efba812ae752ae13"
+    },
+    {
+      "path": "site/src/content/docs/guides/runtime-install.md",
+      "bytes": 2068,
+      "sha256": "8525d811de33b919c7e342e95e7cf6919f2ce9bf54171580f66c3220ef631a0d"
+    },
+    {
+      "path": "site/src/content/docs/guides/safety.md",
+      "bytes": 1672,
+      "sha256": "fc80073064ccabd8ddbb81748c55aa9f74fea49c82031f1afed39ef52238f7ce"
+    },
+    {
+      "path": "site/src/content/docs/guides/scenarios.md",
+      "bytes": 1822,
+      "sha256": "f41ea71bfdeaee5b268ad34e4ef0279c2daa11e16ed07c949d1a7a56b5b1234e"
+    },
+    {
+      "path": "site/src/content/docs/guides/troubleshooting.md",
+      "bytes": 1954,
+      "sha256": "1de02adbcbd33b555158adb44e6214a7b3876b03af2c0343176ed4f3eb946321"
+    },
+    {
+      "path": "site/src/content/docs/index.mdx",
+      "bytes": 3264,
+      "sha256": "3c3d7833e4e9a9f9a3a78c7a45793c363e651fa59f00aaec4b9accd7fee0f145"
+    },
+    {
+      "path": "site/src/styles/custom.css",
+      "bytes": 2979,
+      "sha256": "17f51f88ac8f76ecc28a44d38bbd806b87e2f6f93970a1fab0d194cbba05ce39"
+    },
+    {
+      "path": "site/tsconfig.json",
+      "bytes": 41,
+      "sha256": "0122b16ad35e3d02899e42e0975168a3bb623c7bafab3275155bf2bf8005e8ae"
     },
     {
       "path": "skill_registry.json",
@@ -9857,6 +12047,11 @@
       "sha256": "836a0d092223dc08fd26cc7a81c5a386f0a8e3481cc1f93d6a7877442e2874c5"
     },
     {
+      "path": "tests/test_docs_site.py",
+      "bytes": 1803,
+      "sha256": "8b19316d6cbc8624ba71bb91aa81dc7962189949f08141303534d6f820ca7d0b"
+    },
+    {
       "path": "tests/test_documentation_integrity.py",
       "bytes": 709,
       "sha256": "dc06b8c2c598a16ca1d14480d9b366aedc087bd965b2479c2a458bf0f35482c2"
@@ -9878,8 +12073,8 @@
     },
     {
       "path": "tests/test_manifest_hygiene.py",
-      "bytes": 1349,
-      "sha256": "e6fec6dbe91fff6b8336bda1384c24a678f87c0801eefe21f25e7fd00cffd6f0"
+      "bytes": 3089,
+      "sha256": "f13e3d25972ded844be73e7e1a4fb496693bb573523ab4604178bd49d580da98"
     },
     {
       "path": "tests/test_mastery_manual.py",
@@ -9888,18 +12083,23 @@
     },
     {
       "path": "tests/test_md.py",
-      "bytes": 16620,
-      "sha256": "e1fda88b1b7c96669cbe923f27f2ac6fac8b7fbce5af7c8a794e77df738faeb9"
+      "bytes": 19087,
+      "sha256": "74545379efd12f271ac26e0ffe72ed1f17d1036dafc5f1a6471654384a4d9eeb"
     },
     {
       "path": "tests/test_prompt_addition.py",
-      "bytes": 22100,
-      "sha256": "392981c7a3c2b5d04a8513725a583f75c37469b9edac5db27b0dae66277b530d"
+      "bytes": 21729,
+      "sha256": "e5a6c95db385167cc0946d6bf9e0d8d4766537df2cf788ea5c2ba348af93b581"
     },
     {
       "path": "tests/test_prompt_body_quality.py",
       "bytes": 10986,
       "sha256": "7e602b0df27ad2a93d7d90c295be6a711803c24a2e5cf71c95fcf97add55b0d4"
+    },
+    {
+      "path": "tests/test_prompt_library_import.py",
+      "bytes": 4572,
+      "sha256": "4d45b580ed17c39f45c10cedfa37e739022fbd8f83602ba1aaa3e42062a221ce"
     },
     {
       "path": "tests/test_release_consistency.py",
@@ -9908,8 +12108,8 @@
     },
     {
       "path": "tests/test_release_paths_installer.py",
-      "bytes": 7580,
-      "sha256": "20fddabe4ec5d63134020c45b0ac1aebaafb94e97d03c34592311f0567209c0e"
+      "bytes": 8388,
+      "sha256": "b477d159bba9c5866afaf6563ee7ce07e2a21d3efa07ee2ad504d4842cbfc163"
     },
     {
       "path": "tests/test_schema_contracts.py",
@@ -9918,8 +12118,8 @@
     },
     {
       "path": "tests/test_security_hardening.py",
-      "bytes": 24885,
-      "sha256": "11cb502720facf58b03549ad61c692e272bbd1c46ca4a4bcaef9c6be9af6eae7"
+      "bytes": 25581,
+      "sha256": "35a4b1b91576cdc8bac46a5588a811c189c74a58517c0132363533c548cb92ee"
     },
     {
       "path": "tests/test_template_system.py",
@@ -9938,8 +12138,8 @@
     },
     {
       "path": "tools/add_prompt.py",
-      "bytes": 57288,
-      "sha256": "d3a28b9deb2c2f935f741a1fab1e5ca83e9b959c211e21c846afa9daf1f2c2f4"
+      "bytes": 57783,
+      "sha256": "eb90fa9e2682019fef81a96a83fda13ddbd585d5636cd50a462d560c3bffa1f3"
     },
     {
       "path": "tools/agent_paths.py",
@@ -9968,8 +12168,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 4176,
-      "sha256": "70d2e9abb7ca82d31acaa4aea54ae68c6205f8cddc2f1f396272f5c8c348453d"
+      "bytes": 4750,
+      "sha256": "fb977c7e5038d1063d94bf2c4477779701f0ca4d8ab7bada71d4c6277dc985b2"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",
@@ -10022,14 +12222,19 @@
       "sha256": "2010e3f700252ca5cd94b931ceb782077935dd5c5570c43df014ef0044957cd0"
     },
     {
+      "path": "tools/import_prompt_library.py",
+      "bytes": 21995,
+      "sha256": "01c902358939885e6435379dcb2e742c875f692e305efc30ecf158962a21bed0"
+    },
+    {
       "path": "tools/install.ps1",
       "bytes": 2545,
       "sha256": "5822da6c4a89ef9c4eaeb870e3c4030d93cad00694c06580cd11c7ee3936bc58"
     },
     {
       "path": "tools/install.py",
-      "bytes": 14762,
-      "sha256": "c77cc973106f2b16fbce4be71262e70f1c09ae37142adac4fcf953b5e665cd1b"
+      "bytes": 15995,
+      "sha256": "e153e0ba72a7cf1f5c491660b0e8653d83db9e003d4574d3d76fddd9ad26c461"
     },
     {
       "path": "tools/install.sh",
@@ -10047,9 +12252,14 @@
       "sha256": "07b444b7d6caee1c359d89ad8c5153f939277fcc55e18f7fb3ab00b9c25cded7"
     },
     {
+      "path": "tools/intent_router.py",
+      "bytes": 17369,
+      "sha256": "a8916e30931a01ea834588832e9df0673512439c28b5fd6d6e10fc8da5ef6390"
+    },
+    {
       "path": "tools/keyword_context.py",
-      "bytes": 4520,
-      "sha256": "081242cf071e10133cb520e38914251e765b2bda9950b016adb30f104028f103"
+      "bytes": 5107,
+      "sha256": "6e4b03b29c726d1ccb76169289bdb8ac7afd333b034bf6ff060f885e982c6f53"
     },
     {
       "path": "tools/log_query.py",
@@ -10058,8 +12268,8 @@
     },
     {
       "path": "tools/md.py",
-      "bytes": 83324,
-      "sha256": "c13c94dc36840a66860155c06786a41dda6ccfda5cc3adde8a30a8a96a666491"
+      "bytes": 74418,
+      "sha256": "87c4ca819cfe6507254123c3e66a8b61abf0ec139bd5d17ba1e86b7e2774f061"
     },
     {
       "path": "tools/platform_dispatch.py",
@@ -10153,8 +12363,8 @@
     },
     {
       "path": "tools/run_tests.py",
-      "bytes": 5579,
-      "sha256": "615a59425a3fae19ea525b29c48e4dc90ec7be212e8f768f67d76fbe202d3ee9"
+      "bytes": 6958,
+      "sha256": "25b90204ee2adbdf0f5b17a6f02315f5a3f72fa8cebc9c8203cfca26e42faec6"
     },
     {
       "path": "tools/security_utils.py",
@@ -10228,8 +12438,8 @@
     },
     {
       "path": "tools/validate_suite.py",
-      "bytes": 43124,
-      "sha256": "9a8aa3ac4ab5b2c17f1507627b2a864a97812b1c459a70809231909db7901a31"
+      "bytes": 53679,
+      "sha256": "2fbc4af2e9bc40aac9393f03699191db51de4014a67ce792fef4ae02665f6b0e"
     },
     {
       "path": "tools/validate_templates.py",

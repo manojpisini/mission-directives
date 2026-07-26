@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 678
+  maximum_body_words: 1694
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -129,6 +129,29 @@ conditional_template_routes:
 - core/acceptance-criteria
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Test strategy / test repair
+- Data pipeline validation
+- Security regression test design
+imported_profiles:
+- profile_id: CP-006
+  title: Test strategy / test repair
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 6cb76caa0bbdbd387edf6b3a4bdaafb30d741e7db58eac1331cb2150163cc8df
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-006-test-strategy-test-repair.schema.json
+- profile_id: CP-008
+  title: Data pipeline validation
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 3fbee4158b4ad9d218bdc9fcbdc2290e80b2305679e21498a0651d542d820be7
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-008-data-pipeline-validation.schema.json
+- profile_id: CP-038
+  title: Security regression test design
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: ee7d051a6dc20efd622ca8a9f2e4ff5ad003263d78780326c450d3fcf42822cd
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-038-security-regression-test-design.schema.json
 ---
 
 # Testing and Verification — Investigation and Plan
@@ -215,4 +238,176 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-36`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-006" title="Test strategy / test repair" schema="schemas/imported/generic_prompt_library_v3_1/cp-006-test-strategy-test-repair.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Test strategy / test repair
+
+## Task contract
+
+Create or repair the smallest test system that reliably detects important regressions while removing flakes, redundancy, and false confidence.
+
+## Use this prompt when
+
+- Coverage is missing, tests are flaky, or behavior changed without a reliable regression lock.
+
+## Do not use it for
+
+- Maximizing coverage percentage without risk context.
+
+## Required inputs
+
+1. Behavior and failure risks
+2. Existing tests and test taxonomy
+3. Production registration/configuration path
+4. Known flakes and historical defects
+5. Execution-time and environment constraints
+
+## Workflow
+
+1. Map important behaviors and failure modes to current tests; distinguish unit, component, contract, integration, end-to-end, and smoke coverage.
+2. Reproduce flaky or failing tests repeatedly with seed, timing, resource, ordering, and environment controls.
+3. Determine whether the test or product is wrong.
+4. Identify gaps where mocks bypass real serialization, registration, persistence, permissions, or provider boundaries.
+5. Design the lowest-cost test at the lowest layer that can catch each regression, escalating to integration or end-to-end only when the boundary is essential.
+6. Delete or consolidate redundant tests after proving equivalent protection; replace brittle implementation assertions with observable outcomes.
+7. Define suite ownership, fixtures, isolation, parallelism, time budgets, quarantine rules, and measurable pass criteria.
+
+## Deliverable
+
+- Risk-to-test coverage map
+- Test additions/repairs/removals
+- Flake diagnosis
+- Validation order and pass criteria
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-006-test-strategy-test-repair.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every proposed test names the regression it prevents.
+- [ ] No test is retained solely to increase coverage metrics.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-008" title="Data pipeline validation" schema="schemas/imported/generic_prompt_library_v3_1/cp-008-data-pipeline-validation.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Data pipeline validation
+
+## Task contract
+
+Validate a data pipeline from source contract to reconciled output, including schema, completeness, timeliness, transformation correctness, lineage, and safe backfill.
+
+## Use this prompt when
+
+- Assessing batch, streaming, ELT/ETL, feature, analytics, or reporting pipelines.
+
+## Do not use it for
+
+- A superficial row-count check with no business reconciliation.
+
+## Required inputs
+
+1. Source
+2. target schemas
+3. Transformation logic and business rules
+4. Expected volume/freshness and partitions
+5. Reference totals or trusted system
+6. Backfill, replay, and retention constraints
+
+## Workflow
+
+1. Profile source contracts and arrival behavior: schema, types, keys, partitions, lateness, duplication, deletion, and change-data semantics.
+2. Trace every transformation and join, preserving grain, units, timezone, precision, null semantics, and lineage; identify lossy or many-to-many operations.
+3. Define quality assertions for completeness, uniqueness, validity, referential integrity, distribution drift, and freshness at meaningful checkpoints.
+4. Reconcile outputs to trusted totals and sampled records, explaining tolerances and unavoidable differences; inspect rejects and dead-letter paths.
+5. Test restart, retry, replay, late data, duplicate delivery, partial failure, and backfill behavior for idempotency and downstream impact.
+6. Produce acceptance gates, monitoring, ownership, and a quarantine/correction process for bad data.
+
+## Deliverable
+
+- Source-to-target lineage
+- Quality assertion suite
+- Reconciliation results and tolerances
+- Backfill/replay risk plan
+
+## Optional artifacts
+
+- `lineage.json`
+- `quality-checks.json`
+- `reconciliation.csv`
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-008-data-pipeline-validation.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Grain and key semantics are verified at every material transformation.
+- [ ] Backfill and retry behavior cannot silently duplicate or corrupt outputs.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-038" title="Security regression test design" schema="schemas/imported/generic_prompt_library_v3_1/cp-038-security-regression-test-design.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Security regression test design
+
+## Task contract
+
+Translate validated security findings into minimal, stable regression tests that prove the boundary and fail for the original weakness without requiring unsafe live exploitation.
+
+## Use this prompt when
+
+- A security issue has been validated and needs durable prevention.
+
+## Do not use it for
+
+- Inventing tests for unverified findings or live-target exploitation.
+
+## Required inputs
+
+1. Validated finding and root cause
+2. Affected trust boundary and control
+3. Safe fixture/reproduction
+4. Expected secure behavior
+5. Test environment and cleanup requirements
+
+## Workflow
+
+1. Reduce the finding to the smallest security invariant and preconditions; separate exploit mechanics from the policy boundary that must hold.
+2. Select the lowest safe layer: unit for parser/policy logic, contract for permission/error behavior, integration for real registration, or end-to-end for cross-boundary failures.
+3. Build deterministic fixtures using canary data, fake credentials, local services, and isolated storage; prohibit production targets and destructive payloads.
+4. Assert both denial and allowed behavior, including error code, audit log, no side effect, no data leak, and cleanup.
+5. Add variants for bypasses relevant to the root cause.
+6. Document encoding, alternate route, object ID, race, retry, indirect input, or privilege level—without exploding the suite.
+7. Document ownership, runtime, flake controls, and how the test maps to the finding and security requirement.
+
+## Deliverable
+
+- Security invariant and test design
+- Safe fixtures and variants
+- Expected denial/allow/audit assertions
+- Regression ownership
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-038-security-regression-test-design.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The test fails on the vulnerable behavior and passes on the fixed boundary.
+- [ ] No real credentials or unauthorized targets are used.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

@@ -76,7 +76,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 697
+  maximum_body_words: 1135
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -132,6 +132,15 @@ conditional_template_routes:
 - core/acceptance-criteria
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Auth/AuthZ review
+imported_profiles:
+- profile_id: CP-041
+  title: Auth/AuthZ review
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: d46944b78ae0de7f6ff0fc1c7ac8394be83c4f7aeff63e7179174ae46c7f6f07
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-041-auth-authz-review.schema.json
 ---
 
 # Identity, Authentication, Authorization, and Session Security — Investigation and Plan
@@ -218,4 +227,69 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-44`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-041" title="Auth/AuthZ review" schema="schemas/imported/generic_prompt_library_v3_1/cp-041-auth-authz-review.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Auth/AuthZ review
+
+## Task contract
+
+Review authentication and authorization as separate controls across identities, sessions, roles, objects, actions, tenants, and delegated authority.
+
+## Use this prompt when
+
+- Assessing login, session, role, permission, object access, service identity, or admin boundaries.
+
+## Do not use it for
+
+- Checking only whether endpoints require login.
+
+## Required inputs
+
+1. Identity
+2. session architecture
+3. Role and permission model
+4. Routes/actions/object relationships
+5. Tenant and ownership rules
+6. Service accounts, tokens, and delegation
+
+## Workflow
+
+1. Map identity proofing, authentication methods, session/token lifecycle, recovery, rotation, revocation, and step-up requirements.
+2. Create an authorization matrix by actor, role, tenant, object relationship, action, state, and channel; default unspecified access to deny.
+3. Trace enforcement at UI, API gateway, service, domain, and datastore layers.
+4. Identify client-only checks and inconsistent duplicated policy.
+5. Test horizontal/vertical privilege escalation, object-level authorization, confused deputy, ID substitution, bulk actions, indirect references, race/state transitions, and delegated tokens.
+6. Review admin/support impersonation, service accounts, background jobs, caches, audit trails, and emergency access.
+7. Recommend centralized policy boundaries, least privilege, denial tests, logging, and revocation verification.
+
+## Decision and escalation rules
+
+- Use deny-by-default as the reference state and test object-, tenant-, field-, and action-level authorization independently.
+- Escalate confused-deputy paths, privilege inheritance, or identifiers that let callers select another subject or tenant.
+- Do not infer authorization from authentication, UI visibility, or possession of an object identifier.
+
+## Deliverable
+
+- Identity/session review
+- Actor-object-action authorization matrix
+- Privilege escalation findings
+- Policy and regression-test plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-041-auth-authz-review.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every sensitive action is checked against actor, object, tenant, and state.
+- [ ] UI restrictions are not treated as authorization.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

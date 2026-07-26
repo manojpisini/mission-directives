@@ -72,7 +72,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 509
+  maximum_body_words: 890
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -121,6 +121,17 @@ conditional_template_routes:
 - core/decision-record
 - core/artifact-specification
 - core/acceptance-criteria
+aliases:
+- Client and agency engagement intake
+- Client intake interviewer
+- Agency client intake
+imported_profiles:
+- profile_id: CP-071
+  title: Client and agency engagement intake
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 0af3adda1d89ecee803061c8349067bdd069871de4c9e72bbc4418163e527099
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-071-client-and-agency-engagement-intake.schema.json
 ---
 
 # Problem, Opportunity, and Strategy Framing
@@ -193,4 +204,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-071" title="Client and agency engagement intake" schema="schemas/imported/generic_prompt_library_v3_1/cp-071-client-and-agency-engagement-intake.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Client and agency engagement intake
+
+## Task contract
+
+Run a client or agency engagement intake that establishes business outcome, scope, commercial assumptions, brand context, dependencies, approvals, and success before work is estimated or promised.
+
+## Use this prompt when
+
+- Starting a client project, retainer, campaign, or agency engagement.
+
+## Do not use it for
+
+- A generic contact form that cannot support scoping.
+
+## Required inputs
+
+1. Client business context
+2. Requested outcome/deliverables
+3. Audience/brand/materials
+4. Timeline/budget/procurement
+5. Stakeholders and approval process
+
+## Workflow
+
+1. Clarify the business problem, urgency, audience, desired behavior, and how success will be measured.
+2. Separate requested deliverables from the underlying outcome.
+3. Identify in-scope, optional, and out-of-scope work.
+4. Inventory brand rules, existing research/assets, technical platforms, data, rights, legal constraints, and client dependencies.
+5. Establish timeline drivers, budget range, procurement/legal requirements, review rounds, decision makers, and response SLAs.
+6. Surface assumptions, risks, missing inputs, change triggers, and what the client must provide.
+7. Return a qualified intake summary, scope options, open questions, and next commercial/creative decision.
+
+## Deliverable
+
+- Qualified engagement brief
+- Scope/options and assumptions
+- Client dependency/approval map
+- Next-step decision
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-071-client-and-agency-engagement-intake.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The engagement can be estimated without inventing hidden deliverables.
+- [ ] Client responsibilities and approval authority are explicit.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

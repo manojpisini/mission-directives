@@ -39,7 +39,7 @@ preferred_skills:
 - canvas-design
 - brand-guidelines
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - moodboard_spec
 tags:
@@ -59,7 +59,9 @@ output_contract:
     format: json
   - path: artifacts/idea_exploration_concept_development_and_moodboard_brief/acceptance_criteria.json
     format: json
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - moodboard_spec
 suite_version: 1.8.3
 capability_id: md.creative_strategy.idea-exploration-concept-development-and-moodboard-brief
 prompt_slug: idea-exploration-concept-development-and-moodboard-brief
@@ -75,7 +77,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 666
+  maximum_body_words: 1612
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -127,6 +129,31 @@ conditional_template_routes:
 - core/acceptance-criteria
 - reports/executive-report
 - decks/product-strategy
+aliases:
+- Creative brief interrogation
+- Moodboard analysis and direction synthesis
+- Mood board interrogation
+- Moodboard critique and synthesis
+- Thumbnail/title ideation board
+imported_profiles:
+- profile_id: CP-050
+  title: Creative brief interrogation
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: c4063440fcf55e2d84b20019261d07441677a9a252c006e64795c454c6090efe
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-050-creative-brief-interrogation.schema.json
+- profile_id: CP-056
+  title: Moodboard analysis and direction synthesis
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 84cad303f4acd7a5b08635bf3b58bd803c0ecc077119f0f9acb2f4d7d428b39c
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-056-moodboard-analysis-and-direction-synthesis.schema.json
+- profile_id: CP-073
+  title: Thumbnail/title ideation board
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: e35140689bb0130309ff0bcf3ab9f2cae18c61b0e23cb6e84ec1162b606d6833
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-073-thumbnail-title-ideation-board.schema.json
 ---
 
 # Idea Exploration, Concept Development, and Moodboard Brief
@@ -221,5 +248,158 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-050" title="Creative brief interrogation" schema="schemas/imported/generic_prompt_library_v3_1/cp-050-creative-brief-interrogation.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Creative brief interrogation
+
+## Task contract
+
+Interrogate an incomplete creative brief with only questions that can change the concept, execution, approval, budget, or success criteria, then convert the answers into a usable brief.
+
+## Use this prompt when
+
+- A creative request is vague, contradictory, or overloaded with preferences.
+
+## Do not use it for
+
+- Generating finished creative before essential decisions are known.
+
+## Required inputs
+
+1. Business objective
+2. Audience and context; then channels/formats.
+3. Brand rules and references
+4. Constraints, approvals, and success measure
+
+## Workflow
+
+1. Restate the requested outcome and separate business objective, communication task, and requested asset.
+2. Ask highest-leverage questions about audience action, placement, message hierarchy, offer, tone, references, anti-references, mandatory content, and must-avoid claims.
+3. Resolve production constraints: dimensions, duration, languages, accessibility, rights, budget, timeline, asset availability, and technical delivery.
+4. Surface decision conflicts—such as premium versus playful, awareness versus conversion, or novelty versus strict brand consistency—and request an owner.
+5. Lock approval path, review rounds, objective evaluation criteria, and what constitutes a rejected direction; then return a concise creative brief with confirmed facts, assumptions, open decisions, and a prioritized creative challenge.
+
+## Deliverable
+
+- Decision-complete creative brief
+- Open-question/assumption list
+- Approval and evaluation criteria
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-050-creative-brief-interrogation.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every remaining question can materially change the work.
+- [ ] Preferences are translated into observable creative criteria.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-056" title="Moodboard analysis and direction synthesis" schema="schemas/imported/generic_prompt_library_v3_1/cp-056-moodboard-analysis-and-direction-synthesis.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Moodboard analysis and direction synthesis
+
+## Task contract
+
+Interrogate a moodboard as a proposed visual system, then synthesize a coherent direction that can guide real design and production decisions.
+
+## Use this prompt when
+
+- Reviewing or building a moodboard for brand, campaign, product, space, or content.
+
+## Do not use it for
+
+- Judging images solely by personal taste.
+
+## Required inputs
+
+1. Audience and use context
+2. Brand/product strategy
+3. Moodboard assets and sources
+4. Desired emotional territory; then production/accessibility/rights constraints.
+
+## Workflow
+
+1. Clarify the board’s job: what audience perception, emotional movement, and practical decisions it must enable.
+2. Read the board by visual dimensions—palette relationships, typography, imagery, composition, texture, material, light, scale, motion, and density—rather than item-by-item description.
+3. Identify coherent clusters, contradictions, clichés, derivative references, missing states, and references that communicate unintended category or cultural signals.
+4. Test alignment with brand strategy, channel, accessibility, rights, budget, production method, and repeatability across required formats.
+5. Select a primary direction and controlled secondary influences; translate them into concrete design principles, do/don’t rules, and sample applications; then record sources, licensing questions, anti-references, unresolved choices, and what prototypes should be made next.
+
+## Deliverable
+
+- Moodboard critique
+- Visual direction system
+- Do/don’t and anti-reference rules; then prototype brief.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-056-moodboard-analysis-and-direction-synthesis.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] The output can guide choices beyond the original images.
+- [ ] Rights, accessibility, and production feasibility are addressed.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-073" title="Thumbnail/title ideation board" schema="schemas/imported/generic_prompt_library_v3_1/cp-073-thumbnail-title-ideation-board.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Thumbnail/title ideation board
+
+## Task contract
+
+Generate and evaluate title-thumbnail pairs as a single audience promise, balancing clarity, curiosity, differentiation, brand fit, platform constraints, and honest expectation.
+
+## Use this prompt when
+
+- Developing packaging for video, article, episode, product, or campaign content.
+
+## Do not use it for
+
+- Optimizing clicks through misleading claims.
+
+## Required inputs
+
+1. Content truth and strongest payoff
+2. Target audience/context; then platform constraints.
+3. Brand/visual assets
+4. Performance baseline and test capability
+
+## Workflow
+
+1. Extract the truthful audience promise, tension, proof, novelty, and outcome from the content.
+2. Generate distinct packaging territories—result, conflict, transformation, evidence, question, comparison, identity—rather than synonym variants.
+3. Design title and thumbnail as complementary: assign what each communicates, limit text, preserve mobile readability, and establish a clear focal hierarchy.
+4. Check expectation integrity, sensitivity, claims, rights, brand fit, category clichés, and how the pair differs from adjacent content.
+5. Shortlist using explicit criteria and create variant pairs that test one packaging hypothesis at a time; then define A/B or sequential test, primary metric, retention/quality guardrails, run window, and learning record.
+
+## Deliverable
+
+- Packaging territories
+- Title-thumbnail pair options
+- Risk/brand evaluation; then testing plan.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-073-thumbnail-title-ideation-board.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Each pair communicates one truthful promise.
+- [ ] Variants test a defined hypothesis rather than random taste.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

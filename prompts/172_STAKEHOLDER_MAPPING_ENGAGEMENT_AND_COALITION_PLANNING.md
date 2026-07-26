@@ -38,7 +38,7 @@ evidence_lane: hybrid
 preferred_skills:
 - document-generate
 - stop-slop
-output_media: &id001
+output_media:
 - markdown
 - json
 - docx_spec
@@ -61,7 +61,11 @@ output_contract:
     format: jsonl
   - path: reports/stakeholder_mapping_engagement_and_coalition_planning/stakeholder_mapping_engagement_and_coalition_planning_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - docx_spec
+  - pdf_spec
 suite_version: 1.8.3
 capability_id: md.change_management.stakeholder-mapping-engagement-and-coalition-planning
 prompt_slug: stakeholder-mapping-engagement-and-coalition-planning
@@ -77,7 +81,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 783
+  maximum_body_words: 1145
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -122,6 +126,15 @@ conditional_template_routes:
 - core/decision-record
 - core/artifact-specification
 - core/acceptance-criteria
+aliases:
+- Stakeholder alignment memo
+imported_profiles:
+- profile_id: CP-059
+  title: Stakeholder alignment memo
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 985e2c4d7be404a0c9a3da8aaf4b9d4dd7af03618091f95bc16445c56bfbb188
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-059-stakeholder-alignment-memo.schema.json
 ---
 
 # Stakeholder Mapping, Engagement, and Coalition Planning
@@ -224,5 +237,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-059" title="Stakeholder alignment memo" schema="schemas/imported/generic_prompt_library_v3_1/cp-059-stakeholder-alignment-memo.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Stakeholder alignment memo
+
+## Task contract
+
+Turn a messy stakeholder discussion into an explicit alignment record of decisions, rationale, dissent, ownership, risks, and the next decision point.
+
+## Use this prompt when
+
+- A meeting or thread contains ambiguous agreement or conflicting expectations.
+
+## Do not use it for
+
+- Presenting unresolved debate as consensus.
+
+## Required inputs
+
+1. Notes/transcript/context
+2. Decision to be made
+3. Stakeholders and authority; then options and evidence.
+4. Deadlines and dependencies
+
+## Workflow
+
+1. Separate facts, proposals, preferences, concerns, decisions, actions, and unresolved questions.
+2. Identify the actual decision owner and whether a decision was made, deferred, delegated, or only discussed.
+3. Summarize the chosen direction and rationale; record rejected options, dissent, and conditions that could reopen the decision.
+4. Translate implications into scope, timeline, budget, dependencies, risks, and stakeholder-specific commitments; then assign actions with owner/date and define the next checkpoint and required pre-read.
+5. Return a concise memo for confirmation; mark any ambiguity that needs explicit response.
+
+## Deliverable
+
+- Decision/alignment memo
+- Dissent and reopen conditions
+- Action register; then next checkpoint.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-059-stakeholder-alignment-memo.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] No implied consensus is reported as a decision.
+- [ ] Every action has one accountable owner.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

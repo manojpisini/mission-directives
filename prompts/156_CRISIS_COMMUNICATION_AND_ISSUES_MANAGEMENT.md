@@ -41,7 +41,7 @@ preferred_skills:
 - stop-slop
 - docx
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - json
 tags:
@@ -62,7 +62,9 @@ output_contract:
     format: jsonl
   - path: reports/crisis_communication_and_issues_management/crisis_communication_and_issues_management_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
 suite_version: 1.8.3
 capability_id: md.communications.crisis-communication-and-issues-management
 prompt_slug: crisis-communication-and-issues-management
@@ -78,11 +80,12 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 810
+  maximum_body_words: 1717
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
   maximum_primary_artifacts: 1
+  maximum_body_lines: 282
 output_profiles:
   minimum:
   - results/crisis_communication_and_issues_management/crisis_communication_and_issues_management_result.md
@@ -121,6 +124,29 @@ template_routes:
 template_policy: required_resolve_then_conditionally_select_by_requested_artifact
 complexity_budget_reason: includes mandatory template-routing contract
 conditional_template_routes: []
+aliases:
+- Incident comms planner
+- Publicist crisis response
+- PR risk review
+imported_profiles:
+- profile_id: CP-091
+  title: Incident comms planner
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 2efad1dd44dc72554e6d4b8ca1a3604531994732498a04cd58f701b90b720fb4
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-091-incident-comms-planner.schema.json
+- profile_id: CP-109
+  title: Publicist crisis response
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: fe2e5710c57a0286875c7f1fc44132718d327d3a6da2662089208c5d4f5d91b4
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-109-publicist-crisis-response.schema.json
+- profile_id: CP-119
+  title: PR risk review
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 2e98fec68bdca752c2f79b23cd2bdb8f82fafe3d72fec27ca9404540bd0f2aa8
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-119-pr-risk-review.schema.json
 ---
 
 # Crisis Communication and Issues Management
@@ -224,5 +250,162 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-091" title="Incident comms planner" schema="schemas/imported/generic_prompt_library_v3_1/cp-091-incident-comms-planner.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Incident comms planner
+
+## Task contract
+
+Plan incident communications that are timely, factual, audience-specific, approval-aware, and synchronized across internal updates, customer messages, status pages, executives, and regulators where applicable.
+
+## Use this prompt when
+
+- Communicating during or after an operational/security/data incident.
+
+## Do not use it for
+
+- Speculating about cause or impact before facts are verified.
+
+## Required inputs
+
+1. Verified incident facts and unknowns
+2. Affected users/services/data
+3. Response status and next update
+4. Audience/channel list; then legal/privacy/approval requirements.
+
+## Workflow
+
+1. Establish a single fact source with timestamps, confidence, approved terminology, and explicit unknowns.
+2. Segment audiences by action and information need: responders, employees, executives, customers, partners, support, public, and authorities.
+3. Draft initial holding messages that state observed impact, current action, user guidance, and next-update time without premature root cause.
+4. Define cadence, triggers, channel owners, approvals, localization/accessibility, contact/support routing, and consistency checks; then update as scope, recovery, cause, or user action changes; correct prior statements transparently.
+5. Prepare resolution and follow-up messages covering service state, customer actions, support, postmortem/notification commitments, and monitoring.
+
+## Deliverable
+
+- Audience/channel matrix
+- Holding/update/resolution messages; then approval and update cadence.
+- Fact/unknowns log
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-091-incident-comms-planner.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Messages state what is known, unknown, and next update.
+- [ ] Cross-channel facts and timestamps are consistent.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-109" title="Publicist crisis response" schema="schemas/imported/generic_prompt_library_v3_1/cp-109-publicist-crisis-response.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Publicist crisis response
+
+## Task contract
+
+Prepare publicist crisis response messaging and operations around verified facts, unknowns, stakeholder safety, approval, escalation, and narrative monitoring.
+
+## Use this prompt when
+
+- A public issue, allegation, controversy, safety event, or misinformation wave requires communications response.
+
+## Do not use it for
+
+- Denying or speculating before facts and authority are established.
+
+## Required inputs
+
+1. Verified facts/unknowns
+2. Affected stakeholders; then legal/safety/operational response.
+3. Media/social narrative
+4. Spokesperson and approval chain
+
+## Workflow
+
+1. Establish an incident fact cell with source, timestamp, confidence, owner, and protected information.
+2. Assess severity, affected people, legal/safety obligations, likely narratives, misinformation, and immediate communication need.
+3. Draft holding statement: acknowledge concern, state verified facts and actions, avoid speculation, express appropriate empathy, and set next update.
+4. Prepare stakeholder variants for employees, customers, partners, media, social, executives, and directly affected people.
+5. Set spokesperson, approval, monitoring, response thresholds, rumor correction, Q&amp;A, interview rules, and escalation; then plan resolution/follow-up, accountability, remediation evidence, and reputation recovery without declaring closure prematurely.
+
+## Deliverable
+
+- Holding statement and Q&amp;A
+- Audience/channel response plan
+- Monitoring/escalation rules; then follow-up/recovery plan.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-109-publicist-crisis-response.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Known facts and unknowns remain separate.
+- [ ] Messages align with real operational actions.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-119" title="PR risk review" schema="schemas/imported/generic_prompt_library_v3_1/cp-119-pr-risk-review.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# PR risk review
+
+## Task contract
+
+Review a PR campaign or statement for claim, legal, reputational, stakeholder, backlash, misinformation, and execution risk before release.
+
+## Use this prompt when
+
+- A communication has sensitive claims, controversy, high visibility, or vulnerable stakeholders.
+
+## Do not use it for
+
+- Suppressing legitimate communication solely because criticism is possible.
+
+## Required inputs
+
+1. Draft message/campaign
+2. Claims and evidence
+3. Audience/stakeholders
+4. Legal/policy context
+5. Distribution and response plan
+
+## Workflow
+
+1. Inventory factual, comparative, performance, safety, social-impact, and implied claims.
+2. Verify source, date, scope, and approval.
+3. Identify affected stakeholders, vulnerable groups, cultural/political context, privacy, consent, confidentiality, and rights.
+4. Model plausible misinterpretation, backlash, adversarial framing, misinformation, employee/customer response, and competitor/regulator scrutiny.
+5. Assess spokesperson, channel, timing, comments, media Q&amp;A, internal alignment, and operational ability to support the message.
+6. Define mitigation: revise, qualify, substantiate, sequence, brief stakeholders, prepare Q&amp;A, monitor, or hold; route legal issues appropriately.
+7. Return release/conditional/hold recommendation with residual risk and escalation triggers.
+
+## Deliverable
+
+- Claim/evidence review
+- Stakeholder/backlash scenarios
+- Mitigation and Q&amp;A needs
+- Release-risk decision
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-119-pr-risk-review.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Material claims have current evidence.
+- [ ] Operational reality supports public commitments.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

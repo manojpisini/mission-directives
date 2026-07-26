@@ -1,0 +1,24 @@
+{
+  "target_id": "MD-205",
+  "capability_id": "md.healthcare_and_clinical.insurance-prior-auth-packet",
+  "evidence_lane": "hybrid",
+  "risk_level": "critical",
+  "expected_output": "results/insurance-prior-auth-packet/insurance-prior-auth-packet_result.md",
+  "fixture_id": "MD-205-healthy",
+  "tier": "healthy",
+  "execution_status": "definition_only_not_model_executed",
+  "input_conditions": [
+    "current authoritative evidence",
+    "explicit scope and authority",
+    "valid required inputs"
+  ],
+  "expected": [
+    "complete declared artifact",
+    "schema-valid supporting artifacts",
+    "verification and residual record"
+  ],
+  "prohibited": [
+    "fabricated evidence",
+    "silent external action"
+  ]
+}

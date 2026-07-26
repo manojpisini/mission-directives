@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 676
+  maximum_body_words: 1368
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -131,6 +131,22 @@ conditional_template_routes:
 - docs/support-playbook
 - docs/binary-distribution-manual
 - reports/audit-report
+aliases:
+- Observability plan
+- Blue-team detection plan
+imported_profiles:
+- profile_id: CP-007
+  title: Observability plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 785bf546ca38e484c2185ff53a48f43a563b88fb4bc05bbe83081911d03072d3
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-007-observability-plan.schema.json
+- profile_id: CP-045
+  title: Blue-team detection plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 10c2f7d07c598cfae8be2c3d02a3aa9880f0b0340e41f66b22770fc698db1f70
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-045-blue-team-detection-plan.schema.json
 ---
 
 # Observability, Detection, and Operations — Investigation and Plan
@@ -216,4 +232,116 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-56`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-007" title="Observability plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-007-observability-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Observability plan
+
+## Task contract
+
+Design observability around user-visible objectives and operator decisions so signals lead to diagnosis and action rather than telemetry volume.
+
+## Use this prompt when
+
+- A system needs logs, metrics, traces, SLOs, dashboards, alerts, or runbook links.
+
+## Do not use it for
+
+- Adding instrumentation without defining the questions operators must answer.
+
+## Required inputs
+
+1. Critical user journeys and service dependencies
+2. Reliability objectives and error budget
+3. Known failure modes and incidents
+4. Existing telemetry and retention limits
+5. On-call ownership and response capability
+
+## Workflow
+
+1. Define service-level indicators from user outcomes: availability, correctness, latency, freshness, durability, and completion as applicable.
+2. Map each critical journey and dependency to diagnostic questions, then identify the minimal logs, metrics, traces, and exemplars needed to answer them.
+3. Standardize correlation identifiers, structured fields, units, cardinality limits, privacy redaction, and sampling.
+4. Design dashboards by operator decision—health, saturation, dependency failure, queue/backlog, data freshness, and release impact—not by component inventory.
+5. Create actionable alerts with symptom-first thresholds, burn rates, deduplication, routing, suppression, and linked runbooks; remove alerts with no owner/action.
+6. Validate instrumentation through failure injection or historical incidents.
+7. Define telemetry quality checks and retention/cost controls.
+
+## Deliverable
+
+- SLI/SLO specification
+- Telemetry field and instrumentation plan
+- Decision-oriented dashboards
+- Actionable alert/runbook matrix
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-007-observability-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every alert has an owner, action, and evidence that it detects a meaningful symptom.
+- [ ] Sensitive and high-cardinality data are explicitly controlled.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-045" title="Blue-team detection plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-045-blue-team-detection-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Blue-team detection plan
+
+## Task contract
+
+Design detections that connect attacker behavior to available telemetry, actionable alert logic, triage context, and tested response steps.
+
+## Use this prompt when
+
+- Creating blue-team coverage for known threats, abuse cases, or attack paths.
+
+## Do not use it for
+
+- Listing log sources without detection hypotheses and response.
+
+## Required inputs
+
+1. Threat scenarios and attack paths
+2. Available logs/metrics/traces/events
+3. Asset and identity context
+4. SOC/on-call capabilities
+5. Historical incidents and benign baselines
+
+## Workflow
+
+1. Define detection objectives as attacker behavior, affected asset, stage, and expected observable evidence.
+2. Map ATT&amp;CK techniques only where useful.
+3. Inventory telemetry coverage, field quality, time synchronization, identity/asset enrichment, retention, and blind spots.
+4. Write detection logic with thresholds, sequences, joins, baselines, suppression, and required context; account for evasion and benign lookalikes.
+5. Design alert payload, severity, routing, deduplication, and triage questions so an analyst can decide quickly.
+6. Link each alert to investigation and containment runbook steps, evidence preservation, escalation, and closure criteria.
+7. Backtest or simulate against historical/fixture data; measure false positives, missed cases, latency, and maintenance ownership.
+
+## Deliverable
+
+- Detection coverage matrix
+- Detection specifications
+- Alert/triage/runbook design
+- Backtest and tuning results
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-045-blue-team-detection-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every detection has a threat hypothesis, data source, action, and owner.
+- [ ] Coverage gaps are explicit rather than hidden by technique counts.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

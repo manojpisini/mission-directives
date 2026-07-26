@@ -1,6 +1,9 @@
 # Mission Directives
 
 [![Validate Mission Directives](https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml/badge.svg)](https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml)
+[![Deploy documentation](https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml)
+
+**Documentation:** [manojpisini.github.io/mission-directives](https://manojpisini.github.io/mission-directives/)
 
 Mission Directives is a curated library of advanced prompts and deterministic orchestration tools for turning natural-language intent into bounded, reviewable, and verifiable agent work with minimal context use.
 
@@ -21,7 +24,7 @@ Mission Directives provides a repeatable operating contract for agentic work:
 - optional skill adapters without making third-party skills part of the trusted core;
 - cross-platform installation and validation on Linux, Windows, and macOS.
 
-The repository currently contains **201 prompts**, **201 atomic routes**, **110 composite scenarios**, and **32 reciprocal investigation/execution pairs**. The generated [prompt catalog](docs/PROMPT_CATALOG.md) and [scenario catalog](SCENARIO_CATALOG.json) are the canonical inventories.
+The repository currently contains **257 prompts**, **257 atomic routes**, **110 composite scenarios**, and **32 reciprocal investigation/execution pairs**. The generated [prompt catalog](docs/PROMPT_CATALOG.md) and [scenario catalog](SCENARIO_CATALOG.json) are the canonical inventories.
 
 ## How It Works
 
@@ -46,7 +49,7 @@ Prompt numbers are stable addresses, not a lifecycle. Department packs are disco
 - PowerShell 7 is recommended for the Windows wrappers.
 - Bash is required only for the POSIX wrappers.
 
-Runtime and test dependencies are listed in [requirements-dev.txt](requirements-dev.txt).
+Installed-project runtime dependencies are listed in [requirements-runtime.txt](requirements-runtime.txt). Repository development, test, evaluation, and validation dependencies are listed in [requirements-dev.txt](requirements-dev.txt).
 
 ## Quick Start
 
@@ -108,7 +111,9 @@ pwsh -NoProfile -File tools/install.ps1 -ProjectPath 'C:\path\to\project'
 
 The installer:
 
-- stages and promotes the suite to `<project>/prompts`;
+- stages and promotes the explicit `runtime` payload to `<project>/prompts`;
+- includes every catalog, prompt, scenario, policy, schema, template, integration, compatibility file, and tool required for runtime operation;
+- leaves tests, evaluations, prompt imports, repository validators, CI, and site sources in this source repository;
 - manages one Mission Directives block in `.gitignore`;
 - keeps project documentation under `docs/` tracked;
 - creates internal runtime directories under `.prompt_suite/`;
@@ -133,10 +138,13 @@ python tools/md.py route "md cleanup dead code safely"
 python tools/md.py route "MD in depth research report"
 ```
 
-`route` uses `tools/keyword_context.py` and `policies/agent_guidance_policy.json`
-to parse the invocation slug, exact IDs, intent phrases, depth, assurance, mode,
-and composition modifiers. It then applies explicit shortcut ownership before
-metadata-only lookup. Prompt bodies are not opened during selection.
+`route` uses `tools/keyword_context.py`, `policies/agent_guidance_policy.json`,
+`config/router_keywords.json`, and `tools/intent_router.py` to parse exact IDs,
+invocation context, depth, assurance, mode, and composition modifiers. It then
+maps aliases to concepts, applies conservative typo recovery, enriches prompt,
+scenario, pack, and skill candidates, and ranks metadata evidence by rarity,
+field authority, phrase matches, route hints, kind fit, and query coverage.
+Prompt bodies are not opened during selection.
 
 Use raw lookup for operator discovery, or compare close candidates:
 
@@ -181,7 +189,9 @@ full request
   -> invocation and modifier parser
   -> exact-ID resolution
   -> longest/highest-priority shortcut owner per route family
-  -> transparent metadata lookup with a confidence threshold
+-> concept and phrase analysis with conservative typo recovery
+  -> rarity-aware metadata scoring with route hints and field evidence
+  -> calibrated confidence threshold and honest no-match
   -> smallest prompt, scenario, or bounded workflow graph
   -> explain every selected target before loading its body
 ```
@@ -272,6 +282,9 @@ See the [Prompt Addition and Registration Guide](docs/PROMPT_ADDITION_AND_REGIST
 | `examples/` | Worked routing and execution examples |
 | `compatibility/` | Current capability identity registry and supported agent skill destinations |
 | `integrations/` | Agent, skill, template, logging, and platform crosswalks |
+| `site/` | Astro/Starlight source, generated-reference builder, styles, and documentation navigation |
+| `config/runtime_payload.json` | Allowlist defining the lean working-project installation |
+| `config/router_keywords.json` | Canonical routing concepts, aliases, hints, and score configuration |
 
 ## Development and Contribution
 
@@ -311,6 +324,7 @@ python tools/check_generated_reproducibility.py
 python tools/build_manifest.py
 python tools/build_manifest.py --check
 python tools/validate_suite.py
+cd site && npm ci && npm run build
 ```
 
 GitHub Actions runs the validation workflow on `ubuntu-latest`, `windows-latest`, and `macos-latest` with Python 3.12. Platform wrappers are smoke-tested in their native jobs. Every matrix job uploads body audits, deterministic test status, evaluation status, and full validation output for review.
@@ -352,7 +366,7 @@ Cleanup removes only validated Mission Directives-managed paths and text blocks 
 
 ## Documentation
 
-Start with the [Manuals and Guides index](docs/MANUALS.md).
+Start with the [documentation site](https://manojpisini.github.io/mission-directives/) or the repository [Manuals and Guides index](docs/MANUALS.md). The site generates searchable pages for all 257 prompts, 367 atomic and composite scenarios, 277 skills and aliases, and every public repository manual.
 
 - [User Manual](docs/USER_MANUAL.md)
 - [Operator Guide](docs/OPERATOR_GUIDE.md)
@@ -365,6 +379,9 @@ Start with the [Manuals and Guides index](docs/MANUALS.md).
 - [CI and Testing Guide](docs/CI_AND_TESTING_GUIDE.md)
 - [Security Boundaries](docs/SECURITY_BOUNDARIES.md)
 - [Troubleshooting Guide](docs/TROUBLESHOOTING_GUIDE.md)
+- [Router Keyword Catalog and Scoring Guide](docs/ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md)
+- [Installed Runtime Payload Guide](docs/INSTALLED_RUNTIME_PAYLOAD_GUIDE.md)
+- [Documentation Site Guide](docs/DOCUMENTATION_SITE_GUIDE.md)
 
 ## License
 

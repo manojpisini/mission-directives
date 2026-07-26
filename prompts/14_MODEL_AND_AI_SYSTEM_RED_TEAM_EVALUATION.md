@@ -69,7 +69,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 535
+  maximum_body_words: 921
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -114,6 +114,15 @@ template_routes:
 template_policy: required_resolve_then_conditionally_select_by_requested_artifact
 conditional_template_routes:
 - reports/professional-report
+aliases:
+- Red-team report generation
+imported_profiles:
+- profile_id: CP-044
+  title: Red-team report generation
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: fa181ee8aef4a803a1ffbbd8112cf6df995f3a8752116c08e65a513ef1b003f5
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-044-red-team-report-generation.schema.json
 ---
 
 # Model and AI System Red-Team Evaluation
@@ -187,4 +196,58 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` under `MD-01` when authorization, scope, evidence, recovery, or safety is insufficient.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-044" title="Red-team report generation" schema="schemas/imported/generic_prompt_library_v3_1/cp-044-red-team-report-generation.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Red-team report generation
+
+## Task contract
+
+Convert a completed authorized red-team exercise into an evidence-backed report that separates validated findings, attack paths, impact, remediation, residual risk, and retest status.
+
+## Use this prompt when
+
+- Reporting authorized offensive-security results to technical and decision-making audiences.
+
+## Do not use it for
+
+- Publishing sensitive exploit detail beyond the agreed audience.
+
+## Required inputs
+
+1. Rules of engagement and scope
+2. Validated findings and evidence
+3. Attack narrative and affected assets; then remediation discussions.
+4. Retest results and disclosure constraints
+
+## Workflow
+
+1. Restate scope, objectives, dates, exclusions, constraints, and methodology so findings cannot be generalized beyond the exercise.
+2. Build an executive attack narrative showing initial access, pivots, objectives reached, controls that worked, and business impact.
+3. Write each finding with affected assets, preconditions, evidence, reproducibility, impact, likelihood, root cause, control gap, and remediation; redact sensitive exploit detail.
+4. Connect findings into attack paths and systemic themes rather than presenting isolated counts.
+5. Prioritize fixes by path-breaking value and residual exposure; distinguish immediate containment from durable remediation; then record retest status, unresolved limitations, risk acceptance, and evidence-handling/distribution rules.
+
+## Deliverable
+
+- Executive red-team narrative
+- Technical finding records
+- Attack-path and systemic-theme analysis; then remediation/retest status.
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-044-red-team-report-generation.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Only validated findings are reported as vulnerabilities.
+- [ ] Sensitive reproduction material is scoped to authorized recipients.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>

@@ -40,7 +40,7 @@ preferred_skills:
 - investigate
 - scrape
 - document-generate
-output_media: &id001
+output_media:
 - markdown
 - json
 - source_ledger
@@ -64,7 +64,12 @@ output_contract:
     format: jsonl
   - path: reports/competitive_intelligence_and_strategic_scenario_planning/competitive_intelligence_and_strategic_scenario_planning_quality_review.md
     format: markdown
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - json
+  - source_ledger
+  - timeline_spec
+  - network_spec
 suite_version: 1.8.3
 capability_id: md.intelligence.competitive-intelligence-and-strategic-scenario-planning
 prompt_slug: competitive-intelligence-and-strategic-scenario-planning
@@ -80,7 +85,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 784
+  maximum_body_words: 1158
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -126,6 +131,15 @@ conditional_template_routes:
 - core/artifact-specification
 - core/acceptance-criteria
 - docs/knowledge-base-article
+aliases:
+- Competitive teardown
+imported_profiles:
+- profile_id: CP-095
+  title: Competitive teardown
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: cfb4147b5d6e6d9833018a4ede9e8fe5350703fa71074c069cc4c6499984ff1f
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-095-competitive-teardown.schema.json
 ---
 
 # Competitive Intelligence and Strategic Scenario Planning
@@ -228,5 +242,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when authority, lawful basis, source access, identity confidence, protected data handling, material evidence, rollback, reviewer independence, or acceptance criteria are insufficient. Never fill a gap with fabricated facts, citations, consensus, approvals, actions, or results.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-095" title="Competitive teardown" schema="schemas/imported/generic_prompt_library_v3_1/cp-095-competitive-teardown.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Competitive teardown
+
+## Task contract
+
+Teardown a competitor or alternative across positioning, user journey, product behavior, pricing, proof, operations, and strategic threat without confusing visible features with capability.
+
+## Use this prompt when
+
+- Informing product, brand, sales, or strategy decisions.
+
+## Do not use it for
+
+- Copying competitor features or relying on unverified marketing claims.
+
+## Required inputs
+
+1. Competitors/alternatives and target segment
+2. Research scope and date
+3. Product/access evidence
+4. Pricing/terms and messaging
+5. Decision to inform
+
+## Workflow
+
+1. Define comparison audience, job, market context, and decision; include non-consumption and internal workaround alternatives.
+2. Capture positioning, category, audience, promise, proof, objections, and channel narrative from dated sources.
+3. Walk critical user journeys and evaluate onboarding, core workflow, edge cases, trust, accessibility, support, and switching costs.
+4. Normalize features, packaging, price, limits, service, integrations, data ownership, and operational assumptions; separate claim from verified behavior.
+5. Identify differentiated capabilities, table stakes, gaps, vulnerabilities, and likely strategic response.
+6. Recommend what to learn, avoid, test, or monitor.
+7. Do not propose imitation without fit.
+
+## Deliverable
+
+- Positioning/journey teardown
+- Normalized capability/pricing comparison
+- Threat/opportunity analysis
+- Strategic recommendations
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-095-competitive-teardown.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Claims are dated and sourced.
+- [ ] Recommendations relate to the user/market decision, not feature parity.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

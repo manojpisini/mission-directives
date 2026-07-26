@@ -43,7 +43,7 @@ preferred_skills:
 - canvas-design
 - frontend-slides
 - visual-assets
-output_media: &id001
+output_media:
 - markdown
 - curriculum_spec
 - lesson_plan
@@ -67,7 +67,13 @@ output_contract:
     format: json
   - path: artifacts/learning_experience_curriculum_course_lesson_and_assessment_research_and_design_brief/acceptance_criteria.json
     format: json
-  deliverable_formats: *id001
+  deliverable_formats:
+  - markdown
+  - curriculum_spec
+  - lesson_plan
+  - assessment_spec
+  - slides_spec
+  - learning_asset_spec
 suite_version: 1.8.3
 capability_id: md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief
 prompt_slug: learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief
@@ -83,7 +89,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 791
+  maximum_body_words: 1153
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -142,6 +148,15 @@ conditional_template_routes:
 - decks/training-workshop
 - reports/professional-report
 - reports/audit-report
+aliases:
+- Training curriculum builder
+imported_profiles:
+- profile_id: CP-092
+  title: Training curriculum builder
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 03b8b2d5c124468ae463cb9a258fe2ebb777f077068211ebb5a1fbcaa6345264
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-092-training-curriculum-builder.schema.json
 ---
 
 # Learning Experience, Curriculum, Course, Lesson, and Assessment — Research and Design Brief
@@ -242,5 +257,62 @@ Completion requires all of the following:
 <stop_conditions>
 Use `!STOP` when required evidence, rights, authorization, source access, safety, or output constraints are materially insufficient; do not fabricate missing facts, citations, assets, or execution evidence.
 </stop_conditions>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-092" title="Training curriculum builder" schema="schemas/imported/generic_prompt_library_v3_1/cp-092-training-curriculum-builder.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Training curriculum builder
+
+## Task contract
+
+Build a training curriculum from job performance outcomes through sequenced instruction, practice, assessment, reinforcement, and rollout.
+
+## Use this prompt when
+
+- Creating onboarding, compliance, product, technical, or professional training.
+
+## Do not use it for
+
+- A slide outline with no practice or assessment.
+
+## Required inputs
+
+1. Learner roles and baseline
+2. Performance outcomes
+3. Content/resources
+4. Delivery constraints
+5. Assessment and rollout needs
+
+## Workflow
+
+1. Define observable job outcomes and learner contexts.
+2. Identify prerequisites, misconceptions, and accessibility needs.
+3. Break outcomes into knowledge, decisions, procedures, and judgment; prioritize critical and high-frequency tasks.
+4. Sequence modules from foundation to application, with realistic examples and increasing complexity.
+5. Design active practice, feedback, scenarios, labs, job aids, and retrieval/reinforcement rather than lecture-only content.
+6. Create assessments aligned to outcomes with pass criteria, remediation, integrity, and evidence of transfer to work.
+7. Plan facilitators/platform, schedule, localization, pilot, learner support, completion tracking, and curriculum maintenance.
+
+## Deliverable
+
+- Learning architecture
+- Module/practice plan
+- Assessment and remediation design
+- Rollout/maintenance plan
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-092-training-curriculum-builder.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every module supports an observable performance outcome.
+- [ ] Assessment measures application, not only recall, where judgment is required.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
 
 </prompt>

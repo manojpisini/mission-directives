@@ -8,6 +8,8 @@
     "project_root",
     "suite_destination",
     "suite_version",
+    "payload_profile",
+    "installed_file_count",
     "gitignore_entries",
     "docs_ignored",
     "installed_at",
@@ -84,6 +86,13 @@
         ]
       },
       "uniqueItems": true
+    },
+    "payload_profile": {
+      "const": "runtime"
+    },
+    "installed_file_count": {
+      "type": "integer",
+      "minimum": 1
     }
   },
   "additionalProperties": false

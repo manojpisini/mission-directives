@@ -75,7 +75,7 @@ do_not_use_when:
 - required evidence or authority is unavailable
 - the task is a trivial transformation that does not need this capability
 complexity_budget:
-  maximum_body_words: 670
+  maximum_body_words: 1400
   maximum_method_steps: 12
   maximum_quality_gates: 15
   maximum_examples: 2
@@ -133,6 +133,22 @@ conditional_template_routes:
 - docs/binary-distribution-manual
 - reports/audit-report
 - visual/data-visualization-specification
+aliases:
+- Migration plan
+- Schema evolution plan
+imported_profiles:
+- profile_id: CP-003
+  title: Migration plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: 9f70b183c7e5ea8f1d29e700a2a70e8084e46397c422db0865c3793b9e447317
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-003-migration-plan.schema.json
+- profile_id: CP-022
+  title: Schema evolution plan
+  source_library: generic-prompt-library
+  source_version: 3.1.0
+  source_sha256: cf9645be0878546ac130693a925b9486ec1477c15d21d44c25cda308d73e1cd8
+  schema_path: schemas/imported/generic_prompt_library_v3_1/cp-022-schema-evolution-plan.schema.json
 ---
 
 # Data Storage, Schema, and Migration — Investigation and Plan
@@ -219,4 +235,128 @@ Completion requires all of the following:
 - Handoff readiness has an `=VERIFY:{id}` record, while contradictions, unavailable evidence, and unresolved assumptions remain explicit as `?UNKNOWN:{id}` or `!STOP:{reason}`.
 - The user has reviewed the completed plan; accepted changes, improvements, additions, removals, and refinements are incorporated and re-verified; the handoff is re-frozen; and the execution-consent question names only the exact execution twin `MD-48`.
 </completion_criteria>
+<imported_capability_profiles source="generic-prompt-library" version="3.1.0">
+Select only the profile that matches the routed request; preserve the parent prompt's authority and verification contracts.
+
+<capability_profile id="CP-003" title="Migration plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-003-migration-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Migration plan
+
+## Task contract
+
+Design a reversible migration from a defined source state to a target state while preserving data, behavior, compatibility, and operational control through staged cutover.
+
+## Use this prompt when
+
+- Moving data, schemas, APIs, runtimes, providers, packages, services, or deployment platforms.
+
+## Do not use it for
+
+- A vague modernization proposal with no source/target contract.
+
+## Required inputs
+
+1. Source
+2. target inventories
+3. Compatibility requirements and consumers
+4. Data volume and quality profile
+5. Downtime and rollback tolerance
+6. Release, ownership, and approval constraints
+
+## Workflow
+
+1. Baseline the source and target contracts: schemas, behavior, data semantics, identities, ordering, side effects, SLAs, and unsupported cases.
+2. Build a compatibility matrix for producers, consumers, versions, environments, and transitional states.
+3. Identify where dual-read, dual-write, translation, or freeze windows are needed.
+4. Design phases with entry criteria, transformation rules, validation samples, observability, and stop conditions; prefer small reversible slices.
+5. Specify cutover mechanics: synchronization point, traffic or ownership switch, cache invalidation, job coordination, and communications.
+6. Define rollback by phase, including data reconciliation and what cannot be reversed; test restore points before cutover.
+7. Specify post-cutover verification, deprecation window, legacy shutdown criteria, and evidence required to declare completion.
+
+## Decision and escalation rules
+
+- Gate each irreversible transformation separately; approval for one phase does not authorize later phases.
+- Stop or roll back when reconciliation exceeds tolerance, consumer behavior diverges, or observability cannot distinguish source, transitional, and target states.
+- Do not retire the source until rollback obligations, retention rules, and named owner acceptance are satisfied.
+
+## Deliverable
+
+- Compatibility matrix
+- Phased migration plan
+- Data-validation and reconciliation plan
+- Cutover/rollback runbook
+
+## Optional artifacts
+
+- `compatibility-matrix.csv`
+- `migration-phases.json`
+- `cutover-runbook.md`
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-003-migration-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Every phase has entry, success, abort, and rollback criteria.
+- [ ] Legacy removal is gated by verified consumer migration.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+
+<capability_profile id="CP-022" title="Schema evolution plan" schema="schemas/imported/generic_prompt_library_v3_1/cp-022-schema-evolution-plan.schema.json">
+<source_prompt format="markdown" encoding="xml-escaped">
+# Schema evolution plan
+
+## Task contract
+
+Plan schema evolution so old and new producers, consumers, data, and deployments can coexist safely through migration and deprecation.
+
+## Use this prompt when
+
+- Changing database, event, API, configuration, or serialized data schemas.
+
+## Do not use it for
+
+- Editing schemas without identifying versioned consumers and stored data.
+
+## Required inputs
+
+1. Current and target schemas
+2. Producer/consumer/version inventory
+3. Stored data volume and retention
+4. Compatibility and downtime requirements
+5. Migration and rollback capabilities
+
+## Workflow
+
+1. Document current and target semantics, not only structural diffs: keys, defaults, nullability, enums, units, constraints, ordering, and ownership.
+2. Inventory producers, consumers, stored records, generated clients, fixtures, analytics, and external users by deployed version.
+3. Classify each change as backward-compatible, forward-compatible, breaking, or behaviorally ambiguous; define mixed-version states.
+4. Design expand/migrate/contract phases, translations, backfills, validation, dual reads/writes, and feature gates where needed.
+5. Specify migration idempotency, batching, monitoring, reconciliation, rollback limits, and handling of malformed or legacy records.
+6. Define deprecation communication, consumer completion evidence, and the gate for removing compatibility fields or code.
+
+## Deliverable
+
+- Semantic schema diff
+- Compatibility matrix
+- Phased migration/backfill plan
+- Deprecation and removal gates
+
+## Machine-readable result
+
+Use `schemas/imported/generic_prompt_library_v3_1/cp-022-schema-evolution-plan.schema.json` when structured output is requested.
+
+## Completion gates
+
+- [ ] Mixed-version operation is explicitly tested.
+- [ ] Contract removal waits for verified consumer and data migration.
+- [ ] Material facts are evidenced, assumptions are labeled, and unknowns remain explicit.
+- [ ] The final response leads with the task deliverable, not validator or process theater.
+</source_prompt>
+</capability_profile>
+</imported_capability_profiles>
+
 </prompt>
