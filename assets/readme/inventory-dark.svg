@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 334" role="img" aria-labelledby="title desc">
+  <title id="title">Mission Directives repository inventory</title>
+  <desc id="desc">A transparent horizontal comparison of prompts, routes, scenarios, manuals, and reciprocal pairs for dark backgrounds.</desc>
+  <style>
+    .heading,.label,.value{fill:#ffffff}.copy{fill:#d8dfd7}.track{fill:#273129}.bar-a{fill:#a6c099}.bar-b{fill:#8faa82}.bar-c{fill:#76946a}.bar-d{fill:#637e59}.bar-e{fill:#c4d8bb}.rule{stroke:#53624e}
+  </style>
+  <text class="heading" x="42" y="42" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="25" font-weight="750">Repository inventory</text>
+  <text class="copy" x="42" y="70" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="14">Release 2.0.2 surfaces on a shared zero-baseline scale.</text>
+  <path class="rule" d="M42 92H958" fill="none"/>
+  <g font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="14">
+    <g transform="translate(42 112)"><text class="label" x="0" y="20" font-weight="700">Canonical prompts</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-a" x="220" y="4" width="650" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">257</text></g>
+    <g transform="translate(42 154)"><text class="label" x="0" y="20" font-weight="700">Atomic routes</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-b" x="220" y="4" width="650" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">257</text></g>
+    <g transform="translate(42 196)"><text class="label" x="0" y="20" font-weight="700">Composite scenarios</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-c" x="220" y="4" width="278" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">110</text></g>
+    <g transform="translate(42 238)"><text class="label" x="0" y="20" font-weight="700">Repository manuals</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-d" x="220" y="4" width="162" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">64</text></g>
+    <g transform="translate(42 280)"><text class="label" x="0" y="20" font-weight="700">Reciprocal pairs</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-e" x="220" y="4" width="81" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">32</text></g>
+  </g>
+</svg>

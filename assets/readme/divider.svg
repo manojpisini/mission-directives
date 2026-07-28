@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 36" role="img" aria-label="Section divider">
-  <style>.rule{stroke:#cbd7c3}.accent{stroke:#5f7b51;fill:#5f7b51}@media (prefers-color-scheme: dark){.rule{stroke:#53624e}.accent{stroke:#9fba92;fill:#9fba92}}</style>
+  <style>.rule{stroke:#718766}.accent{stroke:#6f8e60;fill:#6f8e60}</style>
   <path class="rule" d="M24 18H412" stroke-width="1"/>
   <path class="rule" d="M588 18H976" stroke-width="1"/>
   <path class="accent" d="M470 18h60" stroke-width="3" stroke-linecap="square"/>

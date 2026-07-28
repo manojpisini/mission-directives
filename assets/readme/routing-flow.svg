@@ -3,7 +3,6 @@
   <desc id="desc">A transparent four-stage route, explain, plan, and verify workflow diagram.</desc>
   <style>
     .heading,.stage{fill:#17211c}.copy,.detail{fill:#5f6c63}.index{fill:#5c7451}.node{fill:#eef2ec;fill-opacity:.82;stroke:#a8ba9b}.rule{stroke:#a8ba9b}.accent{stroke:#5c7451;fill:#5c7451}
-    @media (prefers-color-scheme: dark){.heading,.stage{fill:#ffffff}.copy,.detail{fill:#d8dfd7}.index{fill:#b9d0ad}.node{fill:#17211c;fill-opacity:.6;stroke:#7f9a72}.rule{stroke:#53624e}.accent{stroke:#9fba92;fill:#9fba92}}
   </style>
   <text class="heading" x="42" y="42" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="25" font-weight="750">Smallest coherent execution graph</text>
   <text class="copy" x="42" y="70" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="14">Resolve metadata first. Load only the bodies required for a verified outcome.</text>

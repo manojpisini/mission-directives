@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/images/mission_directives_full_logo_lateral.svg" alt="Mission Directives" width="760" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/images/mission_directives_full_logo_lateral_light.svg" />
+    <img src="assets/images/mission_directives_full_logo_lateral_dark.svg" alt="Mission Directives" width="760" />
+  </picture>
 </p>
 
 <p align="center">
@@ -27,7 +30,10 @@ Mission Directives is a curated prompt and orchestration suite for turning natur
 Current release: **2.0.2**
 
 <p align="center">
-  <img src="assets/readme/routing-flow.svg" alt="Mission Directives routing flow: route, explain, plan, and verify." width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/routing-flow-dark.svg" />
+    <img src="assets/readme/routing-flow.svg" alt="Mission Directives routing flow: route, explain, plan, and verify." width="100%" />
+  </picture>
 </p>
 
 <p align="center">
@@ -44,7 +50,10 @@ Current release: **2.0.2**
 - **Verification discipline:** every route is complete only when the requested artifact satisfies its task-specific verification contract and residuals are explicit.
 
 <p align="center">
-  <img src="assets/readme/inventory.svg" alt="Repository inventory: 257 prompts, 257 atomic routes, 110 composite scenarios, 64 manuals, and 32 reciprocal pairs." width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/inventory-dark.svg" />
+    <img src="assets/readme/inventory.svg" alt="Repository inventory: 257 prompts, 257 atomic routes, 110 composite scenarios, 64 manuals, and 32 reciprocal pairs." width="100%" />
+  </picture>
 </p>
 
 Repository inventory: **257 prompts**, **257 atomic routes**, **110 composite scenarios**, **32 reciprocal investigation/execution pairs**, and **64 repository manuals**.

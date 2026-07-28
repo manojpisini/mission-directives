@@ -32,23 +32,27 @@ def test_site_uses_project_pages_base_and_static_shell():
     html = (SITE / "src" / "pages" / "index.astro").read_text(encoding="utf-8")
     assert 'href="styles.css"' in html
     assert "Mission Directives" in html
-    assert "assets/brand/mission_directives_full_logo_lateral.svg" in html
+    assert "assets/brand/mission_directives_full_logo_lateral_dark.svg" in html
     assert "brand__mark" not in html
 
 
 def test_site_uses_canonical_brand_assets_and_onboarding_pages():
     brand = PUBLIC / "assets" / "brand"
     for name in (
-        "mission_directives_full_logo_lateral.svg",
-        "mission_directives_full_logo.svg",
-        "mission_directives_logo.svg",
-        "mission_directives_wordmark.svg",
+        "mission_directives_full_logo_dark.svg",
+        "mission_directives_full_logo_lateral_dark.svg",
+        "mission_directives_full_logo_lateral_light.svg",
+        "mission_directives_full_logo_light.svg",
+        "mission_directives_logo_dark.svg",
+        "mission_directives_logo_light.svg",
+        "mission_directives_wordmark_dark.svg",
+        "mission_directives_wordmark_light.svg",
     ):
         assert (ROOT / "assets" / "images" / name).exists()
         assert (brand / name).exists()
 
     assert (PUBLIC / "favicon.svg").read_bytes() == (
-        ROOT / "assets" / "images" / "mission_directives_logo.svg"
+        ROOT / "assets" / "images" / "mission_directives_logo_dark.svg"
     ).read_bytes()
 
     for name, heading in (
@@ -58,7 +62,7 @@ def test_site_uses_canonical_brand_assets_and_onboarding_pages():
     ):
         html = (PUBLIC / name).read_text(encoding="utf-8")
         assert heading in html
-        assert "assets/brand/mission_directives_full_logo_lateral.svg" in html
+        assert "assets/brand/mission_directives_full_logo_lateral_dark.svg" in html
         assert "brand__mark" not in html
 
     contributing = (PUBLIC / "contributing.html").read_text(encoding="utf-8")
@@ -66,7 +70,8 @@ def test_site_uses_canonical_brand_assets_and_onboarding_pages():
     assert "/reference/manuals/memory/" not in contributing
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    assert "assets/images/mission_directives_full_logo_lateral.svg" in readme
+    assert "assets/images/mission_directives_full_logo_lateral_light.svg" in readme
+    assert "assets/images/mission_directives_full_logo_lateral_dark.svg" in readme
     assert "assets/readme/mission-directives-banner.svg" not in readme
 
 
@@ -85,7 +90,7 @@ def test_landing_and_documentation_headers_share_navigation_vocabulary():
         assert f'href="/mission-directives/{target}">{label}</a>' in docs
 
 
-def test_readme_branding_is_adaptive_transparent_and_license_aware():
+def test_readme_branding_uses_explicit_transparent_theme_variants_and_license_badge():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     for fragment in (
         "label=CI",
@@ -96,17 +101,35 @@ def test_readme_branding_is_adaptive_transparent_and_license_aware():
     ):
         assert fragment in readme
 
-    for name in ("routing-flow.svg", "inventory.svg"):
-        svg = (ROOT / "assets" / "readme" / name).read_text(encoding="utf-8")
-        assert '@media (prefers-color-scheme: dark)' in svg
-        assert "#ffffff" in svg
-        assert '<rect width="1000"' not in svg
+    for light, dark in (
+        (
+            "assets/images/mission_directives_full_logo_lateral_dark.svg",
+            "assets/images/mission_directives_full_logo_lateral_light.svg",
+        ),
+        ("assets/readme/routing-flow.svg", "assets/readme/routing-flow-dark.svg"),
+        ("assets/readme/inventory.svg", "assets/readme/inventory-dark.svg"),
+    ):
+        assert f'media="(prefers-color-scheme: dark)" srcset="{dark}"' in readme
+        assert f'src="{light}"' in readme
 
-    logo = (ROOT / "assets" / "images" / "mission_directives_full_logo_lateral.svg").read_text(
+    for name in ("routing-flow.svg", "inventory.svg"):
+        light = (ROOT / "assets" / "readme" / name).read_text(encoding="utf-8")
+        dark = (ROOT / "assets" / "readme" / name.replace(".svg", "-dark.svg")).read_text(
+            encoding="utf-8"
+        )
+        assert "prefers-color-scheme" not in light + dark
+        assert "#ffffff" not in light
+        assert "#ffffff" in dark
+        assert '<rect width="1000"' not in light + dark
+
+    logo = (ROOT / "assets" / "images" / "mission_directives_full_logo_lateral_dark.svg").read_text(
         encoding="utf-8"
     )
-    assert '@media (prefers-color-scheme: dark)' in logo
-    assert "fill: #ffffff !important" in logo
+    dark_logo = (ROOT / "assets" / "images" / "mission_directives_full_logo_lateral_light.svg").read_text(
+        encoding="utf-8"
+    )
+    assert "prefers-color-scheme" not in logo + dark_logo
+    assert logo != dark_logo
 
 
 def test_docs_site_is_sectioned_and_visual():

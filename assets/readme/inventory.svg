@@ -3,7 +3,6 @@
   <desc id="desc">A transparent horizontal comparison of prompts, routes, scenarios, manuals, and reciprocal pairs.</desc>
   <style>
     .heading,.label,.value{fill:#17211c}.copy{fill:#5f6c63}.track{fill:#e3e9df}.bar-a{fill:#5c7451}.bar-b{fill:#7f956f}.bar-c{fill:#9aa98c}.bar-d{fill:#b7c4ad}.bar-e{fill:#465a3d}.rule{stroke:#a8ba9b}
-    @media (prefers-color-scheme: dark){.heading,.label,.value{fill:#ffffff}.copy{fill:#d8dfd7}.track{fill:#273129}.bar-a{fill:#a6c099}.bar-b{fill:#8faa82}.bar-c{fill:#76946a}.bar-d{fill:#637e59}.bar-e{fill:#c4d8bb}.rule{stroke:#53624e}}
   </style>
   <text class="heading" x="42" y="42" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="25" font-weight="750">Repository inventory</text>
   <text class="copy" x="42" y="70" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="14">Release 2.0.2 surfaces on a shared zero-baseline scale.</text>

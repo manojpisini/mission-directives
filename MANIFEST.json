@@ -78,8 +78,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13158,
-      "sha256": "1570999c36edb2f7c44229b0bf9350ea992032356e529818baeb98c7b381ee6e"
+      "bytes": 13557,
+      "sha256": "c3ab87220c2ed7ffe4b819883f97a9c2292a1d5fc83252aa38ca3f79c386d1c4"
     },
     {
       "path": "RELEASE_ID",
@@ -107,39 +107,69 @@
       "sha256": "b4b16faea52dc04ccfe32f7b342094855923ebf599a3cac1940470a2d6d7c261"
     },
     {
-      "path": "assets/images/mission_directives_full_logo.svg",
-      "bytes": 19609,
-      "sha256": "af2de76242fc31a65fdc583446f3749a58e66c3a350a5a314d034dd81ab3c86a"
+      "path": "assets/images/mission_directives_full_logo_dark.svg",
+      "bytes": 224216,
+      "sha256": "2cc3f6fee71267232a7e0e664c65a7db158f180eba0b1ea0da6d239376699b94"
     },
     {
-      "path": "assets/images/mission_directives_full_logo_lateral.svg",
-      "bytes": 19306,
-      "sha256": "44f725c770338b347edb986fa620dc4bdb2b6e0ccb0284995b7d6298a6fd726d"
+      "path": "assets/images/mission_directives_full_logo_lateral_dark.svg",
+      "bytes": 98288,
+      "sha256": "6f85047e1c0201f59274113a3dfa74ef71965d46fff86b5dd5d119e3fe60be6d"
     },
     {
-      "path": "assets/images/mission_directives_logo.svg",
-      "bytes": 4990,
-      "sha256": "36eea29e5efc971a1501d474152c3678fbdedb5fbeb65fe5d9ae3a29685fe3aa"
+      "path": "assets/images/mission_directives_full_logo_lateral_light.svg",
+      "bytes": 108728,
+      "sha256": "83b483d24ee74594adce4e6d6b9c3201e99f653f88e674b6b3ddecd0895e8896"
     },
     {
-      "path": "assets/images/mission_directives_wordmark.svg",
-      "bytes": 15079,
-      "sha256": "37bd58cd9e4032de4fdfeea273a4b37586c0a688c70a40f9bf43beeb8756db04"
+      "path": "assets/images/mission_directives_full_logo_light.svg",
+      "bytes": 235288,
+      "sha256": "14d1b926977ea4302657ff003eaceb66444b8271767402f4cc69535ffc9b8f79"
+    },
+    {
+      "path": "assets/images/mission_directives_logo_dark.svg",
+      "bytes": 145076,
+      "sha256": "85b9236411b85fd227e0b8522f477c110d9d8f3ee63144074f83c5c81093c3a0"
+    },
+    {
+      "path": "assets/images/mission_directives_logo_light.svg",
+      "bytes": 155480,
+      "sha256": "6cc9b034c6dc08bac8e91da7e62e135a15d9b0c752f05c8f3c78e717f77c94e9"
+    },
+    {
+      "path": "assets/images/mission_directives_wordmark_dark.svg",
+      "bytes": 107278,
+      "sha256": "69b34815738816731646268529f7b3d1e0379b6c66eb36ac8e88fa117260f8d6"
+    },
+    {
+      "path": "assets/images/mission_directives_wordmark_light.svg",
+      "bytes": 115874,
+      "sha256": "bc8a8b20001b9de660f4ae22627d04830614a3540c92290933b6f826757d1578"
     },
     {
       "path": "assets/readme/divider.svg",
-      "bytes": 521,
-      "sha256": "11ce90b3fbc61aa3e113f182fd4f46edeae679088d4dd91fca31d1b4b12d1a5d"
+      "bytes": 427,
+      "sha256": "6fb413bbad1d4aa9a094a915836f0524eee4cc14cacf6c062226cc08b82949ee"
+    },
+    {
+      "path": "assets/readme/inventory-dark.svg",
+      "bytes": 2552,
+      "sha256": "5e070c9be7a3decf1430515f905e03b3138830800768d017412b14b574c55f6d"
     },
     {
       "path": "assets/readme/inventory.svg",
-      "bytes": 2769,
-      "sha256": "fcb7042f0b391180a82d7c3226f4c12132cb0a792022ad72ca4ed36d519d99d5"
+      "bytes": 2531,
+      "sha256": "be7cf762051b9e53432c2fe07100e374780367c7c245c54bceef3eb3929ac8f3"
+    },
+    {
+      "path": "assets/readme/routing-flow-dark.svg",
+      "bytes": 2936,
+      "sha256": "bc7dbf9fe41f1b4d206f59682f34713685390ba9b432ce039cb4ddee2f579a02"
     },
     {
       "path": "assets/readme/routing-flow.svg",
-      "bytes": 3141,
-      "sha256": "7a679d97dd31c7daeebbf69b89342a8f4cc3d41bdc9715deaacb3779470c3471"
+      "bytes": 2916,
+      "sha256": "10ec8d2902ed01c1409c98c18c275a6e43e0611dc4f626ee9a5e24cadc607f0d"
     },
     {
       "path": "catalog.json",
@@ -11652,24 +11682,44 @@
       "sha256": "146529d1dda64dc1adc9f0ac86296dea7d1ac333c5cb8aca61f00d0b27e2695a"
     },
     {
-      "path": "site/public/assets/brand/mission_directives_full_logo.svg",
-      "bytes": 19609,
-      "sha256": "af2de76242fc31a65fdc583446f3749a58e66c3a350a5a314d034dd81ab3c86a"
+      "path": "site/public/assets/brand/mission_directives_full_logo_dark.svg",
+      "bytes": 224216,
+      "sha256": "2cc3f6fee71267232a7e0e664c65a7db158f180eba0b1ea0da6d239376699b94"
     },
     {
-      "path": "site/public/assets/brand/mission_directives_full_logo_lateral.svg",
-      "bytes": 19306,
-      "sha256": "44f725c770338b347edb986fa620dc4bdb2b6e0ccb0284995b7d6298a6fd726d"
+      "path": "site/public/assets/brand/mission_directives_full_logo_lateral_dark.svg",
+      "bytes": 98288,
+      "sha256": "6f85047e1c0201f59274113a3dfa74ef71965d46fff86b5dd5d119e3fe60be6d"
     },
     {
-      "path": "site/public/assets/brand/mission_directives_logo.svg",
-      "bytes": 4990,
-      "sha256": "36eea29e5efc971a1501d474152c3678fbdedb5fbeb65fe5d9ae3a29685fe3aa"
+      "path": "site/public/assets/brand/mission_directives_full_logo_lateral_light.svg",
+      "bytes": 108728,
+      "sha256": "83b483d24ee74594adce4e6d6b9c3201e99f653f88e674b6b3ddecd0895e8896"
     },
     {
-      "path": "site/public/assets/brand/mission_directives_wordmark.svg",
-      "bytes": 15079,
-      "sha256": "37bd58cd9e4032de4fdfeea273a4b37586c0a688c70a40f9bf43beeb8756db04"
+      "path": "site/public/assets/brand/mission_directives_full_logo_light.svg",
+      "bytes": 235288,
+      "sha256": "14d1b926977ea4302657ff003eaceb66444b8271767402f4cc69535ffc9b8f79"
+    },
+    {
+      "path": "site/public/assets/brand/mission_directives_logo_dark.svg",
+      "bytes": 145076,
+      "sha256": "85b9236411b85fd227e0b8522f477c110d9d8f3ee63144074f83c5c81093c3a0"
+    },
+    {
+      "path": "site/public/assets/brand/mission_directives_logo_light.svg",
+      "bytes": 155480,
+      "sha256": "6cc9b034c6dc08bac8e91da7e62e135a15d9b0c752f05c8f3c78e717f77c94e9"
+    },
+    {
+      "path": "site/public/assets/brand/mission_directives_wordmark_dark.svg",
+      "bytes": 107278,
+      "sha256": "69b34815738816731646268529f7b3d1e0379b6c66eb36ac8e88fa117260f8d6"
+    },
+    {
+      "path": "site/public/assets/brand/mission_directives_wordmark_light.svg",
+      "bytes": 115874,
+      "sha256": "bc8a8b20001b9de660f4ae22627d04830614a3540c92290933b6f826757d1578"
     },
     {
       "path": "site/public/assets/diagrams/coverage-map.svg",
@@ -11688,378 +11738,378 @@
     },
     {
       "path": "site/public/contributing.html",
-      "bytes": 10120,
-      "sha256": "94e314bc8383214c32fe54d389c1d672b5558cdff5773c63ba5d45a9476bad45"
+      "bytes": 10130,
+      "sha256": "9d47ef195dcf9ffd6a9f31f77f56a6dab5bdd7e8cd468016e175e86e0e2ff1d8"
     },
     {
       "path": "site/public/docs.html",
-      "bytes": 9127,
-      "sha256": "e9ce97f1d919625731a7c223c7dd6c389c743811fcc8696361dd305215912da1"
+      "bytes": 9137,
+      "sha256": "84971bf3979ba42f82cceccee806aff6bcec9d45ddf283dc46d8f250ed35d124"
     },
     {
       "path": "site/public/favicon.svg",
-      "bytes": 4990,
-      "sha256": "36eea29e5efc971a1501d474152c3678fbdedb5fbeb65fe5d9ae3a29685fe3aa"
+      "bytes": 145076,
+      "sha256": "85b9236411b85fd227e0b8522f477c110d9d8f3ee63144074f83c5c81093c3a0"
     },
     {
       "path": "site/public/getting-started.html",
-      "bytes": 9979,
-      "sha256": "ef9ae5ee4b256d2161ad41e2c5ee804838da01bdd0bee6536c280404c97c1f83"
+      "bytes": 9989,
+      "sha256": "ccd05eee87efc3df0186cf43db63e8b418c709f7ac46a78816243d96ed5a378e"
     },
     {
       "path": "site/public/guides.html",
-      "bytes": 22208,
-      "sha256": "9b115cf28ca703da08248dd827d2796dacc862d0f839c7272b3f45a7b0265135"
+      "bytes": 22218,
+      "sha256": "a83911d892af272e03618852a3b85e9076a2d4929100306f25a0f0870cb7c2f4"
     },
     {
       "path": "site/public/installation.html",
-      "bytes": 11705,
-      "sha256": "4c97ceb7e0104a021ac656c06aad212bf791064146ceb1180bcdc344700eb732"
+      "bytes": 11715,
+      "sha256": "04ec0eb2d2bbefbf0aca14ac66431b65f104bb1fd4ec0361aa95356bec64bdb8"
     },
     {
       "path": "site/public/manuals.html",
-      "bytes": 28601,
-      "sha256": "c1142c73657ea8b2b1c64ca54082877bbdd5338c35a7139820624a16dc16629e"
+      "bytes": 28611,
+      "sha256": "74bf80746a497d35c814af5e65e0691975085d5cfad7bb55d7d5792480cbc591"
     },
     {
       "path": "site/public/pairs.html",
-      "bytes": 87771,
-      "sha256": "c00d1b73fa1ceea9b37ecafc94bb6ac8f012963652d312b7117039eb0ba0ff81"
+      "bytes": 87781,
+      "sha256": "14c71ce7a9710e430da961dad6cf2367c4a532cfb02fbe240a8ec7696c5ea5a4"
     },
     {
       "path": "site/public/prompts.html",
-      "bytes": 543642,
-      "sha256": "5465bc6514ae4bafeeedb720c0ce05791c235c3e5a83e27b73387c5fbc16885e"
+      "bytes": 543652,
+      "sha256": "d6db48ebc87e67cd63f7452c36a5aa9e6953d0ff33b0b3d81d7d92a682682fd7"
     },
     {
       "path": "site/public/reference.html",
-      "bytes": 11376,
-      "sha256": "2b696a4c0cbedeb81c7fab3b4f7d88c7c6b32acd552254925b612d3a00c5dd8d"
+      "bytes": 11386,
+      "sha256": "061ea9ab27152a3fccb27f65352e8ddf3f847232af7d1c80a973917c3dfee5a8"
     },
     {
       "path": "site/public/reference/manuals/agent-library-integration-guide/index.html",
-      "bytes": 11613,
-      "sha256": "ffdb02135d0953adb80ec2196b584fd2b9cf2ed0060fa93a32cba304faf6d5ca"
+      "bytes": 11623,
+      "sha256": "6b856f37c1e43040e2fcda89c8d8ba83e8db85a86f33f882b695130a88d8f7fe"
     },
     {
       "path": "site/public/reference/manuals/architecture-guide/index.html",
-      "bytes": 10656,
-      "sha256": "0c44f0ec9298c2307d010899486c50af9613e9a48e093047a527158041111db0"
+      "bytes": 10666,
+      "sha256": "11a1bfca8bb880778281c4de9e102e706a98256cd58c05eb45b4b9b1c48743f7"
     },
     {
       "path": "site/public/reference/manuals/auto-orchestration-runtime-guide/index.html",
-      "bytes": 7524,
-      "sha256": "156301f664511f01df363db3a614aae5fe19c5eb7c77ec4028511640e19f7d2a"
+      "bytes": 7534,
+      "sha256": "98bfe85c499bdd691e2de4f11d47e8b30c7386e51a417b59d00550a5383c669f"
     },
     {
       "path": "site/public/reference/manuals/auto-prompts-and-conditional-routing-guide/index.html",
-      "bytes": 17616,
-      "sha256": "159b504830d5870bc153b84d472ddde50008af64043ecce0363c56951965b1b7"
+      "bytes": 17626,
+      "sha256": "f9fc66ec763f4eab575658c9c9ab33a2b1b3652e83485611193b69a24474066c"
     },
     {
       "path": "site/public/reference/manuals/bounded-loop-orchestration-guide/index.html",
-      "bytes": 14941,
-      "sha256": "071a03b82004b8e8a0f1cceb46aa869f478a5cccce0e89111b9d15fc05b135d8"
+      "bytes": 14951,
+      "sha256": "3ec45997c760c65cdabb65fa6049db9f8d259fea1417c2d264bdb90e1eb99ae3"
     },
     {
       "path": "site/public/reference/manuals/capability-architecture/index.html",
-      "bytes": 18468,
-      "sha256": "a9483149d8a20d1739e86d4fed8f43c9edcc6b43421eeb2172ecc9923f3fd7e1"
+      "bytes": 18478,
+      "sha256": "6db52de0a08809f992382948cbf9e983c444fcdc7b137ee0fb6cf990f28f552a"
     },
     {
       "path": "site/public/reference/manuals/ci-and-testing-guide/index.html",
-      "bytes": 12554,
-      "sha256": "b2983b35fe698ac8f7e31bd4fa18fb883d60f9b4818a4b03bf18eba7689446c2"
+      "bytes": 12564,
+      "sha256": "e4bd4992f39ac5885ef39b6c3a4ebaf711dedac61a98df8d70a27557a62a0c61"
     },
     {
       "path": "site/public/reference/manuals/compatibility-and-identity-guide/index.html",
-      "bytes": 7894,
-      "sha256": "334a7c546ad0e6458b88bdadb991b51bb3d3e7a8a408b253415f20a2d08d122c"
+      "bytes": 7904,
+      "sha256": "0d0bbeb6305194dcbab7e860f9fcfdc67ac4b2641811cfe1b06fad792d88b250"
     },
     {
       "path": "site/public/reference/manuals/completion-criteria-guide/index.html",
-      "bytes": 11250,
-      "sha256": "58c8147a37e2fae7a94fda54e8a4dd66f6215897a8845c121e208787d25fc58b"
+      "bytes": 11260,
+      "sha256": "6a8dee59a75805749b273639101d951166141046442fff82612e6180fa647a1a"
     },
     {
       "path": "site/public/reference/manuals/contributor-guide/index.html",
-      "bytes": 10949,
-      "sha256": "29570c2940e8f159a6277c1ef16d4ce47d35d623001a7a8e4dd067fea0d5b48d"
+      "bytes": 10959,
+      "sha256": "b83db98fd5c375f1cbbfaa0614ff5d4c44b4ab82752e516633b8fddbab1d4a0e"
     },
     {
       "path": "site/public/reference/manuals/coverage-index/index.html",
-      "bytes": 30790,
-      "sha256": "2c6dec6425197b7bf494fc87e544fdc3f0c0c167e4b2897f459699a1771810c4"
+      "bytes": 30800,
+      "sha256": "70f0c002535d3751d2be47ea16aa3ec1fb7f796535b8def68bf27e4f75e27665"
     },
     {
       "path": "site/public/reference/manuals/cross-platform-tooling-guide/index.html",
-      "bytes": 15500,
-      "sha256": "cc4812332dce24e779ccea500cf35cf628737c5671671cd3618c9246ba643778"
+      "bytes": 15510,
+      "sha256": "eb4b6d4164ed63e12a58c998edf55c256e089a6573ad1ca420f4d9495d02c866"
     },
     {
       "path": "site/public/reference/manuals/documentation-site-guide/index.html",
-      "bytes": 11510,
-      "sha256": "555087311034b96de3c2c427bf1ce7cb42b05198b227faa4b9c7867ab6057a71"
+      "bytes": 11520,
+      "sha256": "aa705e053f0495bd0bd9f638d6f5c71ebb10847c364f92ee5f0ae388bd316045"
     },
     {
       "path": "site/public/reference/manuals/evaluation-manual/index.html",
-      "bytes": 11336,
-      "sha256": "036ed1980718c2b5d4e1bd25fec576f82e1a340cba847fcf56f73a0a3d3a7d10"
+      "bytes": 11346,
+      "sha256": "09c81750f244ccdbeeb3eeb0fa960e1bbb90320de1df4b5266452a2b58cb47b4"
     },
     {
       "path": "site/public/reference/manuals/evidence-lanes/index.html",
-      "bytes": 6855,
-      "sha256": "380709db1d7f5e4ffcee4abcad90f643e817bdc83cd79f819934f2e38ccaea54"
+      "bytes": 6865,
+      "sha256": "ea687c2c84711a5a971c442265f546fc06e3d904185b6d089b4396956b6ea69f"
     },
     {
       "path": "site/public/reference/manuals/executive-decision-rules-guide/index.html",
-      "bytes": 10044,
-      "sha256": "9a9448f8a760045a775e19e4c334a2e0c256a39195ef348f8499fa4e6da80315"
+      "bytes": 10054,
+      "sha256": "5d309fe67061fd7a19919522d9fe05ba309723e220e08492de8acbc45d17ed18"
     },
     {
       "path": "site/public/reference/manuals/generic-skill-execution-guide/index.html",
-      "bytes": 12812,
-      "sha256": "2440bb820dcc5a20a8d8dbd2f82e1f2b7f3a851a63f105664d4368edc4c6f098"
+      "bytes": 12822,
+      "sha256": "7737d86e4624c5f47556c8b7829492e03454e98a078b324ef68be8c1d93d1e92"
     },
     {
       "path": "site/public/reference/manuals/getting-started/index.html",
-      "bytes": 9906,
-      "sha256": "a218bb80526657c82e5474a527502ac47b4b9ae0a0dbe287f9d9bf345a28d9ea"
+      "bytes": 9916,
+      "sha256": "37431fb1b843f6ab8da21536247533153dafe5a58a7463c6a32d5ecb2fac1fb2"
     },
     {
       "path": "site/public/reference/manuals/github-actions-failure-history-and-pre-push-guide/index.html",
-      "bytes": 22939,
-      "sha256": "446a83574c1577b06f8be7a62d4ebfd88d871d4f01c42b38780f4fade002ec9f"
+      "bytes": 22949,
+      "sha256": "1b5766cd2df8a34c294e641c1ef448a091ac9e0bb4e8cedbe230c7d51fc9c84b"
     },
     {
       "path": "site/public/reference/manuals/gstack-integration/index.html",
-      "bytes": 19429,
-      "sha256": "525f947e4a2f63862ea74ac5ab330a6dc314eced2acd180b28c0ab3e38a5ab12"
+      "bytes": 19439,
+      "sha256": "3c2dab3f05c5c72728067f59e942daed6f4d08da6005ad12bd8db16a39e4a6df"
     },
     {
       "path": "site/public/reference/manuals/installation-and-project-integration-guide/index.html",
-      "bytes": 11907,
-      "sha256": "5e37f6d0144f050f94d3f1ad8d669d8cfe508529036bd3fd6b26b3d8938a3cad"
+      "bytes": 11917,
+      "sha256": "56afc1deb10ea49ed085ecedabfb89cf73a62a420a693c877e951e5ba1704bad"
     },
     {
       "path": "site/public/reference/manuals/installed-runtime-payload-guide/index.html",
-      "bytes": 9329,
-      "sha256": "2b6c7b12aed0d1780a02b6e509a6c4d92b1540a680d3aef564674a322b4165ca"
+      "bytes": 9339,
+      "sha256": "7bbf914463d8562dbce0f84be82eece8d00e6aa12b907b223bad4d34c4b1b6cd"
     },
     {
       "path": "site/public/reference/manuals/installed-skills-inventory-guide/index.html",
-      "bytes": 12892,
-      "sha256": "8af5838fe8aafc8922958937b4329915ca4876cbd97b4b810fc825c6ca7eb81e"
+      "bytes": 12902,
+      "sha256": "6a124ec9650c27f6eeadf5221808a58d49b4ae4881ecb5503fcea9bc2159b4bc"
     },
     {
       "path": "site/public/reference/manuals/local-output-viewer-guide/index.html",
-      "bytes": 7457,
-      "sha256": "bd236c9d4d217fe08760fc930c141e9b5e59827c768d2c6e9718614e69ab2269"
+      "bytes": 7467,
+      "sha256": "97a845081708c0222750bdf05f3391e39555fce15f0b1191364db941f4daba0f"
     },
     {
       "path": "site/public/reference/manuals/local-skill-registration-guide/index.html",
-      "bytes": 9919,
-      "sha256": "c483b38517b70ab872c1302817caa123a6cbeb47032832b6d5c5f7300ab086f7"
+      "bytes": 9929,
+      "sha256": "7c888f78bd5531f8c6593878412ee8d1dc0fdacf3ad395aa41156cb0fbf271e8"
     },
     {
       "path": "site/public/reference/manuals/logging-and-telemetry-guide/index.html",
-      "bytes": 14316,
-      "sha256": "555451e97f7a0ce9fb1133eef8ae96c52c78d6f1d5afa69fe6307c786345dbe0"
+      "bytes": 14326,
+      "sha256": "b8457d9c695125846fb824ff0e06f7730cac92de3fc6a18b7742b21763126224"
     },
     {
       "path": "site/public/reference/manuals/manual-quality-standard/index.html",
-      "bytes": 8276,
-      "sha256": "6543ca9a222e5e1fc0845ebb0a07a07c954768fd04c51fd8725074275f6bc5d5"
+      "bytes": 8286,
+      "sha256": "3c8ea3b79aef7e2917f8aaf52f48544d34003a74c884412afa7a3e767fc5b5bf"
     },
     {
       "path": "site/public/reference/manuals/manuals/index.html",
-      "bytes": 20158,
-      "sha256": "f7484eec6edd6182de62393f16326ce8eb5b6a634312685224491d783e00d7b9"
+      "bytes": 20168,
+      "sha256": "a02c7b41c11ac0a38314e40fbcae76d40378479a626b6684ca369b61a4e2f501"
     },
     {
       "path": "site/public/reference/manuals/md-mastery-manual/index.html",
-      "bytes": 56396,
-      "sha256": "e62286adeaf01b4b82c1163c996d2ef9330ce18780630a840c2da253424742eb"
+      "bytes": 56406,
+      "sha256": "271c1be1074a5b9066684a723b78362b58a9c3dda17e4195b295a45da82d529c"
     },
     {
       "path": "site/public/reference/manuals/migration-guide/index.html",
-      "bytes": 6858,
-      "sha256": "97f482166168980a29ddf129e8f96ea9717c3137c2cd3e1067f3573f474e57d0"
+      "bytes": 6868,
+      "sha256": "25bf9b5fb6632d39b65d3563c135804e8f166b818e1b05c3069e31b9271c4f5e"
     },
     {
       "path": "site/public/reference/manuals/model-routing-guide/index.html",
-      "bytes": 10370,
-      "sha256": "853a379364a372e223d88a368c3a2b092b1c5da0c6d6e5b4fa56ef23507edbaf"
+      "bytes": 10380,
+      "sha256": "7064fdf7527dcbf900424e145f7edf879b2b293714e743a893135bccbd024ea8"
     },
     {
       "path": "site/public/reference/manuals/operator-guide/index.html",
-      "bytes": 11768,
-      "sha256": "bab702e452e4b3a4c65085f4970089a9f7e6c405b8439135a4840b7e80def4b0"
+      "bytes": 11778,
+      "sha256": "65924fb559160cbfc31ac32603791854d39667ae1bca8b3173af8c1d58520466"
     },
     {
       "path": "site/public/reference/manuals/packaging-and-release-guide/index.html",
-      "bytes": 9136,
-      "sha256": "525fe921c811460fe13bd26d7a68e9bf4d05ef517a9d026739ccac62e4edce83"
+      "bytes": 9146,
+      "sha256": "0bbcf2d6643c24b70fb68e746bacf3b4d2ca1967d67f26747782297d6ba82a8a"
     },
     {
       "path": "site/public/reference/manuals/pair-authoring-and-verification-guide/index.html",
-      "bytes": 11462,
-      "sha256": "2923c566165bc882038f30a92aa3bf9c3b09406ab0bd143733b9ed221a9a7f1a"
+      "bytes": 11472,
+      "sha256": "c911a61d6ceb5b9987c75004bcccc41a0280d121a931363b0a79a3c41ca11cee"
     },
     {
       "path": "site/public/reference/manuals/plan-review-and-exact-twin-execution-guide/index.html",
-      "bytes": 14687,
-      "sha256": "ca7f11fc4978749f3680c91f60d4767ae3485f76afdb34caf853c9d01a225777"
+      "bytes": 14697,
+      "sha256": "70b84ae0f8df7386dbd4fd152d0ece0c6520f4ceebbce3bd2e0567813b5d6fba"
     },
     {
       "path": "site/public/reference/manuals/project-cleanup-and-uninstall-guide/index.html",
-      "bytes": 8219,
-      "sha256": "d4589cd1964d801cc1b3a1d4101ea8c9439f56b993101ab27caefe778687c241"
+      "bytes": 8229,
+      "sha256": "7f02c1a24f453edc274b8e65e7a01da3e239878daa6ac3ad02766a4e05e4a72b"
     },
     {
       "path": "site/public/reference/manuals/project-config-guide/index.html",
-      "bytes": 7917,
-      "sha256": "75a77d956a1b001ca357db3a2bd1673b4b51b8f9771e8aaeaf40e77505955c6d"
+      "bytes": 7927,
+      "sha256": "7f31069f557503bc5a226518578119b61ab699ce1ed2f55c428c460419ab9c0a"
     },
     {
       "path": "site/public/reference/manuals/prompt-addition-and-registration-guide/index.html",
-      "bytes": 20433,
-      "sha256": "d13ea525fabae33bfce25fb0f05e6d8c8f2e19c0f6e8a45f44ce45a0ebfd0461"
+      "bytes": 20443,
+      "sha256": "77c83369273773467b7d0c67872227139a96ad1ccd746a7721cad1334e19e82d"
     },
     {
       "path": "site/public/reference/manuals/prompt-body-authoring-guide/index.html",
-      "bytes": 15957,
-      "sha256": "15e2932d7ca783029fb3e6a46ec11074b76f16292f28c913e6581d62661c5590"
+      "bytes": 15967,
+      "sha256": "b367e0efbe44642a6927960033501de87c71e602f6e120c663692bf810385ec0"
     },
     {
       "path": "site/public/reference/manuals/prompt-body-validation-guide/index.html",
-      "bytes": 10623,
-      "sha256": "115b7feb6cbec5bf31af78583814daeb2c24f4ccb4650b9ec2b80dd8804727df"
+      "bytes": 10633,
+      "sha256": "a3c06715fee7823ad8f6400acc02fcdf94030252b9a0eac1fc1d7beb70b56031"
     },
     {
       "path": "site/public/reference/manuals/prompt-catalog/index.html",
-      "bytes": 205808,
-      "sha256": "53660e2c2ca7c81856f0f2800904a3ba269214fd23449f7ebcf73cfceaf326c8"
+      "bytes": 205818,
+      "sha256": "a45c3e89d189a347480ded90ab5ef1a5c3afa10bc1f99da5c0af9164b5ee5d6a"
     },
     {
       "path": "site/public/reference/manuals/prompt-engineering-methods/index.html",
-      "bytes": 9270,
-      "sha256": "2c562ec691629d12cc075c17783dfed214c13175149f99123efcf68abb3a8983"
+      "bytes": 9280,
+      "sha256": "63873b6018c16d010e65fc6d91299db114a33bdf7c07bdfbb95d491988d9f8e1"
     },
     {
       "path": "site/public/reference/manuals/prompt-structure-standard/index.html",
-      "bytes": 19213,
-      "sha256": "e28ff1df9e48f19ff0bf7f3bf61de71d84ca5930034f15afa3de10faf3de247c"
+      "bytes": 19223,
+      "sha256": "54b591eb91e16d6086861a80fac7724ac57eb76b13c2d73e5ffeba03fa9fa443"
     },
     {
       "path": "site/public/reference/manuals/prompt-suite-conventions/index.html",
-      "bytes": 15435,
-      "sha256": "dcdd93f6329c3137c936900ced8016106111b3d0f3293620a1c9d13c20e73f2e"
+      "bytes": 15445,
+      "sha256": "6ff2719cfb8f7260625ecf95e01a68eba6f840fa2409fa48de17800bb5d49709"
     },
     {
       "path": "site/public/reference/manuals/readme/index.html",
-      "bytes": 11597,
-      "sha256": "25a36036626a0b9c6573c2f05112ac2375e68478d0628676a84d9d4b341d8ac0"
+      "bytes": 11607,
+      "sha256": "ac1bd3e16e20b7a258a1cee2fd3d25c839a65345683d5ad8df26c1953e02e740"
     },
     {
       "path": "site/public/reference/manuals/recommended-skill-stacks/index.html",
-      "bytes": 15246,
-      "sha256": "05666172987dc7cb1371e989e9fbdd3e1708d8924e7e33c6b0b1647738f63300"
+      "bytes": 15256,
+      "sha256": "0514c81059b9340c590c67e9ab31586d79a56d7dad9378a12573893e5f79eab8"
     },
     {
       "path": "site/public/reference/manuals/recovery-and-rollback-guide/index.html",
-      "bytes": 10242,
-      "sha256": "8f4526da9b130ce5c2d3c417a490d47e043bb196865a5c0c45f807c04308346a"
+      "bytes": 10252,
+      "sha256": "99457c97314643bd6409f3ea29f78350e3db4b76573d14f223121dbb008b6a0b"
     },
     {
       "path": "site/public/reference/manuals/research-basis/index.html",
-      "bytes": 8915,
-      "sha256": "e952b81fcdf2f164e271ff1b214f3412c61c2f560387bccb6dd28ed18975ca03"
+      "bytes": 8925,
+      "sha256": "657445c996bd2257706c4a12ccf67d368a826def0f14c75f5a8dad3376b99bf3"
     },
     {
       "path": "site/public/reference/manuals/root-agent-guidance-and-keyword-routing-guide/index.html",
-      "bytes": 22303,
-      "sha256": "e4e8bcf8b70a29ca28f729af4051761b5107bc5354bedc4c94e5c0a786fae102"
+      "bytes": 22313,
+      "sha256": "f027016a335b5563ec1c11c0b683efd03f02b5be268db5350f4b32771ae5f5e5"
     },
     {
       "path": "site/public/reference/manuals/router-keyword-catalog-and-scoring-guide/index.html",
-      "bytes": 10332,
-      "sha256": "d54c268090caf20c279a00d105ec8ee8cf9d88c19fb9ed414b9bc7dd1d34db9d"
+      "bytes": 10342,
+      "sha256": "cdbbb45c5a241e1f8c4d9b362a1a60fc755f591e212ef047bec0579684aba207"
     },
     {
       "path": "site/public/reference/manuals/runtime-marker-protocol/index.html",
-      "bytes": 11769,
-      "sha256": "adb9de30071ba583cc41101953a7964e39213dcc95cbb00ea487e07fd11474fc"
+      "bytes": 11779,
+      "sha256": "f97083ee066d7b21e89b8eca701d3eb1c8e0b175141e14bed382c8f2b219a238"
     },
     {
       "path": "site/public/reference/manuals/scenario-authoring-guide/index.html",
-      "bytes": 11741,
-      "sha256": "c17283587c1fca97e08c40d7d2890c2f6be5d7fc03f649911f2a3e519e8bb056"
+      "bytes": 11751,
+      "sha256": "8f3ec87787961d27be9ebb2bacd7c1e1a56030ed3b59fae2f54783b69ee52cf5"
     },
     {
       "path": "site/public/reference/manuals/security-boundaries/index.html",
-      "bytes": 6605,
-      "sha256": "df2b6fcad8ca2b5a4483b530bd39bcdf0fdf6fe00cf14b600c1370adcee75022"
+      "bytes": 6615,
+      "sha256": "59bd5560ecf045cb24ab6cdbaa9f5e6fd275f0b4bc0545e53fa13a43a20b2263"
     },
     {
       "path": "site/public/reference/manuals/security-operations-guide/index.html",
-      "bytes": 9397,
-      "sha256": "ebb8f7cb47c0820aea25203f569187b9fb8b99ef2f725dae9e67a4b16e226752"
+      "bytes": 9407,
+      "sha256": "5dbbd94866122b8deb7aa595a3582be71844ac083f6e62ffea7a213cdfcc878b"
     },
     {
       "path": "site/public/reference/manuals/skill-install-commands/index.html",
-      "bytes": 48728,
-      "sha256": "6cc49ce0b8ba385ce40df609d2bdc29c90a5e326fa553e0bb60a8bc6ad849614"
+      "bytes": 48738,
+      "sha256": "51a62d708d3346834f973addc887aec24976c93284eb21788591c0559e943f79"
     },
     {
       "path": "site/public/reference/manuals/skill-routing/index.html",
-      "bytes": 13825,
-      "sha256": "b255950e76d25ab2704bb5f2185659da69c6dd1113ac1300e8bfd79d01ccfa79"
+      "bytes": 13835,
+      "sha256": "bc8e3e0c8bbbcc7ca22a84dae7ba5abed819749e51df802bde594d6fe97262a5"
     },
     {
       "path": "site/public/reference/manuals/skill-supply-chain-guide/index.html",
-      "bytes": 11186,
-      "sha256": "cf35e2cad55195659a17be2fba492315199fed9a63c270f06d49738810067ac7"
+      "bytes": 11196,
+      "sha256": "0db73c5b1e23f3e75e39a4bf9c75289fec8c90246125050683e8f97666ea88f7"
     },
     {
       "path": "site/public/reference/manuals/telemetry-and-observability-guide/index.html",
-      "bytes": 10088,
-      "sha256": "cdfae0a590bb5d3cf79dfca8941f423ff3fa7624f505fc623f05123c34426807"
+      "bytes": 10098,
+      "sha256": "a6a68a3ebc1d4e8245c2cc79d9fbaddcab8fe1aa330c4afda1f8cf6a02cfaa4c"
     },
     {
       "path": "site/public/reference/manuals/template-system-guide/index.html",
-      "bytes": 15081,
-      "sha256": "f094789fdc59182177e64261d07874737aa980dead36035fdb3567a9fdd77c31"
+      "bytes": 15091,
+      "sha256": "5acad554aca7e6223a20e0f6a1229ffc9e604c219ccec46544e9cc8d97c12247"
     },
     {
       "path": "site/public/reference/manuals/tool-policy-and-authorization-guide/index.html",
-      "bytes": 10603,
-      "sha256": "9454f55ff19aa390b57b247beb2fc943f73d889bf5369829c7b0667033023d1f"
+      "bytes": 10613,
+      "sha256": "8ea765038b26f7d11def16d3a12888f2e94618ae54f9734dd95d407667c4ca33"
     },
     {
       "path": "site/public/reference/manuals/troubleshooting-guide/index.html",
-      "bytes": 11277,
-      "sha256": "d612c65106703de09892ef9fc37c00dcab8cc65e3870fd8a700dcd9d350fb376"
+      "bytes": 11287,
+      "sha256": "9afdb35254a6cb4810fbde69261e8e974a08ead99f462b9be556a1a58e523c87"
     },
     {
       "path": "site/public/reference/manuals/tui-and-operator-experience-guide/index.html",
-      "bytes": 15662,
-      "sha256": "70533edca0f58a63134c39b1f7d44f3373c203e68d7fa5844848da9d513aab55"
+      "bytes": 15672,
+      "sha256": "c46154db3da668a195cb2fef5de336c16a5f8de49b0c821d1de6720ef26195fe"
     },
     {
       "path": "site/public/reference/manuals/user-manual/index.html",
-      "bytes": 14671,
-      "sha256": "37e5e5811697d8e753da6fcaf3bb3c62135d094f1e1d1930430e69e0f99d34f0"
+      "bytes": 14681,
+      "sha256": "4579e752edb358e760fe4b8556bf38e66bd9502481182c99db2d220a70484681"
     },
     {
       "path": "site/public/reference/manuals/visual-assets-integration-guide/index.html",
-      "bytes": 13012,
-      "sha256": "5842ab1f6767b8c73bfc4ecce3c80ccdd92e7053f532b82f2b5d674ea110398f"
+      "bytes": 13022,
+      "sha256": "47b6934c30acb4e1a2baf73f5173663397c4154d95d9b4c4fcb66edda6e13782"
     },
     {
       "path": "site/public/scenarios.html",
-      "bytes": 921696,
-      "sha256": "5453f9e52095ba878c0603e657f66908338e65cdc4aa423b382a87ca392e7e31"
+      "bytes": 921706,
+      "sha256": "a7fd6c4511025a1f869c17e10f4875ccd250df8a24f349f6117f111b6fcf9147"
     },
     {
       "path": "site/public/styles.css",
@@ -12073,13 +12123,13 @@
     },
     {
       "path": "site/scripts/generate-reference.mjs",
-      "bytes": 38152,
-      "sha256": "f027eef29ddc814561414432e2ebfec875625f0ff48ab7c520911c9d4e994286"
+      "bytes": 38365,
+      "sha256": "8cbab61792f906ee9a9c7d00bf4f8edf21c0f4b2ab489f9adb1cbb1d7f45197b"
     },
     {
       "path": "site/src/pages/index.astro",
-      "bytes": 8655,
-      "sha256": "db412fd0d560b858c76825ff919e0eeecf7e5b247ccab820750655a3cb66ca7a"
+      "bytes": 8665,
+      "sha256": "8b6e7326a71e84ee4137725e39ff1e0a0e0c74ff9e2c4fe915dc456ac808c613"
     },
     {
       "path": "site/tsconfig.json",
@@ -12528,8 +12578,8 @@
     },
     {
       "path": "tests/test_docs_site.py",
-      "bytes": 6431,
-      "sha256": "7a4ffcd4938672cab593aa1befa148f689d31d9a93a8ccf12cedb89b9e5baafa"
+      "bytes": 7567,
+      "sha256": "849076113fd62a1e9c384a6a7fad879f6fd3f178b8151b5a389ed031cd37e12d"
     },
     {
       "path": "tests/test_documentation_integrity.py",

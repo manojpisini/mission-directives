@@ -12,10 +12,14 @@ const catalogPath = path.join(repoRoot, 'catalog.json');
 const scenarioCatalogPath = path.join(repoRoot, 'SCENARIO_CATALOG.json');
 const base = '/mission-directives/';
 const brandFiles = [
-  'mission_directives_full_logo_lateral.svg',
-  'mission_directives_full_logo.svg',
-  'mission_directives_logo.svg',
-  'mission_directives_wordmark.svg',
+  'mission_directives_full_logo_dark.svg',
+  'mission_directives_full_logo_lateral_dark.svg',
+  'mission_directives_full_logo_lateral_light.svg',
+  'mission_directives_full_logo_light.svg',
+  'mission_directives_logo_dark.svg',
+  'mission_directives_logo_light.svg',
+  'mission_directives_wordmark_dark.svg',
+  'mission_directives_wordmark_light.svg',
 ];
 
 const escapeHtml = (value) =>
@@ -109,7 +113,7 @@ function markdownToHtml(markdown, sourceRoot = 'docs') {
 async function syncBrandAssets() {
   await mkdir(brandPublicRoot, { recursive: true });
   await Promise.all(brandFiles.map((file) => copyFile(path.join(brandSourceRoot, file), path.join(brandPublicRoot, file))));
-  await copyFile(path.join(brandSourceRoot, 'mission_directives_logo.svg'), path.join(siteRoot, 'public', 'favicon.svg'));
+  await copyFile(path.join(brandSourceRoot, 'mission_directives_logo_dark.svg'), path.join(siteRoot, 'public', 'favicon.svg'));
 }
 
 const categoryFor = (file, title) => {
@@ -154,7 +158,7 @@ async function collectManuals() {
 }
 
 function topbar(section = 'Documentation') {
-  return `<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="${base}index.html"><img alt="" aria-hidden="true" class="brand__logo" src="${base}assets/brand/mission_directives_full_logo_lateral.svg"/><span class="brand__section">${escapeHtml(section)}</span></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button><nav aria-label="Documentation links" class="top-actions"><a href="${base}getting-started.html">Start</a><a href="${base}installation.html">Install</a><a href="${base}docs.html">Docs</a><a href="${base}contributing.html">Contribute</a><a href="${base}reference.html">Reference</a></nav></div></header>`;
+  return `<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="${base}index.html"><img alt="" aria-hidden="true" class="brand__logo" src="${base}assets/brand/mission_directives_full_logo_lateral_dark.svg"/><span class="brand__section">${escapeHtml(section)}</span></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button><nav aria-label="Documentation links" class="top-actions"><a href="${base}getting-started.html">Start</a><a href="${base}installation.html">Install</a><a href="${base}docs.html">Docs</a><a href="${base}contributing.html">Contribute</a><a href="${base}reference.html">Reference</a></nav></div></header>`;
 }
 
 function sidebar(active) {
@@ -176,7 +180,7 @@ function shell({ title, description, active, section, content, toc = '' }) {
 <body class="docs-page">
 <a class="skip-link" href="#main-content">Skip to content</a>
 ${topbar(section)}
-<div class="layout">${sidebar(active)}<main class="main" id="main-content"><div class="content-grid"><article class="doc-content">${content}</article>${toc}</div><footer class="footer"><img alt="Mission Directives" src="${base}assets/brand/mission_directives_wordmark.svg"/><span>Documentation site</span></footer></main></div>
+<div class="layout">${sidebar(active)}<main class="main" id="main-content"><div class="content-grid"><article class="doc-content">${content}</article>${toc}</div><footer class="footer"><img alt="Mission Directives" src="${base}assets/brand/mission_directives_wordmark_dark.svg"/><span>Documentation site</span></footer></main></div>
 ${searchDialog()}
 <div class="sidebar-backdrop" hidden id="sidebarBackdrop"></div><script is:inline src="${base}app.js"></script>
 </body>
