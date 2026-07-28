@@ -72,7 +72,7 @@ output_contract:
   - json
   - docx_spec
   - pdf_spec
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.reporting.report-production-visualization-brief-and-quality-assurance
 prompt_slug: report-production-visualization-brief-and-quality-assurance
 identity_status: permanent

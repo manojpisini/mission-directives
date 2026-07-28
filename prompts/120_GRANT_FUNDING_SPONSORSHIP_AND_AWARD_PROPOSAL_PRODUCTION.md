@@ -65,7 +65,7 @@ output_contract:
   - proposal_package
   - budget_spec
   - submission_checklist
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.business.grant-funding-sponsorship-and-award-proposal-production
 prompt_slug: grant-funding-sponsorship-and-award-proposal-production
 identity_status: permanent

@@ -2,7 +2,7 @@
 
 [Back to Mastery Manual](MD_MASTERY_MANUAL.md) · [Manual index](MANUALS.md)
 
-This guide is the authoritative operational reference for **Template System Guide** in MD 2.0.0.
+This guide is the authoritative operational reference for **Template System Guide** in MD 2.0.1.
 
 ## 1. Registry and families
 

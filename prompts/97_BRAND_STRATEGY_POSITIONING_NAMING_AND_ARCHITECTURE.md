@@ -59,7 +59,7 @@ output_contract:
   - path: artifacts/brand_strategy_positioning_naming_and_architecture/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.brand.brand-strategy-positioning-naming-and-architecture
 prompt_slug: brand-strategy-positioning-naming-and-architecture
 identity_status: permanent

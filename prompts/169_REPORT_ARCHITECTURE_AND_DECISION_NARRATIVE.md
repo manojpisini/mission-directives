@@ -71,7 +71,7 @@ output_contract:
   - json
   - docx_spec
   - pdf_spec
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.reporting.report-architecture-and-decision-narrative
 prompt_slug: report-architecture-and-decision-narrative
 identity_status: permanent

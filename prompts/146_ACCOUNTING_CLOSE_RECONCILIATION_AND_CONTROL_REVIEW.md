@@ -66,7 +66,7 @@ output_contract:
   - path: reports/accounting_close_reconciliation_and_control_review/accounting_close_reconciliation_and_control_review_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.finance.accounting-close-reconciliation-and-control-review
 prompt_slug: accounting-close-reconciliation-and-control-review
 identity_status: permanent

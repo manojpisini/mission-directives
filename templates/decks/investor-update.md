@@ -3,7 +3,7 @@ template_id: decks/investor-update
 title: Investor Update Deck
 family: presentation
 status: stable
-suite_version: 2.0.0
+suite_version: 2.0.1
 required_contracts:
   - core/run-manifest
   - core/evidence-register

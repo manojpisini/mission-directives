@@ -10,9 +10,9 @@ This guide records every failed GitHub Actions validation run through July 28, 2
 |---|---:|---:|---|
 | Validate Mission Directives | 12 | 30 | Passing on Ubuntu, Windows, and macOS |
 | Deploy documentation | 8 | 0 | Passing |
-| Publish Mission Directives | 0 | 0 | Tag-triggered; not run at this snapshot |
+| Publish Mission Directives | 0 | 1 | First attempt failed before publication; corrected patch release pending |
 
-All recorded failures belonged to `Validate Mission Directives`.
+Thirty historical failures belonged to `Validate Mission Directives`. One later failure belonged to the first `Publish Mission Directives` attempt.
 
 ## Complete failure history
 
@@ -92,6 +92,20 @@ Fixes updated the test, added explicit destination-symlink rejection, stabilized
 
 The July 28 release pre-push run failed `tests/test_release_consistency.py` because `sync_agent_guidance.py` created `.prompt_suite/agent-guidance-receipt.json` by default while the release gate correctly rejected machine-local receipts. The tool already described receipts as optional, so the durable fix removed the contradictory CLI default and added a regression proving that only explicit `--receipt` use writes the file. Remove any receipt left by an older invocation before release validation.
 
+### Publishing workflow skipped required audit generation
+
+Failed run: `30369810482` for tag `v2.0.0`.
+
+The main validation workflow was green, but the separate publishing workflow ran raw `python -m pytest -q` in a clean checkout before generating `BODY_QUALITY_AUDIT.json` and `BODY_QUALITY_AUDIT.md`. Reproducibility and prompt-body tests therefore failed with two missing-artifact errors. Build failure skipped both PyPI publication and GitHub Release creation, so no package or release was published from that tag.
+
+The durable fix aligned publishing with the canonical order: generate body audits, run `tools/run_tests.py`, run evaluations, validate the suite, build distributions, and smoke-test the installed wheel. A workflow regression now verifies both command presence and order. The failed public tag remains immutable; recovery uses patch release `v2.0.1`.
+
+### Local patch-release manifest mismatch
+
+The first targeted `2.0.1` release test passed 20 checks but failed release consistency because `MANIFEST.json` still declared suite version `2.0.0`. The old pre-push list rebuilt the manifest after deterministic tests even though those tests already enforce release consistency.
+
+The durable fix moved manifest generation ahead of the deterministic suite. Run all applicable source and site generators first, generate audits, rebuild the manifest, then run tests and finish with `build_manifest.py --check`. CI still verifies rather than mutates the committed manifest.
+
 ## Required pre-push workflow
 
 Create and activate the CI-equivalent environment:
@@ -106,6 +120,7 @@ Run from the repository root, in order:
 
 ```powershell
 python tools/audit_prompt_bodies.py
+python tools/build_manifest.py
 python tools/run_tests.py
 python tools/run_evaluations.py
 python tools/validate_templates.py
@@ -113,7 +128,6 @@ python tools/check_documentation_links.py
 python tools/check_script_parity.py
 python tools/check_release_consistency.py
 python tools/check_generated_reproducibility.py
-python tools/build_manifest.py
 python tools/build_manifest.py --check
 python tools/validate_suite.py
 uv build
@@ -132,7 +146,7 @@ Do not push unless every applicable command exits successfully.
 
 ## Prevention rules
 
-- Rebuild `MANIFEST.json` after the final tracked-file change, then run `--check`.
+- Run all applicable generators, rebuild `MANIFEST.json` before deterministic release tests, and finish with `--check` after the final tracked-file change.
 - Never seal `.git`, `.venv`, caches, builds, generated audits, logs, locks, receipts, runtime results, or ignored machine-local content.
 - Guidance synchronization writes a source-repository receipt only when `--receipt` is explicit; release checkouts contain no `.prompt_suite/agent-guidance-receipt.json`.
 - Use Git-aware enumeration for release files.
@@ -141,6 +155,7 @@ Do not push unless every applicable command exits successfully.
 - After moving files, search the entire repository for every previous path.
 - Update a generator, committed outputs, tests, manifest, and documentation together.
 - Preserve CI order: environment, dependencies, audits, tests, evaluations, checks, validation, package build, package smoke, wrappers, artifacts.
+- Keep validation and publication prerequisites aligned; every clean-checkout test path generates body audits before the canonical deterministic runner.
 - Keep setup-uv environment activation enabled; do not restore `uv pip install --system`.
 - Test direct Python entry points and Bash/PowerShell wrappers.
 - Keep site implementation, dependencies, tests, generated paths, ignore rules, and documentation synchronized.

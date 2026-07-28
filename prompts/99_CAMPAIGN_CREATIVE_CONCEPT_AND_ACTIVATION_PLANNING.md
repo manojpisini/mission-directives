@@ -62,7 +62,7 @@ output_contract:
   - path: reports/campaign_creative_concept_and_activation_planning/campaign_creative_concept_and_activation_planning_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.marketing_creative.campaign-creative-concept-and-activation-planning
 prompt_slug: campaign-creative-concept-and-activation-planning
 identity_status: permanent

@@ -62,7 +62,7 @@ output_contract:
   - path: reports/business_continuity_disaster_recovery_and_tabletop_exercise/business_continuity_disaster_recovery_and_tabletop_exercise_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.resilience.business-continuity-disaster-recovery-and-tabletop-exercise
 prompt_slug: business-continuity-disaster-recovery-and-tabletop-exercise
 identity_status: permanent

@@ -63,7 +63,7 @@ output_contract:
   - markdown
   - docx_spec
   - pdf_spec
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.professional_writing.document-memo-report-sop-and-policy-production
 prompt_slug: document-memo-report-sop-and-policy-production
 identity_status: permanent

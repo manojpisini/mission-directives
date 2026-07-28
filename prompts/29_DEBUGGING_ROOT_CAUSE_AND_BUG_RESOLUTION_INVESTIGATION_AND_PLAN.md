@@ -60,7 +60,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.debugging.debugging-root-cause-and-bug-resolution-investigation-and-plan
 prompt_slug: debugging-root-cause-and-bug-resolution-investigation-and-plan
 identity_status: permanent

@@ -62,7 +62,7 @@ output_contract:
   - path: reports/blueprint_diagram_architecture_and_process_visualization_production/blueprint_diagram_architecture_and_process_visualization_production_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.visual_communication.blueprint-diagram-architecture-and-process-visualization-production
 prompt_slug: blueprint-diagram-architecture-and-process-visualization-production
 identity_status: permanent

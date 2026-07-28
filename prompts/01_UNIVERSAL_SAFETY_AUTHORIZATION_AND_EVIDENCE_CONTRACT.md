@@ -44,7 +44,7 @@ evidence_lane: null
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.core.universal-safety-authorization-and-evidence-contract
 prompt_slug: universal-safety-authorization-and-evidence-contract
 identity_status: permanent

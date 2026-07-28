@@ -62,7 +62,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.agentic.multi-agent-architecture-and-agent-definitions-authorized-execution-and-verification
 prompt_slug: multi-agent-architecture-and-agent-definitions-authorized-execution-and-verification
 identity_status: permanent

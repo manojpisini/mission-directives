@@ -1,5 +1,5 @@
 {
-  "suite_version": "2.0.0",
+  "suite_version": "2.0.1",
   "mappings": [
     {
       "template_id": "core/acceptance-criteria",

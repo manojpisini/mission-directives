@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.manufacturing_and_quality.supplier-defect-report
 prompt_slug: supplier-defect-report
 identity_status: permanent

@@ -65,7 +65,7 @@ output_contract:
   - path: reports/department_operating_plan_and_cross_functional_coordination/department_operating_plan_and_cross_functional_coordination_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.organization.department-operating-plan-and-cross-functional-coordination
 prompt_slug: department-operating-plan-and-cross-functional-coordination
 identity_status: permanent

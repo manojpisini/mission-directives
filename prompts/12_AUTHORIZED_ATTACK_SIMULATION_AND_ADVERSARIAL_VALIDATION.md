@@ -54,7 +54,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.security.authorized-attack-simulation-and-adversarial-validation
 prompt_slug: authorized-attack-simulation-and-adversarial-validation
 identity_status: permanent

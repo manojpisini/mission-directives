@@ -62,7 +62,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.security.identity-authentication-authorization-and-session-security-authorized-execution-and-verification
 prompt_slug: identity-authentication-authorization-and-session-security-authorized-execution-and-verification
 identity_status: permanent

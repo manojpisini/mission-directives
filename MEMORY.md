@@ -12,7 +12,7 @@ This file stores durable, verified repository lessons that prevent repeated inve
 
 ## GitHub Actions history through July 28, 2026
 
-Thirty failed runs were recorded, all in `Validate Mission Directives`. The documentation workflow had eight successful runs and no failures. The publishing workflow had not yet run at this snapshot.
+Thirty failed runs were recorded in `Validate Mission Directives`. The documentation workflow had eight successful runs and no failures at the initial snapshot. The first `Publish Mission Directives` run, `30369810482` for `v2.0.0`, failed before publication because it ran tests before generating required body-audit artifacts.
 
 The complete history is maintained in [GitHub Actions Failure History and Pre-Push Guide](docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md).
 
@@ -24,6 +24,8 @@ Durable lessons:
 - Source guidance synchronization writes no receipt by default. Use `--receipt` only when evidence is required, and keep `.prompt_suite/agent-guidance-receipt.json` out of release validation.
 - Repository reorganizations update every test, wrapper, documentation link, generator, and installed path in the same change.
 - Audit artifacts are generated before deterministic tests.
+- Validation and publishing workflows use the same audit, canonical test, evaluation, validation, build, and package-smoke prerequisites; release-only raw pytest paths are prohibited.
+- After all applicable source and site generators, rebuild `MANIFEST.json` before deterministic release tests; finish the chain with `build_manifest.py --check`.
 - CI and wrappers use the activated virtual environment; setup-uv keeps `activate-environment: 'true'` and does not use `uv pip install --system`.
 - Package changes build wheel and sdist, install the built package, and run platform wrappers.
 - Site implementation, dependencies, tests, generated paths, ignore rules, and documentation remain one contract.
@@ -33,6 +35,7 @@ Durable lessons:
 
 ```powershell
 python tools/audit_prompt_bodies.py
+python tools/build_manifest.py
 python tools/run_tests.py
 python tools/run_evaluations.py
 python tools/validate_templates.py
@@ -40,7 +43,6 @@ python tools/check_documentation_links.py
 python tools/check_script_parity.py
 python tools/check_release_consistency.py
 python tools/check_generated_reproducibility.py
-python tools/build_manifest.py
 python tools/build_manifest.py --check
 python tools/validate_suite.py
 uv build

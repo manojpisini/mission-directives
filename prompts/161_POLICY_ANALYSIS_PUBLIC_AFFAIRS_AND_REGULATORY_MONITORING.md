@@ -62,7 +62,7 @@ output_contract:
   - path: reports/policy_analysis_public_affairs_and_regulatory_monitoring/policy_analysis_public_affairs_and_regulatory_monitoring_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.public_affairs.policy-analysis-public-affairs-and-regulatory-monitoring
 prompt_slug: policy-analysis-public-affairs-and-regulatory-monitoring
 identity_status: permanent

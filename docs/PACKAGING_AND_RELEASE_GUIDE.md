@@ -10,6 +10,8 @@ The custom build hook reads `config/runtime_payload.json` and stages one tempora
 
 The authoritative pre-push and pre-tag sequence, including historical failure prevention, is [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md).
 
+The tag-triggered publishing workflow must generate prompt-body audits before `tools/run_tests.py`, then run evaluations and full validation before building. Do not replace this sequence with raw pytest in a clean checkout because audit-dependent tests intentionally fail when their generated evidence is absent.
+
 ```bash
 python -m pytest
 python tools/build_manifest.py

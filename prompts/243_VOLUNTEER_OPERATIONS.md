@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.nonprofit_and_programs.volunteer-operations
 prompt_slug: volunteer-operations
 identity_status: permanent

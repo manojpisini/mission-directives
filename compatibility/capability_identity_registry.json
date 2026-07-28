@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
+  "version": "2.0.1",
   "capabilities": [
     {
       "capability_id": "md.core.project-context-and-run-configuration",
@@ -2058,5 +2058,5 @@
       "status": "active"
     }
   ],
-  "suite_version": "2.0.0"
+  "suite_version": "2.0.1"
 }

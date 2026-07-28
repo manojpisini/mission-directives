@@ -59,7 +59,7 @@ output_contract:
   - path: reports/poetry_prose_and_literary_composition/poetry_prose_and_literary_composition_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.creative_writing.poetry-prose-and-literary-composition
 prompt_slug: poetry-prose-and-literary-composition
 identity_status: permanent

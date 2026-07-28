@@ -58,7 +58,7 @@ output_contract:
   - path: artifacts/research_integrity_citation_and_fact_verification/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.research.research-integrity-citation-and-fact-verification
 prompt_slug: research-integrity-citation-and-fact-verification
 identity_status: permanent

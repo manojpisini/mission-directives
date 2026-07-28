@@ -3,7 +3,7 @@ template_id: core/artifact-specification
 title: Artifact Specification
 family: core
 status: stable
-suite_version: 2.0.0
+suite_version: 2.0.1
 required_contracts:
   - core/run-manifest
   - core/evidence-register

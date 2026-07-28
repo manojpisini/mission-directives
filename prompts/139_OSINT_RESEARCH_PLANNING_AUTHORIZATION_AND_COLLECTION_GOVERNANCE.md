@@ -65,7 +65,7 @@ output_contract:
   - path: reports/osint_research_planning_authorization_and_collection_governance/osint_research_planning_authorization_and_collection_governance_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.osint.osint-research-planning-authorization-and-collection-governance
 prompt_slug: osint-research-planning-authorization-and-collection-governance
 identity_status: permanent

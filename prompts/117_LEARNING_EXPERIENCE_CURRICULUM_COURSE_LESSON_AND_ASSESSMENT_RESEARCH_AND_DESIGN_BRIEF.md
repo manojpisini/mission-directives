@@ -74,7 +74,7 @@ output_contract:
   - assessment_spec
   - slides_spec
   - learning_asset_spec
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief
 prompt_slug: learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief
 identity_status: permanent

@@ -63,7 +63,7 @@ output_contract:
   - path: reports/employee_communication_culture_and_engagement/employee_communication_culture_and_engagement_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.people.employee-communication-culture-and-engagement
 prompt_slug: employee-communication-culture-and-engagement
 identity_status: permanent

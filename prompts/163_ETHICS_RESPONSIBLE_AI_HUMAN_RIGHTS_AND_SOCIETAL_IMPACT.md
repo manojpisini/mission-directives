@@ -60,7 +60,7 @@ output_contract:
   - path: reports/ethics_responsible_ai_human_rights_and_societal_impact/ethics_responsible_ai_human_rights_and_societal_impact_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.governance.ethics-responsible-ai-human-rights-and-societal-impact
 prompt_slug: ethics-responsible-ai-human-rights-and-societal-impact
 identity_status: permanent

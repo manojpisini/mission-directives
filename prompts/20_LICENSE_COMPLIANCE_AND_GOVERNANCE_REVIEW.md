@@ -57,7 +57,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.governance.license-compliance-and-governance-review
 prompt_slug: license-compliance-and-governance-review
 identity_status: permanent

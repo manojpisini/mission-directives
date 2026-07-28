@@ -1,6 +1,6 @@
 {
   "policy_id": "md.prompt_addition",
-  "suite_version": "2.0.0",
+  "suite_version": "2.0.1",
   "status": "active",
   "source_requirements": {
     "regular_utf8_markdown": true,

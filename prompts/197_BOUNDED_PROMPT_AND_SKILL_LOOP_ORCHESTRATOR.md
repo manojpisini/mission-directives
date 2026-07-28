@@ -66,7 +66,7 @@ output_contract:
   - path: reports/bounded_prompt_and_skill_loop_orchestrator/bounded_prompt_and_skill_loop_orchestrator_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.auto_orchestration.bounded-prompt-and-skill-loop-orchestrator
 prompt_slug: bounded-prompt-and-skill-loop-orchestrator
 identity_status: permanent

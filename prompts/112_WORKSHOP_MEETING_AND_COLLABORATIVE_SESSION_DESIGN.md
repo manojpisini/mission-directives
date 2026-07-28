@@ -64,7 +64,7 @@ output_contract:
   - markdown
   - agenda
   - whiteboard_spec
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.facilitation.workshop-meeting-and-collaborative-session-design
 prompt_slug: workshop-meeting-and-collaborative-session-design
 identity_status: permanent

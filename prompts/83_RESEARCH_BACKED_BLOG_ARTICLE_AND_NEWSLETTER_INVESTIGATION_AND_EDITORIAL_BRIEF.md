@@ -63,7 +63,7 @@ output_contract:
   - path: artifacts/research_backed_blog_article_and_newsletter_investigation_and_editorial_brief/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.editorial.research-backed-blog-article-and-newsletter-investigation-and-editorial-brief
 prompt_slug: research-backed-blog-article-and-newsletter-investigation-and-editorial-brief
 identity_status: permanent

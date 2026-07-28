@@ -71,7 +71,7 @@ output_contract:
   - path: artifacts/html_css_and_javascript_slides_and_presentation_production/residual_register.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.visual_communication.html-css-and-javascript-slides-and-presentation-production
 prompt_slug: html-css-and-javascript-slides-and-presentation-production
 identity_status: permanent

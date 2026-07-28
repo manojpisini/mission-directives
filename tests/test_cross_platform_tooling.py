@@ -48,6 +48,21 @@ def test_ci_runs_evaluations_and_uploads_review_artifacts():
         assert artifact in text
 
 
+def test_publish_generates_required_evidence_before_validation():
+    text = (ROOT / ".github/workflows/publish.yml").read_text(encoding="utf-8")
+    commands = [
+        "python tools/audit_prompt_bodies.py",
+        "python tools/run_tests.py",
+        "python tools/run_evaluations.py",
+        "python tools/validate_suite.py",
+        "uv build",
+        "python tools/package_smoke.py dist",
+    ]
+    positions = [text.index(command) for command in commands]
+    assert positions == sorted(positions)
+    assert "python -m pytest -q" not in text
+
+
 def test_root_installer_has_bash_and_powershell_launchers():
     assert (
         (ROOT / "tools/install.sh").exists()

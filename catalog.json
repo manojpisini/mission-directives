@@ -57,7 +57,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.core.project-context-and-run-configuration",
       "prompt_slug": "project-context-and-run-configuration",
       "identity_status": "permanent",
@@ -174,7 +174,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.core.universal-safety-authorization-and-evidence-contract",
       "prompt_slug": "universal-safety-authorization-and-evidence-contract",
       "identity_status": "permanent",
@@ -288,7 +288,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.core.capability-router-and-execution-graph",
       "prompt_slug": "capability-router-and-execution-graph",
       "identity_status": "permanent",
@@ -400,7 +400,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.core.artifact-handoff-and-verification-contract",
       "prompt_slug": "artifact-handoff-and-verification-contract",
       "identity_status": "permanent",
@@ -530,7 +530,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.core.prompt-structure-and-input-trust-contract",
       "prompt_slug": "prompt-structure-and-input-trust-contract",
       "identity_status": "permanent",
@@ -666,7 +666,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.strategy.problem-opportunity-and-strategy-framing",
       "prompt_slug": "problem-opportunity-and-strategy-framing",
       "identity_status": "permanent",
@@ -834,7 +834,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.strategy.market-user-and-competitive-research",
       "prompt_slug": "market-user-and-competitive-research",
       "identity_status": "permanent",
@@ -989,7 +989,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.strategy.requirements-scope-and-success-criteria",
       "prompt_slug": "requirements-scope-and-success-criteria",
       "identity_status": "permanent",
@@ -1145,7 +1145,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.strategy.feasibility-prototype-risk-and-roadmap",
       "prompt_slug": "feasibility-prototype-risk-and-roadmap",
       "identity_status": "permanent",
@@ -1298,7 +1298,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.architecture-and-technology-decision-analysis",
       "prompt_slug": "architecture-and-technology-decision-analysis",
       "identity_status": "permanent",
@@ -1481,7 +1481,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.project-discovery-inventory-and-baseline",
       "prompt_slug": "project-discovery-inventory-and-baseline",
       "identity_status": "permanent",
@@ -1669,7 +1669,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.threat-modeling-and-attack-surface-analysis",
       "prompt_slug": "threat-modeling-and-attack-surface-analysis",
       "identity_status": "permanent",
@@ -1852,7 +1852,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.authorized-attack-simulation-and-adversarial-validation",
       "prompt_slug": "authorized-attack-simulation-and-adversarial-validation",
       "identity_status": "permanent",
@@ -1991,7 +1991,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.safe-exploit-reproduction-and-patch-validation",
       "prompt_slug": "safe-exploit-reproduction-and-patch-validation",
       "identity_status": "permanent",
@@ -2143,7 +2143,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.model_security.model-and-ai-system-red-team-evaluation",
       "prompt_slug": "model-and-ai-system-red-team-evaluation",
       "identity_status": "permanent",
@@ -2298,7 +2298,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.operations.incident-triage-containment-eradication-and-recovery",
       "prompt_slug": "incident-triage-containment-eradication-and-recovery",
       "identity_status": "permanent",
@@ -2457,7 +2457,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.project-scaffolding-and-repository-bootstrap",
       "prompt_slug": "project-scaffolding-and-repository-bootstrap",
       "identity_status": "permanent",
@@ -2639,7 +2639,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.enablement.stakeholder-status-roadmap-and-release-communication",
       "prompt_slug": "stakeholder-status-roadmap-and-release-communication",
       "identity_status": "permanent",
@@ -2793,7 +2793,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.governance.project-health-completeness-and-release-readiness-gate",
       "prompt_slug": "project-health-completeness-and-release-readiness-gate",
       "identity_status": "permanent",
@@ -2969,7 +2969,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.governance.retrospective-continuous-improvement-and-learning",
       "prompt_slug": "retrospective-continuous-improvement-and-learning",
       "identity_status": "permanent",
@@ -3145,7 +3145,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.governance.license-compliance-and-governance-review",
       "prompt_slug": "license-compliance-and-governance-review",
       "identity_status": "permanent",
@@ -3293,7 +3293,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.enablement.contributor-and-support-experience-improvement",
       "prompt_slug": "contributor-and-support-experience-improvement",
       "identity_status": "permanent",
@@ -3466,7 +3466,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.governance.risk-and-technical-debt-portfolio",
       "prompt_slug": "risk-and-technical-debt-portfolio",
       "identity_status": "permanent",
@@ -3656,7 +3656,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.operations.infrastructure-cost-and-sustainability-review",
       "prompt_slug": "infrastructure-cost-and-sustainability-review",
       "identity_status": "permanent",
@@ -3810,7 +3810,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.agentic.agent-evaluation-drift-cost-and-rate-governance",
       "prompt_slug": "agent-evaluation-drift-cost-and-rate-governance",
       "identity_status": "permanent",
@@ -3966,7 +3966,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.coherence.project-consistency-uniformity-and-coherence-investigation-and-plan",
       "prompt_slug": "project-consistency-uniformity-and-coherence-investigation-and-plan",
       "identity_status": "permanent",
@@ -4127,7 +4127,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.coherence.project-consistency-uniformity-and-coherence-authorized-execution-and-verification",
       "prompt_slug": "project-consistency-uniformity-and-coherence-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -4289,7 +4289,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.code-quality-and-maintainability-investigation-and-plan",
       "prompt_slug": "code-quality-and-maintainability-investigation-and-plan",
       "identity_status": "permanent",
@@ -4467,7 +4467,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.code-quality-and-maintainability-authorized-execution-and-verification",
       "prompt_slug": "code-quality-and-maintainability-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -4631,7 +4631,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.debugging.debugging-root-cause-and-bug-resolution-investigation-and-plan",
       "prompt_slug": "debugging-root-cause-and-bug-resolution-investigation-and-plan",
       "identity_status": "permanent",
@@ -4793,7 +4793,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.debugging.debugging-root-cause-and-bug-resolution-authorized-execution-and-verification",
       "prompt_slug": "debugging-root-cause-and-bug-resolution-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -4955,7 +4955,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.cleanup.safe-cleanup-dead-code-and-repository-hygiene-investigation-and-plan",
       "prompt_slug": "safe-cleanup-dead-code-and-repository-hygiene-investigation-and-plan",
       "identity_status": "permanent",
@@ -5119,7 +5119,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.cleanup.safe-cleanup-dead-code-and-repository-hygiene-authorized-execution-and-verification",
       "prompt_slug": "safe-cleanup-dead-code-and-repository-hygiene-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -5283,7 +5283,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.refactoring-and-modernization-investigation-and-plan",
       "prompt_slug": "refactoring-and-modernization-investigation-and-plan",
       "identity_status": "permanent",
@@ -5447,7 +5447,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.refactoring-and-modernization-authorized-execution-and-verification",
       "prompt_slug": "refactoring-and-modernization-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -5611,7 +5611,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.testing.testing-and-verification-investigation-and-plan",
       "prompt_slug": "testing-and-verification-investigation-and-plan",
       "identity_status": "permanent",
@@ -5804,7 +5804,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.testing.testing-and-verification-authorized-execution-and-verification",
       "prompt_slug": "testing-and-verification-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -5968,7 +5968,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.security-posture-vulnerability-and-fixes-investigation-and-plan",
       "prompt_slug": "security-posture-vulnerability-and-fixes-investigation-and-plan",
       "identity_status": "permanent",
@@ -6165,7 +6165,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.security-posture-vulnerability-and-fixes-authorized-execution-and-verification",
       "prompt_slug": "security-posture-vulnerability-and-fixes-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -6330,7 +6330,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.dependency-and-software-supply-chain-security-investigation-and-plan",
       "prompt_slug": "dependency-and-software-supply-chain-security-investigation-and-plan",
       "identity_status": "permanent",
@@ -6517,7 +6517,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.dependency-and-software-supply-chain-security-authorized-execution-and-verification",
       "prompt_slug": "dependency-and-software-supply-chain-security-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -6682,7 +6682,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.configuration-environment-and-secrets-security-investigation-and-plan",
       "prompt_slug": "configuration-environment-and-secrets-security-investigation-and-plan",
       "identity_status": "permanent",
@@ -6873,7 +6873,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.configuration-environment-and-secrets-security-authorized-execution-and-verification",
       "prompt_slug": "configuration-environment-and-secrets-security-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -7042,7 +7042,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.identity-authentication-authorization-and-session-security-investigation-and-plan",
       "prompt_slug": "identity-authentication-authorization-and-session-security-investigation-and-plan",
       "identity_status": "permanent",
@@ -7220,7 +7220,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.identity-authentication-authorization-and-session-security-authorized-execution-and-verification",
       "prompt_slug": "identity-authentication-authorization-and-session-security-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -7384,7 +7384,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.api-cli-and-public-contract-integrity-investigation-and-plan",
       "prompt_slug": "api-cli-and-public-contract-integrity-investigation-and-plan",
       "identity_status": "permanent",
@@ -7562,7 +7562,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.api-cli-and-public-contract-integrity-authorized-execution-and-verification",
       "prompt_slug": "api-cli-and-public-contract-integrity-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -7728,7 +7728,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.data.data-storage-schema-and-migration-investigation-and-plan",
       "prompt_slug": "data-storage-schema-and-migration-investigation-and-plan",
       "identity_status": "permanent",
@@ -7916,7 +7916,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.data.data-storage-schema-and-migration-authorized-execution-and-verification",
       "prompt_slug": "data-storage-schema-and-migration-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -8083,7 +8083,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.performance-and-efficiency-investigation-and-plan",
       "prompt_slug": "performance-and-efficiency-investigation-and-plan",
       "identity_status": "permanent",
@@ -8261,7 +8261,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.performance-and-efficiency-authorized-execution-and-verification",
       "prompt_slug": "performance-and-efficiency-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -8426,7 +8426,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.operations.reliability-resilience-and-recovery-investigation-and-plan",
       "prompt_slug": "reliability-resilience-and-recovery-investigation-and-plan",
       "identity_status": "permanent",
@@ -8604,7 +8604,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.operations.reliability-resilience-and-recovery-authorized-execution-and-verification",
       "prompt_slug": "reliability-resilience-and-recovery-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -8770,7 +8770,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.delivery.ci-build-delivery-and-release-pipeline-investigation-and-plan",
       "prompt_slug": "ci-build-delivery-and-release-pipeline-investigation-and-plan",
       "identity_status": "permanent",
@@ -8934,7 +8934,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.delivery.ci-build-delivery-and-release-pipeline-authorized-execution-and-verification",
       "prompt_slug": "ci-build-delivery-and-release-pipeline-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -9099,7 +9099,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.operations.observability-detection-and-operations-investigation-and-plan",
       "prompt_slug": "observability-detection-and-operations-investigation-and-plan",
       "identity_status": "permanent",
@@ -9285,7 +9285,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.operations.observability-detection-and-operations-authorized-execution-and-verification",
       "prompt_slug": "observability-detection-and-operations-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -9451,7 +9451,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.cloud-container-and-infrastructure-security-investigation-and-plan",
       "prompt_slug": "cloud-container-and-infrastructure-security-investigation-and-plan",
       "identity_status": "permanent",
@@ -9616,7 +9616,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.security.cloud-container-and-infrastructure-security-authorized-execution-and-verification",
       "prompt_slug": "cloud-container-and-infrastructure-security-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -9780,7 +9780,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.governance.privacy-and-data-protection-investigation-and-plan",
       "prompt_slug": "privacy-and-data-protection-investigation-and-plan",
       "identity_status": "permanent",
@@ -9959,7 +9959,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.governance.privacy-and-data-protection-authorized-execution-and-verification",
       "prompt_slug": "privacy-and-data-protection-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -10127,7 +10127,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.agentic.agent-skill-tool-and-mcp-capability-lifecycle-investigation-and-plan",
       "prompt_slug": "agent-skill-tool-and-mcp-capability-lifecycle-investigation-and-plan",
       "identity_status": "permanent",
@@ -10303,7 +10303,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.agentic.agent-skill-tool-and-mcp-capability-lifecycle-authorized-execution-and-verification",
       "prompt_slug": "agent-skill-tool-and-mcp-capability-lifecycle-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -10467,7 +10467,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.agentic.agentic-security-permissions-and-trust-boundaries-investigation-and-plan",
       "prompt_slug": "agentic-security-permissions-and-trust-boundaries-investigation-and-plan",
       "identity_status": "permanent",
@@ -10672,7 +10672,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.agentic.agentic-security-permissions-and-trust-boundaries-authorized-execution-and-verification",
       "prompt_slug": "agentic-security-permissions-and-trust-boundaries-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -10837,7 +10837,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.agentic.multi-agent-architecture-and-agent-definitions-investigation-and-plan",
       "prompt_slug": "multi-agent-architecture-and-agent-definitions-investigation-and-plan",
       "identity_status": "permanent",
@@ -11004,7 +11004,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.agentic.multi-agent-architecture-and-agent-definitions-authorized-execution-and-verification",
       "prompt_slug": "multi-agent-architecture-and-agent-definitions-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -11172,7 +11172,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.model_security.model-and-ai-system-security-investigation-and-plan",
       "prompt_slug": "model-and-ai-system-security-investigation-and-plan",
       "identity_status": "permanent",
@@ -11337,7 +11337,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.model_security.model-and-ai-system-security-authorized-execution-and-verification",
       "prompt_slug": "model-and-ai-system-security-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -11502,7 +11502,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.model_security.prompt-injection-untrusted-input-and-tool-output-security-investigation-and-plan",
       "prompt_slug": "prompt-injection-untrusted-input-and-tool-output-security-investigation-and-plan",
       "identity_status": "permanent",
@@ -11680,7 +11680,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.model_security.prompt-injection-untrusted-input-and-tool-output-security-authorized-execution-and-verification",
       "prompt_slug": "prompt-injection-untrusted-input-and-tool-output-security-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -11844,7 +11844,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.design.user-experience-accessibility-and-localization-investigation-and-plan",
       "prompt_slug": "user-experience-accessibility-and-localization-investigation-and-plan",
       "identity_status": "permanent",
@@ -12028,7 +12028,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.design.user-experience-accessibility-and-localization-authorized-execution-and-verification",
       "prompt_slug": "user-experience-accessibility-and-localization-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -12190,7 +12190,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.design.brand-design-system-and-content-coherence-investigation-and-plan",
       "prompt_slug": "brand-design-system-and-content-coherence-investigation-and-plan",
       "identity_status": "permanent",
@@ -12352,7 +12352,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.design.brand-design-system-and-content-coherence-authorized-execution-and-verification",
       "prompt_slug": "brand-design-system-and-content-coherence-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -12554,7 +12554,7 @@
         "markdown",
         "json"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.enablement.documentation-knowledge-taxonomy-and-troubleshooting-investigation-and-plan",
       "prompt_slug": "complete-documentation-system-codebase-investigation-information-architecture-and-production-plan",
       "identity_status": "permanent",
@@ -12819,7 +12819,7 @@
         "pdf",
         "manpage"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.enablement.documentation-knowledge-taxonomy-and-troubleshooting-authorized-execution-and-verification",
       "prompt_slug": "complete-documentation-system-multi-manual-production-cross-linking-and-exact-verification",
       "identity_status": "permanent",
@@ -13027,7 +13027,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.prompt_system.prompt-suite-consistency-security-and-coherence-investigation-and-plan",
       "prompt_slug": "prompt-suite-consistency-security-and-coherence-investigation-and-plan",
       "identity_status": "permanent",
@@ -13204,7 +13204,7 @@
       "output_media": [
         "markdown"
       ],
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.prompt_system.prompt-suite-consistency-security-and-coherence-authorized-execution-and-verification",
       "prompt_slug": "prompt-suite-consistency-security-and-coherence-authorized-execution-and-verification",
       "identity_status": "permanent",
@@ -13365,7 +13365,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.research.deep-research-and-evidence-synthesis",
       "prompt_slug": "deep-research-and-evidence-synthesis",
       "identity_status": "permanent",
@@ -13531,7 +13531,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.research.research-protocol-literature-search-and-source-strategy",
       "prompt_slug": "research-protocol-literature-search-and-source-strategy",
       "identity_status": "permanent",
@@ -13689,7 +13689,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.analytics.data-analysis-statistical-reasoning-and-decision-support",
       "prompt_slug": "data-analysis-statistical-reasoning-and-decision-support",
       "identity_status": "permanent",
@@ -13869,7 +13869,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.research.research-integrity-citation-and-fact-verification",
       "prompt_slug": "research-integrity-citation-and-fact-verification",
       "identity_status": "permanent",
@@ -14034,7 +14034,7 @@
           "publication_metadata"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.editorial.research-backed-blog-article-and-newsletter-investigation-and-editorial-brief",
       "prompt_slug": "research-backed-blog-article-and-newsletter-investigation-and-editorial-brief",
       "identity_status": "permanent",
@@ -14208,7 +14208,7 @@
           "publication_metadata"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.editorial.research-backed-blog-article-and-newsletter-drafting-editing-and-publication-package",
       "prompt_slug": "research-backed-blog-article-and-newsletter-drafting-editing-and-publication-package",
       "identity_status": "permanent",
@@ -14382,7 +14382,7 @@
           "production_metadata"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_production.script-video-podcast-and-storyboard-research-and-production-brief",
       "prompt_slug": "script-video-podcast-and-storyboard-research-and-production-brief",
       "identity_status": "permanent",
@@ -14564,7 +14564,7 @@
           "production_metadata"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_production.script-video-podcast-and-storyboard-writing-and-production-package",
       "prompt_slug": "script-video-podcast-and-storyboard-writing-and-production-package",
       "identity_status": "permanent",
@@ -14737,7 +14737,7 @@
           "table_figure_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.academic.academic-paper-and-scholarly-manuscript-research-design-and-evidence-plan",
       "prompt_slug": "academic-paper-and-scholarly-manuscript-research-design-and-evidence-plan",
       "identity_status": "permanent",
@@ -14920,7 +14920,7 @@
           "table_figure_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.academic.academic-paper-and-scholarly-manuscript-drafting-citation-and-revision-package",
       "prompt_slug": "academic-paper-and-scholarly-manuscript-drafting-citation-and-revision-package",
       "identity_status": "permanent",
@@ -15082,7 +15082,7 @@
           "story_bible"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_writing.fiction-world-character-and-narrative-design",
       "prompt_slug": "fiction-world-character-and-narrative-design",
       "identity_status": "permanent",
@@ -15228,7 +15228,7 @@
           "manuscript"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_writing.story-fiction-and-narrative-drafting",
       "prompt_slug": "story-fiction-and-narrative-drafting",
       "identity_status": "permanent",
@@ -15372,7 +15372,7 @@
           "manuscript"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_writing.poetry-prose-and-literary-composition",
       "prompt_slug": "poetry-prose-and-literary-composition",
       "identity_status": "permanent",
@@ -15517,7 +15517,7 @@
           "redline_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.editorial.creative-critique-editing-and-anti-slop-refinement",
       "prompt_slug": "creative-critique-editing-and-anti-slop-refinement",
       "identity_status": "permanent",
@@ -15689,7 +15689,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.content_strategy.content-strategy-portfolio-and-editorial-architecture",
       "prompt_slug": "content-strategy-portfolio-and-editorial-architecture",
       "identity_status": "permanent",
@@ -15852,7 +15852,7 @@
           "graph_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.knowledge_design.content-graph-knowledge-architecture-and-repurposing-system",
       "prompt_slug": "content-graph-knowledge-architecture-and-repurposing-system",
       "identity_status": "permanent",
@@ -16024,7 +16024,7 @@
           "calendar_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.content_operations.content-calendar-scheduling-and-distribution-planning",
       "prompt_slug": "content-calendar-scheduling-and-distribution-planning",
       "identity_status": "permanent",
@@ -16227,7 +16227,7 @@
           "moodboard_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_strategy.idea-exploration-concept-development-and-moodboard-brief",
       "prompt_slug": "idea-exploration-concept-development-and-moodboard-brief",
       "identity_status": "permanent",
@@ -16420,7 +16420,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.brand.brand-strategy-positioning-naming-and-architecture",
       "prompt_slug": "brand-strategy-positioning-naming-and-architecture",
       "identity_status": "permanent",
@@ -16587,7 +16587,7 @@
           "asset_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.brand.brand-identity-guidelines-and-asset-system-production",
       "prompt_slug": "brand-identity-guidelines-and-asset-system-production",
       "identity_status": "permanent",
@@ -16747,7 +16747,7 @@
           "asset_matrix"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.marketing_creative.campaign-creative-concept-and-activation-planning",
       "prompt_slug": "campaign-creative-concept-and-activation-planning",
       "identity_status": "permanent",
@@ -16903,7 +16903,7 @@
           "financial_summary"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.business.pitch-proposal-and-business-case-development",
       "prompt_slug": "pitch-proposal-and-business-case-development",
       "identity_status": "permanent",
@@ -17063,7 +17063,7 @@
           "slide_blueprint"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.visual_communication.presentation-narrative-story-architecture-and-deck-blueprint",
       "prompt_slug": "presentation-narrative-story-architecture-and-deck-blueprint",
       "identity_status": "permanent",
@@ -17249,7 +17249,7 @@
           "presentation_export"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.visual_communication.html-css-and-javascript-slides-and-presentation-production",
       "prompt_slug": "html-css-and-javascript-slides-and-presentation-production",
       "identity_status": "permanent",
@@ -17425,7 +17425,7 @@
           "dashboard_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.data_visualization.dashboard-and-analytical-interface-production",
       "prompt_slug": "dashboard-and-analytical-interface-production",
       "identity_status": "permanent",
@@ -17603,7 +17603,7 @@
           "print_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.data_visualization.infographic-and-data-storytelling-production",
       "prompt_slug": "infographic-and-data-storytelling-production",
       "identity_status": "permanent",
@@ -17760,7 +17760,7 @@
           "diagram_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.visual_communication.blueprint-diagram-architecture-and-process-visualization-production",
       "prompt_slug": "blueprint-diagram-architecture-and-process-visualization-production",
       "identity_status": "permanent",
@@ -17921,7 +17921,7 @@
           "png_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.visual_communication.excalidraw-and-collaborative-whiteboard-diagram-production",
       "prompt_slug": "excalidraw-and-collaborative-whiteboard-diagram-production",
       "identity_status": "permanent",
@@ -18091,7 +18091,7 @@
           "svg"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.web_design.interactive-web-artifact-microsite-and-prototype-production",
       "prompt_slug": "interactive-web-artifact-microsite-and-prototype-production",
       "identity_status": "permanent",
@@ -18248,7 +18248,7 @@
           "design_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.web_design.frontend-visual-design-interaction-and-experience-polish",
       "prompt_slug": "frontend-visual-design-interaction-and-experience-polish",
       "identity_status": "permanent",
@@ -18399,7 +18399,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.visual_quality.visual-quality-accessibility-brand-and-responsive-review",
       "prompt_slug": "visual-quality-accessibility-brand-and-responsive-review",
       "identity_status": "permanent",
@@ -18565,7 +18565,7 @@
           "run_of_show"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.events.event-strategy-agenda-run-of-show-and-facilitation-design",
       "prompt_slug": "event-strategy-agenda-run-of-show-and-facilitation-design",
       "identity_status": "permanent",
@@ -18718,7 +18718,7 @@
           "gantt_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.planning.program-project-and-operations-planning",
       "prompt_slug": "program-project-and-operations-planning",
       "identity_status": "permanent",
@@ -18920,7 +18920,7 @@
           "whiteboard_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.facilitation.workshop-meeting-and-collaborative-session-design",
       "prompt_slug": "workshop-meeting-and-collaborative-session-design",
       "identity_status": "permanent",
@@ -19092,7 +19092,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.professional_writing.document-memo-report-sop-and-policy-production",
       "prompt_slug": "document-memo-report-sop-and-policy-production",
       "identity_status": "permanent",
@@ -19291,7 +19291,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.marketing.marketing-audience-and-go-to-market-strategy",
       "prompt_slug": "marketing-audience-and-go-to-market-strategy",
       "identity_status": "permanent",
@@ -19494,7 +19494,7 @@
           "playbook"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.sales_enablement.sales-enablement-customer-communication-and-lifecycle-content",
       "prompt_slug": "sales-enablement-customer-communication-and-lifecycle-content",
       "identity_status": "permanent",
@@ -19669,7 +19669,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.analytics.spreadsheet-financial-forecast-and-scenario-model-specification",
       "prompt_slug": "spreadsheet-financial-forecast-and-scenario-model-specification",
       "identity_status": "permanent",
@@ -19839,7 +19839,7 @@
           "learning_asset_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief",
       "prompt_slug": "learning-experience-curriculum-course-lesson-and-assessment-research-and-design-brief",
       "identity_status": "permanent",
@@ -20037,7 +20037,7 @@
           "learning_asset_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-material-production-and-validation",
       "prompt_slug": "learning-experience-curriculum-course-lesson-and-assessment-material-production-and-validation",
       "identity_status": "permanent",
@@ -20204,7 +20204,7 @@
           "codebook"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.research.survey-interview-questionnaire-and-research-instrument-design",
       "prompt_slug": "survey-interview-questionnaire-and-research-instrument-design",
       "identity_status": "permanent",
@@ -20391,7 +20391,7 @@
           "submission_checklist"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.business.grant-funding-sponsorship-and-award-proposal-production",
       "prompt_slug": "grant-funding-sponsorship-and-award-proposal-production",
       "identity_status": "permanent",
@@ -20560,7 +20560,7 @@
           "application_package"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.professional_communication.professional-profile-resume-portfolio-bio-and-application-package",
       "prompt_slug": "professional-profile-resume-portfolio-bio-and-application-package",
       "identity_status": "permanent",
@@ -20711,7 +20711,7 @@
           "message_package"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.professional_communication.email-letter-message-speech-announcement-and-general-communication-production",
       "prompt_slug": "email-letter-message-speech-announcement-and-general-communication-production",
       "identity_status": "permanent",
@@ -20867,7 +20867,7 @@
           "community_plan"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.content_operations.social-media-short-form-and-community-content-production",
       "prompt_slug": "social-media-short-form-and-community-content-production",
       "identity_status": "permanent",
@@ -21043,7 +21043,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.engineering.feature-change-and-integration-implementation",
       "prompt_slug": "feature-change-and-integration-implementation",
       "identity_status": "permanent",
@@ -21250,7 +21250,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.analytics.experiment-a-b-test-and-causal-measurement-design",
       "prompt_slug": "experiment-a-b-test-and-causal-measurement-design",
       "identity_status": "permanent",
@@ -21427,7 +21427,7 @@
           "locale_package"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.localization.translation-localization-and-transcreation",
       "prompt_slug": "translation-localization-and-transcreation",
       "identity_status": "permanent",
@@ -21599,7 +21599,7 @@
           "distribution_package"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.media_production.media-production-editing-and-distribution-blueprint",
       "prompt_slug": "media-production-editing-and-distribution-blueprint",
       "identity_status": "permanent",
@@ -21765,7 +21765,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.content_operations.content-performance-and-editorial-optimization",
       "prompt_slug": "content-performance-and-editorial-optimization",
       "identity_status": "permanent",
@@ -21922,7 +21922,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.academic.academic-peer-review-methodological-critique-and-rebuttal",
       "prompt_slug": "academic-peer-review-methodological-critique-and-rebuttal",
       "identity_status": "permanent",
@@ -22074,7 +22074,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.marketing.search-discoverability-seo-aeo-and-information-architecture",
       "prompt_slug": "search-discoverability-seo-aeo-and-information-architecture",
       "identity_status": "permanent",
@@ -22236,7 +22236,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.procurement.procurement-vendor-evaluation-rfp-and-due-diligence",
       "prompt_slug": "procurement-vendor-evaluation-rfp-and-due-diligence",
       "identity_status": "permanent",
@@ -22412,7 +22412,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.people.workforce-strategy-and-capacity-planning",
       "prompt_slug": "workforce-strategy-and-capacity-planning",
       "identity_status": "permanent",
@@ -22570,7 +22570,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.people.hiring-interview-selection-and-onboarding-design",
       "prompt_slug": "hiring-interview-selection-and-onboarding-design",
       "identity_status": "permanent",
@@ -22747,7 +22747,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.people.performance-competency-career-and-learning-frameworks",
       "prompt_slug": "performance-competency-career-and-learning-frameworks",
       "identity_status": "permanent",
@@ -22913,7 +22913,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.customer_operations.customer-support-and-service-operations",
       "prompt_slug": "customer-support-and-service-operations",
       "identity_status": "permanent",
@@ -23085,7 +23085,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.customer_operations.customer-success-retention-and-voice-of-customer",
       "prompt_slug": "customer-success-retention-and-voice-of-customer",
       "identity_status": "permanent",
@@ -23239,7 +23239,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.strategy.negotiation-and-decision-preparation",
       "prompt_slug": "negotiation-and-decision-preparation",
       "identity_status": "permanent",
@@ -23390,7 +23390,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.personal_productivity.personal-knowledge-productivity-and-work-system",
       "prompt_slug": "personal-knowledge-productivity-and-work-system",
       "identity_status": "permanent",
@@ -23570,7 +23570,7 @@
           "network_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.osint.osint-research-planning-authorization-and-collection-governance",
       "prompt_slug": "osint-research-planning-authorization-and-collection-governance",
       "identity_status": "permanent",
@@ -23738,7 +23738,7 @@
           "network_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.osint.osint-collection-source-validation-and-preservation",
       "prompt_slug": "osint-collection-source-validation-and-preservation",
       "identity_status": "permanent",
@@ -23895,7 +23895,7 @@
           "network_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.osint.osint-entity-timeline-geospatial-and-network-analysis",
       "prompt_slug": "osint-entity-timeline-geospatial-and-network-analysis",
       "identity_status": "permanent",
@@ -24056,7 +24056,7 @@
           "network_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.intelligence.intelligence-estimate-warning-and-executive-brief",
       "prompt_slug": "intelligence-estimate-warning-and-executive-brief",
       "identity_status": "permanent",
@@ -24215,7 +24215,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.legal.legal-research-and-issue-analysis",
       "prompt_slug": "legal-research-and-issue-analysis",
       "identity_status": "permanent",
@@ -24369,7 +24369,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.legal.contract-policy-and-clause-review",
       "prompt_slug": "contract-policy-and-clause-review",
       "identity_status": "permanent",
@@ -24548,7 +24548,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.finance.finance-fp-a-budget-and-management-analysis",
       "prompt_slug": "finance-fp-a-budget-and-management-analysis",
       "identity_status": "permanent",
@@ -24719,7 +24719,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.finance.accounting-close-reconciliation-and-control-review",
       "prompt_slug": "accounting-close-reconciliation-and-control-review",
       "identity_status": "permanent",
@@ -24881,7 +24881,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.finance.treasury-cash-flow-liquidity-and-runway-planning",
       "prompt_slug": "treasury-cash-flow-liquidity-and-runway-planning",
       "identity_status": "permanent",
@@ -25036,7 +25036,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.audit.internal-audit-control-testing-and-assurance",
       "prompt_slug": "internal-audit-control-testing-and-assurance",
       "identity_status": "permanent",
@@ -25204,7 +25204,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.operations.operations-process-design-and-continuous-improvement",
       "prompt_slug": "operations-process-design-and-continuous-improvement",
       "identity_status": "permanent",
@@ -25357,7 +25357,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.supply_chain.supply-chain-inventory-logistics-and-resilience-planning",
       "prompt_slug": "supply-chain-inventory-logistics-and-resilience-planning",
       "identity_status": "permanent",
@@ -25512,7 +25512,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.product.product-discovery-strategy-roadmap-and-lifecycle",
       "prompt_slug": "product-discovery-strategy-roadmap-and-lifecycle",
       "identity_status": "permanent",
@@ -25671,7 +25671,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.product.product-requirements-acceptance-and-release-package",
       "prompt_slug": "product-requirements-acceptance-and-release-package",
       "identity_status": "permanent",
@@ -25880,7 +25880,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.automation.business-process-automation-and-workflow-design",
       "prompt_slug": "business-process-automation-and-workflow-design",
       "identity_status": "permanent",
@@ -26049,7 +26049,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.data_governance.data-governance-quality-lineage-and-master-data",
       "prompt_slug": "data-governance-quality-lineage-and-master-data",
       "identity_status": "permanent",
@@ -26253,7 +26253,7 @@
           "network_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.intelligence.competitive-intelligence-and-strategic-scenario-planning",
       "prompt_slug": "competitive-intelligence-and-strategic-scenario-planning",
       "identity_status": "permanent",
@@ -26422,7 +26422,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.communications.crisis-communication-and-issues-management",
       "prompt_slug": "crisis-communication-and-issues-management",
       "identity_status": "permanent",
@@ -26605,7 +26605,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.communications.public-relations-media-briefing-and-thought-leadership",
       "prompt_slug": "public-relations-media-briefing-and-thought-leadership",
       "identity_status": "permanent",
@@ -26813,7 +26813,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.partnerships.partnership-alliance-and-ecosystem-strategy",
       "prompt_slug": "partnership-alliance-and-ecosystem-strategy",
       "identity_status": "permanent",
@@ -26980,7 +26980,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.reporting.board-executive-investor-and-management-reporting",
       "prompt_slug": "board-executive-investor-and-management-reporting",
       "identity_status": "permanent",
@@ -27160,7 +27160,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.reporting.meeting-intelligence-decision-capture-and-follow-through",
       "prompt_slug": "meeting-intelligence-decision-capture-and-follow-through",
       "identity_status": "permanent",
@@ -27340,7 +27340,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.public_affairs.policy-analysis-public-affairs-and-regulatory-monitoring",
       "prompt_slug": "policy-analysis-public-affairs-and-regulatory-monitoring",
       "identity_status": "permanent",
@@ -27498,7 +27498,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.sustainability.sustainability-esg-and-impact-reporting",
       "prompt_slug": "sustainability-esg-and-impact-reporting",
       "identity_status": "permanent",
@@ -27649,7 +27649,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.governance.ethics-responsible-ai-human-rights-and-societal-impact",
       "prompt_slug": "ethics-responsible-ai-human-rights-and-societal-impact",
       "identity_status": "permanent",
@@ -27807,7 +27807,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.accessibility.accessibility-plain-language-and-inclusive-content-transformation",
       "prompt_slug": "accessibility-plain-language-and-inclusive-content-transformation",
       "identity_status": "permanent",
@@ -27960,7 +27960,7 @@
           "evaluation_fixture"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.prompt_engineering.prompt-creation-and-specification",
       "prompt_slug": "prompt-creation-and-specification",
       "identity_status": "permanent",
@@ -28124,7 +28124,7 @@
           "evaluation_fixture"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.prompt_engineering.prompt-optimization-and-enhancement",
       "prompt_slug": "prompt-optimization-and-enhancement",
       "identity_status": "permanent",
@@ -28281,7 +28281,7 @@
           "evaluation_fixture"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.prompt_engineering.prompt-review-evaluation-and-adversarial-testing",
       "prompt_slug": "prompt-review-evaluation-and-adversarial-testing",
       "identity_status": "permanent",
@@ -28473,7 +28473,7 @@
           "evaluation_fixture"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.prompt_engineering.prompt-repair-refactoring-and-failure-resolution",
       "prompt_slug": "prompt-repair-refactoring-and-failure-resolution",
       "identity_status": "permanent",
@@ -28635,7 +28635,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.reporting.report-architecture-and-decision-narrative",
       "prompt_slug": "report-architecture-and-decision-narrative",
       "identity_status": "permanent",
@@ -28825,7 +28825,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.reporting.report-production-visualization-brief-and-quality-assurance",
       "prompt_slug": "report-production-visualization-brief-and-quality-assurance",
       "identity_status": "permanent",
@@ -29012,7 +29012,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.change_management.change-management-adoption-and-enablement",
       "prompt_slug": "change-management-adoption-and-enablement",
       "identity_status": "permanent",
@@ -29177,7 +29177,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.change_management.stakeholder-mapping-engagement-and-coalition-planning",
       "prompt_slug": "stakeholder-mapping-engagement-and-coalition-planning",
       "identity_status": "permanent",
@@ -29347,7 +29347,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.organization.organizational-design-operating-model-and-governance",
       "prompt_slug": "organizational-design-operating-model-and-governance",
       "identity_status": "permanent",
@@ -29501,7 +29501,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.quality.quality-management-sop-audit-and-continuous-improvement",
       "prompt_slug": "quality-management-sop-audit-and-continuous-improvement",
       "identity_status": "permanent",
@@ -29655,7 +29655,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.resilience.business-continuity-disaster-recovery-and-tabletop-exercise",
       "prompt_slug": "business-continuity-disaster-recovery-and-tabletop-exercise",
       "identity_status": "permanent",
@@ -29811,7 +29811,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.strategy.corporate-strategy-portfolio-and-capital-allocation",
       "prompt_slug": "corporate-strategy-portfolio-and-capital-allocation",
       "identity_status": "permanent",
@@ -29967,7 +29967,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.innovation.innovation-pipeline-idea-portfolio-and-experiment-governance",
       "prompt_slug": "innovation-pipeline-idea-portfolio-and-experiment-governance",
       "identity_status": "permanent",
@@ -30127,7 +30127,7 @@
           "fixture_pack"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.llm_operations.language-model-task-intake-context-engineering-and-prompt-pack",
       "prompt_slug": "language-model-task-intake-context-engineering-and-prompt-pack",
       "identity_status": "permanent",
@@ -30291,7 +30291,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.organization.department-operating-plan-and-cross-functional-coordination",
       "prompt_slug": "department-operating-plan-and-cross-functional-coordination",
       "identity_status": "permanent",
@@ -30445,7 +30445,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.knowledge_management.records-management-retention-and-institutional-memory",
       "prompt_slug": "records-management-retention-and-institutional-memory",
       "identity_status": "permanent",
@@ -30602,7 +30602,7 @@
           "pdf_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.people.employee-communication-culture-and-engagement",
       "prompt_slug": "employee-communication-culture-and-engagement",
       "identity_status": "permanent",
@@ -30761,7 +30761,7 @@
           "network_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.cyber_intelligence.cyber-threat-intelligence-and-security-research",
       "prompt_slug": "cyber-threat-intelligence-and-security-research",
       "identity_status": "permanent",
@@ -30913,7 +30913,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.risk.fraud-abuse-and-integrity-risk-analysis",
       "prompt_slug": "fraud-abuse-and-integrity-risk-analysis",
       "identity_status": "permanent",
@@ -31065,7 +31065,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.sales_operations.sales-operations-pipeline-forecast-and-revenue-planning",
       "prompt_slug": "sales-operations-pipeline-forecast-and-revenue-planning",
       "identity_status": "permanent",
@@ -31227,7 +31227,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.revenue_operations.revenue-operations-and-lifecycle-measurement",
       "prompt_slug": "revenue-operations-and-lifecycle-measurement",
       "identity_status": "permanent",
@@ -31401,7 +31401,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.administration.administrative-operations-travel-scheduling-and-executive-support",
       "prompt_slug": "administrative-operations-travel-scheduling-and-executive-support",
       "identity_status": "permanent",
@@ -31575,7 +31575,7 @@
           "chart_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.model_evaluation.model-evaluation-benchmarking-and-selection",
       "prompt_slug": "model-evaluation-benchmarking-and-selection",
       "identity_status": "permanent",
@@ -31734,7 +31734,7 @@
           "evaluation_plan"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.llm_engineering.llm-application-rag-memory-and-tool-architecture",
       "prompt_slug": "llm-application-rag-memory-and-tool-architecture",
       "identity_status": "permanent",
@@ -31902,7 +31902,7 @@
           "evaluation_plan"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.llm_engineering.knowledge-retrieval-search-and-rag-quality-evaluation",
       "prompt_slug": "knowledge-retrieval-search-and-rag-quality-evaluation",
       "identity_status": "permanent",
@@ -32077,7 +32077,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.ai_governance.ai-governance-model-risk-and-deployment-approval",
       "prompt_slug": "ai-governance-model-risk-and-deployment-approval",
       "identity_status": "permanent",
@@ -32257,7 +32257,7 @@
           "intent_brief"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.auto_orchestration.intent-interrogation-and-route-clarification",
       "prompt_slug": "intent-interrogation-and-route-clarification",
       "identity_status": "permanent",
@@ -32413,7 +32413,7 @@
           "skill_requirement_spec"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.auto_orchestration.skill-requirement-and-capability-fit-resolution",
       "prompt_slug": "skill-requirement-and-capability-fit-resolution",
       "identity_status": "permanent",
@@ -32568,7 +32568,7 @@
           "skill_candidate_matrix"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.auto_orchestration.missing-skill-discovery-and-candidate-qualification",
       "prompt_slug": "missing-skill-discovery-and-candidate-qualification",
       "identity_status": "permanent",
@@ -32725,7 +32725,7 @@
           "installation_receipt"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.auto_orchestration.governed-skill-installation-and-dual-location-registration",
       "prompt_slug": "governed-skill-installation-and-dual-location-registration",
       "identity_status": "permanent",
@@ -32894,7 +32894,7 @@
           "conformance_fixture"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.auto_orchestration.skill-creation-evaluation-and-dual-location-registration",
       "prompt_slug": "skill-creation-evaluation-and-dual-location-registration",
       "identity_status": "permanent",
@@ -33060,7 +33060,7 @@
           "skill_execution_receipt"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.auto_orchestration.generic-conditional-skill-execution-adapter",
       "prompt_slug": "generic-conditional-skill-execution-adapter",
       "identity_status": "permanent",
@@ -33222,7 +33222,7 @@
           "iteration_log"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.auto_orchestration.bounded-prompt-and-skill-loop-orchestrator",
       "prompt_slug": "bounded-prompt-and-skill-loop-orchestrator",
       "identity_status": "permanent",
@@ -33379,7 +33379,7 @@
           "loop_exit_decision"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.auto_orchestration.loop-exit-plateau-and-completion-adjudication-gate",
       "prompt_slug": "loop-exit-plateau-and-completion-adjudication-gate",
       "identity_status": "permanent",
@@ -33552,7 +33552,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.prompt_system.prompt-addition-registration-and-ecosystem-integration",
       "prompt_slug": "prompt-addition-registration-and-ecosystem-integration",
       "identity_status": "permanent",
@@ -33701,7 +33701,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.audit.repository-mission-promise-deviation-bloat-and-simplification-audit",
       "prompt_slug": "repository-mission-promise-deviation-bloat-and-simplification-audit",
       "identity_status": "permanent",
@@ -33852,7 +33852,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.healthcare_and_clinical.healthcare-clinical-operations",
       "prompt_slug": "healthcare-clinical-operations",
       "identity_status": "permanent",
@@ -34015,7 +34015,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.healthcare_and_clinical.patient-intake",
       "prompt_slug": "patient-intake",
       "identity_status": "permanent",
@@ -34178,7 +34178,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.healthcare_and_clinical.care-plan-summary",
       "prompt_slug": "care-plan-summary",
       "identity_status": "permanent",
@@ -34341,7 +34341,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.healthcare_and_clinical.clinical-note-qa",
       "prompt_slug": "clinical-note-qa",
       "identity_status": "permanent",
@@ -34504,7 +34504,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.healthcare_and_clinical.insurance-prior-auth-packet",
       "prompt_slug": "insurance-prior-auth-packet",
       "identity_status": "permanent",
@@ -34667,7 +34667,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.healthcare_and_clinical.medical-billing-denial-triage",
       "prompt_slug": "medical-billing-denial-triage",
       "identity_status": "permanent",
@@ -34830,7 +34830,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.healthcare_and_clinical.hipaa-evidence-checklist",
       "prompt_slug": "hipaa-evidence-checklist",
       "identity_status": "permanent",
@@ -34993,7 +34993,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.insurance.insurance-claims-intake",
       "prompt_slug": "insurance-claims-intake",
       "identity_status": "permanent",
@@ -35156,7 +35156,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.insurance.underwriting-risk-memo",
       "prompt_slug": "underwriting-risk-memo",
       "identity_status": "permanent",
@@ -35319,7 +35319,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.insurance.insurance-policy-comparison",
       "prompt_slug": "insurance-policy-comparison",
       "identity_status": "permanent",
@@ -35482,7 +35482,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.insurance.insurance-denial-appeal-prep",
       "prompt_slug": "insurance-denial-appeal-prep",
       "identity_status": "permanent",
@@ -35645,7 +35645,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.insurance.insurance-fraud-signal-review",
       "prompt_slug": "insurance-fraud-signal-review",
       "identity_status": "permanent",
@@ -35808,7 +35808,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.tax_and_finance_advisory.tax-document-checklist",
       "prompt_slug": "tax-document-checklist",
       "identity_status": "permanent",
@@ -35971,7 +35971,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.tax_and_finance_advisory.deduction-evidence-organizer",
       "prompt_slug": "deduction-evidence-organizer",
       "identity_status": "permanent",
@@ -36134,7 +36134,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.tax_and_finance_advisory.filing-risk-review",
       "prompt_slug": "filing-risk-review",
       "identity_status": "permanent",
@@ -36297,7 +36297,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.tax_and_finance_advisory.entity-tax-planning-brief",
       "prompt_slug": "entity-tax-planning-brief",
       "identity_status": "permanent",
@@ -36460,7 +36460,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.real_estate.real-estate-listing-strategy",
       "prompt_slug": "real-estate-listing-strategy",
       "identity_status": "permanent",
@@ -36623,7 +36623,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.real_estate.property-due-diligence",
       "prompt_slug": "property-due-diligence",
       "identity_status": "permanent",
@@ -36786,7 +36786,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.real_estate.lease-abstraction",
       "prompt_slug": "lease-abstraction",
       "identity_status": "permanent",
@@ -36949,7 +36949,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.real_estate.buyer-seller-checklist",
       "prompt_slug": "buyer-seller-checklist",
       "identity_status": "permanent",
@@ -37112,7 +37112,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.real_estate.market-comp-memo",
       "prompt_slug": "market-comp-memo",
       "identity_status": "permanent",
@@ -37275,7 +37275,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.construction.construction-scope-of-work",
       "prompt_slug": "construction-scope-of-work",
       "identity_status": "permanent",
@@ -37438,7 +37438,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.construction.construction-punch-list",
       "prompt_slug": "construction-punch-list",
       "identity_status": "permanent",
@@ -37601,7 +37601,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.construction.rfi-tracker",
       "prompt_slug": "rfi-tracker",
       "identity_status": "permanent",
@@ -37764,7 +37764,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.construction.change-order-review",
       "prompt_slug": "change-order-review",
       "identity_status": "permanent",
@@ -37927,7 +37927,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.construction.site-safety-checklist",
       "prompt_slug": "site-safety-checklist",
       "identity_status": "permanent",
@@ -38090,7 +38090,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.construction.contractor-bid-comparison",
       "prompt_slug": "contractor-bid-comparison",
       "identity_status": "permanent",
@@ -38253,7 +38253,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.manufacturing_and_quality.manufacturing-root-cause-quality-issue",
       "prompt_slug": "manufacturing-root-cause-quality-issue",
       "identity_status": "permanent",
@@ -38416,7 +38416,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.manufacturing_and_quality.maintenance-schedule",
       "prompt_slug": "maintenance-schedule",
       "identity_status": "permanent",
@@ -38579,7 +38579,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.manufacturing_and_quality.supplier-defect-report",
       "prompt_slug": "supplier-defect-report",
       "identity_status": "permanent",
@@ -38742,7 +38742,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.manufacturing_and_quality.qa-acceptance-plan",
       "prompt_slug": "qa-acceptance-plan",
       "identity_status": "permanent",
@@ -38905,7 +38905,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.retail_and_ecommerce.retail-ecommerce-product-listing-optimization",
       "prompt_slug": "retail-ecommerce-product-listing-optimization",
       "identity_status": "permanent",
@@ -39068,7 +39068,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.retail_and_ecommerce.merchandising-calendar",
       "prompt_slug": "merchandising-calendar",
       "identity_status": "permanent",
@@ -39231,7 +39231,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.retail_and_ecommerce.sku-rationalization",
       "prompt_slug": "sku-rationalization",
       "identity_status": "permanent",
@@ -39394,7 +39394,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.retail_and_ecommerce.return-rate-analysis",
       "prompt_slug": "return-rate-analysis",
       "identity_status": "permanent",
@@ -39557,7 +39557,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.retail_and_ecommerce.marketplace-compliance",
       "prompt_slug": "marketplace-compliance",
       "identity_status": "permanent",
@@ -39720,7 +39720,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.hospitality_and_travel.hospitality-guest-experience-audit",
       "prompt_slug": "hospitality-guest-experience-audit",
       "identity_status": "permanent",
@@ -39883,7 +39883,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.hospitality_and_travel.itinerary-operations-plan",
       "prompt_slug": "itinerary-operations-plan",
       "identity_status": "permanent",
@@ -40046,7 +40046,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.hospitality_and_travel.event-hospitality-checklist",
       "prompt_slug": "event-hospitality-checklist",
       "identity_status": "permanent",
@@ -40209,7 +40209,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.hospitality_and_travel.travel-disruption-response",
       "prompt_slug": "travel-disruption-response",
       "identity_status": "permanent",
@@ -40372,7 +40372,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.nonprofit_and_programs.nonprofit-donor-campaign",
       "prompt_slug": "nonprofit-donor-campaign",
       "identity_status": "permanent",
@@ -40535,7 +40535,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.nonprofit_and_programs.nonprofit-impact-report",
       "prompt_slug": "nonprofit-impact-report",
       "identity_status": "permanent",
@@ -40698,7 +40698,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.nonprofit_and_programs.volunteer-operations",
       "prompt_slug": "volunteer-operations",
       "identity_status": "permanent",
@@ -40861,7 +40861,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.nonprofit_and_programs.grant-compliance-tracking",
       "prompt_slug": "grant-compliance-tracking",
       "identity_status": "permanent",
@@ -41024,7 +41024,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.nonprofit_and_programs.field-program-monitoring",
       "prompt_slug": "field-program-monitoring",
       "identity_status": "permanent",
@@ -41187,7 +41187,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.government_and_policy.government-public-notice-drafting",
       "prompt_slug": "government-public-notice-drafting",
       "identity_status": "permanent",
@@ -41350,7 +41350,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.government_and_policy.citizen-response-packet",
       "prompt_slug": "citizen-response-packet",
       "identity_status": "permanent",
@@ -41513,7 +41513,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.government_and_policy.procurement-compliance",
       "prompt_slug": "procurement-compliance",
       "identity_status": "permanent",
@@ -41676,7 +41676,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.government_and_policy.policy-memo",
       "prompt_slug": "policy-memo",
       "identity_status": "permanent",
@@ -41839,7 +41839,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.government_and_policy.legislative-bill-summary",
       "prompt_slug": "legislative-bill-summary",
       "identity_status": "permanent",
@@ -42002,7 +42002,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_and_media_operations.pre-production-command-center",
       "prompt_slug": "pre-production-command-center",
       "identity_status": "permanent",
@@ -42165,7 +42165,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_and_media_operations.publicist-outreach-operations",
       "prompt_slug": "publicist-outreach-operations",
       "identity_status": "permanent",
@@ -42328,7 +42328,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_and_media_operations.media-agency-account-operations",
       "prompt_slug": "media-agency-account-operations",
       "identity_status": "permanent",
@@ -42491,7 +42491,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_and_media_operations.influencer-creator-campaign-operations",
       "prompt_slug": "influencer-creator-campaign-operations",
       "identity_status": "permanent",
@@ -42654,7 +42654,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_and_media_operations.content-production-gruntwork",
       "prompt_slug": "content-production-gruntwork",
       "identity_status": "permanent",
@@ -42817,7 +42817,7 @@
           "json"
         ]
       },
-      "suite_version": "2.0.0",
+      "suite_version": "2.0.1",
       "capability_id": "md.creative_and_media_operations.creative-legal-clearance",
       "prompt_slug": "creative-legal-clearance",
       "identity_status": "permanent",
@@ -42905,7 +42905,7 @@
       }
     }
   ],
-  "suite_version": "2.0.0",
+  "suite_version": "2.0.1",
   "identity_policy": {
     "capability_id": "permanent",
     "prompt_id": "permanent",

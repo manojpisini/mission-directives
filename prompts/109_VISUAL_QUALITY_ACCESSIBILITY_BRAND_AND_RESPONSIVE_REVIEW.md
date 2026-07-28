@@ -60,7 +60,7 @@ output_contract:
   - path: artifacts/visual_quality_accessibility_brand_and_responsive_review/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.visual_quality.visual-quality-accessibility-brand-and-responsive-review
 prompt_slug: visual-quality-accessibility-brand-and-responsive-review
 identity_status: permanent

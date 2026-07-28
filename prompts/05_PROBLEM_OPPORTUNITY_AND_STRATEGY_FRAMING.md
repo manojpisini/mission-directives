@@ -57,7 +57,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.strategy.problem-opportunity-and-strategy-framing
 prompt_slug: problem-opportunity-and-strategy-framing
 identity_status: permanent

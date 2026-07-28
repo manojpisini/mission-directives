@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.healthcare_and_clinical.patient-intake
 prompt_slug: patient-intake
 identity_status: permanent

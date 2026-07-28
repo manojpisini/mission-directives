@@ -61,7 +61,7 @@ output_contract:
   - path: reports/partnership_alliance_and_ecosystem_strategy/partnership_alliance_and_ecosystem_strategy_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.partnerships.partnership-alliance-and-ecosystem-strategy
 prompt_slug: partnership-alliance-and-ecosystem-strategy
 identity_status: permanent

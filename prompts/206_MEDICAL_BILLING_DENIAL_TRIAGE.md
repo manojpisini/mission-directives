@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.0
+suite_version: 2.0.1
 capability_id: md.healthcare_and_clinical.medical-billing-denial-triage
 prompt_slug: medical-billing-denial-triage
 identity_status: permanent
