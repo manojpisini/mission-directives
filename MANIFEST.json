@@ -18,8 +18,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 675,
-      "sha256": "8e70492d46e7c4755fcabcd272aafb7939f7363154af399e156f4c131584daff"
+      "bytes": 684,
+      "sha256": "330f8dd9b8157d8f8875030bba104e6c9ca04346952792c98d12f0ec94feffe2"
     },
     {
       "path": ".pre-commit-config.yaml",
@@ -120,71 +120,6 @@
       "path": "assets/readme/routing-flow.svg",
       "bytes": 2922,
       "sha256": "0f505d24b12cc0ea58c7d41d27da6b68a33615922c16119a5608ca3720ec2844"
-    },
-    {
-      "path": "blog.zip",
-      "bytes": 31244,
-      "sha256": "6ac2e4ab4bca3164f95122d33f2f010e4ea2db90c06e78b24b9f9d777bb2b89d"
-    },
-    {
-      "path": "blog/01-building-a-prompt-library-that-routes.md",
-      "bytes": 7624,
-      "sha256": "7dfc3e29783e3f92e0d864d5358bdce368850503b6635f85b662ad40cc8c6d5d"
-    },
-    {
-      "path": "blog/02-prompts-as-public-interfaces.md",
-      "bytes": 7408,
-      "sha256": "3a36c57e979a061c2bf73566d0592b7aee782566f0f344a00a176be4d0685b2f"
-    },
-    {
-      "path": "blog/03-security-boundaries-for-agentic-prompt-systems.md",
-      "bytes": 8394,
-      "sha256": "5b6291641986adabf2caac9cc1ac798bbb24dfa2cfd6f19a167c30bd7e6a9b7d"
-    },
-    {
-      "path": "blog/04-prompt-engineering-needs-manifests-not-vibes.md",
-      "bytes": 7637,
-      "sha256": "268794a9a0b5f1f4811fdd4bf11c5cf96096442febecc0e415e960e2026084a6"
-    },
-    {
-      "path": "blog/05-what-prompt-engineering-can-learn-from-package-managers.md",
-      "bytes": 7337,
-      "sha256": "144df2112cf11c62c1dcdcb0047a346d4023c2452b2dc388e9d6758fb5be1585"
-    },
-    {
-      "path": "blog/06-building-mission-directives-mistakes-that-made-it-better.md",
-      "bytes": 8599,
-      "sha256": "c55c7338f149c52aa98f599acfd3947016b3ac33a6f19a508786326ca479789a"
-    },
-    {
-      "path": "blog/assets/contracts-scenarios-pairs.svg",
-      "bytes": 4721,
-      "sha256": "8b9bd47b0b61a807fc6ec403fdb2801759e72feee564803e5ac05ba890c0fc3a"
-    },
-    {
-      "path": "blog/assets/mistakes-to-architecture.svg",
-      "bytes": 4253,
-      "sha256": "0f271308bd170068ed15906cc90f417a35032a468e3ee9288b36369d2f06c7c4"
-    },
-    {
-      "path": "blog/assets/routing-not-library.svg",
-      "bytes": 5247,
-      "sha256": "3b129179c353fb1021918e7caa036ab9e00a57060fb6a1481dceac3423872bf8"
-    },
-    {
-      "path": "blog/assets/runtime-payload-boundary.svg",
-      "bytes": 4555,
-      "sha256": "f4bf1a5a5a0f6d2b34dcb4254ed58df660aab2d1a990993b2e48d70d5a744ba2"
-    },
-    {
-      "path": "blog/assets/security-boundary-ladder.svg",
-      "bytes": 4438,
-      "sha256": "ae030bda3bf50d227aecd2f108967ee1f181941a88c91f6a778257e795db4f09"
-    },
-    {
-      "path": "blog/assets/validation-stack.svg",
-      "bytes": 3058,
-      "sha256": "9d52182db32b805ca867101de73a8fca947b1f2f578cf0e020b41806416c2679"
     },
     {
       "path": "catalog.json",
@@ -12543,8 +12478,8 @@
     },
     {
       "path": "tests/test_manifest_hygiene.py",
-      "bytes": 4804,
-      "sha256": "278191e265351577b04e637a2cfdf1fbb5f2b1ceacf37b667b528032c5ac374a"
+      "bytes": 5609,
+      "sha256": "e83c981b8687730db835486803d1fd4e38438282eb9292651332340d787c5c9c"
     },
     {
       "path": "tests/test_mastery_manual.py",
@@ -12648,8 +12583,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 5165,
-      "sha256": "7090b19b238e2d95afaf57e6e65c19b204a43171da20f32874134b7ab7709e38"
+      "bytes": 5950,
+      "sha256": "f42257644524891a9f75b838c36ff60443056f734e63a2f33195bcd3a5b82b4e"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",

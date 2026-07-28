@@ -15,7 +15,7 @@ if __name__ == "__main__":
         from tools.tool_runtime import bootstrap_tool
     _MD_TUI = bootstrap_tool(__file__)
 
-import argparse, hashlib, json, os
+import argparse, hashlib, json, os, subprocess
 from pathlib import Path
 from typing import Iterable
 
@@ -84,6 +84,28 @@ def is_manifest_file(path: Path, root: Path) -> bool:
 
 def iter_manifest_files(root: Path) -> Iterable[Path]:
     root = root.resolve()
+    candidates = None
+    if (root / ".git").exists():
+        result = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(root),
+                "ls-files",
+                "-z",
+                "--cached",
+                "--others",
+                "--exclude-standard",
+            ],
+            capture_output=True,
+            check=False,
+        )
+        if result.returncode == 0:
+            candidates = {
+                value
+                for value in result.stdout.decode("utf-8", errors="surrogateescape").split("\0")
+                if value
+            }
     for directory, dirnames, filenames in os.walk(
         root, topdown=True, followlinks=False
     ):
@@ -106,6 +128,9 @@ def iter_manifest_files(root: Path) -> Iterable[Path]:
         dirnames[:] = kept
         for name in sorted(filenames):
             path = current / name
+            relative = path.relative_to(root).as_posix()
+            if candidates is not None and relative not in candidates:
+                continue
             if is_manifest_file(path, root):
                 yield path
 

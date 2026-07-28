@@ -38,6 +38,7 @@ prompt_imports/
 infographics/
 infographic/
 blog/
+blog.zip
 
 # Python package build output
 dist/

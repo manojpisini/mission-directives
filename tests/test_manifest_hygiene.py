@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -87,6 +88,25 @@ def test_manifest_excludes_python_package_build_outputs(tmp_path):
 
     paths = {row["path"] for row in current(tmp_path)["files"]}
     assert paths == {"VERSION"}
+
+
+def test_manifest_honors_git_ignored_paths(tmp_path):
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    (tmp_path / "VERSION").write_text("1.0.0\n")
+    (tmp_path / ".gitignore").write_text("ignored/\nlocal.zip\n")
+    (tmp_path / "tracked.txt").write_text("tracked\n")
+    (tmp_path / "untracked.txt").write_text("untracked\n")
+    (tmp_path / "local.zip").write_text("ignored\n")
+    ignored = tmp_path / "ignored"
+    ignored.mkdir()
+    (ignored / "draft.md").write_text("ignored\n")
+    subprocess.run(
+        ["git", "-C", str(tmp_path), "add", "VERSION", ".gitignore", "tracked.txt"],
+        check=True,
+    )
+
+    paths = {row["path"] for row in current(tmp_path)["files"]}
+    assert paths == {".gitignore", "VERSION", "tracked.txt", "untracked.txt"}
 
 
 def test_manifest_ignores_site_preview_logs(tmp_path):
