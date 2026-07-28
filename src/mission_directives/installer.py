@@ -289,6 +289,8 @@ def install_project(
 ) -> dict[str, Any]:
     project = _assert_safe_project(Path(project))
     destination = project / PROJECT_DIR
+    if destination.is_symlink():
+        raise ValueError(f"Installation destination is a symbolic link: {destination}")
     if destination.exists() and not destination.is_dir():
         raise ValueError(f"Installation destination is not a directory: {destination}")
     if destination.exists() and not replace:

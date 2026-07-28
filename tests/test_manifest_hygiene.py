@@ -71,6 +71,24 @@ def test_manifest_excludes_site_build_and_generated_reference_outputs(tmp_path):
         path.startswith(("site/node_modules/", "site/dist/", "site/.astro/"))
         for path in paths
     )
+
+
+def test_manifest_excludes_python_package_build_outputs(tmp_path):
+    (tmp_path / "VERSION").write_text("1.0.0\n")
+    for relative in (
+        "dist/package.whl",
+        "build/lib/module.py",
+        "src/mission_directives.egg-info/PKG-INFO",
+        "src/mission_directives/_runtime/catalog.json",
+    ):
+        output = tmp_path / relative
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text("generated\n")
+
+    paths = {row["path"] for row in current(tmp_path)["files"]}
+    assert paths == {"VERSION"}
+
+
 def test_manifest_ignores_site_preview_logs(tmp_path):
     (tmp_path / "VERSION").write_text("1.0.0\n")
     (tmp_path / "site-preview.err.log").write_text("err\n")

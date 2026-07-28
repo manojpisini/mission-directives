@@ -267,21 +267,6 @@
       "sha256": "55b6df572144bd29c89185ee60782cd871ceca8c04daaa62424e28fbfe2dda7a"
     },
     {
-      "path": "dist/.gitignore",
-      "bytes": 1,
-      "sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
-    },
-    {
-      "path": "dist/mission_directives-2.0.0-py3-none-any.whl",
-      "bytes": 2410775,
-      "sha256": "99e93a72a018660cf44eff65d8bc8010cd9d17f9de09df15eb9e089c6280621a"
-    },
-    {
-      "path": "dist/mission_directives-2.0.0.tar.gz",
-      "bytes": 1144675,
-      "sha256": "47761053bc1e8c80312bedc0ff4ef357e96e653f12cf0f28cc6395c2985fa494"
-    },
-    {
       "path": "docs/AGENT_LIBRARY_INTEGRATION_GUIDE.md",
       "bytes": 5194,
       "sha256": "a90cb0f77d7c4b1771cd292dc63065e056cb925060777c49909d940f8b800178"
@@ -12118,8 +12103,8 @@
     },
     {
       "path": "src/mission_directives/installer.py",
-      "bytes": 17566,
-      "sha256": "5915e1a25891ce19b735cfa2aa64ce92a643eec793229b82980043eac9babeab"
+      "bytes": 17687,
+      "sha256": "e80a0051bec8871112717f0d1c7970cabe9c928f5b42ed0fc1d7595fd5043aad"
     },
     {
       "path": "src/mission_directives/project_config.py",
@@ -12558,8 +12543,8 @@
     },
     {
       "path": "tests/test_manifest_hygiene.py",
-      "bytes": 4256,
-      "sha256": "23ea50eb06c763160d32bbb0c5ad735ad1db1643875287d3e88e4f62dfc5bf0b"
+      "bytes": 4804,
+      "sha256": "278191e265351577b04e637a2cfdf1fbb5f2b1ceacf37b667b528032c5ac374a"
     },
     {
       "path": "tests/test_mastery_manual.py",
@@ -12608,8 +12593,8 @@
     },
     {
       "path": "tests/test_security_hardening.py",
-      "bytes": 25581,
-      "sha256": "35a4b1b91576cdc8bac46a5588a811c189c74a58517c0132363533c548cb92ee"
+      "bytes": 25587,
+      "sha256": "8ed21a3edc78d7b0f6e1d4c53eaeb0bbdafafbbad2b3b98e66c6450f05e26722"
     },
     {
       "path": "tests/test_template_system.py",
@@ -12663,8 +12648,8 @@
     },
     {
       "path": "tools/build_manifest.py",
-      "bytes": 4840,
-      "sha256": "e14e763637d5928c4148e173f65bc68d4d7c08b226068cf9545a157f6a254a56"
+      "bytes": 5165,
+      "sha256": "7090b19b238e2d95afaf57e6e65c19b204a43171da20f32874134b7ab7709e38"
     },
     {
       "path": "tools/build_schema_contract_fixtures.py",

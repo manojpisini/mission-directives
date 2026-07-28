@@ -74,7 +74,7 @@ def test_installer_rejects_runtime_symlink_escape(tmp_path):
     project.mkdir()
     outside = tmp_path / "outside"
     outside.mkdir()
-    symlink_or_skip(project / ".prompt_suite", outside, target_is_directory=True)
+    symlink_or_skip(project / ".mission-directives", outside, target_is_directory=True)
     with pytest.raises(ValueError, match="symlink"):
         installer.install(project)
     assert not (project / "prompts").exists()

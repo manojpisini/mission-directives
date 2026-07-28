@@ -48,6 +48,11 @@ SITE_GENERATED_PREFIXES = {
     ("site", "node_modules"),
     ("site", "src", "content", "docs", "reference"),
 }
+PACKAGE_GENERATED_PREFIXES = {
+    ("build",),
+    ("dist",),
+    ("src", "mission_directives", "_runtime"),
+}
 
 
 def _matches_prefix(relative: Path, prefixes: set[tuple[str, ...]]) -> bool:
@@ -58,7 +63,7 @@ def is_manifest_file(path: Path, root: Path) -> bool:
     relative = path.relative_to(root)
     if relative == Path(".prompt_suite/prompt-library-import.lock"):
         return False
-    if _matches_prefix(relative, SITE_GENERATED_PREFIXES):
+    if _matches_prefix(relative, SITE_GENERATED_PREFIXES | PACKAGE_GENERATED_PREFIXES):
         return False
     if path.is_symlink():
         raise ValueError(
@@ -67,6 +72,8 @@ def is_manifest_file(path: Path, root: Path) -> bool:
     if path.name in EXCLUDED_FILENAMES:
         return False
     if any(part in EXCLUDED_DIRNAMES for part in relative.parts):
+        return False
+    if any(part.endswith(".egg-info") for part in relative.parts):
         return False
     if path.suffix in EXCLUDED_SUFFIXES:
         return False
@@ -85,13 +92,15 @@ def iter_manifest_files(root: Path) -> Iterable[Path]:
         for name in sorted(dirnames):
             candidate = current / name
             rel = candidate.relative_to(root)
-            if _matches_prefix(rel, SITE_GENERATED_PREFIXES):
+            if _matches_prefix(rel, SITE_GENERATED_PREFIXES | PACKAGE_GENERATED_PREFIXES):
                 continue
             if candidate.is_symlink():
                 raise ValueError(
                     f"symbolic link is not allowed in sealed manifest: {rel.as_posix()}"
                 )
             if name in EXCLUDED_DIRNAMES:
+                continue
+            if name.endswith(".egg-info"):
                 continue
             kept.append(name)
         dirnames[:] = kept
