@@ -12103,8 +12103,8 @@
     },
     {
       "path": "src/mission_directives/installer.py",
-      "bytes": 17687,
-      "sha256": "e80a0051bec8871112717f0d1c7970cabe9c928f5b42ed0fc1d7595fd5043aad"
+      "bytes": 17681,
+      "sha256": "6d16c441afa73d17d39921ebfc72adf5dc1d90a4cd99c088530909264c1d1348"
     },
     {
       "path": "src/mission_directives/project_config.py",
