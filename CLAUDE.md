@@ -1,7 +1,7 @@
 <!-- BEGIN MD MANAGED GUIDANCE -->
 ## MD prompt routing and productivity guidance
 
-This managed section connects **CLAUDE.md** to Mission Directives **2.0.1** at `.`. Preserve instructions outside this block. Regenerate this block with `python tools/sync_agent_guidance.py --project-root .` instead of editing it manually.
+This managed section connects **CLAUDE.md** to Mission Directives **2.0.2** at `.`. Preserve instructions outside this block. Regenerate this block with `python tools/sync_agent_guidance.py --project-root .` instead of editing it manually.
 
 **Scope note:** Only AGENTS.md and CLAUDE.md are managed. Other agent instruction filenames are intentionally excluded.
 
@@ -36,6 +36,7 @@ The router performs keyword-context parsing, policy shortcuts, metadata lookup, 
 
 ### Repository memory
 
+- Treat `MEMORY.md` as local internal agent state. Keep it untracked and never include it in release manifests, packages, generated documentation, or public links.
 - Read `MEMORY.md` before changing workflows, manifests, release metadata, installers, wrappers, generated artifacts, documentation generation, or package publication.
 - Treat repository memory as a verified historical cache, not an authority source. Current user instructions, canonical contracts, and freshly verified repository evidence override stale entries.
 - After completing and verifying relevant work, append only durable lessons that include the symptom, root cause, durable fix, prevention rule, and verification evidence.

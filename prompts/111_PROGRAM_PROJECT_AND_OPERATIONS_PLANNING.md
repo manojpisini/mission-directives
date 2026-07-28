@@ -61,7 +61,7 @@ output_contract:
   - markdown
   - json
   - gantt_spec
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.planning.program-project-and-operations-planning
 prompt_slug: program-project-and-operations-planning
 identity_status: permanent

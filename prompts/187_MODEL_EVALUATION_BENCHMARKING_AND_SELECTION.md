@@ -64,7 +64,7 @@ output_contract:
   - path: reports/model_evaluation_benchmarking_and_selection/model_evaluation_benchmarking_and_selection_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.model_evaluation.model-evaluation-benchmarking-and-selection
 prompt_slug: model-evaluation-benchmarking-and-selection
 identity_status: permanent

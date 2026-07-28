@@ -19,6 +19,9 @@ def test_site_uses_project_pages_base_and_static_shell():
         PUBLIC / "styles.css",
         PUBLIC / "app.js",
         PUBLIC / "docs.html",
+        PUBLIC / "getting-started.html",
+        PUBLIC / "installation.html",
+        PUBLIC / "contributing.html",
         PUBLIC / "guides.html",
         PUBLIC / "manuals.html",
         PUBLIC / "reference.html",
@@ -29,6 +32,42 @@ def test_site_uses_project_pages_base_and_static_shell():
     html = (SITE / "src" / "pages" / "index.astro").read_text(encoding="utf-8")
     assert 'href="styles.css"' in html
     assert "Mission Directives" in html
+    assert "assets/brand/mission_directives_full_logo_lateral.svg" in html
+    assert "brand__mark" not in html
+
+
+def test_site_uses_canonical_brand_assets_and_onboarding_pages():
+    brand = PUBLIC / "assets" / "brand"
+    for name in (
+        "mission_directives_full_logo_lateral.svg",
+        "mission_directives_full_logo.svg",
+        "mission_directives_logo.svg",
+        "mission_directives_wordmark.svg",
+    ):
+        assert (ROOT / "assets" / "images" / name).exists()
+        assert (brand / name).exists()
+
+    assert (PUBLIC / "favicon.svg").read_bytes() == (
+        ROOT / "assets" / "images" / "mission_directives_logo.svg"
+    ).read_bytes()
+
+    for name, heading in (
+        ("getting-started.html", "Getting Started"),
+        ("installation.html", "Installation"),
+        ("contributing.html", "Contributing"),
+    ):
+        html = (PUBLIC / name).read_text(encoding="utf-8")
+        assert heading in html
+        assert "assets/brand/mission_directives_full_logo_lateral.svg" in html
+        assert "brand__mark" not in html
+
+    contributing = (PUBLIC / "contributing.html").read_text(encoding="utf-8")
+    assert 'href="https://github.com/manojpisini/mission-directives/blob/main/MEMORY.md"' in contributing
+    assert "/reference/manuals/memory/" not in contributing
+
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "assets/images/mission_directives_full_logo_lateral.svg" in readme
+    assert "assets/readme/mission-directives-banner.svg" not in readme
 
 
 def test_docs_site_is_sectioned_and_visual():
@@ -59,12 +98,16 @@ def test_site_generation_is_canonical_and_build_driven():
     )
     for source in (
         "docs.html",
+        "getting-started.html",
+        "installation.html",
+        "contributing.html",
         "guides.html",
         "manuals.html",
         "reference.html",
         "reference/manuals",
         "visualAsset",
         "technical-map",
+        "copyFile",
     ):
         assert source in generator
     assert "markdownToHtml" in generator

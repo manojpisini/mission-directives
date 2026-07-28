@@ -68,7 +68,7 @@ output_contract:
   - json
   - docx_spec
   - pdf_spec
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.people.hiring-interview-selection-and-onboarding-design
 prompt_slug: hiring-interview-selection-and-onboarding-design
 identity_status: permanent

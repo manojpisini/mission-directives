@@ -3,7 +3,7 @@ template_id: decks/product-strategy
 title: Product Strategy Deck
 family: presentation
 status: stable
-suite_version: 2.0.1
+suite_version: 2.0.2
 required_contracts:
   - core/run-manifest
   - core/evidence-register

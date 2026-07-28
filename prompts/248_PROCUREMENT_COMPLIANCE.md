@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.government_and_policy.procurement-compliance
 prompt_slug: procurement-compliance
 identity_status: permanent

@@ -68,7 +68,7 @@ output_contract:
   - json
   - docx_spec
   - pdf_spec
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.people.performance-competency-career-and-learning-frameworks
 prompt_slug: performance-competency-career-and-learning-frameworks
 identity_status: permanent

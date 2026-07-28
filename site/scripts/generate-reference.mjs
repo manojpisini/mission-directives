@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -6,9 +6,17 @@ const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'
 const repoRoot = path.resolve(siteRoot, '..');
 const docsRoot = path.join(repoRoot, 'docs');
 const manualsRoot = path.join(siteRoot, 'public', 'reference', 'manuals');
+const brandSourceRoot = path.join(repoRoot, 'assets', 'images');
+const brandPublicRoot = path.join(siteRoot, 'public', 'assets', 'brand');
 const catalogPath = path.join(repoRoot, 'catalog.json');
 const scenarioCatalogPath = path.join(repoRoot, 'SCENARIO_CATALOG.json');
 const base = '/mission-directives/';
+const brandFiles = [
+  'mission_directives_full_logo_lateral.svg',
+  'mission_directives_full_logo.svg',
+  'mission_directives_logo.svg',
+  'mission_directives_wordmark.svg',
+];
 
 const escapeHtml = (value) =>
   String(value ?? '')
@@ -24,7 +32,7 @@ const slug = (value) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 
-const inline = (value) =>
+const inline = (value, sourceRoot = 'docs') =>
   escapeHtml(value)
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
@@ -32,13 +40,13 @@ const inline = (value) =>
       if (/^[a-z][a-z0-9+.-]*:/i.test(target) || target.startsWith('#')) {
         return `<a href="${escapeHtml(target)}">${escapeHtml(label)}</a>`;
       }
-      if (target.toLowerCase().endsWith('.md') && (!target.includes('/') || target.startsWith('docs/'))) {
+      if (target.toLowerCase().endsWith('.md') && (target.startsWith('docs/') || (sourceRoot === 'docs' && !target.includes('/')))) {
         return `<a href="${base}reference/manuals/${slug(path.basename(target))}/">${escapeHtml(label)}</a>`;
       }
       return `<a href="https://github.com/manojpisini/mission-directives/blob/main/${escapeHtml(target)}">${escapeHtml(label)}</a>`;
     });
 
-function markdownToHtml(markdown) {
+function markdownToHtml(markdown, sourceRoot = 'docs') {
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   const out = [];
   let paragraph = [];
@@ -49,12 +57,12 @@ function markdownToHtml(markdown) {
 
   const flushParagraph = () => {
     if (!paragraph.length) return;
-    out.push(`<p>${inline(paragraph.join(' '))}</p>`);
+    out.push(`<p>${inline(paragraph.join(' '), sourceRoot)}</p>`);
     paragraph = [];
   };
   const flushList = () => {
     if (!list.length) return;
-    out.push('<ul>' + list.map((item) => `<li>${inline(item)}</li>`).join('') + '</ul>');
+    out.push('<ul>' + list.map((item) => `<li>${inline(item, sourceRoot)}</li>`).join('') + '</ul>');
     list = [];
   };
   const flushTable = () => {
@@ -63,7 +71,7 @@ function markdownToHtml(markdown) {
     if (rows.length) {
       out.push('<div class="table-card"><table><tbody>' + rows.map((row) => {
         const cells = row.split('|').map((cell) => cell.trim()).filter(Boolean);
-        return '<tr>' + cells.map((cell) => `<td>${inline(cell)}</td>`).join('') + '</tr>';
+        return '<tr>' + cells.map((cell) => `<td>${inline(cell, sourceRoot)}</td>`).join('') + '</tr>';
       }).join('') + '</tbody></table></div>');
     }
     table = [];
@@ -87,7 +95,7 @@ function markdownToHtml(markdown) {
     if (heading) {
       flushAll();
       const level = Math.min(heading[1].length + 1, 4);
-      out.push(`<h${level}>${inline(heading[2])}</h${level}>`);
+      out.push(`<h${level}>${inline(heading[2], sourceRoot)}</h${level}>`);
       continue;
     }
     const bullet = /^[-*]\s+(.+)$/.exec(line);
@@ -96,6 +104,12 @@ function markdownToHtml(markdown) {
   }
   flushAll();
   return out.join('\n');
+}
+
+async function syncBrandAssets() {
+  await mkdir(brandPublicRoot, { recursive: true });
+  await Promise.all(brandFiles.map((file) => copyFile(path.join(brandSourceRoot, file), path.join(brandPublicRoot, file))));
+  await copyFile(path.join(brandSourceRoot, 'mission_directives_logo.svg'), path.join(siteRoot, 'public', 'favicon.svg'));
 }
 
 const categoryFor = (file, title) => {
@@ -140,12 +154,12 @@ async function collectManuals() {
 }
 
 function topbar(section = 'Documentation') {
-  return `<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="${base}index.html"><span aria-hidden="true" class="brand__mark"><span class="brand__mark-line"></span><span class="brand__mark-line"></span><span class="brand__mark-dot"></span></span><span class="brand__copy"><strong>Mission Directives</strong><span>${escapeHtml(section)}</span></span></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button><nav aria-label="Documentation links" class="top-actions"><a href="${base}docs.html">Docs</a><a href="${base}guides.html">Guides</a><a href="${base}manuals.html">Manuals</a><a href="${base}reference.html">Reference</a></nav></div></header>`;
+  return `<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="${base}index.html"><img alt="" aria-hidden="true" class="brand__logo" src="${base}assets/brand/mission_directives_full_logo_lateral.svg"/><span class="brand__section">${escapeHtml(section)}</span></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button><nav aria-label="Documentation links" class="top-actions"><a href="${base}getting-started.html">Start</a><a href="${base}installation.html">Install</a><a href="${base}docs.html">Docs</a><a href="${base}contributing.html">Contribute</a><a href="${base}reference.html">Reference</a></nav></div></header>`;
 }
 
 function sidebar(active) {
   const item = (href, label, key) => `<a${active === key ? ' class="active"' : ''} href="${base}${href}"><span>${label}</span></a>`;
-  return `<aside aria-label="Documentation navigation" class="sidebar" id="sidebar"><div class="sidebar__scroll"><div class="version-panel"><div><span>Documentation</span><strong>Version 2.0.1</strong></div><span class="status-dot">Stable</span></div><nav class="docs-nav" id="docsNav"><section class="nav-group"><p>Documentation</p>${item('docs.html', 'Overview', 'docs')}${item('guides.html', 'Guides', 'guides')}${item('manuals.html', 'Manuals', 'manuals')}${item('reference.html', 'Reference', 'reference')}${item('prompts.html', 'Prompts', 'prompts')}${item('scenarios.html', 'Scenarios', 'scenarios')}${item('pairs.html', 'Pairs', 'pairs')}</section><section class="nav-group"><p>Core manuals</p><a href="${base}reference/manuals/user-manual/"><span>User manual</span></a><a href="${base}reference/manuals/operator-guide/"><span>Operator guide</span></a><a href="${base}reference/manuals/security-operations-guide/"><span>Security operations</span></a></section></nav><div class="sidebar-help"><span class="sidebar-help__icon">?</span><div><strong>Operator path</strong><p>Route, explain, plan, execute, verify.</p></div></div></div></aside>`;
+  return `<aside aria-label="Documentation navigation" class="sidebar" id="sidebar"><div class="sidebar__scroll"><div class="version-panel"><div><span>Documentation</span><strong>Version 2.0.2</strong></div><span class="status-dot">Stable</span></div><nav class="docs-nav" id="docsNav"><section class="nav-group"><p>Start here</p>${item('getting-started.html', 'Getting started', 'getting-started')}${item('installation.html', 'Installation', 'installation')}${item('contributing.html', 'Contributing', 'contributing')}</section><section class="nav-group"><p>Documentation</p>${item('docs.html', 'Overview', 'docs')}${item('guides.html', 'Guides', 'guides')}${item('manuals.html', 'Manuals', 'manuals')}${item('reference.html', 'Reference', 'reference')}${item('prompts.html', 'Prompts', 'prompts')}${item('scenarios.html', 'Scenarios', 'scenarios')}${item('pairs.html', 'Pairs', 'pairs')}</section><section class="nav-group"><p>Core manuals</p><a href="${base}reference/manuals/user-manual/"><span>User manual</span></a><a href="${base}reference/manuals/operator-guide/"><span>Operator guide</span></a><a href="${base}reference/manuals/security-operations-guide/"><span>Security operations</span></a></section></nav><div class="sidebar-help"><span class="sidebar-help__icon">?</span><div><strong>Operator path</strong><p>Route, explain, plan, execute, verify.</p></div></div></div></aside>`;
 }
 
 function shell({ title, description, active, section, content, toc = '' }) {
@@ -156,12 +170,13 @@ function shell({ title, description, active, section, content, toc = '' }) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="${escapeHtml(description)}" />
   <title>${escapeHtml(title)} — Mission Directives</title>
+  <link rel="icon" href="${base}favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="${base}styles.css" />
 </head>
 <body class="docs-page">
 <a class="skip-link" href="#main-content">Skip to content</a>
 ${topbar(section)}
-<div class="layout">${sidebar(active)}<main class="main" id="main-content"><div class="content-grid"><article class="doc-content">${content}</article>${toc}</div><footer class="footer"><span>Documentation site</span></footer></main></div>
+<div class="layout">${sidebar(active)}<main class="main" id="main-content"><div class="content-grid"><article class="doc-content">${content}</article>${toc}</div><footer class="footer"><img alt="Mission Directives" src="${base}assets/brand/mission_directives_wordmark.svg"/><span>Documentation site</span></footer></main></div>
 ${searchDialog()}
 <div class="sidebar-backdrop" hidden id="sidebarBackdrop"></div><script is:inline src="${base}app.js"></script>
 </body>
@@ -185,7 +200,8 @@ function libraryGrid(items) {
 }
 
 function docsHome(manuals) {
-  const content = `<section class="docs-intro section-block docs-hero" data-title="Documentation overview" id="overview"><div><div class="eyebrow-row"><span class="eyebrow">Mission Directives</span><span class="pill">v2.0.1</span></div><h1>Documentation</h1><p class="lead">A sectioned operator manual for routing, installing, authoring, validating, and maintaining Mission Directives without loading the whole prompt library into context.</p><div class="docs-intro__actions"><a class="button button--primary" href="${base}guides.html">Open guides</a><a class="button button--secondary" href="${base}manuals.html">Browse manuals</a></div></div>${visualAsset('assets/infographics/mission-directives-overview.png', 'System overview infographic', 'Prompt routing, scenario graphs, runtime payloads, and verification gates in one operator view.')}</section>
+  const content = `<section class="docs-intro section-block docs-hero" data-title="Documentation overview" id="overview"><div><div class="eyebrow-row"><span class="eyebrow">Mission Directives</span><span class="pill">v2.0.2</span></div><h1>Documentation</h1><p class="lead">A sectioned operator manual for routing, installing, authoring, validating, and maintaining Mission Directives without loading the whole prompt library into context.</p><div class="docs-intro__actions"><a class="button button--primary" href="${base}getting-started.html">Get started</a><a class="button button--secondary" href="${base}installation.html">Install</a></div></div>${visualAsset('assets/infographics/mission-directives-overview.png', 'System overview infographic', 'Prompt routing, scenario graphs, runtime payloads, and verification gates in one operator view.')}</section>
+<section class="section-block" data-title="Start here" id="start-here"><div class="section-heading"><span class="section-kicker">Start here</span><h2>From installation to first verified route</h2><p>Use the focused onboarding pages before moving into the complete operator and maintainer references.</p></div><div class="doc-hub-grid"><a class="doc-hub-card" href="${base}getting-started.html"><span class="doc-hub-card__eyebrow">Getting started</span><h3>Run the first workflow</h3><p>Install, initialize, validate project context, route a request, inspect the selection, and open the local viewer.</p></a><a class="doc-hub-card" href="${base}installation.html"><span class="doc-hub-card__eyebrow">Installation</span><h3>Install the CLI and project runtime</h3><p>Choose a package installer and tracking mode, then understand the pinned project layout.</p></a><a class="doc-hub-card" href="${base}contributing.html"><span class="doc-hub-card__eyebrow">Contributing</span><h3>Change the canonical source safely</h3><p>Set up development, preserve generated contracts, run the required checks, and prepare review evidence.</p></a></div></section>
 <section class="section-block" data-title="Documentation sections" id="sections"><div class="section-heading"><span class="section-kicker">Structure</span><h2>Documentation is split by job</h2><p>The hub links to separate guide, manual, and reference pages so operators can land on the right depth without a full-scroll document.</p></div><div class="doc-hub-grid"><a class="doc-hub-card" href="${base}guides.html"><span class="doc-hub-card__eyebrow">Guides</span><h3>How to operate and extend the suite</h3><p>Installation, routing, security, prompt authoring, skill routing, and docs-site operation.</p></a><a class="doc-hub-card" href="${base}manuals.html"><span class="doc-hub-card__eyebrow">Manuals</span><h3>Complete repository manuals</h3><p>Generated pages for every root file in <code>docs/</code>, with source links preserved.</p></a><a class="doc-hub-card" href="${base}reference.html"><span class="doc-hub-card__eyebrow">Reference</span><h3>Contracts and command surfaces</h3><p>Runtime markers, schemas, catalog behavior, policies, and verification commands.</p></a><a class="doc-hub-card" href="${base}prompts.html"><span class="doc-hub-card__eyebrow">Prompts</span><h3>Every prompt explained</h3><p>Canonical prompt IDs, routing metadata, artifacts, modes, risk, contracts, and boundaries.</p></a><a class="doc-hub-card" href="${base}scenarios.html"><span class="doc-hub-card__eyebrow">Scenarios</span><h3>Atomic and composite workflows</h3><p>Scenario purposes, prompt graphs, inputs, outputs, locks, phases, and completion gates.</p></a><a class="doc-hub-card" href="${base}pairs.html"><span class="doc-hub-card__eyebrow">Pairs</span><h3>Planning and execution twins</h3><p>Reciprocal prompt pairs with authority splits, handoffs, outputs, and verification expectations.</p></a><a class="doc-hub-card" href="${base}index.html"><span class="doc-hub-card__eyebrow">Project</span><h3>Landing page</h3><p>High-level mission, capabilities, metrics, and route-flow explanation.</p></a></div></section>
 <section class="section-block" data-title="Routing depiction" id="routing-depiction"><div class="section-heading"><span class="section-kicker">Depiction</span><h2>Small graph routing</h2><p>Mission Directives keeps routing deterministic by resolving metadata before prompt bodies are loaded.</p></div>${routeDiagram()}${visualAsset('assets/diagrams/routing-system.svg', 'Routing system diagram', 'The request is scored into a bounded prompt graph and closed by verification evidence.')}</section>`;
   return shell({ title: 'Documentation', description: 'Mission Directives documentation hub.', active: 'docs', section: 'Documentation', content });
@@ -281,14 +297,27 @@ function manualPage(manual) {
   return shell({ title: manual.title, description: `${manual.title} from the Mission Directives documentation set.`, active: 'manuals', section: 'Manual', content });
 }
 
+function onboardingPage({ title, description, active, source, sourceLabel, sourceUrl, sourceRoot = 'docs' }) {
+  const body = markdownToHtml(source.replace(/^#\s+.+\r?\n/, ''), sourceRoot);
+  const content = `<section class="docs-intro section-block manual-hero" data-title="${escapeHtml(title)}" id="overview"><div class="eyebrow-row"><span class="eyebrow">Start here</span><span class="pill">v2.0.2</span></div><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(description)}</p><div class="manual-meta"><span>${escapeHtml(sourceLabel)}</span><a href="${escapeHtml(sourceUrl)}" rel="noreferrer" target="_blank">Source file</a></div></section><section class="section-block manual-body" data-title="${escapeHtml(title)} content" id="content">${body}</section><nav class="page-nav"><a href="${base}getting-started.html"><small>Start</small><strong>Getting started</strong></a><a href="${base}docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav>`;
+  return shell({ title, description, active, section: title, content });
+}
+
+await syncBrandAssets();
 const manuals = await collectManuals();
 const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 const scenarios = JSON.parse(await readFile(scenarioCatalogPath, 'utf8'));
+const gettingStartedSource = await readFile(path.join(docsRoot, 'GETTING_STARTED.md'), 'utf8');
+const installationSource = await readFile(path.join(docsRoot, 'INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md'), 'utf8');
+const contributingSource = await readFile(path.join(repoRoot, 'CONTRIBUTING.md'), 'utf8');
 await writeFile(path.join(siteRoot, 'public', 'docs.html'), docsHome(manuals), 'utf8');
+await writeFile(path.join(siteRoot, 'public', 'getting-started.html'), onboardingPage({ title: 'Getting Started', description: 'Install Mission Directives, initialize a project, route the first request, and verify the selected workflow.', active: 'getting-started', source: gettingStartedSource, sourceLabel: 'docs/GETTING_STARTED.md', sourceUrl: 'https://github.com/manojpisini/mission-directives/blob/main/docs/GETTING_STARTED.md' }), 'utf8');
+await writeFile(path.join(siteRoot, 'public', 'installation.html'), onboardingPage({ title: 'Installation', description: 'Install the command, create the pinned project runtime, and choose an output tracking mode.', active: 'installation', source: installationSource, sourceLabel: 'docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md', sourceUrl: 'https://github.com/manojpisini/mission-directives/blob/main/docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md' }), 'utf8');
+await writeFile(path.join(siteRoot, 'public', 'contributing.html'), onboardingPage({ title: 'Contributing', description: 'Set up a development environment, change canonical sources, and verify generated contracts before review.', active: 'contributing', source: contributingSource, sourceLabel: 'CONTRIBUTING.md', sourceUrl: 'https://github.com/manojpisini/mission-directives/blob/main/CONTRIBUTING.md', sourceRoot: 'repo' }), 'utf8');
 await writeFile(path.join(siteRoot, 'public', 'guides.html'), guidesPage(manuals), 'utf8');
 await writeFile(path.join(siteRoot, 'public', 'manuals.html'), manualsPage(manuals), 'utf8');
 await writeFile(path.join(siteRoot, 'public', 'reference.html'), referencePage(manuals), 'utf8');
 await writeFile(path.join(siteRoot, 'public', 'prompts.html'), promptsPage(catalog), 'utf8');
 await writeFile(path.join(siteRoot, 'public', 'scenarios.html'), scenariosPage(scenarios), 'utf8');
 await writeFile(path.join(siteRoot, 'public', 'pairs.html'), pairsPage(catalog), 'utf8');
-console.log(`Generated ${manuals.length} manual pages plus docs.html, guides.html, manuals.html, reference.html, prompts.html, scenarios.html, and pairs.html`);
+console.log(`Generated ${manuals.length} manual pages plus getting-started.html, installation.html, contributing.html, docs.html, guides.html, manuals.html, reference.html, prompts.html, scenarios.html, and pairs.html`);

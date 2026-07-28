@@ -66,7 +66,7 @@ output_contract:
   - path: artifacts/script_video_podcast_and_storyboard_research_and_production_brief/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.creative_production.script-video-podcast-and-storyboard-research-and-production-brief
 prompt_slug: script-video-podcast-and-storyboard-research-and-production-brief
 identity_status: permanent

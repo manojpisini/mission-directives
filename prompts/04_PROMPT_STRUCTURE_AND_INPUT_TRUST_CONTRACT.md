@@ -45,7 +45,7 @@ evidence_lane: null
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.core.prompt-structure-and-input-trust-contract
 prompt_slug: prompt-structure-and-input-trust-contract
 identity_status: permanent

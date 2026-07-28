@@ -61,7 +61,7 @@ output_contract:
   - path: reports/email_letter_message_speech_announcement_and_general_communication_production/email_letter_message_speech_announcement_and_general_communication_production_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.professional_communication.email-letter-message-speech-announcement-and-general-communication-production
 prompt_slug: email-letter-message-speech-announcement-and-general-communication-production
 identity_status: permanent

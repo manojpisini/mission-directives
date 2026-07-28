@@ -1,6 +1,6 @@
 # Mission Directives Mastery Manual
 
-**Version:** 2.0.1
+**Version:** 2.0.2
 
 **Audience:** users, operators, prompt authors, maintainers, reviewers, and integrators
 

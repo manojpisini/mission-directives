@@ -12,22 +12,24 @@ pnpm-debug.log*
 yarn-debug.log*
 .DS_Store
 Thumbs.db
-.prompt_suite/logs/
+.prompt_suite/
 BODY_QUALITY_AUDIT.json
 BODY_QUALITY_AUDIT.md
 EVALUATION_STATUS.json
 TEST_RESULTS.json
 VALIDATION.json
 
-.prompt_suite/results/
-.prompt_suite/runtime/
-.prompt_suite/*.lock
-.prompt_suite/agent-guidance-receipt.json
 agent-guidance-receipt.json
 
 .agents/
+.claude/
 .codex/
+.mission-directives/
+.omx/
 .venv/
+AGENTS.local.md
+CLAUDE.local.md
+MEMORY.md
 venv/
 
 # Astro generated and dependency trees

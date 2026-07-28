@@ -61,7 +61,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.engineering.code-quality-and-maintainability-authorized-execution-and-verification
 prompt_slug: code-quality-and-maintainability-authorized-execution-and-verification
 identity_status: permanent

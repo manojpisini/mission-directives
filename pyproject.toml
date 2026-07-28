@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "mission-directives"
 dynamic = ["version"]
 description = "Deterministic prompt routing, project context, and verifiable agent workflows."
-readme = "README.md"
+readme = "PYPI_README.md"
 requires-python = ">=3.11"
 license = "MIT OR Apache-2.0"
 license-files = ["LICENSE-MIT", "LICENSE-APACHE"]
@@ -29,8 +29,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://manojpisini.github.io/mission-directives/"
-Documentation = "https://manojpisini.github.io/mission-directives/"
+Homepage = "https://manojpisini.github.io/mission-directives/index.html"
+Documentation = "https://manojpisini.github.io/mission-directives/docs.html"
 Repository = "https://github.com/manojpisini/mission-directives"
 Issues = "https://github.com/manojpisini/mission-directives/issues"
 
@@ -73,6 +73,7 @@ include = [
   "/LICENSE-MIT",
   "/LICENSE-APACHE",
   "/README.md",
+  "/PYPI_README.md",
   "/config/runtime_payload.json",
 ]
 

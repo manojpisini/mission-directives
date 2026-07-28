@@ -61,7 +61,7 @@ output_contract:
   - path: reports/pitch_proposal_and_business_case_development/pitch_proposal_and_business_case_development_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.business.pitch-proposal-and-business-case-development
 prompt_slug: pitch-proposal-and-business-case-development
 identity_status: permanent

@@ -98,7 +98,7 @@ output_media:
 - docx
 - pdf
 - manpage
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.enablement.documentation-knowledge-taxonomy-and-troubleshooting-authorized-execution-and-verification
 prompt_slug: complete-documentation-system-multi-manual-production-cross-linking-and-exact-verification
 identity_status: permanent

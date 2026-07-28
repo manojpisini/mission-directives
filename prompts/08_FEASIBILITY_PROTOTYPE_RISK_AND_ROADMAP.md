@@ -57,7 +57,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.strategy.feasibility-prototype-risk-and-roadmap
 prompt_slug: feasibility-prototype-risk-and-roadmap
 identity_status: permanent

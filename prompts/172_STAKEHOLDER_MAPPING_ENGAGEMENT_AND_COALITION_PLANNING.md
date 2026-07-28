@@ -66,7 +66,7 @@ output_contract:
   - json
   - docx_spec
   - pdf_spec
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.change_management.stakeholder-mapping-engagement-and-coalition-planning
 prompt_slug: stakeholder-mapping-engagement-and-coalition-planning
 identity_status: permanent

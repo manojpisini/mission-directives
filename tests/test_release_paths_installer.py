@@ -19,7 +19,7 @@ from mission_directives import installer
 
 def test_release_version_is_current_and_generated_guidance_uses_it():
     version = (ROOT / "VERSION").read_text().strip()
-    assert version == "2.0.1"
+    assert version == "2.0.2"
     for path in (ROOT / "prompts").glob("*.md"):
         assert f"suite_version: {version}" in path.read_text(encoding="utf-8")
     for path in (ROOT / "templates").rglob("*.md"):
@@ -28,6 +28,29 @@ def test_release_version_is_current_and_generated_guidance_uses_it():
         assert f"Mission Directives **{version}**" in (ROOT / name).read_text(
             encoding="utf-8"
         )
+
+
+def test_public_package_metadata_uses_an_image_free_readme_and_canonical_urls():
+    metadata = (ROOT / "pyproject.toml").read_text(encoding="utf-8")
+    package_readme = (ROOT / "PYPI_README.md").read_text(encoding="utf-8")
+    assert 'readme = "PYPI_README.md"' in metadata
+    assert 'Homepage = "https://manojpisini.github.io/mission-directives/index.html"' in metadata
+    assert 'Documentation = "https://manojpisini.github.io/mission-directives/docs.html"' in metadata
+    assert "![" not in package_readme and "<img" not in package_readme.lower()
+    for command in [
+        "uv tool install mission-directives",
+        "pipx install mission-directives",
+        "python -m pip install --user mission-directives",
+        "uvx mission-directives",
+        "python -m mission_directives",
+    ]:
+        assert command in package_readme
+
+
+def test_repository_local_agent_state_is_ignored():
+    ignored = (ROOT / ".gitignore").read_text(encoding="utf-8").splitlines()
+    for pattern in ["MEMORY.md", ".mission-directives/", ".omx/", ".prompt_suite/"]:
+        assert pattern in ignored
 
 
 def test_distribution_has_no_personal_home_paths():
@@ -70,7 +93,7 @@ def test_installer_dry_run_and_complete_project_layout(tmp_path):
     root = project / ".mission-directives"
     assert result["status"] == "installed"
     assert result["suite_destination"] == ".mission-directives/runtime"
-    assert (root / "runtime/VERSION").read_text().strip() == "2.0.1"
+    assert (root / "runtime/VERSION").read_text().strip() == "2.0.2"
     assert (root / "site/templates/base.html").is_file()
     assert (root / "site/static/viewer.css").is_file()
     assert (root / "project.json").is_file()

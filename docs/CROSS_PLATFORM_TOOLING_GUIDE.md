@@ -2,7 +2,7 @@
 
 [Back to Mastery Manual](MD_MASTERY_MANUAL.md) · [Manual index](MANUALS.md)
 
-This guide is the authoritative operational reference for **Cross-Platform Tooling Guide** in MD 2.0.1.
+This guide is the authoritative operational reference for **Cross-Platform Tooling Guide** in MD 2.0.2.
 
 ## 1. Canonical Python layer
 

@@ -71,7 +71,7 @@ output_contract:
   - path: artifacts/learning_experience_curriculum_course_lesson_and_assessment_material_production_and_validation/residual_register.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.learning_design.learning-experience-curriculum-course-lesson-and-assessment-material-production-and-validation
 prompt_slug: learning-experience-curriculum-course-lesson-and-assessment-material-production-and-validation
 identity_status: permanent

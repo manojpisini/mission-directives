@@ -66,7 +66,7 @@ output_contract:
   - path: artifacts/research_backed_blog_article_and_newsletter_drafting_editing_and_publication_package/residual_register.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.editorial.research-backed-blog-article-and-newsletter-drafting-editing-and-publication-package
 prompt_slug: research-backed-blog-article-and-newsletter-drafting-editing-and-publication-package
 identity_status: permanent

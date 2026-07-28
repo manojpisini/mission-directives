@@ -94,7 +94,7 @@ preferred_skills:
 output_media:
 - markdown
 - json
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.enablement.documentation-knowledge-taxonomy-and-troubleshooting-investigation-and-plan
 prompt_slug: complete-documentation-system-codebase-investigation-information-architecture-and-production-plan
 identity_status: permanent

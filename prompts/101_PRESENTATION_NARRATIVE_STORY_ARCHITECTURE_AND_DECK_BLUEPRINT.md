@@ -64,7 +64,7 @@ output_contract:
   - path: artifacts/presentation_narrative_story_architecture_and_deck_blueprint/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.visual_communication.presentation-narrative-story-architecture-and-deck-blueprint
 prompt_slug: presentation-narrative-story-architecture-and-deck-blueprint
 identity_status: permanent

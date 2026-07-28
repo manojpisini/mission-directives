@@ -6,7 +6,7 @@ This index is the human navigation layer for the Mission Directives. The suite i
 
 | Reader | First manual | Then read |
 |---|---|---|
-| New user | [User Manual](USER_MANUAL.md) | [Operator Guide](OPERATOR_GUIDE.md) |
+| New user | [Getting Started](GETTING_STARTED.md) | [User Manual](USER_MANUAL.md), [Operator Guide](OPERATOR_GUIDE.md) |
 | Package user | [Installation and Project Integration Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md) | [Project Config Guide](PROJECT_CONFIG_GUIDE.md), [Local Output Viewer Guide](LOCAL_OUTPUT_VIEWER_GUIDE.md) |
 | Prompt author | [Prompt Body Authoring Guide](PROMPT_BODY_AUTHORING_GUIDE.md) | [Completion Criteria Guide](COMPLETION_CRITERIA_GUIDE.md), [Runtime Marker Protocol](RUNTIME_MARKER_PROTOCOL.md) |
 | Pair author | [Pair Authoring and Verification Guide](PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md) | [Plan Review and Exact-Twin Execution Guide](PLAN_REVIEW_AND_EXACT_TWIN_EXECUTION_GUIDE.md), [Executive Decision Rules Guide](EXECUTIVE_DECISION_RULES_GUIDE.md) |
@@ -21,6 +21,7 @@ This index is the human navigation layer for the Mission Directives. The suite i
 
 ### Operation
 
+- [Getting Started](GETTING_STARTED.md) — installing the CLI, initializing a project, validating Project Config, routing the first request, and opening the local viewer.
 - [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md) — safely creating and updating root agent files, algorithmic `MD`/`md` intent routing, route comparison, productivity shortcuts, and preservation of unmanaged instructions.
 - [Router Keyword Catalog and Scoring Guide](ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md) — canonical concept aliases, typo recovery, candidate enrichment, rarity-aware scoring, confidence, route hints, diagnostics, and extension tests.
 - [User Manual](USER_MANUAL.md) — choosing prompts and scenarios, execution modes, evidence lanes, artifacts, examples, and closure.
@@ -113,6 +114,6 @@ Do not collapse those proof levels into the word “validated.”
 
 - [Installation and Project Integration Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md)
 - [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md) — runtime allowlist, source-only boundary, install transaction, receipts, and payload-change verification.
-- [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md) — static Astro site generation, local development, GitHub Pages deployment, content ownership, and branding handoff.
+- [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md) — static Astro site generation, onboarding pages, canonical brand assets, local development, GitHub Pages deployment, and content ownership.
 - [Project Cleanup and Uninstall Guide](PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md) — managed installation verification, dry-run preview, preservation rules, failure behavior, and reinstall.
 - [Packaging and Release Guide](PACKAGING_AND_RELEASE_GUIDE.md) — Python distribution metadata, generated wheel payload, smoke tests, Trusted Publishing, and checksums.

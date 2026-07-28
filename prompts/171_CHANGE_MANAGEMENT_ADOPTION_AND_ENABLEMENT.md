@@ -64,7 +64,7 @@ output_contract:
   - path: reports/change_management_adoption_and_enablement/change_management_adoption_and_enablement_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.change_management.change-management-adoption-and-enablement
 prompt_slug: change-management-adoption-and-enablement
 identity_status: permanent

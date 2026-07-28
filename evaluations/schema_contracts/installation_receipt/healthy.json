@@ -4,7 +4,7 @@
   "created_by": "mission-directives",
   "project_root": "example",
   "suite_destination": ".mission-directives/runtime",
-  "suite_version": "2.0.1",
+  "suite_version": "2.0.2",
   "tracking_mode": "ignored",
   "output_root": ".mission-directives",
   "output_directories": [

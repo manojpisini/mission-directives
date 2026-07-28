@@ -66,7 +66,7 @@ output_contract:
   - email_spec
   - deck_spec
   - playbook
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.sales_enablement.sales-enablement-customer-communication-and-lifecycle-content
 prompt_slug: sales-enablement-customer-communication-and-lifecycle-content
 identity_status: permanent

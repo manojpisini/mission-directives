@@ -56,7 +56,7 @@ def main() -> int:
                 "--out", "reports/package-plan.json",
             ).stdout
         )
-        if version != "2.0.1":
+        if version != "2.0.2":
             raise SystemExit(f"Unexpected installed version: {version}")
         if init.get("status") != "installed" or validate.get("status") != "pass":
             raise SystemExit("Installed lifecycle smoke failed")

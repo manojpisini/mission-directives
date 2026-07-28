@@ -62,7 +62,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.model_security.prompt-injection-untrusted-input-and-tool-output-security-authorized-execution-and-verification
 prompt_slug: prompt-injection-untrusted-input-and-tool-output-security-authorized-execution-and-verification
 identity_status: permanent

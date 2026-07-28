@@ -65,7 +65,7 @@ output_contract:
   - path: reports/cyber_threat_intelligence_and_security_research/cyber_threat_intelligence_and_security_research_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.cyber_intelligence.cyber-threat-intelligence-and-security-research
 prompt_slug: cyber-threat-intelligence-and-security-research
 identity_status: permanent

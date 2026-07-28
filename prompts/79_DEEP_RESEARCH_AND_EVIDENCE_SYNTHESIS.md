@@ -59,7 +59,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.research.deep-research-and-evidence-synthesis
 prompt_slug: deep-research-and-evidence-synthesis
 identity_status: permanent

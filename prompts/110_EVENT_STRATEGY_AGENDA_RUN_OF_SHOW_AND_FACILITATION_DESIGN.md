@@ -63,7 +63,7 @@ output_contract:
   - path: reports/event_strategy_agenda_run_of_show_and_facilitation_design/event_strategy_agenda_run_of_show_and_facilitation_design_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.events.event-strategy-agenda-run-of-show-and-facilitation-design
 prompt_slug: event-strategy-agenda-run-of-show-and-facilitation-design
 identity_status: permanent

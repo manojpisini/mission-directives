@@ -1,5 +1,5 @@
 {
-  "suite_version": "2.0.1",
+  "suite_version": "2.0.2",
   "source": "vercel-labs/skills supported-agent path table, normalized for cross-platform runtime resolution",
   "applications": {
     "agents": {

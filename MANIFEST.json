@@ -1,5 +1,5 @@
 {
-  "suite_version": "2.0.1",
+  "suite_version": "2.0.2",
   "files": [
     {
       "path": ".github/workflows/deploy-docs.yml",
@@ -8,8 +8,8 @@
     },
     {
       "path": ".github/workflows/publish.yml",
-      "bytes": 1610,
-      "sha256": "764e3bb722f35051094879a343bd334b0cec5cb753c1a32575f3a3d3ba31ef88"
+      "bytes": 2699,
+      "sha256": "d74bf34188e58774ae885199b8132be9d60756762c7ea544047de6533547c195"
     },
     {
       "path": ".github/workflows/validate.yml",
@@ -18,8 +18,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 684,
-      "sha256": "330f8dd9b8157d8f8875030bba104e6c9ca04346952792c98d12f0ec94feffe2"
+      "bytes": 648,
+      "sha256": "d30cb3739b292572ba1cd920bb2b173420fe41f940ff0cc0a41fc94985146bb4"
     },
     {
       "path": ".pre-commit-config.yaml",
@@ -28,13 +28,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 10698,
-      "sha256": "453c616e7d781dc9841d4ceecf0738d4559150823a786bd399b3e79dd766dec1"
+      "bytes": 10862,
+      "sha256": "87bcba42dcd11721a119c534ff68acb457ee008b62fcea82b51534d820a2e2a8"
     },
     {
       "path": "CLAUDE.md",
-      "bytes": 10698,
-      "sha256": "96d0337385b631c020c8f2181f461f32c965f94c4b657a5453497c2569024288"
+      "bytes": 10862,
+      "sha256": "c43b6280ec0e39898875aad3c1ca2e92d58f389c9813591c63955e8ff80e77bc"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -67,29 +67,29 @@
       "sha256": "e4eb15479ff48736df70341b09ead07a1a3f6b53e70fe8b0929202e046a5f62a"
     },
     {
-      "path": "MEMORY.md",
-      "bytes": 4791,
-      "sha256": "8af5ce4cda3a2a540e326daf33ff4c2cab279233472ae21bc722adeee9487af8"
-    },
-    {
       "path": "PROMPT_EXECUTION_ORDER.md",
       "bytes": 27075,
       "sha256": "49ed2e493f4ec51693dd5c2a417c467a4212f759e9ec141e08641a2403bfead8"
     },
     {
+      "path": "PYPI_README.md",
+      "bytes": 1388,
+      "sha256": "6d7b8598737bdccebf478218c5743f54f3cd94f488de39cb0387b56ce5a2b8d8"
+    },
+    {
       "path": "README.md",
-      "bytes": 12405,
-      "sha256": "8abcb2436e7597ccfd03b2b02d19178e6376de6887cda8ca765e275b90c54e03"
+      "bytes": 12685,
+      "sha256": "58509eaa7eeb092850317d668b60e445a26ca7832a67f7e954f4d065da80c5a0"
     },
     {
       "path": "RELEASE_ID",
       "bytes": 25,
-      "sha256": "86567b3916af001ea932df0ffaff169c62590aeefafb71d8b46c320ed9e750b6"
+      "sha256": "c5b38c0c6f315284b67c27f129a9b4f12013daba8565637e180dd756d11adf4d"
     },
     {
       "path": "SCENARIO_CATALOG.json",
       "bytes": 1085853,
-      "sha256": "c302e14e888da9b9a1ad7694c363a3acea0e7173c3edc0a6f7933e97f39e5143"
+      "sha256": "603fae2f55141d3d9e2fb1dd50bb16375cc7ce91dc1e1f2b326a9ff84bc0d7fa"
     },
     {
       "path": "SECURITY.md",
@@ -104,7 +104,27 @@
     {
       "path": "VERSION",
       "bytes": 6,
-      "sha256": "fe840f52fb5578d3f77eb497115eb02c6036601c3a53e60df7995c7276baa77a"
+      "sha256": "b4b16faea52dc04ccfe32f7b342094855923ebf599a3cac1940470a2d6d7c261"
+    },
+    {
+      "path": "assets/images/mission_directives_full_logo.svg",
+      "bytes": 19609,
+      "sha256": "af2de76242fc31a65fdc583446f3749a58e66c3a350a5a314d034dd81ab3c86a"
+    },
+    {
+      "path": "assets/images/mission_directives_full_logo_lateral.svg",
+      "bytes": 19176,
+      "sha256": "38ff93617cc366a9266870d475f18e4fad8840555c7abcc4912a7e640449e14d"
+    },
+    {
+      "path": "assets/images/mission_directives_logo.svg",
+      "bytes": 4990,
+      "sha256": "36eea29e5efc971a1501d474152c3678fbdedb5fbeb65fe5d9ae3a29685fe3aa"
+    },
+    {
+      "path": "assets/images/mission_directives_wordmark.svg",
+      "bytes": 15079,
+      "sha256": "37bd58cd9e4032de4fdfeea273a4b37586c0a688c70a40f9bf43beeb8756db04"
     },
     {
       "path": "assets/readme/divider.svg",
@@ -114,12 +134,7 @@
     {
       "path": "assets/readme/inventory.svg",
       "bytes": 2447,
-      "sha256": "35d426e756d7de4d8014a6b658ec1293b827806417cf516afbaaca972c29609f"
-    },
-    {
-      "path": "assets/readme/mission-directives-banner.svg",
-      "bytes": 1983,
-      "sha256": "04ae0659c3f6768f8c7d6d7c1c26511959794da0595043c1b7008e0a4e9487ce"
+      "sha256": "24261c244479596c3cc1cf6ecb5f79468c802046f2ffae7affc55d2ba4e85a17"
     },
     {
       "path": "assets/readme/routing-flow.svg",
@@ -129,17 +144,17 @@
     {
       "path": "catalog.json",
       "bytes": 1589083,
-      "sha256": "cf89cf666ae24a867c1f2fd446eb55bc3d89a659e6dc76c66f26b0ef58119f31"
+      "sha256": "b2c37cc27d25f33cd27913479b2be429bc7f8750728abf4f1542c6245df5a124"
     },
     {
       "path": "compatibility/agent_skill_paths.json",
       "bytes": 1542,
-      "sha256": "8292f0d7924417d069790a2b7b6c7ddb3913f418449c7aaa4d8e69b8aee26b99"
+      "sha256": "6c5a0bc8bb8b09421312863fcd81c7fad6b8dca7ee3984d3022d22c1423fc374"
     },
     {
       "path": "compatibility/capability_identity_registry.json",
       "bytes": 84213,
-      "sha256": "a4667134eeb3493cb85dba84a3cd1358d94a3964996237776407388dac18a929"
+      "sha256": "e216018c7f7d33988da2301104b6e2fbcf4cd55abbdddebcfc46b1cacc5bbb08"
     },
     {
       "path": "config/bundles.json",
@@ -149,7 +164,7 @@
     {
       "path": "config/capability_graph.json",
       "bytes": 237357,
-      "sha256": "5518361bfae5bc9b6eaa94e3f596fdd3aa3907e28796cee10f6110fe05844ff8"
+      "sha256": "0f9dda978e1f4d1c906f04202f423640b632cce2847bee798c6c0b78d53df38b"
     },
     {
       "path": "config/category_taxonomy.json",
@@ -159,17 +174,17 @@
     {
       "path": "config/department_packs.json",
       "bytes": 7304,
-      "sha256": "bb7b382eddc82c4e0cf69fc3a190d40fb5c59d050ccab52c0164bc0810421709"
+      "sha256": "9de07450141c6d065c76b10357fc595d8cb67109072e0dd7cdd5b1f6412e5c26"
     },
     {
       "path": "config/installed_skills_inventory.json",
       "bytes": 61077,
-      "sha256": "9d1f35b17f7cb3727ec3db5243b0480ac14983973c16cd69be91dce58ee7e891"
+      "sha256": "efa1952cf6c125c4bd95e5079c8fe18143dd4fbc18c28b01d7c669b4de3ca21e"
     },
     {
       "path": "config/model_profiles.json",
       "bytes": 3107,
-      "sha256": "95d6b24108bdb1a14c566c6f2d22dc172867c8f38466d242c27769a0a3e669ec"
+      "sha256": "66793e072b0d1022088468ce8909cf5e49874b4d967b9d3240a4d0f252abf03f"
     },
     {
       "path": "config/modifier_injections.json",
@@ -204,7 +219,7 @@
     {
       "path": "config/template_registry.json",
       "bytes": 87663,
-      "sha256": "bb49ad88fa63858e8671f96f24bc60051cd9907ef088d5f42b7a6f64318b6707"
+      "sha256": "4b621a7c403050c9dfe0514e163ce6023725ffe2e1b973ead86ba90d81734957"
     },
     {
       "path": "docs/AGENT_LIBRARY_INTEGRATION_GUIDE.md",
@@ -264,12 +279,12 @@
     {
       "path": "docs/CROSS_PLATFORM_TOOLING_GUIDE.md",
       "bytes": 8848,
-      "sha256": "7a83964d8a39f8ff8838b6ab2b89e1c71ab2cdcd49b989d0fa4bf3bd2cbfbef6"
+      "sha256": "629f896082ecdc14a3d8622ed10d88219a7cbfdb73013c7ed2103de4e79364f3"
     },
     {
       "path": "docs/DOCUMENTATION_SITE_GUIDE.md",
-      "bytes": 4117,
-      "sha256": "152c29509f3827902f5cd2da45d4153857ed8d0ddb685c50ca36c3bb872d8cd8"
+      "bytes": 4927,
+      "sha256": "cbbbccb18dba8df556e93b3143bf802ed3c78d4b0a7ed29d46145fb1535088c3"
     },
     {
       "path": "docs/EVALUATION_MANUAL.md",
@@ -292,9 +307,14 @@
       "sha256": "2ffedcf0c27370fb8a582bb65a85c692c4a1145e40c0fe88ad8299edfc47d802"
     },
     {
+      "path": "docs/GETTING_STARTED.md",
+      "bytes": 2775,
+      "sha256": "627bc13e9ad967981d6d9500a81dd1a6d99887723c2cf97819436049844707f7"
+    },
+    {
       "path": "docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md",
-      "bytes": 12985,
-      "sha256": "250036d441cbd397e953966c5f07b6acf6ecd5e6ccaf3b9231b4067727e36654"
+      "bytes": 13920,
+      "sha256": "f88175255d7aa454a1cb1f7d413d85a6614550c4b347c2365b25347bbca5a2e8"
     },
     {
       "path": "docs/GSTACK_INTEGRATION.md",
@@ -303,8 +323,8 @@
     },
     {
       "path": "docs/INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md",
-      "bytes": 4456,
-      "sha256": "6f424edf286add55115ab5de857c8e062a620b927445ef1fccdf6a08ef49e53c"
+      "bytes": 4680,
+      "sha256": "e7531d0c18ea8df346e46d75dbcc64ec4c30e253e313668e8367d00316f5f7c0"
     },
     {
       "path": "docs/INSTALLED_RUNTIME_PAYLOAD_GUIDE.md",
@@ -329,12 +349,12 @@
     {
       "path": "docs/LOGGING_AND_TELEMETRY_GUIDE.md",
       "bytes": 8040,
-      "sha256": "d24429ed3fdea3792feab090ba5cba828ddc654018f41e987dfa35a1fdf969b7"
+      "sha256": "676797e5908ed557f810565f3ea262eaaf8267c950e43312624773934a57fae9"
     },
     {
       "path": "docs/MANUALS.md",
-      "bytes": 10279,
-      "sha256": "75697b1a40956e9a56d8e9ebd7c147b1ca0c355346373431517a994fdc97cafd"
+      "bytes": 10514,
+      "sha256": "755a09a28a4a0b396a7eb7563214b1ed62a1d6e4bfbf96a2e35d80dae800ee01"
     },
     {
       "path": "docs/MANUAL_QUALITY_STANDARD.md",
@@ -344,7 +364,7 @@
     {
       "path": "docs/MD_MASTERY_MANUAL.md",
       "bytes": 45904,
-      "sha256": "f6e597c6131f869fd2e338c5afd3f44b28c93935f8981a43ff3b5b583bf17fad"
+      "sha256": "1bfa75085eb547cb36f7d00ceaf8cd607891b3894d5a7eebb92dc36d61c897ff"
     },
     {
       "path": "docs/MIGRATION_GUIDE.md",
@@ -363,8 +383,8 @@
     },
     {
       "path": "docs/PACKAGING_AND_RELEASE_GUIDE.md",
-      "bytes": 2603,
-      "sha256": "b26683fd913b66628bc9f2c882f3d2536a4972f42a7608a4d545e14887b1ba3d"
+      "bytes": 3360,
+      "sha256": "233a358c128a303e44eb4d9b00c6e767ed5706bd9f66fd7d34650a6ec3f8f497"
     },
     {
       "path": "docs/PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md",
@@ -423,8 +443,8 @@
     },
     {
       "path": "docs/README.md",
-      "bytes": 3403,
-      "sha256": "400b3540ab92314e9cf758158147a08fb02d57f5ceb03cd7d446ab0a2de2e2e5"
+      "bytes": 4120,
+      "sha256": "91188f771ddc364f61e4f935f7a3e5cf5c02a474dc0a24eb83d62d8a5e247a66"
     },
     {
       "path": "docs/RECOMMENDED_SKILL_STACKS.md",
@@ -494,7 +514,7 @@
     {
       "path": "docs/TEMPLATE_SYSTEM_GUIDE.md",
       "bytes": 8744,
-      "sha256": "c9c3414287ee2b6d1fccd50ee8fbc1266e0aaa5612333332233c579f9adb60b4"
+      "sha256": "005b8fd87ae48e1da8bbff6aadce289c001d944ef04a17ac9505facf114f2c2c"
     },
     {
       "path": "docs/TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md",
@@ -503,13 +523,13 @@
     },
     {
       "path": "docs/TROUBLESHOOTING_GUIDE.md",
-      "bytes": 4916,
-      "sha256": "33e8511a0c1e3f1d4d086ce55f0fd0dab6073ae63d0eda892ad86005a76a3085"
+      "bytes": 5096,
+      "sha256": "4640c261dc1bbb360d35f912ba2a556149e2b4080c0d05aaf78c8994e8f6c617"
     },
     {
       "path": "docs/TUI_AND_OPERATOR_EXPERIENCE_GUIDE.md",
       "bytes": 9265,
-      "sha256": "c0884534568dce3bfa65a6065c1b73d48ac41e1fefbc4aab8f87448ae5bfc269"
+      "sha256": "77df8e7caca21dc7e9f764845e2807e9f34cdb3c9f6dd403a51fc86e9c882664"
     },
     {
       "path": "docs/USER_MANUAL.md",
@@ -6524,7 +6544,7 @@
     {
       "path": "evaluations/schema_contracts/cleanup_receipt/healthy.json",
       "bytes": 404,
-      "sha256": "031d1675e42970b464869c90b8ef67a0fd49a80d5ae840a09b99203495a29b86"
+      "sha256": "8e8fe832ef2c155968abb3f3bf049e821dca914a8a868d6b9cbf4e156f6e39bd"
     },
     {
       "path": "evaluations/schema_contracts/coherence_fingerprint/adversarial.json",
@@ -6664,7 +6684,7 @@
     {
       "path": "evaluations/schema_contracts/installation_receipt/healthy.json",
       "bytes": 463,
-      "sha256": "b8e3acf74678d65b568dc8d76789a569e1c23a9de907eb4d2d0889408ab4412f"
+      "sha256": "6ceec7cce74f044702fab6d62ac1df69707e21a409a8a8caec8204083e62fbef"
     },
     {
       "path": "evaluations/schema_contracts/installed_skill_inventory/adversarial.json",
@@ -6804,7 +6824,7 @@
     {
       "path": "evaluations/schema_contracts/prompt_addition_preview/healthy.json",
       "bytes": 971,
-      "sha256": "9ac00eb78c50eff0a18edbb6cfa0f4f1d58b1a2306f241f2a5bb6e8bfc7e36d6"
+      "sha256": "04707f71efa63c00c3607ecc257b93cceb2f85403e06eba24ff7c7f219861513"
     },
     {
       "path": "evaluations/schema_contracts/prompt_addition_receipt/adversarial.json",
@@ -6814,7 +6834,7 @@
     {
       "path": "evaluations/schema_contracts/prompt_addition_receipt/healthy.json",
       "bytes": 964,
-      "sha256": "5287e4184b69a4eb57206f9b486b1c1a65f2b48f6e84186cc7de50eb22e9fe74"
+      "sha256": "d8b137688257966bbb176a15eaa61513dcc9dffe8639e5c7a0444717c9acc6f4"
     },
     {
       "path": "evaluations/schema_contracts/prompt_addition_request/adversarial.json",
@@ -8944,7 +8964,7 @@
     {
       "path": "integrations/logging_event_catalog.json",
       "bytes": 415,
-      "sha256": "8d7199f2988c4d9301beaaebb0b83f9d3080e9545917aff37141e5365d414af7"
+      "sha256": "118013cf6dab3520b6ca64b6f5a0fb1c07a47ea461ecbb554dae274ae60b43d7"
     },
     {
       "path": "integrations/md_to_agent_library_crosswalk.json",
@@ -8959,7 +8979,7 @@
     {
       "path": "integrations/platform_tool_matrix.json",
       "bytes": 1507,
-      "sha256": "374cdbe0804bb9ff06beebc23aa3fbbb18c093e74696c835da1c953c5fd9f5d2"
+      "sha256": "8c609a24b85dc3a80386c63f1ac35146acb1c87020ead21fba27f53bc19d272f"
     },
     {
       "path": "integrations/prompt_type_catalog_snapshot.json",
@@ -8969,12 +8989,12 @@
     {
       "path": "integrations/template_to_prompt_crosswalk.json",
       "bytes": 54333,
-      "sha256": "983bbfa797d9683bb129dfa970a5f30718bf763441e5ce31e51b9113fef3d9e7"
+      "sha256": "84b9c194697e24bb2e726db7abd596ac266e9604c949da6e7b59de3758f97897"
     },
     {
       "path": "integrations/template_to_skill_crosswalk.json",
       "bytes": 937,
-      "sha256": "9c2d476a6d0a888d883692c1a131a6d3208d369a49229a14b8844c4aaad39544"
+      "sha256": "9b12c772b66021f3f69340660b06a12e891b439f5eb7083c48f69c4243d3c2b6"
     },
     {
       "path": "policies/action_policy.json",
@@ -8989,27 +9009,27 @@
     {
       "path": "policies/agent_guidance_policy.json",
       "bytes": 5232,
-      "sha256": "8a8434677547697264e40ffe53e7aa0e464968b1369d95f117b217d3fe33e989"
+      "sha256": "0322f08d9eae36774912731af518303cdf8878d9e0fd62c97bfa50db9f4bf5b3"
     },
     {
       "path": "policies/artifact_export_policy.json",
       "bytes": 323,
-      "sha256": "9c850df6606f47627c7514d7a4d62d3e7765923045f88027602e263266b751ab"
+      "sha256": "37f0a547db7da94f7d551e1b099588ea94f1c98f822a1997c372a36d60a68dbc"
     },
     {
       "path": "policies/assurance_profiles.json",
       "bytes": 1021,
-      "sha256": "8fdcfa9769317568614471ba5e225fac0d0c9815157fb452de86ae30590d62ec"
+      "sha256": "79990b13e86abcd10befa81f02dab12b127ed1055a9487e3cc26018a38b80aae"
     },
     {
       "path": "policies/auto_prompt_policy.json",
       "bytes": 2901,
-      "sha256": "f6ce7dea58c44d17b49b66b7aee8176caa953af3777a06f3e154ba03c4b908bf"
+      "sha256": "47b6e8e345930b464e93329d384dae5e31e6b5c503328a2cf25de6d55b0b7779"
     },
     {
       "path": "policies/cross_platform_tooling_policy.json",
       "bytes": 542,
-      "sha256": "614cba66c80c3a99601026ef6e737c7310a1d228bc7b00a6f240e0697c24328e"
+      "sha256": "a72689168cf313dfa6e86e7e70e14ed768e9c67a969f0669e3479948b15490a1"
     },
     {
       "path": "policies/data_handling_policy.json",
@@ -9019,7 +9039,7 @@
     {
       "path": "policies/documentation_system_policy.json",
       "bytes": 660,
-      "sha256": "b4c0c4eee78cc8ae60260dff5dc5134f629914302758a5e41a4c08680629f94e"
+      "sha256": "2067cb8a035f24d78e5c8dcbab321569b40ff0d0f2406f5c18a634956a872817"
     },
     {
       "path": "policies/employment_policy.json",
@@ -9049,12 +9069,12 @@
     {
       "path": "policies/logging_policy.json",
       "bytes": 1049,
-      "sha256": "3cb40df854a0216154e0828fdc198b2b7f4a4fdd8671bc38f7160de0f0f10757"
+      "sha256": "77c2b810131c28128f60863d741c119def9ccee4aa1154ea23610fa174e7df2c"
     },
     {
       "path": "policies/loop_execution_policy.json",
       "bytes": 1543,
-      "sha256": "e64a91b06543b5c81667709be47004fdebd3f57c14e230ef57c4ca6e6e38cd46"
+      "sha256": "3684cba186fd97e7bcd266fc97320a4d10305c6ab9d1499335b02d242a1324de"
     },
     {
       "path": "policies/osint_policy.json",
@@ -9064,12 +9084,12 @@
     {
       "path": "policies/project_installation_policy.json",
       "bytes": 1531,
-      "sha256": "16ea52a531ffccc83c83772a50a17819a5b216585c6d1f1d039de9fa040f730a"
+      "sha256": "592255da4b067181d86df3c37c5e633bdf49c687c4f68797bfebc999aa5f9055"
     },
     {
       "path": "policies/prompt_addition_policy.json",
       "bytes": 1882,
-      "sha256": "1f9c5523aed296b646f41a747fee551a3dfc2aee44cd58a2cbee63178f218239"
+      "sha256": "c70e11edf16656760a22e12da2be11900f57b1cc6131f69d31fd4a71ad6e572b"
     },
     {
       "path": "policies/prompt_shape_policy.json",
@@ -9109,1307 +9129,1307 @@
     {
       "path": "policies/template_routing_policy.json",
       "bytes": 1554,
-      "sha256": "3738210a7ef840cd32cc51076f90db98b6a81515e280f782ed36812c84e0de88"
+      "sha256": "6fd61ec1f7d322d7634d706dfe54064dc9cdf34ac9900ae37d4f1cc2cb1b1431"
     },
     {
       "path": "policies/template_usage_policy.json",
       "bytes": 1065,
-      "sha256": "059c981c41bb1d4d138deab5a9483cd2811d7d59e9926266478f4386951594b1"
+      "sha256": "6da8dfa43beeba79c9b2edb6c7ebbfd7df73785ea43a40ff8f20b1d309742e3f"
     },
     {
       "path": "policies/tui_policy.json",
       "bytes": 465,
-      "sha256": "4638958edbff1fe074168c658d47a9a1c0706b9d4ec6d9990139e61f5e16b8f5"
+      "sha256": "1f51a96d4ed4254d89cf77af856ca76883fef92fe7f75c8e1ab13f9179917621"
     },
     {
       "path": "prompts/00_PROJECT_CONTEXT_AND_RUN_CONFIGURATION.md",
       "bytes": 6199,
-      "sha256": "979be21a6d7c912b3c75c5d186f048e4ad2d54b50993e10788d974b51fd4d379"
+      "sha256": "790f8969f30fa7cf84912cbc06559f346955f1a2216b0b8b427f8cff592e19ce"
     },
     {
       "path": "prompts/01_UNIVERSAL_SAFETY_AUTHORIZATION_AND_EVIDENCE_CONTRACT.md",
       "bytes": 6690,
-      "sha256": "9099a4d8ad381fc3022b6f2a8f10289687621647ff2a5af6e15b827852ad2934"
+      "sha256": "85f133ff64b72e394d0e0d8430641db204d4bcb0c0a02afca066eab05abbc366"
     },
     {
       "path": "prompts/02_CAPABILITY_ROUTER_AND_EXECUTION_GRAPH.md",
       "bytes": 6669,
-      "sha256": "beb9a023f67b63185e63cd842e11b68b67892315ab4c72f8e650f563aff91f41"
+      "sha256": "e8e65eee7d37836d6e53f2044304f50ac2a9d4bd103a4925cc46eb758f4886b9"
     },
     {
       "path": "prompts/03_ARTIFACT_HANDOFF_AND_VERIFICATION_CONTRACT.md",
       "bytes": 9067,
-      "sha256": "53a0a159582325508c7d9a960f8bfd379e99d68d255bbab0c2439108b9a6d098"
+      "sha256": "a20acb2f13369417d85b127d2615a92d17ca738dc2044b2887196dbe0f4191a7"
     },
     {
       "path": "prompts/04_PROMPT_STRUCTURE_AND_INPUT_TRUST_CONTRACT.md",
       "bytes": 6073,
-      "sha256": "c7d5b63782276ddea9b59b0f626fabc0ed5a29583333c174791a75ed9b22f258"
+      "sha256": "0f091350e64f812e63c27568ced52e98640e2f46a098318cf00b1776ff65a6a7"
     },
     {
       "path": "prompts/05_PROBLEM_OPPORTUNITY_AND_STRATEGY_FRAMING.md",
       "bytes": 11249,
-      "sha256": "b537fe7c2385570b4aa0f38c577c9e5b7406c2ff1fd77f144af445cded586edf"
+      "sha256": "4786ee22878ab32c013adf7acecc728e88ba5f990d9996cf4ea7aa2039e2526a"
     },
     {
       "path": "prompts/06_MARKET_USER_AND_COMPETITIVE_RESEARCH.md",
       "bytes": 8205,
-      "sha256": "ff4c6a781f1449a1b5386bc524b9241da2e2d741c7cb59621fe138f003368ffc"
+      "sha256": "fea1ba33f85315b9a6f6e6bc2905887e35810d11f48d3685258452acd5932408"
     },
     {
       "path": "prompts/07_REQUIREMENTS_SCOPE_AND_SUCCESS_CRITERIA.md",
       "bytes": 8321,
-      "sha256": "fca2e17788e13b39749f926f523544cc10ce2df84820e1a7d9acc23e62749151"
+      "sha256": "8f59c10f4574e8dd2146ac47331b118c40117db78608340389032dfc42fefc2a"
     },
     {
       "path": "prompts/08_FEASIBILITY_PROTOTYPE_RISK_AND_ROADMAP.md",
       "bytes": 8249,
-      "sha256": "d0e928e6d6d56b81809e6392259e2d5a7fb34fadc9834cd5755a816c96f6df66"
+      "sha256": "4f76d44ee20af192a99b97e0acd53bc7c6fa381ba5a2634a92a97479f6657d8f"
     },
     {
       "path": "prompts/09_ARCHITECTURE_AND_TECHNOLOGY_DECISION_ANALYSIS.md",
       "bytes": 15655,
-      "sha256": "dc2a7fa84272dbe2a7cd9c42558dc9678bdad2965b04dabbfb29e8d89c57ddf6"
+      "sha256": "48a9ad42ad43de9b635c2b8ee0f02ce432c8db7e2d3671bd06e9f4181bb742e9"
     },
     {
       "path": "prompts/100_PITCH_PROPOSAL_AND_BUSINESS_CASE_DEVELOPMENT.md",
       "bytes": 9714,
-      "sha256": "700313eb047ccca4ff498155cc5274b4532883c40fc711f9d3b1bddef9edabb6"
+      "sha256": "c7963489744550e6bc3bff3c8ab63c962d055a52b0a39a80c7b094741373a822"
     },
     {
       "path": "prompts/101_PRESENTATION_NARRATIVE_STORY_ARCHITECTURE_AND_DECK_BLUEPRINT.md",
       "bytes": 11464,
-      "sha256": "832da6ca8e95529d33c94c234248ed58f62d42430b0b84ae43f1e1bf948b687f"
+      "sha256": "83c1016881fd351aae0e1bb152755d38a42c7607c038c9f797a851e422fff4dd"
     },
     {
       "path": "prompts/102_HTML_CSS_AND_JAVASCRIPT_SLIDES_AND_PRESENTATION_PRODUCTION.md",
       "bytes": 13600,
-      "sha256": "94eada2643301c2da19e24b5c275e040fbcb14e50d1ae1d15c455fc3718d9fae"
+      "sha256": "fdefb8f46d880f8e1f894e98305a70c54981c0e36a44ec398baa3290607665b3"
     },
     {
       "path": "prompts/103_DASHBOARD_AND_ANALYTICAL_INTERFACE_PRODUCTION.md",
       "bytes": 13128,
-      "sha256": "fb2cfb26084c8411e4342174363fabc6896422349d46cac025aee3fe59f89c69"
+      "sha256": "121f49de09db735aa757a9adb22ebe383722402d4828c34d94538fa63da2b256"
     },
     {
       "path": "prompts/104_INFOGRAPHIC_AND_DATA_STORYTELLING_PRODUCTION.md",
       "bytes": 9900,
-      "sha256": "a3d23bcfa21cd2666cee36dd6884e78ed39870f5019f46230d7786154b998442"
+      "sha256": "eee4441b8a31b1b68c92004ecbc2248adc5e8fd075216c5e3b0e3094626f0981"
     },
     {
       "path": "prompts/105_BLUEPRINT_DIAGRAM_ARCHITECTURE_AND_PROCESS_VISUALIZATION_PRODUCTION.md",
       "bytes": 11014,
-      "sha256": "04452dff7a3a9c4f52c8ce00e0c75c45b0b1a65bb03d5440dfe028ebb82af14e"
+      "sha256": "285914fba598acde296b2dd782f5f5fac157597f0be28215d0f10083137cd7b8"
     },
     {
       "path": "prompts/106_EXCALIDRAW_AND_COLLABORATIVE_WHITEBOARD_DIAGRAM_PRODUCTION.md",
       "bytes": 10764,
-      "sha256": "75beef78569573c6bf556b774ef47396a29f0ddebb4c4752f2ec9ef4cce3b995"
+      "sha256": "636883ea01cb61137ab8f350df8b6bed6ccd9929c4f1e137615cbe6c48f8bba8"
     },
     {
       "path": "prompts/107_INTERACTIVE_WEB_ARTIFACT_MICROSITE_AND_PROTOTYPE_PRODUCTION.md",
       "bytes": 10362,
-      "sha256": "ae66644f52e82236cd220ff52457db2aea8e0951cdaa4f7ecc1e9ee951af520f"
+      "sha256": "40bbb92461aa80d75b288fa9c9209af8e66c6f1183353a84721bf327f7172f79"
     },
     {
       "path": "prompts/108_FRONTEND_VISUAL_DESIGN_INTERACTION_AND_EXPERIENCE_POLISH.md",
       "bytes": 10385,
-      "sha256": "491a3855cd8df8969d234e87f04f678080ee3297a5425b8803a2ddd21c00ac87"
+      "sha256": "af87238419e45e6c19fbb754745d0bcc79205677b59d7b6a15ccc465bafa74d6"
     },
     {
       "path": "prompts/109_VISUAL_QUALITY_ACCESSIBILITY_BRAND_AND_RESPONSIVE_REVIEW.md",
       "bytes": 10130,
-      "sha256": "369098096a6c4543bdeaae9f5df76ad3b8426850e02dae7fcd602e5442136cca"
+      "sha256": "04d62a0e76ae39a40ad1c7be903f9003cd30d738a02a6ef27871f16440072cb9"
     },
     {
       "path": "prompts/10_PROJECT_DISCOVERY_INVENTORY_AND_BASELINE.md",
       "bytes": 9095,
-      "sha256": "0fc79fadb1ec3df7f6d0bcbba642a469167527f0ca59f5509519efad7a5ae768"
+      "sha256": "662cd2efc7352ba378b836efce08900d7607a4408fcd77254833ab8c8c53752d"
     },
     {
       "path": "prompts/110_EVENT_STRATEGY_AGENDA_RUN_OF_SHOW_AND_FACILITATION_DESIGN.md",
       "bytes": 10010,
-      "sha256": "d64b31da681f072f938473c5cd68b3f3176cb2b17af049b372793256864a9b4b"
+      "sha256": "de9a846c0946c632c37541d474895a448124264edc9e4af7553a8b6f1a349430"
     },
     {
       "path": "prompts/111_PROGRAM_PROJECT_AND_OPERATIONS_PLANNING.md",
       "bytes": 19517,
-      "sha256": "66c0615c036074157b0ccb66834d0d274d2f2af983e51ff58f71b14a20336ecf"
+      "sha256": "aab44ef64abe9a99bf04b5aa45b8b35163cc1833439624db737c58514cda7d42"
     },
     {
       "path": "prompts/112_WORKSHOP_MEETING_AND_COLLABORATIVE_SESSION_DESIGN.md",
       "bytes": 12705,
-      "sha256": "b69f8c0c3649e56d3cb883edc17a9e9ceb22fa2329d684921061635cfec6958d"
+      "sha256": "2b2da106a21fbbda1d9c2259ffb9696526a8888f16aec468d7ed63c9306449ad"
     },
     {
       "path": "prompts/113_DOCUMENT_MEMO_REPORT_SOP_AND_POLICY_PRODUCTION.md",
       "bytes": 20745,
-      "sha256": "88bbe7f799a467c209588f4d0c6dcfa64f2bba7fb60f05876fd6ebbe3bd17cac"
+      "sha256": "cea303a5bf042f87d22821ffd37a929df529f852b64d3a99fc04534608c4dcb7"
     },
     {
       "path": "prompts/114_MARKETING_AUDIENCE_AND_GO_TO_MARKET_STRATEGY.md",
       "bytes": 19921,
-      "sha256": "5e4954278da696ce75098e9528f6ed37cc7e386af564ab3a6642cb609ad69ea2"
+      "sha256": "72bb9396499165544ff3bf517571e7ef54ded932dfc618c5699614fa9fbd4a98"
     },
     {
       "path": "prompts/115_SALES_ENABLEMENT_CUSTOMER_COMMUNICATION_AND_LIFECYCLE_CONTENT.md",
       "bytes": 13241,
-      "sha256": "476ae0758b8d1465314016def7478b2a44d71f65e5bf76f7a8bdc2b91bd595ca"
+      "sha256": "9133330972f6cf332f01c80b9be1ca6a1cba3be696d5a8cd7db55e96df832978"
     },
     {
       "path": "prompts/116_SPREADSHEET_FINANCIAL_FORECAST_AND_SCENARIO_MODEL_SPECIFICATION.md",
       "bytes": 9900,
-      "sha256": "d43aac97936050b79c5925aee85bbbbdccdc23364a474a41804320b5cf4a4bd5"
+      "sha256": "23542cc93ed78f88a5c591979780bcfc2cac1d09221e467e2a59335e7fade2e5"
     },
     {
       "path": "prompts/117_LEARNING_EXPERIENCE_CURRICULUM_COURSE_LESSON_AND_ASSESSMENT_RESEARCH_AND_DESIGN_BRIEF.md",
       "bytes": 15219,
-      "sha256": "be75e3e6392943f570a5042012e593b0c093f8b933000f1444d63105c3fcdffd"
+      "sha256": "cd0eed2b832ff20af84ac352c390510d035e2bee8c9cf74f56c7304e5b5ababc"
     },
     {
       "path": "prompts/118_LEARNING_EXPERIENCE_CURRICULUM_COURSE_LESSON_AND_ASSESSMENT_MATERIAL_PRODUCTION_AND_VALIDATION.md",
       "bytes": 14851,
-      "sha256": "c93556893a27a1e4c720f54af5cd4d734338ef012566bf969713d0a8533e102d"
+      "sha256": "d94e9bb4f745f017e102c49f303ec45c65e4e874e789ce236ab621c93c75a302"
     },
     {
       "path": "prompts/119_SURVEY_INTERVIEW_QUESTIONNAIRE_AND_RESEARCH_INSTRUMENT_DESIGN.md",
       "bytes": 15620,
-      "sha256": "aaafa10c4c7a627219070547605ac1ce59f9478afafc9f67c9c798b27402519a"
+      "sha256": "054c8ec9cc311ad85595aa6ef5c528e561c88c10a7859a2a9495497dea25f526"
     },
     {
       "path": "prompts/11_THREAT_MODELING_AND_ATTACK_SURFACE_ANALYSIS.md",
       "bytes": 20677,
-      "sha256": "28a268f340db76b0c80775b314123d44e4bec701482317422a55b4e4a009caef"
+      "sha256": "eb042d7d4cd997769915229b50254f5d7e7714b3dc9776af09c8747c2e4e19b6"
     },
     {
       "path": "prompts/120_GRANT_FUNDING_SPONSORSHIP_AND_AWARD_PROPOSAL_PRODUCTION.md",
       "bytes": 13009,
-      "sha256": "63e7bcade2d05978bc2b5252f5e6bf27a221120be46c54d3a54215983df3f90c"
+      "sha256": "84042fabcb0edf11af9ec7063414e3e05b42e5d1cf532772a52047aba6943511"
     },
     {
       "path": "prompts/121_PROFESSIONAL_PROFILE_RESUME_PORTFOLIO_BIO_AND_APPLICATION_PACKAGE.md",
       "bytes": 10413,
-      "sha256": "b4e684ba9d36f476e1381d05151583e838228cffb14f2f72948acf80cd51a209"
+      "sha256": "4ae58458f8e01cb400686a966338f6df8b1e1e754c33c077b0241ad04295844b"
     },
     {
       "path": "prompts/122_EMAIL_LETTER_MESSAGE_SPEECH_ANNOUNCEMENT_AND_GENERAL_COMMUNICATION_PRODUCTION.md",
       "bytes": 10954,
-      "sha256": "0ab9d9561b65e564629e477aee94382ef4d8b3cf6a03a3d7846513a505bfb5be"
+      "sha256": "f4ae9c99ee0c0772fcd5c861ce3f00492e76a8ab5c7dccfc119e6e1f0eed147c"
     },
     {
       "path": "prompts/123_SOCIAL_MEDIA_SHORT_FORM_AND_COMMUNITY_CONTENT_PRODUCTION.md",
       "bytes": 13422,
-      "sha256": "abca24fb928d5973221cb62272250fd5f46ffa91dccb39bfc78f8ee14e45deac"
+      "sha256": "7e3e194da43073afca1fa6ef630f55264476832dd3db73731178ab7bd518f040"
     },
     {
       "path": "prompts/124_FEATURE_CHANGE_AND_INTEGRATION_IMPLEMENTATION.md",
       "bytes": 14859,
-      "sha256": "935baed7ce75218b8b5905d2e1c2478b17b4dc7f44cff4b42cc1683f7d5804d6"
+      "sha256": "cfca864c6ed3bc2ab0e284d95a3a9e4bc7212ff8c45d4f393267b0cb2b6f611b"
     },
     {
       "path": "prompts/125_EXPERIMENT_A_B_TEST_AND_CAUSAL_MEASUREMENT_DESIGN.md",
       "bytes": 13950,
-      "sha256": "1094d3fffadbd9b725d97b7d5fcebd0496651e7add892ebec5c7e393b91a6b2e"
+      "sha256": "d3867a5286cfe7d1cdb81a11170b3e24514349737199c69b6ba2bf81428a24c5"
     },
     {
       "path": "prompts/126_TRANSLATION_LOCALIZATION_AND_TRANSCREATION.md",
       "bytes": 13702,
-      "sha256": "d9431fb95aa2ef3ea08a216aa82645c673f13b9d1280e6b8b2248aacfd77d75f"
+      "sha256": "c640b5229eb8947aaa33818c2b1086764907168783b5421cd26332af5f2274f0"
     },
     {
       "path": "prompts/127_MEDIA_PRODUCTION_EDITING_AND_DISTRIBUTION_BLUEPRINT.md",
       "bytes": 14149,
-      "sha256": "4d6732dbcc40a4cf47c5cfe70e4431700635460e39fdf852737174fe2f997d74"
+      "sha256": "1d2891ec3205e40bae5d2ce235c8186d5db928e8c42511f86054f6d701187697"
     },
     {
       "path": "prompts/128_CONTENT_PERFORMANCE_AND_EDITORIAL_OPTIMIZATION.md",
       "bytes": 11058,
-      "sha256": "7536d107afb7390d5282d7cf76b7d53a9ec0232a0996710c19a8505c7301c883"
+      "sha256": "94ec1f00cddc7f0b7174813b6cff40329f3df6c15b516fa2ca4d96df91998a80"
     },
     {
       "path": "prompts/129_ACADEMIC_PEER_REVIEW_METHODOLOGICAL_CRITIQUE_AND_REBUTTAL.md",
       "bytes": 11349,
-      "sha256": "a40ed7a5bcafa0858dccfccb2d60af43398a27f2ed2bca621fc5e81578c6c472"
+      "sha256": "db902d4f5a6aeab2baa946dad11c4155a0a4224a11a93b08963c19beb32a36fa"
     },
     {
       "path": "prompts/12_AUTHORIZED_ATTACK_SIMULATION_AND_ADVERSARIAL_VALIDATION.md",
       "bytes": 8594,
-      "sha256": "14b3625664822f21a39d49adec02dd183928bd4808b64a588c1a512291bbd9f6"
+      "sha256": "aa87309ac4602f638b6d72710348f12e26c663ae7deab241f6bb1795760eaad9"
     },
     {
       "path": "prompts/130_SEARCH_DISCOVERABILITY_SEO_AEO_AND_INFORMATION_ARCHITECTURE.md",
       "bytes": 11545,
-      "sha256": "245c90ae5d9de8378da3be08dbcb05ea653b95172765289ae1d3d097a223c84c"
+      "sha256": "e362b05140380eff1dd0025228d2fae021e7de0a8a8204e7bb7ae4828a5fa756"
     },
     {
       "path": "prompts/131_PROCUREMENT_VENDOR_EVALUATION_RFP_AND_DUE_DILIGENCE.md",
       "bytes": 14212,
-      "sha256": "73872557731ac833a4086a71dab8aba71955bb258a228653f5f1523390e22d39"
+      "sha256": "582a6797dde0a936d542a8aefd84f369fa8a7bb7d0b1b9d381237d1b8c91ecb9"
     },
     {
       "path": "prompts/132_WORKFORCE_STRATEGY_AND_CAPACITY_PLANNING.md",
       "bytes": 10614,
-      "sha256": "1333e0f30c73abe156efc5c5f6abf9a741198c3eb745ef2982eb92d90853803a"
+      "sha256": "58d58bb9c80bd115b829b25c56cf9b59f1d9edf887e1c77aa21f9c231719f2e9"
     },
     {
       "path": "prompts/133_HIRING_INTERVIEW_SELECTION_AND_ONBOARDING_DESIGN.md",
       "bytes": 13908,
-      "sha256": "334ec1dd8c40be33e7d13223b8c33d2c5b0275630d989bf715548a8edf80f08c"
+      "sha256": "136f36865cc56a41adeff415bb2872a588bc645577b4fcb87ea20e250902312c"
     },
     {
       "path": "prompts/134_PERFORMANCE_COMPETENCY_CAREER_AND_LEARNING_FRAMEWORKS.md",
       "bytes": 13944,
-      "sha256": "61f36635464eb86726ee18f0994935b76a9ebf4f91106f1264bfc3afd329027d"
+      "sha256": "ba191ce96f00ee66a1e301c2bad70cb7ad983f1b156e9ab1810a56fc6442af58"
     },
     {
       "path": "prompts/135_CUSTOMER_SUPPORT_AND_SERVICE_OPERATIONS.md",
       "bytes": 13632,
-      "sha256": "7d27cbae8b349b076754a55493f2005bf673d010d9311a19906febfecd5613ca"
+      "sha256": "c8d2d8848bb717e817e6707c1ebea97af6d81cb11e582fdf739eca95cb45be61"
     },
     {
       "path": "prompts/136_CUSTOMER_SUCCESS_RETENTION_AND_VOICE_OF_CUSTOMER.md",
       "bytes": 10849,
-      "sha256": "8cb8bc16436af7677eb1451e8fc65e9657e26d0203b70fbeeef408ae382a5b5f"
+      "sha256": "30a6b968fbb686eef8162c3ba4acf36b9af582ac97344e87befbdc76e9ca8113"
     },
     {
       "path": "prompts/137_NEGOTIATION_AND_DECISION_PREPARATION.md",
       "bytes": 10502,
-      "sha256": "58b6641ecb56a50c48fe6a8b69482e7151823dc58fc4b03b2f7dd9a62f95089c"
+      "sha256": "f3f42a53d93e7d003a8eada058e413a6658e735e0e4df9237265d66c9f3d1878"
     },
     {
       "path": "prompts/138_PERSONAL_KNOWLEDGE_PRODUCTIVITY_AND_WORK_SYSTEM.md",
       "bytes": 13762,
-      "sha256": "d54c764cd75faf3aa7fece013f8a370ff5912b1293db1bf9f0a73fbe613232d6"
+      "sha256": "d3b01d625e8278914dbaef3403dd89fa64ef621d1c94ca4944072085540bebc2"
     },
     {
       "path": "prompts/139_OSINT_RESEARCH_PLANNING_AUTHORIZATION_AND_COLLECTION_GOVERNANCE.md",
       "bytes": 11800,
-      "sha256": "e2909d45500614d7709800e3d424f2016e12727b8fcf24c9d557f1fb1f78729b"
+      "sha256": "f8a4ddcf95b8a671ade0de9253267864a9bdacac53f972c8d52ecf80e15c9327"
     },
     {
       "path": "prompts/13_SAFE_EXPLOIT_REPRODUCTION_AND_PATCH_VALIDATION.md",
       "bytes": 11210,
-      "sha256": "1d8fca254c64786555c2250d663c0560a12bab610be1a3d2cba532049e677ffb"
+      "sha256": "2a3a9fa6981c923d6b6a79ed1990c3b33fa33281cdc213c9cc3a9a87d42b3c22"
     },
     {
       "path": "prompts/140_OSINT_COLLECTION_SOURCE_VALIDATION_AND_PRESERVATION.md",
       "bytes": 11234,
-      "sha256": "4467759bbf8dad43b075068effc1c1300a375d976f1902ede3ff5b4259cc6450"
+      "sha256": "4b0d54479c690e8b0547e15753c4c62ab55eb78eb195d3b0e636b97f4559f9e8"
     },
     {
       "path": "prompts/141_OSINT_ENTITY_TIMELINE_GEOSPATIAL_AND_NETWORK_ANALYSIS.md",
       "bytes": 11254,
-      "sha256": "b0536c1b314b8ea3ab767854f27133a3c90363b658cad1936261071674c61eac"
+      "sha256": "643b1650420758ce82ca46a91449fa6757c05ec693f01f35867c6e9e19ecd26e"
     },
     {
       "path": "prompts/142_INTELLIGENCE_ESTIMATE_WARNING_AND_EXECUTIVE_BRIEF.md",
       "bytes": 11277,
-      "sha256": "9c18452eb7113a06c139febe6ca0d90d8d821e91587fa077bebcb23ac74c8582"
+      "sha256": "331b16e49e33ed79ba5283e0e6e8449a387171d87d116d0c43dd94d007e231b1"
     },
     {
       "path": "prompts/143_LEGAL_RESEARCH_AND_ISSUE_ANALYSIS.md",
       "bytes": 10383,
-      "sha256": "036d9e609fd3fb968e3c24be799e891f09b0c53171e05e6472401a8fedf01289"
+      "sha256": "5ee326bb3510fadc0c178d60a6d8c8fc6da4b9f8c5fb85ddea1e2597817f748d"
     },
     {
       "path": "prompts/144_CONTRACT_POLICY_AND_CLAUSE_REVIEW.md",
       "bytes": 13812,
-      "sha256": "f5ca79ccb06d8685a8a21a69caee1c1307442f4b58c333b0def44a07366523d2"
+      "sha256": "e7083ec37228ecd209ce7cf3ee74d510ed7129770cd8534b68c5b32e5cba0cdd"
     },
     {
       "path": "prompts/145_FINANCE_FP_A_BUDGET_AND_MANAGEMENT_ANALYSIS.md",
       "bytes": 14073,
-      "sha256": "56e19470feb5d22360a57d7430f284f1cad2a37ae921a682f5cd3e585450cd13"
+      "sha256": "4751796e00dc6e3f0b272dfb4702db251ee63ec534ea51a16b8798997db0e676"
     },
     {
       "path": "prompts/146_ACCOUNTING_CLOSE_RECONCILIATION_AND_CONTROL_REVIEW.md",
       "bytes": 11130,
-      "sha256": "2ab9e2a804cd318b4341b0c822bc1ec1050301ff83a32b7fdd21f9b75a20e49e"
+      "sha256": "77dfac7088c2ab40919e155533a3ca216cbf3a69b26a68ba4713963880d8fb5b"
     },
     {
       "path": "prompts/147_TREASURY_CASH_FLOW_LIQUIDITY_AND_RUNWAY_PLANNING.md",
       "bytes": 10843,
-      "sha256": "cadc182f63b28272733930851220375c202404121e6995237913f85de03a8afb"
+      "sha256": "b2e881c74220b55a154f9bfaf3c54e7e1b6c1d0a96a6a2e3ae97178efe26aa13"
     },
     {
       "path": "prompts/148_INTERNAL_AUDIT_CONTROL_TESTING_AND_ASSURANCE.md",
       "bytes": 13636,
-      "sha256": "9e97f2cde491e1f08eac0a8ab5ec50b0da8d946805e0dfebe8d4253d20287eae"
+      "sha256": "af9590ce349d004e90b25312ab955e55a172e0c6d5c221fd7cd6566b0d251a11"
     },
     {
       "path": "prompts/149_OPERATIONS_PROCESS_DESIGN_AND_CONTINUOUS_IMPROVEMENT.md",
       "bytes": 11043,
-      "sha256": "724e5397e6d7c206406a566fbad82ea778e893ccaaefcff7ed65e5ce581cdb0b"
+      "sha256": "13be3ce10bceae3bca014367838cd7be5c46f8453104457f35c5a04bc8bbed24"
     },
     {
       "path": "prompts/14_MODEL_AND_AI_SYSTEM_RED_TEAM_EVALUATION.md",
       "bytes": 11204,
-      "sha256": "7ddc89115fb2cbbf94978e47567fe8430f8977288ecb915bdeb9cc03f49c28b4"
+      "sha256": "1ce5bced399ddeeb3c3a0172c202750791f7d92d71f21f63c82d53330cff023b"
     },
     {
       "path": "prompts/150_SUPPLY_CHAIN_INVENTORY_LOGISTICS_AND_RESILIENCE_PLANNING.md",
       "bytes": 11081,
-      "sha256": "d60d95d0200d4a27e8650db04adcfa1964bb594b0ec584c7e37e6b6d7340457d"
+      "sha256": "a6d93063f52a9aacb896cb4a0ff41b1b87ecee042658244ffbf0b6f69765a856"
     },
     {
       "path": "prompts/151_PRODUCT_DISCOVERY_STRATEGY_ROADMAP_AND_LIFECYCLE.md",
       "bytes": 11137,
-      "sha256": "28656584489344eee237d2cbca537ddfd0e2bd8a187f48debaf8294d7acde5f0"
+      "sha256": "9419bb3cfe7bc5d891fe93e4e233801cf2523de72327ab845ce612ec03042d48"
     },
     {
       "path": "prompts/152_PRODUCT_REQUIREMENTS_ACCEPTANCE_AND_RELEASE_PACKAGE.md",
       "bytes": 14798,
-      "sha256": "7a696f072af77e76ed46c25c9f1ea87b8f8a01cf19e2e2c151c0a1065b1a1e59"
+      "sha256": "2349fd1601593a0d60ba48209daafb2b5774a74485d9a48d3ac352bfb2fd02bd"
     },
     {
       "path": "prompts/153_BUSINESS_PROCESS_AUTOMATION_AND_WORKFLOW_DESIGN.md",
       "bytes": 13750,
-      "sha256": "f5fa2023349cb5b90eb62981e96fb063837db895d3b7109b90ee47bdb6302fad"
+      "sha256": "e73ed773d2e2ab2e5ba16f3663c8a7b378c37422d563aff3c7f4af27c69cdbe8"
     },
     {
       "path": "prompts/154_DATA_GOVERNANCE_QUALITY_LINEAGE_AND_MASTER_DATA.md",
       "bytes": 22535,
-      "sha256": "a282b10f7a17151e07ee944bc778e4c8a18f1942a445ce44dc20dcd6b0ebd4f5"
+      "sha256": "6e589eebd308920bb11c5e7b134a16408bc0e20a3e4c001da1450391aee46d9e"
     },
     {
       "path": "prompts/155_COMPETITIVE_INTELLIGENCE_AND_STRATEGIC_SCENARIO_PLANNING.md",
       "bytes": 14193,
-      "sha256": "fe91676b63ec176e38f0695d413460d2d365d1fa1f75067a6e4f81ea1301d86c"
+      "sha256": "ab9397fae106f4bc9203d37ac76313cbf40b6d44b8e131a70665d9520d7be8ed"
     },
     {
       "path": "prompts/156_CRISIS_COMMUNICATION_AND_ISSUES_MANAGEMENT.md",
       "bytes": 18896,
-      "sha256": "6aa878d6fd2122716906d72153fd90f0508624f5f89cddee21d0b51d6c11f9ce"
+      "sha256": "3d6319e41c970a60b07d314cacda13bee42e658beeb8381f34888e2f0c4e124c"
     },
     {
       "path": "prompts/157_PUBLIC_RELATIONS_MEDIA_BRIEFING_AND_THOUGHT_LEADERSHIP.md",
       "bytes": 26118,
-      "sha256": "593086d0a46a04fd57ac32703e99fadb36a994099af8ce7ef262d752757098f2"
+      "sha256": "a6808071b6f2fa40387e10cebb248ac3c09dab48327facf9adcc21023acb9d60"
     },
     {
       "path": "prompts/158_PARTNERSHIP_ALLIANCE_AND_ECOSYSTEM_STRATEGY.md",
       "bytes": 10682,
-      "sha256": "711b9e633c5db7882b584d3b48bbf40126b8eb75a6e594105bddb3c809db9a2d"
+      "sha256": "7ee8563a587bd214e6eaa787af389824cbf53a3676659cbb0fb4d93af4cec649"
     },
     {
       "path": "prompts/159_BOARD_EXECUTIVE_INVESTOR_AND_MANAGEMENT_REPORTING.md",
       "bytes": 13819,
-      "sha256": "e49efd53aaf5222a635a1b3d413ea9d23836c2a7829e739f00c9e9f119b83dc6"
+      "sha256": "5b6a774046726f8e179ed80a64872138fa114ba119ffcec692193d0deeb68d65"
     },
     {
       "path": "prompts/15_INCIDENT_TRIAGE_CONTAINMENT_ERADICATION_AND_RECOVERY.md",
       "bytes": 12473,
-      "sha256": "bc878f27328b6a344b1816e90b8b45eea659156b8a7d980032f0d5832a29ab05"
+      "sha256": "96c7aa8ec892eaeed5aab045ee1463981241c503e70e1dab03df65b2dab8a3d3"
     },
     {
       "path": "prompts/160_MEETING_INTELLIGENCE_DECISION_CAPTURE_AND_FOLLOW_THROUGH.md",
       "bytes": 16520,
-      "sha256": "86d5708cf19840d5855b81831cccaa2a608ee9114a55b0861e15078e25adee43"
+      "sha256": "2ad77f769ed833bdfa7e6bd2690767803d6cabfa9a0caf30264808837686ce64"
     },
     {
       "path": "prompts/161_POLICY_ANALYSIS_PUBLIC_AFFAIRS_AND_REGULATORY_MONITORING.md",
       "bytes": 11131,
-      "sha256": "0363298fef4edd50cd789d78df5befdda1540fdbde11a9e90cb4ff58d55e8cd7"
+      "sha256": "49c0111528114fdb5236029e442001382164043ece42070a17787ceec4c453ad"
     },
     {
       "path": "prompts/162_SUSTAINABILITY_ESG_AND_IMPACT_REPORTING.md",
       "bytes": 10825,
-      "sha256": "4bc4343e0cc648d9e1d878a594454a3fc30727625fb5df9fa84f6f2a7750f2c4"
+      "sha256": "bbbaee0cd2c5c53f21a791a45c1f6f0f23912dfe8cf0d91c78bc854b8d43e976"
     },
     {
       "path": "prompts/163_ETHICS_RESPONSIBLE_AI_HUMAN_RIGHTS_AND_SOCIETAL_IMPACT.md",
       "bytes": 11221,
-      "sha256": "01ebaa39243bfc8c6ededf308a4d9f017aeebd033b15a1076df84db7d7b30d41"
+      "sha256": "820dafcf1f930db383797095f78d22c4248f741affd5d051e2d5a8eb68576218"
     },
     {
       "path": "prompts/164_ACCESSIBILITY_PLAIN_LANGUAGE_AND_INCLUSIVE_CONTENT_TRANSFORMATION.md",
       "bytes": 11661,
-      "sha256": "2b071948974cffb70bfe59154cb14e243aa9fe344c8fad8d2935fe49d8fec579"
+      "sha256": "bcc22343df1ceaed682bf6853fa9c5ec5b383f08e2ad2ca41fbeb2d00af71858"
     },
     {
       "path": "prompts/165_PROMPT_CREATION_AND_SPECIFICATION.md",
       "bytes": 10693,
-      "sha256": "c459f2800d09c708f2cc84ad040ca9689093645fa504b41998309006567333ce"
+      "sha256": "8b6aa865ffbb90388d741f30b85590bd4407267e895888295bc50d1acec9ee1c"
     },
     {
       "path": "prompts/166_PROMPT_OPTIMIZATION_AND_ENHANCEMENT.md",
       "bytes": 10662,
-      "sha256": "f915337789b16fedcc1df3925ff148e7cbfdbc840f454f032ce034d7c19b685f"
+      "sha256": "1d88d73059b4e9227751ecce39e83bc797c73388c040d583132e36b550f3d90c"
     },
     {
       "path": "prompts/167_PROMPT_REVIEW_EVALUATION_AND_ADVERSARIAL_TESTING.md",
       "bytes": 19721,
-      "sha256": "d9a02f186590885905be4514efd3fc2c012002c97f52e73f8ab423bf89914b0d"
+      "sha256": "bd3f8d5b30b325d4bdd294fa12b5cd235f51a64bfae8bcf8e0f2dde1e2165418"
     },
     {
       "path": "prompts/168_PROMPT_REPAIR_REFACTORING_AND_FAILURE_RESOLUTION.md",
       "bytes": 11085,
-      "sha256": "9ee2a212b9e7fe5009bf834c859064654fd30eea1e3accc54bd78949ae4dccd2"
+      "sha256": "bbe64d5e8a4c227db27a59fad092411687ef8c2586776d555ea342de3bacb3b8"
     },
     {
       "path": "prompts/169_REPORT_ARCHITECTURE_AND_DECISION_NARRATIVE.md",
       "bytes": 15879,
-      "sha256": "07d5ac1bcdeec91c12b42c10fafb059ec4304492e310a4d237ccdf129393d6c6"
+      "sha256": "1eb43f5bd8135227c74665ad8a8faee79908adebe515f81efd22e7224429b495"
     },
     {
       "path": "prompts/16_PROJECT_SCAFFOLDING_AND_REPOSITORY_BOOTSTRAP.md",
       "bytes": 9151,
-      "sha256": "bfabfebfabd7a24d131a4bdc9dc959b8a5bd1fd901dacd8f09e267db4c600d7c"
+      "sha256": "e098ef030ab24e01d1d3a2e61df90b5902eb060f282ce040b9b760e6b991cde3"
     },
     {
       "path": "prompts/170_REPORT_PRODUCTION_VISUALIZATION_BRIEF_AND_QUALITY_ASSURANCE.md",
       "bytes": 14862,
-      "sha256": "5f46feee6769e4e920c252bde47e764c3fb6079269c32e8c32a42391b7f67c61"
+      "sha256": "048d9f5ec7f4aa883ec18ecde8f7855b68405cd1b6baf46203dc88f8447b28c1"
     },
     {
       "path": "prompts/171_CHANGE_MANAGEMENT_ADOPTION_AND_ENABLEMENT.md",
       "bytes": 10895,
-      "sha256": "0f10ce428a916fa6827924763f292bf180c40470735a8bc183307e74b254450c"
+      "sha256": "b3686acfa9242564945ebef59cebe47a510fb1d0bef1f74332f88e75fd18dad4"
     },
     {
       "path": "prompts/172_STAKEHOLDER_MAPPING_ENGAGEMENT_AND_COALITION_PLANNING.md",
       "bytes": 13719,
-      "sha256": "0deda3a4dbfe03f6441f37634f3f7e62dca9f940f22568b9309f16e0064b8145"
+      "sha256": "3b6e544dfd1369468c7465d8bcf009f70f0a80fbdd5d6ff4fa0a21461379dce7"
     },
     {
       "path": "prompts/173_ORGANIZATIONAL_DESIGN_OPERATING_MODEL_AND_GOVERNANCE.md",
       "bytes": 11058,
-      "sha256": "8291baf87c2e748c3ba6a55bc31865393b7ebe2ddeb0c1cef98a2363f2a67061"
+      "sha256": "0b181b5e3b0fea782df08a05a10bb93f881b9b09ac98bc965f7c5f1b8fb7ab9a"
     },
     {
       "path": "prompts/174_QUALITY_MANAGEMENT_SOP_AUDIT_AND_CONTINUOUS_IMPROVEMENT.md",
       "bytes": 11009,
-      "sha256": "ad71fdf60bfdc93cfd1552a626cc6b88b052cd547517f7a89331cc5d18b8f328"
+      "sha256": "7c3b0900279e60fcdb5c68ba40e48ec1b354d9238e722bf27a10e1875e23190c"
     },
     {
       "path": "prompts/175_BUSINESS_CONTINUITY_DISASTER_RECOVERY_AND_TABLETOP_EXERCISE.md",
       "bytes": 11283,
-      "sha256": "28713d6aafdea80aedb74c593a753d2e57152257e5b3b5dd3b13d84f25ad68d0"
+      "sha256": "a3c9df91e7e9c1c35b762181790853d4fe1d87139f880a12ce8336de66129f6d"
     },
     {
       "path": "prompts/176_CORPORATE_STRATEGY_PORTFOLIO_AND_CAPITAL_ALLOCATION.md",
       "bytes": 11174,
-      "sha256": "4e217c3eb995a68bf3cd279654b7dcbb4830b3e7ddb06b6ed6ded66bdec91cdf"
+      "sha256": "f2594caa6ee48c5f22279826a0cd9409ac66ccb0e37812f89251cf9d0b53887c"
     },
     {
       "path": "prompts/177_INNOVATION_PIPELINE_IDEA_PORTFOLIO_AND_EXPERIMENT_GOVERNANCE.md",
       "bytes": 11390,
-      "sha256": "624e5d996f8acfc1ce5d123ef383d085ffdc9cbfd17f01f749c2a81ad9026b9b"
+      "sha256": "6ef90918efb4d10561272bd78585533892b7e33ba8ece7345e1d708c02d63f47"
     },
     {
       "path": "prompts/178_LANGUAGE_MODEL_TASK_INTAKE_CONTEXT_ENGINEERING_AND_PROMPT_PACK.md",
       "bytes": 11703,
-      "sha256": "9b7ee7bec23d2f0b4a6fd7e39a3931485a35c9c1e0a86ccdc51fccea0f8421ae"
+      "sha256": "5992cd6e8716e2ebf7a70f41ec92abb84a17452bccc971e2e71f17f5910feb99"
     },
     {
       "path": "prompts/179_DEPARTMENT_OPERATING_PLAN_AND_CROSS_FUNCTIONAL_COORDINATION.md",
       "bytes": 11370,
-      "sha256": "9f3fa33d4602bbb28bb825593acf616413140dddbf7daa41c1c96bf1419cda14"
+      "sha256": "1b489eb72a8fbe237239e3e58062c2064eb58b6ecfbb84539d6703c046b40f79"
     },
     {
       "path": "prompts/17_STAKEHOLDER_STATUS_ROADMAP_AND_RELEASE_COMMUNICATION.md",
       "bytes": 11506,
-      "sha256": "4b749f5d42edb3137382cce27a87173d76352aae17e7968096cefbbbbaae10b2"
+      "sha256": "d8d76d335da713c581e1e79403f4be5c766fe98f170354ef256d77e8f14b6fe4"
     },
     {
       "path": "prompts/180_RECORDS_MANAGEMENT_RETENTION_AND_INSTITUTIONAL_MEMORY.md",
       "bytes": 11040,
-      "sha256": "1b7d92e8e9a69cde3fdef0173fd1c359bee4758247c71712e0b3f941f978583a"
+      "sha256": "427f2343ef4aa575645acaecd0b62658229ed1129ab31583be0e86856c5e527a"
     },
     {
       "path": "prompts/181_EMPLOYEE_COMMUNICATION_CULTURE_AND_ENGAGEMENT.md",
       "bytes": 10773,
-      "sha256": "614a61f8195154a6ee62796b1fca42ca802be14dd01b06ae3c94f95e5a8430c3"
+      "sha256": "1c7e38676873bc5011ff6fef3a9856dc928562103d61a20ac28cdabd3ca05386"
     },
     {
       "path": "prompts/182_CYBER_THREAT_INTELLIGENCE_AND_SECURITY_RESEARCH.md",
       "bytes": 11023,
-      "sha256": "372a6574d9fea957e1b2b40009aec9ef5cede7d66efeb810021fcba2d76c3df8"
+      "sha256": "05527035de60934aaec0457b292712391dcbe8a04f270e7e974dc1f7efe05c6a"
     },
     {
       "path": "prompts/183_FRAUD_ABUSE_AND_INTEGRITY_RISK_ANALYSIS.md",
       "bytes": 10338,
-      "sha256": "5519d7228d997002dac75e4c84e9daff91133c176b0f6bf36fc7167e1586c709"
+      "sha256": "af8cce10d86e8bfc7d34bffb6315e0f6434d23b9bf732a6b09ac3bd407a998f8"
     },
     {
       "path": "prompts/184_SALES_OPERATIONS_PIPELINE_FORECAST_AND_REVENUE_PLANNING.md",
       "bytes": 11183,
-      "sha256": "ef16bee983a188d535a69f49000c19fa7ab263481d98a03dc1e14def8ce79cba"
+      "sha256": "391a0477975995fbe9a587d209f880de4994dd19a88127876f25260a50155c80"
     },
     {
       "path": "prompts/185_REVENUE_OPERATIONS_AND_LIFECYCLE_MEASUREMENT.md",
       "bytes": 13772,
-      "sha256": "f1cae34522c065ae0c4bf66edfc6bfe8ba2670bbf8b091307b3b22af24f17fe4"
+      "sha256": "bff5a03b13372645910c8835e8bd6815c22ff09022abb91fac5651a1bb20bc0d"
     },
     {
       "path": "prompts/186_ADMINISTRATIVE_OPERATIONS_TRAVEL_SCHEDULING_AND_EXECUTIVE_SUPPORT.md",
       "bytes": 14772,
-      "sha256": "f21e324782f05ae9690fb6836c78b636522805b81bbb6d79a7e44efe76cf0533"
+      "sha256": "5d9ed231737623051ce14f5e49e6217c86fc006c51b2801826a91ba60d23fe25"
     },
     {
       "path": "prompts/187_MODEL_EVALUATION_BENCHMARKING_AND_SELECTION.md",
       "bytes": 10858,
-      "sha256": "30bb02ade5684f0de4afbc02c5f01b122b7f23a1373a056d9aa81ad10feef347"
+      "sha256": "ae047ea11c6de33f99e0c571a5803581686ac12fe16323e252bb6e0f7da30fa2"
     },
     {
       "path": "prompts/188_LLM_APPLICATION_RAG_MEMORY_AND_TOOL_ARCHITECTURE.md",
       "bytes": 11262,
-      "sha256": "5f27ca1e0b1d7b6101fc8b61ce91ada739074fe6693cdeec4e67fe6e4b31e3cd"
+      "sha256": "cb60841cd0a2bb2f25e4bc215dc5f05de1d5525ed7c1ebf90bffdfd5c9f949b8"
     },
     {
       "path": "prompts/189_KNOWLEDGE_RETRIEVAL_SEARCH_AND_RAG_QUALITY_EVALUATION.md",
       "bytes": 14674,
-      "sha256": "ea600c1acca0a6a9614461ede3347d56d750dcdaa9ac7fea203a53aa69668478"
+      "sha256": "25a9b8768ffc1f923f51cfd9812ae50b1cd0ca5f9cf49f1ab18f3a0459714720"
     },
     {
       "path": "prompts/18_PROJECT_HEALTH_COMPLETENESS_AND_RELEASE_READINESS_GATE.md",
       "bytes": 13177,
-      "sha256": "f65f692c96c9adc1fbe5a2ffb0eeeed4bf68dc98b7a979841dd3bcbf255a58a9"
+      "sha256": "805e2c4c43684bbad73380865e79f8466f2e86ce8035680a30028e61c4473160"
     },
     {
       "path": "prompts/190_AI_GOVERNANCE_MODEL_RISK_AND_DEPLOYMENT_APPROVAL.md",
       "bytes": 13555,
-      "sha256": "8945d46c49cbf946c65b2431e725af14c34f32810d8e874bd8d6fdb95e86d596"
+      "sha256": "c9427bb079055b1db6d49666a48af5209741cd7de424f626212026ccdc575ab7"
     },
     {
       "path": "prompts/191_INTENT_INTERROGATION_AND_ROUTE_CLARIFICATION.md",
       "bytes": 10091,
-      "sha256": "b2bd3edbb9def35eaa899b3dee9d843cf12e21bb9abfeaa85b551183a6381faa"
+      "sha256": "52f977cab0170b2f5e4df1b443d86f856c2f88a2113a1072119f05329e497f69"
     },
     {
       "path": "prompts/192_SKILL_REQUIREMENT_AND_CAPABILITY_FIT_RESOLUTION.md",
       "bytes": 9931,
-      "sha256": "d5e28651d62bacd60558dfc402488553fd20aa246e1c179ce9a83e1e120ebce1"
+      "sha256": "b6ae7000bbf8872c0498bd1b7cae2c3fc17ea8e934f546c24cb64029f583259b"
     },
     {
       "path": "prompts/193_MISSING_SKILL_DISCOVERY_AND_CANDIDATE_QUALIFICATION.md",
       "bytes": 9995,
-      "sha256": "3050e464c1482de781d61b1c15d39d99c5576ac3df621189bb963dfb573dbd54"
+      "sha256": "b81f0661bcfafd99497e819d72dcbc0c2598e56c75b058679cf5e7f86865f916"
     },
     {
       "path": "prompts/194_GOVERNED_SKILL_INSTALLATION_AND_DUAL_LOCATION_REGISTRATION.md",
       "bytes": 11085,
-      "sha256": "f04ea872f701851a3d1ac0070d805ce88d8f80450061145d4dcdccc38079a3eb"
+      "sha256": "f5c9f9bd6c80b0f959b78627497c418aa5f6799914516900ab4256565c9429eb"
     },
     {
       "path": "prompts/195_SKILL_CREATION_EVALUATION_AND_DUAL_LOCATION_REGISTRATION.md",
       "bytes": 11590,
-      "sha256": "e352fe8e422e95b35d4543e8a6d9f538c7b042bb38e5ae2b125ca83ecf08fcd5"
+      "sha256": "fae2c67f5b8c1d933cfd9544809b2b61a7885f12a50b288568699f8748127f19"
     },
     {
       "path": "prompts/196_GENERIC_CONDITIONAL_SKILL_EXECUTION_ADAPTER.md",
       "bytes": 10614,
-      "sha256": "e0a0f0cba0ef0a12f4d3997769495dd73edb7f855750ad40caf01c3b359b380e"
+      "sha256": "f96f849187cc0bc6ee642fd9e190e7f1f5254fc1bc32cae8e4ee03834ad246ec"
     },
     {
       "path": "prompts/197_BOUNDED_PROMPT_AND_SKILL_LOOP_ORCHESTRATOR.md",
       "bytes": 12208,
-      "sha256": "d4eafcdf77e69a1bbe5b8a538b411e86814ed05b421b7b2a1e70e14dd7cc77c8"
+      "sha256": "18620b0f1a94faebe79c83b744b9c001f88ab15e264cac78d279d217c0ad9e53"
     },
     {
       "path": "prompts/198_LOOP_EXIT_PLATEAU_AND_COMPLETION_ADJUDICATION_GATE.md",
       "bytes": 10014,
-      "sha256": "19bafd91f53d91916fc7d6593da6a8ee9a97d1ea5e7e00f19b0b058f958ed0f5"
+      "sha256": "69dcc971a9707e1c966eb1e02f2e3b670b2679b76e365feb80532eff33e56733"
     },
     {
       "path": "prompts/199_PROMPT_ADDITION_REGISTRATION_AND_ECOSYSTEM_INTEGRATION.md",
       "bytes": 18089,
-      "sha256": "6e8fcd980e204bcbd233b4207d303d6af62933900acf9a1f9750b9143dc8457f"
+      "sha256": "007f74dc280f390723364813366943c39600d7d4e94b0a7088563a2f80c29cea"
     },
     {
       "path": "prompts/19_RETROSPECTIVE_CONTINUOUS_IMPROVEMENT_AND_LEARNING.md",
       "bytes": 14383,
-      "sha256": "27578b77725cd1663ea4835b9c89af3b54e55a836c8dd01b74580078e3cfcda2"
+      "sha256": "edc97ee2901dfaea0b291a013d456b83e05a3557a50b75d1023561046886b661"
     },
     {
       "path": "prompts/200_REPOSITORY_MISSION_PROMISE_DEVIATION_BLOAT_AND_SIMPLIFICATION_AUDIT.md",
       "bytes": 13440,
-      "sha256": "7f1e4d3280ad7f3f9651a18e440a09e071e8be550f6db6fc33ba85422f0e1d29"
+      "sha256": "d76728afb49c552e58fcdb44f760a341f3a8f09a5a238039d3caa14e375581f9"
     },
     {
       "path": "prompts/201_HEALTHCARE_CLINICAL_OPERATIONS.md",
       "bytes": 11837,
-      "sha256": "471bd3fb3d6b622b4eda2fa370cf04d2cc98eb61242ccd781b125745714e3238"
+      "sha256": "3ede41240a21d0be807a864cbc1eb2e163a46e1027234ce7505eca4633afec85"
     },
     {
       "path": "prompts/202_PATIENT_INTAKE.md",
       "bytes": 11387,
-      "sha256": "02d3462551b2fcb71721c22db7c0f23feffdae440b710f3fc7f9b7e4c9e66c80"
+      "sha256": "7c85a1de3441f73e3050d30383e47c8b5802212e25712a8aa1e7d71d41df2f54"
     },
     {
       "path": "prompts/203_CARE_PLAN_SUMMARY.md",
       "bytes": 10722,
-      "sha256": "b0a6a06bd1fa50c7b85460d0e28ef10d0adc4fba5cd60cc1c0ec048240e218dc"
+      "sha256": "65732789945c9381052ae1d74f5b7546c2938fe94f0e5c41e61b10bedbc4bab1"
     },
     {
       "path": "prompts/204_CLINICAL_NOTE_QA.md",
       "bytes": 10944,
-      "sha256": "ffe5a07cfeac2cddae4ae1536551a0958ae25dafca66d5e1300bc0d5508fbce0"
+      "sha256": "8dd0608036c1ff5825098bfb46781a62d0edd7da91103cdfabcbaf6e61186a65"
     },
     {
       "path": "prompts/205_INSURANCE_PRIOR_AUTH_PACKET.md",
       "bytes": 11189,
-      "sha256": "bd8141084ee858ccc96ef5e6055a9bb332b8d2c85537cc45c38db964fdc62275"
+      "sha256": "c3246abd8e38c07b82c59932ded6be76d31a6c80ffbfbd9e99ba9a13e1726468"
     },
     {
       "path": "prompts/206_MEDICAL_BILLING_DENIAL_TRIAGE.md",
       "bytes": 11417,
-      "sha256": "978cc6065f1eb286f1d6bffee837f4a4fc0aceb35f615205c3f39f4f01fd5ce5"
+      "sha256": "ada3fa7cfcf4628d65882fb9ccacd03b9d9a58bbdf003dcb0190e0a3700480f4"
     },
     {
       "path": "prompts/207_HIPAA_EVIDENCE_CHECKLIST.md",
       "bytes": 11255,
-      "sha256": "a59701015ec802c6144507cf028ed10eda7350040d92b64eff28f1a34a07995d"
+      "sha256": "deaf687e1df23c03ecad6e165b3c2764fbcf40ffea157d82e6b856a60fe93a7d"
     },
     {
       "path": "prompts/208_INSURANCE_CLAIMS_INTAKE.md",
       "bytes": 10960,
-      "sha256": "436a52476eb17b5b6c9c6fad1cd367bba5782ad8af9a692d0cea0e1138bd88f8"
+      "sha256": "8e81f9d97858715bb4b537d40eb0634971f8f8bbafe67afbeccb8722f4f76bf8"
     },
     {
       "path": "prompts/209_UNDERWRITING_RISK_MEMO.md",
       "bytes": 10910,
-      "sha256": "8d4a728ad104fe76a63f5915c1ed846a565a344957c18949209fa75fdd795fda"
+      "sha256": "49ab4a918239aa8886632df893d9c81ef88995fd3363fb5c1889a6da022b05ca"
     },
     {
       "path": "prompts/20_LICENSE_COMPLIANCE_AND_GOVERNANCE_REVIEW.md",
       "bytes": 8357,
-      "sha256": "bbcbf1fd4866a651d34de96d82951022fd927e0eeca12e86635f14d1b3b977df"
+      "sha256": "29e1ebcf12afcf6a990d422d4eaa78063956e0a98c5fe03ebd2cf8c87e6c80df"
     },
     {
       "path": "prompts/210_INSURANCE_POLICY_COMPARISON.md",
       "bytes": 11170,
-      "sha256": "4b1a413e78f478836ce08efa873fa8ce4dfc3099899fbcf054923c23e3b6a3ed"
+      "sha256": "619cfeb52977f986df6ae91c007f0d17d0c6966f153df9eabec1bcb8606daba8"
     },
     {
       "path": "prompts/211_INSURANCE_DENIAL_APPEAL_PREP.md",
       "bytes": 11148,
-      "sha256": "5cbc3cbd3e073c025e9685dea69eff3edb83b22927d59715bdf2b92e230b535f"
+      "sha256": "0810009d3d9d43536ddb2f234635fe5a6301e0d278aae64acb3391726712f1c8"
     },
     {
       "path": "prompts/212_INSURANCE_FRAUD_SIGNAL_REVIEW.md",
       "bytes": 11148,
-      "sha256": "460a685ad51b0793f119e20af24a8c854e532ad11ecee998a8c445b3a9d5d590"
+      "sha256": "853c850c57fb35ce20751dd5878eae4e7a3daa679a85fa91a75d117d1cc8f46d"
     },
     {
       "path": "prompts/213_TAX_DOCUMENT_CHECKLIST.md",
       "bytes": 11448,
-      "sha256": "23119d07ef4078c969035ad6392cec135a3bdf07141a6a63b1040a574e83fdaa"
+      "sha256": "79a1f162ffde58eab99e84469c613eb82bdbeb0cc4121bcfc5214a9910fd1ab2"
     },
     {
       "path": "prompts/214_DEDUCTION_EVIDENCE_ORGANIZER.md",
       "bytes": 11154,
-      "sha256": "5c97580e4c6df500ce27de4926dbc8b36e0302104523ac4cb205e63727fea1e1"
+      "sha256": "33f2c4fd9f69137627a0e8aea46cefbfd7ba4106da3d805a2d47baa870bffddc"
     },
     {
       "path": "prompts/215_FILING_RISK_REVIEW.md",
       "bytes": 10892,
-      "sha256": "c0e2321d4b217700ccc3652888e0f6229313e06e8b562197abab54381f2c6cd3"
+      "sha256": "b834037f9a1117ade004e4cb11f4f0bf46ac3635bb36b218dd4539d28219f108"
     },
     {
       "path": "prompts/216_ENTITY_TAX_PLANNING_BRIEF.md",
       "bytes": 11289,
-      "sha256": "364b40f750f7fb15e97ff194e9a36694f419fc5823703ff3f4f0deabefdb1d3d"
+      "sha256": "c5c2ee6830f69a1f77c207ba80736f1aaacb2ceecb06a0ac794c4e5a906238f6"
     },
     {
       "path": "prompts/217_REAL_ESTATE_LISTING_STRATEGY.md",
       "bytes": 11197,
-      "sha256": "30d61777100f9636d2db8dcc2c50d5aca70f270aabe8c434fce8dcdd39c25b3b"
+      "sha256": "58bd2ad82a6858a9e8cd40133adaecfed896927fd1b2a43871e944a243d3e135"
     },
     {
       "path": "prompts/218_PROPERTY_DUE_DILIGENCE.md",
       "bytes": 11405,
-      "sha256": "5b89424b3e3b4844e090c5d1e8ca2ee80a056ac3b354d92cebf07f50c831d45a"
+      "sha256": "25c0a48201d32aeb65b662a05dacadf5f0b41c9bfc5ffed9c37c38b6158dc40b"
     },
     {
       "path": "prompts/219_LEASE_ABSTRACTION.md",
       "bytes": 11689,
-      "sha256": "00c5cb6c9222eac06c4aea10fc32f4c0955cac9c7eec24e04a844370eb4c780b"
+      "sha256": "10d0790cef1c67343765db470cccf97a31f24c94e1978737598506e6e2997c6e"
     },
     {
       "path": "prompts/21_CONTRIBUTOR_AND_SUPPORT_EXPERIENCE_IMPROVEMENT.md",
       "bytes": 11735,
-      "sha256": "f2cbcfbefb0121ad749a1161f158abb299157a14286a208c942a869259fb7431"
+      "sha256": "e8d47a4bb90c6e9142d0ae52b7ea472f22d10122825771e2c0848be4b340182c"
     },
     {
       "path": "prompts/220_BUYER_SELLER_CHECKLIST.md",
       "bytes": 10898,
-      "sha256": "7709e060eaab38f150ce3fb0e7178da4216f76370deb4303301a3586c92585e2"
+      "sha256": "cf3c603d3862802d58383e0d937adec3bd3a12a6ebdcc878707bc52b618e82da"
     },
     {
       "path": "prompts/221_MARKET_COMP_MEMO.md",
       "bytes": 10656,
-      "sha256": "7d162c12fa600d612f3b7e0fbee212482f374263cdc71c3f1f30e78eec3364f8"
+      "sha256": "050265b37b725038b28b0faa715e47c7d131b480af25293cce160b5073ae1f5d"
     },
     {
       "path": "prompts/222_CONSTRUCTION_SCOPE_OF_WORK.md",
       "bytes": 11162,
-      "sha256": "13d49927b3ba5e7558551692111f3bc8e8dc1f5d38a5f65d3df3ce1ac3b3f90a"
+      "sha256": "68c1ce74fd147f5d5688a57bea4abf0f2b97d7080c7e69e9a5c2bdae3887c246"
     },
     {
       "path": "prompts/223_CONSTRUCTION_PUNCH_LIST.md",
       "bytes": 10782,
-      "sha256": "0f5d0afa9b58d689e82fe986150e5324007e8195acb91fc6bd73e759adae364d"
+      "sha256": "77f432d7f89196c40e30c1c6f0af634a2ebeef86d69478a03f285d6252d34e5e"
     },
     {
       "path": "prompts/224_RFI_TRACKER.md",
       "bytes": 10334,
-      "sha256": "d14b127802d4a634f0ceacc225a4f66901ae4efd38417cd1624af6a7c304d21f"
+      "sha256": "bf7ed6826f3c93df4fca5fc6ad14429f36cc5f6041f1bb697cd18daaee2fca46"
     },
     {
       "path": "prompts/225_CHANGE_ORDER_REVIEW.md",
       "bytes": 11719,
-      "sha256": "c896402f2f3d08a60a5baf3671f9bd926d49a8c8ada292da289793af18c27919"
+      "sha256": "a0a25ee3f943a800a21770d51d6eeb8573d87aecef6f19d64a6a7e8a081f2a6b"
     },
     {
       "path": "prompts/226_SITE_SAFETY_CHECKLIST.md",
       "bytes": 10979,
-      "sha256": "73eddbc635e26bfd64aa5d80446d315ee85aa3e434b247b0914d378cd3c3ddf9"
+      "sha256": "9cb18c9001d46ba202dc1df27aa61579b3628ef7d5dea7cd1daf882822ddb3fe"
     },
     {
       "path": "prompts/227_CONTRACTOR_BID_COMPARISON.md",
       "bytes": 10954,
-      "sha256": "80c49cb588c2ea9f7cce27b5e18d14b82d169e2d2799e9dff9afc7fc430183e3"
+      "sha256": "54f8fd626f692dda1f0d1b8475b68bdc711d4c6faf189fe6a75d0e9016a94c17"
     },
     {
       "path": "prompts/228_MANUFACTURING_ROOT_CAUSE_QUALITY_ISSUE.md",
       "bytes": 12209,
-      "sha256": "99811ab597d7776625f5a0c46aee6dae50b980cf2142d84fe9e6db3bd3bb3deb"
+      "sha256": "c7e6a3e1e81dbef28e3d32a7a6a3140f102ff242b0adfa697b90320fa997475f"
     },
     {
       "path": "prompts/229_MAINTENANCE_SCHEDULE.md",
       "bytes": 10763,
-      "sha256": "2c061e7e941dab5c286e8917a604bc0dc285e311b4957be3b6f9781d13e813c4"
+      "sha256": "d80a8893f098cf20503aed754839253e4e93cb9ccfa4fbcfaaccad9677c37717"
     },
     {
       "path": "prompts/22_RISK_AND_TECHNICAL_DEBT_PORTFOLIO.md",
       "bytes": 13725,
-      "sha256": "f805d53a8f206b8d1ae92efa6b58d7f97916ec0acdbeb8fad3a3c2765e27f9b6"
+      "sha256": "a8d4bc1d7804f04bbb037c4d997c741bf258d98678bdec013029c3d67e11647b"
     },
     {
       "path": "prompts/230_SUPPLIER_DEFECT_REPORT.md",
       "bytes": 10929,
-      "sha256": "4df7258f6f7209722fcbe7ef269dd88bc1dfdb80bfb66ee7dc292436964e8ff8"
+      "sha256": "e229edd88851cdd15229e65bc796904157ad0f43346f8be962a1cfa4ad29a235"
     },
     {
       "path": "prompts/231_QA_ACCEPTANCE_PLAN.md",
       "bytes": 11936,
-      "sha256": "accbb2cda4cdad884cc87d73b6f50fa1c96a5f4e8e80592d0b377ca8e973c93c"
+      "sha256": "c787a2fd6ea471dea11d403b0987e350a7537cd52efc805c39018a0479993da1"
     },
     {
       "path": "prompts/232_RETAIL_ECOMMERCE_PRODUCT_LISTING_OPTIMIZATION.md",
       "bytes": 11874,
-      "sha256": "bd868d44c1ce11af38e7c36d7a990d5df586209491f0e40cf4e496b5eb10af4d"
+      "sha256": "94cae537ecd581ec9074c3e4378bbddf0652c317714f7a8d10b2c3c8fd2e0011"
     },
     {
       "path": "prompts/233_MERCHANDISING_CALENDAR.md",
       "bytes": 10757,
-      "sha256": "1f2ed65583413dfae2c2063f806905402ce1595c94502a2b951649c3976b5a33"
+      "sha256": "66f23cef2f9e23c12407eafbaf4a167d5f771b2033857e9980bba539bb314b25"
     },
     {
       "path": "prompts/234_SKU_RATIONALIZATION.md",
       "bytes": 10828,
-      "sha256": "b0fac21cfa45ec5134a615c885731e457bfe03890a6b90a46fb9e3c712453ee7"
+      "sha256": "0aae60c1a9ac6948cb659ef2ae4103ac4d3e83c10c7e8cf60b3c45ed0ad1afaa"
     },
     {
       "path": "prompts/235_RETURN_RATE_ANALYSIS.md",
       "bytes": 11753,
-      "sha256": "5e319c794addab076240498258655851675bbbbf6e7e79a24fb5649c4b1c140a"
+      "sha256": "681d16b042db81820ed3103658d241faa1e82db9756a8a60935bd2c75b39fb02"
     },
     {
       "path": "prompts/236_MARKETPLACE_COMPLIANCE.md",
       "bytes": 10971,
-      "sha256": "f01fe45ceb94fc7104e740a8607d34d6d5e643c4d29743f4dc036f10adebaa75"
+      "sha256": "82aba01c813cba9a0979afb162658090f7a115d5cc09b4e200097a671a5ab813"
     },
     {
       "path": "prompts/237_HOSPITALITY_GUEST_EXPERIENCE_AUDIT.md",
       "bytes": 11342,
-      "sha256": "749f66041180426e68147d81edfdd25da2cc2297ff377d5d568567b322ad6b66"
+      "sha256": "f83babfe3256d07aa167bd2a5d15284f3449c87ae9c2e2958b54ea6ab4eba6e4"
     },
     {
       "path": "prompts/238_ITINERARY_OPERATIONS_PLAN.md",
       "bytes": 11020,
-      "sha256": "7b9fe66b4bada156bfe45153facd32b95302e5ece81f774ae1762203455f1149"
+      "sha256": "d3c80a857a28e4f0f63cddcb3c690fde3773e2b0069638a9518950b5ae5e24aa"
     },
     {
       "path": "prompts/239_EVENT_HOSPITALITY_CHECKLIST.md",
       "bytes": 11013,
-      "sha256": "356276c5ec7f5c5cbec9fe91e690d7d4264c1e9699932341eb872407d614d2e9"
+      "sha256": "0ab6c5a7129d605a3dbe8a169584b7ac18affdd80aa07c518144fc73bf90e182"
     },
     {
       "path": "prompts/23_INFRASTRUCTURE_COST_AND_SUSTAINABILITY_REVIEW.md",
       "bytes": 8534,
-      "sha256": "11edf74ec9be85a28b9539d7067cb8e75f7c123792e95a181663970c43fb34a0"
+      "sha256": "9ccab9123b8104391cb3f3fca70bd00cd62110dfba7fdefe91cfe24450f1ae7b"
     },
     {
       "path": "prompts/240_TRAVEL_DISRUPTION_RESPONSE.md",
       "bytes": 11092,
-      "sha256": "69134c1baf97aa5d46e2765e3df0129989953b57857954cb7bd59a00acc2c984"
+      "sha256": "8bbcc9f4e996f347dc08b12acdef73cd5e06056c4dc829f5b9ab2c4715bc4d0c"
     },
     {
       "path": "prompts/241_NONPROFIT_DONOR_CAMPAIGN.md",
       "bytes": 10830,
-      "sha256": "ca12c693fa6b3d1ffa1249bb6f35b4699c9929f121ea4fff23b76ed83d29dbb0"
+      "sha256": "311265b922a4c3b3599c25b1566809f61f4060a61c44e11b263b0d3c5f6e791d"
     },
     {
       "path": "prompts/242_NONPROFIT_IMPACT_REPORT.md",
       "bytes": 10867,
-      "sha256": "963e121b22d41c569a9ffdb4c0ee7e9030ea59fbc990e4d34f7461ed0f92e290"
+      "sha256": "b35d45aa5a0d73662572cf5daef928ae886231f2a64cb245bea31d0a6380c8d1"
     },
     {
       "path": "prompts/243_VOLUNTEER_OPERATIONS.md",
       "bytes": 10795,
-      "sha256": "12174e29d06668ab1de95f6d262e646ccb9dadc86359df18a7264890daa6bd98"
+      "sha256": "1e4db38e4e95745cb61e79fb242c4461d24cbe9a574ea81e543d074d33a3d486"
     },
     {
       "path": "prompts/244_GRANT_COMPLIANCE_TRACKING.md",
       "bytes": 10940,
-      "sha256": "a8bb9b8be9b6eb040d6152227a495b9bba9fcb1c4d2da1cc87908987cc0dac09"
+      "sha256": "95e2bfe33bc24e9ee9ac9377a5e62ca324da44b53d150dec0ab3eb3454646c39"
     },
     {
       "path": "prompts/245_FIELD_PROGRAM_MONITORING.md",
       "bytes": 10957,
-      "sha256": "a2b888e597d0d56755f1c97c5e67ecd05f5ae3118e5a6ba9d8b0977a44a6f446"
+      "sha256": "a37281ce90b7c5742f227a5738efd83cc36deeab127913422c29432acd8cdf59"
     },
     {
       "path": "prompts/246_GOVERNMENT_PUBLIC_NOTICE_DRAFTING.md",
       "bytes": 11562,
-      "sha256": "5a4c9b9b52fad50bc69b6e6430e7e93ef21b896bacaf298220ac35391776f885"
+      "sha256": "048e464e3e0e8a3150ad2917d7250f44659c83c3c9bfd96689c4cc3abe3cd00b"
     },
     {
       "path": "prompts/247_CITIZEN_RESPONSE_PACKET.md",
       "bytes": 10903,
-      "sha256": "50edc01a98fdaeacae6ab0dcfc73fd5b2a584241696fbb4b899000c665a4acec"
+      "sha256": "f1c934930ea0cf1b5044f787601ee42e7947dc07b02b81a2c1a95fe35b7c9ae5"
     },
     {
       "path": "prompts/248_PROCUREMENT_COMPLIANCE.md",
       "bytes": 11024,
-      "sha256": "0174d13b10797a85ea0ab0c084fc77b5fba01f9408dde884bc078cbccbbd2f83"
+      "sha256": "4d1d4a9b94b6bb1741d5ba1c7b7b0201e7694d908ef3ba85449d03c95754dcdd"
     },
     {
       "path": "prompts/249_POLICY_MEMO.md",
       "bytes": 10511,
-      "sha256": "2c661ebf593cb546f8f6333c24cc98b4b83b93e6250db4a1eb3797b37064b4b6"
+      "sha256": "fa6c5707c62e6d25c2092c64a953c9027e892b5689ea8a0c5b0c63c64ca839a2"
     },
     {
       "path": "prompts/24_AGENT_EVALUATION_DRIFT_COST_AND_RATE_GOVERNANCE.md",
       "bytes": 8597,
-      "sha256": "8ea8d915ae00bdd88ae5b91931d992b44b5df90707c7f2efc70b4e01b4bf5ffa"
+      "sha256": "1f84961c17b8368106d648c6a078cb2665fae8d09c8ed9905c3da6b21ec1ba36"
     },
     {
       "path": "prompts/250_LEGISLATIVE_BILL_SUMMARY.md",
       "bytes": 12181,
-      "sha256": "8f977b0251218a45e2dc0ebba59fd0dac5723cc6167fcd2724384f92f80c19a4"
+      "sha256": "22694c75f2e105d7760cc3e0fa58436b293cc43ac7fc1e25cb88ed741c35a6ce"
     },
     {
       "path": "prompts/251_PRE_PRODUCTION_COMMAND_CENTER.md",
       "bytes": 11232,
-      "sha256": "123248486cd4978409be80ec9b291011d8b24621312ecace9e1690a4461ac761"
+      "sha256": "34a04db59f4680a8d5121d75ccd9487122e4b983cedba4c48f5b1f50fcee692f"
     },
     {
       "path": "prompts/252_PUBLICIST_OUTREACH_OPERATIONS.md",
       "bytes": 11049,
-      "sha256": "94432b66d5436cf56788437157a41a1e946768c0864ff3be89707a3477cdeefa"
+      "sha256": "b89caf554d37e6aff3255dff69c745736791b3dc378fb8f6ce4c6deeb56347d2"
     },
     {
       "path": "prompts/253_MEDIA_AGENCY_ACCOUNT_OPERATIONS.md",
       "bytes": 11238,
-      "sha256": "5e4bec78aad43c0d0c2083315bddeb444ac9cb676c416fc3ef6700649ea7b3b6"
+      "sha256": "a3902cb3bc8bdc757bc6747e3501eaa66b3fc0dfc2ed47b6d4f8ca232b9c499f"
     },
     {
       "path": "prompts/254_INFLUENCER_CREATOR_CAMPAIGN_OPERATIONS.md",
       "bytes": 11550,
-      "sha256": "8de264e282ba78ff8f79a135edaffc0806b49d9be3e959c92c3d36d37914eb6f"
+      "sha256": "e2135e71b3c98a06de115dbc0e41a4e0d11a93b896af4185388b9b3a4dc53228"
     },
     {
       "path": "prompts/255_CONTENT_PRODUCTION_GRUNTWORK.md",
       "bytes": 11097,
-      "sha256": "dd83b0b2635053b8e7074366c5c82f263ef2325f6b1e112143e057e97fa4940e"
+      "sha256": "4be1c628f602ec89ab1d3ebf325c631a85fe1a93a91f83927f9373840e8d2970"
     },
     {
       "path": "prompts/256_CREATIVE_LEGAL_CLEARANCE.md",
       "bytes": 11224,
-      "sha256": "aaae349842284da81bd472ea0cbcc7a9c85213dbc3d5520a34196558166e8393"
+      "sha256": "a78b908f848a1929258dc0c0569f4557f0bd56c829cf609fc2c8b192278430aa"
     },
     {
       "path": "prompts/25_PROJECT_CONSISTENCY_UNIFORMITY_AND_COHERENCE_INVESTIGATION_AND_PLAN.md",
       "bytes": 10878,
-      "sha256": "2ca189962fd8f3c0ccc9250a311eeec30fe78d334eb53e6c96b62b2fa9037a25"
+      "sha256": "482877178c3bcd1b56ad252f0f3a7688f8dec3a1a425d2a6a1e8ea41b625988f"
     },
     {
       "path": "prompts/26_PROJECT_CONSISTENCY_UNIFORMITY_AND_COHERENCE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12720,
-      "sha256": "0fbd952a0cb0fa37041a5d6d1c8657159438cf87601e5a5735e9b72de562cf1a"
+      "sha256": "7d363d92621462e9dbc8616cce4956e7946f174d4cc563ef3388cd8508c5be90"
     },
     {
       "path": "prompts/27_CODE_QUALITY_AND_MAINTAINABILITY_INVESTIGATION_AND_PLAN.md",
       "bytes": 13871,
-      "sha256": "58cd7696e1ad07170148bfaa9bc56a4db46b650baebf881dfd96e2e1ace0fc09"
+      "sha256": "d28859d744b60aebd4cc1e8b427c65e05c524e31643523841b364c77942d7c22"
     },
     {
       "path": "prompts/28_CODE_QUALITY_AND_MAINTAINABILITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 11968,
-      "sha256": "de6e7d0534261a582c5ead7a825741cd0b757d9bf0bda2e226d479f77fb38123"
+      "sha256": "4993ebf9fa217bd44eee8361aef582a3cc0012bb5e1178eac4a6284a48617b6b"
     },
     {
       "path": "prompts/29_DEBUGGING_ROOT_CAUSE_AND_BUG_RESOLUTION_INVESTIGATION_AND_PLAN.md",
       "bytes": 10584,
-      "sha256": "280f7a6de72f5fa45623f97ab50bdbadbca93cbba71fdd76647f4c0e4a35210b"
+      "sha256": "079e31583eea9b5a02af8f688882dc629ef685f3d1ee24ee3f41f9cb9819a402"
     },
     {
       "path": "prompts/30_DEBUGGING_ROOT_CAUSE_AND_BUG_RESOLUTION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12432,
-      "sha256": "338c79ffffc6afbf2ef2e24c4cb7969879d93473107d9d7b502aeab3242638b2"
+      "sha256": "91d328f85117af48cca07403a4de61aeb57083092588d4e8c58383c5c32525b9"
     },
     {
       "path": "prompts/31_SAFE_CLEANUP_DEAD_CODE_AND_REPOSITORY_HYGIENE_INVESTIGATION_AND_PLAN.md",
       "bytes": 11129,
-      "sha256": "fbbb4045958b3bc77796730aa9b38bafbbdc8444fad3af443b2f015112c65a7d"
+      "sha256": "c32b8f4da21baa0a3a3b1350e7e0faa4f7a4e38232effe0ec6b961ebfdaccbe4"
     },
     {
       "path": "prompts/32_SAFE_CLEANUP_DEAD_CODE_AND_REPOSITORY_HYGIENE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 13254,
-      "sha256": "ec99fa69fd596a92d96d9eba26f58b405e3bee43037364217c8e551caee20119"
+      "sha256": "caf1689f006dd028aff4a6a4715415d52c1513f45226d7c755f5e23b565a8d85"
     },
     {
       "path": "prompts/33_REFACTORING_AND_MODERNIZATION_INVESTIGATION_AND_PLAN.md",
       "bytes": 10169,
-      "sha256": "5774f92cab09c6beb708d2942c60ca0b8f2b1b2c3faaadcd878da7a7d044f3ff"
+      "sha256": "8b697be59f650bcb201971484fdf1ee986eb82899c8979c50fc4b700a73154d3"
     },
     {
       "path": "prompts/34_REFACTORING_AND_MODERNIZATION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12049,
-      "sha256": "8e3be96a7f7ab7a6b09456359d73b3b889ec4f2c5f894aff147561c6a95d7a48"
+      "sha256": "74134b3825ecb632574239d11ea76f135b9da13a0cb025b28c252fa5e5638ef1"
     },
     {
       "path": "prompts/35_TESTING_AND_VERIFICATION_INVESTIGATION_AND_PLAN.md",
       "bytes": 18622,
-      "sha256": "d1a4e19449ad67a5b21049a3e092b99fa11b16b51e6c66a0d4b1a5f33fcce731"
+      "sha256": "b7eb68999b8dc75b81ba45cf588eaabd18c588fa352bf1fc34ba5bb3a01c66ca"
     },
     {
       "path": "prompts/36_TESTING_AND_VERIFICATION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 11747,
-      "sha256": "364576d08646f48447d2489011b86c7929a90de937ac08e2084cf8c35fe1f306"
+      "sha256": "b04074f4c19a0fdb37543f8787d4ff21472eedd0bfade62bbb7da3c2460a30a2"
     },
     {
       "path": "prompts/37_SECURITY_POSTURE_VULNERABILITY_AND_FIXES_INVESTIGATION_AND_PLAN.md",
       "bytes": 19289,
-      "sha256": "12097a716c0bb9698e8ba031fee16b1ad944ca63f4015583e271844ec3de2ae5"
+      "sha256": "1ba589dac6e0e8d1085efef59f435ad6eea1d028113227e03ea6bf268378964a"
     },
     {
       "path": "prompts/38_SECURITY_POSTURE_VULNERABILITY_AND_FIXES_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12570,
-      "sha256": "e9ccd7b144cc80f932e7baf084f2a3ed32896792221440abcc5a9949115b0f72"
+      "sha256": "7d8a4306a9021e1083308fe7bbaa5e04fe4197417c722462b4effc1dc1660b9c"
     },
     {
       "path": "prompts/39_DEPENDENCY_AND_SOFTWARE_SUPPLY_CHAIN_SECURITY_INVESTIGATION_AND_PLAN.md",
       "bytes": 16726,
-      "sha256": "7b8a90b6b3a4c6bc3996fc93699140e9b2ecb2007714c8db019664b084728729"
+      "sha256": "2be40df00a4db39beeb89abbdbf3e5700c6ea715a6f870cc5f08670d616d29d9"
     },
     {
       "path": "prompts/40_DEPENDENCY_AND_SOFTWARE_SUPPLY_CHAIN_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12801,
-      "sha256": "ae91295eb0da588d6581c4b35cf2ea7bc3de2a2dcec488bcb154e3a9c7aa1bbc"
+      "sha256": "88ff0c6f2faa8de3d0c2c52eca005552628843df134b1ac2f7e2c4b116f66a3e"
     },
     {
       "path": "prompts/41_CONFIGURATION_ENVIRONMENT_AND_SECRETS_SECURITY_INVESTIGATION_AND_PLAN.md",
       "bytes": 16738,
-      "sha256": "4f7884dcdabdf11ab058499926b1230b12ac2a3609ed0cd9444941caa2b9331b"
+      "sha256": "8cf4dd17df69506bf3f5a85d61cbbaa9bcba39c2a84e81f9ff451e4819613f9f"
     },
     {
       "path": "prompts/42_CONFIGURATION_ENVIRONMENT_AND_SECRETS_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12954,
-      "sha256": "4a94d82c12ac3e168dfcc3d4351c637b2e5f9f43e1dc41db6aac59a66087839a"
+      "sha256": "3b0cef4dad4ea79edcef17569ed172e39086a7019824056f2e62a1aad05ccf8c"
     },
     {
       "path": "prompts/43_IDENTITY_AUTHENTICATION_AUTHORIZATION_AND_SESSION_SECURITY_INVESTIGATION_AND_PLAN.md",
       "bytes": 14759,
-      "sha256": "068083ab2f05211bbea00527c381145e68e25d380475d0c86bc2231e2ee86ec7"
+      "sha256": "9c520d1b616f885c1c86cce1b3d04725b99122a418d4942a8883b973e905b970"
     },
     {
       "path": "prompts/44_IDENTITY_AUTHENTICATION_AUTHORIZATION_AND_SESSION_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 13340,
-      "sha256": "5d94f7f736b92bb70c86b337c7b78ceb73bdc95402d8afbc25763de4054c3644"
+      "sha256": "e63cd39a61c4c1bd336d75fe41b5ad0c537f9f948ff644dc9d684a032f8e6484"
     },
     {
       "path": "prompts/45_API_CLI_AND_PUBLIC_CONTRACT_INTEGRITY_INVESTIGATION_AND_PLAN.md",
       "bytes": 14650,
-      "sha256": "ab18a1f043de6d1f44150dc9bc0cd9a50b6a85eb02fdf32662f60dd9702d9749"
+      "sha256": "65611aaa6bed110b5445fbdb0e7203d85d76fcfc45507f499fe73f4d2d1c5c85"
     },
     {
       "path": "prompts/46_API_CLI_AND_PUBLIC_CONTRACT_INTEGRITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12468,
-      "sha256": "4ed6244345704a423ee620d0d1bd71285edb1cb0d16e2eb154d4aa6b3f15e1ac"
+      "sha256": "6b67ce19a47b943d1596dbe40eb1ea01a45fd2644728ea5767125b68f9a05799"
     },
     {
       "path": "prompts/47_DATA_STORAGE_SCHEMA_AND_MIGRATION_INVESTIGATION_AND_PLAN.md",
       "bytes": 16413,
-      "sha256": "8d5c4a520cb5b1d5807acba52554291d3e367e1c0301aac5221e39496e4725ba"
+      "sha256": "3e319a39e9ec14b19b9a7eaf1c87918f5f7de25bc4d4b3f55ff4f70da267f4c1"
     },
     {
       "path": "prompts/48_DATA_STORAGE_SCHEMA_AND_MIGRATION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12266,
-      "sha256": "a25cd7efba9b44645903d76b05df08e45d9e1785cacd577f124b44dad2269cb1"
+      "sha256": "f177defe0c3a1c70e19134764780be6275f3459a0cbf0ed434ebe482907b973f"
     },
     {
       "path": "prompts/49_PERFORMANCE_AND_EFFICIENCY_INVESTIGATION_AND_PLAN.md",
       "bytes": 13158,
-      "sha256": "84d6343f375c7911de2ba9498072b839e6fbf0d886ca17a3f0b403f0ab31ae07"
+      "sha256": "d30e4c40db1badca044c412e12f7b7b56508faeb0279ba61230252b5c232ad88"
     },
     {
       "path": "prompts/50_PERFORMANCE_AND_EFFICIENCY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 11918,
-      "sha256": "a653d8f2773a3e6b3fb0f263d129ad66bcf50eaea1b8a6349c92263df6ef5b23"
+      "sha256": "dce959a162d8c8984f486441eea941ffd5411e39373c504f461b0bf59760490d"
     },
     {
       "path": "prompts/51_RELIABILITY_RESILIENCE_AND_RECOVERY_INVESTIGATION_AND_PLAN.md",
       "bytes": 13461,
-      "sha256": "bbc13556575a12cd706fa139ea49ce6abaef3ccdc42e0a37120a0682276d337c"
+      "sha256": "1f514b0eaedfcc66134387da245c208490d7f5714fadcaed40a6e8c3fc7699b8"
     },
     {
       "path": "prompts/52_RELIABILITY_RESILIENCE_AND_RECOVERY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12328,
-      "sha256": "2d14dfcce4e92d3c0792efe595efafe4567d3c95ab7003bf34334b5dccae9617"
+      "sha256": "db76ce9c785eabac7fc11d3271454dbc699c64368099cc268f7f7514b19db7df"
     },
     {
       "path": "prompts/53_CI_BUILD_DELIVERY_AND_RELEASE_PIPELINE_INVESTIGATION_AND_PLAN.md",
       "bytes": 10490,
-      "sha256": "ecfa9db7163d94fb326622aae0f2df3da13ebe70d77abe14d5143d7d73cae1f6"
+      "sha256": "d7628ab7f6b37309c1057ce6ed5d5e44c4299c37f0fd15a3e72ad2e92c36eff5"
     },
     {
       "path": "prompts/54_CI_BUILD_DELIVERY_AND_RELEASE_PIPELINE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12428,
-      "sha256": "feadb8d5044a3f227f3fa56bd0731f34527b7578ffa771eb8cd981f2696ad795"
+      "sha256": "3b6e80db3ec12f4c46af73af0065f2325f9aea102552a734fba0a827cba98b54"
     },
     {
       "path": "prompts/55_OBSERVABILITY_DETECTION_AND_OPERATIONS_INVESTIGATION_AND_PLAN.md",
       "bytes": 16223,
-      "sha256": "77340824ca9526d7d6513d604a638b6962e7fd71d8ce6c8fbec078032aa4881f"
+      "sha256": "b6a2074241b0e3704afc87eb3d04648d317344a2e5e02749e920d7671cf09c70"
     },
     {
       "path": "prompts/56_OBSERVABILITY_DETECTION_AND_OPERATIONS_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12410,
-      "sha256": "865f1c6e2f1bb4728c8254dc6bf73c5f2b50135e868d69b07510746e4596d961"
+      "sha256": "4c858ff82095d5337a6e89f72ded61051c07c32902c93107b33445f9a96cf63d"
     },
     {
       "path": "prompts/57_CLOUD_CONTAINER_AND_INFRASTRUCTURE_SECURITY_INVESTIGATION_AND_PLAN.md",
       "bytes": 10895,
-      "sha256": "65ca83603762b4ec82286ba29bb0f405ebbb1af7e81bea282d4b55111e67d4b3"
+      "sha256": "01fc17797c57e147b33eb0229d05cd10782e04c1cb38c99f7c214c3a7f12496d"
     },
     {
       "path": "prompts/58_CLOUD_CONTAINER_AND_INFRASTRUCTURE_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12687,
-      "sha256": "cf6016d2ea990afce208e31a7d4e744942c01bf4843c072978731a801fd4a12c"
+      "sha256": "44a8f76b212e5a7e1eb1d4b98d75cb414cebd01c299bb1bb1afdb0e5569ec1f9"
     },
     {
       "path": "prompts/59_PRIVACY_AND_DATA_PROTECTION_INVESTIGATION_AND_PLAN.md",
       "bytes": 13733,
-      "sha256": "77382f51ca9a01458d24bd60b29fc380ed44ceed310d7f530d1b0783031c9cba"
+      "sha256": "0553a7e6f1d3cbed847e046c17648cc79a2a7d6ead8b1c4db9fd6096c59b03be"
     },
     {
       "path": "prompts/60_PRIVACY_AND_DATA_PROTECTION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 11955,
-      "sha256": "14645f00dd098ea10fc0f072af8510a51a323f5960e31714bb88e62d1ee3f92b"
+      "sha256": "46c16cff4342288f80d1806a63d10e30fe3964c52463d0fafcadaf40d524421a"
     },
     {
       "path": "prompts/61_AGENT_SKILL_TOOL_AND_MCP_CAPABILITY_LIFECYCLE_INVESTIGATION_AND_PLAN.md",
       "bytes": 13628,
-      "sha256": "c209e7291bdf1d3ac8122156794c6b5590d1989045bff886d994311c8e78e50d"
+      "sha256": "6457697efe131358c737d535c2ab581e8e30147b77657249346f1d88d844b0fa"
     },
     {
       "path": "prompts/62_AGENT_SKILL_TOOL_AND_MCP_CAPABILITY_LIFECYCLE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12738,
-      "sha256": "9a6de1d9ab86b28ba3f4832ba285159efd61387e9cf1d38386cbe8c023406111"
+      "sha256": "891d4cb8e7b727d07c879c9600ae9a996707488e23b78da50f81a04030897522"
     },
     {
       "path": "prompts/63_AGENTIC_SECURITY_PERMISSIONS_AND_TRUST_BOUNDARIES_INVESTIGATION_AND_PLAN.md",
       "bytes": 22688,
-      "sha256": "a88d290a08fabce1c8669d062a960a35167b4d4076a79ec07a7199d286752f76"
+      "sha256": "70695e02de1edc6329d5dce4ef988fed7cfc93cbd5a7806f6f862e48bf28af01"
     },
     {
       "path": "prompts/64_AGENTIC_SECURITY_PERMISSIONS_AND_TRUST_BOUNDARIES_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12933,
-      "sha256": "5eb6938ef649670de23aaddb411eb2db9d46cd8ec5679886c45285c989eb8b81"
+      "sha256": "edd7475dba34948fc29daf5281950ac33cd0ea3a7e7beab6f94caa1e4008d6d2"
     },
     {
       "path": "prompts/65_MULTI_AGENT_ARCHITECTURE_AND_AGENT_DEFINITIONS_INVESTIGATION_AND_PLAN.md",
       "bytes": 10796,
-      "sha256": "05a7743791696193f45f8bb07722b945b42b9647fc12eb9a54757816a15d5176"
+      "sha256": "c475a5fc832c1c5b1baf87373e6943cce3f0e26d039d2cfaa9e33bd33bc4b7c9"
     },
     {
       "path": "prompts/66_MULTI_AGENT_ARCHITECTURE_AND_AGENT_DEFINITIONS_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12861,
-      "sha256": "d29a849951687aef8b04563f382eff58c4a5f66729d5e26d4901dd18faf570f3"
+      "sha256": "5433dd5dfaa4e5731a5a5f51403910d76866b4a52ac40a0e10f4dae134a69881"
     },
     {
       "path": "prompts/67_MODEL_AND_AI_SYSTEM_SECURITY_INVESTIGATION_AND_PLAN.md",
       "bytes": 10380,
-      "sha256": "87f3cd0e9e357209be185df7417bd50f55c7e42809dba105f88447209d609ce9"
+      "sha256": "055269fa3f60148bd2e285d197df71adc72d1fa711aadd28900e0ea3fd4ed067"
     },
     {
       "path": "prompts/68_MODEL_AND_AI_SYSTEM_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12052,
-      "sha256": "983fc4b62e269dac5cc1ce7f55c32a50926452e98b63a9b1d3ed9cc3a5d8cc98"
+      "sha256": "94a76cc1d7feeef614b1c16eca0bd46e368d260ce665dd797ce56486640efdc4"
     },
     {
       "path": "prompts/69_PROMPT_INJECTION_UNTRUSTED_INPUT_AND_TOOL_OUTPUT_SECURITY_INVESTIGATION_AND_PLAN.md",
       "bytes": 14685,
-      "sha256": "5f2210bbb883a02efd96dbb0843f8ef04a37800295ce051c650ddca8856bb41a"
+      "sha256": "1619bb79e5ffbab3a9db9b515b4bb3935996a5ac7aad5d869eb97c2f8a3f8c9a"
     },
     {
       "path": "prompts/70_PROMPT_INJECTION_UNTRUSTED_INPUT_AND_TOOL_OUTPUT_SECURITY_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 13374,
-      "sha256": "59ffb592ba88755e7ecf2ffdcb782695cd8de319c556fb48b0cd8c851a38f9ab"
+      "sha256": "e7a9824333fc04dd3145a2a2185fdb9a6b60c8e1f5df10bc22bcda464c94b96d"
     },
     {
       "path": "prompts/71_USER_EXPERIENCE_ACCESSIBILITY_AND_LOCALIZATION_INVESTIGATION_AND_PLAN.md",
       "bytes": 17115,
-      "sha256": "6fa0255561fa3ae82724dbb51f1d5f531f569efb83e73a81ae6cc1dade024936"
+      "sha256": "335de3c9b9f6d2049cdbc3718864f4defa0d2e58159c7aa30b8ca693daf97ab1"
     },
     {
       "path": "prompts/72_USER_EXPERIENCE_ACCESSIBILITY_AND_LOCALIZATION_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12798,
-      "sha256": "e6db0d65a069990056dffa901057b08906d8e0a922b3daed66758ea47d114252"
+      "sha256": "b513b0be04e7553a93ad994a3825aa2c2c9ce08767d588075364b361fca5809b"
     },
     {
       "path": "prompts/73_BRAND_DESIGN_SYSTEM_AND_CONTENT_COHERENCE_INVESTIGATION_AND_PLAN.md",
       "bytes": 10536,
-      "sha256": "56d325379dee025e62bd552281e25e5bdc19da4264506f8c611a087283bf3382"
+      "sha256": "ee7936ebd5343cc560f4a5bcc9fae619044d81aa9479323da38862d01674de8d"
     },
     {
       "path": "prompts/74_BRAND_DESIGN_SYSTEM_AND_CONTENT_COHERENCE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12504,
-      "sha256": "73de86edbf075ae2269f9154ab92fd817e687c2d036af40c37aeb289b3b5e808"
+      "sha256": "d52c76ff90bb7bc2e06951d4896b3265bc3ce446f2ae9b97a9e6692bdc02f849"
     },
     {
       "path": "prompts/75_DOCUMENTATION_KNOWLEDGE_TAXONOMY_AND_TROUBLESHOOTING_INVESTIGATION_AND_PLAN.md",
       "bytes": 33559,
-      "sha256": "09e77d97d04ef8c2a24a4330d6240b5d7494609d828cf4362e9d24990d8e93b0"
+      "sha256": "c639d990344253b0cff98d37e577f4edceb0949b452407e296fb48df53b5012f"
     },
     {
       "path": "prompts/76_DOCUMENTATION_KNOWLEDGE_TAXONOMY_AND_TROUBLESHOOTING_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 30320,
-      "sha256": "cc1dc841475aed61be47bc5f3731c77fcacfe9c7f01c54fbf5f321f91cde8549"
+      "sha256": "505c5971034ffdd7a835bd6cf288757d73768b2952288804b78fdc0b79ec4b9d"
     },
     {
       "path": "prompts/77_PROMPT_SUITE_CONSISTENCY_SECURITY_AND_COHERENCE_INVESTIGATION_AND_PLAN.md",
       "bytes": 14069,
-      "sha256": "c4ed75287cff9cbd6c588a389e0817f3bcddff226d883a9ca9d08130b4d045d1"
+      "sha256": "da0b83f9d75019888d02ff2e2a688d561ff1d41ca1aad4f3e32fb47b5cf55a2b"
     },
     {
       "path": "prompts/78_PROMPT_SUITE_CONSISTENCY_SECURITY_AND_COHERENCE_AUTHORIZED_EXECUTION_AND_VERIFICATION.md",
       "bytes": 12892,
-      "sha256": "50650b63765cfe732150d284fef396bfd95182f34b61dcc108aab54e0580a03e"
+      "sha256": "0486b5652ce03de15f4ae9d4da192cf5850676b7b55536bdd323b258a82946c0"
     },
     {
       "path": "prompts/79_DEEP_RESEARCH_AND_EVIDENCE_SYNTHESIS.md",
       "bytes": 11761,
-      "sha256": "35a852d4e1b8e4b87a262dd32ff6d08071b8aa86150a2e7f2c950c4e89f4066f"
+      "sha256": "f7cfada0c06a6322527d236ff7d31bb968d39b6b248a6e58020ce3b02baafc2e"
     },
     {
       "path": "prompts/80_RESEARCH_PROTOCOL_LITERATURE_SEARCH_AND_SOURCE_STRATEGY.md",
       "bytes": 9544,
-      "sha256": "1aa5585e302eb604aa2ba04beaef511a35817df52df7e5082ec9c400cd09fdeb"
+      "sha256": "79d22a1a1fa616444315ee44a4fb4fb2bf7b90e1cadb079a1e76271fcc679215"
     },
     {
       "path": "prompts/81_DATA_ANALYSIS_STATISTICAL_REASONING_AND_DECISION_SUPPORT.md",
       "bytes": 15054,
-      "sha256": "f4e9b8b066ae6f0c517ce1aa9efcb4c86eb8bc83bb367337c296755e613870bc"
+      "sha256": "cf535596b825fe165ef4eed534dd743f48d3ad0f80c9064611bbc4d0b3f713b5"
     },
     {
       "path": "prompts/82_RESEARCH_INTEGRITY_CITATION_AND_FACT_VERIFICATION.md",
       "bytes": 9740,
-      "sha256": "762c44b6be0dbc593815310be0f7a6f689f12ab94bacc9252ea42b3456b6dd07"
+      "sha256": "40deb3fbc2e031fbdcae6d3b1b780f5dbc2c777ac6daae14830ec097f05468d8"
     },
     {
       "path": "prompts/83_RESEARCH_BACKED_BLOG_ARTICLE_AND_NEWSLETTER_INVESTIGATION_AND_EDITORIAL_BRIEF.md",
       "bytes": 11591,
-      "sha256": "881b97a7d011cd45ea43bc1e4e1ab8fb75489f96ac8a5aecbdd66829c9831d21"
+      "sha256": "ae1982000b7963b77aa6351b9068496a230d88bf3374d789ec7a0305efb15e4a"
     },
     {
       "path": "prompts/84_RESEARCH_BACKED_BLOG_ARTICLE_AND_NEWSLETTER_DRAFTING_EDITING_AND_PUBLICATION_PACKAGE.md",
       "bytes": 14024,
-      "sha256": "8179f2bd740bafe16a837be1c903ca86b64607b0f600ac7f677260ec67e7f9ca"
+      "sha256": "88e2e9d163d17e6408b925a4df0e608171eee7052b9f7091d14491eac78d0c1b"
     },
     {
       "path": "prompts/85_SCRIPT_VIDEO_PODCAST_AND_STORYBOARD_RESEARCH_AND_PRODUCTION_BRIEF.md",
       "bytes": 11476,
-      "sha256": "118454bd6b51f2f5f229b362d25612b43a6d2cfc358534045280abcdc5344318"
+      "sha256": "24dd4fa159f0f094ec48ccea85d0da107a95f6bb900a52f99bf548a52230eb7f"
     },
     {
       "path": "prompts/86_SCRIPT_VIDEO_PODCAST_AND_STORYBOARD_WRITING_AND_PRODUCTION_PACKAGE.md",
       "bytes": 13346,
-      "sha256": "ed9f2fde35895eb0bc6cc539e449773c408f651c2c66d07f0bc9ade36ccc1bff"
+      "sha256": "58b7a8c1a054e9e3fa0af1b98d5d64188253311cfa9bf56289cf11df7a857c85"
     },
     {
       "path": "prompts/87_ACADEMIC_PAPER_AND_SCHOLARLY_MANUSCRIPT_RESEARCH_DESIGN_AND_EVIDENCE_PLAN.md",
       "bytes": 11717,
-      "sha256": "eb5ea66b8f62dd1e05c6ba40b5051458727b6d424fe2d6f4ea53a1921730a990"
+      "sha256": "8622dbb2b08efa6ca9f89cc1a5a538c6f163c2bdf83708f0dca32b3a2dfa43ee"
     },
     {
       "path": "prompts/88_ACADEMIC_PAPER_AND_SCHOLARLY_MANUSCRIPT_DRAFTING_CITATION_AND_REVISION_PACKAGE.md",
       "bytes": 13891,
-      "sha256": "23c2481d1e155be7b6fa6849a2e9ac2391cfd3a1d29e4173bd99511e3c76c9f3"
+      "sha256": "1b11717a957aa2351e0cd50256fd3929d66ff0d370596f75e3400eac0a47d3ec"
     },
     {
       "path": "prompts/89_FICTION_WORLD_CHARACTER_AND_NARRATIVE_DESIGN.md",
       "bytes": 8986,
-      "sha256": "605bc94dbd77ac8ab35716c02c80f4d15376d476fcaa07b5880cfc819c91017d"
+      "sha256": "051efccfe0882bb616e8473af2003d1706cf6a3554e26a88e44e50f7417acf65"
     },
     {
       "path": "prompts/90_STORY_FICTION_AND_NARRATIVE_DRAFTING.md",
       "bytes": 8833,
-      "sha256": "611a003e8350b4f771efec979f403f81151acd0aeffffb2db59448a6a9abe874"
+      "sha256": "dc85039b7c43277157098348386924539b2e31fd3ea255faca72e704a19b1728"
     },
     {
       "path": "prompts/91_POETRY_PROSE_AND_LITERARY_COMPOSITION.md",
       "bytes": 8915,
-      "sha256": "d9ada94bb8557a7ac597905326054126159b16e9d29cd7e2bcdd298b5d84312c"
+      "sha256": "3662d1505f5cc91d1afab34b877375e13869867640a4b8ea3a6f849fc5dd5a34"
     },
     {
       "path": "prompts/92_CREATIVE_CRITIQUE_EDITING_AND_ANTI_SLOP_REFINEMENT.md",
       "bytes": 14865,
-      "sha256": "a4140fbed5cb12c56289fba664a9cebb30f89e7b0041354ee09be2c722c56ea0"
+      "sha256": "e5f061146de72b724be7f972078ddadeffa5aaea64d4eff62e41307ccb9c58b8"
     },
     {
       "path": "prompts/93_CONTENT_STRATEGY_PORTFOLIO_AND_EDITORIAL_ARCHITECTURE.md",
       "bytes": 9609,
-      "sha256": "3a7c27d62cea05b093fecadff584cbc9f9a6f6c0330345ac64cee820489738d9"
+      "sha256": "f4f455c743aea1efb3789aa9132cd810e144fa49362141a875ed9521c8e2ffb8"
     },
     {
       "path": "prompts/94_CONTENT_GRAPH_KNOWLEDGE_ARCHITECTURE_AND_REPURPOSING_SYSTEM.md",
       "bytes": 12529,
-      "sha256": "8340a3b7b177916fd4f57e0cd5557b2f38a2d7192962015796e9636227537f48"
+      "sha256": "0f3e13a5db7e66bc9966316f975804934ee3a78b3098da6faedcf5766a05cb90"
     },
     {
       "path": "prompts/95_CONTENT_CALENDAR_SCHEDULING_AND_DISTRIBUTION_PLANNING.md",
       "bytes": 19968,
-      "sha256": "fecfea479f35682cd0fee1b861a9c5a0932a950de93072f4a56f1b787ddfbd2c"
+      "sha256": "7f61e7f844db4220427eda7026f19400edac8703f9c2c83cb4af423b61585faf"
     },
     {
       "path": "prompts/96_IDEA_EXPLORATION_CONCEPT_DEVELOPMENT_AND_MOODBOARD_BRIEF.md",
       "bytes": 18540,
-      "sha256": "3ac65531a1a0ed53bdcf6ec2ab40a01b82376a83fc26da751feffed507a439c1"
+      "sha256": "76285100b27887f1c669b37aecf32598329d165d79cfc6150e3532d3e140b679"
     },
     {
       "path": "prompts/97_BRAND_STRATEGY_POSITIONING_NAMING_AND_ARCHITECTURE.md",
       "bytes": 9858,
-      "sha256": "a20d2fc2accbc4fe58754ae23225c8afd95358893533c3801ed01cc6abb63966"
+      "sha256": "eabc5a6763cde084145b23844ba8afb26005ee76ac9b40141a5f96f3e3ea1d08"
     },
     {
       "path": "prompts/98_BRAND_IDENTITY_GUIDELINES_AND_ASSET_SYSTEM_PRODUCTION.md",
       "bytes": 10279,
-      "sha256": "99cbd14b03fe39b8d9cf02249ed157e5ae55699ff757de9879e356f9ce026d7f"
+      "sha256": "8c97394c518d9c85a24719fbb6f727dc6e80c56ff61030a756e76fa463b799a1"
     },
     {
       "path": "prompts/99_CAMPAIGN_CREATIVE_CONCEPT_AND_ACTIVATION_PLANNING.md",
       "bytes": 9673,
-      "sha256": "70e7b8719cd5e46afc1b5acc034801cec1048712f186eb14cc3cc438d2e489cf"
+      "sha256": "929fbcbb9bdbca5ba823b15467cb1a2bc4f822330e972f7abaf14420f59ffe12"
     },
     {
       "path": "pyproject.toml",
-      "bytes": 2035,
-      "sha256": "5b3f8c8d271b6cc7247f943567d18da9f699d44c3d218559ce03dad636ee25c3"
+      "bytes": 2080,
+      "sha256": "a285774169094f54a97ff8e86696afd001dc75489e21c05258c9d54f15be30b5"
     },
     {
       "path": "requirements-dev.txt",
@@ -11632,6 +11652,26 @@
       "sha256": "146529d1dda64dc1adc9f0ac86296dea7d1ac333c5cb8aca61f00d0b27e2695a"
     },
     {
+      "path": "site/public/assets/brand/mission_directives_full_logo.svg",
+      "bytes": 19609,
+      "sha256": "af2de76242fc31a65fdc583446f3749a58e66c3a350a5a314d034dd81ab3c86a"
+    },
+    {
+      "path": "site/public/assets/brand/mission_directives_full_logo_lateral.svg",
+      "bytes": 19176,
+      "sha256": "38ff93617cc366a9266870d475f18e4fad8840555c7abcc4912a7e640449e14d"
+    },
+    {
+      "path": "site/public/assets/brand/mission_directives_logo.svg",
+      "bytes": 4990,
+      "sha256": "36eea29e5efc971a1501d474152c3678fbdedb5fbeb65fe5d9ae3a29685fe3aa"
+    },
+    {
+      "path": "site/public/assets/brand/mission_directives_wordmark.svg",
+      "bytes": 15079,
+      "sha256": "37bd58cd9e4032de4fdfeea273a4b37586c0a688c70a40f9bf43beeb8756db04"
+    },
+    {
       "path": "site/public/assets/diagrams/coverage-map.svg",
       "bytes": 2600,
       "sha256": "60f474072f356001869d4c37a63d31744f3d7e006d82bc2a19141a8d3d979a11"
@@ -11647,364 +11687,384 @@
       "sha256": "84905c9ac7c8d9d91e7bce612e1764a446f808845a3570e3497c17162b06a93e"
     },
     {
+      "path": "site/public/contributing.html",
+      "bytes": 10463,
+      "sha256": "754cfd7e3be7e4467c0d8e6cd8804e74b168f807b1e4245cb43bfe85a7db3285"
+    },
+    {
       "path": "site/public/docs.html",
-      "bytes": 7813,
-      "sha256": "6411cf0c7d7930bf139a112c25e1589ec56e0f92d53bd13bd6a4ffeeb423a3ba"
+      "bytes": 9477,
+      "sha256": "1936dc1c981fa2a30d2fdfc8bce5063dce82d25b4171a266f064b811aab21912"
     },
     {
       "path": "site/public/favicon.svg",
-      "bytes": 345,
-      "sha256": "90a2c6ee6a568a5f4c2c35d0be75c8529833d1848a851471619b7f3407ba24ec"
+      "bytes": 4990,
+      "sha256": "36eea29e5efc971a1501d474152c3678fbdedb5fbeb65fe5d9ae3a29685fe3aa"
+    },
+    {
+      "path": "site/public/getting-started.html",
+      "bytes": 9979,
+      "sha256": "ef9ae5ee4b256d2161ad41e2c5ee804838da01bdd0bee6536c280404c97c1f83"
     },
     {
       "path": "site/public/guides.html",
-      "bytes": 21736,
-      "sha256": "32c8fedfb1a40db75cd50a14b383a97649d16f46370cef02b15c69749b03a2fc"
+      "bytes": 22208,
+      "sha256": "9b115cf28ca703da08248dd827d2796dacc862d0f839c7272b3f45a7b0265135"
+    },
+    {
+      "path": "site/public/installation.html",
+      "bytes": 11705,
+      "sha256": "4c97ceb7e0104a021ac656c06aad212bf791064146ceb1180bcdc344700eb732"
     },
     {
       "path": "site/public/manuals.html",
-      "bytes": 27764,
-      "sha256": "12d2a208092b7748bc24cb44d0faa4385593d735bf7e16b13ba59a781361b251"
+      "bytes": 28601,
+      "sha256": "c1142c73657ea8b2b1c64ca54082877bbdd5338c35a7139820624a16dc16629e"
     },
     {
       "path": "site/public/pairs.html",
-      "bytes": 87299,
-      "sha256": "832d91f66aab733ce54355dfe70328c820f21509710d18837b39fb59a5b2b910"
+      "bytes": 87771,
+      "sha256": "c00d1b73fa1ceea9b37ecafc94bb6ac8f012963652d312b7117039eb0ba0ff81"
     },
     {
       "path": "site/public/prompts.html",
-      "bytes": 543170,
-      "sha256": "92d857e806c28c6e93d16cbaac6fa0cf203647ae50db0f597ec76e03265595c7"
+      "bytes": 543642,
+      "sha256": "5465bc6514ae4bafeeedb720c0ce05791c235c3e5a83e27b73387c5fbc16885e"
     },
     {
       "path": "site/public/reference.html",
-      "bytes": 10539,
-      "sha256": "486ab976cabe15d5a17f179aea6ab965b47d60c15f53036e806e1ca8d59a7f8b"
+      "bytes": 11376,
+      "sha256": "2b696a4c0cbedeb81c7fab3b4f7d88c7c6b32acd552254925b612d3a00c5dd8d"
     },
     {
       "path": "site/public/reference/manuals/agent-library-integration-guide/index.html",
-      "bytes": 11141,
-      "sha256": "886b5085e1fcb258a3730391032070bf9232e9b5156b6746fbcbabdcf9370ece"
+      "bytes": 11613,
+      "sha256": "ffdb02135d0953adb80ec2196b584fd2b9cf2ed0060fa93a32cba304faf6d5ca"
     },
     {
       "path": "site/public/reference/manuals/architecture-guide/index.html",
-      "bytes": 10184,
-      "sha256": "28b89c79e92677f0b2fbdd853ef5d12189e25aba0cd7d8d0cbbfd2184b7767e8"
+      "bytes": 10656,
+      "sha256": "0c44f0ec9298c2307d010899486c50af9613e9a48e093047a527158041111db0"
     },
     {
       "path": "site/public/reference/manuals/auto-orchestration-runtime-guide/index.html",
-      "bytes": 7052,
-      "sha256": "90fae42be791d44e3b09a32136172e9f71d2086a041d69c63f79364b83f4f0f0"
+      "bytes": 7524,
+      "sha256": "156301f664511f01df363db3a614aae5fe19c5eb7c77ec4028511640e19f7d2a"
     },
     {
       "path": "site/public/reference/manuals/auto-prompts-and-conditional-routing-guide/index.html",
-      "bytes": 17144,
-      "sha256": "75dc044e4ce154fa4349f3482f7eade0213d5eda25d8e9061a38fad12c0f20a5"
+      "bytes": 17616,
+      "sha256": "159b504830d5870bc153b84d472ddde50008af64043ecce0363c56951965b1b7"
     },
     {
       "path": "site/public/reference/manuals/bounded-loop-orchestration-guide/index.html",
-      "bytes": 14469,
-      "sha256": "c82e77d83d071d6927b64163cdbbef6b78e5d7ce8548835710dde8306ba86ab9"
+      "bytes": 14941,
+      "sha256": "071a03b82004b8e8a0f1cceb46aa869f478a5cccce0e89111b9d15fc05b135d8"
     },
     {
       "path": "site/public/reference/manuals/capability-architecture/index.html",
-      "bytes": 17996,
-      "sha256": "2cc1bc7f4b03589e345ed16de792c5f4f4c30dca2b4a46f7c0f5b84ca41a6958"
+      "bytes": 18468,
+      "sha256": "a9483149d8a20d1739e86d4fed8f43c9edcc6b43421eeb2172ecc9923f3fd7e1"
     },
     {
       "path": "site/public/reference/manuals/ci-and-testing-guide/index.html",
-      "bytes": 12082,
-      "sha256": "176c6cf37c76cfda631fac2f156b4d9708eaab849d9a06ce0c9c278fe3934364"
+      "bytes": 12554,
+      "sha256": "b2983b35fe698ac8f7e31bd4fa18fb883d60f9b4818a4b03bf18eba7689446c2"
     },
     {
       "path": "site/public/reference/manuals/compatibility-and-identity-guide/index.html",
-      "bytes": 7422,
-      "sha256": "fea6e9ea9634feb090b1ddca3661cfe6c82419a781e8ec06aab24b1a7d0e892e"
+      "bytes": 7894,
+      "sha256": "334a7c546ad0e6458b88bdadb991b51bb3d3e7a8a408b253415f20a2d08d122c"
     },
     {
       "path": "site/public/reference/manuals/completion-criteria-guide/index.html",
-      "bytes": 10778,
-      "sha256": "12b6b2900cabdf018aa3bd381b145f531a519c85dec37db6453e15712d334e40"
+      "bytes": 11250,
+      "sha256": "58c8147a37e2fae7a94fda54e8a4dd66f6215897a8845c121e208787d25fc58b"
     },
     {
       "path": "site/public/reference/manuals/contributor-guide/index.html",
-      "bytes": 10601,
-      "sha256": "5ad737f08f83358fd5bc765c2d8dbbd39eb597a6b2b252819a7f242b75eae20d"
+      "bytes": 11073,
+      "sha256": "ab727619d8e1c108052e2fa47d7a75031366d985d5846e3b060b3b7399827f2e"
     },
     {
       "path": "site/public/reference/manuals/coverage-index/index.html",
-      "bytes": 30318,
-      "sha256": "077e16aa72f19cf85fe30a51d280eddc1f3cf5f9569b9b5ef2a54c4b66e5bf4c"
+      "bytes": 30790,
+      "sha256": "2c6dec6425197b7bf494fc87e544fdc3f0c0c167e4b2897f459699a1771810c4"
     },
     {
       "path": "site/public/reference/manuals/cross-platform-tooling-guide/index.html",
-      "bytes": 15028,
-      "sha256": "cf6e9ee8f2b64334154b44bf6413cf19815e5194bbf72459a764d6aad6b1061a"
+      "bytes": 15500,
+      "sha256": "cc4812332dce24e779ccea500cf35cf628737c5671671cd3618c9246ba643778"
     },
     {
       "path": "site/public/reference/manuals/documentation-site-guide/index.html",
-      "bytes": 9957,
-      "sha256": "e4f032833d831b54a14fad6fe213f6f8dc99fedd52721d7447104caaa9483365"
+      "bytes": 11510,
+      "sha256": "555087311034b96de3c2c427bf1ce7cb42b05198b227faa4b9c7867ab6057a71"
     },
     {
       "path": "site/public/reference/manuals/evaluation-manual/index.html",
-      "bytes": 10864,
-      "sha256": "6a44d22a758d5642836fe5c4de9d2187ab59010bd460cca4ba46817fa6f39d7a"
+      "bytes": 11336,
+      "sha256": "036ed1980718c2b5d4e1bd25fec576f82e1a340cba847fcf56f73a0a3d3a7d10"
     },
     {
       "path": "site/public/reference/manuals/evidence-lanes/index.html",
-      "bytes": 6383,
-      "sha256": "25ee7ad7b3c974585fa2b2315227e8241c063e3752494a89f1844abbfd8db826"
+      "bytes": 6855,
+      "sha256": "380709db1d7f5e4ffcee4abcad90f643e817bdc83cd79f819934f2e38ccaea54"
     },
     {
       "path": "site/public/reference/manuals/executive-decision-rules-guide/index.html",
-      "bytes": 9572,
-      "sha256": "2bcaf19f9ecc53a287214bace92b501df956f9e53cd23c78febae37d77e9dd4e"
+      "bytes": 10044,
+      "sha256": "9a9448f8a760045a775e19e4c334a2e0c256a39195ef348f8499fa4e6da80315"
     },
     {
       "path": "site/public/reference/manuals/generic-skill-execution-guide/index.html",
-      "bytes": 12340,
-      "sha256": "9677bd27e7eb60e834ca771cc1b8cfdb98056d1b5d1e5b71ca6de22fc7b8c04d"
+      "bytes": 12812,
+      "sha256": "2440bb820dcc5a20a8d8dbd2f82e1f2b7f3a851a63f105664d4368edc4c6f098"
+    },
+    {
+      "path": "site/public/reference/manuals/getting-started/index.html",
+      "bytes": 9906,
+      "sha256": "a218bb80526657c82e5474a527502ac47b4b9ae0a0dbe287f9d9bf345a28d9ea"
     },
     {
       "path": "site/public/reference/manuals/github-actions-failure-history-and-pre-push-guide/index.html",
-      "bytes": 20521,
-      "sha256": "30169ed70d4deb41f5d69a0aabcea682b9ca192481405f3b4add3d48a95cb976"
+      "bytes": 21980,
+      "sha256": "3725fe7ce2c450885c502995705143b3e26db683c894acd81898387a9a7a509f"
     },
     {
       "path": "site/public/reference/manuals/gstack-integration/index.html",
-      "bytes": 18957,
-      "sha256": "e15c66b72e219271d906015e3adf0f2228e1bf1e0d05d650bc0b7256cbdf6902"
+      "bytes": 19429,
+      "sha256": "525f947e4a2f63862ea74ac5ab330a6dc314eced2acd180b28c0ab3e38a5ab12"
     },
     {
       "path": "site/public/reference/manuals/installation-and-project-integration-guide/index.html",
-      "bytes": 11166,
-      "sha256": "c75f3d738b88d18de5861bbeeb0b1faa4c4a03db0e430eb32c96836cffd20281"
+      "bytes": 11907,
+      "sha256": "5e37f6d0144f050f94d3f1ad8d669d8cfe508529036bd3fd6b26b3d8938a3cad"
     },
     {
       "path": "site/public/reference/manuals/installed-runtime-payload-guide/index.html",
-      "bytes": 8857,
-      "sha256": "0658e7a881f9c797ccdf7fc0ca9aec3a1a2befdd4a6e43203ab370ba372280b7"
+      "bytes": 9329,
+      "sha256": "2b6c7b12aed0d1780a02b6e509a6c4d92b1540a680d3aef564674a322b4165ca"
     },
     {
       "path": "site/public/reference/manuals/installed-skills-inventory-guide/index.html",
-      "bytes": 12420,
-      "sha256": "47c2c1ed4540e2801087e60a3fc93e18956c64d52742911af47726b954e02e08"
+      "bytes": 12892,
+      "sha256": "8af5838fe8aafc8922958937b4329915ca4876cbd97b4b810fc825c6ca7eb81e"
     },
     {
       "path": "site/public/reference/manuals/local-output-viewer-guide/index.html",
-      "bytes": 6985,
-      "sha256": "a2d1a8f33c0addc5222659587b5f6ce50c82a37b9646271f2a3ab0ea720a95f4"
+      "bytes": 7457,
+      "sha256": "bd236c9d4d217fe08760fc930c141e9b5e59827c768d2c6e9718614e69ab2269"
     },
     {
       "path": "site/public/reference/manuals/local-skill-registration-guide/index.html",
-      "bytes": 9447,
-      "sha256": "f1c6e0e249e0b40baf2180049b9a4bb7b966031fbb9e1bab0cfe7330e0a8aac9"
+      "bytes": 9919,
+      "sha256": "c483b38517b70ab872c1302817caa123a6cbeb47032832b6d5c5f7300ab086f7"
     },
     {
       "path": "site/public/reference/manuals/logging-and-telemetry-guide/index.html",
-      "bytes": 13844,
-      "sha256": "d74db58f1db4212fc66a51d0d02811aa26a8be1afa7456a808cf57f312575278"
+      "bytes": 14316,
+      "sha256": "555451e97f7a0ce9fb1133eef8ae96c52c78d6f1d5afa69fe6307c786345dbe0"
     },
     {
       "path": "site/public/reference/manuals/manual-quality-standard/index.html",
-      "bytes": 7804,
-      "sha256": "4262d9cbc2a4d4e04ac7135798e5928629290a2a21013e63b90aa8559064e2ec"
+      "bytes": 8276,
+      "sha256": "6543ca9a222e5e1fc0845ebb0a07a07c954768fd04c51fd8725074275f6bc5d5"
     },
     {
       "path": "site/public/reference/manuals/manuals/index.html",
-      "bytes": 19351,
-      "sha256": "547d95a4d13aaa15e586e196b9f9318963f3f67d79771d695ebdfd63e8532921"
+      "bytes": 20158,
+      "sha256": "f7484eec6edd6182de62393f16326ce8eb5b6a634312685224491d783e00d7b9"
     },
     {
       "path": "site/public/reference/manuals/md-mastery-manual/index.html",
-      "bytes": 55924,
-      "sha256": "982bcafabb6514180cb8dba2d7ec4f15982f8d748e13017f541e30a32b2ce2ef"
+      "bytes": 56396,
+      "sha256": "e62286adeaf01b4b82c1163c996d2ef9330ce18780630a840c2da253424742eb"
     },
     {
       "path": "site/public/reference/manuals/migration-guide/index.html",
-      "bytes": 6386,
-      "sha256": "9571d83c08af89fff1b5e8fa83b626d2f6c786f84e882e0bf51c3d71f2d694e8"
+      "bytes": 6858,
+      "sha256": "97f482166168980a29ddf129e8f96ea9717c3137c2cd3e1067f3573f474e57d0"
     },
     {
       "path": "site/public/reference/manuals/model-routing-guide/index.html",
-      "bytes": 9898,
-      "sha256": "6245818dc8de4044c82da9b38c486f2c6f728ca39417e79ffd1d1f0ece90b863"
+      "bytes": 10370,
+      "sha256": "853a379364a372e223d88a368c3a2b092b1c5da0c6d6e5b4fa56ef23507edbaf"
     },
     {
       "path": "site/public/reference/manuals/operator-guide/index.html",
-      "bytes": 11296,
-      "sha256": "de60ca02cbe9495ee35b4df898b26d7a9ebdc9db0d9ff45aff023d982b9ada20"
+      "bytes": 11768,
+      "sha256": "bab702e452e4b3a4c65085f4970089a9f7e6c405b8439135a4840b7e80def4b0"
     },
     {
       "path": "site/public/reference/manuals/packaging-and-release-guide/index.html",
-      "bytes": 7817,
-      "sha256": "0865e2eeb0d1c38192cc9325c5583757d5f8c46340ba677e4e13290333879975"
+      "bytes": 9136,
+      "sha256": "525fe921c811460fe13bd26d7a68e9bf4d05ef517a9d026739ccac62e4edce83"
     },
     {
       "path": "site/public/reference/manuals/pair-authoring-and-verification-guide/index.html",
-      "bytes": 10990,
-      "sha256": "e4db77eaa566977f7e065106841c91c2e35492c65a3d54b654248d08e833e0f3"
+      "bytes": 11462,
+      "sha256": "2923c566165bc882038f30a92aa3bf9c3b09406ab0bd143733b9ed221a9a7f1a"
     },
     {
       "path": "site/public/reference/manuals/plan-review-and-exact-twin-execution-guide/index.html",
-      "bytes": 14215,
-      "sha256": "91e23cd8210f49af5e4a853e1e617cda21eba0c04c488f3cf11f3526242ad9d3"
+      "bytes": 14687,
+      "sha256": "ca7f11fc4978749f3680c91f60d4767ae3485f76afdb34caf853c9d01a225777"
     },
     {
       "path": "site/public/reference/manuals/project-cleanup-and-uninstall-guide/index.html",
-      "bytes": 7747,
-      "sha256": "bd887c656be6287f62c605f12d1cad3c5a93d71fb342b0ce96d8661055da1b1f"
+      "bytes": 8219,
+      "sha256": "d4589cd1964d801cc1b3a1d4101ea8c9439f56b993101ab27caefe778687c241"
     },
     {
       "path": "site/public/reference/manuals/project-config-guide/index.html",
-      "bytes": 7445,
-      "sha256": "4c7053cd9b416ebf98a3349b25f2a6891c419a558bf2b4094fa9cfc96ceb7b82"
+      "bytes": 7917,
+      "sha256": "75a77d956a1b001ca357db3a2bd1673b4b51b8f9771e8aaeaf40e77505955c6d"
     },
     {
       "path": "site/public/reference/manuals/prompt-addition-and-registration-guide/index.html",
-      "bytes": 19961,
-      "sha256": "c6248308dee68e09fa95c82452b5565e1fd3605102bee3cfd4b9039a1b007572"
+      "bytes": 20433,
+      "sha256": "d13ea525fabae33bfce25fb0f05e6d8c8f2e19c0f6e8a45f44ce45a0ebfd0461"
     },
     {
       "path": "site/public/reference/manuals/prompt-body-authoring-guide/index.html",
-      "bytes": 15485,
-      "sha256": "8ce228fbcb587d168282c85ac7a2e58ddd146043bc2b55078c8ac3e1e9fb0b28"
+      "bytes": 15957,
+      "sha256": "15e2932d7ca783029fb3e6a46ec11074b76f16292f28c913e6581d62661c5590"
     },
     {
       "path": "site/public/reference/manuals/prompt-body-validation-guide/index.html",
-      "bytes": 10151,
-      "sha256": "6e111e3df2e66dffd178f8bf6077f7c5000940947fba76671af53625363f3d28"
+      "bytes": 10623,
+      "sha256": "115b7feb6cbec5bf31af78583814daeb2c24f4ccb4650b9ec2b80dd8804727df"
     },
     {
       "path": "site/public/reference/manuals/prompt-catalog/index.html",
-      "bytes": 205336,
-      "sha256": "4458233935d1c4034929b368c574f40a21bd01071ca72908015640ab3f29ff98"
+      "bytes": 205808,
+      "sha256": "53660e2c2ca7c81856f0f2800904a3ba269214fd23449f7ebcf73cfceaf326c8"
     },
     {
       "path": "site/public/reference/manuals/prompt-engineering-methods/index.html",
-      "bytes": 8798,
-      "sha256": "8ccb4528a95ead00b33e492f5e339b2ce927e8faa3a7025b7aa2873137dc2e3d"
+      "bytes": 9270,
+      "sha256": "2c562ec691629d12cc075c17783dfed214c13175149f99123efcf68abb3a8983"
     },
     {
       "path": "site/public/reference/manuals/prompt-structure-standard/index.html",
-      "bytes": 18741,
-      "sha256": "9b9b240e62d0ea15a1cc716591535f7773ef472f075881f4138fffb10bb19b6d"
+      "bytes": 19213,
+      "sha256": "e28ff1df9e48f19ff0bf7f3bf61de71d84ca5930034f15afa3de10faf3de247c"
     },
     {
       "path": "site/public/reference/manuals/prompt-suite-conventions/index.html",
-      "bytes": 14963,
-      "sha256": "ba8f8d9013ab0b8a626e3cb56939ebdea443ff6f09f8d2ece4763a8e6ec3fa7c"
+      "bytes": 15435,
+      "sha256": "dcdd93f6329c3137c936900ced8016106111b3d0f3293620a1c9d13c20e73f2e"
     },
     {
       "path": "site/public/reference/manuals/readme/index.html",
-      "bytes": 10142,
-      "sha256": "7dfc47f719f6a795ef309ab615443f0bc370cfd6ace2371d684de912c33a62e9"
+      "bytes": 11597,
+      "sha256": "25a36036626a0b9c6573c2f05112ac2375e68478d0628676a84d9d4b341d8ac0"
     },
     {
       "path": "site/public/reference/manuals/recommended-skill-stacks/index.html",
-      "bytes": 14774,
-      "sha256": "e9c2c01543495adfa340db7c6a68a13a68932ac11b17244f9d6b9d9801e558c1"
+      "bytes": 15246,
+      "sha256": "05666172987dc7cb1371e989e9fbdd3e1708d8924e7e33c6b0b1647738f63300"
     },
     {
       "path": "site/public/reference/manuals/recovery-and-rollback-guide/index.html",
-      "bytes": 9770,
-      "sha256": "b570d203a5feaa92bd2487e167c68a5f9fd623749875e6f8d605a6f7a97a6670"
+      "bytes": 10242,
+      "sha256": "8f4526da9b130ce5c2d3c417a490d47e043bb196865a5c0c45f807c04308346a"
     },
     {
       "path": "site/public/reference/manuals/research-basis/index.html",
-      "bytes": 8443,
-      "sha256": "5067f8e2896ed21e248b6a227961c581680620c2f84035b53f69eb17b79315c4"
+      "bytes": 8915,
+      "sha256": "e952b81fcdf2f164e271ff1b214f3412c61c2f560387bccb6dd28ed18975ca03"
     },
     {
       "path": "site/public/reference/manuals/root-agent-guidance-and-keyword-routing-guide/index.html",
-      "bytes": 21831,
-      "sha256": "793c560422a3a6041f1125f0147c2861fdd35643a8adc0f5495d06ab7bb4fa48"
+      "bytes": 22303,
+      "sha256": "e4e8bcf8b70a29ca28f729af4051761b5107bc5354bedc4c94e5c0a786fae102"
     },
     {
       "path": "site/public/reference/manuals/router-keyword-catalog-and-scoring-guide/index.html",
-      "bytes": 9860,
-      "sha256": "33dbb5de47b93f7c6a49a42290fbd47a393ff504d49922c0f788d1278d011bd3"
+      "bytes": 10332,
+      "sha256": "d54c268090caf20c279a00d105ec8ee8cf9d88c19fb9ed414b9bc7dd1d34db9d"
     },
     {
       "path": "site/public/reference/manuals/runtime-marker-protocol/index.html",
-      "bytes": 11297,
-      "sha256": "a41d27885c1e6fe09dd62159ae49dedd3f24e51b02662bad968f5170cfb39dba"
+      "bytes": 11769,
+      "sha256": "adb9de30071ba583cc41101953a7964e39213dcc95cbb00ea487e07fd11474fc"
     },
     {
       "path": "site/public/reference/manuals/scenario-authoring-guide/index.html",
-      "bytes": 11269,
-      "sha256": "3e1469419b3fbfb5a819f6f3072d30e6938bca60929ee6020a54ab0ec4ddabeb"
+      "bytes": 11741,
+      "sha256": "c17283587c1fca97e08c40d7d2890c2f6be5d7fc03f649911f2a3e519e8bb056"
     },
     {
       "path": "site/public/reference/manuals/security-boundaries/index.html",
-      "bytes": 6133,
-      "sha256": "c6d811feba03e2b8633b9a7cbb4dafa86674e704ec0dd13e14654c24a8529acc"
+      "bytes": 6605,
+      "sha256": "df2b6fcad8ca2b5a4483b530bd39bcdf0fdf6fe00cf14b600c1370adcee75022"
     },
     {
       "path": "site/public/reference/manuals/security-operations-guide/index.html",
-      "bytes": 8925,
-      "sha256": "effb50b128ecd93663e7d18c1b509dd6eb0e48d7f4bf3d3b407e171ec23abb95"
+      "bytes": 9397,
+      "sha256": "ebb8f7cb47c0820aea25203f569187b9fb8b99ef2f725dae9e67a4b16e226752"
     },
     {
       "path": "site/public/reference/manuals/skill-install-commands/index.html",
-      "bytes": 48256,
-      "sha256": "86b0af2d87bc118bb39923c82d90aefcdfe2a0eeafc677ab9f2c0affb32868c9"
+      "bytes": 48728,
+      "sha256": "6cc49ce0b8ba385ce40df609d2bdc29c90a5e326fa553e0bb60a8bc6ad849614"
     },
     {
       "path": "site/public/reference/manuals/skill-routing/index.html",
-      "bytes": 13353,
-      "sha256": "63263ac26319502e20b8a0bf734ce1294d1a90cddcfcef3afc19ae5b323949dd"
+      "bytes": 13825,
+      "sha256": "b255950e76d25ab2704bb5f2185659da69c6dd1113ac1300e8bfd79d01ccfa79"
     },
     {
       "path": "site/public/reference/manuals/skill-supply-chain-guide/index.html",
-      "bytes": 10714,
-      "sha256": "a7d395ae81ab05dd429cd5ef080968a86ca590826fcd9d388e9cff19d77432d6"
+      "bytes": 11186,
+      "sha256": "cf35e2cad55195659a17be2fba492315199fed9a63c270f06d49738810067ac7"
     },
     {
       "path": "site/public/reference/manuals/telemetry-and-observability-guide/index.html",
-      "bytes": 9616,
-      "sha256": "edf4668fb48e11e20a3fc1fb1d50b651e1ddf2cdbbd461f65698b51f2395a50c"
+      "bytes": 10088,
+      "sha256": "cdfae0a590bb5d3cf79dfca8941f423ff3fa7624f505fc623f05123c34426807"
     },
     {
       "path": "site/public/reference/manuals/template-system-guide/index.html",
-      "bytes": 14609,
-      "sha256": "bf46eb2c24d379da17b76657a69cdfd7bd9fc839565a415ec208ce9d66656474"
+      "bytes": 15081,
+      "sha256": "f094789fdc59182177e64261d07874737aa980dead36035fdb3567a9fdd77c31"
     },
     {
       "path": "site/public/reference/manuals/tool-policy-and-authorization-guide/index.html",
-      "bytes": 10131,
-      "sha256": "b1c16927cb55ea2180c84f901cb2b34d67636e6c11f28ef552a5a643a830de72"
+      "bytes": 10603,
+      "sha256": "9454f55ff19aa390b57b247beb2fc943f73d889bf5369829c7b0667033023d1f"
     },
     {
       "path": "site/public/reference/manuals/troubleshooting-guide/index.html",
-      "bytes": 10603,
-      "sha256": "70c77516605e1f7cdb890d07467a4d1384c6d8d0ea153b6e3a3e483f88a9159b"
+      "bytes": 11277,
+      "sha256": "d612c65106703de09892ef9fc37c00dcab8cc65e3870fd8a700dcd9d350fb376"
     },
     {
       "path": "site/public/reference/manuals/tui-and-operator-experience-guide/index.html",
-      "bytes": 15190,
-      "sha256": "400128f8bfbe864e2b45467510109aa3beff1b66d095c71d7d1ee9b7e52e6fbf"
+      "bytes": 15662,
+      "sha256": "70533edca0f58a63134c39b1f7d44f3373c203e68d7fa5844848da9d513aab55"
     },
     {
       "path": "site/public/reference/manuals/user-manual/index.html",
-      "bytes": 14199,
-      "sha256": "311c8c82170a65246310bb01480a1a42955354e0a44512969c4a8e261cd6cbf4"
+      "bytes": 14671,
+      "sha256": "37e5e5811697d8e753da6fcaf3bb3c62135d094f1e1d1930430e69e0f99d34f0"
     },
     {
       "path": "site/public/reference/manuals/visual-assets-integration-guide/index.html",
-      "bytes": 12540,
-      "sha256": "6e111e2176cef4cde2e5e65c5a95a0751317cd0b012fa8279a68db9dc6ba3678"
+      "bytes": 13012,
+      "sha256": "5842ab1f6767b8c73bfc4ecce3c80ccdd92e7053f532b82f2b5d674ea110398f"
     },
     {
       "path": "site/public/scenarios.html",
-      "bytes": 921224,
-      "sha256": "85ec8de6e5a71e9342431a11b8f5dfbd3f83b93d046771e01ed8a62f7d00432b"
+      "bytes": 921696,
+      "sha256": "5453f9e52095ba878c0603e657f66908338e65cdc4aa423b382a87ca392e7e31"
     },
     {
       "path": "site/public/styles.css",
-      "bytes": 41495,
-      "sha256": "a3c5c37d32a4952115a7880a5fe53b1be3a17db297e3d04ba343552bad5cecd8"
+      "bytes": 41043,
+      "sha256": "944aea7a7eb687abc47ab3003d7784a5c9b1a7306501d550a3d9cbc80cfd38d3"
     },
     {
       "path": "site/scripts/check-links.mjs",
@@ -12013,13 +12073,13 @@
     },
     {
       "path": "site/scripts/generate-reference.mjs",
-      "bytes": 33244,
-      "sha256": "73dd0dc49f4a89170c23a22b17ee2f551a3377bb37703e6624eb1880862b415e"
+      "bytes": 38351,
+      "sha256": "0823eec7bae7a916802e6ce30937967aa7305c04d1426c2439477c1439ea6965"
     },
     {
       "path": "site/src/pages/index.astro",
-      "bytes": 8583,
-      "sha256": "fc631e333239c9cc7adb54b17cd31bb194e1167dad6742ba97a5f5f4c9037a2b"
+      "bytes": 8650,
+      "sha256": "e9e78a1a6b13ec3a08ca8b22d8a7d6f449def9f87d62a80e208717d6f489558c"
     },
     {
       "path": "site/tsconfig.json",
@@ -12029,12 +12089,12 @@
     {
       "path": "skill_registry.json",
       "bytes": 269427,
-      "sha256": "651f9c4329b040fe9262bed75069badab63fbf24c2520c3bcb56528d9fd1e95b"
+      "sha256": "62682ac56e492f94698a07ce8c1e5e12ee54c4cc5d88449868431ca8967c995b"
     },
     {
       "path": "src/mission_directives/__about__.py",
       "bytes": 22,
-      "sha256": "c00c642bcc35defaa8178ec0f22a96752948811457999890d11e3078f65fce1b"
+      "sha256": "b404ef24ce6c840cdfb291d88dd570a55db0dfe803035d7d3651188b95f69456"
     },
     {
       "path": "src/mission_directives/__init__.py",
@@ -12079,367 +12139,367 @@
     {
       "path": "templates/core/acceptance-criteria.md",
       "bytes": 9894,
-      "sha256": "657ac66ec1e8b79657265f834d826bb5745e44e72b38b8337381a45b55c9d0b0"
+      "sha256": "771927be9cdde8ba7aa85911ae72fdf8b62bf56cfefd64d973b36acce98a82c5"
     },
     {
       "path": "templates/core/artifact-specification.md",
       "bytes": 9948,
-      "sha256": "7594b7f6fe1672f3e9fae3ad1600ba76ed9de2ef1593320aee87f983ab02e54a"
+      "sha256": "7c6b8b1425aa87082711b0069cb22b79fb50b8cb0ab22462997069450daedf86"
     },
     {
       "path": "templates/core/decision-record.md",
       "bytes": 9860,
-      "sha256": "c71bb8f2399f09c6684076965fc7019900ef6c1f479ad10dbf6c73b4c28d1594"
+      "sha256": "e86e9e27d0b44736a2b929100d2163ded394dbf35883169f770c350eddcbc990"
     },
     {
       "path": "templates/core/evidence-register.md",
       "bytes": 9879,
-      "sha256": "f6c4917320c431b440990000758bc988e9f62d79fb49ccfcaa27f9c1353b90e6"
+      "sha256": "272824bec06ae8e52eb377b5282cab5982ec6f0933f2a408bf4bd3d0d460b29a"
     },
     {
       "path": "templates/core/review-receipt.md",
       "bytes": 9843,
-      "sha256": "5994aa8a675fb3e08d64d1f7d649617f58c7f6e01873b6e7cdda4f039f8846c7"
+      "sha256": "abfdfe6a65f8b2aaa93775b2f532c7d9cce447fd647c43ca0fa3b0cf1f632c54"
     },
     {
       "path": "templates/core/rollback-plan.md",
       "bytes": 9954,
-      "sha256": "fc887c240a7c48c0227aa153e317ca14dbba3c10b7827d38d78af6da6d59d4e2"
+      "sha256": "ab01d21a225234fa997ece4c755dd40928d1a77528b531a550be3321c1d755fc"
     },
     {
       "path": "templates/core/run-manifest.md",
       "bytes": 9818,
-      "sha256": "97a0003eb0ef1f20c0c3780266bfa8e8acd8e70745cec35abaafcc3fdb84e398"
+      "sha256": "24108b7b502acb4cbf20e7718e59e771c91797517e6d299948d0f0e1d52653f2"
     },
     {
       "path": "templates/core/verification-record.md",
       "bytes": 9899,
-      "sha256": "b1c8bf14ff2a9362bef5bc954e812038eb76632824585ea38c033e56991ac8f1"
+      "sha256": "76a8b73b5976b681fd8c45b079bc7db9d9c465e2637474537cf2bb3ba7dc5db5"
     },
     {
       "path": "templates/decks/board-update.md",
       "bytes": 11386,
-      "sha256": "ade139df4834df6d9d06ccec1fd4e8d8d22adec6fd0430bc6ae6b46965bf0185"
+      "sha256": "f2859f6ec7bafcff971b58c25548ca14ee5e0bdd70f216b4438c085060d5946b"
     },
     {
       "path": "templates/decks/data-story.md",
       "bytes": 11365,
-      "sha256": "e1ef07246b0b8db5332830293a9c3636563cba2c4d3d8ae7bc4b18f52db57ee7"
+      "sha256": "307a8c51c3376e6fc13d7459d00aceee5ffcfd6c53d681d5081ef1f50a0c8311"
     },
     {
       "path": "templates/decks/design-review.md",
       "bytes": 11406,
-      "sha256": "fe64998928cfd9a79a43477017245ca2437d7b2ae92a238b4791471b976f6fc5"
+      "sha256": "9464acb6fc0685110158e22fb3df602c2891ff54807e3175cec5545ca400a116"
     },
     {
       "path": "templates/decks/executive-brief.md",
       "bytes": 11413,
-      "sha256": "bb9bf6f5044660a97de04b7fa3f9b4fd12001eafd39edd0efcfa83656a68b298"
+      "sha256": "520bac0c351adb187879c090530ce3549be374e13e829d0019555f67a128ebcb"
     },
     {
       "path": "templates/decks/incident-review.md",
       "bytes": 11402,
-      "sha256": "51ae69aeac24c0e080fed422cfdbbec91f6b12bc399ae5fa11303765b7808f65"
+      "sha256": "5d2c9700f21fd80194df5df041fcef70d91d4119051e3bd38325d5405be2a172"
     },
     {
       "path": "templates/decks/investor-update.md",
       "bytes": 11415,
-      "sha256": "3d2533a710b5a61c26a3f36771c4b918c2dce0efabdd77dd3e02a0e492afdcef"
+      "sha256": "0cc4e58cbf811f269ec8a4cafd0c776e25688f431ae232717049a4519950cc49"
     },
     {
       "path": "templates/decks/presentation-master.md",
       "bytes": 11429,
-      "sha256": "294c5c917bc1cbf37c4cf46d9dfeca5b599c6ba68f636bdb381a2ab0274cfedd"
+      "sha256": "6cdd4b1462e869970ce24ed7d1238f09a4671cb3d8b368d4d1827f0f8b19dea8"
     },
     {
       "path": "templates/decks/product-strategy.md",
       "bytes": 11425,
-      "sha256": "6fcef04372fffa6343fab433cebd9685c55d87a1e09611960c1c25ac567772e3"
+      "sha256": "914642bf0650b43cb8a2f22c460f97f7fdc2f03d24ab83bc2ba65954b2a7dd48"
     },
     {
       "path": "templates/decks/project-kickoff.md",
       "bytes": 11412,
-      "sha256": "27b89c18718328244830619f356370f6cf7053b19c77e9f25ff0eaa287442f0f"
+      "sha256": "e10609e11f5c07e9869a4ae6f0f6ee340a14797d4a1da4955203fa5b0442c7e0"
     },
     {
       "path": "templates/decks/release-readiness.md",
       "bytes": 11438,
-      "sha256": "d14cf0b6d6c11cb0c82e6aa4bace5972badb6ca4af5cf135d7c6542867963bc8"
+      "sha256": "3c2771b1e5b5d22de4018c6f8684dcb292460e4ff90f8a4260be669acfbf62c4"
     },
     {
       "path": "templates/decks/research-findings.md",
       "bytes": 11451,
-      "sha256": "af5c2904cc6bf5413ab2842ca9e0b13d0520467af5a71785e59d2575f3ef27ae"
+      "sha256": "f1ad692818b4d6e7d90f912290aade5f8ab14823a1f0d167445be4c79eaa27bc"
     },
     {
       "path": "templates/decks/technical-architecture.md",
       "bytes": 11503,
-      "sha256": "ee123fee3943bffe4a19b7311a77a9e6a10353675f6c3a641fa604236332d9b2"
+      "sha256": "525ea2313b0d434d2e115ecac1b0acd4334b36e961666236bb6d09003a5e0db2"
     },
     {
       "path": "templates/decks/training-workshop.md",
       "bytes": 11486,
-      "sha256": "0f003b5e834294d967359ca4d0b5586d9600cada5d620ac7768d9b65470531ad"
+      "sha256": "24fe4c1e93c0032d9a0d97b92fb27ea51e65d5af737d86e512c46d6c5e332582"
     },
     {
       "path": "templates/docs/administrator-manual.md",
       "bytes": 14372,
-      "sha256": "b5b3b9063a75d1cc3ff976a0a0fe8743fa871917a80aeeafa58bb922196d9fc9"
+      "sha256": "c6d86ef66efc4200cd7d73345b6f41456b5f62e7e04580ccfbc435b5ff41955f"
     },
     {
       "path": "templates/docs/adr.md",
       "bytes": 14374,
-      "sha256": "da381aa6afa548b4f0e64be81593b96067bc9a4dac32d3eeeda3200efae6d63a"
+      "sha256": "33aaa54fcf6061feb14dd3d52d36e7792a0bc92fb5a8d203c26072951204f5c4"
     },
     {
       "path": "templates/docs/api-reference.md",
       "bytes": 14365,
-      "sha256": "da917abf2f478e0d96f9e946faabefbc191f0378a43a84af4637f897c1f1389d"
+      "sha256": "c742ed5417541710b7541c3ca706c0208bbba5487324661fea3d9301e782403e"
     },
     {
       "path": "templates/docs/architecture-guide.md",
       "bytes": 14379,
-      "sha256": "09e361d57c429172c7e122f181661e5af3d0f1b368ca7d14a6ca98d05daac168"
+      "sha256": "cc1349c10b23077bd52281c4505500bdcba1f6067f57f9752bc1769e397da2b2"
     },
     {
       "path": "templates/docs/binary-distribution-manual.md",
       "bytes": 15216,
-      "sha256": "9001d6a34430c7f851fe3763b1510454d66c91ddf69a86a762b01003cbe74327"
+      "sha256": "b06e1549abe02d3fcca57d37499c3247ac555eb1ef8e0ef40fee51bdcfc8d498"
     },
     {
       "path": "templates/docs/cli-reference.md",
       "bytes": 14363,
-      "sha256": "a107d09ba56475c5817f4e5cec96752f84c077333fe574786b580e0832ccc8af"
+      "sha256": "3286ca38ba56351eb86d68651cf1e333cfdceb91e206c4951815a03e9ac4ad94"
     },
     {
       "path": "templates/docs/configuration-reference.md",
       "bytes": 14395,
-      "sha256": "879dda8ba47c7b5d2e7679079bc2d5e99101dad8fb10b76a849e47742b17fbe7"
+      "sha256": "1e78aae3a84c92b14bbcb05187b5cd6fadc1ade6b6e7bdb37fde6d4736c8af57"
     },
     {
       "path": "templates/docs/contributor-guide.md",
       "bytes": 14355,
-      "sha256": "0edef59d8b24107df59accbb0d98848b49fa2ea808733f8d7cd588adede61f9f"
+      "sha256": "25f8c042c33cf07269d5fc42158406d7548577d2a29c5323b37f94bf10e420ae"
     },
     {
       "path": "templates/docs/data-model-reference.md",
       "bytes": 14378,
-      "sha256": "b7123d644c7846d04ad5abd652167a45343458e44cebc8269487759776cd4be7"
+      "sha256": "b4f2a13676d80bbd6f36debccd0d8d8c0d92bbce63a23a85f7166df378d758c8"
     },
     {
       "path": "templates/docs/decision-log.md",
       "bytes": 14347,
-      "sha256": "c6b0c1b205dab2f15a25d8904db67fdc36734afac35fc9ef62c9331928e08c3c"
+      "sha256": "66404ee537549c481bca1bf4e6f6d15914c89a2f0f2fd0d7219d734371348376"
     },
     {
       "path": "templates/docs/deployment-guide.md",
       "bytes": 14378,
-      "sha256": "f20f31461d7d78dd69b83b5d8cb420b1b7c6bf89c5c8ff9edf654cbb74a6868e"
+      "sha256": "777cf31d601f274dd043ee788288abdc4fe1964590c2f110711845779441af45"
     },
     {
       "path": "templates/docs/developer-guide.md",
       "bytes": 14366,
-      "sha256": "8c5dc2d8e2bc0919ef2d485aaf04f155fb171b61a2ba68043a4e4ac22c1743eb"
+      "sha256": "d712bc76340d6b9a37aba1e331626b34e4fc0f77ebdf88e81e022d1f607038fb"
     },
     {
       "path": "templates/docs/faq.md",
       "bytes": 14365,
-      "sha256": "b0836aa04fd827707b0281387ff34585ad97d2a280cf01a2cdef5df6091216ca"
+      "sha256": "c68fc2c9a85acdb0ce5d5d738ba24cefad51c1d5e41870aa923beb578888cb59"
     },
     {
       "path": "templates/docs/glossary.md",
       "bytes": 14361,
-      "sha256": "485efe5982fb9a5ddf44264b730979378fee4cfb70dcb68d09f7a81a193623d0"
+      "sha256": "66941af46ae27a3a4d3fdded25cfe3d20868dabde2c704bde6d937318b215447"
     },
     {
       "path": "templates/docs/knowledge-base-article.md",
       "bytes": 14394,
-      "sha256": "6184d5b774f6750feb12abcfeed8b23c214b6a9232f0fd8f40fb4b62d4eeff29"
+      "sha256": "6c0b8fb77dbc5c3f79fd0afc98059ec339cb5dbc5efcaff5414bb5baecea0f01"
     },
     {
       "path": "templates/docs/maintainer-guide.md",
       "bytes": 14360,
-      "sha256": "6cc9d599a44ccc4a3c23d78b0a7c03f7a6982787828a47d15d0a3a39b9318d43"
+      "sha256": "2651ee94d41243b789a99f9b6608ab3e007a5da7446b8fb104005126eef35ce1"
     },
     {
       "path": "templates/docs/migration-guide.md",
       "bytes": 14377,
-      "sha256": "531f9c7abe1c0ac98792e1b2e1393cba6fb7cbd5d77f1f4783733a06754c7e8d"
+      "sha256": "d86918a35c38f082e0bf00c341118d87f5b1969b2000f08caa91588662210804"
     },
     {
       "path": "templates/docs/observability-guide.md",
       "bytes": 14374,
-      "sha256": "2d65f440c5cc860878c6075f6e2f23d8e804ec9a660a49d49452401abf175208"
+      "sha256": "2204abf92869b675a0af40b06bcfab9539b5d51b39732e613d1d9fc800da452f"
     },
     {
       "path": "templates/docs/onboarding-guide.md",
       "bytes": 14359,
-      "sha256": "05c7d7da9c913f345317bbaec4e0fef2093bb95194bb52fe6854b8a22f6bcd73"
+      "sha256": "677197022e67eb51992207a1fd882a5a910b53f7646cf84bbd74822552f24a40"
     },
     {
       "path": "templates/docs/operator-runbook.md",
       "bytes": 14365,
-      "sha256": "4947a0f0d19d6edcf319214c3c06406ac77c0f36be0c88d43e530308b2e4495c"
+      "sha256": "685a1221711e659ea46904c51d90c8aafe2640bc80d98b8f7e143d563b930fda"
     },
     {
       "path": "templates/docs/performance-guide.md",
       "bytes": 14368,
-      "sha256": "947e5cf3780e8fe20a1346551263b8185ede98ca0c202d8784f7e41fb01c6a1c"
+      "sha256": "ada4e1198ecaabb8ab9d7627de6a8f0f855d6a321e3f3c96f5a7c69574e8b1e2"
     },
     {
       "path": "templates/docs/policy.md",
       "bytes": 14355,
-      "sha256": "59c76f427b5546dbcb3301a9cc5b2bc7d8525a778906fa56d01eec4b8e8cb4d9"
+      "sha256": "6c241031263f7853e80dabc6419ed139e443e6e83409f186abd6232b4b95b4cb"
     },
     {
       "path": "templates/docs/privacy-guide.md",
       "bytes": 14397,
-      "sha256": "4e19eb83b957ed70b9696a522d17fdf2fc01f774f219c15f0fc46e54f39e700d"
+      "sha256": "c75f4df5326a9eb4401b294dd8e893fe98447b76a1f8845d95b48a625b44f5d9"
     },
     {
       "path": "templates/docs/project-handoff.md",
       "bytes": 14368,
-      "sha256": "4cc94a95460bb60378fe8926f84f6772a92a962e88cef1ae1d8c0c961f3d2e6c"
+      "sha256": "1ac7f5354bf0a6256d72c4e5c75ffe51fbdc50416191ba3bb7416c1a32dad5bd"
     },
     {
       "path": "templates/docs/readme-complete.md",
       "bytes": 14367,
-      "sha256": "3ede07444caf4e4d962a0060c7d357d78e0c69afed2e8bb7d1abaa6534119c05"
+      "sha256": "88f747d2f924906238cde88e95e40db761a14c8efb68fe595dad62b0ab667fe2"
     },
     {
       "path": "templates/docs/release-guide.md",
       "bytes": 14357,
-      "sha256": "63b5c5c90079cf8f82b2f069dac3442a00ef5e0ec00ffe46387ba945f972f9a6"
+      "sha256": "73b78a48ae26c7526f196397f995d7676545af60a65a1a85725c6bbea68973c0"
     },
     {
       "path": "templates/docs/requirements-specification.md",
       "bytes": 14400,
-      "sha256": "9708a7587fa145eac914f5f0e73cda75d8c58068b52eb4022a8fc81a5c70573a"
+      "sha256": "bd66c1cbc360b13abe8d1a7f81ce424b237e0a706f659f85d767e02b9a02e4c6"
     },
     {
       "path": "templates/docs/sdk-reference.md",
       "bytes": 14359,
-      "sha256": "b4db7cab02e5d504a582fc1bda93ec4cede31080ba50fd33d91df20073eb80f5"
+      "sha256": "9adee78376160d2852364296d0b93068e39bbb380f4993fe57c11e02c0f8db4f"
     },
     {
       "path": "templates/docs/security-guide.md",
       "bytes": 14363,
-      "sha256": "d3cae315796493c6cc9761c8207ff54120063370a625daabde6f4714c300cafe"
+      "sha256": "7acfb73f16636817573163985d7be09887657a44d4da1da174e3bf98b5b716e6"
     },
     {
       "path": "templates/docs/sop.md",
       "bytes": 14377,
-      "sha256": "aaddb5474c5f924d3b0ccdb3e9bee7105244ad9e65391fa61c3106d1efd260dd"
+      "sha256": "c1ade2134d7fbb1966b6c5778886965226d966438983528ec0acfa1270383a36"
     },
     {
       "path": "templates/docs/support-playbook.md",
       "bytes": 14361,
-      "sha256": "bc6fcc6563f1cdba16db211df73196475ccca33f92a04ea0ea391d147b067e7f"
+      "sha256": "56cc3f673f1a909cd28b0d6c42bc7961dc8e7e87cf17788e92bd10fde4a42319"
     },
     {
       "path": "templates/docs/system-design.md",
       "bytes": 14391,
-      "sha256": "036173400f08f0a73b2de594798c37b3b232c9d8e1c956c10cf50f9c67e4fa7e"
+      "sha256": "4963ec2c22b3a6856cd9dc19bb81b8b75c7c5a5641cad7018906b4ae4eb33152"
     },
     {
       "path": "templates/docs/technical-specification.md",
       "bytes": 14388,
-      "sha256": "e1edcc2c8d33846fa07c5dca982898214a8ab81cfde0eb04815cd997f448529b"
+      "sha256": "86511c5b80cd9b7356a9dca812562adcc9eaa7d8b0bf994697e1a3bf3368c7c0"
     },
     {
       "path": "templates/docs/testing-guide.md",
       "bytes": 14358,
-      "sha256": "55fc1caede45a4be0161d9eb386ecfd3330675a459a050b79a020d7040f36ff3"
+      "sha256": "f53927b3b72bd3f272b2353a4821eeddf675521050c5eb49c365b74bff7a32b3"
     },
     {
       "path": "templates/docs/troubleshooting-guide.md",
       "bytes": 14387,
-      "sha256": "f09ce4eed8eced92cbfc99632cbdf304cad1559bb522824344224da44f473fb5"
+      "sha256": "e06018b626896a24b0fca89b5a1eb545efeadaa547b7790af0c0f6fa50094edb"
     },
     {
       "path": "templates/docs/upgrade-guide.md",
       "bytes": 14361,
-      "sha256": "4b1e8fd49c13d86aedd3f6a273ee7fd3c04d37a848fbd936a6b9ce9ccc53357c"
+      "sha256": "005092423f3c6a6cc3e4bd566f407040c706c694876710a7367c5e919f05cd24"
     },
     {
       "path": "templates/docs/user-manual.md",
       "bytes": 14343,
-      "sha256": "16b659eb004b5de976624baf2d2f0902d8ef6920cc9ebc582f03995d089c6e05"
+      "sha256": "8a966493f71baeea70547466ec1c334931db66edd6e1cdf030c5f04a9de2d0f4"
     },
     {
       "path": "templates/reports/audit-report.md",
       "bytes": 12344,
-      "sha256": "ffc87fe9f362eebf2bf99e24726b9c281b0f641ef5a01648cfc5f7921e96ecde"
+      "sha256": "d56933ff3f288ec80581ff4c519557461010cd848dd09ddf95a7e3392b9628a5"
     },
     {
       "path": "templates/reports/compliance-report.md",
       "bytes": 12406,
-      "sha256": "8f9420e5ee8ac30f679b35cda7eb5c2947f17002a6406462dfe46d13da854d02"
+      "sha256": "ae0a38f2478198565821e8ec10e5e0f997f6a1c09a76015b6c52e0cb7d11d01e"
     },
     {
       "path": "templates/reports/evaluation-report.md",
       "bytes": 12403,
-      "sha256": "0b352f2e60f601d3d4091523ced196501c32d1660e64893138f713823482c168"
+      "sha256": "6b41668f1bd1d841eda5d393e59af7fcb25d542f9f27ca5efbebc81a5a48bdf0"
     },
     {
       "path": "templates/reports/executive-report.md",
       "bytes": 12380,
-      "sha256": "40edd8b40f0290a123b0451669987641ddb628bdeff05d53d88b79cc236b1cfd"
+      "sha256": "0c880abc478547f35c8fecba510a342a5a9a2502414998b84935599078a91e5f"
     },
     {
       "path": "templates/reports/experiment-analysis.md",
       "bytes": 12415,
-      "sha256": "44a20febd8592dfcdc036cb7bc8f31013c1e8235b2911f963dff5924dcfedd4a"
+      "sha256": "4b5c716e0d2f40b578161ad91f16cfb3eab4bc67818eaad5b01b0be0044a0350"
     },
     {
       "path": "templates/reports/incident-report.md",
       "bytes": 12377,
-      "sha256": "ff420fb1f88d09f9445ccb0bca860437f56b131434c11da01400a9f61967b4a4"
+      "sha256": "446a2616215857789d517f81303f9805b589733fd7c23173f0ab8c9c56cdc485"
     },
     {
       "path": "templates/reports/professional-report.md",
       "bytes": 12441,
-      "sha256": "1c191e037a1bcf57fc24db6281511a10204b4b17503562133e7d658803237b44"
+      "sha256": "027fc597567ae8da609353bf3f86410dd480213e87b4379cb51f94bb5056d96a"
     },
     {
       "path": "templates/reports/research-report.md",
       "bytes": 12384,
-      "sha256": "15a633c52ece57568a5acafa1ff59893d801e17818e9a807456102a78c224b02"
+      "sha256": "178b366224eb935b404a8d5e2fd7bcbc1d75e0c1b36fd07a7589f791ed09bcc3"
     },
     {
       "path": "templates/reports/security-assessment.md",
       "bytes": 12433,
-      "sha256": "0d5d5bd050475f4db857f3f82e0f6f8e34b6eeda19ad8b3cda87405ea89d51d7"
+      "sha256": "e907bb9ae5e09c5cf0c29457d2d172ed966edc395969cc66ba9e80a960253bec"
     },
     {
       "path": "templates/reports/status-report.md",
       "bytes": 12338,
-      "sha256": "c67cb7c058aad4f6de7c7c7b5ffc1f683b8baf1837d728f862dec41533984417"
+      "sha256": "f8f51a21aedee3d704707521d067e46ba25b25d6dbad6f00a1c8d357bb021823"
     },
     {
       "path": "templates/visual/animated-illustration-specification.md",
       "bytes": 12664,
-      "sha256": "5b634e262dfa6ca115473b485c74a9749bb47a22f9b2f958e7482cba95d13c5d"
+      "sha256": "0020751dcfeffc9a26f21dc89a3f64c078d82c6e82f93a44a32cca4e9b2f8829"
     },
     {
       "path": "templates/visual/data-visualization-specification.md",
       "bytes": 12643,
-      "sha256": "a536eff378f5db02d03d8dcc96669d40b2c20926903f6554acbfe1b3d9b321a3"
+      "sha256": "dc29a9721f329ef6bd007a8ee1834163f19e15177e0c7bdcf6a67152a98243d0"
     },
     {
       "path": "templates/visual/diagram-specification.md",
       "bytes": 12489,
-      "sha256": "3745d8cddb0e31dd427867130a6db20c620b8d51059445ac90df33e4318a6715"
+      "sha256": "62151c0afad3c1e6be24c9bc518bac4dc94c6ae78aa2975c6064bcf6b80acc89"
     },
     {
       "path": "templates/visual/infographic-specification.md",
       "bytes": 12540,
-      "sha256": "9925a2af544936b8a5bc7e9dd8207afb951344f99fda0b856ecb65db0aa91098"
+      "sha256": "ec821a99d8a6bcdc9b32c5b56754c14c01c5af65650f098cd8ea62808672a83a"
     },
     {
       "path": "templates/visual/visual-asset-brief.md",
       "bytes": 12455,
-      "sha256": "95572ce9be8315ca1807f64144751ea37607a8c8c3f94bccfdf01a2fc8e8c043"
+      "sha256": "e51c0c3c3b1bf643ad2a3d3419cc93d37b009540be89ccc37f966ded18328df5"
     },
     {
       "path": "tests/conftest.py",
@@ -12463,13 +12523,13 @@
     },
     {
       "path": "tests/test_cross_platform_tooling.py",
-      "bytes": 2703,
-      "sha256": "10c98af97df1f5667d6beafe74f77d5d5973cc8c8330e01a5f57e0b3a1752164"
+      "bytes": 2941,
+      "sha256": "6af16593ad94cb14275fc6677f918361b58a6d37d1535dc101493142e30d758b"
     },
     {
       "path": "tests/test_docs_site.py",
-      "bytes": 3221,
-      "sha256": "4219454446e488359c74e56a0be1b7f2b4422d42784829d2daa1677a5e05115b"
+      "bytes": 4960,
+      "sha256": "856bc2c5882f1dec67388bc83d035437b3273936aa8b4c3eff303104c47b3ab5"
     },
     {
       "path": "tests/test_documentation_integrity.py",
@@ -12533,8 +12593,8 @@
     },
     {
       "path": "tests/test_release_paths_installer.py",
-      "bytes": 8352,
-      "sha256": "81a72017e084ad8242643b73643fcd151a928a6da10a1740b25de5a8b225f6a7"
+      "bytes": 9450,
+      "sha256": "b11fc7d355de23c205f91d6b32cb0490f1b926c8c04fae88575d07548cf9b8c6"
     },
     {
       "path": "tests/test_schema_contracts.py",
@@ -12604,7 +12664,7 @@
     {
       "path": "tools/build_schema_contract_fixtures.py",
       "bytes": 4451,
-      "sha256": "865811619216b8c2dac85f1dd0e9d0ab7363e356b0bf9849d26faa0a3af22a58"
+      "sha256": "4e823e6f51fd913ab959a1ac2fe692600468052353c7ce797f54cfcae509b873"
     },
     {
       "path": "tools/check_documentation_links.py",
@@ -12704,7 +12764,7 @@
     {
       "path": "tools/package_smoke.py",
       "bytes": 7117,
-      "sha256": "1d9e2408216350b4fb64c3285521f6f42cf511c0b9316a10ddf190ce41a9bdb1"
+      "sha256": "ec8d771580ee70f8e1e1b2e66374c67b5bf1e257a6476d8a55b55cb02a675193"
     },
     {
       "path": "tools/platform_dispatch.py",
@@ -12838,8 +12898,8 @@
     },
     {
       "path": "tools/sync_agent_guidance.py",
-      "bytes": 24787,
-      "sha256": "7de23196bfa84bbd00086fd442af8574efae2f1b650c004dddb551a91d2f3439"
+      "bytes": 24962,
+      "sha256": "6651b8f8c5f8b06e8546578188ad81edc870591917d53e73c20bbd10eff2911b"
     },
     {
       "path": "tools/sync_installed_skills.py",

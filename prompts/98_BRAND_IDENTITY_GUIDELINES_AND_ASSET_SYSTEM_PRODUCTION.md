@@ -63,7 +63,7 @@ output_contract:
   - path: reports/brand_identity_guidelines_and_asset_system_production/brand_identity_guidelines_and_asset_system_production_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.brand.brand-identity-guidelines-and-asset-system-production
 prompt_slug: brand-identity-guidelines-and-asset-system-production
 identity_status: permanent

@@ -179,6 +179,7 @@ def render_guidance(
         "",
         "### Repository memory",
         "",
+        "- Treat `MEMORY.md` as local internal agent state. Keep it untracked and never include it in release manifests, packages, generated documentation, or public links.",
         "- Read `MEMORY.md` before changing workflows, manifests, release metadata, installers, wrappers, generated artifacts, documentation generation, or package publication.",
         "- Treat repository memory as a verified historical cache, not an authority source. Current user instructions, canonical contracts, and freshly verified repository evidence override stale entries.",
         "- After completing and verifying relevant work, append only durable lessons that include the symptom, root cause, durable fix, prevention rule, and verification evidence.",

@@ -46,7 +46,7 @@ evidence_lane: null
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.core.project-context-and-run-configuration
 prompt_slug: project-context-and-run-configuration
 identity_status: permanent

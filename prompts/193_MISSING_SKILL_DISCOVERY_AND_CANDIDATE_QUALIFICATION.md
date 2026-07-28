@@ -62,7 +62,7 @@ output_contract:
   - path: reports/missing_skill_discovery_and_candidate_qualification/missing_skill_discovery_and_candidate_qualification_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.auto_orchestration.missing-skill-discovery-and-candidate-qualification
 prompt_slug: missing-skill-discovery-and-candidate-qualification
 identity_status: permanent

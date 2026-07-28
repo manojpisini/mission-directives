@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/mission-directives-banner.svg" alt="Mission Directives" width="100%" />
+  <img src="assets/images/mission_directives_full_logo_lateral.svg" alt="Mission Directives" width="760" />
 </p>
 
 <p align="center">
@@ -9,7 +9,10 @@
 
 <p align="center">
   <strong>Bounded, reviewable, and verifiable agent work.</strong><br />
-  <a href="https://manojpisini.github.io/mission-directives/">Documentation site</a>
+  <a href="https://manojpisini.github.io/mission-directives/getting-started.html">Getting Started</a> ·
+  <a href="https://manojpisini.github.io/mission-directives/installation.html">Installation</a> ·
+  <a href="https://manojpisini.github.io/mission-directives/docs.html">Documentation</a> ·
+  <a href="https://manojpisini.github.io/mission-directives/contributing.html">Contributing</a>
 </p>
 
 <p align="center">
@@ -18,7 +21,7 @@
 
 Mission Directives is a curated prompt and orchestration suite for turning natural-language requests into the smallest coherent prompt, scenario, or workflow graph needed for the outcome. It keeps selection deterministic, authority explicit, and completion tied to evidence instead of asking a model to load a whole library and guess.
 
-Current release: **2.0.1**
+Current release: **2.0.2**
 
 <p align="center">
   <img src="assets/readme/routing-flow.svg" alt="Mission Directives routing flow: route, explain, plan, and verify." width="100%" />
@@ -38,10 +41,10 @@ Current release: **2.0.1**
 - **Verification discipline:** every route is complete only when the requested artifact satisfies its task-specific verification contract and residuals are explicit.
 
 <p align="center">
-  <img src="assets/readme/inventory.svg" alt="Repository inventory: 257 prompts, 257 atomic routes, 110 composite scenarios, 62 manuals, and 32 reciprocal pairs." width="100%" />
+  <img src="assets/readme/inventory.svg" alt="Repository inventory: 257 prompts, 257 atomic routes, 110 composite scenarios, 64 manuals, and 32 reciprocal pairs." width="100%" />
 </p>
 
-Repository inventory: **257 prompts**, **257 atomic routes**, **110 composite scenarios**, **32 reciprocal investigation/execution pairs**, and **62 repository manuals**.
+Repository inventory: **257 prompts**, **257 atomic routes**, **110 composite scenarios**, **32 reciprocal investigation/execution pairs**, and **64 repository manuals**.
 
 <p align="center">
   <img src="assets/readme/divider.svg" alt="" width="100%" />
@@ -90,7 +93,7 @@ mission-directives route "MD advanced audit fix verify repository"
 mission-directives view
 ```
 
-`pipx install mission-directives` and `python -m pip install --user mission-directives` are also supported. The `mission-directives` executable is used deliberately; `md` is already an all-scope PowerShell alias.
+Persistent alternatives are `pipx install mission-directives` and `python -m pip install --user mission-directives`. Run without persistent installation with `uvx mission-directives --help`; after a pip installation, `python -m mission_directives --help` is also supported. The `mission-directives` executable is used deliberately because `md` is already an all-scope PowerShell alias.
 
 <p align="center">
   <img src="assets/readme/divider.svg" alt="" width="100%" />
@@ -225,8 +228,6 @@ cd site && pnpm run check
 `tools/validate_suite.py` checks structural contracts, deterministic runtime tests, fixture coverage, identity contracts, CI configuration, lock safety, generated artifact reproducibility, and manifest integrity. It does not certify live model quality or external-world outcomes.
 
 Before every broad push, follow the complete ordered checklist in the [GitHub Actions Failure History and Pre-Push Guide](docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md). It records all 30 historical validation failures, their fixes, cross-platform prevention rules, the Node 24 action baseline, and the package/site checks required before a push.
-
-Repository agents read [MEMORY.md](MEMORY.md) before workflow, manifest, release, installer, wrapper, documentation-generation, or publishing changes and append only verified durable lessons after completion.
 
 <p align="center">
   <img src="assets/readme/divider.svg" alt="" width="100%" />

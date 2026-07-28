@@ -58,7 +58,7 @@ output_contract:
   - path: reports/story_fiction_and_narrative_drafting/story_fiction_and_narrative_drafting_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.creative_writing.story-fiction-and-narrative-drafting
 prompt_slug: story-fiction-and-narrative-drafting
 identity_status: permanent

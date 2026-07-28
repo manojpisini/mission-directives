@@ -65,7 +65,7 @@ output_contract:
   - path: reports/osint_entity_timeline_geospatial_and_network_analysis/osint_entity_timeline_geospatial_and_network_analysis_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.osint.osint-entity-timeline-geospatial-and-network-analysis
 prompt_slug: osint-entity-timeline-geospatial-and-network-analysis
 identity_status: permanent

@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.insurance.insurance-fraud-signal-review
 prompt_slug: insurance-fraud-signal-review
 identity_status: permanent

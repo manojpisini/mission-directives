@@ -118,9 +118,11 @@ The durable fix restored the complete lockfile from before the release sweep. Re
 
 Failed run: `30374282771` for tag `v2.0.1`.
 
-The corrected release build passed audits, deterministic tests, evaluations, full validation, distribution build, and installed-package smoke tests. PyPI then rejected the valid GitHub OIDC token with `invalid-publisher` because no matching Trusted Publisher existed for project `mission-directives`, owner `manojpisini`, repository `mission-directives`, workflow `publish.yml`, and environment `pypi`.
+The corrected release build passed audits, deterministic tests, evaluations, full validation, distribution build, and installed-package smoke tests. PyPI initially rejected the valid GitHub OIDC token with `invalid-publisher` because no matching Trusted Publisher existed for project `mission-directives`, owner `manojpisini`, repository `mission-directives`, workflow `publish.yml`, and environment `pypi`. After that account-side publisher was registered, the PyPI job reran successfully and published `2.0.1`.
 
-The independent GitHub release job also failed because it downloaded artifacts without checking out the repository, while `gh release create --verify-tag` attempted `.git`-based repository discovery. The release was recovered from the validated artifacts with an explicit repository target. The durable workflow fix passes `--repo "${{ github.repository }}"`, and its regression test requires that argument.
+The independent GitHub release job failed because it downloaded artifacts without checking out the repository, while `gh release create --verify-tag` attempted `.git`-based repository discovery. Its exact error was `fatal: not a git repository`. Rerunning that tag could not consume a later workflow fix from `main` because tag workflows execute the workflow file stored at the tagged commit. The release was recovered from the validated artifacts with an explicit repository target.
+
+The durable fix uses the default `GITHUB_REPOSITORY` context for every GitHub CLI call and makes publication retry-safe: create a described release when absent, or upload only missing artifacts when a partial release already exists. Regression coverage requires explicit repository selection, release description text, generated notes, and the existing-release path. Metadata and PyPI README corrections therefore ship under a new patch tag rather than attempting to mutate the immutable `2.0.1` package.
 
 ## Required pre-push workflow
 
@@ -174,6 +176,8 @@ Do not push unless every applicable command exits successfully.
 - Keep validation and publication prerequisites aligned; every clean-checkout test path generates body audits before the canonical deterministic runner.
 - Register and verify the exact PyPI Trusted Publisher before pushing the first public tag; repository workflow configuration cannot create the account-side publisher.
 - Pass an explicit repository to GitHub CLI commands in artifact-only jobs that do not check out the repository.
+- Treat tagged workflow source as immutable: a rerun uses the workflow stored at that tag, so workflow corrections require a new tag.
+- Make release publication idempotent so a retry adds only missing assets and preserves an existing release.
 - Keep setup-uv environment activation enabled; do not restore `uv pip install --system`.
 - Test direct Python entry points and Bash/PowerShell wrappers.
 - Keep site implementation, dependencies, tests, generated paths, ignore rules, and documentation synchronized.

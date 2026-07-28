@@ -62,7 +62,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - moodboard_spec
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.creative_strategy.idea-exploration-concept-development-and-moodboard-brief
 prompt_slug: idea-exploration-concept-development-and-moodboard-brief
 identity_status: permanent

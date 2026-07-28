@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.tax_and_finance_advisory.filing-risk-review
 prompt_slug: filing-risk-review
 identity_status: permanent

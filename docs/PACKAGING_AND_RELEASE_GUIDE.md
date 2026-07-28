@@ -26,10 +26,14 @@ The smoke check installs the wheel into a clean environment, initializes a tempo
 
 ## Publication
 
-Tags matching `v*` trigger `.github/workflows/publish.yml`. The workflow validates, builds wheel and sdist, runs the package smoke test, publishes through PyPI Trusted Publishing, and creates a GitHub release with artifacts and SHA-256 checksums.
+Tags matching `v*` trigger `.github/workflows/publish.yml`. The workflow validates, builds wheel and sdist, runs the package smoke test, publishes through PyPI Trusted Publishing, and creates a described GitHub release with artifacts and SHA-256 checksums. The GitHub step is retry-safe: an existing release receives only missing assets.
 
 Before the first release, confirm that the `mission-directives` distribution name is available and create the PyPI Trusted Publisher with project `mission-directives`, GitHub owner `manojpisini`, repository `mission-directives`, workflow `publish.yml`, and environment `pypi`. PyPI must contain this account-side registration before the tag requests an OIDC token. Do not add a long-lived PyPI token.
 
 Artifact-only jobs do not contain `.git`. GitHub CLI release commands therefore pass `--repo "${{ github.repository }}"` instead of relying on repository discovery.
+
+The package is installed persistently with `uv tool install mission-directives`, `pipx install mission-directives`, or `python -m pip install --user mission-directives`. `uvx mission-directives <command>` supports ephemeral execution, and `python -m mission_directives <command>` invokes an installed package without relying on the console-script path.
+
+PyPI reads the image-free `PYPI_README.md` so repository-relative logos and banners cannot render as broken images. Standard package metadata has no project-logo field; PyPI assigns icons to recognized project links instead. The branded README, documentation site, and favicon retain the canonical logo assets.
 
 Commit messages use past-tense declarative form without first-person pronouns, for example `Added packaged runtime validation`.

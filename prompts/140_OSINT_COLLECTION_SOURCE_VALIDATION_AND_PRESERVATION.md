@@ -67,7 +67,7 @@ output_contract:
   - path: reports/osint_collection_source_validation_and_preservation/osint_collection_source_validation_and_preservation_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.osint.osint-collection-source-validation-and-preservation
 prompt_slug: osint-collection-source-validation-and-preservation
 identity_status: permanent

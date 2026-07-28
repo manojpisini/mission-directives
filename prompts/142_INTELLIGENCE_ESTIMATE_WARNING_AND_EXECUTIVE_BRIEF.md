@@ -67,7 +67,7 @@ output_contract:
   - path: reports/intelligence_estimate_warning_and_executive_brief/intelligence_estimate_warning_and_executive_brief_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.intelligence.intelligence-estimate-warning-and-executive-brief
 prompt_slug: intelligence-estimate-warning-and-executive-brief
 identity_status: permanent

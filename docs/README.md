@@ -4,15 +4,21 @@ The documentation library explains how to operate, author, validate, secure, and
 
 ## Essential reading path
 
-1. [User Manual](USER_MANUAL.md)
-2. [Operator Guide](OPERATOR_GUIDE.md)
-3. [Architecture Guide](ARCHITECTURE_GUIDE.md)
-4. [Prompt Body Authoring Guide](PROMPT_BODY_AUTHORING_GUIDE.md)
-5. [Evaluation Manual](EVALUATION_MANUAL.md)
-6. [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md)
-7. [Router Keyword Catalog and Scoring Guide](ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md)
-8. [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md)
-9. [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md)
+1. [Getting Started](GETTING_STARTED.md)
+2. [Installation and Project Integration Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md)
+3. [User Manual](USER_MANUAL.md)
+4. [Operator Guide](OPERATOR_GUIDE.md)
+5. [Architecture Guide](ARCHITECTURE_GUIDE.md)
+6. [Prompt Body Authoring Guide](PROMPT_BODY_AUTHORING_GUIDE.md)
+7. [Evaluation Manual](EVALUATION_MANUAL.md)
+8. [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md)
+9. [Router Keyword Catalog and Scoring Guide](ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md)
+10. [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md)
+11. [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md)
+
+Repository contributors should also read the root [Contributing Guide](../CONTRIBUTING.md).
+
+Install persistently with `uv tool install mission-directives`, `pipx install mission-directives`, or `python -m pip install --user mission-directives`. Use `uvx mission-directives <command>` for one-off execution or `python -m mission_directives <command>` after pip installation.
 
 ## Prompt-body integrity manuals
 
@@ -63,4 +69,4 @@ python tools/validate_suite.py
 `BODY_QUALITY_AUDIT.json` is machine-readable. `BODY_QUALITY_AUDIT.md` is the human summary.
 ## Documentation website
 
-The static Astro site is published at <https://manojpisini.github.io/mission-directives/>. It uses the checked-in landing/documentation shell and generates manual pages from `docs/*.md` before every build. See the [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md).
+The static Astro site is published at <https://manojpisini.github.io/mission-directives/>. Its top-level [Getting Started](https://manojpisini.github.io/mission-directives/getting-started.html), [Installation](https://manojpisini.github.io/mission-directives/installation.html), and [Contributing](https://manojpisini.github.io/mission-directives/contributing.html) pages reuse canonical repository Markdown. See the [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md).

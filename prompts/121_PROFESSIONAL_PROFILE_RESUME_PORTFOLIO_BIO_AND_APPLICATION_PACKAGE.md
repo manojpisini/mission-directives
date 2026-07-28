@@ -62,7 +62,7 @@ output_contract:
   - path: reports/professional_profile_resume_portfolio_bio_and_application_package/professional_profile_resume_portfolio_bio_and_application_package_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.professional_communication.professional-profile-resume-portfolio-bio-and-application-package
 prompt_slug: professional-profile-resume-portfolio-bio-and-application-package
 identity_status: permanent

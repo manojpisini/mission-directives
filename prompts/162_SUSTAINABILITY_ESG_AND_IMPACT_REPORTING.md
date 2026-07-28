@@ -65,7 +65,7 @@ output_contract:
   - path: reports/sustainability_esg_and_impact_reporting/sustainability_esg_and_impact_reporting_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.sustainability.sustainability-esg-and-impact-reporting
 prompt_slug: sustainability-esg-and-impact-reporting
 identity_status: permanent

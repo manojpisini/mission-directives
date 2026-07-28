@@ -57,7 +57,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.strategy.market-user-and-competitive-research
 prompt_slug: market-user-and-competitive-research
 identity_status: permanent

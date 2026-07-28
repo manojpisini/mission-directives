@@ -60,7 +60,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.operations.observability-detection-and-operations-investigation-and-plan
 prompt_slug: observability-detection-and-operations-investigation-and-plan
 identity_status: permanent

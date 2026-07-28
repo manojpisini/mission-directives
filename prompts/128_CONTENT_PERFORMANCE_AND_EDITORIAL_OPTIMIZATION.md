@@ -59,7 +59,7 @@ output_contract:
   - path: reports/content_performance_and_editorial_optimization/content_performance_and_editorial_optimization_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.content_operations.content-performance-and-editorial-optimization
 prompt_slug: content-performance-and-editorial-optimization
 identity_status: permanent

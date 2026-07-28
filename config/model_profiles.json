@@ -91,5 +91,5 @@
     "fabrication_rate",
     "latency_ms_p50"
   ],
-  "suite_version": "2.0.1"
+  "suite_version": "2.0.2"
 }

@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.nonprofit_and_programs.grant-compliance-tracking
 prompt_slug: grant-compliance-tracking
 identity_status: permanent

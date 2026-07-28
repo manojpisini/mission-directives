@@ -73,7 +73,7 @@ output_contract:
   - json
   - docx_spec
   - pdf_spec
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.reporting.board-executive-investor-and-management-reporting
 prompt_slug: board-executive-investor-and-management-reporting
 identity_status: permanent

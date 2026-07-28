@@ -62,7 +62,7 @@ output_contract:
   - path: reports/workforce_strategy_and_capacity_planning/workforce_strategy_and_capacity_planning_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.people.workforce-strategy-and-capacity-planning
 prompt_slug: workforce-strategy-and-capacity-planning
 identity_status: permanent

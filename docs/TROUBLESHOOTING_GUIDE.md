@@ -4,7 +4,7 @@ For the complete GitHub Actions incident history, fixing commits, and required p
 
 ## Command is not found after installation
 
-Confirm the user tool directory is on `PATH` and run `uv tool list`, `pipx list`, or `python -m pip show mission-directives` for the installer used. Reinstall with `uv tool install --force mission-directives` only after confirming the package environment, not inside the target project's pinned runtime.
+Confirm the user tool directory is on `PATH` and run `uv tool list`, `pipx list`, or `python -m pip show mission-directives` for the installer used. `uvx mission-directives --help` can run without persistent installation, while `python -m mission_directives --help` bypasses a missing console-script path after pip installation. Reinstall with `uv tool install --force mission-directives` only after confirming the package environment, not inside the target project's pinned runtime.
 
 ## Project installation is not found
 

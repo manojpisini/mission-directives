@@ -61,7 +61,7 @@ output_contract:
   - path: reports/skill_requirement_and_capability_fit_resolution/skill_requirement_and_capability_fit_resolution_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.auto_orchestration.skill-requirement-and-capability-fit-resolution
 prompt_slug: skill-requirement-and-capability-fit-resolution
 identity_status: permanent

@@ -71,7 +71,7 @@ output_contract:
   - edit_decision_list
   - caption_spec
   - distribution_package
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.media_production.media-production-editing-and-distribution-blueprint
 prompt_slug: media-production-editing-and-distribution-blueprint
 identity_status: permanent

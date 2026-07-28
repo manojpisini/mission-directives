@@ -63,7 +63,7 @@ output_contract:
   - path: reports/interactive_web_artifact_microsite_and_prototype_production/interactive_web_artifact_microsite_and_prototype_production_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.1
+suite_version: 2.0.2
 capability_id: md.web_design.interactive-web-artifact-microsite-and-prototype-production
 prompt_slug: interactive-web-artifact-microsite-and-prototype-production
 identity_status: permanent

@@ -14,7 +14,7 @@ Python 3.11 or newer is required.
 uv tool install mission-directives
 ```
 
-Compatible alternatives are `pipx install mission-directives` and `python -m pip install --user mission-directives`. The package does not claim the `md` executable because PowerShell reserves that name as an alias.
+Compatible persistent alternatives are `pipx install mission-directives` and `python -m pip install --user mission-directives`. Use `uvx mission-directives <command>` for one-off execution without persistent installation, or `python -m mission_directives <command>` after pip installation when the console-script directory is not on `PATH`. The package does not claim the `md` executable because PowerShell reserves that name as an alias.
 
 ## Initialize a project
 
