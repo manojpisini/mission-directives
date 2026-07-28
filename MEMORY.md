@@ -25,6 +25,8 @@ Durable lessons:
 - Repository reorganizations update every test, wrapper, documentation link, generator, and installed path in the same change.
 - Audit artifacts are generated before deterministic tests.
 - Validation and publishing workflows use the same audit, canonical test, evaluation, validation, build, and package-smoke prerequisites; release-only raw pytest paths are prohibited.
+- Artifact-only GitHub release jobs pass `--repo "${{ github.repository }}"` to `gh release create`; downloaded artifacts do not provide a `.git` checkout for repository discovery.
+- PyPI Trusted Publishing must be registered before the first tag with project `mission-directives`, owner `manojpisini`, repository `mission-directives`, workflow `publish.yml`, and environment `pypi`. A valid GitHub OIDC token is insufficient until PyPI has this matching publisher.
 - After all applicable source and site generators, rebuild `MANIFEST.json` before deterministic release tests; finish the chain with `build_manifest.py --check`.
 - CI and wrappers use the activated virtual environment; setup-uv keeps `activate-environment: 'true'` and does not use `uv pip install --system`.
 - Package changes build wheel and sdist, install the built package, and run platform wrappers.
@@ -53,4 +55,4 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File ./tools/validate-suite.ps1
 
 Documentation and site changes also run `pnpm --dir site install --frozen-lockfile` and `pnpm --dir site run check`.
 
-Latest verified validation baseline in this snapshot: run `30372716545` at commit `dd11169` passed Ubuntu, Windows, and macOS. Documentation run `30372716698` for the same commit failed before deployment because of the corrupted lockfile described above.
+Latest verified validation baseline in this snapshot: run `30373869610` at commit `d60f2a8` passed Ubuntu, Windows, and macOS. Documentation run `30373869619` passed and deployed. Release run `30374282771` built and smoke-tested `2.0.1`, then failed because PyPI lacked the matching Trusted Publisher and the artifact-only GitHub job lacked an explicit repository; the GitHub release was recovered manually from the validated run artifacts.

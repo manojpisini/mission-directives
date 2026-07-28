@@ -61,6 +61,7 @@ def test_publish_generates_required_evidence_before_validation():
     positions = [text.index(command) for command in commands]
     assert positions == sorted(positions)
     assert "python -m pytest -q" not in text
+    assert 'gh release create "${{ github.ref_name }}" dist/* --repo "${{ github.repository }}"' in text
 
 
 def test_root_installer_has_bash_and_powershell_launchers():

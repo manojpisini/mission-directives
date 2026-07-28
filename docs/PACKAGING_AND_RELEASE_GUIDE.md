@@ -28,6 +28,8 @@ The smoke check installs the wheel into a clean environment, initializes a tempo
 
 Tags matching `v*` trigger `.github/workflows/publish.yml`. The workflow validates, builds wheel and sdist, runs the package smoke test, publishes through PyPI Trusted Publishing, and creates a GitHub release with artifacts and SHA-256 checksums.
 
-Before the first release, confirm that the `mission-directives` distribution name is available and configure the repository as a trusted publisher in PyPI. Do not add a long-lived PyPI token.
+Before the first release, confirm that the `mission-directives` distribution name is available and create the PyPI Trusted Publisher with project `mission-directives`, GitHub owner `manojpisini`, repository `mission-directives`, workflow `publish.yml`, and environment `pypi`. PyPI must contain this account-side registration before the tag requests an OIDC token. Do not add a long-lived PyPI token.
+
+Artifact-only jobs do not contain `.git`. GitHub CLI release commands therefore pass `--repo "${{ github.repository }}"` instead of relying on repository discovery.
 
 Commit messages use past-tense declarative form without first-person pronouns, for example `Added packaged runtime validation`.

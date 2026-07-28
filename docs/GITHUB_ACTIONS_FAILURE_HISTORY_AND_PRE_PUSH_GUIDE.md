@@ -8,11 +8,11 @@ This guide records every failed GitHub Actions validation run through July 28, 2
 
 | Workflow | Successful | Failed | Current state |
 |---|---:|---:|---|
-| Validate Mission Directives | 14 | 30 | Passing on Ubuntu, Windows, and macOS |
-| Deploy documentation | 9 | 1 | Lockfile correction pending verification |
-| Publish Mission Directives | 0 | 1 | First attempt failed before publication; corrected patch release pending |
+| Validate Mission Directives | 15 | 30 | Passing on Ubuntu, Windows, and macOS |
+| Deploy documentation | 10 | 1 | Passing |
+| Publish Mission Directives | 0 | 2 | Build corrected; PyPI publisher registration pending |
 
-Thirty historical failures belonged to `Validate Mission Directives`. One later failure belonged to documentation deployment, and one belonged to the first `Publish Mission Directives` attempt.
+Thirty historical failures belonged to `Validate Mission Directives`. One later failure belonged to documentation deployment, and two belonged to release publication attempts.
 
 ## Complete failure history
 
@@ -114,6 +114,14 @@ A mechanical `2.0.0` to `2.0.1` replacement changed package versions, peer range
 
 The durable fix restored the complete lockfile from before the release sweep. Release-version edits must target suite-owned metadata only and must exclude package-manager lockfiles. After every release-version change or site dependency edit, run `pnpm --dir site install --frozen-lockfile` before `pnpm --dir site run check`.
 
+### First Trusted Publishing exchange and artifact-only release job
+
+Failed run: `30374282771` for tag `v2.0.1`.
+
+The corrected release build passed audits, deterministic tests, evaluations, full validation, distribution build, and installed-package smoke tests. PyPI then rejected the valid GitHub OIDC token with `invalid-publisher` because no matching Trusted Publisher existed for project `mission-directives`, owner `manojpisini`, repository `mission-directives`, workflow `publish.yml`, and environment `pypi`.
+
+The independent GitHub release job also failed because it downloaded artifacts without checking out the repository, while `gh release create --verify-tag` attempted `.git`-based repository discovery. The release was recovered from the validated artifacts with an explicit repository target. The durable workflow fix passes `--repo "${{ github.repository }}"`, and its regression test requires that argument.
+
 ## Required pre-push workflow
 
 Create and activate the CI-equivalent environment:
@@ -164,6 +172,8 @@ Do not push unless every applicable command exits successfully.
 - Update a generator, committed outputs, tests, manifest, and documentation together.
 - Preserve CI order: environment, dependencies, audits, tests, evaluations, checks, validation, package build, package smoke, wrappers, artifacts.
 - Keep validation and publication prerequisites aligned; every clean-checkout test path generates body audits before the canonical deterministic runner.
+- Register and verify the exact PyPI Trusted Publisher before pushing the first public tag; repository workflow configuration cannot create the account-side publisher.
+- Pass an explicit repository to GitHub CLI commands in artifact-only jobs that do not check out the repository.
 - Keep setup-uv environment activation enabled; do not restore `uv pip install --system`.
 - Test direct Python entry points and Bash/PowerShell wrappers.
 - Keep site implementation, dependencies, tests, generated paths, ignore rules, and documentation synchronized.
