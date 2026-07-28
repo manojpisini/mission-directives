@@ -63,7 +63,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.administration.administrative-operations-travel-scheduling-and-executive-support
 prompt_slug: administrative-operations-travel-scheduling-and-executive-support
 identity_status: permanent

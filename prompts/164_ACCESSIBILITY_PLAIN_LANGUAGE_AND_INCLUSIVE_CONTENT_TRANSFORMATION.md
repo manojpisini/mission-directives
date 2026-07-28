@@ -62,7 +62,7 @@ output_contract:
   - path: reports/accessibility_plain_language_and_inclusive_content_transformation/accessibility_plain_language_and_inclusive_content_transformation_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.accessibility.accessibility-plain-language-and-inclusive-content-transformation
 prompt_slug: accessibility-plain-language-and-inclusive-content-transformation
 identity_status: permanent

@@ -1,5 +1,7 @@
-Copyright (c) 2026 Manoj Pisini
+Mission Directives is dual-licensed under either of the following licenses at
+your option:
 
-All rights reserved until an explicit open-source or commercial license is selected and placed in this file. No permission is granted to copy, modify, redistribute, sublicense, sell, or publicly host this package except with the copyright holder's written authorization. Internal evaluation and backup by the owner are permitted.
+- MIT License (see LICENSE-MIT)
+- Apache License, Version 2.0 (see LICENSE-APACHE)
 
-This conservative default prevents accidental licensing. Replace it deliberately before public distribution.
+SPDX-License-Identifier: MIT OR Apache-2.0

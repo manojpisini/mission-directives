@@ -1,0 +1,59 @@
+name: Publish Mission Directives
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          python-version: '3.12'
+          activate-environment: 'true'
+      - run: uv pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+      - run: python tools/validate_suite.py
+      - run: uv build
+      - run: python tools/package_smoke.py dist
+      - uses: actions/upload-artifact@v6
+        with:
+          name: python-distributions
+          path: dist/*
+          if-no-files-found: error
+
+  publish-pypi:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: python-distributions
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist
+
+  publish-github:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: python-distributions
+          path: dist
+      - run: sha256sum dist/* > dist/SHA256SUMS
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${{ github.ref_name }}" dist/* --verify-tag --generate-notes

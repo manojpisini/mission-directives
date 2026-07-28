@@ -37,3 +37,10 @@ site/.astro/
 prompt_imports/
 infographics/
 infographic/
+blog/
+
+# Python package build output
+dist/
+build/
+*.egg-info/
+src/mission_directives/_runtime/

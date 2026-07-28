@@ -1,7 +1,8 @@
 # Mission Directives Mastery Manual
 
-**Version:** 1.8.3  
-**Audience:** users, operators, prompt authors, maintainers, reviewers, and integrators  
+**Version:** 2.0.0
+
+**Audience:** users, operators, prompt authors, maintainers, reviewers, and integrators
 
 This manual is the authoritative learning path for the suite. Start with [README](../README.md), use the [Template System Guide](TEMPLATE_SYSTEM_GUIDE.md) for artifact routing, and use the [Installation Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md) for project integration.
 
@@ -253,7 +254,7 @@ MD-197 wraps a prompt, scenario, or skill only when a finite queue or measurable
 
 ## 12. Daily TOML Logging
 
-Every suite event appends to `.prompt_suite/logs/YYYY-MM-DD.toml`. Events include run and span IDs, local and UTC timestamps, action, status, duration, prompt or scenario, tool, metrics, context, references, and sanitized error text. Sensitive keys and secret-like values are redacted before serialization. Runtime logs are excluded from the integrity manifest.
+Installed-project events append to `.mission-directives/logs/YYYY-MM-DD.toml`; source-repository validation retains `.prompt_suite/logs` as its internal development path. Events include run and span IDs, timestamps, action, status, duration, prompt or scenario, tool, metrics, context, references, and sanitized errors. Sensitive keys and secret-like values are redacted before serialization.
 
 ### Operator procedure
 
@@ -297,13 +298,13 @@ Canonical behavior lives in Python. Bash and PowerShell wrappers expose equivale
 
 ## 14. Installation
 
-Run `install.sh`, `install.ps1`, or `install.py` with a project path. The installer stages the copy, promotes it to `./prompts`, maintains a `.gitignore` block, keeps `docs/` tracked, creates runtime directories, and synchronizes only AGENTS.md and CLAUDE.md. Existing unmanaged instructions are never overwritten.
+Install the public package, then run `mission-directives init` with a project path. The initializer stages the allowlisted payload, promotes it to `.mission-directives/runtime`, creates Project Config, the independent local site and seven output categories, maintains a `.gitignore` block, and synchronizes only managed AGENTS.md and CLAUDE.md blocks. Existing unmanaged instructions are never overwritten.
 
 ### Operator procedure
 
-1. Run installer with `--dry-run`.
-2. Install or update with an explicit project path.
-3. Verify gitignore markers, tracked docs, guidance blocks, and receipts.
+1. Run `mission-directives init <project> --dry-run`.
+2. Initialize with the chosen tracking mode, or use `upgrade` for an existing 2.0 installation.
+3. Verify the installed layout, Project Config, ignore markers, guidance blocks, and receipts.
 
 ### Verification evidence
 
@@ -319,9 +320,9 @@ Run `install.sh`, `install.ps1`, or `install.py` with a project path. The instal
 
 ### Cleanup and uninstall
 
-Use `cleanup.py`, `cleanup.sh`, or `cleanup.ps1` from the distribution or installed `prompts/` copy. Start with `--dry-run`; review removed and preserved paths; then confirm interactively, use `--yes` for the current preview, or pass the preview's approval token. Cleanup revalidates the installed suite identity, binds approval to the current tree and managed-file hashes, removes only managed text blocks, quarantines managed paths, restores the project if a pre-purge step fails, and preserves nonempty `docs/` or any generic directory not proven to be installer-owned. Destructive purge is a commit boundary: if deletion has already changed quarantine data, cleanup never performs an unsafe partial restoration; it reports a residual quarantine and exits distinctly for operator recovery.
+Use `mission-directives uninstall <project> --dry-run`, review the managed paths, then use `--apply`. Uninstall requires a valid receipt, removes the validated `.mission-directives` tree and managed text blocks, and preserves unrelated project content.
 
-Verify that `prompts/` and `.prompt_suite/` are absent, unmanaged instructions remain byte-equivalent, `.gitignore` no longer contains the managed block, preexisting directories remain, and no `.md-cleanup-*` staging or lock artifact remains. See [Project Cleanup and Uninstall](PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md).
+Verify that `.mission-directives` is absent, unmanaged instructions remain unchanged, `.gitignore` no longer contains the managed block, and preexisting directories remain. See [Project Cleanup and Uninstall](PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md).
 
 ## 15. Daily Operation
 
@@ -580,7 +581,7 @@ A state preventing unverified third-party output from becoming authoritative.
 | Skill | `skill_registry.json` | `check_skill_lock.py` | Is the capability genuinely required and trusted? |
 | Daily log | `.prompt_suite/logs/*.toml` | `tests/test_logging.py` | Are secrets redacted and spans correlated? |
 | Agent guidance | `AGENTS.md / CLAUDE.md` | `tests/test_agent_guidance.py` | Was unmanaged text preserved? |
-| Installation receipt | `.prompt_suite/installation-receipt.json` | `tests/test_installer.py` | Did prompts, ignores, docs, and guidance match policy? |
+| Installation receipt | `.mission-directives/state/installation-receipt.json` | `tests/test_release_paths_installer.py` | Did runtime, outputs, ignores, config, site, and guidance match policy? |
 | Manifest | `MANIFEST.json` | `build_manifest.py --check` | Does a fresh extraction match every hash? |
 
 ## Operational walkthrough 1: Repository research to verified report
@@ -769,12 +770,12 @@ This walkthrough applies the existing Mission Directives contracts to **project 
 
 ### Steps
 
-1. Run the installer with --dry-run and an absolute project path.
-2. Review the copy, ignore, runtime-directory, and guidance actions.
-3. Install to ./prompts through staging.
-4. Verify the managed .gitignore block excludes prompts and internal runtime outputs but not docs.
+1. Run `mission-directives init` with `--dry-run` and an absolute project path.
+2. Review the runtime, site, config, output, ignore, and guidance actions.
+3. Initialize `.mission-directives` through transactional staging.
+4. Verify the managed `.gitignore` block matches the selected tracking mode.
 5. Confirm AGENTS.md and CLAUDE.md preserve unmanaged content.
-6. Run lookup and validation from the installed prompts directory.
+6. Run routing and config validation from the project.
 7. Inspect installation and guidance receipts.
 8. Retain the backup until the updated installation passes.
 
@@ -783,7 +784,7 @@ This walkthrough applies the existing Mission Directives contracts to **project 
 - Installer dry-run JSON and reviewed action list.
 - Pre-install hashes or backups for existing managed files.
 - Post-install tree, `.gitignore` managed block, and guidance synchronization receipt.
-- Validation run executed from `<project>/prompts` and rollback readiness record.
+- Validation run executed through the pinned `<project>/.mission-directives/runtime` and rollback readiness record.
 
 ### Common failure modes
 
@@ -944,4 +945,3 @@ This walkthrough applies the existing Mission Directives contracts to **prompt a
 ## Governed prompt addition
 
 A prompt becomes part of Mission Directives only after identity allocation, canonical normalization, structural source quarantine, routing integration, taxonomy and crosswalk updates, fixtures, deterministic proof, and manifest sealing. Use `MD-199` when an agent must assess overlap or refine the prompt; use `tools/add_prompt.py` when the source and title are already resolved. The implementation stages the complete suite, validates all prompt/template/skill/pack references, regenerates derived artifacts, runs tests by default, and promotes only a verified diff under a short exclusive lock. Full operational details and failure recovery are in [Prompt Addition and Registration Guide](PROMPT_ADDITION_AND_REGISTRATION_GUIDE.md).
-

@@ -9,7 +9,7 @@ if __name__ == "__main__":
     except ImportError:
         from tools.tool_runtime import bootstrap_tool
     _MD_TUI = bootstrap_tool(__file__)
-import json, re
+import json, re, tomllib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,6 +30,20 @@ def check(root: Path = ROOT) -> dict:
     expected_release = f"mission-directives-{version}"
     if (root / "RELEASE_ID").read_text().strip() != expected_release:
         errors.append("RELEASE_ID does not derive from VERSION")
+    about = (root / "src/mission_directives/__about__.py").read_text(encoding="utf-8")
+    package_version = re.search(r'__version__\s*=\s*"([^"]+)"', about)
+    if not package_version or package_version.group(1) != version:
+        errors.append("Python package version does not derive from VERSION")
+    project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))[
+        "project"
+    ]
+    if project.get("name") != "mission-directives":
+        errors.append("pyproject package name is not mission-directives")
+    if project.get("license") != "MIT OR Apache-2.0":
+        errors.append("pyproject license expression is not MIT OR Apache-2.0")
+    for license_name in ("LICENSE-MIT", "LICENSE-APACHE"):
+        if not (root / license_name).is_file():
+            errors.append(f"missing dual-license file: {license_name}")
     for name in ("AGENTS.md", "CLAUDE.md"):
         text = (root / name).read_text(encoding="utf-8")
         if f"Mission Directives **{version}**" not in text:
@@ -47,6 +61,8 @@ def check(root: Path = ROOT) -> dict:
     active_json_mismatches = []
     for path in root.rglob("*.json"):
         rel = path.relative_to(root)
+        if rel.as_posix() == "VALIDATION.json":
+            continue
         if rel.parts[:1] in {("evaluations",), (".prompt_suite",)} or any(
             x in path.parts for x in EXCLUDED_PARTS
         ):

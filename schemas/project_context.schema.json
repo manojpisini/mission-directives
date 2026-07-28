@@ -1,0 +1,427 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/project_context.schema.json",
+  "title": "Mission Directives Project Config",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "revision",
+    "project",
+    "goals",
+    "scope",
+    "stack",
+    "paths",
+    "commands",
+    "constraints",
+    "working_agreements",
+    "current_state",
+    "provenance",
+    "extensions"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "name",
+        "summary",
+        "mission",
+        "stage",
+        "status",
+        "audiences",
+        "owners"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string"
+        },
+        "mission": {
+          "type": "string"
+        },
+        "stage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audiences": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "owners": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "goals": {
+      "type": "object",
+      "required": [
+        "outcomes",
+        "success_criteria",
+        "non_goals"
+      ],
+      "properties": {
+        "outcomes": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "success_criteria": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "non_goals": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "object",
+      "required": [
+        "include",
+        "exclude",
+        "protected_paths"
+      ],
+      "properties": {
+        "include": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "exclude": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "protected_paths": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "stack": {
+      "type": "object",
+      "required": [
+        "languages",
+        "frameworks",
+        "package_managers",
+        "services",
+        "databases",
+        "deployment_targets"
+      ],
+      "properties": {
+        "languages": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "frameworks": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "package_managers": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "services": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "databases": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "deployment_targets": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "paths": {
+      "type": "object",
+      "required": [
+        "source",
+        "tests",
+        "docs",
+        "entrypoints",
+        "generated_outputs"
+      ],
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "tests": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "docs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "entrypoints": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "generated_outputs": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "commands": {
+      "type": "object",
+      "required": [
+        "setup",
+        "development",
+        "test",
+        "lint",
+        "typecheck",
+        "build",
+        "package"
+      ],
+      "properties": {
+        "setup": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "development": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "test": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "lint": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "typecheck": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "build": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "package": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "constraints": {
+      "type": "object",
+      "required": [
+        "security",
+        "privacy",
+        "legal",
+        "compatibility",
+        "performance",
+        "budget"
+      ],
+      "properties": {
+        "security": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "privacy": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "legal": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "compatibility": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "performance": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "budget": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "working_agreements": {
+      "type": "object",
+      "required": [
+        "coding",
+        "testing",
+        "docs",
+        "commit_messages"
+      ],
+      "properties": {
+        "coding": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "testing": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "docs": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "commit_messages": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "current_state": {
+      "type": "object",
+      "required": [
+        "focus",
+        "issues",
+        "decisions",
+        "questions"
+      ],
+      "properties": {
+        "focus": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "issues": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "decisions": {
+          "$ref": "#/$defs/stringArray"
+        },
+        "questions": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "updated",
+        "verified",
+        "source_paths"
+      ],
+      "properties": {
+        "updated": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verified": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_paths": {
+          "$ref": "#/$defs/stringArray"
+        }
+      },
+      "additionalProperties": false
+    },
+    "extensions": {
+      "type": "object",
+      "properties": {
+        "detection": {
+          "type": "object",
+          "required": [
+            "manifests",
+            "ecosystems",
+            "package_managers"
+          ],
+          "properties": {
+            "manifests": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "kind",
+                  "path",
+                  "directory",
+                  "name",
+                  "summary",
+                  "ecosystem",
+                  "package_manager",
+                  "scripts",
+                  "dependencies"
+                ],
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "pyproject.toml",
+                      "requirements.txt",
+                      "requirements-dev.txt",
+                      "requirements-runtime.txt",
+                      "setup.py",
+                      "setup.cfg",
+                      "package.json",
+                      "Cargo.toml",
+                      "go.mod",
+                      "pom.xml",
+                      "build.gradle",
+                      "build.gradle.kts",
+                      "Gemfile",
+                      "composer.json"
+                    ]
+                  },
+                  "path": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "directory": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "name": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "summary": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "ecosystem": {
+                    "enum": [
+                      "python",
+                      "node",
+                      "rust",
+                      "go",
+                      "java",
+                      "ruby",
+                      "php"
+                    ]
+                  },
+                  "package_manager": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "scripts": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  },
+                  "dependencies": {
+                    "$ref": "#/$defs/stringArray"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "ecosystems": {
+              "$ref": "#/$defs/stringArray"
+            },
+            "package_managers": {
+              "$ref": "#/$defs/stringArray"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

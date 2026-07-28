@@ -69,7 +69,7 @@ output_contract:
   - carousel_spec
   - short_video_spec
   - community_plan
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.content_operations.social-media-short-form-and-community-content-production
 prompt_slug: social-media-short-form-and-community-content-production
 identity_status: permanent

@@ -4,7 +4,7 @@
   <rect width="1000" height="360" rx="24" fill="#fffdf9"/>
   <rect x="1" y="1" width="998" height="358" rx="24" fill="none" stroke="#d9dfd2"/>
   <text x="48" y="58" fill="#1d201b" font-family="-apple-system, Segoe UI, sans-serif" font-size="24" font-weight="750">Repository inventory</text>
-  <text x="48" y="84" fill="#667064" font-family="-apple-system, Segoe UI, sans-serif" font-size="14">Current release 1.8.3 surfaces, shown with a zero-baseline horizontal scale.</text>
+  <text x="48" y="84" fill="#667064" font-family="-apple-system, Segoe UI, sans-serif" font-size="14">Current release 2.0.0 surfaces, shown with a zero-baseline horizontal scale.</text>
   <g font-family="-apple-system, Segoe UI, sans-serif" font-size="14">
     <g transform="translate(48 122)"><text x="0" y="20" fill="#394038" font-weight="700">Canonical prompts</text><rect x="210" y="4" width="640" height="20" rx="4" fill="#e7eee2"/><rect x="210" y="4" width="640" height="20" rx="4" fill="#5f7b51"/><text x="875" y="20" fill="#1d201b" font-weight="800">257</text></g>
     <g transform="translate(48 166)"><text x="0" y="20" fill="#394038" font-weight="700">Atomic routes</text><rect x="210" y="4" width="640" height="20" rx="4" fill="#e7eee2"/><rect x="210" y="4" width="640" height="20" rx="4" fill="#7f956f"/><text x="875" y="20" fill="#1d201b" font-weight="800">257</text></g>

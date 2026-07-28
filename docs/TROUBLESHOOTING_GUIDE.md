@@ -1,5 +1,29 @@
 # Troubleshooting Guide
 
+## Command is not found after installation
+
+Confirm the user tool directory is on `PATH` and run `uv tool list`, `pipx list`, or `python -m pip show mission-directives` for the installer used. Reinstall with `uv tool install --force mission-directives` only after confirming the package environment, not inside the target project's pinned runtime.
+
+## Project installation is not found
+
+Run the command from the project or any subdirectory containing an ancestor `.mission-directives/config.json`. Otherwise pass the project path to `mission-directives init`, `upgrade`, `migrate`, or `uninstall`.
+
+## Project Config fails validation
+
+Run `mission-directives config validate` for the bounded error. Unknown top-level fields and secret-like keys are prohibited. Keep custom data under namespaced `extensions` fields and reference environment-variable names instead of secret values.
+
+## Project Config save reports a stale revision
+
+Another process changed `.mission-directives/project.json` after the Settings page loaded. Refresh the page, review the newer value, and apply the edit again. Do not bypass the revision check.
+
+## Viewer does not open
+
+Run `mission-directives view --no-open` and open the printed loopback URL. If a fixed port is occupied, omit `--port` so the server selects an available port. LAN binding is intentionally unsupported.
+
+## Migration preserved an old directory
+
+Migration moves only paths proven by a managed receipt or marker. An unmarked directory is preserved deliberately; inspect it separately rather than treating its name as ownership evidence.
+
 ## Route selects too many prompts
 
 Check whether the outcome names one primary artifact. Remove broad department language, state exclusions, and clarify authority. A department pack is a discovery surface, not an execution request.

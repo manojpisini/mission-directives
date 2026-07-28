@@ -1,5 +1,5 @@
 {
-  "suite_version": "1.8.3",
+  "suite_version": "2.0.0",
   "policy_id": "MD-TEMPLATE-ROUTING-1",
   "default_behavior": "resolve_and_apply_all_declared_routes",
   "rules": [

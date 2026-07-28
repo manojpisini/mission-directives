@@ -1,0 +1,155 @@
+{
+  "schema_version": "3",
+  "revision": 0,
+  "project": {
+    "name": "example",
+    "summary": "example",
+    "mission": "example",
+    "stage": "example",
+    "status": "example",
+    "audiences": [
+      "example"
+    ],
+    "owners": [
+      "example"
+    ]
+  },
+  "goals": {
+    "outcomes": [
+      "example"
+    ],
+    "success_criteria": [
+      "example"
+    ],
+    "non_goals": [
+      "example"
+    ]
+  },
+  "scope": {
+    "include": [
+      "example"
+    ],
+    "exclude": [
+      "example"
+    ],
+    "protected_paths": [
+      "example"
+    ]
+  },
+  "stack": {
+    "languages": [
+      "example"
+    ],
+    "frameworks": [
+      "example"
+    ],
+    "package_managers": [
+      "example"
+    ],
+    "services": [
+      "example"
+    ],
+    "databases": [
+      "example"
+    ],
+    "deployment_targets": [
+      "example"
+    ]
+  },
+  "paths": {
+    "source": [
+      "example"
+    ],
+    "tests": [
+      "example"
+    ],
+    "docs": [
+      "example"
+    ],
+    "entrypoints": [
+      "example"
+    ],
+    "generated_outputs": [
+      "example"
+    ]
+  },
+  "commands": {
+    "setup": [
+      "example"
+    ],
+    "development": [
+      "example"
+    ],
+    "test": [
+      "example"
+    ],
+    "lint": [
+      "example"
+    ],
+    "typecheck": [
+      "example"
+    ],
+    "build": [
+      "example"
+    ],
+    "package": [
+      "example"
+    ]
+  },
+  "constraints": {
+    "security": [
+      "example"
+    ],
+    "privacy": [
+      "example"
+    ],
+    "legal": [
+      "example"
+    ],
+    "compatibility": [
+      "example"
+    ],
+    "performance": [
+      "example"
+    ],
+    "budget": [
+      "example"
+    ]
+  },
+  "working_agreements": {
+    "coding": [
+      "example"
+    ],
+    "testing": [
+      "example"
+    ],
+    "docs": [
+      "example"
+    ],
+    "commit_messages": [
+      "example"
+    ]
+  },
+  "current_state": {
+    "focus": [
+      "example"
+    ],
+    "issues": [
+      "example"
+    ],
+    "decisions": [
+      "example"
+    ],
+    "questions": [
+      "example"
+    ]
+  },
+  "provenance": {
+    "updated": "example",
+    "verified": "example",
+    "source_paths": [
+      "example"
+    ]
+  },
+  "extensions": {}
+}

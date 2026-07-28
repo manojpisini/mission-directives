@@ -58,7 +58,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.agentic.agent-evaluation-drift-cost-and-rate-governance
 prompt_slug: agent-evaluation-drift-cost-and-rate-governance
 identity_status: permanent

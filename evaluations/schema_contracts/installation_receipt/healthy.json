@@ -1,20 +1,21 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "status": "installed",
+  "created_by": "mission-directives",
   "project_root": "example",
-  "suite_destination": "prompts",
-  "suite_version": "1.8.3",
-  "payload_profile": "runtime",
-  "installed_file_count": 314,
-  "gitignore_entries": [
-    "example"
+  "suite_destination": ".mission-directives/runtime",
+  "suite_version": "2.0.0",
+  "tracking_mode": "ignored",
+  "output_root": ".mission-directives",
+  "output_directories": [
+    "results",
+    "reports",
+    "artifacts",
+    "plans",
+    "outputs",
+    "docs",
+    "logs"
   ],
-  "docs_ignored": false,
-  "installed_at": "2026-07-15T00:00:00Z",
-  "created_directories": [
-    ".prompt_suite"
-  ],
-  "preexisting_project_files": [
-    ".gitignore"
-  ]
+  "guidance": {},
+  "installed_at": "2026-07-15T00:00:00Z"
 }

@@ -36,7 +36,7 @@ Telemetry makes routing, execution, verification, failure, and improvement obser
 ## Recording metrics
 
 ```bash
-python tools/md.py record-metrics .prompt_suite/runs/run.json \
+python .mission-directives/runtime/tools/md.py record-metrics .mission-directives/state/runs/run.json \
   --input-tokens 12000 \
   --output-tokens 2400 \
   --external-calls 8 \

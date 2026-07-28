@@ -63,7 +63,7 @@ output_contract:
   - path: reports/prompt_repair_refactoring_and_failure_resolution/prompt_repair_refactoring_and_failure_resolution_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.prompt_engineering.prompt-repair-refactoring-and-failure-resolution
 prompt_slug: prompt-repair-refactoring-and-failure-resolution
 identity_status: permanent

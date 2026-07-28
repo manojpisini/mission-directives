@@ -71,7 +71,7 @@ output_contract:
   - json
   - docx_spec
   - pdf_spec
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.reporting.meeting-intelligence-decision-capture-and-follow-through
 prompt_slug: meeting-intelligence-decision-capture-and-follow-through
 identity_status: permanent

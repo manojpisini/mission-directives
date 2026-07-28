@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.nonprofit_and_programs.field-program-monitoring
 prompt_slug: field-program-monitoring
 identity_status: permanent

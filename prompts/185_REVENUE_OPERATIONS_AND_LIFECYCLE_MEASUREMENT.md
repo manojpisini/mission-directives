@@ -68,7 +68,7 @@ output_contract:
   - json
   - xlsx_spec
   - chart_spec
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.revenue_operations.revenue-operations-and-lifecycle-measurement
 prompt_slug: revenue-operations-and-lifecycle-measurement
 identity_status: permanent

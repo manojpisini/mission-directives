@@ -57,7 +57,7 @@ output_contract:
   - path: artifacts/fiction_world_character_and_narrative_design/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.creative_writing.fiction-world-character-and-narrative-design
 prompt_slug: fiction-world-character-and-narrative-design
 identity_status: permanent

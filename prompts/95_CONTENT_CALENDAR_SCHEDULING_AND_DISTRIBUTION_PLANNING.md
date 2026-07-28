@@ -61,7 +61,7 @@ output_contract:
   - markdown
   - csv
   - calendar_spec
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.content_operations.content-calendar-scheduling-and-distribution-planning
 prompt_slug: content-calendar-scheduling-and-distribution-planning
 identity_status: permanent

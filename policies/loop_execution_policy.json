@@ -40,5 +40,5 @@
   ],
   "verification_rule": "A target score never substitutes for independent verification, and verification never substitutes for an unmet declared threshold.",
   "queue_rule": "Each queue item receives its own artifact identity, acceptance record, and residual state.",
-  "suite_version": "1.8.3"
+  "suite_version": "2.0.0"
 }

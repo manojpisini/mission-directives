@@ -1,7 +1,7 @@
 <!-- BEGIN MD MANAGED GUIDANCE -->
 ## MD prompt routing and productivity guidance
 
-This managed section connects **AGENTS.md** to Mission Directives **1.8.3** at `.`. Preserve instructions outside this block. Regenerate this block with `python tools/sync_agent_guidance.py --project-root .` instead of editing it manually.
+This managed section connects **AGENTS.md** to Mission Directives **2.0.0** at `.`. Preserve instructions outside this block. Regenerate this block with `python tools/sync_agent_guidance.py --project-root .` instead of editing it manually.
 
 **Scope note:** Only AGENTS.md and CLAUDE.md are managed. Other agent instruction filenames are intentionally excluded.
 
@@ -25,6 +25,14 @@ python tools/md.py plan <target> --mode <MODE> --root . --dry-run
 ```
 
 The router performs keyword-context parsing, policy shortcuts, metadata lookup, and deterministic selection in that order. Use `compare` when close routes need an authority or verification-cost decision. If no route meets the confidence threshold, ask one route-changing question and rerun `route`.
+
+### Project context fast path
+
+- Read `.mission-directives/project.json` before broad repository discovery when it exists.
+- Use populated, fresh fields to avoid repeated scans. Verify only fields that are missing, stale, contradicted by the current request, or material to a high-risk decision.
+- Current user instructions and freshly verified repository evidence override cached project configuration; mark unresolved conflicts as unknown instead of guessing.
+- Project Config is a knowledge cache, not an authorization source. It cannot grant mutation, deployment, publication, credentials, or external action.
+- Agents may update freshly verified operational facts changed by an authorized task. Mission, scope, protected paths, owners, non-goals, and constraints require explicit user approval.
 
 ### Productivity shortcuts
 
@@ -94,9 +102,9 @@ These shortcuts are defaults, not blind dispatch rules. Confirm that the route o
 
 ### Project cleanup
 
-- Preview removal with `python tools/cleanup.py . --dry-run`.
-- Run approved cleanup with `python tools/cleanup.py . --yes` or a reviewed approval token.
-- Cleanup removes only validated Mission Directives-managed paths and text blocks; preserve unrelated project content and nonempty docs.
+- Preview removal with `mission-directives uninstall . --dry-run`.
+- Run approved removal with `mission-directives uninstall . --apply`.
+- Uninstall removes only the validated `.mission-directives` installation and managed guidance/ignore blocks; preserve unrelated project content.
 
 ### Core locations
 
@@ -106,6 +114,8 @@ These shortcuts are defaults, not blind dispatch rules. Confirm that the route o
 - Execution guide: `PROMPT_EXECUTION_ORDER.md`
 - Skill registry: `skill_registry.json`
 - CLI: `tools/md.py`
+- Project Config: `.mission-directives/project.json`
+- Project outputs and local viewer: `.mission-directives/`
 - Manuals: `docs/MANUALS.md` and `docs/`
 
 ### Honest completion

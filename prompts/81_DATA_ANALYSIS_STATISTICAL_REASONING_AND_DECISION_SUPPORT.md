@@ -63,7 +63,7 @@ output_contract:
   - json
   - csv
   - chart_spec
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.analytics.data-analysis-statistical-reasoning-and-decision-support
 prompt_slug: data-analysis-statistical-reasoning-and-decision-support
 identity_status: permanent

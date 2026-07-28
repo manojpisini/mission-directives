@@ -2,117 +2,105 @@
 
 ## Purpose
 
-This guide explains how to install the lean execution runtime into an existing project without overwriting human-authored instructions. The installed runtime lives at `./prompts`; source-only tests, evaluations, import tooling, CI, and site assets remain in the Mission Directives repository.
+Mission Directives 2.0 installs a global command and a pinned, project-specific runtime. The global package provides lifecycle commands. Routing inside an initialized project uses `./.mission-directives/runtime`, so a later global upgrade cannot silently change that project's prompt behavior.
 
-The exact boundary is declared by `config/runtime_payload.json` and explained in the [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md).
+The runtime boundary is declared by `config/runtime_payload.json`. Repository tests, evaluations, CI configuration, release tooling, and the Astro documentation site remain source-only.
 
-## Requirements
+## Install the command
 
-Install the runtime dependency set in the environment that will invoke the installed tools:
-
-```bash
-python -m pip install -r requirements-runtime.txt
-```
-
-Repository contributors use `requirements-dev.txt` instead.
-
-## Quick installation
-
-Always inspect the dry run first.
-
-### Linux or macOS
+Python 3.11 or newer is required.
 
 ```bash
-./install.sh /absolute/path/to/project --dry-run
-./install.sh /absolute/path/to/project
+uv tool install mission-directives
 ```
 
-### Windows PowerShell 7
+Compatible alternatives are `pipx install mission-directives` and `python -m pip install --user mission-directives`. The package does not claim the `md` executable because PowerShell reserves that name as an alias.
 
-```powershell
-./install.ps1 -ProjectPath 'C:\path\to\project' -DryRun
-./install.ps1 -ProjectPath 'C:\path\to\project'
-```
-
-### Portable Python
+## Initialize a project
 
 ```bash
-python tools/install.py /absolute/path/to/project --dry-run
-python tools/install.py /absolute/path/to/project
+cd /path/to/project
+mission-directives init --tracking ignored
 ```
 
-Use `--replace` only when updating an existing installation.
-
-## Runtime payload
-
-The installer includes all files needed to route, inspect, plan, execute, verify runtime contracts, resolve templates and skills, synchronize agent guidance, log, and uninstall. This includes catalogs, prompts, scenarios, compatibility maps, configuration, examples, integrations, policies, schemas, templates, selected runtime tools, and `requirements-runtime.txt`.
-
-The following remain source-only:
-
-- `.github/`;
-- `tests/`;
-- `evaluations/`;
-- `site/`;
-- prompt authoring/import tools;
-- repository audit, validation, test, evaluation, and manifest tools;
-- `requirements-dev.txt`.
-
-This is an allowlist, not a repository copy with ignore rules. New source directories cannot silently bloat future installations.
-
-## Exact effects
-
-1. Validates the project path and rejects overlap with the suite source.
-2. Loads and validates `config/runtime_payload.json`.
-3. Stages only the declared runtime files and verifies the staged tree.
-4. Promotes the payload to `<project>/prompts`.
-5. Adds one managed block to `<project>/.gitignore`.
-6. Keeps `<project>/docs` tracked and creates runtime-owned directories when absent.
-7. Creates or updates only `AGENTS.md` and `CLAUDE.md` using managed markers.
-8. Preserves all content outside managed markers.
-9. Writes installation and guidance receipts under `<project>/.prompt_suite/`.
-10. Restores the prior suite and project files if a post-promotion step fails.
-
-## Receipt
-
-A successful installation receipt records the runtime profile, installed file count, suite version, destination, backup path, created runtime directories, preexisting project files, guidance result, and UTC timestamp. It validates against `schemas/installation_receipt.schema.json`.
-
-The dry-run response also lists repository-only exclusions.
-
-## Reinstallation and rollback
-
-When `./prompts` already exists, the installer fails closed unless `--replace` is supplied. Replacement first renames the old copy to `.md-prompts-backup-<timestamp>-<uuid>`. A post-promotion failure removes the failed runtime, restores the backup, and restores preserved project files.
-
-Review and delete backups only after the installed runtime passes its smoke checks.
-
-## Skill directories
-
-Mission Directives resolves global skill directories by application and platform through `prompts/compatibility/agent_skill_paths.json`:
-
-- `.agents`: `%USERPROFILE%\.agents\skills` on Windows, `$HOME/.agents/skills` on Linux and macOS;
-- Claude Code: `%USERPROFILE%\.claude\skills` on Windows, `$HOME/.claude/skills` on Linux and macOS;
-- OpenCode: `%USERPROFILE%\.config\opencode\skills` on Windows, `${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills` on Linux and macOS.
-
-Environment overrides `MD_AGENTS_SKILLS_DIR`, `MD_CLAUDE_SKILLS_DIR`, and `MD_OPENCODE_SKILLS_DIR` take precedence.
-
-## Installed-runtime verification
+An explicit destination is also accepted:
 
 ```bash
-python <project>/prompts/tools/md.py route "MD cleanup dead code safely"
-python <project>/prompts/tools/md.py explain C-25
-python <project>/prompts/tools/md.py plan C-25 --mode AUDIT_ONLY --root <project> --dry-run
+mission-directives init /path/to/project --tracking outputs
 ```
 
-Confirm:
+Initialization is transactional. It stages the allowlisted payload, verifies it, promotes it to `.mission-directives/runtime`, creates Project Config and the local viewer, updates only managed `AGENTS.md`, `CLAUDE.md`, and `.gitignore` blocks, and rolls back the complete transaction on failure.
 
-- `payload_profile` is `runtime`;
-- `installed_file_count` is positive;
-- `config/router_keywords.json` and runtime schemas exist;
-- source-only paths are absent;
-- `.gitignore` does not ignore project `docs/`;
-- `AGENTS.md` and `CLAUDE.md` contain exactly one managed guidance block.
+## Installed layout
 
-Repository validators such as `validate_suite.py` and `build_manifest.py` intentionally remain upstream; run them in the Mission Directives source repository.
+```text
+.mission-directives/
+|-- runtime/          pinned prompts, catalogs, schemas, policies, and tools
+|-- site/             independent local viewer templates and static files
+|-- results/
+|-- reports/
+|-- artifacts/
+|-- plans/
+|-- outputs/
+|-- docs/
+|-- logs/
+|-- state/            receipts, backups, locks, and local viewer state
+|-- project.json      agent-facing Project Config
+`-- config.json       installation and viewer settings
+```
 
-## Removing an installation
+The repository Astro `site/` is not installed. The project viewer has independent package assets copied into `.mission-directives/site`.
 
-Use the [Project Cleanup and Uninstall Guide](PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md) for the approval-bound inverse workflow. It removes only validated Mission Directives-managed paths and text blocks while preserving unrelated project content.
+## Tracking modes
+
+- `ignored`: ignores the complete `.mission-directives` tree.
+- `outputs`: tracks `project.json` and the seven output categories; ignores runtime, site, system config, and state.
+- `all`: tracks runtime, site, configs, and output categories; still ignores transient state, locks, caches, and tokens.
+
+Change the mode from the viewer Settings page. The explicit confirmation is required because the managed `.gitignore` block changes.
+
+## Project Config
+
+Initialization performs a bounded scan of standard manifests and writes confirmed facts to `.mission-directives/project.json`. Uncertain fields remain empty. Validate or refresh it with:
+
+```bash
+mission-directives config show
+mission-directives config validate
+mission-directives config refresh --dry-run
+mission-directives config refresh --apply
+mission-directives config open
+```
+
+Refresh preserves user-authored mission, goals, exclusions, constraints, and ownership. See [Project Config Guide](PROJECT_CONFIG_GUIDE.md).
+
+## Routing and outputs
+
+```bash
+mission-directives route "MD cleanup dead code safely"
+mission-directives explain C-25
+mission-directives plan C-25 --mode AUDIT_ONLY --root . --dry-run
+```
+
+The launcher sets the installed project root and artifact root before dispatching to the pinned router. Existing logical output paths under `results/`, `reports/`, `artifacts/`, `plans/`, `outputs/`, `docs/`, and `logs/` therefore resolve under `.mission-directives` without changing prompt output contracts.
+
+## Upgrade and migration
+
+```bash
+mission-directives upgrade /path/to/project --dry-run
+mission-directives upgrade /path/to/project
+mission-directives migrate /path/to/project --dry-run
+mission-directives migrate /path/to/project --apply
+```
+
+Upgrade preserves Project Config and outputs. Migration recognizes only managed legacy receipts and markers, previews each move, preserves unmarked project content, and removes old managed paths only after verified promotion. See [Migration Guide](MIGRATION_GUIDE.md).
+
+## Verification and removal
+
+```bash
+mission-directives config validate
+mission-directives route "MD explain this project"
+mission-directives view --no-open
+mission-directives uninstall /path/to/project --dry-run
+```
+
+Use `mission-directives uninstall /path/to/project --apply` only after reviewing the preview. The uninstaller removes the validated `.mission-directives` installation and managed text blocks while preserving unrelated files.

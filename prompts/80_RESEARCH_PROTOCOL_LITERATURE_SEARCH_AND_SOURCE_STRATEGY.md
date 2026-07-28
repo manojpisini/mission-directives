@@ -57,7 +57,7 @@ output_contract:
   - path: artifacts/research_protocol_literature_search_and_source_strategy/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.research.research-protocol-literature-search-and-source-strategy
 prompt_slug: research-protocol-literature-search-and-source-strategy
 identity_status: permanent

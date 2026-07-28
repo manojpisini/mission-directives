@@ -55,10 +55,10 @@ A low-confidence route is not automatically wrong, but any unresolved question t
 ## Planning
 
 ```bash
-python tools/md.py plan C-63 \
+mission-directives plan C-63 \
   --mode DRAFT_ONLY \
   --root . \
-  --out .prompt_suite/runs/feature.json
+  --out .mission-directives/state/runs/feature.json
 ```
 
 Use `--dry-run` to simulate state transitions without writing the manifest.

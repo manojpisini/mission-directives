@@ -60,7 +60,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.audit.repository-mission-promise-deviation-bloat-and-simplification-audit
 prompt_slug: repository-mission-promise-deviation-bloat-and-simplification-audit
 identity_status: permanent

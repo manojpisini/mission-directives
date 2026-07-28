@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.construction.contractor-bid-comparison
 prompt_slug: contractor-bid-comparison
 identity_status: permanent

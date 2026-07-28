@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.hospitality_and_travel.event-hospitality-checklist
 prompt_slug: event-hospitality-checklist
 identity_status: permanent

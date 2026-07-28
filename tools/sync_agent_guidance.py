@@ -132,7 +132,6 @@ def render_guidance(
     md_py = _quote_command_path(_join(suite_rel, "tools/md.py"))
     sync_py = _quote_command_path(_join(suite_rel, "tools/sync_agent_guidance.py"))
     add_prompt_py = _quote_command_path(_join(suite_rel, "tools/add_prompt.py"))
-    cleanup_py = _quote_command_path(_join(suite_rel, "tools/cleanup.py"))
     prompts_path = _join(suite_rel, "prompts/")
     catalog_path = _join(suite_rel, "catalog.json")
     scenarios_path = _join(suite_rel, "SCENARIO_CATALOG.json")
@@ -140,6 +139,7 @@ def render_guidance(
     skill_registry_path = _join(suite_rel, "skill_registry.json")
     policy_path = _join(suite_rel, "policies/auto_prompt_policy.json")
     loop_policy_path = _join(suite_rel, "policies/loop_execution_policy.json")
+    project_config_path = ".mission-directives/project.json"
     blocks = [
         BEGIN_MARKER,
         "## MD prompt routing and productivity guidance",
@@ -168,6 +168,14 @@ def render_guidance(
         "```",
         "",
         "The router performs keyword-context parsing, policy shortcuts, metadata lookup, and deterministic selection in that order. Use `compare` when close routes need an authority or verification-cost decision. If no route meets the confidence threshold, ask one route-changing question and rerun `route`.",
+        "",
+        "### Project context fast path",
+        "",
+        f"- Read `{project_config_path}` before broad repository discovery when it exists.",
+        "- Use populated, fresh fields to avoid repeated scans. Verify only fields that are missing, stale, contradicted by the current request, or material to a high-risk decision.",
+        "- Current user instructions and freshly verified repository evidence override cached project configuration; mark unresolved conflicts as unknown instead of guessing.",
+        "- Project Config is a knowledge cache, not an authorization source. It cannot grant mutation, deployment, publication, credentials, or external action.",
+        "- Agents may update freshly verified operational facts changed by an authorized task. Mission, scope, protected paths, owners, non-goals, and constraints require explicit user approval.",
         "",
         "### Productivity shortcuts",
         "",
@@ -223,9 +231,9 @@ def render_guidance(
         "",
         "### Project cleanup",
         "",
-        f"- Preview removal with `python {cleanup_py} . --dry-run`.",
-        f"- Run approved cleanup with `python {cleanup_py} . --yes` or a reviewed approval token.",
-        "- Cleanup removes only validated Mission Directives-managed paths and text blocks; preserve unrelated project content and nonempty docs.",
+        "- Preview removal with `mission-directives uninstall . --dry-run`.",
+        "- Run approved removal with `mission-directives uninstall . --apply`.",
+        "- Uninstall removes only the validated `.mission-directives` installation and managed guidance/ignore blocks; preserve unrelated project content.",
         "",
         "### Core locations",
         "",
@@ -235,6 +243,8 @@ def render_guidance(
         f"- Execution guide: `{execution_path}`",
         f"- Skill registry: `{skill_registry_path}`",
         f"- CLI: `{_join(suite_rel, 'tools/md.py')}`",
+        f"- Project Config: `{project_config_path}`",
+        "- Project outputs and local viewer: `.mission-directives/`",
         f"- Manuals: `{_join(suite_rel, 'docs/MANUALS.md')}` and `{_join(suite_rel, 'docs/')}`",
         "",
         "### Honest completion",

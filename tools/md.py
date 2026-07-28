@@ -1218,6 +1218,7 @@ def plan(
         + "-"
         + uuid.uuid4().hex[:12]
     )
+    project_root = Path(root).resolve()
     manifest = {
         "schema_version": "1.0",
         "suite_version": CAT.get("suite_version"),
@@ -1226,7 +1227,7 @@ def plan(
         "target": target,
         "title": e["title"],
         "mode": mode,
-        "project_root": str(Path(root).resolve()),
+        "project_root": str(project_root),
         "assurance_profile": ap,
         "state": "configured",
         "selected_prompts": prompts,
@@ -1251,12 +1252,35 @@ def plan(
         "dry_run": dry_run,
         "simulated_transitions": simulated_states(r, mode) if dry_run else [],
     }
+    project_config = project_root / ".mission-directives/project.json"
+    if project_config.is_file():
+        raw = project_config.read_bytes()
+        profile = json.loads(raw.decode("utf-8"))
+        stale_fields = []
+        provenance = profile.get("provenance", {})
+        if not provenance.get("verified"):
+            stale_fields.append("provenance.verified")
+        manifest["project_context"] = {
+            "path": project_config.relative_to(project_root).as_posix(),
+            "revision": int(profile.get("revision", 0)),
+            "content_hash": hashlib.sha256(raw).hexdigest(),
+            "loaded_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            "stale_fields": stale_fields,
+        }
     if len(prompts) > budget_prompts:
         manifest["budget_warning"] = (
             f"{len(prompts)} prompts exceed budget {budget_prompts}; compile a smaller graph."
         )
     if out and not dry_run:
-        p = ensure_no_symlink_components(Path(out))
+        raw_output = Path(out)
+        if not raw_output.is_absolute() and raw_output.parts:
+            try:
+                from project_runtime import OUTPUT_CATEGORIES, artifact_path
+            except ImportError:
+                from tools.project_runtime import OUTPUT_CATEGORIES, artifact_path
+            if raw_output.parts[0] in OUTPUT_CATEGORIES:
+                raw_output = artifact_path(raw_output, project_root)
+        p = ensure_no_symlink_components(raw_output)
         atomic_write_json(p, manifest)
     return manifest
 

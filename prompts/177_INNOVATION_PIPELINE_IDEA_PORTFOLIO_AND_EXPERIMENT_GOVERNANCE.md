@@ -62,7 +62,7 @@ output_contract:
   - path: reports/innovation_pipeline_idea_portfolio_and_experiment_governance/innovation_pipeline_idea_portfolio_and_experiment_governance_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.innovation.innovation-pipeline-idea-portfolio-and-experiment-governance
 prompt_slug: innovation-pipeline-idea-portfolio-and-experiment-governance
 identity_status: permanent

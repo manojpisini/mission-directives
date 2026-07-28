@@ -64,7 +64,7 @@ output_contract:
   - path: reports/product_discovery_strategy_roadmap_and_lifecycle/product_discovery_strategy_roadmap_and_lifecycle_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.product.product-discovery-strategy-roadmap-and-lifecycle
 prompt_slug: product-discovery-strategy-roadmap-and-lifecycle
 identity_status: permanent

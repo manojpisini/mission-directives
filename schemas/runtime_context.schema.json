@@ -23,6 +23,41 @@
       "type": "string",
       "minLength": 1
     },
+    "project_context": {
+      "type": "object",
+      "required": [
+        "path",
+        "revision",
+        "content_hash",
+        "loaded_at",
+        "stale_fields"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "content_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "loaded_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "stale_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
     "outcome": {
       "type": "string",
       "minLength": 1

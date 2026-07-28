@@ -67,7 +67,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.automation.business-process-automation-and-workflow-design
 prompt_slug: business-process-automation-and-workflow-design
 identity_status: permanent

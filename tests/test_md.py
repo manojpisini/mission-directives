@@ -14,6 +14,14 @@ def test_plan_dry_run_does_not_write(tmp_path):
  p=tmp_path/'run.json'; out=md.plan('C-63',mode='DRAFT_ONLY',out=str(p),dry_run=True)
  assert not p.exists() and out['simulated_transitions'][-1]=='closed'
 
+def test_plan_resolves_logical_output_under_installed_artifact_root(tmp_path):
+ runtime=tmp_path/'.mission-directives'; runtime.mkdir()
+ (runtime/'config.json').write_text('{}',encoding='utf-8')
+ (runtime/'project.json').write_text(json.dumps({'revision':2,'provenance':{'verified':'2026-07-28T00:00:00Z'}}),encoding='utf-8')
+ out=md.plan('C-63',root=str(tmp_path),out='reports/feature.json')
+ assert (runtime/'reports/feature.json').is_file()
+ assert out['project_context']['stale_fields']==[]
+
 def test_select_model_refuses_unmeasured():
  out=md.select_model('MD-29','HIGH_ASSURANCE'); assert out['status']=='no_selection'
 

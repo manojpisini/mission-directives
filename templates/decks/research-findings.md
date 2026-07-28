@@ -3,7 +3,7 @@ template_id: decks/research-findings
 title: Research Findings Deck
 family: presentation
 status: stable
-suite_version: 1.8.3
+suite_version: 2.0.0
 required_contracts:
   - core/run-manifest
   - core/evidence-register

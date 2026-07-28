@@ -62,7 +62,7 @@ output_contract:
   - path: reports/academic_peer_review_methodological_critique_and_rebuttal/academic_peer_review_methodological_critique_and_rebuttal_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.academic.academic-peer-review-methodological-critique-and-rebuttal
 prompt_slug: academic-peer-review-methodological-critique-and-rebuttal
 identity_status: permanent

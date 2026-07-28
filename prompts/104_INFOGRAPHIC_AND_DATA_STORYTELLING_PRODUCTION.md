@@ -64,7 +64,7 @@ output_contract:
   - path: reports/infographic_and_data_storytelling_production/infographic_and_data_storytelling_production_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.data_visualization.infographic-and-data-storytelling-production
 prompt_slug: infographic-and-data-storytelling-production
 identity_status: permanent

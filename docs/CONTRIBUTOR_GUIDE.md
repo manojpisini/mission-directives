@@ -4,6 +4,14 @@
 
 This guide explains how to change the suite without creating duplicate capabilities, weakening safety, breaking permanent identities, or allowing generated artifacts to drift.
 
+## Package and project-runtime changes
+
+Keep the public CLI in `src/mission_directives`, the packaged runtime allowlist in `config/runtime_payload.json`, and source-only development tooling outside the wheel payload. Do not maintain a second tracked runtime copy; the Hatch build hook assembles `_runtime` for wheel builds and removes it afterward.
+
+Changes to initialization, migration, tracking, Project Config, or the viewer require focused regression tests plus a wheel install smoke test. Preserve unrelated project files and all text outside managed markers.
+
+Use past-tense declarative commit messages without first-person pronouns, for example `Updated project migration validation`.
+
 ## Before adding a prompt
 
 Confirm that the requested outcome is not already owned by:
@@ -77,6 +85,10 @@ Also add:
 - executive decision rules;
 - verification reference;
 - justification in capability architecture.
+
+## Release verification
+
+Run `python tools/build_manifest.py`, `python -m pytest`, `python tools/validate_suite.py`, `uv build`, and `python tools/package_smoke.py dist`. Tag publication uses PyPI Trusted Publishing; do not add repository or workflow secrets for a long-lived PyPI token.
 
 ## Derived artifacts
 

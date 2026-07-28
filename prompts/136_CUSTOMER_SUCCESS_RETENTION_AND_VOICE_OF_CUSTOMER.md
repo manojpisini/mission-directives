@@ -60,7 +60,7 @@ output_contract:
   - path: reports/customer_success_retention_and_voice_of_customer/customer_success_retention_and_voice_of_customer_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.customer_operations.customer-success-retention-and-voice-of-customer
 prompt_slug: customer-success-retention-and-voice-of-customer
 identity_status: permanent

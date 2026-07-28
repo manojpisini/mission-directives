@@ -3,7 +3,7 @@ template_id: decks/release-readiness
 title: Release Readiness Deck
 family: presentation
 status: stable
-suite_version: 1.8.3
+suite_version: 2.0.0
 required_contracts:
   - core/run-manifest
   - core/evidence-register

@@ -5,95 +5,46 @@
   "required": [
     "schema_version",
     "status",
+    "created_by",
     "project_root",
     "suite_destination",
     "suite_version",
-    "payload_profile",
-    "installed_file_count",
-    "gitignore_entries",
-    "docs_ignored",
-    "installed_at",
-    "created_directories",
-    "preexisting_project_files"
+    "tracking_mode",
+    "output_root",
+    "output_directories",
+    "guidance",
+    "installed_at"
   ],
   "properties": {
-    "schema_version": {
-      "const": "1.0"
-    },
-    "status": {
-      "const": "installed"
-    },
-    "project_root": {
-      "type": "string"
-    },
-    "suite_destination": {
-      "const": "prompts"
-    },
+    "schema_version": { "const": "2.0" },
+    "status": { "const": "installed" },
+    "created_by": { "const": "mission-directives" },
+    "project_root": { "type": "string", "minLength": 1 },
+    "suite_destination": { "const": ".mission-directives/runtime" },
     "suite_version": {
       "type": "string",
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
     },
-    "backup": {
-      "type": "string"
+    "tracking_mode": {
+      "enum": ["ignored", "outputs", "all"]
     },
-    "gitignore_entries": {
+    "output_root": { "const": ".mission-directives" },
+    "output_directories": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "prefixItems": [
+        { "const": "results" },
+        { "const": "reports" },
+        { "const": "artifacts" },
+        { "const": "plans" },
+        { "const": "outputs" },
+        { "const": "docs" },
+        { "const": "logs" }
+      ],
+      "items": false
     },
-    "docs_ignored": {
-      "const": false
-    },
-    "guidance": {
-      "type": "object"
-    },
-    "installed_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "receipt_path": {
-      "type": "string"
-    },
-    "log_file": {
-      "type": "string"
-    },
-    "telemetry_warning": {
-      "type": "string"
-    },
-    "created_directories": {
-      "type": "array",
-      "items": {
-        "enum": [
-          ".prompt_suite",
-          "results",
-          "reports",
-          "logs",
-          "artifacts",
-          "outputs",
-          "docs"
-        ]
-      },
-      "uniqueItems": true
-    },
-    "preexisting_project_files": {
-      "type": "array",
-      "items": {
-        "enum": [
-          ".gitignore",
-          "AGENTS.md",
-          "CLAUDE.md"
-        ]
-      },
-      "uniqueItems": true
-    },
-    "payload_profile": {
-      "const": "runtime"
-    },
-    "installed_file_count": {
-      "type": "integer",
-      "minimum": 1
-    }
+    "guidance": { "type": "object" },
+    "installed_at": { "type": "string", "format": "date-time" },
+    "receipt_path": { "type": "string" }
   },
   "additionalProperties": false
 }

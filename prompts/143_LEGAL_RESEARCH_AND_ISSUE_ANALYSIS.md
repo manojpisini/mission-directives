@@ -62,7 +62,7 @@ output_contract:
   - path: reports/legal_research_and_issue_analysis/legal_research_and_issue_analysis_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.legal.legal-research-and-issue-analysis
 prompt_slug: legal-research-and-issue-analysis
 identity_status: permanent

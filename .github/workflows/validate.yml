@@ -32,6 +32,10 @@ jobs:
         run: python tools/check_generated_reproducibility.py
       - name: Full validation
         run: python tools/validate_suite.py
+      - name: Build Python distributions
+        run: uv build
+      - name: Installed package smoke test
+        run: python tools/package_smoke.py dist
       - name: Bash wrapper smoke test
         if: runner.os != 'Windows'
         run: bash tools/validate-suite.sh
@@ -50,3 +54,4 @@ jobs:
             VALIDATION.json
             .prompt_suite/results/TEST_RESULTS.json
             .prompt_suite/results/EVALUATION_STATUS.json
+            dist/*

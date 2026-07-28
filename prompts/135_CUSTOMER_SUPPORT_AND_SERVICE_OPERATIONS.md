@@ -63,7 +63,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.customer_operations.customer-support-and-service-operations
 prompt_slug: customer-support-and-service-operations
 identity_status: permanent

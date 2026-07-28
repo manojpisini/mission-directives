@@ -24,7 +24,7 @@ def pattern_value(pattern:str)->str:
         ('^[A-Za-z0-9_-]+:.+$', 'user:approved'),
         ('^prompts/[0-9]{3}_[A-Z0-9_]+\\.md$', 'prompts/200_EXAMPLE.md'),
         ('^md\\.[a-z0-9._-]+$', 'md.enablement.example'),
-        ('^[0-9]+\\.[0-9]+\\.[0-9]+$', '1.8.3'),
+        ('^[0-9]+\\.[0-9]+\\.[0-9]+$', '2.0.0'),
     ]
     for prefix,value in choices:
         if pattern.startswith(prefix) or pattern==prefix: return value
@@ -34,29 +34,43 @@ def pattern_value(pattern:str)->str:
         except re.error: break
     return 'example'
 
-def sample(schema:dict, schemas:dict[str,dict])->object:
+def sample(schema:dict|bool, schemas:dict[str,dict], root:dict|None=None)->object:
+    if schema is True: return {}
+    if schema is False: return None
+    root = root or schema
     if '$ref' in schema:
-        name=Path(schema['$ref']).name
-        return sample(schemas[name],schemas)
+        reference=schema['$ref']
+        if reference.startswith('#/'):
+            target:object=root
+            for part in reference[2:].split('/'):
+                target=target[part.replace('~1','/').replace('~0','~')]
+            return sample(target,schemas,root)
+        name=Path(reference).name
+        return sample(schemas[name],schemas,schemas[name])
     if 'const' in schema: return schema['const']
     if 'enum' in schema: return schema['enum'][0]
     if 'default' in schema: return schema['default']
-    if 'oneOf' in schema: return sample(schema['oneOf'][0],schemas)
-    if 'anyOf' in schema: return sample(schema['anyOf'][0],schemas)
+    if 'oneOf' in schema: return sample(schema['oneOf'][0],schemas,root)
+    if 'anyOf' in schema: return sample(schema['anyOf'][0],schemas,root)
     if 'allOf' in schema:
         merged={}
         for part in schema['allOf']:
-            value=sample(part,schemas)
+            value=sample(part,schemas,root)
             if isinstance(value,dict): merged.update(value)
         return merged
     kind=schema.get('type','object')
     if isinstance(kind,list): kind=next((x for x in kind if x!='null'),'null')
     if kind=='object':
         props=schema.get('properties',{})
-        return {key:sample(props.get(key,{}),schemas) for key in schema.get('required',[])}
+        return {key:sample(props.get(key,{}),schemas,root) for key in schema.get('required',[])}
     if kind=='array':
+        if schema.get('prefixItems'):
+            values=[sample(item,schemas,root) for item in schema['prefixItems']]
+            while len(values)<schema.get('minItems',0):
+                values.append(sample(schema.get('items',{}),schemas,root))
+            return values
         count=max(schema.get('minItems',0),1)
-        return [sample(schema.get('items',{}),schemas) for _ in range(count)]
+        return [sample(schema.get('items',{}),schemas,root) for _ in range(count)]
     if kind=='string':
         if schema.get('format')=='date-time': return '2026-07-15T00:00:00Z'
         if schema.get('format')=='date': return '2026-07-15'

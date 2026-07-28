@@ -7,6 +7,7 @@ This index is the human navigation layer for the Mission Directives. The suite i
 | Reader | First manual | Then read |
 |---|---|---|
 | New user | [User Manual](USER_MANUAL.md) | [Operator Guide](OPERATOR_GUIDE.md) |
+| Package user | [Installation and Project Integration Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md) | [Project Config Guide](PROJECT_CONFIG_GUIDE.md), [Local Output Viewer Guide](LOCAL_OUTPUT_VIEWER_GUIDE.md) |
 | Prompt author | [Prompt Body Authoring Guide](PROMPT_BODY_AUTHORING_GUIDE.md) | [Completion Criteria Guide](COMPLETION_CRITERIA_GUIDE.md), [Runtime Marker Protocol](RUNTIME_MARKER_PROTOCOL.md) |
 | Pair author | [Pair Authoring and Verification Guide](PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md) | [Plan Review and Exact-Twin Execution Guide](PLAN_REVIEW_AND_EXACT_TWIN_EXECUTION_GUIDE.md), [Executive Decision Rules Guide](EXECUTIVE_DECISION_RULES_GUIDE.md) |
 | Runtime maintainer | [Architecture Guide](ARCHITECTURE_GUIDE.md) | [CI and Testing Guide](CI_AND_TESTING_GUIDE.md), [Prompt Body Validation Guide](PROMPT_BODY_VALIDATION_GUIDE.md) |
@@ -26,6 +27,9 @@ This index is the human navigation layer for the Mission Directives. The suite i
 - [Operator Guide](OPERATOR_GUIDE.md) — running `md.py`, reading route explanations, handling approvals, markers, failures, and residuals.
 - [Troubleshooting Guide](TROUBLESHOOTING_GUIDE.md) — routing errors, stale evidence, invalid handoffs, skill failures, marker defects, and validation failures.
 - [Recovery and Rollback Guide](RECOVERY_AND_ROLLBACK_GUIDE.md) — failed execution, rollback, residual-open states, and honest closure.
+- [Project Config Guide](PROJECT_CONFIG_GUIDE.md) — schema, authority boundaries, config-first agent lookup, refresh, validation, and settings saves.
+- [Local Output Viewer Guide](LOCAL_OUTPUT_VIEWER_GUIDE.md) — output categories, file rendering, local startup and shutdown, settings, and security controls.
+- [Migration Guide](MIGRATION_GUIDE.md) — managed legacy recognition, preview, verified promotion, preservation, and post-migration checks.
 
 ### Prompt authoring
 
@@ -109,4 +113,5 @@ Do not collapse those proof levels into the word “validated.”
 - [Installation and Project Integration Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md)
 - [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md) — runtime allowlist, source-only boundary, install transaction, receipts, and payload-change verification.
 - [Documentation Site Guide](DOCUMENTATION_SITE_GUIDE.md) — static Astro site generation, local development, GitHub Pages deployment, content ownership, and branding handoff.
-- [Project Cleanup and Uninstall Guide](PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md) — transactional removal, approval-bound preview, preservation rules, rollback, TUI, and receipts.
+- [Project Cleanup and Uninstall Guide](PROJECT_CLEANUP_AND_UNINSTALL_GUIDE.md) — managed installation verification, dry-run preview, preservation rules, failure behavior, and reinstall.
+- [Packaging and Release Guide](PACKAGING_AND_RELEASE_GUIDE.md) — Python distribution metadata, generated wheel payload, smoke tests, Trusted Publishing, and checksums.

@@ -63,7 +63,7 @@ output_contract:
   - survey_spec
   - interview_guide
   - codebook
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.research.survey-interview-questionnaire-and-research-instrument-design
 prompt_slug: survey-interview-questionnaire-and-research-instrument-design
 identity_status: permanent

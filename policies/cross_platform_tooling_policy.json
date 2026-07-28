@@ -1,5 +1,5 @@
 {
-  "suite_version": "1.8.3",
+  "suite_version": "2.0.0",
   "policy_id": "MD-PLATFORM-1",
   "rules": [
     "Every PowerShell entry script has a Bash counterpart with equivalent arguments, exit behavior, receipts, logging, and verification.",

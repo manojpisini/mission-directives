@@ -34,18 +34,18 @@ These assets certify or develop the product. They are not dependencies of normal
 
 ## Installation transaction
 
-`tools/install.py`:
+`mission-directives init`:
 
 1. validates the target and rejects overlap with the suite source;
 2. loads and validates the runtime payload contract;
 3. rejects duplicate, escaped, missing, linked, or special-file payload entries;
 4. stages only declared files and directories;
 5. verifies the staged tree;
-6. backs up an existing installation when replacement is explicit;
-7. atomically promotes the staged runtime;
+6. atomically promotes the staged runtime to `.mission-directives/runtime`;
+7. creates Project Config, the independent local site, output categories, and state;
 8. updates managed `.gitignore` and agent-guidance blocks;
 9. creates runtime directories and ownership markers;
-10. writes schema-valid installation and guidance receipts;
+10. writes schema-valid installation and guidance receipts under `.mission-directives/state`;
 11. restores the previous state if a post-promotion step fails.
 
 ## Audit fields
@@ -66,12 +66,13 @@ A dry run reports the repository-only exclusions so operators can review the bou
 ## Verification
 
 ```bash
-python tools/install.py /path/to/project --dry-run
-python tools/install.py /path/to/project
-python /path/to/project/prompts/tools/md.py route "MD cleanup dead code safely"
+mission-directives init /path/to/project --dry-run
+mission-directives init /path/to/project
+cd /path/to/project
+mission-directives route "MD cleanup dead code safely"
 ```
 
-Confirm that the project installation does not contain tests, evaluations, prompt imports, CI workflows, site sources, repository validators, or development requirements.
+Confirm that `.mission-directives/runtime` does not contain tests, evaluations, prompt imports, CI workflows, the repository Astro site, repository validators, or development requirements. `.mission-directives/site` must contain only the independent local viewer assets.
 
 ## Changing the payload
 
@@ -81,7 +82,7 @@ Treat a payload change as a runtime compatibility change:
 2. add or remove it in `config/runtime_payload.json`;
 3. update installer regressions;
 4. perform a real temporary install;
-5. smoke-test routing from the installed path;
+5. smoke-test pinned routing and the local viewer from the project;
 6. validate receipts and rollback;
 7. update this guide and the manifest.
 

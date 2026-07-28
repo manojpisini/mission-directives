@@ -98,11 +98,13 @@ python tools/sync_agent_guidance.py \
   --print-block
 ```
 
-The default receipt is written to:
+The source-repository tool default is:
 
 ```text
 .prompt_suite/agent-guidance-receipt.json
 ```
+
+Packaged project initialization writes the managed receipt to `.mission-directives/state/agent-guidance-receipt.json` instead.
 
 The receipt records:
 

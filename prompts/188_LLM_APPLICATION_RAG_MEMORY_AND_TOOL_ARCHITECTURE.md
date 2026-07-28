@@ -65,7 +65,7 @@ output_contract:
   - path: reports/llm_application_rag_memory_and_tool_architecture/llm_application_rag_memory_and_tool_architecture_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.llm_engineering.llm-application-rag-memory-and-tool-architecture
 prompt_slug: llm-application-rag-memory-and-tool-architecture
 identity_status: permanent

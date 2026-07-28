@@ -64,7 +64,7 @@ output_contract:
   - path: reports/intent_interrogation_and_route_clarification/intent_interrogation_and_route_clarification_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.auto_orchestration.intent-interrogation-and-route-clarification
 prompt_slug: intent-interrogation-and-route-clarification
 identity_status: permanent

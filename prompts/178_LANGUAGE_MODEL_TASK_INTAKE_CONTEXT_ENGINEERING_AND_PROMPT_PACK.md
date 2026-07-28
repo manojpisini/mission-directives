@@ -65,7 +65,7 @@ output_contract:
   - path: reports/language_model_task_intake_context_engineering_and_prompt_pack/language_model_task_intake_context_engineering_and_prompt_pack_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.llm_operations.language-model-task-intake-context-engineering-and-prompt-pack
 prompt_slug: language-model-task-intake-context-engineering-and-prompt-pack
 identity_status: permanent

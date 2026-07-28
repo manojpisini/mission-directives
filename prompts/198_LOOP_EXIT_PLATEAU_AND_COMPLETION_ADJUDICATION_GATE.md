@@ -59,7 +59,7 @@ output_contract:
   - path: reports/loop_exit_plateau_and_completion_adjudication_gate/loop_exit_plateau_and_completion_adjudication_gate_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.auto_orchestration.loop-exit-plateau-and-completion-adjudication-gate
 prompt_slug: loop-exit-plateau-and-completion-adjudication-gate
 identity_status: permanent

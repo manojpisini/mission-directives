@@ -69,7 +69,7 @@ output_contract:
   - path: artifacts/script_video_podcast_and_storyboard_writing_and_production_package/residual_register.json
     format: json
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.creative_production.script-video-podcast-and-storyboard-writing-and-production-package
 prompt_slug: script-video-podcast-and-storyboard-writing-and-production-package
 identity_status: permanent

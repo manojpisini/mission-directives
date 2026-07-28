@@ -71,7 +71,7 @@ output_contract:
   - pdf_spec
   - xlsx_spec
   - chart_spec
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.finance.finance-fp-a-budget-and-management-analysis
 prompt_slug: finance-fp-a-budget-and-management-analysis
 identity_status: permanent

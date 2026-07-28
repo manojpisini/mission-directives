@@ -63,7 +63,7 @@ output_contract:
   - path: reports/prompt_creation_and_specification/prompt_creation_and_specification_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.prompt_engineering.prompt-creation-and-specification
 prompt_slug: prompt-creation-and-specification
 identity_status: permanent

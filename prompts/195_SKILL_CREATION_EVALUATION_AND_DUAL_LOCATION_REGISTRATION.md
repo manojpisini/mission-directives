@@ -69,7 +69,7 @@ output_contract:
   - path: reports/skill_creation_evaluation_and_dual_location_registration/skill_creation_evaluation_and_dual_location_registration_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 1.8.3
+suite_version: 2.0.0
 capability_id: md.auto_orchestration.skill-creation-evaluation-and-dual-location-registration
 prompt_slug: skill-creation-evaluation-and-dual-location-registration
 identity_status: permanent

@@ -2,7 +2,7 @@
 
 [Back to Mastery Manual](MD_MASTERY_MANUAL.md) · [Manual index](MANUALS.md)
 
-This guide is the authoritative operational reference for **Logging and Telemetry Guide** in MD 1.8.3.
+This guide is the authoritative operational reference for **Logging and Telemetry Guide** in MD 2.0.0.
 
 ## 1. Daily TOML file model
 
