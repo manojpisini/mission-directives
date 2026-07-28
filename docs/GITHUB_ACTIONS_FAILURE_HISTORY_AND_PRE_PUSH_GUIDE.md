@@ -124,6 +124,14 @@ The independent GitHub release job failed because it downloaded artifacts withou
 
 The durable fix uses the default `GITHUB_REPOSITORY` context for every GitHub CLI call and makes publication retry-safe: create a described release when absent, or upload only missing artifacts when a partial release already exists. Regression coverage requires explicit repository selection, release description text, generated notes, and the existing-release path. Metadata and PyPI README corrections therefore ship under a new patch tag rather than attempting to mutate the immutable `2.0.1` package.
 
+### Local internal file masked a clean-checkout documentation failure
+
+Failed run: `30384008076` at commit `3a16197`.
+
+All three validation jobs failed in the deterministic documentation-link test because `CONTRIBUTING.md` linked to the intentionally untracked `MEMORY.md`. Local validation passed because that ignored file existed in the developer checkout, but clean GitHub runners correctly reported that the target did not exist.
+
+The durable fix removed internal-memory references from public contributor documentation and changed the link checker to reject untracked file targets when Git metadata is available. A regression test now creates an untracked target that exists locally and verifies that it cannot satisfy a public documentation link.
+
 ## Required pre-push workflow
 
 Create and activate the CI-equivalent environment:
@@ -183,6 +191,7 @@ Do not push unless every applicable command exits successfully.
 - Keep site implementation, dependencies, tests, generated paths, ignore rules, and documentation synchronized.
 - Never apply suite-version replacements to dependency lockfiles; target only declared suite-version fields.
 - Prove the committed site lockfile with a frozen install before relying on site checks that may reuse existing modules.
+- Require public documentation links to resolve to tracked files; ignored or untracked local files must not satisfy link validation.
 - Build wheel and sdist and install the built package for package changes.
 - Use a clean clone or isolated worktree for broad changes so untracked files cannot hide omissions.
 - Use past-tense declarative commit messages without first-person pronouns.

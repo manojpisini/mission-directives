@@ -18,6 +18,7 @@ import argparse
 import json
 from pathlib import Path
 import re
+import subprocess
 from typing import Iterable
 
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
@@ -43,8 +44,20 @@ def _link_target(raw: str) -> str:
     return value.strip()
 
 
+def _tracked_paths(root: Path) -> set[str] | None:
+    result = subprocess.run(
+        ["git", "-C", str(root), "ls-files", "-z"],
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        return None
+    return {path for path in result.stdout.decode("utf-8").split("\0") if path}
+
+
 def find_broken_relative_links(root: Path) -> list[dict[str, object]]:
     root = root.resolve()
+    tracked_paths = _tracked_paths(root)
     issues: list[dict[str, object]] = []
     for path in documentation_files(root):
         text = path.read_text(encoding="utf-8")
@@ -79,6 +92,17 @@ def find_broken_relative_links(root: Path) -> list[dict[str, object]]:
                         "reason": "target does not exist",
                     }
                 )
+            elif tracked_paths is not None and candidate.is_file():
+                relative_candidate = candidate.relative_to(root).as_posix()
+                if relative_candidate not in tracked_paths:
+                    issues.append(
+                        {
+                            "file": str(path.relative_to(root)),
+                            "line": searchable[: match.start()].count("\n") + 1,
+                            "target": target,
+                            "reason": "target is not tracked",
+                        }
+                    )
     return issues
 
 

@@ -73,8 +73,6 @@ python tools/validate_suite.py
 
 Broad pushes and releases must follow the full ordered procedure in [GitHub Actions Failure History and Pre-Push Guide](docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md), including manifest rebuild/check, wheel and sdist build, installed-package smoke testing, the platform-native wrapper, and site verification when documentation changed.
 
-Read [MEMORY.md](MEMORY.md) before changing workflows, manifests, release metadata, installers, wrappers, generated artifacts, documentation generation, or publication. Append only durable, verified lessons after the change passes its complete validation boundary.
-
 Before release, rebuild and check `MANIFEST.json`, create the ZIP, extract it into a clean directory, and repeat non-mutating verification.
 
 ## Pull-request or review description

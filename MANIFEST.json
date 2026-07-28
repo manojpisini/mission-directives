@@ -43,8 +43,8 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 4671,
-      "sha256": "ed83c6a192d4c041a6051edaa4dfbb9609761444ec572816ab0ea93e8b86af44"
+      "bytes": 4405,
+      "sha256": "8f64536cfd079c20eab947d9f731f96e3dba12808db5ebff6734f2682d4877c0"
     },
     {
       "path": "GOVERNANCE.md",
@@ -268,8 +268,8 @@
     },
     {
       "path": "docs/CONTRIBUTOR_GUIDE.md",
-      "bytes": 4955,
-      "sha256": "8db3a38dbbb9a2ca5e149bcda8a595977c22239ba6b8e8ce6d50a65befad6fa9"
+      "bytes": 4842,
+      "sha256": "927c7e52689aa498ba3e75ab2396b6bc02a2d81c31de8d1fc94cae55c1097cb8"
     },
     {
       "path": "docs/COVERAGE_INDEX.md",
@@ -313,8 +313,8 @@
     },
     {
       "path": "docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md",
-      "bytes": 13920,
-      "sha256": "f88175255d7aa454a1cb1f7d413d85a6614550c4b347c2365b25347bbca5a2e8"
+      "bytes": 14807,
+      "sha256": "d05bc2eeb90823bee15c0c60d18efb0a17a5371589d936c3055bea9b12934528"
     },
     {
       "path": "docs/GSTACK_INTEGRATION.md",
@@ -11688,8 +11688,8 @@
     },
     {
       "path": "site/public/contributing.html",
-      "bytes": 10463,
-      "sha256": "754cfd7e3be7e4467c0d8e6cd8804e74b168f807b1e4245cb43bfe85a7db3285"
+      "bytes": 10120,
+      "sha256": "94e314bc8383214c32fe54d389c1d672b5558cdff5773c63ba5d45a9476bad45"
     },
     {
       "path": "site/public/docs.html",
@@ -11783,8 +11783,8 @@
     },
     {
       "path": "site/public/reference/manuals/contributor-guide/index.html",
-      "bytes": 11073,
-      "sha256": "ab727619d8e1c108052e2fa47d7a75031366d985d5846e3b060b3b7399827f2e"
+      "bytes": 10949,
+      "sha256": "29570c2940e8f159a6277c1ef16d4ce47d35d623001a7a8e4dd067fea0d5b48d"
     },
     {
       "path": "site/public/reference/manuals/coverage-index/index.html",
@@ -11828,8 +11828,8 @@
     },
     {
       "path": "site/public/reference/manuals/github-actions-failure-history-and-pre-push-guide/index.html",
-      "bytes": 21980,
-      "sha256": "3725fe7ce2c450885c502995705143b3e26db683c894acd81898387a9a7a509f"
+      "bytes": 22939,
+      "sha256": "446a83574c1577b06f8be7a62d4ebfd88d871d4f01c42b38780f4fade002ec9f"
     },
     {
       "path": "site/public/reference/manuals/gstack-integration/index.html",
@@ -12528,13 +12528,13 @@
     },
     {
       "path": "tests/test_docs_site.py",
-      "bytes": 4960,
-      "sha256": "856bc2c5882f1dec67388bc83d035437b3273936aa8b4c3eff303104c47b3ab5"
+      "bytes": 4897,
+      "sha256": "60d04e9a9fbc40c6e031ced357b744d088f0b3d176cbaf9b95a4939e4c776c7f"
     },
     {
       "path": "tests/test_documentation_integrity.py",
-      "bytes": 709,
-      "sha256": "dc06b8c2c598a16ca1d14480d9b366aedc087bd965b2479c2a458bf0f35482c2"
+      "bytes": 1301,
+      "sha256": "071a46c9dfedfba142ef462d767eb4d2b85001616677b77181141ac033ffb64c"
     },
     {
       "path": "tests/test_generated_reproducibility.py",
@@ -12668,8 +12668,8 @@
     },
     {
       "path": "tools/check_documentation_links.py",
-      "bytes": 3380,
-      "sha256": "24d0d9089df35e87966257893d77c9693d99c94c62bbff78238632f3bca840f5"
+      "bytes": 4328,
+      "sha256": "dedd9da65b46d81b60465cd8f1acd0bb7ccf477d0ca8a78a1bdc1f117a3c7d27"
     },
     {
       "path": "tools/check_generated_reproducibility.py",

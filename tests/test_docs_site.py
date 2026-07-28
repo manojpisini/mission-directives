@@ -62,7 +62,7 @@ def test_site_uses_canonical_brand_assets_and_onboarding_pages():
         assert "brand__mark" not in html
 
     contributing = (PUBLIC / "contributing.html").read_text(encoding="utf-8")
-    assert 'href="https://github.com/manojpisini/mission-directives/blob/main/MEMORY.md"' in contributing
+    assert "MEMORY.md" not in contributing
     assert "/reference/manuals/memory/" not in contributing
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")

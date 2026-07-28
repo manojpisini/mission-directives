@@ -42,7 +42,6 @@ python tools/run_evaluations.py
 python tools/check_generated_reproducibility.py
 python tools/validate_suite.py</code></pre></div>
 <p>Broad pushes and releases must follow the full ordered procedure in <a href="/mission-directives/reference/manuals/github-actions-failure-history-and-pre-push-guide/">GitHub Actions Failure History and Pre-Push Guide</a>, including manifest rebuild/check, wheel and sdist build, installed-package smoke testing, the platform-native wrapper, and site verification when documentation changed.</p>
-<p>Read <a href="https://github.com/manojpisini/mission-directives/blob/main/MEMORY.md">MEMORY.md</a> before changing workflows, manifests, release metadata, installers, wrappers, generated artifacts, documentation generation, or publication. Append only durable, verified lessons after the change passes its complete validation boundary.</p>
 <p>Before release, rebuild and check <code>MANIFEST.json</code>, create the ZIP, extract it into a clean directory, and repeat non-mutating verification.</p>
 <h3>Pull-request or review description</h3>
 <p>Explain:</p>

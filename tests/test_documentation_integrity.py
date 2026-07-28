@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,3 +21,16 @@ def test_link_checker_detects_a_missing_relative_target(tmp_path: Path):
     issues = find_broken_relative_links(tmp_path)
     assert len(issues) == 1
     assert issues[0]["target"] == "docs/DOES_NOT_EXIST.md"
+
+
+def test_link_checker_rejects_an_untracked_target_that_masks_a_clean_checkout_failure(tmp_path: Path):
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    guide = tmp_path / "GUIDE.md"
+    guide.write_text("See [local state](MEMORY.md).\n", encoding="utf-8")
+    (tmp_path / "MEMORY.md").write_text("local only\n", encoding="utf-8")
+    subprocess.run(["git", "-C", str(tmp_path), "add", "GUIDE.md"], check=True)
+
+    issues = find_broken_relative_links(tmp_path)
+
+    assert len(issues) == 1
+    assert issues[0]["reason"] == "target is not tracked"

@@ -42,7 +42,7 @@
 <ul><li>reciprocal pair metadata;</li><li>frozen handoff artifacts;</li><li>contaminated-handoff fixture;</li><li>pair-versus-single definition;</li><li>executive decision rules;</li><li>verification reference;</li><li>justification in capability architecture.</li></ul>
 <h3>Release verification</h3>
 <p>Run <code>python tools/build_manifest.py</code>, <code>python -m pytest</code>, <code>python tools/validate_suite.py</code>, <code>uv build</code>, and <code>python tools/package_smoke.py dist</code>. Tag publication uses PyPI Trusted Publishing; do not add repository or workflow secrets for a long-lived PyPI token.</p>
-<p>Before pushing or tagging, complete the ordered environment, audit, test, reproducibility, manifest, package, wrapper, and site procedure in <a href="/mission-directives/reference/manuals/github-actions-failure-history-and-pre-push-guide/">GitHub Actions Failure History and Pre-Push Guide</a>. Read root <code>MEMORY.md</code> before workflow or release work and append only verified durable lessons after validation.</p>
+<p>Before pushing or tagging, complete the ordered environment, audit, test, reproducibility, manifest, package, wrapper, and site procedure in <a href="/mission-directives/reference/manuals/github-actions-failure-history-and-pre-push-guide/">GitHub Actions Failure History and Pre-Push Guide</a>.</p>
 <h3>Derived artifacts</h3>
 <p>The following should be generated rather than hand-maintained where tools exist:</p>
 <ul><li><code>capability_graph.json</code>;</li><li><code>BODY_QUALITY_AUDIT.json</code> and <code>.md</code>;</li><li><code>MANIFEST.json</code>;</li><li>test and validation status files.</li></ul>
