@@ -12,7 +12,7 @@ This file stores durable, verified repository lessons that prevent repeated inve
 
 ## GitHub Actions history through July 28, 2026
 
-Thirty failed runs were recorded in `Validate Mission Directives`. The documentation workflow had eight successful runs and no failures at the initial snapshot. The first `Publish Mission Directives` run, `30369810482` for `v2.0.0`, failed before publication because it ran tests before generating required body-audit artifacts.
+Thirty failed runs were recorded in `Validate Mission Directives`. The documentation workflow later failed in run `30372716698` because a release-version replacement corrupted dependency versions in `site/pnpm-lock.yaml`. The first `Publish Mission Directives` run, `30369810482` for `v2.0.0`, failed before publication because it ran tests before generating required body-audit artifacts.
 
 The complete history is maintained in [GitHub Actions Failure History and Pre-Push Guide](docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md).
 
@@ -29,6 +29,7 @@ Durable lessons:
 - CI and wrappers use the activated virtual environment; setup-uv keeps `activate-environment: 'true'` and does not use `uv pip install --system`.
 - Package changes build wheel and sdist, install the built package, and run platform wrappers.
 - Site implementation, dependencies, tests, generated paths, ignore rules, and documentation remain one contract.
+- Release-version replacements never touch dependency lockfiles. After any release-version change, run a clean `pnpm --dir site install --frozen-lockfile`; an existing `site/node_modules` can hide lockfile corruption from `pnpm run check`.
 - A push is complete only after Ubuntu, Windows, and macOS succeed.
 
 ## Required pre-push chain
@@ -52,4 +53,4 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File ./tools/validate-suite.ps1
 
 Documentation and site changes also run `pnpm --dir site install --frozen-lockfile` and `pnpm --dir site run check`.
 
-Latest verified baseline in this snapshot: run `30360409885` at commit `912b32f` passed Ubuntu, Windows, and macOS.
+Latest verified validation baseline in this snapshot: run `30372716545` at commit `dd11169` passed Ubuntu, Windows, and macOS. Documentation run `30372716698` for the same commit failed before deployment because of the corrupted lockfile described above.

@@ -23,9 +23,11 @@
 pnpm install --frozen-lockfile
 pnpm run dev</code></pre></div>
 <p>Production verification:</p>
-<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pnpm run generate
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>pnpm install --frozen-lockfile
+pnpm run generate
 pnpm run build
 pnpm run check</code></pre></div>
+<p>Run the frozen install even when <code>site/node_modules</code> already exists. Build and check commands can otherwise pass while a corrupted committed lockfile fails in GitHub's clean checkout. Release-version replacements must exclude <code>site/pnpm-lock.yaml</code>; update it only through pnpm dependency operations.</p>
 <p><code>pnpm run check</code> builds the site and verifies internal links across the generated HTML pages.</p>
 <h3>Publishing</h3>
 <p><code>.github/workflows/deploy-docs.yml</code> builds with <code>withastro/action</code> and deploys with <code>actions/deploy-pages</code> after a push to <code>main</code> that changes site or canonical documentation inputs. The workflow can also be run manually.</p>

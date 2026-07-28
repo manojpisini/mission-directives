@@ -8,11 +8,11 @@ This guide records every failed GitHub Actions validation run through July 28, 2
 
 | Workflow | Successful | Failed | Current state |
 |---|---:|---:|---|
-| Validate Mission Directives | 12 | 30 | Passing on Ubuntu, Windows, and macOS |
-| Deploy documentation | 8 | 0 | Passing |
+| Validate Mission Directives | 14 | 30 | Passing on Ubuntu, Windows, and macOS |
+| Deploy documentation | 9 | 1 | Lockfile correction pending verification |
 | Publish Mission Directives | 0 | 1 | First attempt failed before publication; corrected patch release pending |
 
-Thirty historical failures belonged to `Validate Mission Directives`. One later failure belonged to the first `Publish Mission Directives` attempt.
+Thirty historical failures belonged to `Validate Mission Directives`. One later failure belonged to documentation deployment, and one belonged to the first `Publish Mission Directives` attempt.
 
 ## Complete failure history
 
@@ -106,6 +106,14 @@ The first targeted `2.0.1` release test passed 20 checks but failed release cons
 
 The durable fix moved manifest generation ahead of the deterministic suite. Run all applicable source and site generators first, generate audits, rebuild the manifest, then run tests and finish with `build_manifest.py --check`. CI still verifies rather than mutates the committed manifest.
 
+### Release replacement corrupted the site lockfile
+
+Failed run: `30372716698` at commit `dd11169`.
+
+A mechanical `2.0.0` to `2.0.1` replacement changed package versions, peer ranges, and engine constraints throughout `site/pnpm-lock.yaml`, including the valid `github-slugger@2.0.0` resolution to a nonexistent `2.0.1` tarball. The local site check reused the existing `site/node_modules`, so it passed without proving that the committed lockfile could install in a clean checkout. GitHub's clean documentation build failed with `ERR_PNPM_FETCH_404` before deployment.
+
+The durable fix restored the complete lockfile from before the release sweep. Release-version edits must target suite-owned metadata only and must exclude package-manager lockfiles. After every release-version change or site dependency edit, run `pnpm --dir site install --frozen-lockfile` before `pnpm --dir site run check`.
+
 ## Required pre-push workflow
 
 Create and activate the CI-equivalent environment:
@@ -159,6 +167,8 @@ Do not push unless every applicable command exits successfully.
 - Keep setup-uv environment activation enabled; do not restore `uv pip install --system`.
 - Test direct Python entry points and Bash/PowerShell wrappers.
 - Keep site implementation, dependencies, tests, generated paths, ignore rules, and documentation synchronized.
+- Never apply suite-version replacements to dependency lockfiles; target only declared suite-version fields.
+- Prove the committed site lockfile with a frozen install before relying on site checks that may reuse existing modules.
 - Build wheel and sdist and install the built package for package changes.
 - Use a clean clone or isolated worktree for broad changes so untracked files cannot hide omissions.
 - Use past-tense declarative commit messages without first-person pronouns.

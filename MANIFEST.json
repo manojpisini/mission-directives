@@ -68,8 +68,8 @@
     },
     {
       "path": "MEMORY.md",
-      "bytes": 3699,
-      "sha256": "104a1cbc57d5372557d7f31495723b477020d6d8c38e4490b555a9bd144c8b51"
+      "bytes": 4139,
+      "sha256": "04bbc0fc955f6df48288ad6253f4f784a0fde8768542d22f089efff40d15e6f6"
     },
     {
       "path": "PROMPT_EXECUTION_ORDER.md",
@@ -268,8 +268,8 @@
     },
     {
       "path": "docs/DOCUMENTATION_SITE_GUIDE.md",
-      "bytes": 3785,
-      "sha256": "35db519d859652f2fb6feeaea9d916097f455a0e29a2fb7fba0d7b9d24717096"
+      "bytes": 4117,
+      "sha256": "152c29509f3827902f5cd2da45d4153857ed8d0ddb685c50ca36c3bb872d8cd8"
     },
     {
       "path": "docs/EVALUATION_MANUAL.md",
@@ -293,8 +293,8 @@
     },
     {
       "path": "docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md",
-      "bytes": 10640,
-      "sha256": "7f802752c775bc8f53f6e74eaa0d54eb57b517c4671afd4d1290d6fa28175f3c"
+      "bytes": 11847,
+      "sha256": "0ccb26a209ec4254461517d2625478fc46f5b6c0dd4499b18ce887a56b2b2f54"
     },
     {
       "path": "docs/GSTACK_INTEGRATION.md",
@@ -363,8 +363,8 @@
     },
     {
       "path": "docs/PACKAGING_AND_RELEASE_GUIDE.md",
-      "bytes": 1980,
-      "sha256": "bad93170ab1fbc5ecf9229df633f139c919ded6df8255692e4f1ce0a45a427a9"
+      "bytes": 2228,
+      "sha256": "c736585feed065a5f7d5e1eb979f4ad814b7b12ae57426984235b5d4ed97f014"
     },
     {
       "path": "docs/PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md",
@@ -11619,7 +11619,7 @@
     {
       "path": "site/pnpm-lock.yaml",
       "bytes": 110101,
-      "sha256": "0e6bb1ec99e02f1f4d643c9597b81fba4b12f36426a80b17e43b760aae72d071"
+      "sha256": "4facb17b18e3e3a8be6db9d716b6ebbeec09c21f6de4610c5d309dec25c1b518"
     },
     {
       "path": "site/pnpm-workspace.yaml",
@@ -11743,8 +11743,8 @@
     },
     {
       "path": "site/public/reference/manuals/documentation-site-guide/index.html",
-      "bytes": 9597,
-      "sha256": "91bc124f2b08b5efafb29cf7ed13638fd3b1ed9515ac569a3dc03a696b180727"
+      "bytes": 9957,
+      "sha256": "e4f032833d831b54a14fad6fe213f6f8dc99fedd52721d7447104caaa9483365"
     },
     {
       "path": "site/public/reference/manuals/evaluation-manual/index.html",
@@ -11768,8 +11768,8 @@
     },
     {
       "path": "site/public/reference/manuals/github-actions-failure-history-and-pre-push-guide/index.html",
-      "bytes": 17867,
-      "sha256": "ea604b0b0daf6783862e107b4ebcd11c4a68583dbd240462faddfbfb670120d0"
+      "bytes": 19229,
+      "sha256": "ecf495c6fecec8088870232c33f421163771fb78f1a16b30d0f0f95c9f3a35c2"
     },
     {
       "path": "site/public/reference/manuals/gstack-integration/index.html",
@@ -11838,8 +11838,8 @@
     },
     {
       "path": "site/public/reference/manuals/packaging-and-release-guide/index.html",
-      "bytes": 7084,
-      "sha256": "50912b7e2e20f2a3528bb70307e57ac4fefebfb87ad504dbc674239f3d7b053a"
+      "bytes": 7349,
+      "sha256": "5aeffdea13c809bfd41d8be5bede26031483fe4d92110ffeffa6afebb4749c91"
     },
     {
       "path": "site/public/reference/manuals/pair-authoring-and-verification-guide/index.html",

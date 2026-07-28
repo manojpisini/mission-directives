@@ -32,10 +32,13 @@ pnpm run dev
 Production verification:
 
 ```bash
+pnpm install --frozen-lockfile
 pnpm run generate
 pnpm run build
 pnpm run check
 ```
+
+Run the frozen install even when `site/node_modules` already exists. Build and check commands can otherwise pass while a corrupted committed lockfile fails in GitHub's clean checkout. Release-version replacements must exclude `site/pnpm-lock.yaml`; update it only through pnpm dependency operations.
 
 `pnpm run check` builds the site and verifies internal links across the generated HTML pages.
 

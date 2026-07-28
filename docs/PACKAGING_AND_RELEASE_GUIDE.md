@@ -12,6 +12,8 @@ The authoritative pre-push and pre-tag sequence, including historical failure pr
 
 The tag-triggered publishing workflow must generate prompt-body audits before `tools/run_tests.py`, then run evaluations and full validation before building. Do not replace this sequence with raw pytest in a clean checkout because audit-dependent tests intentionally fail when their generated evidence is absent.
 
+Release-version replacements must target suite metadata and exclude dependency lockfiles. Prove the documentation lockfile independently with `pnpm --dir site install --frozen-lockfile`; an existing module directory is not clean-install evidence.
+
 ```bash
 python -m pytest
 python tools/build_manifest.py
