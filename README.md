@@ -224,13 +224,17 @@ cd site && pnpm run check
 
 `tools/validate_suite.py` checks structural contracts, deterministic runtime tests, fixture coverage, identity contracts, CI configuration, lock safety, generated artifact reproducibility, and manifest integrity. It does not certify live model quality or external-world outcomes.
 
+Before every broad push, follow the complete ordered checklist in the [GitHub Actions Failure History and Pre-Push Guide](docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md). It records all 30 historical validation failures, their fixes, cross-platform prevention rules, the Node 24 action baseline, and the package/site checks required before a push.
+
+Repository agents read [MEMORY.md](MEMORY.md) before workflow, manifest, release, installer, wrapper, documentation-generation, or publishing changes and append only verified durable lessons after completion.
+
 <p align="center">
   <img src="assets/readme/divider.svg" alt="" width="100%" />
 </p>
 
 ## Contributing
 
-Start with the [Contributor Guide](docs/CONTRIBUTOR_GUIDE.md). Keep prompt identities stable, update generated registries through their owning tools, add focused regression coverage, rebuild `MANIFEST.json`, and run the validation commands above. Commit messages use past-tense declarative wording without first-person pronouns, for example `Added packaged runtime validation`.
+Start with the [Contributor Guide](docs/CONTRIBUTOR_GUIDE.md) and [pre-push guide](docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md). Keep prompt identities stable, update generated registries through their owning tools, add focused regression coverage, rebuild `MANIFEST.json`, and run the validation commands above. Commit messages use past-tense declarative wording without first-person pronouns, for example `Added packaged runtime validation`.
 
 ## License
 

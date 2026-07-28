@@ -40,6 +40,7 @@ python tools/check_generated_reproducibility.py
 python tools/build_manifest.py --check
 python tools/validate_suite.py</code></pre></div>
 <p>If canonical files intentionally changed, regenerate the graph, audit, test status, and manifest before running <code>--check</code>.</p>
+<p>The release-complete command order, all historical workflow failures, and their prevention rules are maintained in <a href="/mission-directives/reference/manuals/github-actions-failure-history-and-pre-push-guide/">GitHub Actions Failure History and Pre-Push Guide</a>. Treat that guide as required reading before broad pushes or workflow changes.</p>
 <h3>Test-driven defect repair</h3>
 <p>For a bug or missing invariant:</p>
 <p>1. write a focused failing test; 2. run it and confirm the failure is caused by the defect; 3. implement the smallest correction; 4. run the focused test; 5. run the full test suite; 6. regenerate derived artifacts; 7. run full validation; 8. inspect the semantic diff.</p>
@@ -62,6 +63,7 @@ python tools/validate_suite.py</code></pre></div>
 python tools/build_manifest.py --check</code></pre></div>
 <p>Never hand-edit hashes.</p>
 <h3>Common failures</h3>
+<p>The complete incident history and fixing commits are recorded in <a href="/mission-directives/reference/manuals/github-actions-failure-history-and-pre-push-guide/">GitHub Actions Failure History and Pre-Push Guide</a>. The entries below are quick diagnosis summaries.</p>
 <h4>Manifest mismatch</h4>
 <p>A file changed after the manifest was generated. Re-run the relevant tests first, then rebuild the manifest.</p>
 <h4>Audit report mismatch</h4>

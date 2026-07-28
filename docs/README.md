@@ -12,6 +12,7 @@ The documentation library explains how to operate, author, validate, secure, and
 6. [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md)
 7. [Router Keyword Catalog and Scoring Guide](ROUTER_KEYWORD_CATALOG_AND_SCORING_GUIDE.md)
 8. [Installed Runtime Payload Guide](INSTALLED_RUNTIME_PAYLOAD_GUIDE.md)
+9. [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md)
 
 ## Prompt-body integrity manuals
 
@@ -44,6 +45,7 @@ The prompt-body contract is a first-class subsystem. These manuals define it in 
 - [Agent Library Integration Guide](AGENT_LIBRARY_INTEGRATION_GUIDE.md)
 - [Scenario Authoring Guide](SCENARIO_AUTHORING_GUIDE.md)
 - [Contributor Guide](CONTRIBUTOR_GUIDE.md)
+- [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md)
 - [Security Operations Guide](SECURITY_OPERATIONS_GUIDE.md)
 - [Troubleshooting Guide](TROUBLESHOOTING_GUIDE.md)
 - [Manual Quality Standard](MANUAL_QUALITY_STANDARD.md)

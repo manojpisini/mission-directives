@@ -1,5 +1,7 @@
 # Troubleshooting Guide
 
+For the complete GitHub Actions incident history, fixing commits, and required prevention checklist, see [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md).
+
 ## Command is not found after installation
 
 Confirm the user tool directory is on `PATH` and run `uv tool list`, `pipx list`, or `python -m pip show mission-directives` for the installer used. Reinstall with `uv tool install --force mission-directives` only after confirming the package environment, not inside the target project's pinned runtime.

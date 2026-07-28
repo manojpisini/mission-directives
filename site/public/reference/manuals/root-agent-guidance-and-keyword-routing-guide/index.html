@@ -58,8 +58,10 @@ CLAUDE.md</code></pre></div>
 <div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/sync_agent_guidance.py \
   --project-root /path/to/project \
   --print-block</code></pre></div>
-<p>The source-repository tool default is:</p>
-<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>.prompt_suite/agent-guidance-receipt.json</code></pre></div>
+<p>The source-repository tool writes no receipt by default. Request one explicitly when operational evidence is required:</p>
+<div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python tools/sync_agent_guidance.py \
+  --project-root /path/to/project \
+  --receipt .prompt_suite/agent-guidance-receipt.json</code></pre></div>
 <p>Packaged project initialization writes the managed receipt to <code>.mission-directives/state/agent-guidance-receipt.json</code> instead.</p>
 <p>The receipt records:</p>
 <ul><li>project and suite roots;</li><li>suite version;</li><li>managed filenames;</li><li>created, updated, removed, and unchanged files;</li><li>dry-run state;</li><li>optional unified diffs.</li></ul>

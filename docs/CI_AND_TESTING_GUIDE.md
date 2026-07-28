@@ -58,6 +58,8 @@ python tools/validate_suite.py
 
 If canonical files intentionally changed, regenerate the graph, audit, test status, and manifest before running `--check`.
 
+The release-complete command order, all historical workflow failures, and their prevention rules are maintained in [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md). Treat that guide as required reading before broad pushes or workflow changes.
+
 ## Test-driven defect repair
 
 For a bug or missing invariant:
@@ -122,6 +124,8 @@ python tools/build_manifest.py --check
 Never hand-edit hashes.
 
 ## Common failures
+
+The complete incident history and fixing commits are recorded in [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md). The entries below are quick diagnosis summaries.
 
 ### Manifest mismatch
 

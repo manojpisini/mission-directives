@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -99,6 +100,16 @@ def test_supported_subset_and_receipt_output(tmp_path: Path):
     assert receipt["receipt_path"].endswith("agent-guidance-receipt.json")
 
 
+def test_cli_writes_receipt_only_when_requested(tmp_path: Path, monkeypatch):
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["sync_agent_guidance.py", "--project-root", str(tmp_path)],
+    )
+    assert module.main() == 0
+    assert not (tmp_path / ".prompt_suite" / "agent-guidance-receipt.json").exists()
+
+
 def test_rejects_any_agent_filename_other_than_agents_or_claude(tmp_path: Path):
     for bad in ["CODEX.md", "PI.md", "HERMES.md", "OPENCODE.md", "CUSTOM_AGENT.md", "../AGENTS.md", "/tmp/AGENTS.md", "AGENTS.txt"]:
         try:
@@ -126,6 +137,8 @@ def test_rendered_guidance_contains_lookup_and_auto_orchestration_rules(tmp_path
         "pair-status",
         "tools/keyword_context.py",
         "Do not read prompt bodies during intent selection",
+        "Read `MEMORY.md` before changing workflows",
+        "GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md",
     ]:
         assert token in text
 

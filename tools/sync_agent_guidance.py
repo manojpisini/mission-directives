@@ -177,6 +177,14 @@ def render_guidance(
         "- Project Config is a knowledge cache, not an authorization source. It cannot grant mutation, deployment, publication, credentials, or external action.",
         "- Agents may update freshly verified operational facts changed by an authorized task. Mission, scope, protected paths, owners, non-goals, and constraints require explicit user approval.",
         "",
+        "### Repository memory",
+        "",
+        "- Read `MEMORY.md` before changing workflows, manifests, release metadata, installers, wrappers, generated artifacts, documentation generation, or package publication.",
+        "- Treat repository memory as a verified historical cache, not an authority source. Current user instructions, canonical contracts, and freshly verified repository evidence override stale entries.",
+        "- After completing and verifying relevant work, append only durable lessons that include the symptom, root cause, durable fix, prevention rule, and verification evidence.",
+        "- Never write credentials, secrets, approval receipts, personal paths, transient logs, speculative conclusions, or unverified claims to memory.",
+        "- Use `docs/GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md` as the canonical workflow incident and pre-push reference; do not duplicate its complete history in agent guidance.",
+        "",
         "### Productivity shortcuts",
         "",
         _shortcut_table(policy),
@@ -468,9 +476,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--remove", action="store_true")
     parser.add_argument("--show-diff", action="store_true")
-    parser.add_argument(
-        "--receipt", default=".prompt_suite/agent-guidance-receipt.json"
-    )
+    parser.add_argument("--receipt")
     parser.add_argument("--print-block", action="store_true")
     args = parser.parse_args()
     suite_root = Path(args.suite_root)

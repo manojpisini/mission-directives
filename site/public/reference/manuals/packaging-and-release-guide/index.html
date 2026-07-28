@@ -15,6 +15,7 @@
 <p><code>pyproject.toml</code> defines the public <code>mission-directives</code> package, Python 3.11 minimum, <code>mission-directives</code> console entry point, runtime dependencies, and <code>MIT OR Apache-2.0</code> license expression. Hatchling builds the wheel and source distribution.</p>
 <p>The custom build hook reads <code>config/runtime_payload.json</code> and stages one temporary wheel payload under <code>src/mission_directives/_runtime</code>. It avoids a second tracked runtime copy and removes staging after the wheel build.</p>
 <h3>Local release checks</h3>
+<p>The authoritative pre-push and pre-tag sequence, including historical failure prevention, is <a href="/mission-directives/reference/manuals/github-actions-failure-history-and-pre-push-guide/">GitHub Actions Failure History and Pre-Push Guide</a>.</p>
 <div class="code-block code-block--flush"><div class="code-block__bar"><span>Reference</span><button class="copy-button">Copy</button></div><pre><code>python -m pytest
 python tools/build_manifest.py
 python tools/validate_suite.py

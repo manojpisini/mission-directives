@@ -8,6 +8,8 @@ The custom build hook reads `config/runtime_payload.json` and stages one tempora
 
 ## Local release checks
 
+The authoritative pre-push and pre-tag sequence, including historical failure prevention, is [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md).
+
 ```bash
 python -m pytest
 python tools/build_manifest.py

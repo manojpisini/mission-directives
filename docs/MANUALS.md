@@ -10,7 +10,7 @@ This index is the human navigation layer for the Mission Directives. The suite i
 | Package user | [Installation and Project Integration Guide](INSTALLATION_AND_PROJECT_INTEGRATION_GUIDE.md) | [Project Config Guide](PROJECT_CONFIG_GUIDE.md), [Local Output Viewer Guide](LOCAL_OUTPUT_VIEWER_GUIDE.md) |
 | Prompt author | [Prompt Body Authoring Guide](PROMPT_BODY_AUTHORING_GUIDE.md) | [Completion Criteria Guide](COMPLETION_CRITERIA_GUIDE.md), [Runtime Marker Protocol](RUNTIME_MARKER_PROTOCOL.md) |
 | Pair author | [Pair Authoring and Verification Guide](PAIR_AUTHORING_AND_VERIFICATION_GUIDE.md) | [Plan Review and Exact-Twin Execution Guide](PLAN_REVIEW_AND_EXACT_TWIN_EXECUTION_GUIDE.md), [Executive Decision Rules Guide](EXECUTIVE_DECISION_RULES_GUIDE.md) |
-| Runtime maintainer | [Architecture Guide](ARCHITECTURE_GUIDE.md) | [CI and Testing Guide](CI_AND_TESTING_GUIDE.md), [Prompt Body Validation Guide](PROMPT_BODY_VALIDATION_GUIDE.md) |
+| Runtime maintainer | [Architecture Guide](ARCHITECTURE_GUIDE.md) | [CI and Testing Guide](CI_AND_TESTING_GUIDE.md), [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md) |
 | Security reviewer | [Security Operations Guide](SECURITY_OPERATIONS_GUIDE.md) | [Tool Policy and Authorization Guide](TOOL_POLICY_AND_AUTHORIZATION_GUIDE.md), [Skill Supply-Chain Guide](SKILL_SUPPLY_CHAIN_GUIDE.md) |
 | Evaluation engineer | [Evaluation Manual](EVALUATION_MANUAL.md) | [Model Routing Guide](MODEL_ROUTING_GUIDE.md) |
 | Repository agent maintainer | [Root Agent Guidance and Keyword Routing Guide](ROOT_AGENT_GUIDANCE_AND_KEYWORD_ROUTING_GUIDE.md) | [Operator Guide](OPERATOR_GUIDE.md), [Auto-Prompts and Conditional Routing Guide](AUTO_PROMPTS_AND_CONDITIONAL_ROUTING_GUIDE.md) |
@@ -48,6 +48,7 @@ This index is the human navigation layer for the Mission Directives. The suite i
 - [Architecture Guide](ARCHITECTURE_GUIDE.md) — control plane, roles, artifacts, graph, policies, state machine, skills, models, and proof layers.
 - [Prompt Body Validation Guide](PROMPT_BODY_VALIDATION_GUIDE.md) — static body checks, semantic lint, report interpretation, and regression testing.
 - [CI and Testing Guide](CI_AND_TESTING_GUIDE.md) — local checks, pre-commit, CI order, deterministic proof, and manifest integrity.
+- [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md) — every historical validation failure, fixing commit, durable prevention rule, and required pre-push sequence.
 - [Evaluation Manual](EVALUATION_MANUAL.md) — healthy, problematic, adversarial, pair, skill, model, rollback, and golden-run evaluations.
 - [Telemetry and Observability Guide](TELEMETRY_AND_OBSERVABILITY_GUIDE.md) — run metrics, privacy, dashboards, drift, and outcome-linked learning.
 

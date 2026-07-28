@@ -98,10 +98,12 @@ python tools/sync_agent_guidance.py \
   --print-block
 ```
 
-The source-repository tool default is:
+The source-repository tool writes no receipt by default. Request one explicitly when operational evidence is required:
 
-```text
-.prompt_suite/agent-guidance-receipt.json
+```bash
+python tools/sync_agent_guidance.py \
+  --project-root /path/to/project \
+  --receipt .prompt_suite/agent-guidance-receipt.json
 ```
 
 Packaged project initialization writes the managed receipt to `.mission-directives/state/agent-guidance-receipt.json` instead.

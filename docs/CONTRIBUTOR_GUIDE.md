@@ -90,6 +90,8 @@ Also add:
 
 Run `python tools/build_manifest.py`, `python -m pytest`, `python tools/validate_suite.py`, `uv build`, and `python tools/package_smoke.py dist`. Tag publication uses PyPI Trusted Publishing; do not add repository or workflow secrets for a long-lived PyPI token.
 
+Before pushing or tagging, complete the ordered environment, audit, test, reproducibility, manifest, package, wrapper, and site procedure in [GitHub Actions Failure History and Pre-Push Guide](GITHUB_ACTIONS_FAILURE_HISTORY_AND_PRE_PUSH_GUIDE.md). Read root `MEMORY.md` before workflow or release work and append only verified durable lessons after validation.
+
 ## Derived artifacts
 
 The following should be generated rather than hand-maintained where tools exist:
