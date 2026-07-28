@@ -3,8 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml"><img src="https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml/badge.svg" alt="Validate Mission Directives" /></a>
-  <a href="https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml"><img src="https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml/badge.svg" alt="Deploy documentation" /></a>
+  <a href="https://github.com/manojpisini/mission-directives/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/manojpisini/mission-directives/validate.yml?branch=main&amp;label=CI" alt="CI" /></a>
+  <a href="https://github.com/manojpisini/mission-directives/actions/workflows/deploy-docs.yml"><img src="https://img.shields.io/github/actions/workflow/status/manojpisini/mission-directives/deploy-docs.yml?branch=main&amp;label=Docs" alt="Docs" /></a>
+  <a href="https://pypi.org/project/mission-directives/"><img src="https://img.shields.io/pypi/v/mission-directives?label=PyPI" alt="PyPI" /></a>
+  <a href="https://pypi.org/project/mission-directives/"><img src="https://img.shields.io/pypi/pyversions/mission-directives?label=Python" alt="Python" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-5c7451?label=License" alt="MIT OR Apache-2.0" /></a>
 </p>
 
 <p align="center">

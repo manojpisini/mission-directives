@@ -1,15 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
-  <title id="title">Mission Directives inventory visualization</title>
-  <desc id="desc">A horizontal bar visualization of prompts, atomic routes, composite scenarios, reciprocal pairs, and manuals.</desc>
-  <rect width="1000" height="360" rx="24" fill="#fffdf9"/>
-  <rect x="1" y="1" width="998" height="358" rx="24" fill="none" stroke="#d9dfd2"/>
-  <text x="48" y="58" fill="#1d201b" font-family="-apple-system, Segoe UI, sans-serif" font-size="24" font-weight="750">Repository inventory</text>
-  <text x="48" y="84" fill="#667064" font-family="-apple-system, Segoe UI, sans-serif" font-size="14">Current release 2.0.2 surfaces, shown with a zero-baseline horizontal scale.</text>
-  <g font-family="-apple-system, Segoe UI, sans-serif" font-size="14">
-    <g transform="translate(48 122)"><text x="0" y="20" fill="#394038" font-weight="700">Canonical prompts</text><rect x="210" y="4" width="640" height="20" rx="4" fill="#e7eee2"/><rect x="210" y="4" width="640" height="20" rx="4" fill="#5f7b51"/><text x="875" y="20" fill="#1d201b" font-weight="800">257</text></g>
-    <g transform="translate(48 166)"><text x="0" y="20" fill="#394038" font-weight="700">Atomic routes</text><rect x="210" y="4" width="640" height="20" rx="4" fill="#e7eee2"/><rect x="210" y="4" width="640" height="20" rx="4" fill="#7f956f"/><text x="875" y="20" fill="#1d201b" font-weight="800">257</text></g>
-    <g transform="translate(48 210)"><text x="0" y="20" fill="#394038" font-weight="700">Composite scenarios</text><rect x="210" y="4" width="640" height="20" rx="4" fill="#e7eee2"/><rect x="210" y="4" width="274" height="20" rx="4" fill="#9aa98c"/><text x="875" y="20" fill="#1d201b" font-weight="800">110</text></g>
-    <g transform="translate(48 254)"><text x="0" y="20" fill="#394038" font-weight="700">Repository manuals</text><rect x="210" y="4" width="640" height="20" rx="4" fill="#e7eee2"/><rect x="210" y="4" width="160" height="20" rx="4" fill="#b7c4ad"/><text x="875" y="20" fill="#1d201b" font-weight="800">64</text></g>
-    <g transform="translate(48 298)"><text x="0" y="20" fill="#394038" font-weight="700">Reciprocal pairs</text><rect x="210" y="4" width="640" height="20" rx="4" fill="#e7eee2"/><rect x="210" y="4" width="80" height="20" rx="4" fill="#465a3d"/><text x="875" y="20" fill="#1d201b" font-weight="800">32</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 334" role="img" aria-labelledby="title desc">
+  <title id="title">Mission Directives repository inventory</title>
+  <desc id="desc">A transparent horizontal comparison of prompts, routes, scenarios, manuals, and reciprocal pairs.</desc>
+  <style>
+    .heading,.label,.value{fill:#17211c}.copy{fill:#5f6c63}.track{fill:#e3e9df}.bar-a{fill:#5c7451}.bar-b{fill:#7f956f}.bar-c{fill:#9aa98c}.bar-d{fill:#b7c4ad}.bar-e{fill:#465a3d}.rule{stroke:#a8ba9b}
+    @media (prefers-color-scheme: dark){.heading,.label,.value{fill:#ffffff}.copy{fill:#d8dfd7}.track{fill:#273129}.bar-a{fill:#a6c099}.bar-b{fill:#8faa82}.bar-c{fill:#76946a}.bar-d{fill:#637e59}.bar-e{fill:#c4d8bb}.rule{stroke:#53624e}}
+  </style>
+  <text class="heading" x="42" y="42" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="25" font-weight="750">Repository inventory</text>
+  <text class="copy" x="42" y="70" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="14">Release 2.0.2 surfaces on a shared zero-baseline scale.</text>
+  <path class="rule" d="M42 92H958" fill="none"/>
+  <g font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="14">
+    <g transform="translate(42 112)"><text class="label" x="0" y="20" font-weight="700">Canonical prompts</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-a" x="220" y="4" width="650" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">257</text></g>
+    <g transform="translate(42 154)"><text class="label" x="0" y="20" font-weight="700">Atomic routes</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-b" x="220" y="4" width="650" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">257</text></g>
+    <g transform="translate(42 196)"><text class="label" x="0" y="20" font-weight="700">Composite scenarios</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-c" x="220" y="4" width="278" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">110</text></g>
+    <g transform="translate(42 238)"><text class="label" x="0" y="20" font-weight="700">Repository manuals</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-d" x="220" y="4" width="162" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">64</text></g>
+    <g transform="translate(42 280)"><text class="label" x="0" y="20" font-weight="700">Reciprocal pairs</text><rect class="track" x="220" y="4" width="650" height="18" rx="4"/><rect class="bar-e" x="220" y="4" width="81" height="18" rx="4"/><text class="value" x="894" y="20" font-weight="800">32</text></g>
   </g>
 </svg>

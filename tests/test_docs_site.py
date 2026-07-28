@@ -70,14 +70,54 @@ def test_site_uses_canonical_brand_assets_and_onboarding_pages():
     assert "assets/readme/mission-directives-banner.svg" not in readme
 
 
+def test_landing_and_documentation_headers_share_navigation_vocabulary():
+    landing = (SITE / "src" / "pages" / "index.astro").read_text(encoding="utf-8")
+    docs = (PUBLIC / "docs.html").read_text(encoding="utf-8")
+    links = (
+        ("getting-started.html", "Start"),
+        ("installation.html", "Install"),
+        ("docs.html", "Docs"),
+        ("contributing.html", "Contribute"),
+        ("reference.html", "Reference"),
+    )
+    for target, label in links:
+        assert f'href="{target}">{label}</a>' in landing
+        assert f'href="/mission-directives/{target}">{label}</a>' in docs
+
+
+def test_readme_branding_is_adaptive_transparent_and_license_aware():
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    for fragment in (
+        "label=CI",
+        "label=Docs",
+        "label=PyPI",
+        "label=Python",
+        "MIT%20OR%20Apache--2.0",
+    ):
+        assert fragment in readme
+
+    for name in ("routing-flow.svg", "inventory.svg"):
+        svg = (ROOT / "assets" / "readme" / name).read_text(encoding="utf-8")
+        assert '@media (prefers-color-scheme: dark)' in svg
+        assert "#ffffff" in svg
+        assert '<rect width="1000"' not in svg
+
+    logo = (ROOT / "assets" / "images" / "mission_directives_full_logo_lateral.svg").read_text(
+        encoding="utf-8"
+    )
+    assert '@media (prefers-color-scheme: dark)' in logo
+    assert "fill: #ffffff !important" in logo
+
+
 def test_docs_site_is_sectioned_and_visual():
     docs = (PUBLIC / "docs.html").read_text(encoding="utf-8")
     guides = (PUBLIC / "guides.html").read_text(encoding="utf-8")
     manuals = (PUBLIC / "manuals.html").read_text(encoding="utf-8")
     reference = (PUBLIC / "reference.html").read_text(encoding="utf-8")
 
-    assert "System overview infographic" in docs
-    assert "assets/infographics/mission-directives-overview.png" in docs
+    assert "System overview infographic" not in docs
+    assert "assets/infographics/mission-directives-overview.png" not in docs
+    assert not (PUBLIC / "assets" / "infographics" / "mission-directives-overview.png").exists()
     assert "assets/diagrams/routing-system.svg" in docs
     assert "Guide library" in guides
     assert "Manual taxonomy" in manuals

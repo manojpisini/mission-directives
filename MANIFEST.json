@@ -78,8 +78,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12685,
-      "sha256": "58509eaa7eeb092850317d668b60e445a26ca7832a67f7e954f4d065da80c5a0"
+      "bytes": 13158,
+      "sha256": "1570999c36edb2f7c44229b0bf9350ea992032356e529818baeb98c7b381ee6e"
     },
     {
       "path": "RELEASE_ID",
@@ -113,8 +113,8 @@
     },
     {
       "path": "assets/images/mission_directives_full_logo_lateral.svg",
-      "bytes": 19176,
-      "sha256": "38ff93617cc366a9266870d475f18e4fad8840555c7abcc4912a7e640449e14d"
+      "bytes": 19306,
+      "sha256": "44f725c770338b347edb986fa620dc4bdb2b6e0ccb0284995b7d6298a6fd726d"
     },
     {
       "path": "assets/images/mission_directives_logo.svg",
@@ -128,18 +128,18 @@
     },
     {
       "path": "assets/readme/divider.svg",
-      "bytes": 362,
-      "sha256": "d7cd1fb8d86125ac428a5c24567894e44441362d9750bbf2b72ec8b0d9eb34fc"
+      "bytes": 521,
+      "sha256": "11ce90b3fbc61aa3e113f182fd4f46edeae679088d4dd91fca31d1b4b12d1a5d"
     },
     {
       "path": "assets/readme/inventory.svg",
-      "bytes": 2447,
-      "sha256": "24261c244479596c3cc1cf6ecb5f79468c802046f2ffae7affc55d2ba4e85a17"
+      "bytes": 2769,
+      "sha256": "fcb7042f0b391180a82d7c3226f4c12132cb0a792022ad72ca4ed36d519d99d5"
     },
     {
       "path": "assets/readme/routing-flow.svg",
-      "bytes": 2922,
-      "sha256": "0f505d24b12cc0ea58c7d41d27da6b68a33615922c16119a5608ca3720ec2844"
+      "bytes": 3141,
+      "sha256": "7a679d97dd31c7daeebbf69b89342a8f4cc3d41bdc9715deaacb3779470c3471"
     },
     {
       "path": "catalog.json",
@@ -11658,8 +11658,8 @@
     },
     {
       "path": "site/public/assets/brand/mission_directives_full_logo_lateral.svg",
-      "bytes": 19176,
-      "sha256": "38ff93617cc366a9266870d475f18e4fad8840555c7abcc4912a7e640449e14d"
+      "bytes": 19306,
+      "sha256": "44f725c770338b347edb986fa620dc4bdb2b6e0ccb0284995b7d6298a6fd726d"
     },
     {
       "path": "site/public/assets/brand/mission_directives_logo.svg",
@@ -11693,8 +11693,8 @@
     },
     {
       "path": "site/public/docs.html",
-      "bytes": 9477,
-      "sha256": "1936dc1c981fa2a30d2fdfc8bce5063dce82d25b4171a266f064b811aab21912"
+      "bytes": 9127,
+      "sha256": "e9ce97f1d919625731a7c223c7dd6c389c743811fcc8696361dd305215912da1"
     },
     {
       "path": "site/public/favicon.svg",
@@ -12063,8 +12063,8 @@
     },
     {
       "path": "site/public/styles.css",
-      "bytes": 41043,
-      "sha256": "944aea7a7eb687abc47ab3003d7784a5c9b1a7306501d550a3d9cbc80cfd38d3"
+      "bytes": 40890,
+      "sha256": "65557088348d000917a4f59c8ab89fd18a7f77d83743d8877346ecdd2ae4e515"
     },
     {
       "path": "site/scripts/check-links.mjs",
@@ -12073,13 +12073,13 @@
     },
     {
       "path": "site/scripts/generate-reference.mjs",
-      "bytes": 38351,
-      "sha256": "0823eec7bae7a916802e6ce30937967aa7305c04d1426c2439477c1439ea6965"
+      "bytes": 38152,
+      "sha256": "f027eef29ddc814561414432e2ebfec875625f0ff48ab7c520911c9d4e994286"
     },
     {
       "path": "site/src/pages/index.astro",
-      "bytes": 8650,
-      "sha256": "e9e78a1a6b13ec3a08ca8b22d8a7d6f449def9f87d62a80e208717d6f489558c"
+      "bytes": 8655,
+      "sha256": "db412fd0d560b858c76825ff919e0eeecf7e5b247ccab820750655a3cb66ca7a"
     },
     {
       "path": "site/tsconfig.json",
@@ -12528,8 +12528,8 @@
     },
     {
       "path": "tests/test_docs_site.py",
-      "bytes": 4897,
-      "sha256": "60d04e9a9fbc40c6e031ced357b744d088f0b3d176cbaf9b95a4939e4c776c7f"
+      "bytes": 6431,
+      "sha256": "7a4ffcd4938672cab593aa1befa148f689d31d9a93a8ccf12cedb89b9e5baafa"
     },
     {
       "path": "tests/test_documentation_integrity.py",

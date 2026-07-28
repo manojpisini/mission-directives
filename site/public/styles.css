@@ -964,9 +964,7 @@ tbody td {
 
 /* Standalone project landing page */
 .landing-page {
-  background:
-    radial-gradient(circle at 84% 8%, rgba(221, 229, 216, 0.58), transparent 28rem),
-    var(--bg);
+  background: var(--bg);
 }
 .landing-shell {
   width: min(1180px, calc(100% - 40px));
@@ -981,24 +979,26 @@ tbody td {
   backdrop-filter: blur(12px);
 }
 .landing-header__inner {
-  min-height: 72px;
-  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  min-height: var(--topbar-height);
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 18px;
 }
 .landing-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 18px;
 }
-.landing-nav > a:not(.button) {
+.landing-nav > a {
   color: var(--ink-muted);
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: none;
 }
-.landing-nav > a:not(.button):hover { color: var(--ink); }
-.landing-nav__docs { padding: 9px 13px; }
+.landing-nav > a:hover { color: var(--ink); }
 .landing-hero { padding: 92px 0 78px; }
 .landing-hero__grid {
   display: grid;
@@ -1259,10 +1259,10 @@ tbody td {
 
 /* Sectioned documentation refinements */
 .docs-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.9fr);
-  gap: 24px;
-  align-items: center;
+  display: block;
+}
+.docs-hero > div {
+  max-width: 720px;
 }
 .visual-figure {
   margin: 0;
@@ -1383,7 +1383,6 @@ tbody td {
   margin: 18px 0;
 }
 @media (max-width: 940px) {
-  .docs-hero,
   .technical-map {
     grid-template-columns: 1fr;
   }

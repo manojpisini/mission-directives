@@ -1,39 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 286" role="img" aria-labelledby="title desc">
   <title id="title">Mission Directives routing flow</title>
-  <desc id="desc">A five stage route, explain, plan, execute, verify workflow diagram.</desc>
-  <rect width="1000" height="320" rx="24" fill="#fffdf9"/>
-  <rect x="1" y="1" width="998" height="318" rx="24" fill="none" stroke="#d9dfd2"/>
-  <text x="48" y="58" fill="#1d201b" font-family="-apple-system, Segoe UI, sans-serif" font-size="24" font-weight="750">Smallest coherent execution graph</text>
-  <text x="48" y="85" fill="#667064" font-family="-apple-system, Segoe UI, sans-serif" font-size="14">Resolve intent from metadata first, then load only the prompt bodies required for the verified outcome.</text>
-  <g font-family="Cascadia Code, SFMono-Regular, Menlo, Consolas, monospace">
-    <g transform="translate(48 130)">
-      <rect width="130" height="104" rx="10" fill="#f4f7f0" stroke="#cbd7c3"/>
-      <text x="18" y="34" fill="#5f7b51" font-size="13" font-weight="700">01</text>
-      <text x="18" y="61" fill="#111827" font-size="20" font-weight="800">ROUTE</text>
-      <text x="18" y="84" fill="#46515f" font-size="12">intent + IDs</text>
+  <desc id="desc">A transparent four-stage route, explain, plan, and verify workflow diagram.</desc>
+  <style>
+    .heading,.stage{fill:#17211c}.copy,.detail{fill:#5f6c63}.index{fill:#5c7451}.node{fill:#eef2ec;fill-opacity:.82;stroke:#a8ba9b}.rule{stroke:#a8ba9b}.accent{stroke:#5c7451;fill:#5c7451}
+    @media (prefers-color-scheme: dark){.heading,.stage{fill:#ffffff}.copy,.detail{fill:#d8dfd7}.index{fill:#b9d0ad}.node{fill:#17211c;fill-opacity:.6;stroke:#7f9a72}.rule{stroke:#53624e}.accent{stroke:#9fba92;fill:#9fba92}}
+  </style>
+  <text class="heading" x="42" y="42" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="25" font-weight="750">Smallest coherent execution graph</text>
+  <text class="copy" x="42" y="70" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="14">Resolve metadata first. Load only the bodies required for a verified outcome.</text>
+  <path class="rule" d="M42 92H958" fill="none"/>
+  <g font-family="Cascadia Code,SFMono-Regular,Menlo,Consolas,monospace">
+    <g transform="translate(42 118)">
+      <rect class="node" width="152" height="104" rx="8"/>
+      <text class="index" x="18" y="29" font-size="12" font-weight="700">01</text>
+      <text class="stage" x="18" y="58" font-size="20" font-weight="800">ROUTE</text>
+      <text class="detail" x="18" y="82" font-size="12">intent + IDs</text>
     </g>
-    <path d="M198 182H273" stroke="#5f7b51" stroke-width="4"/><path d="M273 182l-14-9v18z" fill="#5f7b51"/>
-    <g transform="translate(296 130)">
-      <rect width="130" height="104" rx="10" fill="#f4f7f0" stroke="#cbd7c3"/>
-      <text x="18" y="34" fill="#5f7b51" font-size="13" font-weight="700">02</text>
-      <text x="18" y="61" fill="#111827" font-size="20" font-weight="800">EXPLAIN</text>
-      <text x="18" y="84" fill="#46515f" font-size="12">modes + risk</text>
+    <g transform="translate(296 118)">
+      <rect class="node" width="152" height="104" rx="8"/>
+      <text class="index" x="18" y="29" font-size="12" font-weight="700">02</text>
+      <text class="stage" x="18" y="58" font-size="20" font-weight="800">EXPLAIN</text>
+      <text class="detail" x="18" y="82" font-size="12">mode + risk</text>
     </g>
-    <path d="M446 182H521" stroke="#5f7b51" stroke-width="4"/><path d="M521 182l-14-9v18z" fill="#5f7b51"/>
-    <g transform="translate(544 130)">
-      <rect width="130" height="104" rx="10" fill="#f4f7f0" stroke="#cbd7c3"/>
-      <text x="18" y="34" fill="#5f7b51" font-size="13" font-weight="700">03</text>
-      <text x="18" y="61" fill="#111827" font-size="20" font-weight="800">PLAN</text>
-      <text x="18" y="84" fill="#46515f" font-size="12">bounded graph</text>
+    <g transform="translate(550 118)">
+      <rect class="node" width="152" height="104" rx="8"/>
+      <text class="index" x="18" y="29" font-size="12" font-weight="700">03</text>
+      <text class="stage" x="18" y="58" font-size="20" font-weight="800">PLAN</text>
+      <text class="detail" x="18" y="82" font-size="12">bounded graph</text>
     </g>
-    <path d="M694 182H769" stroke="#5f7b51" stroke-width="4"/><path d="M769 182l-14-9v18z" fill="#5f7b51"/>
-    <g transform="translate(792 130)">
-      <rect width="130" height="104" rx="10" fill="#f4f7f0" stroke="#cbd7c3"/>
-      <text x="18" y="34" fill="#5f7b51" font-size="13" font-weight="700">04</text>
-      <text x="18" y="61" fill="#111827" font-size="20" font-weight="800">VERIFY</text>
-      <text x="18" y="84" fill="#46515f" font-size="12">receipts</text>
+    <g transform="translate(804 118)">
+      <rect class="node" width="152" height="104" rx="8"/>
+      <text class="index" x="18" y="29" font-size="12" font-weight="700">04</text>
+      <text class="stage" x="18" y="58" font-size="20" font-weight="800">VERIFY</text>
+      <text class="detail" x="18" y="82" font-size="12">evidence</text>
     </g>
   </g>
-  <path d="M48 270H952" stroke="#d9dfd2"/>
-  <text x="48" y="294" fill="#667064" font-family="-apple-system, Segoe UI, sans-serif" font-size="12">Authority boundary: audit, plan, draft, apply-safe, apply-approved, or verify-only.</text>
+  <g class="accent" stroke-width="3" stroke-linecap="square">
+    <path d="M214 170H274"/><path d="M274 170l-10-7v14z" stroke="none"/>
+    <path d="M468 170H528"/><path d="M528 170l-10-7v14z" stroke="none"/>
+    <path d="M722 170H782"/><path d="M782 170l-10-7v14z" stroke="none"/>
+  </g>
+  <path class="rule" d="M42 248H958" fill="none"/>
+  <text class="copy" x="42" y="273" font-family="Inter,-apple-system,Segoe UI,sans-serif" font-size="12">Authority remains explicit: audit, plan, draft, apply-safe, apply-approved, or verify-only.</text>
 </svg>
