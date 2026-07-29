@@ -78,6 +78,17 @@ def test_site_uses_canonical_brand_assets_and_onboarding_pages():
 def test_landing_and_documentation_headers_share_navigation_vocabulary():
     landing = (SITE / "src" / "pages" / "index.astro").read_text(encoding="utf-8")
     docs = (PUBLIC / "docs.html").read_text(encoding="utf-8")
+    for html in (landing, docs):
+        assert 'class="topbar"' in html
+        assert 'class="topbar__inner"' in html
+        assert 'class="search-trigger"' in html
+        assert 'class="top-actions"' in html
+        assert 'aria-label="Primary navigation"' in html
+        assert "mission_directives_logo_dark.svg" in html
+        assert "mission_directives_logo_light.svg" in html
+
+    assert "landing-header" not in landing
+    assert "landing-nav" not in landing
     links = (
         ("getting-started.html", "Start"),
         ("installation.html", "Install"),

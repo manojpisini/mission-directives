@@ -158,7 +158,7 @@ async function collectManuals() {
 }
 
 function topbar(section = 'Documentation') {
-  return `<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="${base}index.html"><img alt="" aria-hidden="true" class="brand__logo" src="${base}assets/brand/mission_directives_full_logo_lateral_dark.svg"/><span class="brand__section">${escapeHtml(section)}</span></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button><nav aria-label="Documentation links" class="top-actions"><a href="${base}getting-started.html">Start</a><a href="${base}installation.html">Install</a><a href="${base}docs.html">Docs</a><a href="${base}contributing.html">Contribute</a><a href="${base}reference.html">Reference</a></nav></div></header>`;
+  return `<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="${base}index.html"><img alt="" aria-hidden="true" class="brand__logo" src="${base}assets/brand/mission_directives_full_logo_lateral_dark.svg"/><span class="brand__section">${escapeHtml(section)}</span></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button><nav aria-label="Primary navigation" class="top-actions"><a href="${base}getting-started.html">Start</a><a href="${base}installation.html">Install</a><a href="${base}docs.html">Docs</a><a href="${base}contributing.html">Contribute</a><a href="${base}reference.html">Reference</a></nav></div></header>`;
 }
 
 function sidebar(active) {
@@ -174,7 +174,8 @@ function shell({ title, description, active, section, content, toc = '' }) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="${escapeHtml(description)}" />
   <title>${escapeHtml(title)} — Mission Directives</title>
-  <link rel="icon" href="${base}favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="${base}assets/brand/mission_directives_logo_dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="${base}assets/brand/mission_directives_logo_light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
   <link rel="stylesheet" href="${base}styles.css" />
 </head>
 <body class="docs-page">

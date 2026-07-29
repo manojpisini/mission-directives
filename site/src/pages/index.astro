@@ -5,23 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Mission Directives project overview and introduction." />
   <title>Mission Directives — Project Overview</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/mission_directives_logo_dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="assets/brand/mission_directives_logo_light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="landing-page">
   <a class="skip-link" href="#landing-main">Skip to content</a>
 
-  <header class="landing-header">
-    <div class="landing-shell landing-header__inner">
+  <header class="topbar">
+    <div class="topbar__inner">
       <a class="brand" href="index.html" aria-label="Mission Directives home">
         <img class="brand__logo" src="assets/brand/mission_directives_full_logo_lateral_dark.svg" alt="" aria-hidden="true" />
         <span class="brand__section">Project Overview</span>
       </a>
 
-      <nav class="landing-nav" aria-label="Primary navigation">
+      <button aria-haspopup="dialog" class="search-trigger" id="searchTrigger">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        <span>Search this page</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+
+      <nav class="top-actions" aria-label="Primary navigation">
         <a href="getting-started.html">Start</a>
         <a href="installation.html">Install</a>
-        <a class="landing-nav__docs" href="docs.html">Docs</a>
+        <a href="docs.html">Docs</a>
         <a href="contributing.html">Contribute</a>
         <a href="reference.html">Reference</a>
       </nav>
@@ -29,7 +36,7 @@
   </header>
 
   <main id="landing-main">
-    <section class="landing-hero">
+    <section class="landing-hero" data-title="Project overview" id="overview">
       <div class="landing-shell landing-hero__grid">
         <div class="landing-hero__copy">
           <div class="eyebrow-row">
@@ -72,7 +79,7 @@
       </div>
     </section>
 
-    <section class="landing-section" id="about">
+    <section class="landing-section" data-title="Why the project exists" id="about">
       <div class="landing-shell">
         <div class="landing-section__heading">
           <span class="section-kicker">Project background</span>
@@ -100,7 +107,7 @@
       </div>
     </section>
 
-    <section class="landing-section landing-section--tinted" id="system">
+    <section class="landing-section landing-section--tinted" data-title="How Mission Directives works" id="system">
       <div class="landing-shell landing-explainer">
         <div class="landing-section__heading">
           <span class="section-kicker">How it works</span>
@@ -118,7 +125,7 @@
       </div>
     </section>
 
-    <section class="landing-section" id="metrics">
+    <section class="landing-section" data-title="Project data" id="metrics">
       <div class="landing-shell">
         <div class="landing-section__heading landing-section__heading--center">
           <span class="section-kicker">Project data</span>
@@ -150,7 +157,7 @@
       </div>
     </section>
 
-    <section class="landing-cta">
+    <section class="landing-cta" data-title="Getting started" id="start">
       <div class="landing-shell landing-cta__inner">
         <div>
           <span class="section-kicker">Documentation</span>
@@ -168,5 +175,17 @@
       <span>Documentation site</span>
     </div>
   </footer>
+
+  <div aria-label="Search this page" aria-modal="true" class="search-dialog" hidden id="searchDialog" role="dialog">
+    <div class="search-dialog__panel">
+      <div class="search-input-wrap">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        <input autocomplete="off" id="searchInput" placeholder="Search this page..." type="search" />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+  <script is:inline src="app.js"></script>
 </body>
 </html>

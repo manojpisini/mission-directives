@@ -3,7 +3,7 @@
   const searchTrigger = document.getElementById('searchTrigger');
   const searchInput = document.getElementById('searchInput');
   const searchResults = document.getElementById('searchResults');
-  const sections = [...document.querySelectorAll('.section-block')];
+  const sections = [...document.querySelectorAll('[data-title][id]')];
   const navLinks = [...document.querySelectorAll('.docs-nav a')];
   const tocLinks = [...document.querySelectorAll('.toc a')];
   const mobileMenu = document.getElementById('mobileMenu');
