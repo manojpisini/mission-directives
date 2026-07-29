@@ -53,6 +53,7 @@ MODES = {
     "VERIFY_ONLY",
 }
 CONTROL = ["MD-00", "MD-01", "MD-03", "MD-04", "MD-02"]
+EXISTING_OUTPUT_DECISIONS = {"ask", "reuse", "rerun"}
 
 
 def load_json(name: str) -> dict[str, Any]:
@@ -1197,6 +1198,80 @@ def simulated_states(r: dict[str, Any], mode: str) -> list[str]:
     return dedupe(states)
 
 
+def _declared_artifact_path(declared: str, project_root: Path) -> Path:
+    raw = Path(declared)
+    if raw.is_absolute() or not raw.parts or any(part in {"", ".", ".."} for part in raw.parts):
+        raise ValueError(f"Invalid declared artifact path: {declared}")
+    try:
+        from project_runtime import OUTPUT_CATEGORIES, artifact_path
+    except ImportError:
+        from tools.project_runtime import OUTPUT_CATEGORIES, artifact_path
+    if raw.parts[0] in OUTPUT_CATEGORIES:
+        return artifact_path(raw, project_root)
+    candidate = project_root / raw
+    try:
+        candidate.resolve().relative_to(project_root.resolve())
+    except ValueError as exc:
+        raise ValueError(f"Declared artifact path escapes project root: {declared}") from exc
+    return candidate
+
+
+def artifact_reuse_preflight(
+    prompts: list[str], project_root: Path, decision: str = "ask"
+) -> dict[str, Any]:
+    if decision not in EXISTING_OUTPUT_DECISIONS:
+        raise ValueError(f"Invalid existing-output decision: {decision}")
+    existing = []
+    for prompt_id in prompts:
+        primary = BY_ID[prompt_id].get("output_contract", {}).get("primary_artifact", {})
+        declared = primary.get("path")
+        if not declared:
+            continue
+        path = _declared_artifact_path(declared, project_root)
+        if not path.exists() and not path.is_symlink():
+            continue
+        safe_file = path.is_file() and not path.is_symlink()
+        size = path.stat().st_size if safe_file else 0
+        try:
+            display_path = path.relative_to(project_root).as_posix()
+        except ValueError:
+            display_path = str(path)
+        existing.append(
+            {
+                "prompt_id": prompt_id,
+                "path": display_path,
+                "format": primary.get("format"),
+                "size_bytes": size,
+                "structurally_valid": safe_file and size > 0,
+                "semantic_verification_required": True,
+                "decision": {
+                    "ask": "pending_user_decision",
+                    "reuse": "reuse_pending_verification",
+                    "rerun": "rerun_authorized",
+                }[decision],
+            }
+        )
+    invalid = [row for row in existing if not row["structurally_valid"]]
+    if decision == "reuse" and invalid:
+        paths = ", ".join(row["path"] for row in invalid)
+        raise ValueError(f"Existing output cannot be reused safely: {paths}")
+    withheld = {row["prompt_id"] for row in existing} if decision != "rerun" else set()
+    questions = []
+    if decision == "ask" and existing:
+        ids = ", ".join(f"{row['prompt_id']} ({row['path']})" for row in existing)
+        questions.append(
+            f"Existing output was found for {ids}. Reuse it after current-scope verification, or rerun and replace it?"
+        )
+    return {
+        "policy": "ask_before_rerun",
+        "requested_decision": decision,
+        "requires_user_decision": bool(questions),
+        "questions": questions,
+        "existing_outputs": existing,
+        "execution_prompts": [prompt_id for prompt_id in prompts if prompt_id not in withheld],
+    }
+
+
 def plan(
     target: str,
     mode: str | None = None,
@@ -1205,6 +1280,7 @@ def plan(
     budget_prompts: int = 20,
     assurance_profile: str | None = None,
     dry_run: bool = False,
+    existing_output: str = "ask",
 ) -> dict[str, Any]:
     e = explain(target)
     r = resolve(target)
@@ -1219,6 +1295,7 @@ def plan(
         + uuid.uuid4().hex[:12]
     )
     project_root = Path(root).resolve()
+    reuse = artifact_reuse_preflight(prompts, project_root, existing_output)
     manifest = {
         "schema_version": "1.0",
         "suite_version": CAT.get("suite_version"),
@@ -1231,6 +1308,8 @@ def plan(
         "assurance_profile": ap,
         "state": "configured",
         "selected_prompts": prompts,
+        "execution_prompts": reuse["execution_prompts"],
+        "artifact_reuse": {key: value for key, value in reuse.items() if key != "execution_prompts"},
         "route_explanation": e,
         "scenario_phases": r.get("phases", []),
         "paired_workflows": paired_workflows(prompts),
@@ -1706,6 +1785,12 @@ def main():
     x.add_argument("--budget-prompts", type=int, default=20)
     x.add_argument("--assurance", choices=["FAST", "STANDARD", "HIGH_ASSURANCE"])
     x.add_argument("--dry-run", action="store_true")
+    x.add_argument(
+        "--existing-output",
+        choices=sorted(EXISTING_OUTPUT_DECISIONS),
+        default="ask",
+        help="ask before rerunning existing outputs, reuse after verification, or explicitly rerun",
+    )
     x = sub.add_parser("freeze-pair-handoff")
     x.add_argument("manifest")
     x.add_argument("planning_prompt_id")
@@ -1854,6 +1939,7 @@ def main():
                 a.budget_prompts,
                 a.assurance,
                 a.dry_run,
+                a.existing_output,
             )
         elif a.cmd == "freeze-pair-handoff":
             result = freeze_pair_handoff(

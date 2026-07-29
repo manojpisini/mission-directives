@@ -214,6 +214,7 @@ def render_guidance(
         "- **Do not load every prompt**, every department pack entry, or every skill into context.",
         "- Do not read prompt bodies during intent selection; `tools/keyword_context.py`, policy metadata, catalogs, and scenarios own that stage.",
         "- Load the five control prompts once per run, then only selected capabilities and required handoffs.",
+        "- Before executing a scenario, inspect `artifact_reuse` from `md.py plan`. When a declared output already exists, withhold that prompt, ask whether to reuse or rerun, verify before reuse, and rerun only after explicit user choice.",
         "- Prefer a composite scenario when it already expresses the complete workflow; otherwise start from one primary prompt.",
         "- Invoke a skill through `MD-192` and `MD-196` only when its genuine capability is needed. Installed does not mean required.",
         "- Discover, install, or create a skill through `MD-193` to `MD-195` only when native execution cannot satisfy the acceptance criteria cleanly.",

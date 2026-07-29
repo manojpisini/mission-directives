@@ -22,6 +22,40 @@ def test_plan_resolves_logical_output_under_installed_artifact_root(tmp_path):
  assert (runtime/'reports/feature.json').is_file()
  assert out['project_context']['stale_fields']==[]
 
+def test_plan_asks_before_rerunning_existing_prompt_output(tmp_path):
+ runtime=tmp_path/'.mission-directives'; runtime.mkdir()
+ (runtime/'config.json').write_text('{}',encoding='utf-8')
+ prompt=next(p for p in md.CAT['prompts'] if p['output_contract']['primary_artifact']['path'].startswith('results/'))
+ logical=Path(prompt['output_contract']['primary_artifact']['path'])
+ artifact=runtime/logical; artifact.parent.mkdir(parents=True); artifact.write_text('verified candidate\n',encoding='utf-8')
+
+ pending=md.plan(prompt['prompt_id'],root=str(tmp_path))
+ existing=next(row for row in pending['artifact_reuse']['existing_outputs'] if row['prompt_id']==prompt['prompt_id'])
+ assert existing['path']==f'.mission-directives/{logical.as_posix()}'
+ assert existing['structurally_valid'] is True
+ assert prompt['prompt_id'] not in pending['execution_prompts']
+ assert pending['artifact_reuse']['requires_user_decision'] is True
+ assert pending['artifact_reuse']['questions']
+
+ rerun=md.plan(prompt['prompt_id'],root=str(tmp_path),existing_output='rerun')
+ assert prompt['prompt_id'] in rerun['execution_prompts']
+ assert rerun['artifact_reuse']['requires_user_decision'] is False
+
+def test_scenario_withholds_existing_control_outputs(tmp_path):
+ runtime=tmp_path/'.mission-directives'; runtime.mkdir()
+ (runtime/'config.json').write_text('{}',encoding='utf-8')
+ for prompt_id in ('MD-00','MD-01'):
+  logical=Path(md.BY_ID[prompt_id]['output_contract']['primary_artifact']['path'])
+  artifact=tmp_path/logical; artifact.parent.mkdir(parents=True,exist_ok=True); artifact.write_text(f'{prompt_id}\n',encoding='utf-8')
+
+ pending=md.plan('C-63',root=str(tmp_path))
+ existing={row['prompt_id']: row for row in pending['artifact_reuse']['existing_outputs']}
+ assert {'MD-00','MD-01'} <= set(existing)
+ assert 'MD-00' not in pending['execution_prompts']
+ assert 'MD-01' not in pending['execution_prompts']
+ assert pending['artifact_reuse']['requires_user_decision'] is True
+ assert '.prompt_suite/control/project_context_and_run_configuration.md' in pending['artifact_reuse']['questions'][0]
+
 def test_select_model_refuses_unmeasured():
  out=md.select_model('MD-29','HIGH_ASSURANCE'); assert out['status']=='no_selection'
 

@@ -120,16 +120,17 @@ Use `@EVIDENCE:{id}` for sources or observations, `?UNKNOWN:{id}` for unresolved
 
 <routing_algorithm>
 1. Load `MD-00`, `MD-01`, `MD-03`, and `MD-04` once.
-2. Classify the request as discovery, investigation, planning, execution, validation, incident, gate, or full cycle.
-3. Evaluate conditional auto-prompts before production: use `MD-191` only for route-changing ambiguity, `MD-192` only for genuine skill fit, and `MD-197` plus `MD-198` only for finite or measurably improving repetition.
-4. Select standalone prompts when one prompt has a complete and coherent responsibility.
-5. Select a true pair only when execution directly consumes the investigative handoff.
-6. Inject cross-cutting capabilities from the change surface and risk profile.
-7. Run independent read-only investigations in parallel.
-8. Fan findings into one dependency-aware action graph.
-9. Serialize executions that share files, data, infrastructure, credentials, public contracts, or external side effects.
-10. Rerun affected investigators in `VERIFY_ONLY` when independent verification is needed.
-11. End with `MD-18` for release or milestone decisions.
+2. Preflight every selected prompt's declared primary output path. If output already exists, withhold that node, verify scope and freshness before reuse, and ask the user before any rerun or replacement.
+3. Classify the request as discovery, investigation, planning, execution, validation, incident, gate, or full cycle.
+4. Evaluate conditional auto-prompts before production: use `MD-191` only for route-changing ambiguity, `MD-192` only for genuine skill fit, and `MD-197` plus `MD-198` only for finite or measurably improving repetition.
+5. Select standalone prompts when one prompt has a complete and coherent responsibility.
+6. Select a true pair only when execution directly consumes the investigative handoff.
+7. Inject cross-cutting capabilities from the change surface and risk profile.
+8. Run independent read-only investigations in parallel.
+9. Fan findings into one dependency-aware action graph.
+10. Serialize executions that share files, data, infrastructure, credentials, public contracts, or external side effects.
+11. Rerun affected investigators in `VERIFY_ONLY` when independent verification is needed.
+12. End with `MD-18` for release or milestone decisions.
 </routing_algorithm>
 
 <conditional_auto_prompt_policy>

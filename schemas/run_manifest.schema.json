@@ -61,6 +61,75 @@
       },
       "uniqueItems": true
     },
+    "execution_prompts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "artifact_reuse": {
+      "type": "object",
+      "required": [
+        "policy",
+        "requested_decision",
+        "requires_user_decision",
+        "questions",
+        "existing_outputs"
+      ],
+      "properties": {
+        "policy": {
+          "const": "ask_before_rerun"
+        },
+        "requested_decision": {
+          "enum": [
+            "ask",
+            "reuse",
+            "rerun"
+          ]
+        },
+        "requires_user_decision": {
+          "type": "boolean"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "existing_outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "prompt_id",
+              "path",
+              "size_bytes",
+              "structurally_valid",
+              "semantic_verification_required",
+              "decision"
+            ],
+            "properties": {
+              "prompt_id": {"type": "string"},
+              "path": {"type": "string"},
+              "format": {"type": ["string", "null"]},
+              "size_bytes": {"type": "integer", "minimum": 0},
+              "structurally_valid": {"type": "boolean"},
+              "semantic_verification_required": {"const": true},
+              "decision": {
+                "enum": [
+                  "pending_user_decision",
+                  "reuse_pending_verification",
+                  "rerun_authorized"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
     "paired_workflows": {
       "type": "array",
       "items": {

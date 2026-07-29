@@ -154,7 +154,7 @@ Use `@EVIDENCE:{id}` for sources or observations, `?UNKNOWN:{id}` for unresolved
 </required_artifacts>
 
 <handoff_rule>
-An executive prompt may consume only a frozen, current, internally consistent handoff. A changed source revision, environment, authorization, scope, or critical dependency invalidates the handoff.
+An executive prompt may consume only a frozen, current, internally consistent handoff. A changed source revision, environment, authorization, scope, or critical dependency invalidates the handoff. Existing output is a reuse candidate, not proof of validity: verify it against the current run before reuse, and obtain explicit user consent before rerunning or replacing it.
 </handoff_rule>
 <completion_criteria>
 Completion requires all of the following:

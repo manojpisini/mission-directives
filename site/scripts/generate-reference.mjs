@@ -50,7 +50,9 @@ function markdownToHtml(markdown, sourceRoot = 'docs') {
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
   const out = [];
   let paragraph = [];
-  let list = [];
+  let unorderedList = [];
+  let orderedList = [];
+  let orderedStart = 1;
   let table = [];
   let inCode = false;
   let code = [];
@@ -60,11 +62,19 @@ function markdownToHtml(markdown, sourceRoot = 'docs') {
     out.push(`<p>${inline(paragraph.join(' '), sourceRoot)}</p>`);
     paragraph = [];
   };
-  const flushList = () => {
-    if (!list.length) return;
-    out.push('<ul>' + list.map((item) => `<li>${inline(item, sourceRoot)}</li>`).join('') + '</ul>');
-    list = [];
+  const flushUnorderedList = () => {
+    if (!unorderedList.length) return;
+    out.push('<ul>' + unorderedList.map((item) => `<li>${inline(item, sourceRoot)}</li>`).join('') + '</ul>');
+    unorderedList = [];
   };
+  const flushOrderedList = () => {
+    if (!orderedList.length) return;
+    const start = orderedStart === 1 ? '' : ` start="${orderedStart}"`;
+    out.push(`<ol${start}>` + orderedList.map((item) => `<li>${inline(item, sourceRoot)}</li>`).join('') + '</ol>');
+    orderedList = [];
+    orderedStart = 1;
+  };
+  const flushLists = () => { flushUnorderedList(); flushOrderedList(); };
   const flushTable = () => {
     if (!table.length) return;
     const rows = table.filter((row) => !/^\s*\|?\s*:?-{3,}/.test(row));
@@ -76,7 +86,7 @@ function markdownToHtml(markdown, sourceRoot = 'docs') {
     }
     table = [];
   };
-  const flushAll = () => { flushParagraph(); flushList(); flushTable(); };
+  const flushAll = () => { flushParagraph(); flushLists(); flushTable(); };
 
   for (const line of lines) {
     if (line.startsWith('```')) {
@@ -90,7 +100,7 @@ function markdownToHtml(markdown, sourceRoot = 'docs') {
     }
     if (inCode) { code.push(line); continue; }
     if (!line.trim()) { flushAll(); continue; }
-    if (line.startsWith('|')) { flushParagraph(); flushList(); table.push(line); continue; }
+    if (line.startsWith('|')) { flushParagraph(); flushLists(); table.push(line); continue; }
     const heading = /^(#{1,4})\s+(.+)$/.exec(line);
     if (heading) {
       flushAll();
@@ -99,7 +109,18 @@ function markdownToHtml(markdown, sourceRoot = 'docs') {
       continue;
     }
     const bullet = /^[-*]\s+(.+)$/.exec(line);
-    if (bullet) { flushParagraph(); flushTable(); list.push(bullet[1]); continue; }
+    if (bullet) { flushParagraph(); flushOrderedList(); flushTable(); unorderedList.push(bullet[1]); continue; }
+    const ordered = /^(\d+)[.)]\s+(.+)$/.exec(line);
+    if (ordered) {
+      flushParagraph();
+      flushUnorderedList();
+      flushTable();
+      if (!orderedList.length) orderedStart = Number(ordered[1]);
+      orderedList.push(ordered[2]);
+      continue;
+    }
+    flushLists();
+    flushTable();
     paragraph.push(line.trim());
   }
   flushAll();
@@ -113,9 +134,10 @@ async function syncBrandAssets() {
 
 const categoryFor = (file, title) => {
   const name = `${file} ${title}`.toLowerCase();
-  if (name.includes('manual') || name.includes('operator') || name.includes('user')) return 'manual';
-  if (name.includes('guide') || name.includes('authoring') || name.includes('integration') || name.includes('routing') || name.includes('security')) return 'guide';
-  return 'reference';
+  if (/\bmanuals?\b/.test(name)) return 'manual';
+  if (/\bguides?\b/.test(name)) return 'guide';
+  if (/\breferences?\b|\bcatalog\b|\bprotocol\b|\bpolicy\b|\bstandard\b|\bindex\b|\bmatrix\b|\bcommands\b|\bboundaries\b|\blanes\b|\bconventions\b|\bmethods\b|\bstacks\b/.test(name)) return 'reference';
+  return 'other';
 };
 
 async function collectManuals() {
@@ -153,7 +175,7 @@ async function collectManuals() {
 }
 
 function topbar() {
-  return `<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="${base}index.html"><img alt="" aria-hidden="true" class="brand__logo" src="${base}assets/brand/mission_directives_full_logo_lateral_dark.svg"/></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button></div></header>`;
+  return `<header class="topbar"><div class="topbar__inner"><button aria-expanded="false" aria-label="Open navigation" class="icon-button mobile-menu" id="mobileMenu"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><a aria-label="Mission Directives home" class="brand" href="${base}index.html"><img alt="" aria-hidden="true" class="brand__logo" src="${base}assets/brand/mission_directives_logo_dark.svg"/></a><button aria-haspopup="dialog" class="search-trigger" id="searchTrigger"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search this page</span><kbd>Ctrl K</kbd></button></div></header>`;
 }
 
 function sidebar(active) {
@@ -176,7 +198,7 @@ function shell({ title, description, active, content, toc = '' }) {
 <body class="docs-page">
 <a class="skip-link" href="#main-content">Skip to content</a>
 ${topbar()}
-<div class="layout">${sidebar(active)}<main class="main" id="main-content"><div class="content-grid"><article class="doc-content">${content}</article>${toc}</div><footer class="footer"><img alt="Mission Directives" src="${base}assets/brand/mission_directives_wordmark_dark.svg"/><span>Documentation site</span></footer></main></div>
+<div class="layout">${sidebar(active)}<main class="main" id="main-content"><div class="content-grid"><article class="doc-content">${content}</article>${toc}</div><footer class="footer"><div class="footer__inner"><a aria-label="Mission Directives home" class="footer__brand" href="${base}index.html"><img alt="" aria-hidden="true" src="${base}assets/brand/mission_directives_wordmark_dark.svg"/></a><span>Documentation <span aria-hidden="true">&middot;</span> Version 2.0.3</span></div></footer></main></div>
 ${searchDialog()}
 <div class="sidebar-backdrop" hidden id="sidebarBackdrop"></div><script is:inline src="${base}app.js"></script>
 </body>
@@ -196,7 +218,7 @@ function routeDiagram() {
 }
 
 function libraryGrid(items) {
-  return `<div class="route-list">${items.map((manual) => `<a href="${base}reference/manuals/${manual.id}/"><span class="route-id">${manual.category.toUpperCase()}</span><span><strong>${escapeHtml(manual.title)}</strong><small>${escapeHtml(manual.description)}</small></span><span>→</span></a>`).join('\n')}</div>`;
+  return `<div class="route-list">${items.map((manual) => `<a href="${base}reference/manuals/${manual.id}/"><span class="route-id">${escapeHtml(manual.category.toUpperCase())}</span><span><strong>${escapeHtml(manual.title)}</strong><small>${escapeHtml(manual.description)}</small></span><span aria-hidden="true">→</span></a>`).join('\n')}</div>`;
 }
 
 function docsHome(manuals) {
@@ -216,15 +238,15 @@ function guidesPage(manuals) {
 }
 
 function manualsPage(manuals) {
-  const content = `<section class="docs-intro section-block" data-title="Manuals" id="manuals"><div class="eyebrow-row"><span class="eyebrow">Manuals</span><span class="pill">${manuals.length} pages</span></div><h1>Manuals</h1><p class="lead">Every root documentation file is rendered as a centered, readable manual page with consistent spacing and source provenance.</p></section>
-<section class="section-block" data-title="Manual taxonomy" id="manual-taxonomy"><div class="section-heading"><span class="section-kicker">Taxonomy</span><h2>Manual coverage by field</h2><p>The generated library covers operating practice, authoring standards, runtime contracts, integrations, verification, and maintenance.</p></div><div class="stats-grid"><div><strong>${manuals.filter((m) => m.category === 'manual').length}</strong><span>Manuals</span></div><div><strong>${manuals.filter((m) => m.category === 'guide').length}</strong><span>Guides</span></div><div><strong>${manuals.filter((m) => m.category === 'reference').length}</strong><span>Reference pages</span></div><div><strong>${manuals.length}</strong><span>Total docs</span></div></div></section>
-<section class="section-block" data-title="All manuals" id="all-manuals">${libraryGrid(manuals)}</section>`;
+  const manualPages = manuals.filter((manual) => manual.category === 'manual');
+  const content = `<section class="docs-intro section-block" data-title="Manuals" id="manuals"><div class="eyebrow-row"><span class="eyebrow">Manuals</span><span class="pill">${manualPages.length} pages</span></div><h1>Manuals</h1><p class="lead">Complete operating manuals rendered from canonical repository documentation with consistent spacing and source provenance.</p></section>
+<section class="section-block" data-title="Manual library" id="manual-library"><div class="section-heading"><span class="section-kicker">Library</span><h2>Repository manuals</h2><p>Long-form manuals for operators and maintainers.</p></div>${libraryGrid(manualPages)}</section>`;
   return shell({ title: 'Manuals', description: 'Mission Directives manual library.', active: 'manuals', content });
 }
 
 function referencePage(manuals) {
   const refs = manuals.filter((manual) => manual.category === 'reference');
-  const content = `<section class="docs-intro section-block" data-title="Reference" id="reference"><div class="eyebrow-row"><span class="eyebrow">Reference</span><span class="pill">Contracts</span></div><h1>Reference</h1><p class="lead">Command, marker, manifest, payload, and validation contracts for operators and maintainers.</p></section>
+  const content = `<section class="docs-intro section-block" data-title="Reference" id="reference"><div class="eyebrow-row"><span class="eyebrow">Reference</span><span class="pill">${refs.length} pages</span></div><h1>Reference</h1><p class="lead">Command, marker, manifest, payload, and validation contracts for operators and maintainers.</p></section>
 <section class="section-block" data-title="Runtime boundary" id="runtime-boundary"><div class="section-heading"><span class="section-kicker">Boundary</span><h2>Runtime payload stays lean</h2><p>Only execution-critical files install into a working project. Source-only validators, imported provenance, and site generation remain in the repository.</p></div>${visualAsset('assets/diagrams/runtime-payload.svg', 'Runtime payload diagram', 'Installed files are separated from repository validation and documentation sources.')}</section>
 <section class="section-block" data-title="Markers" id="markers"><div class="section-heading"><span class="section-kicker">Markers</span><h2>Evidence marker contract</h2></div><div class="marker-grid"><div><code>@EVIDENCE:{id}</code><span>Observed source or input.</span></div><div><code>?UNKNOWN:{id}</code><span>Material uncertainty.</span></div><div><code>#FINDING:{id}</code><span>Evidence-backed conclusion.</span></div><div><code>+ACTION:{id}</code><span>Bounded action or recommendation.</span></div><div><code>=VERIFY:{id}</code><span>Acceptance check and result.</span></div><div><code>!STOP:{reason}</code><span>Required halt condition.</span></div></div></section>
 <section class="section-block" data-title="Catalog reference" id="catalog-reference"><div class="section-heading"><span class="section-kicker">Catalog</span><h2>Generated library references</h2><p>These pages are generated from canonical repository data so prompt, scenario, and pair explanations stay aligned with validation.</p></div><div class="doc-hub-grid"><a class="doc-hub-card" href="${base}prompts.html"><span class="doc-hub-card__eyebrow">Prompts</span><h3>Prompt catalog</h3><p>Every canonical prompt with modes, contracts, tags, artifacts, and usage boundaries.</p></a><a class="doc-hub-card" href="${base}scenarios.html"><span class="doc-hub-card__eyebrow">Scenarios</span><h3>Scenario catalog</h3><p>Atomic routes and composite workflows with graph, phase, lock, and gate detail.</p></a><a class="doc-hub-card" href="${base}pairs.html"><span class="doc-hub-card__eyebrow">Pairs</span><h3>Prompt pairs</h3><p>Planning/execution relationships and the handoff contract between reciprocal twins.</p></a></div></section>
@@ -293,13 +315,18 @@ function pairsPage(catalog) {
   return shell({ title: 'Pairs', description: 'Mission Directives planning and execution prompt pairs explained.', active: 'pairs', content });
 }
 function manualPage(manual) {
-  const content = `<section class="docs-intro section-block manual-hero" data-title="${escapeHtml(manual.title)}" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository manual</span><span class="pill">docs/${escapeHtml(manual.file)}</span></div><h1>${escapeHtml(manual.title)}</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p><div class="manual-meta"><span>${escapeHtml(manual.category)}</span><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/${escapeHtml(manual.file)}" rel="noreferrer" target="_blank">Source file</a></div></section><section class="section-block manual-body" data-title="Manual content" id="content">${manual.body}</section><nav class="page-nav"><a href="${base}manuals.html"><small>Back</small><strong>All manuals</strong></a><a href="${base}docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav>`;
-  return shell({ title: manual.title, description: `${manual.title} from the Mission Directives documentation set.`, active: 'manuals', content });
+  const section = {
+    guide: { active: 'guides', href: 'guides.html', label: 'All guides' },
+    manual: { active: 'manuals', href: 'manuals.html', label: 'All manuals' },
+    reference: { active: 'reference', href: 'reference.html', label: 'All references' },
+  }[manual.category] ?? { active: 'docs', href: 'docs.html', label: 'Documentation home' };
+  const content = `<section class="docs-intro section-block manual-hero" data-title="${escapeHtml(manual.title)}" id="manual"><div class="eyebrow-row"><span class="eyebrow">Repository ${escapeHtml(manual.category)}</span><span class="pill">docs/${escapeHtml(manual.file)}</span></div><h1>${escapeHtml(manual.title)}</h1><p class="lead">Canonical documentation rendered from the repository <code>docs/</code> folder.</p><div class="manual-meta"><span>${escapeHtml(manual.category)}</span><a href="https://github.com/manojpisini/mission-directives/blob/main/docs/${escapeHtml(manual.file)}" rel="noreferrer" target="_blank">Source file</a></div></section><section class="section-block manual-body" data-title="Document content" id="content">${manual.body}</section><nav aria-label="Documentation routing" class="page-nav"><a class="button button--secondary" href="${base}${section.href}">${section.label}</a><a class="button button--primary" href="${base}docs.html">Documentation home</a></nav>`;
+  return shell({ title: manual.title, description: `${manual.title} from the Mission Directives documentation set.`, active: section.active, content });
 }
 
 function onboardingPage({ title, description, active, source, sourceLabel, sourceUrl, sourceRoot = 'docs' }) {
   const body = markdownToHtml(source.replace(/^#\s+.+\r?\n/, ''), sourceRoot);
-  const content = `<section class="docs-intro section-block manual-hero" data-title="${escapeHtml(title)}" id="overview"><div class="eyebrow-row"><span class="eyebrow">Start here</span><span class="pill">v2.0.3</span></div><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(description)}</p><div class="manual-meta"><span>${escapeHtml(sourceLabel)}</span><a href="${escapeHtml(sourceUrl)}" rel="noreferrer" target="_blank">Source file</a></div></section><section class="section-block manual-body" data-title="${escapeHtml(title)} content" id="content">${body}</section><nav class="page-nav"><a href="${base}getting-started.html"><small>Start</small><strong>Getting started</strong></a><a href="${base}docs.html"><small>Docs</small><strong>Documentation home</strong></a></nav>`;
+  const content = `<section class="docs-intro section-block manual-hero" data-title="${escapeHtml(title)}" id="overview"><div class="eyebrow-row"><span class="eyebrow">Start here</span><span class="pill">v2.0.3</span></div><h1>${escapeHtml(title)}</h1><p class="lead">${escapeHtml(description)}</p><div class="manual-meta"><span>${escapeHtml(sourceLabel)}</span><a href="${escapeHtml(sourceUrl)}" rel="noreferrer" target="_blank">Source file</a></div></section><section class="section-block manual-body" data-title="${escapeHtml(title)} content" id="content">${body}</section><nav aria-label="Documentation routing" class="page-nav"><a class="button button--secondary" href="${base}getting-started.html">Getting started</a><a class="button button--primary" href="${base}docs.html">Documentation home</a></nav>`;
   return shell({ title, description, active, content });
 }
 

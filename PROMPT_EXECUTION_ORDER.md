@@ -231,6 +231,8 @@ python tools/md.py validate-run .prompt_suite/runs/prompt-pipeline.json
 ## Failure and resume semantics
 
 - A failed stage records evidence, partial artifacts, and whether rollback is required.
+- Before scheduling a selected prompt, inspect its declared primary output path. Existing output withholds that prompt from execution until the user chooses reuse or rerun.
+- Reuse requires current-scope verification; file presence alone is not completion evidence. Rerun or replacement requires explicit user choice through `--existing-output rerun`.
 - Resume only from a legal state with current evidence and valid approvals.
 - Partial success never becomes full completion silently.
 - Any changed source, requirement, metric, brand token, permission, model, dependency, or approval invalidates affected downstream artifacts.

@@ -140,6 +140,8 @@ mission-directives explain C-108
 mission-directives plan C-108 --mode AUDIT_ONLY --root . --dry-run
 ```
 
+`plan` checks every selected prompt's declared primary output before scheduling it. When output already exists, the default `--existing-output ask` withholds that prompt and returns one reuse-or-rerun question. Use `--existing-output reuse` only after current-scope verification, or `--existing-output rerun` when the user explicitly approves replacement.
+
 Installed-project routing dispatches through the pinned `.mission-directives/runtime`, so a later global package upgrade cannot silently change project behavior.
 
 ## Project Config and Outputs

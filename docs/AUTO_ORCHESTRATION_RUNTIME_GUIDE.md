@@ -14,6 +14,10 @@ python tools/md.py auto-compile request.json
 
 The result separates active prompts, conditional branch prompts, rejected capabilities, skill status, and loop eligibility.
 
+## Existing output preflight
+
+Scenario planning checks each selected prompt's declared primary output path before execution. Existing output is withheld by default and reported in `artifact_reuse.existing_outputs`; `execution_prompts` contains only nodes that may run immediately. Ask the returned question, then re-plan with `--existing-output reuse` after current-scope verification or `--existing-output rerun` after explicit user approval. Never infer validity from file presence alone.
+
 ## Questioning behavior
 
 `MD-191` may wrap any task but asks only questions whose answers change the graph, authority, evidence lane, output medium, budget, skill need, loop eligibility, or acceptance decision. It reuses answered context and normally asks one question at a time.

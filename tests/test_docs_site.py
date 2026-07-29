@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,7 +33,7 @@ def test_site_uses_project_pages_base_and_static_shell():
     html = (SITE / "src" / "pages" / "index.astro").read_text(encoding="utf-8")
     assert 'href="styles.css"' in html
     assert "Mission Directives" in html
-    assert "assets/brand/mission_directives_full_logo_lateral_dark.svg" in html
+    assert "assets/brand/mission_directives_logo_dark.svg" in html
     assert "brand__mark" not in html
 
 
@@ -69,7 +70,8 @@ def test_site_uses_canonical_brand_assets_and_onboarding_pages():
     ):
         html = (PUBLIC / name).read_text(encoding="utf-8")
         assert heading in html
-        assert "assets/brand/mission_directives_full_logo_lateral_dark.svg" in html
+        assert 'class="brand__logo"' in html
+        assert "assets/brand/mission_directives_logo_dark.svg" in html
         assert "brand__mark" not in html
 
     contributing = (PUBLIC / "contributing.html").read_text(encoding="utf-8")
@@ -98,6 +100,8 @@ def test_landing_and_documentation_headers_keep_brand_and_search_only():
         assert html.index('class="brand"') < html.index('class="search-trigger"')
 
     assert "width: 260px;" in styles
+    assert "width: min(1180px, calc(100% - 40px));" in styles
+    assert "width: 40px;" in styles
     assert "margin-left: auto;" in styles
     assert ".top-actions" not in styles
 
@@ -158,10 +162,39 @@ def test_docs_site_is_sectioned_and_visual():
     assert not (PUBLIC / "assets" / "infographics" / "mission-directives-overview.png").exists()
     assert "assets/diagrams/routing-system.svg" in docs
     assert "Guide library" in guides
-    assert "Manual taxonomy" in manuals
+    assert "Manual library" in manuals
+    assert "Manual taxonomy" not in manuals
     assert "Runtime payload diagram" in reference
     assert "assets/diagrams/runtime-payload.svg" in reference
     assert "reference/manuals/user-manual/" in manuals
+
+    for html, category in (
+        (guides, "GUIDE"),
+        (manuals, "MANUAL"),
+        (reference, "REFERENCE"),
+    ):
+        labels = set(re.findall(r'<span class="route-id">([^<]+)</span>', html))
+        assert labels == {category}
+
+
+def test_generated_articles_render_ordered_lists_and_category_routing():
+    guide = (
+        PUBLIC
+        / "reference"
+        / "manuals"
+        / "auto-prompts-and-conditional-routing-guide"
+        / "index.html"
+    ).read_text(encoding="utf-8")
+    styles = (PUBLIC / "styles.css").read_text(encoding="utf-8")
+
+    assert "<ol>" in guide
+    assert "<li>freeze a machine-readable skill requirement" in guide
+    assert "All guides" in guide
+    assert 'class="active" href="/mission-directives/guides.html"' in guide
+    assert 'aria-label="Documentation routing" class="page-nav"' in guide
+    assert 'class="footer__inner"' in guide
+    assert ".manual-body ol" in styles
+    assert "grid-template-columns: repeat(2, minmax(0, 1fr));" in styles
 
 
 def test_site_generation_is_canonical_and_build_driven():
