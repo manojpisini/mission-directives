@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.government_and_policy.government-public-notice-drafting
 prompt_slug: government-public-notice-drafting
 identity_status: permanent

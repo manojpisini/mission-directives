@@ -57,7 +57,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.strategy.requirements-scope-and-success-criteria
 prompt_slug: requirements-scope-and-success-criteria
 identity_status: permanent

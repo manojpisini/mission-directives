@@ -1,7 +1,7 @@
 <!-- BEGIN MD MANAGED GUIDANCE -->
 ## MD prompt routing and productivity guidance
 
-This managed section connects **AGENTS.md** to Mission Directives **2.0.2** at `.`. Preserve instructions outside this block. Regenerate this block with `python tools/sync_agent_guidance.py --project-root .` instead of editing it manually.
+This managed section connects **AGENTS.md** to Mission Directives **2.0.3** at `.`. Preserve instructions outside this block. Regenerate this block with `python tools/sync_agent_guidance.py --project-root .` instead of editing it manually.
 
 **Scope note:** Only AGENTS.md and CLAUDE.md are managed. Other agent instruction filenames are intentionally excluded.
 

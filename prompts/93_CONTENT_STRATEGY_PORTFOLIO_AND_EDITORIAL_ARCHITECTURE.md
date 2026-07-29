@@ -57,7 +57,7 @@ output_contract:
   - path: artifacts/content_strategy_portfolio_and_editorial_architecture/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.content_strategy.content-strategy-portfolio-and-editorial-architecture
 prompt_slug: content-strategy-portfolio-and-editorial-architecture
 identity_status: permanent

@@ -62,7 +62,7 @@ output_contract:
   - path: reports/corporate_strategy_portfolio_and_capital_allocation/corporate_strategy_portfolio_and_capital_allocation_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.strategy.corporate-strategy-portfolio-and-capital-allocation
 prompt_slug: corporate-strategy-portfolio-and-capital-allocation
 identity_status: permanent

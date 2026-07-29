@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.manufacturing_and_quality.manufacturing-root-cause-quality-issue
 prompt_slug: manufacturing-root-cause-quality-issue
 identity_status: permanent

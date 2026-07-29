@@ -1,5 +1,5 @@
 {
-  "suite_version": "2.0.2",
+  "suite_version": "2.0.3",
   "installation_root": "<project>/.mission-directives",
   "runtime_root": "<project>/.mission-directives/runtime",
   "project_config": "<project>/.mission-directives/project.json",

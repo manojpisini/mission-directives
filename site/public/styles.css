@@ -69,8 +69,7 @@ code, pre { font-family: "SFMono-Regular", ui-monospace, SFMono-Regular, Menlo, 
   backdrop-filter: blur(10px);
 }
 .topbar__inner {
-  display: grid;
-  grid-template-columns: auto minmax(220px, 1fr) auto auto;
+  display: flex;
   align-items: center;
   gap: 18px;
   max-width: 1600px;
@@ -98,19 +97,13 @@ code, pre { font-family: "SFMono-Regular", ui-monospace, SFMono-Regular, Menlo, 
   height: auto;
   flex: 0 0 auto;
 }
-.brand__section {
-  padding-left: 12px;
-  border-left: 1px solid var(--border);
-  color: var(--ink-muted);
-  font-size: 12px;
-  white-space: nowrap;
-}
-
 .search-trigger {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  width: min(520px, 100%);
+  flex: 0 0 260px;
+  width: 260px;
+  margin-left: auto;
   padding: 10px 12px;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -130,17 +123,6 @@ code, pre { font-family: "SFMono-Regular", ui-monospace, SFMono-Regular, Menlo, 
   color: var(--ink-muted);
   font-size: 11px;
 }
-.top-actions {
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
-}
-.top-actions a {
-  color: var(--ink-muted);
-  font-size: 12px;
-  text-decoration: none;
-}
-.top-actions a:hover { color: var(--ink-soft); }
 .github-link { display: inline-flex; align-items: center; gap: 8px; }
 .github-link svg { width: 16px; height: 16px; fill: currentColor; }
 
@@ -909,7 +891,7 @@ tbody td {
 }
 
 @media (max-width: 860px) {
-  .topbar__inner { grid-template-columns: auto auto 1fr auto; gap: 10px; padding: 0 16px; }
+  .topbar__inner { gap: 10px; padding: 0 16px; }
   .mobile-menu {
     display: grid;
     place-items: center;
@@ -921,12 +903,10 @@ tbody td {
     cursor: pointer;
   }
   .mobile-menu svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; }
-  .brand__section { display: none; }
   .brand__logo { width: 148px; }
-  .search-trigger { justify-self: end; width: 36px; height: 36px; padding: 0; justify-content: center; }
+  .search-trigger { flex-basis: 36px; width: 36px; height: 36px; padding: 0; justify-content: center; }
   .search-trigger span,
   .search-trigger kbd,
-  .top-actions a:not(.github-link),
   .github-link span { display: none; }
   .layout { display: block; }
   .sidebar {
@@ -957,7 +937,6 @@ tbody td {
   .flow-illustration { grid-template-columns: 1fr; }
   .flow-arrow { transform: rotate(90deg); }
   .stats-grid { grid-template-columns: 1fr; }
-  .topbar__inner { grid-template-columns: auto auto 1fr auto; }
   .page-nav { flex-direction: column; align-items: stretch; gap: 12px; }
   .page-nav a:last-child { align-items: flex-start; }
 }

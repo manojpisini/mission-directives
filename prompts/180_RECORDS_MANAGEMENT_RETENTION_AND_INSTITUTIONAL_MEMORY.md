@@ -62,7 +62,7 @@ output_contract:
   - path: reports/records_management_retention_and_institutional_memory/records_management_retention_and_institutional_memory_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.knowledge_management.records-management-retention-and-institutional-memory
 prompt_slug: records-management-retention-and-institutional-memory
 identity_status: permanent

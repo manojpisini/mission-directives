@@ -1,49 +1,83 @@
+# Python bytecode and tool caches
 __pycache__/
-*.pyc
+*.py[cod]
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+.hypothesis/
+.tox/
+.nox/
+
+# Coverage and profiling output
 .coverage
+.coverage.*
 coverage/
 htmlcov/
+
+# Local Python environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python package build output
+dist/
+build/
+*.egg-info/
+pip-wheel-metadata/
+src/mission_directives/_runtime/
+
+# JavaScript and Astro output
+node_modules/
+site/dist/
+site/.astro/
+.npm/
+.pnpm-store/
+
+# Logs, temporary files, editors, and operating systems
 *.log
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+
+# Local environment values and secrets
+.env
+.env.*
+!.env.example
+
+# Agent and operator state: local by design
+.agents/
+.claude/
+.codex/
+.mission-directives/
+.omx/
+AGENTS.local.md
+CLAUDE.local.md
+MEMORY.md
+
+# Mission Directives runtime evidence: generated, reproducible, and local
 .prompt_suite/
 BODY_QUALITY_AUDIT.json
 BODY_QUALITY_AUDIT.md
 EVALUATION_STATUS.json
 TEST_RESULTS.json
 VALIDATION.json
-
 agent-guidance-receipt.json
 
-.agents/
-.claude/
-.codex/
-.mission-directives/
-.omx/
-.venv/
-AGENTS.local.md
-CLAUDE.local.md
-MEMORY.md
-venv/
-
-# Astro generated and dependency trees
-site/node_modules/
-site/dist/
-site/.astro/
+# Local imports, experiments, and scratch exports
 prompt_imports/
 infographics/
 infographic/
-blog/
-blog.zip
-
-# Python package build output
-dist/
-build/
-*.egg-info/
-src/mission_directives/_runtime/

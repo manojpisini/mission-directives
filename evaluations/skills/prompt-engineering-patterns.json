@@ -60,5 +60,14 @@
     "security and permission review",
     "human or routed verification for consequential output"
   ],
-  "live_status": "not_run"
+  "live_status": "pass",
+  "last_result": {
+    "status": "pass",
+    "skill_id": "prompt-engineering-patterns",
+    "checked_at": "2026-07-29T04:30:09.007795+00:00",
+    "output_dir": "D:\\Manoj\\Project\\07_Specialized\\Multi-Core\\mission_directives\\.prompt_suite\\runtime\\skill-conformance-input\\prompt-engineering-patterns",
+    "errors": [],
+    "lock_commit": "c4b82b0ad771190355eb8e204b1329732a18449a",
+    "artifact_output_remains_quarantined": false
+  }
 }

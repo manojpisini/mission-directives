@@ -61,7 +61,7 @@ output_contract:
   - markdown
   - json
   - graph_spec
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.knowledge_design.content-graph-knowledge-architecture-and-repurposing-system
 prompt_slug: content-graph-knowledge-architecture-and-repurposing-system
 identity_status: permanent

@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.hospitality_and_travel.itinerary-operations-plan
 prompt_slug: itinerary-operations-plan
 identity_status: permanent

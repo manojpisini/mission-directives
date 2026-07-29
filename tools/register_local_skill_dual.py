@@ -86,7 +86,7 @@ def main() -> int:
             context={'skill_id': skill_id, 'source_tree_sha256': source_digest},
         )
     except Exception:
-        # Telemetry is observational and must never obstruct a local transaction.
+        # Telemetry is a spectator here; it does not get to brick a valid local install.
         pass
     tui.step('source verified')
 

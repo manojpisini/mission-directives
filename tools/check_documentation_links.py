@@ -39,7 +39,7 @@ def _link_target(raw: str) -> str:
     if value.startswith("<") and ">" in value:
         value = value[1 : value.index(">")]
     else:
-        # Markdown permits an optional title after a whitespace delimiter.
+        # Markdown may tack on a title after whitespace; that extra garnish is not the URL.
         value = value.split(maxsplit=1)[0]
     return value.strip()
 

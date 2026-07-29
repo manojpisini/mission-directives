@@ -1,6 +1,6 @@
 {
   "status": "dry_run",
-  "suite_version": "2.0.2",
+  "suite_version": "2.0.3",
   "catalog_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
   "prompt_id": "MD-00",
   "sequence": 0,

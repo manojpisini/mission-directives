@@ -48,7 +48,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.governance.project-health-completeness-and-release-readiness-gate
 prompt_slug: project-health-completeness-and-release-readiness-gate
 identity_status: permanent

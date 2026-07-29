@@ -222,6 +222,12 @@ live_skill_pass = sum(
 human_reviewed_golden_runs = len(
     list((ROOT / "evaluations/golden_runs").glob("*/human_reviewed_manifest.json"))
 )
+limitations = [
+    "No external language-model benchmark was run in this build environment.",
+    "Reference runs are machine-generated contracts, not human-reviewed golden outputs.",
+]
+if not live_skill_pass:
+    limitations.append("No third-party skill was installed or executed.")
 status = {
     "status": "pass_with_external_measurements_pending" if not errors else "fail",
     "claim_scope": "fixture coverage, schema validity, deterministic routing, and recovery-state behavior only",
@@ -241,11 +247,7 @@ status = {
     "machine_reference_runs": len(
         list((ROOT / "evaluations/golden_runs").glob("C-*/manifest.json"))
     ),
-    "limitations": [
-        "No external language-model benchmark was run in this build environment.",
-        "No third-party skill was installed or executed.",
-        "Reference runs are machine-generated contracts, not human-reviewed golden outputs.",
-    ],
+    "limitations": limitations,
     "errors": errors,
 }
 target = (

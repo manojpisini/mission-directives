@@ -3,7 +3,7 @@ template_id: decks/project-kickoff
 title: Project Kickoff Deck
 family: presentation
 status: stable
-suite_version: 2.0.2
+suite_version: 2.0.3
 required_contracts:
   - core/run-manifest
   - core/evidence-register

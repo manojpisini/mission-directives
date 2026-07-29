@@ -66,7 +66,7 @@ output_contract:
   - json
   - prompt_spec
   - evaluation_fixture
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.prompt_engineering.prompt-review-evaluation-and-adversarial-testing
 prompt_slug: prompt-review-evaluation-and-adversarial-testing
 identity_status: permanent

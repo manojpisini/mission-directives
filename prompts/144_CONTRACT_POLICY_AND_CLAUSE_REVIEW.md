@@ -66,7 +66,7 @@ output_contract:
   - json
   - docx_spec
   - pdf_spec
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.legal.contract-policy-and-clause-review
 prompt_slug: contract-policy-and-clause-review
 identity_status: permanent

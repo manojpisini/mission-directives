@@ -63,7 +63,7 @@ output_contract:
   - path: reports/frontend_visual_design_interaction_and_experience_polish/frontend_visual_design_interaction_and_experience_polish_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.web_design.frontend-visual-design-interaction-and-experience-polish
 prompt_slug: frontend-visual-design-interaction-and-experience-polish
 identity_status: permanent

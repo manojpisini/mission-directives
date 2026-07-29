@@ -1,0 +1,84 @@
+{
+  "golden_run_id": "C-24-human-reviewed",
+  "target": "C-24",
+  "review_status": "human_reviewed",
+  "promoted_at": "2026-07-29T04:33:02.602095+00:00",
+  "review_receipt": {
+    "reviewer": "repository owner via current task conversation",
+    "decision": "approve_golden",
+    "review_statement": "Success proceed with the rest",
+    "reviewed_evidence": "GitHub Actions run 29949228240 summary showing successful Ubuntu, Windows, and macOS validation jobs for commit 568ae7c",
+    "rationale": "The user inspected the successful three-platform workflow summary and explicitly authorized continuation. The run was reverified against the GitHub Actions API before promotion.",
+    "scope": "C-24 release-readiness validation evidence only"
+  },
+  "run": {
+    "run_id": "github-actions-29949228240",
+    "target": "C-24",
+    "title": "Three-platform release-readiness validation",
+    "state": "closed",
+    "started_at": "2026-07-22T19:01:40Z",
+    "completed_at": "2026-07-22T19:10:40Z",
+    "source": {
+      "repository": "manojpisini/mission-directives",
+      "event": "push",
+      "workflow": "Validate Mission Directives",
+      "run_url": "https://github.com/manojpisini/mission-directives/actions/runs/29949228240",
+      "commit_sha": "568ae7c56424f34e1ffb0dbebca9875bc7ce585f",
+      "tree_sha": "2e2fcb326a16de609f51e6c3002386b7510f59c0",
+      "commit_url": "https://github.com/manojpisini/mission-directives/commit/568ae7c56424f34e1ffb0dbebca9875bc7ce585f"
+    },
+    "evidence_snapshots": [
+      {
+        "snapshot_id": "github-run-29949228240",
+        "captured_at": "2026-07-29T04:32:00Z",
+        "status": "verified_live",
+        "source": "GitHub Actions API via gh run view",
+        "run_conclusion": "success",
+        "head_sha": "568ae7c56424f34e1ffb0dbebca9875bc7ce585f"
+      }
+    ],
+    "artifacts": [
+      {
+        "kind": "workflow-verification-record",
+        "platform": "ubuntu-latest",
+        "job_id": 89022422562,
+        "url": "https://github.com/manojpisini/mission-directives/actions/runs/29949228240/job/89022422562",
+        "status": "success"
+      },
+      {
+        "kind": "workflow-verification-record",
+        "platform": "windows-latest",
+        "job_id": 89022422565,
+        "url": "https://github.com/manojpisini/mission-directives/actions/runs/29949228240/job/89022422565",
+        "status": "success"
+      },
+      {
+        "kind": "workflow-verification-record",
+        "platform": "macos-latest",
+        "job_id": 89022422768,
+        "url": "https://github.com/manojpisini/mission-directives/actions/runs/29949228240/job/89022422768",
+        "status": "success"
+      }
+    ],
+    "verification": {
+      "status": "pass",
+      "jobs_passed": 3,
+      "platforms": [
+        "ubuntu-latest",
+        "windows-latest",
+        "macos-latest"
+      ],
+      "verified_steps": [
+        "deterministic tests",
+        "template validation",
+        "release consistency",
+        "generated reproducibility",
+        "full validation",
+        "applicable wrapper smoke tests"
+      ]
+    },
+    "residuals": [
+      "This historical run predates later action-version upgrades and did not upload workflow artifacts; its job and commit records remain available on GitHub."
+    ]
+  }
+}

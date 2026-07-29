@@ -60,7 +60,7 @@ output_contract:
   - path: reports/supply_chain_inventory_logistics_and_resilience_planning/supply_chain_inventory_logistics_and_resilience_planning_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.supply_chain.supply-chain-inventory-logistics-and-resilience-planning
 prompt_slug: supply-chain-inventory-logistics-and-resilience-planning
 identity_status: permanent

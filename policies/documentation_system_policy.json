@@ -1,5 +1,5 @@
 {
-  "suite_version": "2.0.2",
+  "suite_version": "2.0.3",
   "policy_id": "MD-DOCS-1",
   "rules": [
     "Documentation is a linked system, not disconnected files.",

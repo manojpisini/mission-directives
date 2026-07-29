@@ -38,7 +38,7 @@ def test_site_uses_project_pages_base_and_static_shell():
 
 def test_site_uses_canonical_brand_assets_and_onboarding_pages():
     brand = PUBLIC / "assets" / "brand"
-    for name in (
+    source_names = (
         "mission_directives_full_logo_dark.svg",
         "mission_directives_full_logo_lateral_dark.svg",
         "mission_directives_full_logo_lateral_light.svg",
@@ -47,13 +47,20 @@ def test_site_uses_canonical_brand_assets_and_onboarding_pages():
         "mission_directives_logo_light.svg",
         "mission_directives_wordmark_dark.svg",
         "mission_directives_wordmark_light.svg",
-    ):
+    )
+    for name in source_names:
         assert (ROOT / "assets" / "images" / name).exists()
-        assert (brand / name).exists()
 
-    assert (PUBLIC / "favicon.svg").read_bytes() == (
-        ROOT / "assets" / "images" / "mission_directives_logo_dark.svg"
-    ).read_bytes()
+    deployed_names = {
+        "mission_directives_full_logo_lateral_dark.svg",
+        "mission_directives_logo_dark.svg",
+        "mission_directives_logo_light.svg",
+        "mission_directives_wordmark_dark.svg",
+    }
+    assert {path.name for path in brand.glob("*.svg")} == deployed_names
+    for name in deployed_names:
+        assert (brand / name).read_bytes() == (ROOT / "assets" / "images" / name).read_bytes()
+    assert not (PUBLIC / "favicon.svg").exists()
 
     for name, heading in (
         ("getting-started.html", "Getting Started"),
@@ -75,30 +82,27 @@ def test_site_uses_canonical_brand_assets_and_onboarding_pages():
     assert "assets/readme/mission-directives-banner.svg" not in readme
 
 
-def test_landing_and_documentation_headers_share_navigation_vocabulary():
+def test_landing_and_documentation_headers_keep_brand_and_search_only():
     landing = (SITE / "src" / "pages" / "index.astro").read_text(encoding="utf-8")
     docs = (PUBLIC / "docs.html").read_text(encoding="utf-8")
+    styles = (PUBLIC / "styles.css").read_text(encoding="utf-8")
     for html in (landing, docs):
         assert 'class="topbar"' in html
         assert 'class="topbar__inner"' in html
         assert 'class="search-trigger"' in html
-        assert 'class="top-actions"' in html
-        assert 'aria-label="Primary navigation"' in html
+        assert 'class="top-actions"' not in html
+        assert 'aria-label="Primary navigation"' not in html
         assert "mission_directives_logo_dark.svg" in html
         assert "mission_directives_logo_light.svg" in html
+        assert "brand__section" not in html
+        assert html.index('class="brand"') < html.index('class="search-trigger"')
+
+    assert "width: 260px;" in styles
+    assert "margin-left: auto;" in styles
+    assert ".top-actions" not in styles
 
     assert "landing-header" not in landing
     assert "landing-nav" not in landing
-    links = (
-        ("getting-started.html", "Start"),
-        ("installation.html", "Install"),
-        ("docs.html", "Docs"),
-        ("contributing.html", "Contribute"),
-        ("reference.html", "Reference"),
-    )
-    for target, label in links:
-        assert f'href="{target}">{label}</a>' in landing
-        assert f'href="/mission-directives/{target}">{label}</a>' in docs
 
 
 def test_readme_branding_uses_explicit_transparent_theme_variants_and_license_badge():
@@ -202,10 +206,15 @@ def test_pages_workflow_uses_node_24_compatible_actions():
 def test_generated_and_dependency_outputs_are_ignored():
     ignored = (ROOT / ".gitignore").read_text(encoding="utf-8")
     for entry in (
-        "site/node_modules/",
+        "node_modules/",
         "site/dist/",
         "site/.astro/",
         "prompt_imports/",
         "infographics/",
+        ".env.*",
+        ".idea/",
+        ".vscode/",
+        "*.tmp",
+        ".prompt_suite/",
     ):
         assert entry in ignored

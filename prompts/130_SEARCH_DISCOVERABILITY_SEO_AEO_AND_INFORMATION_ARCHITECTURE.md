@@ -63,7 +63,7 @@ output_contract:
   - path: reports/search_discoverability_seo_aeo_and_information_architecture/search_discoverability_seo_aeo_and_information_architecture_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.marketing.search-discoverability-seo-aeo-and-information-architecture
 prompt_slug: search-discoverability-seo-aeo-and-information-architecture
 identity_status: permanent

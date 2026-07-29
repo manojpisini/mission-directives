@@ -64,7 +64,7 @@ output_contract:
   - path: reports/prompt_optimization_and_enhancement/prompt_optimization_and_enhancement_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.prompt_engineering.prompt-optimization-and-enhancement
 prompt_slug: prompt-optimization-and-enhancement
 identity_status: permanent

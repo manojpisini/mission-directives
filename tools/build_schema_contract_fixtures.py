@@ -24,7 +24,7 @@ def pattern_value(pattern:str)->str:
         ('^[A-Za-z0-9_-]+:.+$', 'user:approved'),
         ('^prompts/[0-9]{3}_[A-Z0-9_]+\\.md$', 'prompts/200_EXAMPLE.md'),
         ('^md\\.[a-z0-9._-]+$', 'md.enablement.example'),
-        ('^[0-9]+\\.[0-9]+\\.[0-9]+$', '2.0.2'),
+        ('^[0-9]+\\.[0-9]+\\.[0-9]+$', '2.0.3'),
     ]
     for prefix,value in choices:
         if pattern.startswith(prefix) or pattern==prefix: return value

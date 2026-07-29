@@ -11,17 +11,65 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
+MINIMAL_SUITE_PATHS = (
+    "VERSION",
+    "SCENARIO_CATALOG.json",
+    "skill_registry.json",
+    "config/department_packs.json",
+    "config/template_registry.json",
+    "evaluations/atomic_contract_fixtures.json",
+    "integrations/md_to_agent_library_crosswalk.json",
+    "integrations/md_to_prompt_type_library_crosswalk.json",
+    "schemas/prompt_addition_preview.schema.json",
+    "schemas/prompt_addition_receipt.schema.json",
+    "schemas/prompt_addition_request.schema.json",
+)
 
-def _copy_suite(destination: Path) -> None:
-    """Create an isolated suite fixture without runtime or cache artifacts."""
+
+def _copy_suite(destination: Path, *, include_generators: bool = False) -> None:
+    """Create the smallest isolated suite needed by each test."""
     import add_prompt
 
-    shutil.copytree(
-        ROOT,
-        destination,
-        ignore=add_prompt._copy_ignore_factory(ROOT),
-        symlinks=True,
+    if include_generators:
+        shutil.copytree(
+            ROOT,
+            destination,
+            ignore=add_prompt._copy_ignore_factory(ROOT),
+            symlinks=True,
+        )
+        return
+
+    destination.mkdir()
+    for relative in MINIMAL_SUITE_PATHS:
+        source = ROOT / relative
+        target = destination / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if source.is_dir():
+            shutil.copytree(source, target, symlinks=True)
+        else:
+            shutil.copy2(source, target)
+
+    catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
+    rows = catalog["prompts"]
+    maximum = max(rows, key=lambda row: row["sequence"])
+    required_ids = {
+        "MD-00",
+        "MD-01",
+        "MD-02",
+        "MD-03",
+        "MD-04",
+        maximum["prompt_id"],
+    }
+    catalog["prompts"] = [row for row in rows if row["prompt_id"] in required_ids]
+    catalog["prompt_count"] = len(catalog["prompts"])
+    (destination / "catalog.json").write_text(
+        json.dumps(catalog, indent=2) + "\n", encoding="utf-8"
     )
+    for row in catalog["prompts"]:
+        source = ROOT / row["canonical_path"]
+        target = destination / row["canonical_path"]
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
 
 
 def _symlink_or_skip(link: Path, target: Path) -> None:
@@ -218,7 +266,7 @@ def test_rebuild_updates_category_and_template_crosswalk_for_new_prompt(tmp_path
     import add_prompt
 
     suite = tmp_path / "suite"
-    _copy_suite(suite)
+    _copy_suite(suite, include_generators=True)
     source = tmp_path / "raw.md"
     source.write_text("Produce a bounded checklist.", encoding="utf-8")
     prepared = add_prompt.prepare_prompt(
@@ -605,7 +653,7 @@ def test_prompt_addition_fails_closed_when_staged_identity_differs_from_approved
             approval_token=preview["approval_token"],
         )
 
-    # Preserve the independent concurrent writer, but never promote an unapproved identity.
+    # The concurrent writer keeps its seat; the unapproved identity still gets bounced.
     catalog = json.loads((suite / "catalog.json").read_text(encoding="utf-8"))
     assert any(row["title"] == "Concurrent writer prompt" for row in catalog["prompts"])
     assert not any(row["title"] == title for row in catalog["prompts"])

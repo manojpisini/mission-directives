@@ -19,7 +19,7 @@ from mission_directives import installer
 
 def test_release_version_is_current_and_generated_guidance_uses_it():
     version = (ROOT / "VERSION").read_text().strip()
-    assert version == "2.0.2"
+    assert version == "2.0.3"
     for path in (ROOT / "prompts").glob("*.md"):
         assert f"suite_version: {version}" in path.read_text(encoding="utf-8")
     for path in (ROOT / "templates").rglob("*.md"):
@@ -93,7 +93,7 @@ def test_installer_dry_run_and_complete_project_layout(tmp_path):
     root = project / ".mission-directives"
     assert result["status"] == "installed"
     assert result["suite_destination"] == ".mission-directives/runtime"
-    assert (root / "runtime/VERSION").read_text().strip() == "2.0.2"
+    assert (root / "runtime/VERSION").read_text().strip() == "2.0.3"
     assert (root / "site/templates/base.html").is_file()
     assert (root / "site/static/viewer.css").is_file()
     assert (root / "project.json").is_file()

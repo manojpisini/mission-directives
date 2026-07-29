@@ -61,7 +61,7 @@ output_contract:
   - path: reports/negotiation_and_decision_preparation/negotiation_and_decision_preparation_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.strategy.negotiation-and-decision-preparation
 prompt_slug: negotiation-and-decision-preparation
 identity_status: permanent

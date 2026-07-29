@@ -61,7 +61,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.prompt_system.prompt-suite-consistency-security-and-coherence-authorized-execution-and-verification
 prompt_slug: prompt-suite-consistency-security-and-coherence-authorized-execution-and-verification
 identity_status: permanent

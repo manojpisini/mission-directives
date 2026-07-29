@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.retail_and_ecommerce.retail-ecommerce-product-listing-optimization
 prompt_slug: retail-ecommerce-product-listing-optimization
 identity_status: permanent

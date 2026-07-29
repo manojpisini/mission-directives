@@ -33,7 +33,7 @@
       "quarantine_output": false,
       "verification_required": true,
       "lock_required": false,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "academic-researcher",
@@ -53,7 +53,7 @@
       "quarantine_output": false,
       "verification_required": true,
       "lock_required": false,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ad-creative",
@@ -82,7 +82,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ads",
@@ -111,7 +111,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ai-research-explore",
@@ -136,7 +136,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/ai-research-explore"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ai-seo",
@@ -165,7 +165,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "algorithmic-art",
@@ -196,7 +196,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "analytics",
@@ -220,7 +220,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "analytics-tracking",
@@ -246,7 +246,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "architecture-blueprint-generator",
@@ -277,7 +277,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "autoplan",
@@ -297,7 +297,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "banner-design",
@@ -328,7 +328,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "baoyu-infographic",
@@ -359,7 +359,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "benchmark",
@@ -379,7 +379,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "benchmark-models",
@@ -399,7 +399,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "blueprinter",
@@ -431,7 +431,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/blueprinter"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "bolder",
@@ -459,7 +459,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "boost-prompt",
@@ -483,7 +483,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/boost-prompt"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "brainstorming",
@@ -509,7 +509,7 @@
         "${MD_OPENCODE_SKILLS_DIR}/brainstorming"
       ],
       "detected_installed": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "brand",
@@ -533,7 +533,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "brand-guidelines",
@@ -565,7 +565,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/brand-guidelines"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "brandkit",
@@ -597,7 +597,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/brandkit"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "browse",
@@ -617,7 +617,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "build-dashboard",
@@ -648,7 +648,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "canary",
@@ -668,7 +668,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "canvas-design",
@@ -713,7 +713,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/canvas-design"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "careful",
@@ -733,7 +733,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "checkpoint",
@@ -753,7 +753,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "code-review",
@@ -780,7 +780,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "codebase-design",
@@ -811,7 +811,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "codex",
@@ -831,7 +831,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "colorize",
@@ -859,7 +859,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "competitor-alternatives",
@@ -885,7 +885,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "competitor-profiling",
@@ -914,7 +914,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "competitors",
@@ -943,7 +943,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "connect-chrome",
@@ -963,7 +963,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "content-creator",
@@ -989,7 +989,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "content-strategy",
@@ -1019,7 +1019,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/content-strategy"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "context-restore",
@@ -1039,7 +1039,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "context-save",
@@ -1059,7 +1059,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "copywriting",
@@ -1089,7 +1089,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/copywriting"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "critique",
@@ -1117,7 +1117,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "cro",
@@ -1146,7 +1146,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "cso",
@@ -1166,7 +1166,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "customer-research",
@@ -1190,7 +1190,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "dashboard-builder",
@@ -1223,7 +1223,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/dashboard-builder"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "debug",
@@ -1243,7 +1243,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "delight",
@@ -1271,7 +1271,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "design",
@@ -1302,7 +1302,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "design-consultation",
@@ -1322,7 +1322,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "design-html",
@@ -1342,7 +1342,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "design-review",
@@ -1362,7 +1362,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "design-shotgun",
@@ -1382,7 +1382,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "design-system",
@@ -1413,7 +1413,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "design-taste-frontend",
@@ -1445,7 +1445,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/design-taste-frontend"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "design-taste-frontend-v1",
@@ -1477,7 +1477,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/design-taste-frontend-v1"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "devex-review",
@@ -1497,7 +1497,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "diagram",
@@ -1517,7 +1517,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "dispatching-parallel-agents",
@@ -1545,7 +1545,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/dispatching-parallel-agents"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "distill",
@@ -1573,7 +1573,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "doc-coauthoring",
@@ -1606,7 +1606,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "document-generate",
@@ -1626,7 +1626,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "document-release",
@@ -1646,7 +1646,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "docx",
@@ -1678,7 +1678,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/docx"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "edit-article",
@@ -1705,7 +1705,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/edit-article"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "email-sequence",
@@ -1731,7 +1731,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "emails",
@@ -1764,7 +1764,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "embedded-captions",
@@ -1789,7 +1789,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "emil-design-eng",
@@ -1817,7 +1817,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "enhance-prompt",
@@ -1842,7 +1842,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/enhance-prompt"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "excalidraw-diagram-generator",
@@ -1874,7 +1874,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/excalidraw-diagram-generator"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "executing-plans",
@@ -1902,7 +1902,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/executing-plans"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "extract-design-system",
@@ -1934,7 +1934,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/extract-design-system"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "faceless-explainer",
@@ -1958,7 +1958,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "find-skills",
@@ -1983,7 +1983,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/find-skills"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "finishing-a-development-branch",
@@ -2012,7 +2012,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "free-tools",
@@ -2036,7 +2036,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "freeze",
@@ -2056,7 +2056,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "frontend-design",
@@ -2088,7 +2088,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/frontend-design"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "frontend-slides",
@@ -2119,7 +2119,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/frontend-slides"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "full-output-enforcement",
@@ -2148,7 +2148,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "general-video",
@@ -2173,7 +2173,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-benchmark",
@@ -2203,7 +2203,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-cli",
@@ -2231,7 +2231,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-code-style",
@@ -2257,7 +2257,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-concurrency",
@@ -2283,7 +2283,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-context",
@@ -2309,7 +2309,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-continuous-integration",
@@ -2335,7 +2335,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-data-structures",
@@ -2361,7 +2361,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-database",
@@ -2389,7 +2389,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-dependency-injection",
@@ -2417,7 +2417,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-dependency-management",
@@ -2445,7 +2445,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-design-patterns",
@@ -2471,7 +2471,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-documentation",
@@ -2499,7 +2499,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-error-handling",
@@ -2525,7 +2525,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-google-wire",
@@ -2551,7 +2551,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-gopls",
@@ -2577,7 +2577,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-graphql",
@@ -2605,7 +2605,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-grpc",
@@ -2633,7 +2633,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-how-to",
@@ -2661,7 +2661,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-lint",
@@ -2687,7 +2687,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-modernize",
@@ -2713,7 +2713,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-naming",
@@ -2739,7 +2739,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-observability",
@@ -2767,7 +2767,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-performance",
@@ -2793,7 +2793,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-pkg-go-dev",
@@ -2821,7 +2821,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-popular-libraries",
@@ -2849,7 +2849,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-project-layout",
@@ -2875,7 +2875,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-refactoring",
@@ -2901,7 +2901,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-safety",
@@ -2929,7 +2929,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-samber-do",
@@ -2955,7 +2955,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-samber-hot",
@@ -2981,7 +2981,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-samber-lo",
@@ -3007,7 +3007,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-samber-mo",
@@ -3033,7 +3033,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-samber-oops",
@@ -3059,7 +3059,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-samber-ro",
@@ -3085,7 +3085,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-samber-slog",
@@ -3113,7 +3113,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-security",
@@ -3141,7 +3141,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-spf13-cobra",
@@ -3169,7 +3169,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-spf13-viper",
@@ -3197,7 +3197,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-stay-updated",
@@ -3225,7 +3225,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-stretchr-testify",
@@ -3255,7 +3255,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-structs-interfaces",
@@ -3281,7 +3281,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-swagger",
@@ -3309,7 +3309,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-testing",
@@ -3339,7 +3339,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-troubleshooting",
@@ -3365,7 +3365,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-uber-dig",
@@ -3391,7 +3391,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "golang-uber-fx",
@@ -3417,7 +3417,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "gpt-taste",
@@ -3448,7 +3448,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "grill-me",
@@ -3472,7 +3472,7 @@
         "${MD_OPENCODE_SKILLS_DIR}/grill-me"
       ],
       "detected_installed": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "grill-with-docs",
@@ -3498,7 +3498,7 @@
         "${MD_OPENCODE_SKILLS_DIR}/grill-with-docs"
       ],
       "detected_installed": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "gstack",
@@ -3522,7 +3522,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/gstack"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "gstack-openclaw-ceo-review",
@@ -3542,7 +3542,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "gstack-openclaw-investigate",
@@ -3562,7 +3562,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "gstack-openclaw-office-hours",
@@ -3582,7 +3582,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "gstack-openclaw-retro",
@@ -3602,7 +3602,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "gstack-upgrade",
@@ -3622,7 +3622,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "guard",
@@ -3642,7 +3642,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hackernews-frontpage",
@@ -3662,7 +3662,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "health",
@@ -3682,7 +3682,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "high-end-visual-design",
@@ -3714,7 +3714,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/high-end-visual-design"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "html-ppt",
@@ -3745,7 +3745,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/html-ppt"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "html-svg-diagrams",
@@ -3777,7 +3777,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/html-svg-diagrams"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "htmx",
@@ -3804,7 +3804,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hyperframes",
@@ -3829,7 +3829,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hyperframes-animation",
@@ -3854,7 +3854,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hyperframes-cli",
@@ -3879,7 +3879,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hyperframes-core",
@@ -3904,7 +3904,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hyperframes-creative",
@@ -3929,7 +3929,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hyperframes-keyframes",
@@ -3954,7 +3954,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hyperframes-media",
@@ -3979,7 +3979,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "hyperframes-registry",
@@ -4004,7 +4004,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "image-to-code",
@@ -4028,7 +4028,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "imagegen-frontend-mobile",
@@ -4050,7 +4050,7 @@
       "detected_installed": true,
       "requires_runtime_probe": true,
       "suite_exclusion": "model_image_generation",
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "imagegen-frontend-web",
@@ -4072,7 +4072,7 @@
       "detected_installed": true,
       "requires_runtime_probe": true,
       "suite_exclusion": "model_image_generation",
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "impeccable",
@@ -4105,7 +4105,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/impeccable"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "implement",
@@ -4132,7 +4132,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "improve",
@@ -4156,7 +4156,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "improve-codebase-architecture",
@@ -4183,7 +4183,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "industrial-brutalist-ui",
@@ -4215,7 +4215,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/industrial-brutalist-ui"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "infographic-creator",
@@ -4246,7 +4246,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "internal-comms",
@@ -4279,7 +4279,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "investigate",
@@ -4299,7 +4299,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ios-clean",
@@ -4319,7 +4319,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ios-design-review",
@@ -4339,7 +4339,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ios-fix",
@@ -4359,7 +4359,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ios-qa",
@@ -4379,7 +4379,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ios-sync",
@@ -4399,7 +4399,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "land-and-deploy",
@@ -4419,7 +4419,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "landing-report",
@@ -4439,7 +4439,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "launch",
@@ -4468,7 +4468,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "launch-strategy",
@@ -4494,7 +4494,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "learn",
@@ -4514,7 +4514,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "loop-me",
@@ -4538,7 +4538,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "make-pdf",
@@ -4558,7 +4558,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "marketing-council",
@@ -4587,7 +4587,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "marketing-ideas",
@@ -4616,7 +4616,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "marketing-loops",
@@ -4645,7 +4645,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "marketing-plan",
@@ -4674,7 +4674,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "marketing-psychology",
@@ -4704,7 +4704,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/marketing-psychology"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "mcp-builder",
@@ -4731,7 +4731,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "media-use",
@@ -4756,7 +4756,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "minecraft-modding",
@@ -4783,7 +4783,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "minimalist-ui",
@@ -4815,7 +4815,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/minimalist-ui"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "motion-graphics",
@@ -4840,7 +4840,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "music-to-video",
@@ -4865,7 +4865,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "obsidian-vault",
@@ -4898,7 +4898,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "office-hours",
@@ -4918,7 +4918,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "onboarding",
@@ -4951,7 +4951,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "open-gstack-browser",
@@ -4971,7 +4971,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "optimize",
@@ -4999,7 +4999,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "page-cro",
@@ -5025,7 +5025,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "paid-ads",
@@ -5051,7 +5051,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "pair-agent",
@@ -5071,7 +5071,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "paper-context-resolver",
@@ -5097,7 +5097,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/paper-context-resolver"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "pdf",
@@ -5130,7 +5130,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "plan-ceo-review",
@@ -5150,7 +5150,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "plan-design-review",
@@ -5170,7 +5170,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "plan-devex-review",
@@ -5190,7 +5190,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "plan-eng-review",
@@ -5210,7 +5210,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "plan-tune",
@@ -5230,7 +5230,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "playwright-best-practices",
@@ -5255,7 +5255,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/playwright-best-practices"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "playwright-cli",
@@ -5281,7 +5281,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/playwright-cli"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "polish",
@@ -5309,7 +5309,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ponytail",
@@ -5336,7 +5336,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ponytail-audit",
@@ -5363,7 +5363,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ponytail-debt",
@@ -5390,7 +5390,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ponytail-gain",
@@ -5417,7 +5417,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ponytail-help",
@@ -5444,7 +5444,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ponytail-review",
@@ -5471,7 +5471,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "pptx",
@@ -5503,7 +5503,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/pptx"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "pr-to-video",
@@ -5528,7 +5528,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "pricing",
@@ -5557,7 +5557,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "pricing-strategy",
@@ -5583,7 +5583,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "product-launch-video",
@@ -5612,7 +5612,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "programmatic-seo",
@@ -5642,7 +5642,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/programmatic-seo"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "prompt-builder",
@@ -5662,7 +5662,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "prompt-engineering-patterns",
@@ -5688,7 +5688,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/prompt-engineering-patterns"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "prompt-optimizer",
@@ -5713,7 +5713,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/prompt-optimizer"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "public-relations",
@@ -5737,7 +5737,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "qa",
@@ -5757,7 +5757,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "qa-only",
@@ -5777,7 +5777,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "quieter",
@@ -5805,7 +5805,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "receiving-code-review",
@@ -5833,7 +5833,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/receiving-code-review"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "redesign-existing-projects",
@@ -5865,7 +5865,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/redesign-existing-projects"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "remotion-to-hyperframes",
@@ -5890,7 +5890,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "requesting-code-review",
@@ -5918,7 +5918,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/requesting-code-review"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "research",
@@ -5945,7 +5945,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/research"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "retro",
@@ -5965,7 +5965,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "review",
@@ -5985,7 +5985,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "rust-best-practices",
@@ -6012,7 +6012,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "schema",
@@ -6045,7 +6045,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "schema-markup",
@@ -6071,7 +6071,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "scrape",
@@ -6091,7 +6091,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "security-review",
@@ -6120,7 +6120,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "seo-audit",
@@ -6150,7 +6150,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/seo-audit"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "setup-browser-cookies",
@@ -6170,7 +6170,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "setup-deploy",
@@ -6190,7 +6190,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "setup-gbrain",
@@ -6210,7 +6210,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ship",
@@ -6230,7 +6230,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "site-architecture",
@@ -6260,7 +6260,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/site-architecture"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "skill-creator",
@@ -6286,7 +6286,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/skill-creator"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "skillify",
@@ -6306,7 +6306,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "slack-gif-creator",
@@ -6331,7 +6331,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "slides",
@@ -6364,7 +6364,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "slideshow",
@@ -6397,7 +6397,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "social",
@@ -6426,7 +6426,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "social-content",
@@ -6452,7 +6452,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "social-media",
@@ -6478,7 +6478,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "spec",
@@ -6498,7 +6498,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "stitch-design-taste",
@@ -6530,7 +6530,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/stitch-design-taste"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "stop-slop",
@@ -6565,7 +6565,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/stop-slop"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "strudel",
@@ -6592,7 +6592,7 @@
         "${MD_OPENCODE_SKILLS_DIR}/strudel"
       ],
       "detected_installed": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "subagent-driven-development",
@@ -6621,7 +6621,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "sync-gbrain",
@@ -6641,7 +6641,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "systematic-debugging",
@@ -6670,7 +6670,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/systematic-debugging"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "talking-head-recut",
@@ -6694,7 +6694,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "tdd",
@@ -6723,7 +6723,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "template-skill",
@@ -6747,7 +6747,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "test-driven-development",
@@ -6776,7 +6776,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/test-driven-development"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "theme-factory",
@@ -6807,7 +6807,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "triage",
@@ -6836,7 +6836,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ui-styling",
@@ -6867,7 +6867,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "ui-ux-pro-max",
@@ -6899,7 +6899,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/ui-ux-pro-max"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "unfreeze",
@@ -6919,7 +6919,7 @@
       "quarantine_output": true,
       "verification_required": true,
       "lock_required": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "using-git-worktrees",
@@ -6947,7 +6947,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/using-git-worktrees"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "using-superpowers",
@@ -6976,7 +6976,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "vercel-composition-patterns",
@@ -7008,7 +7008,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/vercel-composition-patterns"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "verification-before-completion",
@@ -7036,7 +7036,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/verification-before-completion"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "visual-assets",
@@ -7100,7 +7100,7 @@
         "${MD_OPENCODE_SKILLS_DIR}/visual-assets"
       ],
       "detected_installed": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "web-artifacts-builder",
@@ -7145,7 +7145,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/web-artifacts-builder"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "web-design-guidelines",
@@ -7177,7 +7177,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/web-design-guidelines"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "webapp-testing",
@@ -7205,7 +7205,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/webapp-testing"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "website-to-video",
@@ -7230,7 +7230,7 @@
       ],
       "detected_installed": true,
       "requires_runtime_probe": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "writing-plans",
@@ -7258,7 +7258,7 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/writing-plans"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "writing-skills",
@@ -7282,7 +7282,7 @@
         "${MD_OPENCODE_SKILLS_DIR}/writing-skills"
       ],
       "detected_installed": true,
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     },
     {
       "skill_id": "xlsx",
@@ -7314,9 +7314,9 @@
       "installed_locations": [
         "${MD_OPENCODE_SKILLS_DIR}/xlsx"
       ],
-      "suite_version": "2.0.2"
+      "suite_version": "2.0.3"
     }
   ],
-  "suite_version": "2.0.2",
+  "suite_version": "2.0.3",
   "path_policy": "compatibility/agent_skill_paths.json"
 }

@@ -1,5 +1,5 @@
 {
-  "suite_version": "2.0.2",
+  "suite_version": "2.0.3",
   "policy_id": "MD-LOG-1",
   "format": "TOML",
   "directory": ".prompt_suite/logs",

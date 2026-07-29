@@ -60,7 +60,7 @@ evidence_lane: hybrid
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.design.user-experience-accessibility-and-localization-investigation-and-plan
 prompt_slug: user-experience-accessibility-and-localization-investigation-and-plan
 identity_status: permanent

@@ -65,7 +65,7 @@ output_contract:
   - path: artifacts/academic_paper_and_scholarly_manuscript_research_design_and_evidence_plan/acceptance_criteria.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.academic.academic-paper-and-scholarly-manuscript-research-design-and-evidence-plan
 prompt_slug: academic-paper-and-scholarly-manuscript-research-design-and-evidence-plan
 identity_status: permanent

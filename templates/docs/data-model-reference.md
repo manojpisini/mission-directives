@@ -3,7 +3,7 @@ template_id: docs/data-model-reference
 title: Data Model Reference
 family: documentation
 status: stable
-suite_version: 2.0.2
+suite_version: 2.0.3
 required_contracts:
   - core/run-manifest
   - core/evidence-register

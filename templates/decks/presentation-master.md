@@ -3,7 +3,7 @@ template_id: decks/presentation-master
 title: Presentation Master
 family: presentation
 status: stable
-suite_version: 2.0.2
+suite_version: 2.0.3
 required_contracts:
   - core/run-manifest
   - core/evidence-register

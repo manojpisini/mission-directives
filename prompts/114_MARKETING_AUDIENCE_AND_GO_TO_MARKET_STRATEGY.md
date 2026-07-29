@@ -60,7 +60,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.marketing.marketing-audience-and-go-to-market-strategy
 prompt_slug: marketing-audience-and-go-to-market-strategy
 identity_status: permanent

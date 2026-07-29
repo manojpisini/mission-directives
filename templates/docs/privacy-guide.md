@@ -3,7 +3,7 @@ template_id: docs/privacy-guide
 title: Privacy and Data Handling Guide
 family: documentation
 status: stable
-suite_version: 2.0.2
+suite_version: 2.0.3
 required_contracts:
   - core/run-manifest
   - core/evidence-register

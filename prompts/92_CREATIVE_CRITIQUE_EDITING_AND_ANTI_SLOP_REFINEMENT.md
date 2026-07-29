@@ -60,7 +60,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - redline_spec
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.editorial.creative-critique-editing-and-anti-slop-refinement
 prompt_slug: creative-critique-editing-and-anti-slop-refinement
 identity_status: permanent

@@ -57,7 +57,7 @@ evidence_lane: factual
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.security.threat-modeling-and-attack-surface-analysis
 prompt_slug: threat-modeling-and-attack-surface-analysis
 identity_status: permanent

@@ -59,7 +59,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.ai_governance.ai-governance-model-risk-and-deployment-approval
 prompt_slug: ai-governance-model-risk-and-deployment-approval
 identity_status: permanent

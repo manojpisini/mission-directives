@@ -996,12 +996,12 @@
       "skill_id": "prompt-engineering-patterns",
       "repository": "https://github.com/wshobson/agents",
       "skill_name": "prompt-engineering-patterns",
-      "commit_sha": null,
-      "tarball_sha256": null,
-      "resolved_at": null,
-      "lock_status": "unresolved_offline",
+      "commit_sha": "c4b82b0ad771190355eb8e204b1329732a18449a",
+      "tarball_sha256": "ada3f8e177be3b522e63b77f14fac4bc95b0b1e6e73e9342028dba55004a2bb3",
+      "resolved_at": "2026-07-29T04:27:28.437204+00:00",
+      "lock_status": "resolved",
       "auto_install_allowed": false,
-      "reason": "Resolve with tools/resolve_skill_lock.py in a networked trusted environment, then review the exact skill before promotion."
+      "reason": "Pinned tarball verified; all ten installed skill files match the locked revision after line-ending normalization; source and permissions reviewed. Automatic installation remains disabled because the skill is experimental."
     },
     {
       "skill_id": "prompt-optimizer",
@@ -1348,12 +1348,12 @@
       "skill_id": "verification-before-completion",
       "repository": "https://github.com/obra/superpowers",
       "skill_name": "verification-before-completion",
-      "commit_sha": null,
-      "tarball_sha256": null,
-      "resolved_at": null,
-      "lock_status": "unresolved_offline",
+      "commit_sha": "44c9b2d6e889982ac18c27d05a19fefe335194e1",
+      "tarball_sha256": "412d988824cb2a555a167c111ef990a602ee8069c5833eb7ec48c06539ca0c14",
+      "resolved_at": "2026-07-29T04:22:16.231884+00:00",
+      "lock_status": "review_required",
       "auto_install_allowed": false,
-      "reason": "Resolve with tools/resolve_skill_lock.py in a networked trusted environment, then review the exact skill before promotion."
+      "reason": "Pinned source reviewed, but the detected local copy differs from the pinned revision; synchronize exact bytes before live conformance and promotion."
     },
     {
       "skill_id": "web-artifacts-builder",

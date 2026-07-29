@@ -61,7 +61,7 @@ output_contract:
   - path: reports/excalidraw_and_collaborative_whiteboard_diagram_production/excalidraw_and_collaborative_whiteboard_diagram_production_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.visual_communication.excalidraw-and-collaborative-whiteboard-diagram-production
 prompt_slug: excalidraw-and-collaborative-whiteboard-diagram-production
 identity_status: permanent

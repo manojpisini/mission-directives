@@ -208,5 +208,5 @@
     "CLAUDE.md"
   ],
   "scope_note": "Only AGENTS.md and CLAUDE.md are managed. CODEX.md, PI.md, HERMES.md, OPENCODE.md, GEMINI.md, QWEN.md, CURSOR.md, WINDSURF.md, COPILOT.md, and custom filenames are intentionally excluded.",
-  "suite_version": "2.0.2"
+  "suite_version": "2.0.3"
 }

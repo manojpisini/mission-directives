@@ -61,7 +61,7 @@ evidence_lane: hybrid
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.design.brand-design-system-and-content-coherence-authorized-execution-and-verification
 prompt_slug: brand-design-system-and-content-coherence-authorized-execution-and-verification
 identity_status: permanent

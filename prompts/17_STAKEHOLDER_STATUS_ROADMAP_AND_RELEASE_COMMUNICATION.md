@@ -55,7 +55,7 @@ evidence_lane: hybrid
 preferred_skills: []
 output_media:
 - markdown
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.enablement.stakeholder-status-roadmap-and-release-communication
 prompt_slug: stakeholder-status-roadmap-and-release-communication
 identity_status: permanent

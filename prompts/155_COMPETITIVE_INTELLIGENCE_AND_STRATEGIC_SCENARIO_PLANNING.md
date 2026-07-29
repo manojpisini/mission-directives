@@ -70,7 +70,7 @@ output_contract:
   - source_ledger
   - timeline_spec
   - network_spec
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.intelligence.competitive-intelligence-and-strategic-scenario-planning
 prompt_slug: competitive-intelligence-and-strategic-scenario-planning
 identity_status: permanent

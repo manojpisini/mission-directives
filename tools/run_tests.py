@@ -124,7 +124,7 @@ def main() -> int:
     env.pop("PYTEST_ADDOPTS", None)
     env.pop("PYTEST_PLUGINS", None)
 
-    # Keep tests in the interpreter environment that launched this verified runner.
+    # Same interpreter, same deps; PATH roulette can take the night off.
     pytest_cmd = [sys.executable, "-m", "pytest"]
 
     test_files = sorted((ROOT / "tests").glob("test_*.py"))

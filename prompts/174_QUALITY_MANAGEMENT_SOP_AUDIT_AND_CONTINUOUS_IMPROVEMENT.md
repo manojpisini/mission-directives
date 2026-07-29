@@ -60,7 +60,7 @@ output_contract:
   - path: reports/quality_management_sop_audit_and_continuous_improvement/quality_management_sop_audit_and_continuous_improvement_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.quality.quality-management-sop-audit-and-continuous-improvement
 prompt_slug: quality-management-sop-audit-and-continuous-improvement
 identity_status: permanent

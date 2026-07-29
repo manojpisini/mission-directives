@@ -10,7 +10,13 @@ if __name__ == "__main__":
         from tools.tool_runtime import bootstrap_tool
     _MD_TUI = bootstrap_tool(__file__)
 
-import argparse, json, os, shutil, subprocess, sys, tempfile
+import argparse
+import json
+import os
+import shutil
+import subprocess
+import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,13 +39,26 @@ GENERATORS = [
     "tools/build_capability_graph.py",
     "tools/audit_prompt_bodies.py",
 ]
+IGNORED_DIRECTORIES = {
+    ".astro",
+    ".git",
+    ".mission-directives",
+    ".prompt_suite",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "dist",
+    "node_modules",
+    "site",
+}
 
 
 def ignore(_directory: str, names: list[str]) -> list[str]:
     return [
         name
         for name in names
-        if name in {"__pycache__", ".pytest_cache", ".git"}
+        if name in IGNORED_DIRECTORIES
         or name.endswith((".pyc", ".pyo", ".toml.lock", ".lock"))
     ]
 

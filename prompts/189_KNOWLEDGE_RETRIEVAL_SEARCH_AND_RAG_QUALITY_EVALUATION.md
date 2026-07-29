@@ -69,7 +69,7 @@ output_contract:
   - json
   - architecture_spec
   - evaluation_plan
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.llm_engineering.knowledge-retrieval-search-and-rag-quality-evaluation
 prompt_slug: knowledge-retrieval-search-and-rag-quality-evaluation
 identity_status: permanent

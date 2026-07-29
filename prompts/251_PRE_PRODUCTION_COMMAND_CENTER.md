@@ -61,7 +61,7 @@ output_contract:
   deliverable_formats:
   - markdown
   - json
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.creative_and_media_operations.pre-production-command-center
 prompt_slug: pre-production-command-center
 identity_status: permanent

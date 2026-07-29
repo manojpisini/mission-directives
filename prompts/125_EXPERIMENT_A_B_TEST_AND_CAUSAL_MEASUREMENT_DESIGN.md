@@ -68,7 +68,7 @@ output_contract:
   - json
   - xlsx_spec
   - chart_spec
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.analytics.experiment-a-b-test-and-causal-measurement-design
 prompt_slug: experiment-a-b-test-and-causal-measurement-design
 identity_status: permanent

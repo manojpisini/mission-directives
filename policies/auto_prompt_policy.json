@@ -98,5 +98,5 @@
   ],
   "genericity_rule": "Loop and skill-execution prompts accept any prompt, scenario, or exact skill. Domain examples never narrow eligibility.",
   "questioning_rule": "All routes may invoke MD-191, but only when a question can change routing, authority, evidence, medium, budget, skill fit, loop eligibility, or acceptance.",
-  "suite_version": "2.0.2"
+  "suite_version": "2.0.3"
 }

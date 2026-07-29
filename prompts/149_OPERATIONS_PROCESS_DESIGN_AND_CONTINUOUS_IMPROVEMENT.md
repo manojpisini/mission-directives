@@ -61,7 +61,7 @@ output_contract:
   - path: reports/operations_process_design_and_continuous_improvement/operations_process_design_and_continuous_improvement_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.operations.operations-process-design-and-continuous-improvement
 prompt_slug: operations-process-design-and-continuous-improvement
 identity_status: permanent

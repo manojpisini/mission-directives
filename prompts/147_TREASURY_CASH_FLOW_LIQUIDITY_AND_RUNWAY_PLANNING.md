@@ -64,7 +64,7 @@ output_contract:
   - path: reports/treasury_cash_flow_liquidity_and_runway_planning/treasury_cash_flow_liquidity_and_runway_planning_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.finance.treasury-cash-flow-liquidity-and-runway-planning
 prompt_slug: treasury-cash-flow-liquidity-and-runway-planning
 identity_status: permanent

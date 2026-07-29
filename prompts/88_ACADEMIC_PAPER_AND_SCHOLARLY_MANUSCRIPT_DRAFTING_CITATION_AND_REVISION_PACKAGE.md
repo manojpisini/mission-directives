@@ -68,7 +68,7 @@ output_contract:
   - path: artifacts/academic_paper_and_scholarly_manuscript_drafting_citation_and_revision_package/residual_register.json
     format: json
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.academic.academic-paper-and-scholarly-manuscript-drafting-citation-and-revision-package
 prompt_slug: academic-paper-and-scholarly-manuscript-drafting-citation-and-revision-package
 identity_status: permanent

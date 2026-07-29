@@ -59,7 +59,7 @@ class ToolRuntime:
         if self._finished:
             return
         self._finished = True
-        # sys.last_value is populated for uncaught exceptions before atexit.
+        # Python leaves the uncaught exception in sys.last_value before atexit rolls in.
         last = getattr(sys, "last_value", None)
         if last is not None and not isinstance(last, SystemExit):
             self.fail(last)

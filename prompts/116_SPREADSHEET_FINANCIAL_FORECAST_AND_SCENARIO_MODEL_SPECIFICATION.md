@@ -59,7 +59,7 @@ output_contract:
   - path: reports/spreadsheet_financial_forecast_and_scenario_model_specification/spreadsheet_financial_forecast_and_scenario_model_specification_quality_review.md
     format: markdown
   deliverable_formats: *id001
-suite_version: 2.0.2
+suite_version: 2.0.3
 capability_id: md.analytics.spreadsheet-financial-forecast-and-scenario-model-specification
 prompt_slug: spreadsheet-financial-forecast-and-scenario-model-specification
 identity_status: permanent

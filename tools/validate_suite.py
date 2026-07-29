@@ -98,7 +98,7 @@ slugs = [m.get("prompt_slug") for _, m, _ in items]
 if len(slugs) != len(set(slugs)):
     errors.append("prompt_slug values must be unique")
 
-# Imported capability identity, provenance, schema, and refinement ownership.
+# Imported capabilities bring receipts: identity, origin, schema, and refinement owner.
 imported_profile_owners = {}
 refinement_count = 0
 for f, m, body in items:
@@ -305,7 +305,7 @@ for p in cat.get("prompts", []):
         if p.get(key) != m.get(key):
             errors.append(f"{p['prompt_id']}: catalog/frontmatter mismatch {key}")
 
-# Skills and locks.
+# Skills are welcome; unresolved locks are not sneaking past this gate.
 registry = load(ROOT / "skill_registry.json")
 skill_ids = {x.get("skill_id") for x in registry.get("skills", [])}
 if len(skill_ids) != len(registry.get("skills", [])):
@@ -350,7 +350,7 @@ for sid in ("visual-assets", "strudel"):
         )
 
 
-# Prompt-body semantic quality.
+# Prompt bodies must mean something, not merely look valid from across the room.
 def block(body, tag):
     match = re.search(rf"<{tag}>\s*(.*?)\s*</{tag}>", body, re.S)
     return match.group(1).strip() if match else None
@@ -477,7 +477,7 @@ for _, m, b in items:
                 f"{m['paired_prompt_id']}: duplicates investigative verification design"
             )
 
-# Conditional auto-prompt contracts.
+# Auto-prompts only fire under their contract; no surprise side quests.
 auto = load(ROOT / "policies/auto_prompt_policy.json")
 loop_policy = load(ROOT / "policies/loop_execution_policy.json")
 acquisition = load(ROOT / "policies/skill_acquisition_policy.json")
@@ -501,7 +501,7 @@ for skill in ("visual-assets", "strudel"):
     if skill not in skill_ids:
         errors.append(f"missing first-class local skill {skill}")
 
-# Governed prompt-addition workflow.
+# New prompts enter through the front door: policy, identity, tests, the whole deal.
 addition_policy = load(ROOT / "policies/prompt_addition_policy.json")
 if addition_policy.get("policy_id") != "md.prompt_addition":
     errors.append("prompt addition policy ID mismatch")
@@ -677,7 +677,7 @@ if len(list((ROOT / "evaluations/pair_vs_single").glob("*.json"))) != expected["
 if len(list((ROOT / "evaluations/golden_runs").glob("C-*/manifest.json"))) < 10:
     errors.append("reference run archive incomplete")
 
-# Model profiles: populated but no fabricated production selection required.
+# Profiles need real data, but we are not making up a production winner for the vibes.
 profiles = load(ROOT / "config/model_profiles.json")
 if not profiles.get("profiles"):
     errors.append("model profile registry empty")
@@ -710,7 +710,7 @@ for required in (
 if not (ROOT / "policies/gates.json").exists():
     errors.append("missing reusable gate registry")
 
-# Generated graph and body-audit integrity.
+# Generated graphs and body audits must match their sources; no smoke-and-mirrors build.
 graph = load(ROOT / "config/capability_graph.json")
 if graph.get("suite_version") != version:
     errors.append("capability graph suite version mismatch")
@@ -941,7 +941,7 @@ for name in required_root:
     if not (ROOT / name).exists():
         errors.append(f"missing required artifact {name}")
 
-# Public inventory claims must stay synchronized with canonical metadata.
+# Public counts come from canonical metadata; README math does not get creative freedom.
 prompt_count = len(items)
 pair_count = sum(
     1
@@ -1091,7 +1091,7 @@ try:
 except Exception as e:
     errors.append(f"MD keyword lookup validation failed: {e}")
 
-# Paired plan-review and exact-twin runtime integrity.
+# Plans execute through their exact approved twin; consent is not a remix license.
 state_machine = load(ROOT / "policies/run_state_machine.json")
 for state in (
     "plan_review_pending",
@@ -1141,7 +1141,7 @@ try:
 except Exception as e:
     errors.append(f"documentation link validation failed: {e}")
 
-# Output collisions.
+# One output, one owner. Duplicate paths are a future overwrite wearing a fake moustache.
 seen = {}
 for _, m, _ in items:
     paths = [m["output_contract"]["primary_artifact"]["path"]] + [
@@ -1152,7 +1152,7 @@ for _, m, _ in items:
             errors.append(f"output collision {p}: {seen[p]} {m['prompt_id']}")
         seen[p] = m["prompt_id"]
 
-# Active release and distributable path consistency.
+# The active release and shipped paths stay in lockstep; split-brain packaging is cursed.
 try:
     from check_release_consistency import check as check_release_consistency
 
@@ -1162,7 +1162,7 @@ try:
 except Exception as e:
     errors.append(f"release consistency validation failed: {e}")
 
-# Generated-artifact reproducibility.
+# Rebuilds must land byte-for-byte; "works on my machine" gets no backstage pass.
 try:
     from check_generated_reproducibility import check as check_generated_reproducibility
 
@@ -1172,7 +1172,7 @@ try:
 except Exception as e:
     errors.append(f"generated artifact reproducibility validation failed: {e}")
 
-# Manifest integrity.
+# The manifest is the release bouncer; drift here can fuck the whole shipment.
 manifest_path = ROOT / "MANIFEST.json"
 if manifest_path.exists():
     manifest = load(manifest_path)
@@ -1204,6 +1204,14 @@ eval_status = (
     if (ROOT / "EVALUATION_STATUS.json").exists()
     else {}
 )
+limitations = [
+    "Structural pass does not certify live model quality.",
+    "Unresolved skill locks intentionally block automatic use.",
+]
+if not eval_status.get("human_reviewed_golden_runs"):
+    limitations.append(
+        "Human-reviewed golden runs remain pending until real runs are promoted."
+    )
 status = {
     "status": "pass" if not errors else "fail",
     "claim_scope": "prompt-body semantic contracts, structural integrity, deterministic runtime tests, fixture coverage, current identity contracts, CI configuration, lock safety, and manifest integrity",
@@ -1229,11 +1237,7 @@ status = {
         "fully_implemented"
     ),
     "external_behavioral_status": eval_status.get("status", "not_run"),
-    "limitations": [
-        "Structural pass does not certify live model quality.",
-        "Unresolved skill locks intentionally block automatic use.",
-        "Human-reviewed golden runs remain pending until real runs are promoted.",
-    ],
+    "limitations": limitations,
     "errors": errors,
     "warnings": warnings,
 }

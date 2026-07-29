@@ -24,8 +24,8 @@ def _expand(expr: str, system: str) -> Path:
         expr=expr.replace('${XDG_CONFIG_HOME:-$HOME/.config}',xdg).replace('$HOME',str(home))
     if expr.startswith('~/') or expr.startswith('~\\'):
         expr=str(home)+expr[1:]
-    # Preserve lexical path components so downstream security checks can detect
-    # symbolic links instead of silently following them.
+    # Keep this path lexical. Resolve it here and the symlink trapdoor disappears
+    # before the security check gets a shot at the real route.
     return Path(os.path.abspath(os.path.expanduser(expr)))
 
 
